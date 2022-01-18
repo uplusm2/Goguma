@@ -73,6 +73,9 @@ header {
     height: 110px;
     background: #FAF7FB;
 }
+.inner-header h1{
+	cursor: pointer;
+}
 .inner-header {
     position: relative;
     margin: 0 auto;
@@ -135,16 +138,23 @@ header {
     float: left;
     font-weight: 500;
 }
-.inner-header .menu li:after{
+.inner-header .menu li:before{
     content: '';
     position: absolute;
     top: 6px;
     left: 133px;
     border-left: 1px solid #757575;
-    border-right: 1px solid #757575;
-    width: 124px;
+    width: 4px;
     height: 15px;
-    z-index: 1;
+}
+.inner-header .menu li:after{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 256px;
+    border-left: 1px solid #757575;
+    width: 4px;
+    height: 15px;
 }
 .inner-header .menu li img{
     transform: translateY(-2px);
