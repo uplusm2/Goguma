@@ -23,6 +23,8 @@
 			</div>
 			<nav class="leftside">
 				<h3>ㅎㅇㅎㅇ</h3>
+				<h3>ㅎㅇㅎㅇ</h3>
+				
 			</nav>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
