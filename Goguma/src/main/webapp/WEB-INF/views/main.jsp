@@ -22,7 +22,7 @@
 				<input type="text" class="new" value="N">
 			</div>
 			<nav class="leftside">
-				<h3>ㅎㅇㅎㅇ</h3>
+				<h3>check</h3>
 				
 			</nav>
 		</section>
