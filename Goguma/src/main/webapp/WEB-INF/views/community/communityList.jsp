@@ -24,76 +24,15 @@
 					<th>작성일</th>
 					<th>조회</th>
 				</tr>
+				<c:forEach items="${list}" var="dto">
 				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>01:16</td>
-					<td>3</td>
+					<td>${dto.seq}</td>
+					<td>${dto.title}</td>
+					<td>${dto.nickname}</td>
+					<td>${dto.regDate}</td>
+					<td>${dto.readcount}</td>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>안녕하세요.</td>
-					<td>고구마</td>
-					<td>22.01.16</td>
-					<td>3</td>
-				</tr>
+				</c:forEach>
 			</table>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>

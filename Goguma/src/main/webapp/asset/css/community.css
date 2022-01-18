@@ -20,11 +20,11 @@
 }
 .community .table td:nth-child(1){
     color: #757575;
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 16px;
 }
 .community .table td:nth-child(2){
-    padding-left: 50px;
+    padding-left: 40px;
     text-align: left;
-    width: 800px;
+    width: 700px;
 }
