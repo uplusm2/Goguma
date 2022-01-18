@@ -34,6 +34,8 @@
 				</tr>
 				</c:forEach>
 			</table>
+			
+			<div class="pagebar">${pagebar}</div>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>

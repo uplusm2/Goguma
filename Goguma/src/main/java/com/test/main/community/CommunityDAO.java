@@ -57,4 +57,21 @@ public class CommunityDAO {
 		}
 		return null;
 	}
+
+	public int getTotalCount(HashMap<String, String> map) {
+		try {
+			String where = "";
+			
+			String sql = "select count(*) as cnt from vwBoard";
+			rs = stat.executeQuery(sql);
+			
+			if (rs.next()) {
+				return rs.getInt("cnt");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }
