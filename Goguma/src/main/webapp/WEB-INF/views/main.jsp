@@ -24,6 +24,8 @@
 			<nav class="leftside">
 				<h3>check</h3>
 				
+				
+				
 			</nav>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
