@@ -73,25 +73,25 @@ header {
     height: 110px;
     background: #FAF7FB;
 }
-.innerHeader {
+.inner-header {
     position: relative;
     margin: 0 auto;
     width: 1200px;
     height: 100px;
 }
-.innerHeader .logo span {
+.inner-header .logo span {
     position: absolute;
     left: 85px;
     top: 41px;
     font-size: 47px;
     font-weight: 700;
 }
-.innerHeader .logo img {
+.inner-header .logo img {
     position: absolute;
     top: 30px;
     width: 80px;
 }
-.innerHeader .search {
+.inner-header .search {
     position: absolute;
     left: 370px;
     top: 49px;
@@ -102,40 +102,40 @@ header {
     border-radius: 5px;
     padding-left: 5px;
 }
-.innerHeader .searchImg {
+.inner-header .search-img {
     position: absolute;
     left: 707px;
     top: 54px;
     width: 27px;
 }
-.innerHeader .search:focus {
+.inner-header .search:focus {
     outline: 0;
 }
-.innerHeader .menuOption {
+.inner-header .menu-option {
     position: absolute;
     top: 10px;
     right: 40px;
 }
-.innerHeader .menuOption li{
+.inner-header .menu-option li{
     float: left;
     margin-left: 30px;
     font-size: 16px;
 }
-.innerHeader .menuOption img{
+.inner-header .menu-option img{
 	width: 25px;
 	transform: translateX(25px);
 }
-.innerHeader .menu {
+.inner-header .menu {
     position: absolute;
     top: 53px;
     right: 30px;
 }
-.innerHeader .menu li{
+.inner-header .menu li{
     cursor: pointer;
     float: left;
     font-weight: 500;
 }
-.innerHeader .menu li:after{
+.inner-header .menu li:after{
     content: '';
     position: absolute;
     top: 6px;
@@ -146,13 +146,13 @@ header {
     height: 15px;
     z-index: 1;
 }
-.innerHeader .menu li img{
+.inner-header .menu li img{
     transform: translateY(-2px);
     margin-left: 25px;
     margin-right: 5px;
     width: 25px;
 }
-.innerHeader .menu li:nth-child(3) img{
+.inner-header .menu li:nth-child(3) img{
     margin-right: 1px;
 }
 
@@ -165,47 +165,47 @@ footer {
     height: 170px;
     background: #FAF7FB;
 }
-.innerFooter {
+.inner-footer {
     position: relative;
     margin: 0 auto;
     width: 1200px;
     height: 170px;
 }
-.innerFooter .info {
+.inner-footer .info {
     position: absolute;
     top: 20px;
     left: 30px;
 }
-.innerFooter .info ul{
+.inner-footer .info ul{
     width: 500px;
     float: left;
     color: #757575;
 }
-.innerFooter .info ul:nth-child(2){
+.inner-footer .info ul:nth-child(2){
     margin-left: 400px;
     width: 250px;
 }
-.innerFooter .info li:first-child{
+.inner-footer .info li:first-child{
     font-size: 18px;
     font-weight: 700;
     color: #3f3f3f;
     margin-bottom: 6px;
 }
-.innerFooter .info li{
+.inner-footer .info li{
     margin-bottom: 1px;
     font-size: 14px;
 }
-.innerFooter .info span{
+.inner-footer .info span{
     font-size: 12px;
     font-weight: 700;
 }
-.innerFooter .policy{
+.inner-footer .policy{
     position: absolute;
     left: 30px;
     bottom: 15px;
     color: #757575;
 }
-.innerFooter .policy li{
+.inner-footer .policy li{
     font-size: 13px;
 }
 

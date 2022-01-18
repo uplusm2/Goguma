@@ -2,7 +2,7 @@
 
 <!-- inc/footer.jsp -->
 <footer>
-	<div class="innerFooter">
+	<div class="inner-footer">
 		<ul class="info">
 			<ul>
 				<li>고구마장터(주)</li>
