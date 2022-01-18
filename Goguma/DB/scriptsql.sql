@@ -54,9 +54,9 @@ DROP SEQUENCE faq_seq;
 
 
 CREATE TABLE tblUser (
-    id VARCHAR2(100) NOT NULL, -- ¿µ¼Ò¹®ÀÚ+¼ýÀÚ 4~12ÀÚ (user1)
-    password VARCHAR2(100) NOT NULL, --¿µ¼Ò¹®ÀÚ+¼ýÀÚ 6~10ÀÚ
-    user_level NUMBER NOT NULL --È¸¿ø,2-°ü¸®ÀÚ
+    id VARCHAR2(100) NOT NULL, -- ï¿½ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½+ï¿½ï¿½ï¿½ï¿½ 4~12ï¿½ï¿½ (user1)
+    password VARCHAR2(100) NOT NULL, --ï¿½ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½+ï¿½ï¿½ï¿½ï¿½ 6~10ï¿½ï¿½
+    user_level NUMBER NOT NULL --È¸ï¿½ï¿½,2-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 );
 
 ALTER TABLE tblUser
@@ -166,7 +166,7 @@ insert into tblUser (id, password, user_level) values ('user100', 'pw67378', 1);
 
 CREATE TABLE tblAddress (
 	address_seq	NUMBER	NOT NULL,
-	sido VARCHAR2(15)	NOT NULL,--ÆÈµµ,¼­¿ï½Ã
+	sido VARCHAR2(15)	NOT NULL,--ï¿½Èµï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½
 	sgg	VARCHAR2(15)	NOT NULL,--
 	emd	VARCHAR2(15)	NOT NULL
 );
@@ -175,167 +175,167 @@ ALTER TABLE tblAddress ADD CONSTRAINT PK_TBLADDRESS PRIMARY KEY (address_seq);
 CREATE SEQUENCE address_seq;
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (1, '¼­¿ï', '¼ÛÆÄ±¸', 'Ç³³³µ¿');
+VALUES (1, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ä±ï¿½', 'Ç³ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (2, '¼­¿ï', '¼ÛÆÄ±¸', '¼®ÃÌµ¿');
+VALUES (2, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ä±ï¿½', 'ï¿½ï¿½ï¿½Ìµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (3, '¼­¿ï', '¼ÛÆÄ±¸', '¼º³»µ¿');
+VALUES (3, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ä±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (4, '¼­¿ï', '¼ÛÆÄ±¸', '»ïÀüµ¿');
+VALUES (4, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ä±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (5, '¼­¿ï', '°­¼­±¸', 'È­°îµ¿');
+VALUES (5, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È­ï¿½îµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (6, '¼­¿ï', '°­¼­±¸', '¿À¼èµ¿');
+VALUES (6, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½èµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (7, '¼­¿ï', '°­¼­±¸', 'µîÃÌµ¿');
+VALUES (7, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ìµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (8, '¼­¿ï', '°­¼­±¸', '¸¶°îµ¿');
+VALUES (8, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½îµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (9, '¼­¿ï', '°­¼­±¸', '¿ìÀå»êµ¿');
+VALUES (9, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½êµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (10, '¼­¿ï', '°­¼­±¸', '°³È­µ¿');
+VALUES (10, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½È­ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (11, '¼­¿ï', '°­¼­±¸', '¹æÈ­µ¿');
+VALUES (11, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½È­ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (12, '¼­¿ï', '°­ºÏ±¸', '¹Ì¾Æµ¿');
+VALUES (12, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½Ì¾Æµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (13, '¼­¿ï', '°­ºÏ±¸', '¼öÀ¯µ¿');
+VALUES (13, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (14, '¼­¿ï', '°­ºÏ±¸', '¼ÛÃµµ¿');
+VALUES (14, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½ï¿½Ãµï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (15, '¼­¿ï', '°­ºÏ±¸', '¹øµ¿');
+VALUES (15, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (16, '¼­¿ï', '°­ºÏ±¸', 'ÀÎ¼öµ¿');
+VALUES (16, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½Î¼ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (17, '¼­¿ï', '¼­´ë¹®±¸', 'È«Á¦µ¿');
+VALUES (17, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½', 'È«ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (18, '¼­¿ï', '¼­´ë¹®±¸', '´ë½Åµ¿');
+VALUES (18, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½', 'ï¿½ï¿½Åµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (19, '¼­¿ï', '¼­´ë¹®±¸', 'Ã¢Ãµµ¿');
+VALUES (19, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½', 'Ã¢Ãµï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (20, '¼­¿ï', '¼­´ë¹®±¸', 'ºÏ°¡ÁÂµ¿');
+VALUES (20, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ë¹®ï¿½ï¿½', 'ï¿½Ï°ï¿½ï¿½Âµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (21, '¼­¿ï', '±¤Áø±¸', 'Áß°îµ¿');
+VALUES (21, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ß°îµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (22, '¼­¿ï', '±¤Áø±¸', '´Éµ¿');
+VALUES (22, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Éµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (23, '¼­¿ï', '±¤Áø±¸', '±¸ÀÇµ¿');
+VALUES (23, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Çµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (24, '¼­¿ï', '±¤Áø±¸', 'È­¾çµ¿');
+VALUES (24, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È­ï¿½çµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (25, '¼­¿ï', '±¤Áø±¸', '±ºÀÚµ¿');
+VALUES (25, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Úµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (26, '¼­¿ï', '¸¶Æ÷±¸', '¾ÆÇöµ¿');
+VALUES (26, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (27, '¼­¿ï', '¸¶Æ÷±¸', '°ø´öµ¿');
+VALUES (27, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (28, '¼­¿ï', '¸¶Æ÷±¸', '½Å°ø´öµ¿');
+VALUES (28, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (29, '¼­¿ï', '¸¶Æ÷±¸', '¿ë°­µ¿');
+VALUES (29, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ë°­ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (30, '¼­¿ï', '¸¶Æ÷±¸', 'ÅäÁ¤µ¿');
+VALUES (30, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (31, '¼­¿ï', '¸¶Æ÷±¸', '´ëÈïµ¿');
+VALUES (31, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ïµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (32, '¼­¿ï', '¸¶Æ÷±¸', '¿°¸®µ¿');
+VALUES (32, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (33, '¼­¿ï', '¸¶Æ÷±¸', '³ë°í»êµ¿');
+VALUES (33, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½êµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (34, '¼­¿ï', '¸¶Æ÷±¸', '½Å¼öµ¿');
+VALUES (34, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å¼ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (35, '¼­¿ï', '¸¶Æ÷±¸', '¸Á¿øµ¿');
+VALUES (35, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (36, '¼­¿ï', '¸¶Æ÷±¸', '´çÀÎµ¿');
+VALUES (36, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Îµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (37, '¼­¿ï', '¸¶Æ÷±¸', 'ÇÏÁßµ¿');
+VALUES (37, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ßµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (38, '¼­¿ï', '¸¶Æ÷±¸', '±¸¼öµ¿');
+VALUES (38, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (39, '¼­¿ï', 'Á¾·Î±¸', 'Ã»¿îµ¿');
+VALUES (39, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'Ã»ï¿½îµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (40, '¼­¿ï', 'Á¾·Î±¸', '±ÃÁ¤µ¿');
+VALUES (40, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (41, '¼­¿ï', 'Á¾·Î±¸', 'È¿ÀÚµ¿');
+VALUES (41, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'È¿ï¿½Úµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (42, '¼­¿ï', 'Á¾·Î±¸', 'ÅëÀÇµ¿');
+VALUES (42, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½Çµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (43, '¼­¿ï', 'Á¾·Î±¸', '´©ÇÏµ¿');
+VALUES (43, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½Ïµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (44, '¼­¿ï', 'Á¾·Î±¸', '¿ÁÀÎµ¿');
+VALUES (44, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½Îµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (45, '¼­¿ï', 'Á¾·Î±¸', '´çÁÖµ¿');
+VALUES (45, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½Öµï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (46, '¼­¿ï', 'Á¾·Î±¸', '¼­¸°µ¿');
+VALUES (46, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (47, '¼­¿ï', 'Á¾·Î±¸', 'ÀÎ»çµ¿');
+VALUES (47, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½Î»çµ¿');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (48, '¼­¿ï', 'Á¾·Î±¸', '¿ø¼­µ¿');
+VALUES (48, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (49, '¼­¿ï', 'Á¾·Î±¸', '¹¦µ¿');
+VALUES (49, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½ï¿½');
 
 INSERT INTO TBLADDRESS (ADDRESS_SEQ, SIDO, SGG, EMD) 
-VALUES (50, '¼­¿ï', 'Á¾·Î±¸', '°ü¼öµ¿');
+VALUES (50, 'ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Î±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
 
 
 CREATE TABLE tblUserInfo (
     id VARCHAR2(100) NOT NULL, 
-    address_seq NUMBER NOT NULL, --fk ¼³Á¤ 
-    name VARCHAR2(21) NOT NULL, --ÇÑ±Û2~5ÀÚ
-    address VARCHAR2(100) NOT NULL, --»ó¼¼ÁÖ¼Ò, ·£´ý ´õ¹Ì
-    tel VARCHAR2(100) NOT NULL, --¼ýÀÚ¸¸ 11
-    email VARCHAR2(90) NOT NULL, --@¾Ë¾Æ¼­
-    birth DATE NOT NULL, --·£´ý
+    address_seq NUMBER NOT NULL, --fk ï¿½ï¿½ï¿½ï¿½ 
+    name VARCHAR2(21) NOT NULL, --ï¿½Ñ±ï¿½2~5ï¿½ï¿½
+    address VARCHAR2(100) NOT NULL, --ï¿½ï¿½ï¿½Ö¼ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    tel VARCHAR2(100) NOT NULL, --ï¿½ï¿½ï¿½Ú¸ï¿½ 11
+    email VARCHAR2(90) NOT NULL, --@ï¿½Ë¾Æ¼ï¿½
+    birth DATE NOT NULL, --ï¿½ï¿½ï¿½ï¿½
     gender CHAR(1) NOT NULL, --F/M
-    since DATE default sysdate NOT NULL --¾Ë¾Æ¼­
+    since DATE default sysdate NOT NULL --ï¿½Ë¾Æ¼ï¿½
 );
 
 ALTER TABLE tblUserInfo
@@ -350,109 +350,109 @@ ALTER TABLE tblUserInfo
 ALTER TABLE tblUserInfo
     ADD CONSTRAINT tblUI_address_seq_fk FOREIGN KEY (address_seq) REFERENCES tblAddress(address_seq);
 
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user1', 29, 'ÀÓÁ¤Èñ', 'ÁÖ°ø Æ÷·¹³ª¾ÆÆÄÆ® 588µ¿ 512È£', '01097244474', 'user1@daum.net', '84-08-25', 'm', '20-11-16');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user2', 16, 'ÀÓÁ¤Àç', 'È£¼ö¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 407µ¿ 44È£', '01081807781', 'user2@daum.net', '06-03-02', 'f', '21-08-12');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user3', 16, 'ÇÑÁø¿¬', 'ÁÖ°ø ÀÚÀÌ¾ÆÆÄÆ® 608µ¿ 916È£', '01058624356', 'user3@daum.net', '35-10-17', 'm', '21-09-20');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user4', 14, 'ÀÓÁöÇÏ', 'ÇÑºû¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 717µ¿ 142È£', '01046246116', 'user4@daum.net', '34-03-14', 'f', '20-02-02');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user5', 29, 'ÀÌÁø¼±', 'È£¼ö¸¶À» ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 107µ¿ 72È£', '01065939529', 'user5@daum.net', '50-07-21', 'm', '20-04-13');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user6', 5, 'Á¤Àç¼·', 'ÇÑºû¸¶À» ·¡¹Ì¾È¾ÆÆÄÆ® 629µ¿ 37È£', '01036186804', 'user6@gmail.com', '89-02-02', 'f', '21-03-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user7', 6, 'ÀÓÁøÈñ', '½Å»ï¼º¾ÆÆÄÆ® 205µ¿ 1414È£', '01063052160', 'user7@gmail.com', '81-06-20', 'f', '20-01-16');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user8', 2, 'ÁÖÀ¯Èñ', '¹Ù¶÷¸¶À» ´õ¼¥¾ÆÆÄÆ® 608µ¿ 1115È£', '01019933591', 'user8@gmail.com', '13-07-05', 'm', '20-08-23');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user9', 12, 'ÁøÁöÇÏ', 'ÇÑºû¸¶À» Èú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 548µ¿ 212È£', '01025561040', 'user9@gmail.com', '51-05-23', 'f', '21-03-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user10', 6, 'ÀÌ¹Î¹Î', '¿¹´ç¸¶À» »ï¼º¾ÆÆÄÆ® 732µ¿ 1115È£', '01031786363', 'user10@daum.net', '81-09-07', 'f', '20-06-02');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user11', 14, 'À¯¹ÎÀ¯', 'ÇÑºû¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 241µ¿ 55È£', '01067926609', 'user11@naver.com', '67-09-12', 'f', '21-02-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user12', 20, 'Á¤Àç¼±', 'ÁÖ°ø ÀÚÀÌ¾ÆÆÄÆ® 825µ¿ 715È£', '01086031607', 'user12@daum.net', '70-09-24', 'm', '21-02-02');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user13', 27, 'ÁÖ¼ö¼·', '¿¹´ç¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 274µ¿ 913È£', '01014421810', 'user13@daum.net', '73-01-07', 'f', '21-09-22');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user14', 30, '¹Ú¿¬¾È', 'Çàº¹¸¶À» ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 518µ¿ 1412È£', '01068564300', 'user14@daum.net', '75-05-10', 'f', '21-01-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user15', 22, '¾È¹ÎÇÏ', 'Çàº¹¸¶À» Çö´ë¾ÆÆÄÆ® 360µ¿ 44È£', '01067121548', 'user15@gmail.com', '33-08-28', 'f', '21-03-21');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user16', 4, 'Áø¼·Áø', '¹Ù¶÷¸¶À» ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 180µ¿ 142È£', '01094558032', 'user16@naver.com', '47-10-18', 'f', '21-05-03');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user17', 19, 'ÀÓÁ¤¿µ', '½Å´õ¼¥¾ÆÆÄÆ® 850µ¿ 416È£', '01082638789', 'user17@daum.net', '78-11-02', 'f', '20-11-22');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user18', 2, 'ÁøÀ¯ÁØ', 'ÇÑºû¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 850µ¿ 134È£', '01028556819', 'user18@gmail.com', '49-11-10', 'f', '21-01-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user19', 7, 'ÇÑ¾È¹Ì', '¹Ù¶÷¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 815µ¿ 45È£', '01080922965', 'user19@daum.net', '24-04-01', 'f', '20-01-14');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user20', 25, '¹ÚÁöÇü', '¿¹´ç¸¶À» ´õ¼¥¾ÆÆÄÆ® 846µ¿ 69È£', '01058284478', 'user20@daum.net', '34-01-19', 'f', '20-02-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user21', 20, 'ÁøÁØ¿µ', '¿¹´ç¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 831µ¿ 59È£', '01054069299', 'user21@gmail.com', '37-10-20', 'm', '20-03-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user22', 4, '°­¿µ¿µ', '¿¹´ç¸¶À» »ï¼º¾ÆÆÄÆ® 249µ¿ 1616È£', '01023316038', 'user22@naver.com', '05-11-07', 'f', '21-06-09');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user23', 8, '¹ÚÇü¹Ì', '¹Ù¶÷¸¶À» Èú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 129µ¿ 513È£', '01088418368', 'user23@naver.com', '10-05-22', 'f', '21-11-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user24', 18, '¹Ú¼öÇÏ', '¹Ù¶÷¸¶À» ·¡¹Ì¾È¾ÆÆÄÆ® 195µ¿ 131È£', '01035881340', 'user24@gmail.com', '81-04-15', 'f', '21-06-03');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user25', 13, 'ÃÖÁ¤¿µ', 'È£¼ö¸¶À» Èú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 341µ¿ 84È£', '01091239810', 'user25@naver.com', '02-05-08', 'm', '20-04-08');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user26', 7, 'ÁÖ¹ÌÈñ', '¹Ù¶÷¸¶À» Çö´ë¾ÆÆÄÆ® 633µ¿ 108È£', '01094738336', 'user26@naver.com', '26-06-22', 'f', '20-03-04');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user27', 15, 'ÇÑ¼öÁø', 'ÇÑºû¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 187µ¿ 94È£', '01098343433', 'user27@gmail.com', '01-07-28', 'm', '20-09-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user28', 21, '¾È¼·Áø', '¹Ù¶÷¸¶À» ·Ôµ¥Ä³½½¾ÆÆÄÆ® 685µ¿ 111È£', '01059556232', 'user28@naver.com', '80-10-03', 'm', '20-01-06');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user29', 15, 'À¯Áø¿¬', 'ÇÑºû¸¶À» »ï¼º¾ÆÆÄÆ® 401µ¿ 814È£', '01029958412', 'user29@gmail.com', '62-08-22', 'f', '20-07-11');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user30', 6, 'ÇÑ¾È¼º', 'Çàº¹¸¶À» »ï¼º¾ÆÆÄÆ® 302µ¿ 28È£', '01095498133', 'user30@daum.net', '53-04-18', 'm', '21-04-22');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user31', 11, 'ÀÌ¾È¿µ', 'È£¼ö¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 472µ¿ 65È£', '01030285803', 'user31@gmail.com', '64-07-22', 'f', '20-08-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user32', 5, 'ÁÖÁØ¼º', 'È£¼ö¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 747µ¿ 1216È£', '01085985885', 'user32@daum.net', '33-06-23', 'f', '20-06-23');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user33', 4, 'Á¤¹Î¿µ', '½Å¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 206µ¿ 16È£', '01035781022', 'user33@daum.net', '35-05-15', 'f', '21-08-07');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user34', 3, 'ÇÑÁ¤Áø', '¿¹´ç¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 275µ¿ 1615È£', '01045303984', 'user34@gmail.com', '68-03-16', 'm', '21-03-28');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user35', 17, 'ÁøÇü¹Î', 'ÁÖ°ø ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 596µ¿ 916È£', '01067546812', 'user35@gmail.com', '23-03-28', 'f', '21-02-23');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user36', 9, 'Á¤Á¤ÇÏ', 'ÁÖ°ø ÇÁ·çÁö¿À¾ÆÆÄÆ® 726µ¿ 118È£', '01028722278', 'user36@daum.net', '53-01-22', 'm', '20-03-09');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user37', 29, 'À¯ÇÏ¼º', '¹Ù¶÷¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 617µ¿ 616È£', '01030274868', 'user37@daum.net', '95-10-02', 'm', '21-06-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user38', 25, '¾È¿¬Áø', '¿¹´ç¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 644µ¿ 126È£', '01015574583', 'user38@naver.com', '16-11-07', 'm', '20-05-06');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user39', 12, 'ÀÌ¼öÇÏ', 'È£¼ö¸¶À» Èú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 140µ¿ 1014È£', '01068733295', 'user39@daum.net', '62-05-19', 'f', '20-11-14');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user40', 13, 'Áø¼º¼º', '½Å¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 748µ¿ 117È£', '01057509817', 'user40@daum.net', '93-09-28', 'f', '21-01-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user41', 19, 'ÃÖÁØÇÏ', 'È£¼ö¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 157µ¿ 1516È£', '01068358234', 'user41@gmail.com', '04-03-15', 'f', '20-01-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user42', 17, 'ÃÖÁ¤¼ö', '½Å·Ôµ¥Ä³½½¾ÆÆÄÆ® 350µ¿ 416È£', '01061054540', 'user42@daum.net', '74-03-08', 'm', '20-02-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user43', 14, 'Áø¼ºÇÏ', '¹Ù¶÷¸¶À» ´õ¼¥¾ÆÆÄÆ® 859µ¿ 141È£', '01059973031', 'user43@gmail.com', '29-07-26', 'f', '21-07-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user44', 30, 'ÀÓ¾ÈÀ¯', 'ÁÖ°ø Æ÷·¹³ª¾ÆÆÄÆ® 553µ¿ 1515È£', '01031324560', 'user44@gmail.com', '99-09-26', 'f', '20-07-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user45', 20, 'ÁÖ¾ÈÁø', 'È£¼ö¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 518µ¿ 71È£', '01030938436', 'user45@naver.com', '36-10-23', 'm', '21-10-11');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user46', 13, 'Á¤À¯¼ö', '¹Ù¶÷¸¶À» Èú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 636µ¿ 510È£', '01087554076', 'user46@naver.com', '09-09-01', 'f', '20-04-02');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user47', 7, 'Á¤¿¬Á¤', 'ÁÖ°ø Æ÷·¹³ª¾ÆÆÄÆ® 765µ¿ 97È£', '01018498041', 'user47@daum.net', '69-02-18', 'm', '20-08-14');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user48', 3, 'ÀÓÁöÇü', '¹Ù¶÷¸¶À» Çö´ë¾ÆÆÄÆ® 423µ¿ 812È£', '01029578152', 'user48@naver.com', '09-04-27', 'f', '20-03-05');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user49', 13, 'Á¤ÇÏ¼·', 'Çàº¹¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 769µ¿ 55È£', '01062069926', 'user49@gmail.com', '14-02-17', 'f', '20-03-26');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user50', 18, '¹ÚÀ¯Áø', 'ÇÑºû¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 186µ¿ 28È£', '01047181675', 'user50@naver.com', '25-01-17', 'f', '20-06-16');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user51', 10, 'ÀÌ¼·Áø', 'Çàº¹¸¶À» ·¡¹Ì¾È¾ÆÆÄÆ® 879µ¿ 68È£', '01054176986', 'user51@naver.com', '60-10-10', 'f', '21-06-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user52', 24, '¾È¹ÌÀ¯', '¿¹´ç¸¶À» Çö´ë¾ÆÆÄÆ® 453µ¿ 1411È£', '01032936269', 'user52@naver.com', '22-03-07', 'm', '20-08-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user53', 25, 'ÁÖ¼ºÁØ', 'ÇÑºû¸¶À» ·Ôµ¥Ä³½½¾ÆÆÄÆ® 777µ¿ 810È£', '01024818996', 'user53@gmail.com', '22-05-02', 'f', '21-02-06');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user54', 17, '±è¾È¼·', 'ÁÖ°ø ·¡¹Ì¾È¾ÆÆÄÆ® 277µ¿ 313È£', '01032639461', 'user54@naver.com', '66-08-25', 'f', '20-07-09');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user55', 23, 'À¯ÁøÁ¤', '¿¹´ç¸¶À» ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 493µ¿ 213È£', '01030585236', 'user55@gmail.com', '12-09-26', 'f', '21-11-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user56', 14, 'Áø¿µ¼±', '¹Ù¶÷¸¶À» ´õ¼¥¾ÆÆÄÆ® 444µ¿ 92È£', '01019292299', 'user56@naver.com', '91-10-27', 'm', '20-03-07');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user57', 7, '±èÁø¾È', 'ÁÖ°ø ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 186µ¿ 1113È£', '01072434241', 'user57@gmail.com', '09-01-25', 'm', '20-05-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user58', 22, 'ÇÑÁøÀç', '½ÅÆ÷·¹³ª¾ÆÆÄÆ® 361µ¿ 1112È£', '01063776598', 'user58@naver.com', '56-07-27', 'f', '21-02-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user59', 4, 'ÀÌ¹Î¼·', '¹Ù¶÷¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 466µ¿ 107È£', '01044483700', 'user59@gmail.com', '24-04-15', 'm', '20-08-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user60', 26, 'ÃÖÁ¤¿¬', 'ÁÖ°ø Æ÷·¹³ª¾ÆÆÄÆ® 810µ¿ 313È£', '01098856654', 'user60@gmail.com', '70-06-02', 'f', '20-02-13');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user61', 4, '¹ÚÀçÁØ', '¹Ù¶÷¸¶À» Çö´ë¾ÆÆÄÆ® 593µ¿ 84È£', '01089914755', 'user61@naver.com', '77-04-27', 'm', '21-06-05');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user62', 8, '¹Ú¼·¼±', 'ÁÖ°ø »ï¼º¾ÆÆÄÆ® 528µ¿ 1111È£', '01016659130', 'user62@gmail.com', '72-11-07', 'f', '21-10-12');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user63', 11, '±èÀç¹Î', '¹Ù¶÷¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 730µ¿ 55È£', '01069663150', 'user63@gmail.com', '20-03-28', 'm', '21-01-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user64', 29, 'ÀÌ¼·Á¤', '¹Ù¶÷¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 203µ¿ 55È£', '01058369906', 'user64@naver.com', '12-01-05', 'm', '21-09-09');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user65', 20, 'À¯¼º¼ö', 'Çàº¹¸¶À» ·Ôµ¥Ä³½½¾ÆÆÄÆ® 746µ¿ 916È£', '01017863188', 'user65@naver.com', '52-11-10', 'm', '21-03-08');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user66', 10, 'ÇÑÁØ¼ö', '½ÅÇö´ë¾ÆÆÄÆ® 841µ¿ 1216È£', '01065548477', 'user66@daum.net', '24-04-24', 'f', '20-10-18');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user67', 7, 'ÃÖÁØ¿¬', '½Å·¡¹Ì¾È¾ÆÆÄÆ® 417µ¿ 77È£', '01083378638', 'user67@naver.com', '64-05-18', 'm', '20-01-28');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user68', 21, 'ÀÌÀ¯ÁØ', 'È£¼ö¸¶À» Çö´ë¾ÆÆÄÆ® 729µ¿ 78È£', '01061634851', 'user68@daum.net', '74-04-07', 'm', '21-09-07');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user69', 1, 'ÃÖÁø¾È', 'È£¼ö¸¶À» »ï¼º¾ÆÆÄÆ® 480µ¿ 116È£', '01089768490', 'user69@naver.com', '17-06-01', 'm', '21-07-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user70', 11, 'ÇÑ¼ºÇÏ', '¿¹´ç¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 493µ¿ 119È£', '01054978907', 'user70@naver.com', '26-01-18', 'f', '20-10-03');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user71', 23, 'À¯Á¤Àç', 'ÇÑºû¸¶À» ·Ôµ¥Ä³½½¾ÆÆÄÆ® 612µ¿ 122È£', '01018682784', 'user71@gmail.com', '81-09-28', 'f', '21-06-22');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user72', 16, 'À¯Çü¹Ì', '½ÅÈú½ºÅ×ÀÌÆ®¾ÆÆÄÆ® 467µ¿ 118È£', '01086854564', 'user72@naver.com', '83-10-04', 'm', '20-05-19');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user73', 10, 'ÀÌÁØ¹Ì', 'Çàº¹¸¶À» ¾ÆÀÌÆÄÅ©¾ÆÆÄÆ® 143µ¿ 310È£', '01013871159', 'user73@gmail.com', '24-04-13', 'f', '21-06-28');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user74', 23, 'ÃÖ¿¬¼±', '¹Ù¶÷¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 250µ¿ 1116È£', '01062424607', 'user74@daum.net', '05-07-06', 'f', '21-07-04');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user75', 4, 'ÃÖ¼º¹Î', 'È£¼ö¸¶À» Æ÷·¹³ª¾ÆÆÄÆ® 863µ¿ 169È£', '01014282799', 'user75@naver.com', '41-05-02', 'f', '21-03-16');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user76', 18, 'ÇÑ¼·¼·', '¹Ù¶÷¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 754µ¿ 122È£', '01059509867', 'user76@naver.com', '47-01-21', 'm', '21-11-20');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user77', 2, 'À¯ÇÏ¼º', 'È£¼ö¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 884µ¿ 159È£', '01059221640', 'user77@daum.net', '33-04-05', 'f', '21-08-17');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user78', 18, '±è¿¬ÇÏ', '¿¹´ç¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 811µ¿ 72È£', '01081687551', 'user78@naver.com', '01-07-27', 'm', '20-07-05');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user79', 8, 'À¯ÁØÇÏ', 'ÇÑºû¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 781µ¿ 1411È£', '01056126425', 'user79@naver.com', '54-10-17', 'm', '20-11-24');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user80', 10, '¹ÚÀç¼±', 'È£¼ö¸¶À» ÀÚÀÌ¾ÆÆÄÆ® 532µ¿ 129È£', '01024524538', 'user80@daum.net', '38-03-02', 'm', '21-11-04');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user81', 6, 'Áø¹Î¿¬', '¹Ù¶÷¸¶À» ´õ¼¥¾ÆÆÄÆ® 490µ¿ 810È£', '01037753009', 'user81@daum.net', '72-08-22', 'm', '21-03-28');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user82', 10, '¾ÈÀçÀ¯', '½ÅÇö´ë¾ÆÆÄÆ® 445µ¿ 124È£', '01049751197', 'user82@naver.com', '78-11-17', 'f', '20-09-26');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user83', 16, 'ÇÑ¹ÌÁ¤', '½Å´õ¼¥¾ÆÆÄÆ® 330µ¿ 88È£', '01022254152', 'user83@gmail.com', '31-02-04', 'f', '20-11-16');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user84', 22, 'ÀÌÁø¹Î', 'È£¼ö¸¶À» »ï¼º¾ÆÆÄÆ® 565µ¿ 143È£', '01039841591', 'user84@gmail.com', '08-01-17', 'f', '20-10-05');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user85', 8, 'ÇÑÁöÁ¤', 'ÁÖ°ø EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 301µ¿ 1212È£', '01047823022', 'user85@naver.com', '22-06-10', 'm', '20-06-15');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user86', 12, '°­ÁØÇü', '½Å´õ¼¥¾ÆÆÄÆ® 811µ¿ 19È£', '01042686935', 'user86@naver.com', '44-07-05', 'm', '21-08-23');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user87', 5, '¹ÚÇüÁØ', '¹Ù¶÷¸¶À» ·Ôµ¥Ä³½½¾ÆÆÄÆ® 723µ¿ 138È£', '01061901586', 'user87@gmail.com', '44-04-24', 'm', '21-06-02');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user88', 10, '¾È¿¬Çü', 'È£¼ö¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 752µ¿ 13È£', '01093459292', 'user88@daum.net', '86-04-24', 'f', '20-10-09');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user89', 25, 'ÁÖ¹Î¼º', '½ÅÇÁ·çÁö¿À¾ÆÆÄÆ® 506µ¿ 1216È£', '01061572643', 'user89@gmail.com', '29-05-24', 'f', '21-06-19');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user90', 4, 'Á¤¾È¿µ', 'È£¼ö¸¶À» »ï¼º¾ÆÆÄÆ® 498µ¿ 1113È£', '01052516471', 'user90@daum.net', '12-10-18', 'm', '20-02-28');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user91', 11, '¹Ú¼ºÁö', '¹Ù¶÷¸¶À» EÆíÇÑ¼¼»ó¾ÆÆÄÆ® 451µ¿ 18È£', '01033123793', 'user91@daum.net', '29-11-04', 'f', '21-03-07');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user92', 11, 'ÇÑÁöÁØ', 'È£¼ö¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 833µ¿ 166È£', '01038176950', 'user92@naver.com', '02-08-07', 'f', '20-01-26');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user93', 2, 'À¯¿µ¿µ', 'ÁÖ°ø ÇÁ·çÁö¿À¾ÆÆÄÆ® 172µ¿ 132È£', '01082134396', 'user93@daum.net', '87-07-17', 'm', '20-10-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user94', 30, 'ÃÖ¾ÈÈñ', 'Çàº¹¸¶À» ÇÁ·çÁö¿À¾ÆÆÄÆ® 237µ¿ 816È£', '01076156610', 'user94@daum.net', '97-06-25', 'm', '20-01-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user95', 29, 'ÇÑ¼ºÈñ', 'Çàº¹¸¶À» »ï¼º¾ÆÆÄÆ® 566µ¿ 716È£', '01015781330', 'user95@naver.com', '99-10-08', 'm', '20-01-07');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user96', 22, 'Á¤Áø¼·', 'È£¼ö¸¶À» ·¡¹Ì¾È¾ÆÆÄÆ® 517µ¿ 912È£', '01074044041', 'user96@naver.com', '58-01-05', 'm', '21-09-01');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user97', 21, '°­ÇüÈñ', 'È£¼ö¸¶À» Çö´ë¾ÆÆÄÆ® 800µ¿ 94È£', '01018603676', 'user97@naver.com', '95-02-08', 'f', '21-06-27');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user98', 5, 'ÁøÁøÀ¯', 'ÇÑºû¸¶À» ·¡¹Ì¾È¾ÆÆÄÆ® 600µ¿ 111È£', '01034291276', 'user98@gmail.com', '14-01-25', 'f', '20-08-10');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user99', 20, '°­Áø¼±', '½Å·¡¹Ì¾È¾ÆÆÄÆ® 457µ¿ 138È£', '01047211370', 'user99@gmail.com', '76-06-05', 'f', '21-04-06');
-insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user100', 18, 'ÀÌÀçÁø', '½ÅEÆíÇÑ¼¼»ó¾ÆÆÄÆ® 375µ¿ 1010È£', '01073351097', 'user100@naver.com', '49-03-26', 'm', '20-10-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user1', 29, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 588ï¿½ï¿½ 512È£', '01097244474', 'user1@daum.net', '84-08-25', 'm', '20-11-16');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user2', 16, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 407ï¿½ï¿½ 44È£', '01081807781', 'user2@daum.net', '06-03-02', 'f', '21-08-12');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user3', 16, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 608ï¿½ï¿½ 916È£', '01058624356', 'user3@daum.net', '35-10-17', 'm', '21-09-20');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user4', 14, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 717ï¿½ï¿½ 142È£', '01046246116', 'user4@daum.net', '34-03-14', 'f', '20-02-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user5', 29, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 107ï¿½ï¿½ 72È£', '01065939529', 'user5@daum.net', '50-07-21', 'm', '20-04-13');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user6', 5, 'ï¿½ï¿½ï¿½ç¼·', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 629ï¿½ï¿½ 37È£', '01036186804', 'user6@gmail.com', '89-02-02', 'f', '21-03-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user7', 6, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å»ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 205ï¿½ï¿½ 1414È£', '01063052160', 'user7@gmail.com', '81-06-20', 'f', '20-01-16');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user8', 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 608ï¿½ï¿½ 1115È£', '01019933591', 'user8@gmail.com', '13-07-05', 'm', '20-08-23');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user9', 12, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 548ï¿½ï¿½ 212È£', '01025561040', 'user9@gmail.com', '51-05-23', 'f', '21-03-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user10', 6, 'ï¿½Ì¹Î¹ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 732ï¿½ï¿½ 1115È£', '01031786363', 'user10@daum.net', '81-09-07', 'f', '20-06-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user11', 14, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 241ï¿½ï¿½ 55È£', '01067926609', 'user11@naver.com', '67-09-12', 'f', '21-02-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user12', 20, 'ï¿½ï¿½ï¿½ç¼±', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 825ï¿½ï¿½ 715È£', '01086031607', 'user12@daum.net', '70-09-24', 'm', '21-02-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user13', 27, 'ï¿½Ö¼ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 274ï¿½ï¿½ 913È£', '01014421810', 'user13@daum.net', '73-01-07', 'f', '21-09-22');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user14', 30, 'ï¿½Ú¿ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 518ï¿½ï¿½ 1412È£', '01068564300', 'user14@daum.net', '75-05-10', 'f', '21-01-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user15', 22, 'ï¿½È¹ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 360ï¿½ï¿½ 44È£', '01067121548', 'user15@gmail.com', '33-08-28', 'f', '21-03-21');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user16', 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 180ï¿½ï¿½ 142È£', '01094558032', 'user16@naver.com', '47-10-18', 'f', '21-05-03');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user17', 19, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 850ï¿½ï¿½ 416È£', '01082638789', 'user17@daum.net', '78-11-02', 'f', '20-11-22');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user18', 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 850ï¿½ï¿½ 134È£', '01028556819', 'user18@gmail.com', '49-11-10', 'f', '21-01-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user19', 7, 'ï¿½Ñ¾È¹ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 815ï¿½ï¿½ 45È£', '01080922965', 'user19@daum.net', '24-04-01', 'f', '20-01-14');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user20', 25, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 846ï¿½ï¿½ 69È£', '01058284478', 'user20@daum.net', '34-01-19', 'f', '20-02-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user21', 20, 'ï¿½ï¿½ï¿½Ø¿ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 831ï¿½ï¿½ 59È£', '01054069299', 'user21@gmail.com', '37-10-20', 'm', '20-03-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user22', 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 249ï¿½ï¿½ 1616È£', '01023316038', 'user22@naver.com', '05-11-07', 'f', '21-06-09');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user23', 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 129ï¿½ï¿½ 513È£', '01088418368', 'user23@naver.com', '10-05-22', 'f', '21-11-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user24', 18, 'ï¿½Ú¼ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 195ï¿½ï¿½ 131È£', '01035881340', 'user24@gmail.com', '81-04-15', 'f', '21-06-03');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user25', 13, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 341ï¿½ï¿½ 84È£', '01091239810', 'user25@naver.com', '02-05-08', 'm', '20-04-08');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user26', 7, 'ï¿½Ö¹ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 633ï¿½ï¿½ 108È£', '01094738336', 'user26@naver.com', '26-06-22', 'f', '20-03-04');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user27', 15, 'ï¿½Ñ¼ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 187ï¿½ï¿½ 94È£', '01098343433', 'user27@gmail.com', '01-07-28', 'm', '20-09-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user28', 21, 'ï¿½È¼ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 685ï¿½ï¿½ 111È£', '01059556232', 'user28@naver.com', '80-10-03', 'm', '20-01-06');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user29', 15, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 401ï¿½ï¿½ 814È£', '01029958412', 'user29@gmail.com', '62-08-22', 'f', '20-07-11');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user30', 6, 'ï¿½Ñ¾È¼ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 302ï¿½ï¿½ 28È£', '01095498133', 'user30@daum.net', '53-04-18', 'm', '21-04-22');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user31', 11, 'ï¿½Ì¾È¿ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 472ï¿½ï¿½ 65È£', '01030285803', 'user31@gmail.com', '64-07-22', 'f', '20-08-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user32', 5, 'ï¿½ï¿½ï¿½Ø¼ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 747ï¿½ï¿½ 1216È£', '01085985885', 'user32@daum.net', '33-06-23', 'f', '20-06-23');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user33', 4, 'ï¿½ï¿½ï¿½Î¿ï¿½', 'ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 206ï¿½ï¿½ 16È£', '01035781022', 'user33@daum.net', '35-05-15', 'f', '21-08-07');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user34', 3, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 275ï¿½ï¿½ 1615È£', '01045303984', 'user34@gmail.com', '68-03-16', 'm', '21-03-28');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user35', 17, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 596ï¿½ï¿½ 916È£', '01067546812', 'user35@gmail.com', '23-03-28', 'f', '21-02-23');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user36', 9, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 726ï¿½ï¿½ 118È£', '01028722278', 'user36@daum.net', '53-01-22', 'm', '20-03-09');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user37', 29, 'ï¿½ï¿½ï¿½Ï¼ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 617ï¿½ï¿½ 616È£', '01030274868', 'user37@daum.net', '95-10-02', 'm', '21-06-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user38', 25, 'ï¿½È¿ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 644ï¿½ï¿½ 126È£', '01015574583', 'user38@naver.com', '16-11-07', 'm', '20-05-06');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user39', 12, 'ï¿½Ì¼ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 140ï¿½ï¿½ 1014È£', '01068733295', 'user39@daum.net', '62-05-19', 'f', '20-11-14');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user40', 13, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 748ï¿½ï¿½ 117È£', '01057509817', 'user40@daum.net', '93-09-28', 'f', '21-01-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user41', 19, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 157ï¿½ï¿½ 1516È£', '01068358234', 'user41@gmail.com', '04-03-15', 'f', '20-01-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user42', 17, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å·Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 350ï¿½ï¿½ 416È£', '01061054540', 'user42@daum.net', '74-03-08', 'm', '20-02-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user43', 14, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 859ï¿½ï¿½ 141È£', '01059973031', 'user43@gmail.com', '29-07-26', 'f', '21-07-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user44', 30, 'ï¿½Ó¾ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 553ï¿½ï¿½ 1515È£', '01031324560', 'user44@gmail.com', '99-09-26', 'f', '20-07-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user45', 20, 'ï¿½Ö¾ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 518ï¿½ï¿½ 71È£', '01030938436', 'user45@naver.com', '36-10-23', 'm', '21-10-11');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user46', 13, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 636ï¿½ï¿½ 510È£', '01087554076', 'user46@naver.com', '09-09-01', 'f', '20-04-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user47', 7, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 765ï¿½ï¿½ 97È£', '01018498041', 'user47@daum.net', '69-02-18', 'm', '20-08-14');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user48', 3, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 423ï¿½ï¿½ 812È£', '01029578152', 'user48@naver.com', '09-04-27', 'f', '20-03-05');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user49', 13, 'ï¿½ï¿½ï¿½Ï¼ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 769ï¿½ï¿½ 55È£', '01062069926', 'user49@gmail.com', '14-02-17', 'f', '20-03-26');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user50', 18, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 186ï¿½ï¿½ 28È£', '01047181675', 'user50@naver.com', '25-01-17', 'f', '20-06-16');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user51', 10, 'ï¿½Ì¼ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 879ï¿½ï¿½ 68È£', '01054176986', 'user51@naver.com', '60-10-10', 'f', '21-06-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user52', 24, 'ï¿½È¹ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 453ï¿½ï¿½ 1411È£', '01032936269', 'user52@naver.com', '22-03-07', 'm', '20-08-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user53', 25, 'ï¿½Ö¼ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 777ï¿½ï¿½ 810È£', '01024818996', 'user53@gmail.com', '22-05-02', 'f', '21-02-06');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user54', 17, 'ï¿½ï¿½È¼ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 277ï¿½ï¿½ 313È£', '01032639461', 'user54@naver.com', '66-08-25', 'f', '20-07-09');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user55', 23, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 493ï¿½ï¿½ 213È£', '01030585236', 'user55@gmail.com', '12-09-26', 'f', '21-11-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user56', 14, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 444ï¿½ï¿½ 92È£', '01019292299', 'user56@naver.com', '91-10-27', 'm', '20-03-07');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user57', 7, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 186ï¿½ï¿½ 1113È£', '01072434241', 'user57@gmail.com', '09-01-25', 'm', '20-05-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user58', 22, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 361ï¿½ï¿½ 1112È£', '01063776598', 'user58@naver.com', '56-07-27', 'f', '21-02-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user59', 4, 'ï¿½Ì¹Î¼ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 466ï¿½ï¿½ 107È£', '01044483700', 'user59@gmail.com', '24-04-15', 'm', '20-08-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user60', 26, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 810ï¿½ï¿½ 313È£', '01098856654', 'user60@gmail.com', '70-06-02', 'f', '20-02-13');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user61', 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 593ï¿½ï¿½ 84È£', '01089914755', 'user61@naver.com', '77-04-27', 'm', '21-06-05');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user62', 8, 'ï¿½Ú¼ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 528ï¿½ï¿½ 1111È£', '01016659130', 'user62@gmail.com', '72-11-07', 'f', '21-10-12');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user63', 11, 'ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 730ï¿½ï¿½ 55È£', '01069663150', 'user63@gmail.com', '20-03-28', 'm', '21-01-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user64', 29, 'ï¿½Ì¼ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 203ï¿½ï¿½ 55È£', '01058369906', 'user64@naver.com', '12-01-05', 'm', '21-09-09');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user65', 20, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 746ï¿½ï¿½ 916È£', '01017863188', 'user65@naver.com', '52-11-10', 'm', '21-03-08');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user66', 10, 'ï¿½ï¿½ï¿½Ø¼ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 841ï¿½ï¿½ 1216È£', '01065548477', 'user66@daum.net', '24-04-24', 'f', '20-10-18');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user67', 7, 'ï¿½ï¿½ï¿½Ø¿ï¿½', 'ï¿½Å·ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 417ï¿½ï¿½ 77È£', '01083378638', 'user67@naver.com', '64-05-18', 'm', '20-01-28');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user68', 21, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 729ï¿½ï¿½ 78È£', '01061634851', 'user68@daum.net', '74-04-07', 'm', '21-09-07');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user69', 1, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 480ï¿½ï¿½ 116È£', '01089768490', 'user69@naver.com', '17-06-01', 'm', '21-07-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user70', 11, 'ï¿½Ñ¼ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 493ï¿½ï¿½ 119È£', '01054978907', 'user70@naver.com', '26-01-18', 'f', '20-10-03');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user71', 23, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 612ï¿½ï¿½ 122È£', '01018682784', 'user71@gmail.com', '81-09-28', 'f', '21-06-22');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user72', 16, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® 467ï¿½ï¿½ 118È£', '01086854564', 'user72@naver.com', '83-10-04', 'm', '20-05-19');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user73', 10, 'ï¿½ï¿½ï¿½Ø¹ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½Æ® 143ï¿½ï¿½ 310È£', '01013871159', 'user73@gmail.com', '24-04-13', 'f', '21-06-28');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user74', 23, 'ï¿½Ö¿ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 250ï¿½ï¿½ 1116È£', '01062424607', 'user74@daum.net', '05-07-06', 'f', '21-07-04');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user75', 4, 'ï¿½Ö¼ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 863ï¿½ï¿½ 169È£', '01014282799', 'user75@naver.com', '41-05-02', 'f', '21-03-16');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user76', 18, 'ï¿½Ñ¼ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 754ï¿½ï¿½ 122È£', '01059509867', 'user76@naver.com', '47-01-21', 'm', '21-11-20');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user77', 2, 'ï¿½ï¿½ï¿½Ï¼ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 884ï¿½ï¿½ 159È£', '01059221640', 'user77@daum.net', '33-04-05', 'f', '21-08-17');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user78', 18, 'ï¿½è¿¬ï¿½ï¿½', 'ï¿½ï¿½ï¿½ç¸¶ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 811ï¿½ï¿½ 72È£', '01081687551', 'user78@naver.com', '01-07-27', 'm', '20-07-05');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user79', 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 781ï¿½ï¿½ 1411È£', '01056126425', 'user79@naver.com', '54-10-17', 'm', '20-11-24');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user80', 10, 'ï¿½ï¿½ï¿½ç¼±', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½Æ® 532ï¿½ï¿½ 129È£', '01024524538', 'user80@daum.net', '38-03-02', 'm', '21-11-04');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user81', 6, 'ï¿½ï¿½ï¿½Î¿ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 490ï¿½ï¿½ 810È£', '01037753009', 'user81@daum.net', '72-08-22', 'm', '21-03-28');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user82', 10, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 445ï¿½ï¿½ 124È£', '01049751197', 'user82@naver.com', '78-11-17', 'f', '20-09-26');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user83', 16, 'ï¿½Ñ¹ï¿½ï¿½ï¿½', 'ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 330ï¿½ï¿½ 88È£', '01022254152', 'user83@gmail.com', '31-02-04', 'f', '20-11-16');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user84', 22, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 565ï¿½ï¿½ 143È£', '01039841591', 'user84@gmail.com', '08-01-17', 'f', '20-10-05');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user85', 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 301ï¿½ï¿½ 1212È£', '01047823022', 'user85@naver.com', '22-06-10', 'm', '20-06-15');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user86', 12, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 811ï¿½ï¿½ 19È£', '01042686935', 'user86@naver.com', '44-07-05', 'm', '21-08-23');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user87', 5, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ôµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 723ï¿½ï¿½ 138È£', '01061901586', 'user87@gmail.com', '44-04-24', 'm', '21-06-02');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user88', 10, 'ï¿½È¿ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 752ï¿½ï¿½ 13È£', '01093459292', 'user88@daum.net', '86-04-24', 'f', '20-10-09');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user89', 25, 'ï¿½Ö¹Î¼ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 506ï¿½ï¿½ 1216È£', '01061572643', 'user89@gmail.com', '29-05-24', 'f', '21-06-19');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user90', 4, 'ï¿½ï¿½ï¿½È¿ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 498ï¿½ï¿½ 1113È£', '01052516471', 'user90@daum.net', '12-10-18', 'm', '20-02-28');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user91', 11, 'ï¿½Ú¼ï¿½ï¿½ï¿½', 'ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 451ï¿½ï¿½ 18È£', '01033123793', 'user91@daum.net', '29-11-04', 'f', '21-03-07');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user92', 11, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 833ï¿½ï¿½ 166È£', '01038176950', 'user92@naver.com', '02-08-07', 'f', '20-01-26');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user93', 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 172ï¿½ï¿½ 132È£', '01082134396', 'user93@daum.net', '87-07-17', 'm', '20-10-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user94', 30, 'ï¿½Ö¾ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 237ï¿½ï¿½ 816È£', '01076156610', 'user94@daum.net', '97-06-25', 'm', '20-01-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user95', 29, 'ï¿½Ñ¼ï¿½ï¿½ï¿½', 'ï¿½àº¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¼ºï¿½ï¿½ï¿½ï¿½Æ® 566ï¿½ï¿½ 716È£', '01015781330', 'user95@naver.com', '99-10-08', 'm', '20-01-07');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user96', 22, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 517ï¿½ï¿½ 912È£', '01074044041', 'user96@naver.com', '58-01-05', 'm', '21-09-01');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user97', 21, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 800ï¿½ï¿½ 94È£', '01018603676', 'user97@naver.com', '95-02-08', 'f', '21-06-27');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user98', 5, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ñºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 600ï¿½ï¿½ 111È£', '01034291276', 'user98@gmail.com', '14-01-25', 'f', '20-08-10');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user99', 20, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Å·ï¿½ï¿½Ì¾È¾ï¿½ï¿½ï¿½Æ® 457ï¿½ï¿½ 138È£', '01047211370', 'user99@gmail.com', '76-06-05', 'f', '21-04-06');
+insert into tblUserInfo (id, address_seq, name, address, tel, email, birth, gender, since) values ('user100', 18, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½Eï¿½ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® 375ï¿½ï¿½ 1010È£', '01073351097', 'user100@naver.com', '49-03-26', 'm', '20-10-02');
 
 
--- »óÇ° À¯Çü
+-- ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½
 CREATE TABLE tblProductType (
 	product_type_seq	NUMBER	NOT NULL,
 	name	VARCHAR2(100)	NOT NULL
@@ -462,38 +462,38 @@ CREATE SEQUENCE product_type_seq;
 
 ALTER TABLE tblProductType ADD CONSTRAINT tblPT_product_type_seq_pk PRIMARY KEY(product_type_seq);
 
-insert into tblProductType (product_type_seq, name) values (1, 'µðÁöÅÐ±â±â');
-insert into tblProductType (product_type_seq, name) values (2, '»ýÈ°°¡Àü');
-insert into tblProductType (product_type_seq, name) values (3, '°¡±¸/ÀÎÅ×¸®¾î');
-insert into tblProductType (product_type_seq, name) values (4, 'À¯¾Æµ¿');
-insert into tblProductType (product_type_seq, name) values (5, '»ýÈ°/°¡°ø½ÄÇ°');
-insert into tblProductType (product_type_seq, name) values (6, 'À¯¾Æµµ¼­');
-insert into tblProductType (product_type_seq, name) values (7, '½ºÆ÷Ã÷/·¹Àú');
-insert into tblProductType (product_type_seq, name) values (8, '¿©¼ºÀâÈ­');
-insert into tblProductType (product_type_seq, name) values (9, '¿©¼ºÀÇ·ù');
-insert into tblProductType (product_type_seq, name) values (10, '³²¼ºÆÐ¼Ç/ÀâÈ­');
-insert into tblProductType (product_type_seq, name) values (11, '°ÔÀÓ/Ãë¹Ì');
-insert into tblProductType (product_type_seq, name) values (12, 'ºäÆ¼/¹Ì¿ë');
-insert into tblProductType (product_type_seq, name) values (13, '¹Ý·Áµ¿¹°¿ëÇ°');
-insert into tblProductType (product_type_seq, name) values (14, 'µµ¼­/Æ¼ÄÏ/À½¹Ý');
-insert into tblProductType (product_type_seq, name) values (15, '½Ä¹°');
-insert into tblProductType (product_type_seq, name) values (16, '±âÅ¸ Áß°í¹°Ç°');
+insert into tblProductType (product_type_seq, name) values (1, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (2, 'ï¿½ï¿½È°ï¿½ï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (3, 'ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½×¸ï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (4, 'ï¿½ï¿½ï¿½Æµï¿½');
+insert into tblProductType (product_type_seq, name) values (5, 'ï¿½ï¿½È°/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°');
+insert into tblProductType (product_type_seq, name) values (6, 'ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (7, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È­');
+insert into tblProductType (product_type_seq, name) values (9, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½');
+insert into tblProductType (product_type_seq, name) values (10, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½/ï¿½ï¿½È­');
+insert into tblProductType (product_type_seq, name) values (11, 'ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (12, 'ï¿½ï¿½Æ¼/ï¿½Ì¿ï¿½');
+insert into tblProductType (product_type_seq, name) values (13, 'ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°');
+insert into tblProductType (product_type_seq, name) values (14, 'ï¿½ï¿½ï¿½ï¿½/Æ¼ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½');
+insert into tblProductType (product_type_seq, name) values (15, 'ï¿½Ä¹ï¿½');
+insert into tblProductType (product_type_seq, name) values (16, 'ï¿½ï¿½Å¸ ï¿½ß°ï¿½Ç°');
 
 
--- »óÇ°
+-- ï¿½ï¿½Ç°
 CREATE TABLE tblProduct (
-	product_seq	NUMBER	NOT NULL,               --»óÇ°¹øÈ£(PK)
-	id	VARCHAR2(100)	NOT NULL,               --ÆÇ¸ÅÀÚ ¾ÆÀÌµð(FK). USER1~100
-	address_seq	NUMBER	NOT NULL,               --Áö¿ª¹øÈ£(FK) 30°³
-	product_type_seq	NUMBER	NOT NULL,       --»óÇ°À¯Çü(FK) ¾Ë¾Æ¼­
-	name	VARCHAR2(100)	NOT NULL,           --»óÇ°ÀÌ¸§   ¼ö½Ä¾î+¸í»ç
-	price	NUMBER	NOT NULL,                   --»óÇ°°¡°Ý 1000~1000000
-	is_auction CHAR(1)	DEFAULT 'n' NOT NULL,   --°æ¸Å¿©ºÎ n/y
-	content	VARCHAR2(4000)	NOT NULL,           --»ó¼¼³»¿ë ¼ö½Ä¾î+ÀÌÀ¯+ÃßÃµ
-	regdate DATE DEFAULT sysdate NOT NULL,      --ÀÛ¼º³¯Â¥   ¾Ë¾Æ¼­.. 
-	is_completion CHAR(1) DEFAULT 'n' NOT NULL, --ÆÇ¸Å¿©ºÎ n/y..
-	readcount NUMBER DEFAULT 0 NOT NULL,        --Á¶È¸¼ö ·£´ý¡¦
-	is_deletion CHAR(1) DEFAULT 'n' NOT NULL	--»èÁ¦¿©ºÎ
+	product_seq	NUMBER	NOT NULL,               --ï¿½ï¿½Ç°ï¿½ï¿½È£(PK)
+	id	VARCHAR2(100)	NOT NULL,               --ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½(FK). USER1~100
+	address_seq	NUMBER	NOT NULL,               --ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£(FK) 30ï¿½ï¿½
+	product_type_seq	NUMBER	NOT NULL,       --ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½(FK) ï¿½Ë¾Æ¼ï¿½
+	name	VARCHAR2(100)	NOT NULL,           --ï¿½ï¿½Ç°ï¿½Ì¸ï¿½   ï¿½ï¿½ï¿½Ä¾ï¿½+ï¿½ï¿½ï¿½
+	price	NUMBER	NOT NULL,                   --ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ 1000~1000000
+	is_auction CHAR(1)	DEFAULT 'n' NOT NULL,   --ï¿½ï¿½Å¿ï¿½ï¿½ï¿½ n/y
+	content	VARCHAR2(4000)	NOT NULL,           --ï¿½ó¼¼³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¾ï¿½+ï¿½ï¿½ï¿½ï¿½+ï¿½ï¿½Ãµ
+	regdate DATE DEFAULT sysdate NOT NULL,      --ï¿½Û¼ï¿½ï¿½ï¿½Â¥   ï¿½Ë¾Æ¼ï¿½.. 
+	is_completion CHAR(1) DEFAULT 'n' NOT NULL, --ï¿½Ç¸Å¿ï¿½ï¿½ï¿½ n/y..
+	readcount NUMBER DEFAULT 0 NOT NULL,        --ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	is_deletion CHAR(1) DEFAULT 'n' NOT NULL	--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 );
 
 CREATE SEQUENCE product_seq;
@@ -505,166 +505,166 @@ ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_product_type_fk FOREIGN KEY(pro
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_is_auction_ck CHECK(is_auction IN ('n', 'y'));
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_is_completion_ck CHECK(is_completion IN ('n', 'y'));
 
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (1, 'user61', 29, 6, '¹Ì°³ºÀ ¼ö¿µº¹ »õ»óÇ°', 38000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-01-09', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (2, 'user100', 33, 10, 'ÇÇ¾Æ³ëÀå³­°¨', 270000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-01-18', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (3, 'user43', 36, 7, 'Ã»¹ÙÁö', 727000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-01-23', 'y', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (4, 'user10', 6, 2, '¼ö¿µº¹', 454000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-01-28', 'y', 21);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (5, 'user100', 37, 8, '¼±¹Ý ÆÇ¸ÅÇÕ´Ï´Ù', 11000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-02-04', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (6, 'user58', 28, 8, '¹Ì°³ºÀ ¿øÇÇ½º ÆË´Ï´Ù', 46000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-02-11', 'y', 1);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (7, 'user71', 50, 10, '°­¾ÆÁö¿Ê ÆÈ¾Æ¿ä', 301000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-02-15', 'y', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (8, 'user66', 48, 14, '¾ó¸¶ ¾È ¾´ ¼ö¿µº¹', 798000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-02-18', 'y', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (9, 'user75', 43, 10, '¾ó¸¶ ¾È ¾´ Ã¥»ó', 471000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-02-22', 'y', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (10, 'user93', 16, 7, '¹Ì°³ºÀ Å×ÀÌºí Á¤¸®ÇÕ´Ï´Ù', 298000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-02-24', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (11, 'user29', 18, 15, 'ÇÇ¾Æ³ëÀå³­°¨', 373000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-02-28', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (12, 'user5', 28, 12, 'ÀÇÀÚ', 299000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-03-02', 'y', 6);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (13, 'user57', 20, 1, '¹Ì°³ºÀ ¼ö¼¼¹Ì', 574000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-03-06', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (14, 'user17', 36, 12, '¹Ì°³ºÀ Ã»¹ÙÁö ÆÈ¾Æ¿ä', 23000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-03-13', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (15, 'user56', 33, 8, '¹Ì°³ºÀ º¥Åä³ªÀÌÆ® ÆË´Ï´Ù', 505000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-03-19', 'y', 29);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (16, 'user14', 8, 4, '¹èµå¹ÎÅÏ¶óÄÏ ÆÇ¸ÅÇÕ´Ï´Ù', 195000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-03-23', 'y', 12);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (17, 'user59', 15, 3, 'ÇÇ¾Æ³ëÀå³­°¨', 564000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-03-31', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (18, 'user89', 45, 13, 'º¥Åä³ªÀÌÆ® ÆË´Ï´Ù', 87000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-04-07', 'y', 18);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (19, 'user13', 37, 5, 'ÇÇ¾Æ³ëÀå³­°¨ ÆÇ¸Å', 335000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-04-08', 'y', 13);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (20, 'user90', 40, 9, 'Áö°© ÆÈ¾Æ¿ä', 817000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-04-13', 'y', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (21, 'user36', 10, 10, '¹Ì°³ºÀ ÀÚÀü°Å', 966000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-04-18', 'y', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (22, 'user42', 21, 5, '°¶·°½ÃÅÇ', 495000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-04-25', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (23, 'user15', 30, 2, '¿¡¾îÄÁ »õ»óÇ°', 785000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-04-29', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (24, 'user97', 30, 12, 'ÀüÀÚ·¹ÀÎÁö', 825000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-05-03', 'y', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (25, 'user57', 28, 7, '¼ÅÃ÷ ÆÇ¸ÅÇÕ´Ï´Ù', 751000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-05-10', 'y', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (26, 'user55', 36, 14, 'Áß°í ¾ÆÀÌÆù', 852000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-05-11', 'y', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (27, 'user95', 18, 14, 'Áß°í ¼ö¼¼¹Ì ÆË´Ï´Ù', 357000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-05-12', 'y', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (28, 'user86', 12, 8, 'Áß°í ¿¡ÄÚ¹é', 775000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-05-15', 'y', 13);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (29, 'user97', 50, 12, '¹Ì°³ºÀ º¥Åä³ªÀÌÆ® ÆË´Ï´Ù', 843000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-05-23', 'y', 11);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (30, 'user45', 13, 3, 'ÀÚ±â°³¹ß µµ¼­ ³»³õ½À´Ï´Ù.', 89000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-05-29', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (31, 'user93', 7, 15, '¾ÆÀÌÆÐµå ³»³õ½À´Ï´Ù.', 830000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-06-01', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (32, 'user37', 16, 14, 'Áß°í ¿¡¾îÄÁ', 808000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-06-02', 'y', 7);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (33, 'user13', 22, 2, '¾ó¸¶ ¾È ¾´ Ã»¼Ò±â »õ»óÇ°', 134000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-06-04', 'y', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (34, 'user91', 24, 8, 'ÀüÀÚ·¹ÀÎÁö', 506000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-06-13', 'y', 11);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (35, 'user44', 25, 5, 'Áß°í ÀÇÀÚ ÆÇ¸Å', 280000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-06-16', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (36, 'user7', 27, 2, '¾ó¸¶ ¾È ¾´ µö·¯´×ÀÇ ±âÃÊ ³»³õ½À´Ï´Ù.', 94000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-06-18', 'y', 9);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (37, 'user24', 17, 8, '°¶·°½ÃÅÇ', 596000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-06-23', 'y', 23);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (38, 'user50', 49, 10, '¼ö¿µº¹', 611000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-07-01', 'y', 23);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (39, 'user53', 41, 1, 'ÇÇ¾Æ³ëÀå³­°¨ ÆÈ¾Æ¿ä', 159000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-07-06', 'y', 29);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (40, 'user16', 33, 8, 'º¥Åä³ªÀÌÆ®', 519000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-07-07', 'y', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (41, 'user91', 49, 9, 'Áß°í Å×ÀÌºí', 905000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-07-13', 'y', 11);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (42, 'user73', 46, 10, '¾ó¸¶ ¾È ¾´ ¿µ¾îµ¿È­', 272000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-07-15', 'y', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (43, 'user91', 25, 9, '¾ó¸¶ ¾È ¾´ Å×ÀÌºí', 96000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-07-16', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (44, 'user19', 38, 9, '°úÇÐµ¿È­ÀüÁý', 582000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-07-17', 'y', 1);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (45, 'user97', 41, 7, '¹Ì°³ºÀ ¼ÒÆÄ »õ»óÇ°', 698000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-07-22', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (46, 'user93', 25, 13, 'Áß°í ¾ÆÀÌÆù', 838000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-07-27', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (47, 'user46', 27, 11, '¹Ì°³ºÀ ¹èµå¹ÎÅÏ¶óÄÏ', 701000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-07-28', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (48, 'user41', 35, 4, '¾ó¸¶ ¾È ¾´ µö·¯´×ÀÇ ±âÃÊ ³»³õ½À´Ï´Ù.', 663000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-08-02', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (49, 'user67', 32, 3, '¿¡ÄÚ¹é', 209000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-08-05', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (50, 'user98', 28, 3, '¹èµå¹ÎÅÏ¶óÄÏ ÆÇ¸Å', 695000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-08-13', 'y', 22);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (51, 'user96', 23, 11, 'ÀÚ¹ÙÀÇ Á¤¼® Á¤¸®ÇÕ´Ï´Ù', 156000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-08-16', 'y', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (52, 'user73', 23, 3, '¾ó¸¶ ¾È ¾´ ¾ÆÀÌºñ ÆÇ¸Å', 510000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-08-20', 'y', 4);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (53, 'user44', 7, 7, 'º¥Åä³ªÀÌÆ®', 140000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-08-26', 'y', 22);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (54, 'user71', 22, 9, '¹Ì°³ºÀ ¼ö¿µº¹ ÆÇ¸ÅÇÕ´Ï´Ù', 265000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-08-27', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (55, 'user74', 27, 2, '¹Ì°³ºÀ º¥Åä³ªÀÌÆ®', 40000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-09-03', 'y', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (56, 'user40', 8, 12, '¹Ì°³ºÀ Ã¥»ó »õ»óÇ°', 959000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-09-11', 'y', 23);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (57, 'user17', 42, 11, '¾ó¸¶ ¾È ¾´ ½ºÅ¸¹÷½º 5¸¸¿ø ÄíÆù', 86000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-09-17', 'y', 18);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (58, 'user40', 47, 7, '¾ÆÀÌÆù ³»³õ½À´Ï´Ù.', 375000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-09-19', 'y', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (59, 'user22', 50, 5, 'Áö°© Á¤¸®ÇÕ´Ï´Ù', 701000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-09-23', 'y', 7);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (60, 'user89', 11, 1, '¾Æ±âÀÚµ¿Â÷', 63000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-09-29', 'y', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (61, 'user38', 2, 1, '¾ÆÀÌÆù', 715000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-10-01', 'y', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (62, 'user62', 9, 15, '¿øÇÇ½º ³»³õ½À´Ï´Ù.', 717000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-10-07', 'y', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (63, 'user72', 2, 6, '¹Ì°³ºÀ ¿¡ÄÚ¹é ÆË´Ï´Ù', 519000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-10-11', 'y', 6);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (64, 'user93', 20, 5, '¼ö¿µº¹', 800000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-10-19', 'y', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (65, 'user38', 29, 1, '¿¡ÄÚ¹é ³»³õ½À´Ï´Ù.', 808000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2020-10-21', 'y', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (66, 'user89', 2, 7, 'Áß°í Ãà±¸°ø', 151000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-10-28', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (67, 'user76', 15, 8, '½ºÅõÅ°', 947000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-10-31', 'y', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (68, 'user15', 20, 3, '´ÏÆ® Á¤¸®ÇÕ´Ï´Ù', 792000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-11-07', 'y', 23);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (69, 'user10', 43, 8, '¼ö¿µº¹', 335000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-11-15', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (70, 'user8', 24, 13, 'Ã¥»ó', 922000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-11-19', 'y', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (71, 'user4', 35, 5, 'Áß°í ¼ö¼¼¹Ì', 963000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2020-11-22', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (72, 'user4', 45, 4, 'ÀüÀÚ·¹ÀÎÁö ³»³õ½À´Ï´Ù.', 114000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2020-11-27', 'y', 1);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (73, 'user9', 34, 15, 'Áß°í ½ºÅõÅ° ÆÇ¸ÅÇÕ´Ï´Ù', 350000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2020-12-06', 'y', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (74, 'user71', 48, 4, 'Æ¾Æ®', 424000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2020-12-09', 'y', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (75, 'user51', 20, 6, '¿µ¾îµ¿È­ ³»³õ½À´Ï´Ù.', 437000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-12-16', 'y', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (76, 'user91', 46, 10, 'Å×ÀÌºí', 298000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-12-24', 'y', 22);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (77, 'user39', 8, 15, '½ºÅ¸¹÷½º 5¸¸¿ø ÄíÆù ÆÈ¾Æ¿ä', 376000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2020-12-25', 'y', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (78, 'user52', 8, 8, 'Å×ÀÌºí', 647000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2020-12-26', 'y', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (79, 'user15', 42, 1, '¹Ì°³ºÀ ¾ÆÀÌÆÐµå', 660000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-01-04', 'y', 9);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (80, 'user65', 36, 1, 'Ã»¹ÙÁö ÆË´Ï´Ù', 436000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-01-11', 'y', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (81, 'user89', 38, 10, '¾ó¸¶ ¾È ¾´ °úÇÐµ¿È­ÀüÁý »õ»óÇ°', 904000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-01-17', 'y', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (82, 'user16', 38, 9, 'Áß°í ¿µ¾îµ¿È­ ³»³õ½À´Ï´Ù.', 106000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-01-21', 'y', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (83, 'user56', 34, 3, '¹Ì°³ºÀ ¿µ¾îµ¿È­', 900000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-01-23', 'y', 28);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (84, 'user17', 37, 4, '¹èµå¹ÎÅÏ¶óÄÏ Á¤¸®ÇÕ´Ï´Ù', 989000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-01-29', 'y', 12);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (85, 'user83', 18, 15, '¼±ÀÎÀå', 581000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2021-02-01', 'y', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (86, 'user53', 18, 1, '¹Ì°³ºÀ ¿¡¾îÄÁ', 749000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-02-06', 'y', 18);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (87, 'user63', 16, 3, '¹Ì°³ºÀ Ã»¹ÙÁö', 201000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-02-07', 'y', 15);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (88, 'user40', 23, 14, '¾ÆÀÌºñ', 359000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-02-10', 'y', 4);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (89, 'user56', 50, 3, '¹Ì°³ºÀ Ã¥²ÈÀÌ', 768000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-02-12', 'y', 11);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (90, 'user51', 30, 13, '¾ó¸¶ ¾È ¾´ ÈÄµåÁý¾÷ ³»³õ½À´Ï´Ù.', 708000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-02-17', 'y', 10);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (91, 'user75', 48, 4, '¾ÆÀÌÆÐµå', 127000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-02-18', 'y', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (92, 'user58', 3, 4, 'Áß°í ¼ÅÃ÷ ÆË´Ï´Ù', 456000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-02-19', 'y', 15);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (93, 'user93', 6, 3, '¹Ì°³ºÀ Ã»¹ÙÁö', 526000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-02-25', 'y', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (94, 'user41', 20, 7, 'Áß°í ÇÚµåÅ©¸² ³»³õ½À´Ï´Ù.', 779000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-03-03', 'y', 1);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (95, 'user34', 7, 11, '¹Ì°³ºÀ ÇÇ¾Æ³ëÀå³­°¨ ³»³õ½À´Ï´Ù.', 291000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-03-06', 'y', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (96, 'user14', 12, 8, '¼ö¿µº¹', 19000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-03-08', 'y', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (97, 'user65', 30, 11, 'Áß°í ¾ÆÀÌÆù ÆÇ¸ÅÇÕ´Ï´Ù', 140000, 'n', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-03-17', 'y', 22);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (98, 'user36', 11, 6, 'ÀÚ¹ÙÀÇ Á¤¼® »õ»óÇ°', 935000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2021-03-23', 'y', 21);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (99, 'user17', 12, 12, '¼ÒÆÄ', 767000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-03-29', 'y', 18);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (100, 'user33', 16, 8, '¹Ì°³ºÀ ÀÇÀÚ ÆÇ¸ÅÇÕ´Ï´Ù', 356000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-04-06', 'y', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (101, 'user65', 31, 2, '¿µ¾îµ¿È­', 348000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2021-04-08', 'n', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (102, 'user16', 39, 12, 'ÀÚ±â°³¹ß µµ¼­ ÆË´Ï´Ù', 618000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-04-14', 'n', 6);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (103, 'user54', 11, 1, 'Áß°í °úÇÐµ¿È­ÀüÁý ³»³õ½À´Ï´Ù.', 113000, 'n', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2021-04-23', 'n', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (104, 'user98', 6, 11, 'Ã»¼Ò±â ÆÈ¾Æ¿ä', 775000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-04-29', 'n', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (105, 'user84', 49, 15, 'Áß°í ÀÚÀü°Å »õ»óÇ°', 780000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-05-02', 'n', 7);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (106, 'user95', 26, 5, 'ÀÌµ¿Àå', 834000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-05-06', 'n', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (107, 'user5', 3, 8, '¼ö¿µº¹ ÆÇ¸Å', 860000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-05-08', 'n', 16);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (108, 'user89', 44, 13, '¹Ì°³ºÀ µö·¯´×ÀÇ ±âÃÊ', 257000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-05-17', 'n', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (109, 'user87', 6, 5, 'Ã¥»ó', 87000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-05-19', 'n', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (110, 'user16', 30, 10, 'Æ¾Æ®', 202000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-05-23', 'n', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (111, 'user33', 2, 2, 'Áß°í ½ºÅ¸¹÷½º 5¸¸¿ø ÄíÆù »õ»óÇ°', 964000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-05-30', 'n', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (112, 'user51', 31, 2, 'ÀÚ¹ÙÀÇ Á¤¼® ÆÈ¾Æ¿ä', 580000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-05-31', 'n', 1);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (113, 'user10', 4, 15, '¼±ÀÎÀå', 282000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-06-02', 'n', 15);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (114, 'user21', 27, 13, '¹Ì°³ºÀ Æ¾Æ®', 918000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-06-03', 'n', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (115, 'user55', 16, 12, '¹Ì°³ºÀ ³¿ºñ¹ÞÄ§ Á¤¸®ÇÕ´Ï´Ù', 622000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-06-11', 'n', 24);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (116, 'user72', 19, 12, '¾ó¸¶ ¾È ¾´ µö·¯´×ÀÇ ±âÃÊ', 990000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-06-18', 'n', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (117, 'user16', 45, 13, 'Áß°í ³¿ºñ¹ÞÄ§', 535000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-06-23', 'n', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (118, 'user50', 40, 14, 'Å×ÀÌºí', 274000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-07-01', 'n', 19);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (119, 'user90', 4, 8, '¾ÆÀÌÆÐµå', 852000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-07-08', 'n', 28);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (120, 'user71', 37, 1, '¹Ì°³ºÀ º¥Åä³ªÀÌÆ®', 666000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-07-10', 'n', 12);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (121, 'user85', 32, 9, '½ºÅõÅ° Á¤¸®ÇÕ´Ï´Ù', 307000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-07-19', 'n', 6);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (122, 'user80', 27, 14, '¿¡¾îÄÁ', 139000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-07-25', 'n', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (123, 'user35', 38, 9, '¾ó¸¶ ¾È ¾´ ½ºÅõÅ°', 748000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-07-27', 'n', 25);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (124, 'user73', 12, 4, '¾ó¸¶ ¾È ¾´ ÇÚµåÅ©¸² ³»³õ½À´Ï´Ù.', 28000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-08-03', 'n', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (125, 'user34', 23, 13, '¾ó¸¶ ¾È ¾´ Ã»¹ÙÁö ÆÇ¸ÅÇÕ´Ï´Ù', 107000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-08-09', 'n', 4);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (126, 'user91', 16, 13, 'Áß°í ¾ÆÀÌÆù ÆÇ¸Å', 347000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-08-13', 'n', 10);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (127, 'user33', 13, 8, 'Áß°í ÈÄµåÁý¾÷', 488000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-08-19', 'n', 28);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (128, 'user29', 36, 12, '¾ó¸¶ ¾È ¾´ ¸ð´ÏÅÍ »õ»óÇ°', 200000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-08-20', 'n', 10);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (129, 'user95', 3, 9, 'Áß°í Ã¥»ó Á¤¸®ÇÕ´Ï´Ù', 930000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-08-24', 'n', 29);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (130, 'user98', 21, 4, '¾ó¸¶ ¾È ¾´ Ã¥»ó ÆË´Ï´Ù', 592000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-08-29', 'n', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (131, 'user69', 8, 9, 'ÇÇ¾Æ³ëÀå³­°¨', 966000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-09-06', 'n', 22);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (132, 'user76', 15, 9, '³¿ºñ¹ÞÄ§ ÆÇ¸Å', 714000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-09-07', 'n', 23);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (133, 'user75', 31, 2, 'Æ¾Æ® ³»³õ½À´Ï´Ù.', 220000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-09-10', 'n', 15);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (134, 'user77', 38, 4, 'Ã»¹ÙÁö »õ»óÇ°', 981000, 'y', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-09-14', 'n', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (135, 'user58', 20, 1, '¾ó¸¶ ¾È ¾´ Å×ÀÌºí', 177000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-09-21', 'n', 9);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (136, 'user85', 36, 5, 'ÀÚ±â°³¹ß µµ¼­', 503000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-09-26', 'n', 5);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (137, 'user94', 18, 8, 'Áß°í ÀüÀÚ·¹ÀÎÁö »õ»óÇ°', 805000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-10-02', 'n', 17);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (138, 'user77', 20, 14, 'ÈÄµåÁý¾÷', 502000, 'y', 'ÅÃ¹è°Å·¡ ¿øÇØ¿ä', '2021-10-08', 'n', 7);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (139, 'user25', 38, 8, 'Áß°í ¾Ð·Â¹ä¼Ü Á¤¸®ÇÕ´Ï´Ù', 981000, 'n', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-10-13', 'n', 7);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (140, 'user69', 45, 11, 'Áß°í ¼ôÆÐµù', 409000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-10-15', 'n', 18);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (141, 'user90', 25, 1, '¾ÆÀÌºñ ÆÇ¸ÅÇÕ´Ï´Ù', 577000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-10-19', 'n', 27);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (142, 'user42', 45, 15, '¾ó¸¶ ¾È ¾´ ¼±¹Ý', 455000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-10-27', 'n', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (143, 'user53', 20, 2, 'ÀÚ¹ÙÀÇ Á¤¼®', 279000, 'n', 'Á÷°Å·¡ ¿øÇØ¿ä', '2021-11-01', 'n', 9);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (144, 'user8', 10, 1, '¿¡ÄÚ¹é', 766000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-11-05', 'n', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (145, 'user96', 34, 11, '¾ó¸¶ ¾È ¾´ ½ºÅ¸¹÷½º 5¸¸¿ø ÄíÆù ³»³õ½À´Ï´Ù.', 277000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-11-10', 'n', 3);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (146, 'user71', 48, 8, '¾ó¸¶ ¾È ¾´ ¼ö¿µº¹ ÆË´Ï´Ù', 212000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-11-11', 'n', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (147, 'user87', 31, 6, '¿øÇÇ½º ÆÈ¾Æ¿ä', 89000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-11-13', 'n', 2);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (148, 'user85', 41, 10, 'Áß°í ¾Ð·Â¹ä¼Ü ³»³õ½À´Ï´Ù.', 249000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-11-14', 'n', 15);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (149, 'user50', 6, 13, 'Áß°í ¾Ð·Â¹ä¼Ü ÆÇ¸ÅÇÕ´Ï´Ù', 427000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-11-17', 'n', 20);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (150, 'user21', 6, 12, '¿¡ÄÚ¹é ÆÈ¾Æ¿ä', 634000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-11-22', 'n', 4);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (151, 'user15', 9, 5, 'Áß°í À§ÀÎÀü', 513000, 'n', '½Î°Ô ³»³õ½À´Ï´Ù.', '2021-11-26', 'n', 14);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (152, 'user8', 42, 8, '°í¾çÀÌ°£½Ä ÆÈ¾Æ¿ä', 798000, 'y', 'ÁÁÀº °Å·¡ ¿øÇØ¿ä^^', '2021-12-05', 'n', 28);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (153, 'user16', 13, 4, '¾ó¸¶ ¾È ¾´ ¿¡¾îÄÁ ÆÇ¸ÅÇÕ´Ï´Ù', 377000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-12-06', 'n', 8);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (154, 'user71', 40, 15, 'Ã»¹ÙÁö ÆÈ¾Æ¿ä', 348000, 'y', '»õÁ¦Ç°ÀÔ´Ï´Ù.', '2021-12-10', 'n', 21);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (155, 'user28', 26, 14, '¾ÆÀÌºñ ÆÇ¸Å', 946000, 'n', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2021-12-19', 'n', 4);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (156, 'user26', 7, 12, '½ºÅõÅ° ³»³õ½À´Ï´Ù.', 113000, 'y', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-12-25', 'n', 26);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (157, 'user41', 33, 6, '¾ÆÀÌÆù', 82000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2021-12-29', 'n', 29);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (158, 'user26', 10, 7, '¹Ì°³ºÀ ÇÇ¾Æ³ëÀå³­°¨', 869000, 'y', '½Î°Ô ³»³õ½À´Ï´Ù.', '2022-01-04', 'n', 9);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (159, 'user34', 22, 10, '¾ó¸¶ ¾È ¾´ °­¾ÆÁö¿Ê ÆÇ¸Å', 64000, 'n', 'Äð°Å·¡ ¿øÇÕ´Ï´Ù', '2022-01-09', 'n', 28);
-insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (160, 'user87', 30, 4, 'Ã¥»ó', 623000, 'y', 'Á¤¸» ÁÁÀº »óÇ°ÀÌ¿¡¿ä~', '2022-01-12', 'n', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (1, 'user61', 29, 6, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 38000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-01-09', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (2, 'user100', 33, 10, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½', 270000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-01-18', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (3, 'user43', 36, 7, 'Ã»ï¿½ï¿½ï¿½ï¿½', 727000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-01-23', 'y', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (4, 'user10', 6, 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 454000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-01-28', 'y', 21);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (5, 'user100', 37, 8, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 11000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-02-04', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (6, 'user58', 28, 8, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç½ï¿½ ï¿½Ë´Ï´ï¿½', 46000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-02-11', 'y', 1);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (7, 'user71', 50, 10, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 301000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-02-15', 'y', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (8, 'user66', 48, 14, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 798000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-02-18', 'y', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (9, 'user75', 43, 10, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ Ã¥ï¿½ï¿½', 471000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-02-22', 'y', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (10, 'user93', 16, 7, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 298000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-02-24', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (11, 'user29', 18, 15, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½', 373000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-02-28', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (12, 'user5', 28, 12, 'ï¿½ï¿½ï¿½ï¿½', 299000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-03-02', 'y', 6);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (13, 'user57', 20, 1, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 574000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-03-06', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (14, 'user17', 36, 12, 'ï¿½Ì°ï¿½ï¿½ï¿½ Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 23000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-03-13', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (15, 'user56', 33, 8, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ® ï¿½Ë´Ï´ï¿½', 505000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-03-19', 'y', 29);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (16, 'user14', 8, 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 195000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-03-23', 'y', 12);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (17, 'user59', 15, 3, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½', 564000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-03-31', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (18, 'user89', 45, 13, 'ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ® ï¿½Ë´Ï´ï¿½', 87000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-04-07', 'y', 18);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (19, 'user13', 37, 5, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½ ï¿½Ç¸ï¿½', 335000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-04-08', 'y', 13);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (20, 'user90', 40, 9, 'ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 817000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-04-13', 'y', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (21, 'user36', 10, 10, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 966000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-04-18', 'y', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (22, 'user42', 21, 5, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 495000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-04-25', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (23, 'user15', 30, 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 785000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-04-29', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (24, 'user97', 30, 12, 'ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½', 825000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-05-03', 'y', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (25, 'user57', 28, 7, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 751000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-05-10', 'y', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (26, 'user55', 36, 14, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 852000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-05-11', 'y', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (27, 'user95', 18, 14, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 357000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-05-12', 'y', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (28, 'user86', 12, 8, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ú¹ï¿½', 775000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-05-15', 'y', 13);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (29, 'user97', 50, 12, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ® ï¿½Ë´Ï´ï¿½', 843000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-05-23', 'y', 11);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (30, 'user45', 13, 3, 'ï¿½Ú±â°³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 89000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-05-29', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (31, 'user93', 7, 15, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 830000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-06-01', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (32, 'user37', 16, 14, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 808000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-06-02', 'y', 7);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (33, 'user13', 22, 2, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ Ã»ï¿½Ò±ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 134000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-06-04', 'y', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (34, 'user91', 24, 8, 'ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½', 506000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-06-13', 'y', 11);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (35, 'user44', 25, 5, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½', 280000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-06-16', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (36, 'user7', 27, 2, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 94000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-06-18', 'y', 9);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (37, 'user24', 17, 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 596000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-06-23', 'y', 23);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (38, 'user50', 49, 10, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 611000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-07-01', 'y', 23);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (39, 'user53', 41, 1, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 159000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-07-06', 'y', 29);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (40, 'user16', 33, 8, 'ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ®', 519000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-07-07', 'y', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (41, 'user91', 49, 9, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ìºï¿½', 905000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-07-13', 'y', 11);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (42, 'user73', 46, 10, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½îµ¿È­', 272000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-07-15', 'y', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (43, 'user91', 25, 9, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½', 96000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-07-16', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (44, 'user19', 38, 9, 'ï¿½ï¿½ï¿½Ðµï¿½È­ï¿½ï¿½ï¿½ï¿½', 582000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-07-17', 'y', 1);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (45, 'user97', 41, 7, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 698000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-07-22', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (46, 'user93', 25, 13, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 838000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-07-27', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (47, 'user46', 27, 11, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½', 701000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-07-28', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (48, 'user41', 35, 4, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 663000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-08-02', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (49, 'user67', 32, 3, 'ï¿½ï¿½ï¿½Ú¹ï¿½', 209000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-08-05', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (50, 'user98', 28, 3, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½', 695000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-08-13', 'y', 22);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (51, 'user96', 23, 11, 'ï¿½Ú¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 156000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-08-16', 'y', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (52, 'user73', 23, 3, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Ç¸ï¿½', 510000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-08-20', 'y', 4);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (53, 'user44', 7, 7, 'ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ®', 140000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-08-26', 'y', 22);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (54, 'user71', 22, 9, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 265000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-08-27', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (55, 'user74', 27, 2, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ®', 40000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-09-03', 'y', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (56, 'user40', 8, 12, 'ï¿½Ì°ï¿½ï¿½ï¿½ Ã¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 959000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-09-11', 'y', 23);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (57, 'user17', 42, 11, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 86000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-09-17', 'y', 18);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (58, 'user40', 47, 7, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 375000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-09-19', 'y', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (59, 'user22', 50, 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 701000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-09-23', 'y', 7);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (60, 'user89', 11, 1, 'ï¿½Æ±ï¿½ï¿½Úµï¿½ï¿½ï¿½', 63000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-09-29', 'y', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (61, 'user38', 2, 1, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 715000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-10-01', 'y', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (62, 'user62', 9, 15, 'ï¿½ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 717000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-10-07', 'y', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (63, 'user72', 2, 6, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¹ï¿½ ï¿½Ë´Ï´ï¿½', 519000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-10-11', 'y', 6);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (64, 'user93', 20, 5, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 800000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-10-19', 'y', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (65, 'user38', 29, 1, 'ï¿½ï¿½ï¿½Ú¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 808000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2020-10-21', 'y', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (66, 'user89', 2, 7, 'ï¿½ß°ï¿½ ï¿½à±¸ï¿½ï¿½', 151000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-10-28', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (67, 'user76', 15, 8, 'ï¿½ï¿½ï¿½ï¿½Å°', 947000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-10-31', 'y', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (68, 'user15', 20, 3, 'ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 792000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-11-07', 'y', 23);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (69, 'user10', 43, 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 335000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-11-15', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (70, 'user8', 24, 13, 'Ã¥ï¿½ï¿½', 922000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-11-19', 'y', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (71, 'user4', 35, 5, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 963000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2020-11-22', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (72, 'user4', 45, 4, 'ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 114000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2020-11-27', 'y', 1);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (73, 'user9', 34, 15, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½Å° ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 350000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-12-06', 'y', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (74, 'user71', 48, 4, 'Æ¾Æ®', 424000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2020-12-09', 'y', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (75, 'user51', 20, 6, 'ï¿½ï¿½ï¿½îµ¿È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 437000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-12-16', 'y', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (76, 'user91', 46, 10, 'ï¿½ï¿½ï¿½Ìºï¿½', 298000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-12-24', 'y', 22);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (77, 'user39', 8, 15, 'ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 376000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2020-12-25', 'y', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (78, 'user52', 8, 8, 'ï¿½ï¿½ï¿½Ìºï¿½', 647000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2020-12-26', 'y', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (79, 'user15', 42, 1, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½', 660000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-01-04', 'y', 9);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (80, 'user65', 36, 1, 'Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 436000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-01-11', 'y', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (81, 'user89', 38, 10, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ðµï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 904000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-01-17', 'y', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (82, 'user16', 38, 9, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½îµ¿È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 106000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-01-21', 'y', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (83, 'user56', 34, 3, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½îµ¿È­', 900000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-01-23', 'y', 28);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (84, 'user17', 37, 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 989000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-01-29', 'y', 12);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (85, 'user83', 18, 15, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 581000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-02-01', 'y', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (86, 'user53', 18, 1, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 749000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-02-06', 'y', 18);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (87, 'user63', 16, 3, 'ï¿½Ì°ï¿½ï¿½ï¿½ Ã»ï¿½ï¿½ï¿½ï¿½', 201000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-02-07', 'y', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (88, 'user40', 23, 14, 'ï¿½ï¿½ï¿½Ìºï¿½', 359000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-02-10', 'y', 4);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (89, 'user56', 50, 3, 'ï¿½Ì°ï¿½ï¿½ï¿½ Ã¥ï¿½ï¿½ï¿½ï¿½', 768000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-02-12', 'y', 11);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (90, 'user51', 30, 13, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 708000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-02-17', 'y', 10);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (91, 'user75', 48, 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½', 127000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-02-18', 'y', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (92, 'user58', 3, 4, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 456000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-02-19', 'y', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (93, 'user93', 6, 3, 'ï¿½Ì°ï¿½ï¿½ï¿½ Ã»ï¿½ï¿½ï¿½ï¿½', 526000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-02-25', 'y', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (94, 'user41', 20, 7, 'ï¿½ß°ï¿½ ï¿½Úµï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 779000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-03-03', 'y', 1);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (95, 'user34', 7, 11, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 291000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-03-06', 'y', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (96, 'user14', 12, 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 19000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-03-08', 'y', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (97, 'user65', 30, 11, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 140000, 'n', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-03-17', 'y', 22);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (98, 'user36', 11, 6, 'ï¿½Ú¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 935000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-03-23', 'y', 21);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (99, 'user17', 12, 12, 'ï¿½ï¿½ï¿½ï¿½', 767000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-03-29', 'y', 18);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (100, 'user33', 16, 8, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 356000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-04-06', 'y', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (101, 'user65', 31, 2, 'ï¿½ï¿½ï¿½îµ¿È­', 348000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-04-08', 'n', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (102, 'user16', 39, 12, 'ï¿½Ú±â°³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 618000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-04-14', 'n', 6);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (103, 'user54', 11, 1, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ðµï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 113000, 'n', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-04-23', 'n', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (104, 'user98', 6, 11, 'Ã»ï¿½Ò±ï¿½ ï¿½È¾Æ¿ï¿½', 775000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-04-29', 'n', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (105, 'user84', 49, 15, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 780000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-05-02', 'n', 7);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (106, 'user95', 26, 5, 'ï¿½Ìµï¿½ï¿½ï¿½', 834000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-05-06', 'n', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (107, 'user5', 3, 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½', 860000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-05-08', 'n', 16);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (108, 'user89', 44, 13, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 257000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-05-17', 'n', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (109, 'user87', 6, 5, 'Ã¥ï¿½ï¿½', 87000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-05-19', 'n', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (110, 'user16', 30, 10, 'Æ¾Æ®', 202000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-05-23', 'n', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (111, 'user33', 2, 2, 'ï¿½ß°ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 964000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-05-30', 'n', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (112, 'user51', 31, 2, 'ï¿½Ú¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 580000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-05-31', 'n', 1);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (113, 'user10', 4, 15, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 282000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-06-02', 'n', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (114, 'user21', 27, 13, 'ï¿½Ì°ï¿½ï¿½ï¿½ Æ¾Æ®', 918000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-06-03', 'n', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (115, 'user55', 16, 12, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 622000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-06-11', 'n', 24);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (116, 'user72', 19, 12, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 990000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-06-18', 'n', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (117, 'user16', 45, 13, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ä§', 535000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-06-23', 'n', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (118, 'user50', 40, 14, 'ï¿½ï¿½ï¿½Ìºï¿½', 274000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-07-01', 'n', 19);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (119, 'user90', 4, 8, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½', 852000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-07-08', 'n', 28);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (120, 'user71', 37, 1, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä³ªï¿½ï¿½Æ®', 666000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-07-10', 'n', 12);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (121, 'user85', 32, 9, 'ï¿½ï¿½ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 307000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-07-19', 'n', 6);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (122, 'user80', 27, 14, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 139000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-07-25', 'n', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (123, 'user35', 38, 9, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å°', 748000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-07-27', 'n', 25);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (124, 'user73', 12, 4, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 28000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-08-03', 'n', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (125, 'user34', 23, 13, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 107000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-08-09', 'n', 4);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (126, 'user91', 16, 13, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½', 347000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-08-13', 'n', 10);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (127, 'user33', 13, 8, 'ï¿½ß°ï¿½ ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½', 488000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-08-19', 'n', 28);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (128, 'user29', 36, 12, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 200000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-08-20', 'n', 10);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (129, 'user95', 3, 9, 'ï¿½ß°ï¿½ Ã¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 930000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-08-24', 'n', 29);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (130, 'user98', 21, 4, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ Ã¥ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 592000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-08-29', 'n', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (131, 'user69', 8, 9, 'ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½', 966000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-09-06', 'n', 22);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (132, 'user76', 15, 9, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ä§ ï¿½Ç¸ï¿½', 714000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-09-07', 'n', 23);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (133, 'user75', 31, 2, 'Æ¾Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 220000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-09-10', 'n', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (134, 'user77', 38, 4, 'Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 981000, 'y', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-09-14', 'n', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (135, 'user58', 20, 1, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½', 177000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-09-21', 'n', 9);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (136, 'user85', 36, 5, 'ï¿½Ú±â°³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 503000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-09-26', 'n', 5);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (137, 'user94', 18, 8, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°', 805000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-10-02', 'n', 17);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (138, 'user77', 20, 14, 'ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½', 502000, 'y', 'ï¿½Ã¹ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-10-08', 'n', 7);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (139, 'user25', 38, 8, 'ï¿½ß°ï¿½ ï¿½Ð·Â¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½', 981000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-10-13', 'n', 7);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (140, 'user69', 45, 11, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ðµï¿½', 409000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-10-15', 'n', 18);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (141, 'user90', 25, 1, 'ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 577000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-10-19', 'n', 27);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (142, 'user42', 45, 15, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 455000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-10-27', 'n', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (143, 'user53', 20, 2, 'ï¿½Ú¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 279000, 'n', 'ï¿½ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½', '2021-11-01', 'n', 9);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (144, 'user8', 10, 1, 'ï¿½ï¿½ï¿½Ú¹ï¿½', 766000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-11-05', 'n', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (145, 'user96', 34, 11, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 277000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-11-10', 'n', 3);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (146, 'user71', 48, 8, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½', 212000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-11-11', 'n', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (147, 'user87', 31, 6, 'ï¿½ï¿½ï¿½Ç½ï¿½ ï¿½È¾Æ¿ï¿½', 89000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-11-13', 'n', 2);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (148, 'user85', 41, 10, 'ï¿½ß°ï¿½ ï¿½Ð·Â¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 249000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-11-14', 'n', 15);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (149, 'user50', 6, 13, 'ï¿½ß°ï¿½ ï¿½Ð·Â¹ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 427000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-11-17', 'n', 20);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (150, 'user21', 6, 12, 'ï¿½ï¿½ï¿½Ú¹ï¿½ ï¿½È¾Æ¿ï¿½', 634000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-11-22', 'n', 4);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (151, 'user15', 9, 5, 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 513000, 'n', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2021-11-26', 'n', 14);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (152, 'user8', 42, 8, 'ï¿½ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 798000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Ø¿ï¿½^^', '2021-12-05', 'n', 28);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (153, 'user16', 13, 4, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½Õ´Ï´ï¿½', 377000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-12-06', 'n', 8);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (154, 'user71', 40, 15, 'Ã»ï¿½ï¿½ï¿½ï¿½ ï¿½È¾Æ¿ï¿½', 348000, 'y', 'ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ô´Ï´ï¿½.', '2021-12-10', 'n', 21);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (155, 'user28', 26, 14, 'ï¿½ï¿½ï¿½Ìºï¿½ ï¿½Ç¸ï¿½', 946000, 'n', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2021-12-19', 'n', 4);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (156, 'user26', 7, 12, 'ï¿½ï¿½ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', 113000, 'y', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-12-25', 'n', 26);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (157, 'user41', 33, 6, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 82000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2021-12-29', 'n', 29);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (158, 'user26', 10, 7, 'ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½Ç¾Æ³ï¿½ï¿½å³­ï¿½ï¿½', 869000, 'y', 'ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '2022-01-04', 'n', 9);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (159, 'user34', 22, 10, 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½', 64000, 'n', 'ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½', '2022-01-09', 'n', 28);
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount) values (160, 'user87', 30, 4, 'Ã¥ï¿½ï¿½', 623000, 'y', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ì¿ï¿½ï¿½ï¿½~', '2022-01-12', 'n', 15);
 
 
 
@@ -797,11 +797,11 @@ CREATE TABLE tblblocktype (
 
 ALTER TABLE tblblocktype ADD CONSTRAINT tblb_block_type_seq_pk PRIMARY KEY (block_type_seq);
 
-insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'»ç±â');
-insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'Àá¼ö');
-insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'¿å¼³');
-insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'Å¸ »çÀÌÆ® ±¤°í');
-insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'ºÒ¹ý');
+insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'ï¿½ï¿½ï¿½');
+insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'ï¿½ï¿½ï¿½');
+insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'ï¿½å¼³');
+insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'Å¸ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½');
+insert into tblBlockType(block_type_seq,type) values (blocktype_seq.nextval,'ï¿½Ò¹ï¿½');
 
 CREATE TABLE tblBlock (
     id	VARCHAR2(100)	NOT NULL,
@@ -848,19 +848,19 @@ CREATE TABLE tblwithdrawtype (
 );
 ALTER TABLE tblwithdrawtype ADD CONSTRAINT tblw_withdraw_type_seq_pk PRIMARY KEY (withdraw_type_seq);
 
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'UI ºÒ¸¸');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'¼­¹ö ºÒ¸¸');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ÆÇ¸ÅÀÚ°¡ ³Ê¹« ¾ø¾î¿ä.');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'Å¸ »çÀÌÆ® ÀÌ¿ë');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'°³ÀÎ »çÀ¯');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'±¸¸ÅÀÚ°¡ ³Ê¹« ¾ø¾î¿ä.');
-insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'±âÅ¸');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'UI ï¿½Ò¸ï¿½');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ï¿½Ç¸ï¿½ï¿½Ú°ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'Å¸ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ì¿ï¿½');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'ï¿½ï¿½Å¸');
 
 CREATE TABLE tblWithdraw (
     id VARCHAR2(100) NOT NULL,
     withdraw_type_seq NUMBER NOT NULL,
     time DATE default sysdate NOT NULL
-);--20¸í
+);--20ï¿½ï¿½
 
 ALTER TABLE tblWithdraw
     ADD CONSTRAINT tblW_id_pk PRIMARY KEY (id);
@@ -903,11 +903,11 @@ ALTER TABLE tblQuestionType
     ADD CONSTRAINT tblQ_question_seq_pk PRIMARY KEY (question_type_seq);
 
 
-insert into tblquestiontype values (question_type_seq.nextVAL, '°èÁ¤/ÀÎÁõ');
-insert into tblquestiontype values (question_type_seq.nextVAL, '±¸¸Å/ÆÇ¸Å');
-insert into tblquestiontype values (question_type_seq.nextVAL, '¿î¿µÁ¤Ã¥');
-insert into tblquestiontype values (question_type_seq.nextVAL, '¼­ºñ½ºÀÌ¿ë');
-insert into tblquestiontype values (question_type_seq.nextVAL, '±âÅ¸');
+insert into tblquestiontype values (question_type_seq.nextVAL, 'ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½');
+insert into tblquestiontype values (question_type_seq.nextVAL, 'ï¿½ï¿½ï¿½ï¿½/ï¿½Ç¸ï¿½');
+insert into tblquestiontype values (question_type_seq.nextVAL, 'ï¿½î¿µï¿½ï¿½Ã¥');
+insert into tblquestiontype values (question_type_seq.nextVAL, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ì¿ï¿½');
+insert into tblquestiontype values (question_type_seq.nextVAL, 'ï¿½ï¿½Å¸');
 
 
 
@@ -931,106 +931,106 @@ ALTER TABLE tblQuestion
 ALTER TABLE tblQuestion
     ADD CONSTRAINT tblQ_question_type_seq_fk FOREIGN KEY (question_type_seq) REFERENCES tblQuestionType (question_type_seq);
 
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user1', 1, '»õ·Î¿î ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ¹¹ÁÒ.', '»õ·Î¿î ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ¹¹ÁÒ. ¾Ë¾Æ¼­ »óÈ²À» Á¤Á¤ÇÏ°Ú¾î¿ä??', '21-10-24');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user2', 3, 'Àú ½Å·Úµµ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', 'Àú ½Å·Úµµ º¯°æÀÌ ±ÍÂú¾Æ¿ä. »¡¸® »óÈ²À» Á¤Á¤ÇÏ½ÃÁÒ..', '21-06-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user3', 1, '´ÙÀ½ °Ô½Ã±Û º¯°æÀÌ ±ÍÂú¾Æ¿ä.', '´ÙÀ½ °Ô½Ã±Û º¯°æÀÌ ±ÍÂú¾Æ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù.', '21-10-10');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user4', 1, 'Áö³­ »çÁø »èÁ¦°¡ ¹¹ÁÒ.', 'Áö³­ »çÁø »èÁ¦°¡ ¹¹ÁÒ. ¾Ë¾Æ¼­ ¿À·ù¸¦ È®ÀÎÇØÁÖ¼¼¿ä.', '20-09-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user5', 2, 'ÀÌ¹ø ´Ð³×ÀÓ »èÁ¦°¡ ÀÌ»óÇØ¿ä.', 'ÀÌ¹ø ´Ð³×ÀÓ »èÁ¦°¡ ÀÌ»óÇØ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ È®ÀÎºÎÅ¹µå¸³´Ï´Ù.', '21-06-20');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user6', 3, '´ÙÀ½ ´Ð³×ÀÓ ¼öÁ¤ÀÌ º°·Î¿¹¿ä...', '´ÙÀ½ ´Ð³×ÀÓ ¼öÁ¤ÀÌ º°·Î¿¹¿ä... ´çÀå Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù?', '20-11-10');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user7', 3, '»õ·Î¿î ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä. ´çÀå Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ÇØÁÖ¼¼¿ä.', '21-05-24');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user8', 5, '´ÙÀ½ ´Ð³×ÀÓ »èÁ¦°¡ ¼ö»óÇØ¿ä.', '´ÙÀ½ ´Ð³×ÀÓ »èÁ¦°¡ ¼ö»óÇØ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù.', '20-08-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user9', 4, 'Àú »çÁø ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä.', 'Àú »çÁø ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä. »¡¸® ¿À·ù¸¦ ÆÄ¾ÇÇÏ°Ú¾î¿ä?.', '20-06-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user10', 3, 'Áö³­ ºñ¹Ð¹øÈ£ »èÁ¦°¡ ¼ö»óÇØ¿ä.', 'Áö³­ ºñ¹Ð¹øÈ£ »èÁ¦°¡ ¼ö»óÇØ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ Á¤Á¤ÇÏ°Ú¾î¿ä??', '20-05-11');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user11', 5, '´ÙÀ½ °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä.', '´ÙÀ½ °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä. »¡¸® »óÈ²À» ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù..', '20-02-24');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user12', 3, 'ÀÌ¹ø ´Ð³×ÀÓ º¯°æÀÌ ¼ö»óÇØ¿ä..', 'ÀÌ¹ø ´Ð³×ÀÓ º¯°æÀÌ ¼ö»óÇØ¿ä.. ¼­µÑ·¯ ¿À·ù¸¦ ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù¤Ñ¤Ñ', '20-07-26');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user13', 3, 'Àú ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ.', 'Àú ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ. »¡¸® »óÈ²À» Á¤Á¤ÇØÁÖ¼¼¿ä.', '21-06-12');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user14', 1, 'Áö³­ ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ.', 'Áö³­ ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ. »¡¸® Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù!', '21-06-05');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user15', 5, 'ÀÌ¹ø ÆÇ¸ÅÀÚ º¯°æÀÌ ¹¹ÁÒ.', 'ÀÌ¹ø ÆÇ¸ÅÀÚ º¯°æÀÌ ¹¹ÁÒ. ´çÀå ¿À·ù¸¦ ÆÄ¾ÇÇØÁÖ¼¼¿ä?', '21-03-12');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user16', 3, '´ÙÀ½ ´Ð³×ÀÓ »èÁ¦°¡ º°·Î¿¹¿ä.', '´ÙÀ½ ´Ð³×ÀÓ »èÁ¦°¡ º°·Î¿¹¿ä. ¼­µÑ·¯ »óÈ²À» ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù..', '21-06-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user17', 4, 'Áö³­ ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ.', 'Áö³­ ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ. »¡¸® Ã·ºÎ ÆÄÀÏÀ» È®ÀÎºÎÅ¹µå¸³´Ï´Ù.', '20-03-07');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user18', 4, 'ÀÌ¹ø »çÁø »èÁ¦°¡ º°·Î¿¹¿ä...', 'ÀÌ¹ø »çÁø »èÁ¦°¡ º°·Î¿¹¿ä... ¾Ë¾Æ¼­ »óÈ²À» È®ÀÎÇÏ°Ú¾î¿ä?!', '21-01-06');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user19', 4, 'ÀÌ¹ø ÆÇ¸ÅÀÚ µî·ÏÀÌ ¼ö»óÇØ¿ä.', 'ÀÌ¹ø ÆÇ¸ÅÀÚ µî·ÏÀÌ ¼ö»óÇØ¿ä. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù.', '20-07-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user20', 1, 'Áö³­ °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä.', 'Áö³­ °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä. »¡¸® ¿À·ù¸¦ Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù¤Ì¤Ì', '20-01-27');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user21', 5, 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä.', 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä. ´çÀå ¿À·ù¸¦ ¼öÁ¤ÇÏ½ÃÁÒ.', '21-11-05');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user22', 3, '»õ·Î¿î ´Ð³×ÀÓ µî·ÏÀÌ º°·Î¿¹¿ä.', '»õ·Î¿î ´Ð³×ÀÓ µî·ÏÀÌ º°·Î¿¹¿ä. »¡¸® ¿À·ù¸¦ Á¤Á¤ÇØÁÖ¼¼¿ä.', '21-04-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user23', 1, '´ÙÀ½ ±¸¸ÅÀÚ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä.', '´ÙÀ½ ±¸¸ÅÀÚ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ½ÃÁÒ?', '20-10-01');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user24', 4, '´ÙÀ½ ºñ¹Ð¹øÈ£ º¯°æÀÌ º°·Î¿¹¿ä.', '´ÙÀ½ ºñ¹Ð¹øÈ£ º¯°æÀÌ º°·Î¿¹¿ä. »¡¸® »óÈ²À» Á¤Á¤ÇÏ½ÃÁÒ...', '20-04-01');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user25', 5, 'Áö³­ °Ô½Ã±Û ¼öÁ¤ÀÌ º°·Î¿¹¿ä.', 'Áö³­ °Ô½Ã±Û ¼öÁ¤ÀÌ º°·Î¿¹¿ä. ´çÀå ¿À·ù¸¦ È®ÀÎÇÏ½ÃÁÒ.', '20-09-04');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user26', 5, '»õ·Î¿î ºñ¹Ð¹øÈ£ º¯°æÀÌ ÀÌ»óÇØ¿ä.', '»õ·Î¿î ºñ¹Ð¹øÈ£ º¯°æÀÌ ÀÌ»óÇØ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ Á¤Á¤ÇÏ°Ú¾î¿ä?.', '20-05-25');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user27', 5, 'Àú °Ô½Ã±Û µî·ÏÀÌ ¹¹ÁÒ.', 'Àú °Ô½Ã±Û µî·ÏÀÌ ¹¹ÁÒ. »¡¸® Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇØÁÖ¼¼¿ä.', '21-10-08');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user28', 4, 'Áö³­ ´Ð³×ÀÓ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', 'Áö³­ ´Ð³×ÀÓ º¯°æÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇØÁÖ¼¼¿ä¤Ñ¤Ñ', '20-11-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user29', 4, 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä.', 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä. ¾Ë¾Æ¼­ ¿À·ù¸¦ ¼öÁ¤ÇØÁÖ¼¼¿ä...', '20-08-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user30', 5, '»õ·Î¿î ÆÇ¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î ÆÇ¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇØÁÖ¼¼¿ä.', '20-08-04');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user31', 2, 'ÀÌ¹ø ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä...', 'ÀÌ¹ø ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä... ´çÀå ¿À·ù¸¦ ÆÄ¾ÇÇÏ½ÃÁÒ¤Ì¤Ì', '20-10-27');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user32', 1, '»õ·Î¿î ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ.', '»õ·Î¿î ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ. ¼­µÑ·¯ ¿À·ù¸¦ ¼öÁ¤ÇÏ½ÃÁÒ¤Ñ¤Ñ', '20-11-24');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user33', 5, 'Áö³­ »çÁø µî·ÏÀÌ ÀÌ»óÇØ¿ä.', 'Áö³­ »çÁø µî·ÏÀÌ ÀÌ»óÇØ¿ä. »¡¸® ¿À·ù¸¦ Á¤Á¤ÇÏ°Ú¾î¿ä??', '20-03-27');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user34', 5, 'ÀÌ¹ø °Ô½Ã±Û µî·ÏÀÌ º°·Î¿¹¿ä..', 'ÀÌ¹ø °Ô½Ã±Û µî·ÏÀÌ º°·Î¿¹¿ä.. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇØÁÖ¼¼¿ä?', '20-01-13');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user35', 4, 'Àú °Ô½Ã±Û ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä.', 'Àú °Ô½Ã±Û ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ »óÈ²À» ÆÄ¾ÇÇÏ°Ú¾î¿ä?.', '21-10-11');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user36', 4, 'Àú ÆÇ¸ÅÀÚ »èÁ¦°¡ ÀÌ»óÇØ¿ä.', 'Àú ÆÇ¸ÅÀÚ »èÁ¦°¡ ÀÌ»óÇØ¿ä. »¡¸® ¿À·ù¸¦ ÆÄ¾ÇÇÏ½ÃÁÒ.', '21-03-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user37', 2, 'Áö³­ »çÁø º¯°æÀÌ ¹¹ÁÒ.', 'Áö³­ »çÁø º¯°æÀÌ ¹¹ÁÒ. »¡¸® ¿À·ù¸¦ ¼öÁ¤ÇÏ½ÃÁÒ.', '20-06-28');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user38', 1, 'ÀÌ¹ø ºñ¹Ð¹øÈ£ µî·ÏÀÌ º°·Î¿¹¿ä.', 'ÀÌ¹ø ºñ¹Ð¹øÈ£ µî·ÏÀÌ º°·Î¿¹¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ°Ú¾î¿ä?!', '20-03-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user39', 4, '´ÙÀ½ ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', '´ÙÀ½ ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä. »¡¸® »óÈ²À» ÆÄ¾ÇºÎÅ¹µå¸³´Ï´Ù.', '20-04-07');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user40', 4, 'Àú »çÁø µî·ÏÀÌ ¹¹ÁÒ.', 'Àú »çÁø µî·ÏÀÌ ¹¹ÁÒ. ´çÀå Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ½ÃÁÒ.', '21-08-27');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user41', 2, 'ÀÌ¹ø »çÁø »èÁ¦°¡ ÀÌ»óÇØ¿ä...', 'ÀÌ¹ø »çÁø »èÁ¦°¡ ÀÌ»óÇØ¿ä... ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎºÎÅ¹µå¸³´Ï´Ù..', '20-10-13');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user42', 1, 'Áö³­ ÆÇ¸ÅÀÚ »èÁ¦°¡ º°·Î¿¹¿ä.', 'Áö³­ ÆÇ¸ÅÀÚ »èÁ¦°¡ º°·Î¿¹¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ°Ú¾î¿ä?¤Ñ¤Ñ', '21-05-28');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user43', 2, 'Àú »çÁø »èÁ¦°¡ ÀÌ»óÇØ¿ä.', 'Àú »çÁø »èÁ¦°¡ ÀÌ»óÇØ¿ä. ¼­µÑ·¯ »óÈ²À» È®ÀÎºÎÅ¹µå¸³´Ï´Ù?', '21-04-08');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user44', 3, 'Àú ºñ¹Ð¹øÈ£ »èÁ¦°¡ ÀÌ»óÇØ¿ä..', 'Àú ºñ¹Ð¹øÈ£ »èÁ¦°¡ ÀÌ»óÇØ¿ä.. ´çÀå »óÈ²À» ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù.', '21-02-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user45', 3, 'Áö³­ ºñ¹Ð¹øÈ£ º¯°æÀÌ º°·Î¿¹¿ä.', 'Áö³­ ºñ¹Ð¹øÈ£ º¯°æÀÌ º°·Î¿¹¿ä. ¾Ë¾Æ¼­ ¿À·ù¸¦ Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù.', '21-08-26');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user46', 5, 'Àú ºñ¹Ð¹øÈ£ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', 'Àú ºñ¹Ð¹øÈ£ º¯°æÀÌ ±ÍÂú¾Æ¿ä. ¼­µÑ·¯ ¿À·ù¸¦ È®ÀÎºÎÅ¹µå¸³´Ï´Ù...', '20-11-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user47', 1, '´ÙÀ½ ÆÇ¸ÅÀÚ »èÁ¦°¡ ¹¹ÁÒ.', '´ÙÀ½ ÆÇ¸ÅÀÚ »èÁ¦°¡ ¹¹ÁÒ. ´çÀå Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇÏ½ÃÁÒ.', '21-11-19');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user48', 2, 'Àú »çÁø º¯°æÀÌ ¹¹ÁÒ.', 'Àú »çÁø º¯°æÀÌ ¹¹ÁÒ. »¡¸® Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ÇÏ½ÃÁÒ...', '21-05-07');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user49', 2, 'Áö³­ ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ.', 'Áö³­ ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ¹¹ÁÒ. ¾Ë¾Æ¼­ ¿À·ù¸¦ È®ÀÎÇÏ½ÃÁÒ?', '21-11-10');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user50', 4, '´ÙÀ½ »çÁø ¼öÁ¤ÀÌ ÀÌ»óÇØ¿ä.', '´ÙÀ½ »çÁø ¼öÁ¤ÀÌ ÀÌ»óÇØ¿ä. ´çÀå »óÈ²À» Á¤Á¤ÇÏ½ÃÁÒ.', '20-11-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user51', 1, '»õ·Î¿î »çÁø µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î »çÁø µî·ÏÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ ¿À·ù¸¦ È®ÀÎºÎÅ¹µå¸³´Ï´Ù.', '21-08-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user52', 5, 'Áö³­ »çÁø ¼öÁ¤ÀÌ ¹¹ÁÒ.', 'Áö³­ »çÁø ¼öÁ¤ÀÌ ¹¹ÁÒ. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ½ÃÁÒ?', '21-07-03');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user53', 5, '»õ·Î¿î ÆÇ¸ÅÀÚ µî·ÏÀÌ ¼ö»óÇØ¿ä.', '»õ·Î¿î ÆÇ¸ÅÀÚ µî·ÏÀÌ ¼ö»óÇØ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù.', '20-09-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user54', 5, '»õ·Î¿î ½Å·Úµµ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä.', '»õ·Î¿î ½Å·Úµµ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ½ÃÁÒ..', '20-05-12');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user55', 5, 'ÀÌ¹ø ÆÇ¸ÅÀÚ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', 'ÀÌ¹ø ÆÇ¸ÅÀÚ º¯°æÀÌ ±ÍÂú¾Æ¿ä. »¡¸® »óÈ²À» Á¤Á¤ÇÏ½ÃÁÒ¤Ì¤Ì', '21-07-03');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user56', 4, 'Àú ÆÇ¸ÅÀÚ »èÁ¦°¡ ±ÍÂú¾Æ¿ä.', 'Àú ÆÇ¸ÅÀÚ »èÁ¦°¡ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ½ÃÁÒ!', '21-11-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user57', 5, 'Àú °Ô½Ã±Û µî·ÏÀÌ ¼ö»óÇØ¿ä.', 'Àú °Ô½Ã±Û µî·ÏÀÌ ¼ö»óÇØ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ°Ú¾î¿ä?.', '21-09-12');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user58', 2, 'Àú ´Ð³×ÀÓ º¯°æÀÌ ¼ö»óÇØ¿ä.', 'Àú ´Ð³×ÀÓ º¯°æÀÌ ¼ö»óÇØ¿ä. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ°Ú¾î¿ä??', '21-10-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user59', 2, 'ÀÌ¹ø ´Ð³×ÀÓ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä.', 'ÀÌ¹ø ´Ð³×ÀÓ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ »óÈ²À» ÆÄ¾ÇÇÏ°Ú¾î¿ä?!', '21-04-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user60', 5, 'Àú ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ.', 'Àú ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ. ´çÀå Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ½ÃÁÒ.', '21-06-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user61', 1, 'ÀÌ¹ø ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ.', 'ÀÌ¹ø ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ. ¼­µÑ·¯ ¿À·ù¸¦ ¼öÁ¤ÇÏ½ÃÁÒ..', '20-04-13');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user62', 4, '»õ·Î¿î ´Ð³×ÀÓ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä.', '»õ·Î¿î ´Ð³×ÀÓ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä. »¡¸® Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ°Ú¾î¿ä??', '20-06-13');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user63', 4, '»õ·Î¿î ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ.', '»õ·Î¿î ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ. »¡¸® Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇØÁÖ¼¼¿ä¤Ì¤Ì', '21-06-05');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user64', 2, 'ÀÌ¹ø ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä.', 'ÀÌ¹ø ºñ¹Ð¹øÈ£ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä. ´çÀå »óÈ²À» È®ÀÎÇÏ½ÃÁÒ¤Ì¤Ì', '21-11-28');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user65', 1, '»õ·Î¿î ÆÇ¸ÅÀÚ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î ÆÇ¸ÅÀÚ º¯°æÀÌ ±ÍÂú¾Æ¿ä. »¡¸® ¿À·ù¸¦ ÆÄ¾ÇÇÏ°Ú¾î¿ä?.', '20-05-20');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user66', 1, 'Àú ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä...', 'Àú ½Å·Úµµ µî·ÏÀÌ ±ÍÂú¾Æ¿ä... ´çÀå »óÈ²À» ¼öÁ¤ÇÏ½ÃÁÒ?', '21-07-28');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user67', 4, 'Àú ½Å·Úµµ »èÁ¦°¡ º°·Î¿¹¿ä.', 'Àú ½Å·Úµµ »èÁ¦°¡ º°·Î¿¹¿ä. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇÏ°Ú¾î¿ä?¤Ì¤Ì', '20-11-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user68', 4, '´ÙÀ½ ½Å·Úµµ µî·ÏÀÌ ÀÌ»óÇØ¿ä.', '´ÙÀ½ ½Å·Úµµ µî·ÏÀÌ ÀÌ»óÇØ¿ä. ´çÀå »óÈ²À» ¼öÁ¤ÇÏ½ÃÁÒ.', '20-05-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user69', 2, 'ÀÌ¹ø ´Ð³×ÀÓ µî·ÏÀÌ º°·Î¿¹¿ä.', 'ÀÌ¹ø ´Ð³×ÀÓ µî·ÏÀÌ º°·Î¿¹¿ä. ¼­µÑ·¯ »óÈ²À» È®ÀÎºÎÅ¹µå¸³´Ï´Ù..', '20-11-11');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user70', 1, 'Áö³­ ÆÇ¸ÅÀÚ µî·ÏÀÌ ÀÌ»óÇØ¿ä.', 'Áö³­ ÆÇ¸ÅÀÚ µî·ÏÀÌ ÀÌ»óÇØ¿ä. ´çÀå »óÈ²À» Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù.', '21-10-07');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user71', 1, '´ÙÀ½ ½Å·Úµµ º¯°æÀÌ ±ÍÂú¾Æ¿ä.', '´ÙÀ½ ½Å·Úµµ º¯°æÀÌ ±ÍÂú¾Æ¿ä. ´çÀå ¿À·ù¸¦ ¼öÁ¤ÇØÁÖ¼¼¿ä.', '21-03-26');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user72', 1, '»õ·Î¿î °Ô½Ã±Û µî·ÏÀÌ º°·Î¿¹¿ä.', '»õ·Î¿î °Ô½Ã±Û µî·ÏÀÌ º°·Î¿¹¿ä. ´çÀå Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ½ÃÁÒ..', '21-03-09');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user73', 5, 'Àú »çÁø µî·ÏÀÌ ¹¹ÁÒ.', 'Àú »çÁø µî·ÏÀÌ ¹¹ÁÒ. ´çÀå Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇØÁÖ¼¼¿ä¤Ñ¤Ñ', '21-07-01');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user74', 3, 'Àú »çÁø º¯°æÀÌ ¹¹ÁÒ...', 'Àú »çÁø º¯°æÀÌ ¹¹ÁÒ... ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇÏ°Ú¾î¿ä??', '21-11-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user75', 5, '´ÙÀ½ ´Ð³×ÀÓ µî·ÏÀÌ ÀÌ»óÇØ¿ä.', '´ÙÀ½ ´Ð³×ÀÓ µî·ÏÀÌ ÀÌ»óÇØ¿ä. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ°Ú¾î¿ä?.', '20-04-08');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user76', 2, 'Áö³­ °Ô½Ã±Û µî·ÏÀÌ ¼ö»óÇØ¿ä.', 'Áö³­ °Ô½Ã±Û µî·ÏÀÌ ¼ö»óÇØ¿ä. ¼­µÑ·¯ »óÈ²À» Á¤Á¤ÇÏ½ÃÁÒ.', '21-04-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user77', 3, 'Àú ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä...', 'Àú ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ¼ö»óÇØ¿ä... ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇØÁÖ¼¼¿ä?', '20-06-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user78', 5, '»õ·Î¿î »çÁø »èÁ¦°¡ ¼ö»óÇØ¿ä..', '»õ·Î¿î »çÁø »èÁ¦°¡ ¼ö»óÇØ¿ä.. ´çÀå Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇØÁÖ¼¼¿ä..', '21-07-03');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user79', 1, 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä...', 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä... ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇØÁÖ¼¼¿ä?', '21-04-11');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user80', 2, 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä.', 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä. »¡¸® ¿À·ù¸¦ ¼öÁ¤ºÎÅ¹µå¸³´Ï´Ù.', '20-09-21');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user81', 1, '´ÙÀ½ ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ.', '´ÙÀ½ ½Å·Úµµ ¼öÁ¤ÀÌ ¹¹ÁÒ. ¼­µÑ·¯ »óÈ²À» È®ÀÎÇÏ½ÃÁÒ.', '20-10-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user82', 4, 'Áö³­ ´Ð³×ÀÓ ¼öÁ¤ÀÌ º°·Î¿¹¿ä.', 'Áö³­ ´Ð³×ÀÓ ¼öÁ¤ÀÌ º°·Î¿¹¿ä. ´çÀå ¿À·ù¸¦ ¼öÁ¤ÇØÁÖ¼¼¿ä...', '21-06-10');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user83', 5, '´ÙÀ½ ±¸¸ÅÀÚ ¼öÁ¤ÀÌ º°·Î¿¹¿ä.', '´ÙÀ½ ±¸¸ÅÀÚ ¼öÁ¤ÀÌ º°·Î¿¹¿ä. ¼­µÑ·¯ »óÈ²À» ÆÄ¾ÇÇÏ°Ú¾î¿ä?...', '21-07-28');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user84', 1, 'Àú ºñ¹Ð¹øÈ£ º¯°æÀÌ ¹¹ÁÒ.', 'Àú ºñ¹Ð¹øÈ£ º¯°æÀÌ ¹¹ÁÒ. ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇÏ°Ú¾î¿ä?.', '20-09-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user85', 1, 'Àú °Ô½Ã±Û »èÁ¦°¡ ¼ö»óÇØ¿ä.', 'Àú °Ô½Ã±Û »èÁ¦°¡ ¼ö»óÇØ¿ä. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ÇØÁÖ¼¼¿ä..', '21-11-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user86', 4, 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä...', 'Àú °Ô½Ã±Û º¯°æÀÌ ÀÌ»óÇØ¿ä... ¾Ë¾Æ¼­ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇØÁÖ¼¼¿ä¤Ñ¤Ñ', '20-11-03');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user87', 3, '»õ·Î¿î ºñ¹Ð¹øÈ£ º¯°æÀÌ ¼ö»óÇØ¿ä.', '»õ·Î¿î ºñ¹Ð¹øÈ£ º¯°æÀÌ ¼ö»óÇØ¿ä. »¡¸® Ã·ºÎ ÆÄÀÏÀ» È®ÀÎºÎÅ¹µå¸³´Ï´Ù¤Ì¤Ì', '21-11-18');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user88', 2, '»õ·Î¿î ºñ¹Ð¹øÈ£ µî·ÏÀÌ ¹¹ÁÒ.', '»õ·Î¿î ºñ¹Ð¹øÈ£ µî·ÏÀÌ ¹¹ÁÒ. ´çÀå ¿À·ù¸¦ Á¤Á¤ÇÏ°Ú¾î¿ä?.', '20-11-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user89', 2, 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä.', 'ÀÌ¹ø ½Å·Úµµ ¼öÁ¤ÀÌ º°·Î¿¹¿ä. ¼­µÑ·¯ ¿À·ù¸¦ ÆÄ¾ÇÇÏ½ÃÁÒ?', '21-08-15');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user90', 1, 'Àú ÆÇ¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', 'Àú ÆÇ¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä. ¾Ë¾Æ¼­ »óÈ²À» ÆÄ¾ÇÇÏ½ÃÁÒ?', '21-08-23');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user91', 3, 'ÀÌ¹ø »çÁø µî·ÏÀÌ ÀÌ»óÇØ¿ä..', 'ÀÌ¹ø »çÁø µî·ÏÀÌ ÀÌ»óÇØ¿ä.. ´çÀå ¿À·ù¸¦ ¼öÁ¤ÇØÁÖ¼¼¿ä¤Ñ¤Ñ', '20-03-04');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user92', 3, '»õ·Î¿î ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î ÆÇ¸ÅÀÚ ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä. ´çÀå Ã·ºÎ ÆÄÀÏÀ» È®ÀÎºÎÅ¹µå¸³´Ï´Ù?', '20-04-17');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user93', 3, 'Àú °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä.', 'Àú °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä. »¡¸® ¿À·ù¸¦ Á¤Á¤ÇÏ°Ú¾î¿ä?.', '21-03-09');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user94', 2, 'Àú ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ..', 'Àú ½Å·Úµµ µî·ÏÀÌ ¹¹ÁÒ.. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» È®ÀÎÇÏ°Ú¾î¿ä?..', '20-06-11');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user95', 5, '»õ·Î¿î ÆÇ¸ÅÀÚ º¯°æÀÌ ¹¹ÁÒ.', '»õ·Î¿î ÆÇ¸ÅÀÚ º¯°æÀÌ ¹¹ÁÒ. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ÆÄ¾ÇÇÏ°Ú¾î¿ä?¤Ì¤Ì', '21-05-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user96', 4, '´ÙÀ½ °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä..', '´ÙÀ½ °Ô½Ã±Û µî·ÏÀÌ ÀÌ»óÇØ¿ä.. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» ¼öÁ¤ÇÏ°Ú¾î¿ä?.', '20-02-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user97', 3, '»õ·Î¿î °Ô½Ã±Û ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î °Ô½Ã±Û ¼öÁ¤ÀÌ ±ÍÂú¾Æ¿ä. »¡¸® ¿À·ù¸¦ ¼öÁ¤ÇØÁÖ¼¼¿ä¤Ñ¤Ñ', '20-07-22');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user98', 5, 'Áö³­ °Ô½Ã±Û º¯°æÀÌ ¼ö»óÇØ¿ä.', 'Áö³­ °Ô½Ã±Û º¯°æÀÌ ¼ö»óÇØ¿ä. ¼­µÑ·¯ »óÈ²À» ¼öÁ¤ÇÏ½ÃÁÒ...', '20-06-14');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user99', 2, '»õ·Î¿î ±¸¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä.', '»õ·Î¿î ±¸¸ÅÀÚ µî·ÏÀÌ ±ÍÂú¾Æ¿ä. ¼­µÑ·¯ »óÈ²À» Á¤Á¤ºÎÅ¹µå¸³´Ï´Ù.', '21-01-16');
-insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user100', 4, 'Àú »çÁø º¯°æÀÌ ÀÌ»óÇØ¿ä..', 'Àú »çÁø º¯°æÀÌ ÀÌ»óÇØ¿ä.. ¼­µÑ·¯ Ã·ºÎ ÆÄÀÏÀ» Á¤Á¤ÇÏ°Ú¾î¿ä?.', '20-06-04');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user1', 1, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '21-10-24');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user2', 3, 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½..', '21-06-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user3', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-10-10');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user4', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '20-09-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user5', 2, 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-06-20');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user6', 3, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½...', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½... ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½?', '20-11-10');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user7', 3, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '21-05-24');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user8', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-08-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user9', 4, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-06-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user10', 3, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '20-05-11');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user11', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½..', '20-02-24');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user12', 3, 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½..', 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´Ù¤Ñ¤ï¿½', '20-07-26');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user13', 3, 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '21-06-12');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user14', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', '21-06-05');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user15', 5, 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½?', '21-03-12');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user16', 3, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½..', '21-06-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user17', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-03-07');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user18', 4, 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½...', 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½... ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½È²ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?!', '21-01-06');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user19', 4, 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-07-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user20', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´Ù¤Ì¤ï¿½', '20-01-27');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user21', 5, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-11-05');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user22', 3, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '21-04-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user23', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '20-10-01');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user24', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½...', '20-04-01');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user25', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '20-09-04');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user26', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-05-25');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user27', 5, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '21-10-08');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user28', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ñ¤ï¿½', '20-11-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user29', 4, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½...', '20-08-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user30', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '20-08-04');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user31', 2, 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½...', 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½... ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï½ï¿½ï¿½Ò¤Ì¤ï¿½', '20-10-27');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user32', 1, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½Ò¤Ñ¤ï¿½', '20-11-24');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user33', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '20-03-27');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user34', 5, 'ï¿½Ì¹ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½..', 'ï¿½Ì¹ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½?', '20-01-13');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user35', 4, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '21-10-11');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user36', 4, 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-03-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user37', 2, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '20-06-28');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user38', 1, 'ï¿½Ì¹ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?!', '20-03-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user39', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ä¾Çºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-04-07');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user40', 4, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-08-27');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user41', 2, 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½...', 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½... ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½..', '20-10-13');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user42', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?ï¿½Ñ¤ï¿½', '21-05-28');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user43', 2, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½?', '21-04-08');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user44', 3, 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½..', 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-02-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user45', 3, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-08-26');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user46', 5, 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½...', '20-11-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user47', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-11-19');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user48', 2, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½...', '21-05-07');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user49', 2, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '21-11-10');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user50', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '20-11-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user51', 1, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-08-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user52', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '21-07-03');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user53', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-09-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user54', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½..', '20-05-12');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user55', 5, 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½Ò¤Ì¤ï¿½', '21-07-03');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user56', 4, 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½!', '21-11-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user57', 5, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '21-09-12');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user58', 2, 'ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '21-10-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user59', 2, 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?!', '21-04-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user60', 5, 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-06-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user61', 1, 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½..', '20-04-13');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user62', 4, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '20-06-13');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user63', 4, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ì¤ï¿½', '21-06-05');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user64', 2, 'ï¿½Ì¹ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½Ò¤Ì¤ï¿½', '21-11-28');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user65', 1, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-05-20');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user66', 1, 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½...', 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½... ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '21-07-28');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user67', 4, 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?ï¿½Ì¤ï¿½', '20-11-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user68', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '20-05-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user69', 2, 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½..', '20-11-11');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user70', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-10-07');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user71', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.', '21-03-26');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user72', 1, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½..', '21-03-09');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user73', 5, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ñ¤ï¿½', '21-07-01');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user74', 3, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½...', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½... ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½??', '21-11-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user75', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-04-08');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user76', 2, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '21-04-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user77', 3, 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½...', 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½... ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½?', '20-06-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user78', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½..', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½..', '21-07-03');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user79', 1, 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½...', 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½... ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½?', '21-04-11');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user80', 2, 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '20-09-21');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user81', 1, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½.', '20-10-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user82', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½...', '21-06-10');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user83', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?...', '21-07-28');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user84', 1, 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-09-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user85', 1, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½..', '21-11-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user86', 4, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½...', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½... ï¿½Ë¾Æ¼ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ñ¤ï¿½', '20-11-03');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user87', 3, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´Ù¤Ì¤ï¿½', '21-11-18');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user88', 2, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-11-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user89', 2, 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½.', 'ï¿½Ì¹ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '21-08-15');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user90', 1, 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï½ï¿½ï¿½ï¿½?', '21-08-23');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user91', 3, 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½..', 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ñ¤ï¿½', '20-03-04');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user92', 3, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½Îºï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½?', '20-04-17');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user93', 3, 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '21-03-09');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user94', 2, 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½..', 'ï¿½ï¿½ ï¿½Å·Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?..', '20-06-11');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user95', 5, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¾ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?ï¿½Ì¤ï¿½', '21-05-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user96', 4, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½..', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-02-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user97', 3, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½Ñ¤ï¿½', '20-07-22');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user98', 5, 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½...', '20-06-14');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user99', 2, 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½.', 'ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½. ï¿½ï¿½ï¿½Ñ·ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½.', '21-01-16');
+insert into tblQuestion (question_seq, id, question_type_seq, title, content, regdate) values (question_seq.nextVal, 'user100', 4, 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½..', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ø¿ï¿½.. ï¿½ï¿½ï¿½Ñ·ï¿½ Ã·ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú¾ï¿½ï¿½?.', '20-06-04');
 
 
 CREATE TABLE tblQuestionAndAnswer(
@@ -1061,106 +1061,106 @@ create sequence Notice_seq start with 1;
 alter table tblNotice 
     add constraint tbln_notice_type_pk primary key(notice_seq);
 
-insert into tblNotice values (1,'1¹ø °øÁö»çÇ× Á¦¸ñ  ','1¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-02-01');
-insert into tblNotice values (2,'2¹ø °øÁö»çÇ× Á¦¸ñ  ','2¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-02-08');
-insert into tblNotice values (3,'3¹ø °øÁö»çÇ× Á¦¸ñ  ','3¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-02-15');
-insert into tblNotice values (4,'4¹ø °øÁö»çÇ× Á¦¸ñ  ','4¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-02-22');
-insert into tblNotice values (5,'5¹ø °øÁö»çÇ× Á¦¸ñ  ','5¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-02-29');
-insert into tblNotice values (6,'6¹ø °øÁö»çÇ× Á¦¸ñ  ','6¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-03-07');
-insert into tblNotice values (7,'7¹ø °øÁö»çÇ× Á¦¸ñ  ','7¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-03-14');
-insert into tblNotice values (8,'8¹ø °øÁö»çÇ× Á¦¸ñ  ','8¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-03-21');
-insert into tblNotice values (9,'9¹ø °øÁö»çÇ× Á¦¸ñ  ','9¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-03-28');
-insert into tblNotice values (10,'10¹ø °øÁö»çÇ× Á¦¸ñ  ','10¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-04-04');
-insert into tblNotice values (11,'11¹ø °øÁö»çÇ× Á¦¸ñ  ','11¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-04-11');
-insert into tblNotice values (12,'12¹ø °øÁö»çÇ× Á¦¸ñ  ','12¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-04-18');
-insert into tblNotice values (13,'13¹ø °øÁö»çÇ× Á¦¸ñ  ','13¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-04-25');
-insert into tblNotice values (14,'14¹ø °øÁö»çÇ× Á¦¸ñ  ','14¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-05-02');
-insert into tblNotice values (15,'15¹ø °øÁö»çÇ× Á¦¸ñ  ','15¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-05-09');
-insert into tblNotice values (16,'16¹ø °øÁö»çÇ× Á¦¸ñ  ','16¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-05-16');
-insert into tblNotice values (17,'17¹ø °øÁö»çÇ× Á¦¸ñ  ','17¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-05-23');
-insert into tblNotice values (18,'18¹ø °øÁö»çÇ× Á¦¸ñ  ','18¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-05-30');
-insert into tblNotice values (19,'19¹ø °øÁö»çÇ× Á¦¸ñ  ','19¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-06-06');
-insert into tblNotice values (20,'20¹ø °øÁö»çÇ× Á¦¸ñ  ','20¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-06-13');
-insert into tblNotice values (21,'21¹ø °øÁö»çÇ× Á¦¸ñ  ','21¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-06-20');
-insert into tblNotice values (22,'22¹ø °øÁö»çÇ× Á¦¸ñ  ','22¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-06-27');
-insert into tblNotice values (23,'23¹ø °øÁö»çÇ× Á¦¸ñ  ','23¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-07-04');
-insert into tblNotice values (24,'24¹ø °øÁö»çÇ× Á¦¸ñ  ','24¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-07-11');
-insert into tblNotice values (25,'25¹ø °øÁö»çÇ× Á¦¸ñ  ','25¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-07-18');
-insert into tblNotice values (26,'26¹ø °øÁö»çÇ× Á¦¸ñ  ','26¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-07-25');
-insert into tblNotice values (27,'27¹ø °øÁö»çÇ× Á¦¸ñ  ','27¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-08-01');
-insert into tblNotice values (28,'28¹ø °øÁö»çÇ× Á¦¸ñ  ','28¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-08-08');
-insert into tblNotice values (29,'29¹ø °øÁö»çÇ× Á¦¸ñ  ','29¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-08-15');
-insert into tblNotice values (30,'30¹ø °øÁö»çÇ× Á¦¸ñ  ','30¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-08-22');
-insert into tblNotice values (31,'31¹ø °øÁö»çÇ× Á¦¸ñ  ','31¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-08-29');
-insert into tblNotice values (32,'32¹ø °øÁö»çÇ× Á¦¸ñ  ','32¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-09-05');
-insert into tblNotice values (33,'33¹ø °øÁö»çÇ× Á¦¸ñ  ','33¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-09-12');
-insert into tblNotice values (34,'34¹ø °øÁö»çÇ× Á¦¸ñ  ','34¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-09-19');
-insert into tblNotice values (35,'35¹ø °øÁö»çÇ× Á¦¸ñ  ','35¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-09-26');
-insert into tblNotice values (36,'36¹ø °øÁö»çÇ× Á¦¸ñ  ','36¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-10-03');
-insert into tblNotice values (37,'37¹ø °øÁö»çÇ× Á¦¸ñ  ','37¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-10-10');
-insert into tblNotice values (38,'38¹ø °øÁö»çÇ× Á¦¸ñ  ','38¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-10-17');
-insert into tblNotice values (39,'39¹ø °øÁö»çÇ× Á¦¸ñ  ','39¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-10-24');
-insert into tblNotice values (40,'40¹ø °øÁö»çÇ× Á¦¸ñ  ','40¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-10-31');
-insert into tblNotice values (41,'41¹ø °øÁö»çÇ× Á¦¸ñ  ','41¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-11-07');
-insert into tblNotice values (42,'42¹ø °øÁö»çÇ× Á¦¸ñ  ','42¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-11-14');
-insert into tblNotice values (43,'43¹ø °øÁö»çÇ× Á¦¸ñ  ','43¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-11-21');
-insert into tblNotice values (44,'44¹ø °øÁö»çÇ× Á¦¸ñ  ','44¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-11-28');
-insert into tblNotice values (45,'45¹ø °øÁö»çÇ× Á¦¸ñ  ','45¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-12-05');
-insert into tblNotice values (46,'46¹ø °øÁö»çÇ× Á¦¸ñ  ','46¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-12-12');
-insert into tblNotice values (47,'47¹ø °øÁö»çÇ× Á¦¸ñ  ','47¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-12-19');
-insert into tblNotice values (48,'48¹ø °øÁö»çÇ× Á¦¸ñ  ','48¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2020-12-26');
-insert into tblNotice values (49,'49¹ø °øÁö»çÇ× Á¦¸ñ  ','49¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-01-02');
-insert into tblNotice values (50,'50¹ø °øÁö»çÇ× Á¦¸ñ  ','50¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-01-09');
-insert into tblNotice values (51,'51¹ø °øÁö»çÇ× Á¦¸ñ  ','51¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-01-16');
-insert into tblNotice values (52,'52¹ø °øÁö»çÇ× Á¦¸ñ  ','52¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-01-23');
-insert into tblNotice values (53,'53¹ø °øÁö»çÇ× Á¦¸ñ  ','53¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-01-30');
-insert into tblNotice values (54,'54¹ø °øÁö»çÇ× Á¦¸ñ  ','54¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-02-06');
-insert into tblNotice values (55,'55¹ø °øÁö»çÇ× Á¦¸ñ  ','55¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-02-13');
-insert into tblNotice values (56,'56¹ø °øÁö»çÇ× Á¦¸ñ  ','56¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-02-20');
-insert into tblNotice values (57,'57¹ø °øÁö»çÇ× Á¦¸ñ  ','57¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-02-27');
-insert into tblNotice values (58,'58¹ø °øÁö»çÇ× Á¦¸ñ  ','58¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-03-06');
-insert into tblNotice values (59,'59¹ø °øÁö»çÇ× Á¦¸ñ  ','59¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-03-13');
-insert into tblNotice values (60,'60¹ø °øÁö»çÇ× Á¦¸ñ  ','60¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-03-20');
-insert into tblNotice values (61,'61¹ø °øÁö»çÇ× Á¦¸ñ  ','61¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-03-27');
-insert into tblNotice values (62,'62¹ø °øÁö»çÇ× Á¦¸ñ  ','62¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-04-03');
-insert into tblNotice values (63,'63¹ø °øÁö»çÇ× Á¦¸ñ  ','63¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-04-10');
-insert into tblNotice values (64,'64¹ø °øÁö»çÇ× Á¦¸ñ  ','64¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-04-17');
-insert into tblNotice values (65,'65¹ø °øÁö»çÇ× Á¦¸ñ  ','65¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-04-24');
-insert into tblNotice values (66,'66¹ø °øÁö»çÇ× Á¦¸ñ  ','66¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-05-01');
-insert into tblNotice values (67,'67¹ø °øÁö»çÇ× Á¦¸ñ  ','67¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-05-08');
-insert into tblNotice values (68,'68¹ø °øÁö»çÇ× Á¦¸ñ  ','68¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-05-15');
-insert into tblNotice values (69,'69¹ø °øÁö»çÇ× Á¦¸ñ  ','69¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-05-22');
-insert into tblNotice values (70,'70¹ø °øÁö»çÇ× Á¦¸ñ  ','70¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-05-29');
-insert into tblNotice values (71,'71¹ø °øÁö»çÇ× Á¦¸ñ  ','71¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-06-05');
-insert into tblNotice values (72,'72¹ø °øÁö»çÇ× Á¦¸ñ  ','72¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-06-12');
-insert into tblNotice values (73,'73¹ø °øÁö»çÇ× Á¦¸ñ  ','73¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-06-19');
-insert into tblNotice values (74,'74¹ø °øÁö»çÇ× Á¦¸ñ  ','74¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-06-26');
-insert into tblNotice values (75,'75¹ø °øÁö»çÇ× Á¦¸ñ  ','75¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-07-03');
-insert into tblNotice values (76,'76¹ø °øÁö»çÇ× Á¦¸ñ  ','76¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-07-10');
-insert into tblNotice values (77,'77¹ø °øÁö»çÇ× Á¦¸ñ  ','77¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-07-17');
-insert into tblNotice values (78,'78¹ø °øÁö»çÇ× Á¦¸ñ  ','78¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-07-24');
-insert into tblNotice values (79,'79¹ø °øÁö»çÇ× Á¦¸ñ  ','79¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-07-31');
-insert into tblNotice values (80,'80¹ø °øÁö»çÇ× Á¦¸ñ  ','80¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-08-07');
-insert into tblNotice values (81,'81¹ø °øÁö»çÇ× Á¦¸ñ  ','81¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-08-14');
-insert into tblNotice values (82,'82¹ø °øÁö»çÇ× Á¦¸ñ  ','82¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-08-21');
-insert into tblNotice values (83,'83¹ø °øÁö»çÇ× Á¦¸ñ  ','83¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-08-28');
-insert into tblNotice values (84,'84¹ø °øÁö»çÇ× Á¦¸ñ  ','84¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-09-04');
-insert into tblNotice values (85,'85¹ø °øÁö»çÇ× Á¦¸ñ  ','85¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-09-11');
-insert into tblNotice values (86,'86¹ø °øÁö»çÇ× Á¦¸ñ  ','86¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-09-18');
-insert into tblNotice values (87,'87¹ø °øÁö»çÇ× Á¦¸ñ  ','87¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-09-25');
-insert into tblNotice values (88,'88¹ø °øÁö»çÇ× Á¦¸ñ  ','88¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-10-02');
-insert into tblNotice values (89,'89¹ø °øÁö»çÇ× Á¦¸ñ  ','89¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-10-09');
-insert into tblNotice values (90,'90¹ø °øÁö»çÇ× Á¦¸ñ  ','90¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-10-16');
-insert into tblNotice values (91,'91¹ø °øÁö»çÇ× Á¦¸ñ  ','91¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-10-23');
-insert into tblNotice values (92,'92¹ø °øÁö»çÇ× Á¦¸ñ  ','92¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-10-30');
-insert into tblNotice values (93,'93¹ø °øÁö»çÇ× Á¦¸ñ  ','93¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-11-06');
-insert into tblNotice values (94,'94¹ø °øÁö»çÇ× Á¦¸ñ  ','94¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-11-13');
-insert into tblNotice values (95,'95¹ø °øÁö»çÇ× Á¦¸ñ  ','95¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-11-20');
-insert into tblNotice values (96,'96¹ø °øÁö»çÇ× Á¦¸ñ  ','96¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-11-27');
-insert into tblNotice values (97,'97¹ø °øÁö»çÇ× Á¦¸ñ  ','97¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-12-04');
-insert into tblNotice values (98,'98¹ø °øÁö»çÇ× Á¦¸ñ  ','98¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-12-11');
-insert into tblNotice values (99,'99¹ø °øÁö»çÇ× Á¦¸ñ  ','99¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-12-18');
-insert into tblNotice values (100,'100¹ø °øÁö»çÇ× Á¦¸ñ  ','100¹ø °øÁö»çÇ× ³»¿ë  1¹ø °øÁö»çÇ× ³»¿ëÀÔ´Ï´Ù. °¨»çÇÕ´Ï´Ù.','2021-12-25');
+insert into tblNotice values (1,'1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-02-01');
+insert into tblNotice values (2,'2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-02-08');
+insert into tblNotice values (3,'3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-02-15');
+insert into tblNotice values (4,'4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-02-22');
+insert into tblNotice values (5,'5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-02-29');
+insert into tblNotice values (6,'6ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','6ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-03-07');
+insert into tblNotice values (7,'7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-03-14');
+insert into tblNotice values (8,'8ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','8ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-03-21');
+insert into tblNotice values (9,'9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-03-28');
+insert into tblNotice values (10,'10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-04-04');
+insert into tblNotice values (11,'11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-04-11');
+insert into tblNotice values (12,'12ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','12ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-04-18');
+insert into tblNotice values (13,'13ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','13ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-04-25');
+insert into tblNotice values (14,'14ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','14ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-05-02');
+insert into tblNotice values (15,'15ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','15ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-05-09');
+insert into tblNotice values (16,'16ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','16ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-05-16');
+insert into tblNotice values (17,'17ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','17ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-05-23');
+insert into tblNotice values (18,'18ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','18ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-05-30');
+insert into tblNotice values (19,'19ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','19ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-06-06');
+insert into tblNotice values (20,'20ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','20ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-06-13');
+insert into tblNotice values (21,'21ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','21ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-06-20');
+insert into tblNotice values (22,'22ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','22ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-06-27');
+insert into tblNotice values (23,'23ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','23ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-07-04');
+insert into tblNotice values (24,'24ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','24ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-07-11');
+insert into tblNotice values (25,'25ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','25ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-07-18');
+insert into tblNotice values (26,'26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-07-25');
+insert into tblNotice values (27,'27ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','27ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-08-01');
+insert into tblNotice values (28,'28ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','28ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-08-08');
+insert into tblNotice values (29,'29ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','29ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-08-15');
+insert into tblNotice values (30,'30ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','30ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-08-22');
+insert into tblNotice values (31,'31ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','31ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-08-29');
+insert into tblNotice values (32,'32ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','32ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-09-05');
+insert into tblNotice values (33,'33ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','33ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-09-12');
+insert into tblNotice values (34,'34ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','34ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-09-19');
+insert into tblNotice values (35,'35ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','35ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-09-26');
+insert into tblNotice values (36,'36ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','36ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-10-03');
+insert into tblNotice values (37,'37ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','37ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-10-10');
+insert into tblNotice values (38,'38ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','38ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-10-17');
+insert into tblNotice values (39,'39ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','39ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-10-24');
+insert into tblNotice values (40,'40ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','40ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-10-31');
+insert into tblNotice values (41,'41ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','41ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-11-07');
+insert into tblNotice values (42,'42ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','42ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-11-14');
+insert into tblNotice values (43,'43ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','43ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-11-21');
+insert into tblNotice values (44,'44ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','44ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-11-28');
+insert into tblNotice values (45,'45ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','45ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-12-05');
+insert into tblNotice values (46,'46ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','46ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-12-12');
+insert into tblNotice values (47,'47ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','47ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-12-19');
+insert into tblNotice values (48,'48ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','48ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2020-12-26');
+insert into tblNotice values (49,'49ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','49ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-01-02');
+insert into tblNotice values (50,'50ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','50ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-01-09');
+insert into tblNotice values (51,'51ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','51ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-01-16');
+insert into tblNotice values (52,'52ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','52ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-01-23');
+insert into tblNotice values (53,'53ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','53ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-01-30');
+insert into tblNotice values (54,'54ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','54ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-02-06');
+insert into tblNotice values (55,'55ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','55ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-02-13');
+insert into tblNotice values (56,'56ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','56ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-02-20');
+insert into tblNotice values (57,'57ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','57ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-02-27');
+insert into tblNotice values (58,'58ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','58ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-03-06');
+insert into tblNotice values (59,'59ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','59ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-03-13');
+insert into tblNotice values (60,'60ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','60ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-03-20');
+insert into tblNotice values (61,'61ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','61ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-03-27');
+insert into tblNotice values (62,'62ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','62ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-04-03');
+insert into tblNotice values (63,'63ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','63ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-04-10');
+insert into tblNotice values (64,'64ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','64ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-04-17');
+insert into tblNotice values (65,'65ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','65ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-04-24');
+insert into tblNotice values (66,'66ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','66ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-05-01');
+insert into tblNotice values (67,'67ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','67ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-05-08');
+insert into tblNotice values (68,'68ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','68ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-05-15');
+insert into tblNotice values (69,'69ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','69ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-05-22');
+insert into tblNotice values (70,'70ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','70ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-05-29');
+insert into tblNotice values (71,'71ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','71ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-06-05');
+insert into tblNotice values (72,'72ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','72ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-06-12');
+insert into tblNotice values (73,'73ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','73ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-06-19');
+insert into tblNotice values (74,'74ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','74ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-06-26');
+insert into tblNotice values (75,'75ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','75ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-07-03');
+insert into tblNotice values (76,'76ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','76ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-07-10');
+insert into tblNotice values (77,'77ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','77ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-07-17');
+insert into tblNotice values (78,'78ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','78ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-07-24');
+insert into tblNotice values (79,'79ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','79ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-07-31');
+insert into tblNotice values (80,'80ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','80ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-08-07');
+insert into tblNotice values (81,'81ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','81ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-08-14');
+insert into tblNotice values (82,'82ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','82ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-08-21');
+insert into tblNotice values (83,'83ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','83ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-08-28');
+insert into tblNotice values (84,'84ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','84ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-09-04');
+insert into tblNotice values (85,'85ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','85ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-09-11');
+insert into tblNotice values (86,'86ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','86ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-09-18');
+insert into tblNotice values (87,'87ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','87ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-09-25');
+insert into tblNotice values (88,'88ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','88ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-10-02');
+insert into tblNotice values (89,'89ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','89ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-10-09');
+insert into tblNotice values (90,'90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-10-16');
+insert into tblNotice values (91,'91ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','91ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-10-23');
+insert into tblNotice values (92,'92ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','92ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-10-30');
+insert into tblNotice values (93,'93ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','93ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-11-06');
+insert into tblNotice values (94,'94ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','94ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-11-13');
+insert into tblNotice values (95,'95ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','95ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-11-20');
+insert into tblNotice values (96,'96ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','96ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-11-27');
+insert into tblNotice values (97,'97ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','97ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-12-04');
+insert into tblNotice values (98,'98ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','98ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-12-11');
+insert into tblNotice values (99,'99ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','99ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-12-18');
+insert into tblNotice values (100,'100ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','100ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.','2021-12-25');
 
 
 
@@ -1281,7 +1281,7 @@ insert into tblQuestionImg values (99, 99,'image99');
 insert into tblQuestionImg values (100, 100,'image100');
 
 
--- °Å·¡
+-- ï¿½Å·ï¿½
 CREATE TABLE tblDeal (
 	deal_seq	NUMBER	NOT NULL,           
 	id	VARCHAR2(100)	NOT NULL,           
@@ -1414,214 +1414,214 @@ alter table tblReview
     add constraint tblr_type_ck check(type in ('S','B'));
     
 
-insert into tblReview values ('S',1, 10,'1¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',1, 8,'1¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',2, 7,'2¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',2, 8,'2¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',3, 9,'3¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',3, 9,'3¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',4, 9,'4¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',4, 8,'4¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',5, 8,'5¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',5, 8,'5¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',6, 7,'6¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',6, 9,'6¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',7, 7,'7¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',7, 8,'7¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',8, 10,'8¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',8, 9,'8¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',9, 8,'9¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',9, 8,'9¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',10, 9,'10¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',10, 10,'10¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',11, 7,'11¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',11, 8,'11¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',12, 10,'12¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',12, 8,'12¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',13, 8,'13¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',13, 9,'13¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',14, 10,'14¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',14, 8,'14¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',15, 7,'15¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',15, 9,'15¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',16, 9,'16¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',16, 9,'16¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',17, 9,'17¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',17, 7,'17¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',18, 8,'18¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',18, 7,'18¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',19, 7,'19¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',19, 9,'19¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',20, 7,'20¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',20, 8,'20¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',21, 9,'21¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',21, 10,'21¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',22, 9,'22¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',22, 9,'22¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',23, 8,'23¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',23, 10,'23¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',24, 9,'24¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',24, 9,'24¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',25, 8,'25¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',25, 10,'25¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',26, 7,'26¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',26, 10,'26¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',27, 10,'27¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',27, 8,'27¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',28, 8,'28¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',28, 8,'28¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',29, 10,'29¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',29, 9,'29¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',30, 9,'30¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',30, 10,'30¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',31, 8,'31¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',31, 10,'31¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',32, 10,'32¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',32, 8,'32¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',33, 7,'33¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',33, 10,'33¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',34, 8,'34¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',34, 10,'34¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',35, 9,'35¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',35, 9,'35¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',36, 9,'36¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',36, 9,'36¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',37, 8,'37¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',37, 9,'37¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',38, 7,'38¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',38, 10,'38¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',39, 9,'39¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',39, 9,'39¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',40, 10,'40¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',40, 9,'40¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',41, 9,'41¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',41, 10,'41¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',42, 8,'42¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',42, 10,'42¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',43, 8,'43¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',43, 8,'43¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',44, 9,'44¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',44, 9,'44¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',45, 9,'45¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',45, 8,'45¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',46, 8,'46¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',46, 7,'46¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',47, 9,'47¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',47, 10,'47¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',48, 9,'48¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',48, 9,'48¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',49, 7,'49¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',49, 9,'49¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',50, 8,'50¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',50, 7,'50¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',51, 7,'51¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',51, 7,'51¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',52, 7,'52¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',52, 10,'52¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',53, 10,'53¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',53, 10,'53¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',54, 9,'54¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',54, 7,'54¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',55, 9,'55¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',55, 9,'55¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',56, 7,'56¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',56, 10,'56¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',57, 10,'57¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',57, 9,'57¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',58, 9,'58¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',58, 10,'58¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',59, 9,'59¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',59, 8,'59¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',60, 9,'60¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',60, 10,'60¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',61, 10,'61¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',61, 7,'61¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',62, 8,'62¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',62, 7,'62¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',63, 7,'63¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',63, 8,'63¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',64, 9,'64¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',64, 8,'64¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',65, 7,'65¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',65, 8,'65¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',66, 10,'66¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',66, 9,'66¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',67, 10,'67¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',67, 10,'67¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',68, 8,'68¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',68, 8,'68¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',69, 7,'69¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',69, 8,'69¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',70, 8,'70¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',70, 10,'70¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',71, 7,'71¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',71, 10,'71¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',72, 7,'72¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',72, 8,'72¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',73, 8,'73¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',73, 10,'73¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',74, 10,'74¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',74, 8,'74¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',75, 10,'75¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',75, 7,'75¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',76, 8,'76¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',76, 9,'76¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',77, 10,'77¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',77, 8,'77¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',78, 10,'78¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',78, 10,'78¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',79, 7,'79¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',79, 10,'79¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',80, 9,'80¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',80, 8,'80¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',81, 9,'81¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',81, 10,'81¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',82, 9,'82¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',82, 7,'82¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',83, 10,'83¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',83, 9,'83¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',84, 7,'84¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',84, 8,'84¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» Ä£ÀýÇÏ¼Ì¾î¿ä');
-insert into tblReview values ('S',85, 10,'85¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',85, 8,'85¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',86, 8,'86¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',86, 8,'86¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',87, 10,'87¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',87, 7,'87¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',88, 7,'88¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',88, 10,'88¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',89, 9,'89¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',89, 7,'89¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',90, 8,'90¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',90, 8,'90¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',91, 10,'91¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',91, 10,'91¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',92, 9,'92¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',92, 8,'92¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',93, 7,'93¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',93, 10,'93¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',94, 10,'94¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',94, 7,'94¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
-insert into tblReview values ('S',95, 7,'95¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Àû´çÇÏ°Ô ÆÈ¼ö ÀÖ¾î¼­ ÁÁ¾Ò½À´Ï´Ù.');
-insert into tblReview values ('B',95, 9,'95¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',96, 8,'96¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : Ä£ÀýÇÏ¼Ì¾î¿ä!');
-insert into tblReview values ('B',96, 10,'96¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',97, 9,'97¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',97, 8,'97¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',98, 7,'98¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',98, 7,'98¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : Á¤¸» ÁÁ¾Æ¿ä!!');
-insert into tblReview values ('S',99, 8,'99¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : ³×°í¾ø´Â Äð°Å·¡ °¨»çÇÕ´Ï´Ù!');
-insert into tblReview values ('B',99, 10,'99¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ :  ¼Õ»óµÈ°÷¾øÀÌ ¿Ïº®ÇØ¿ä!');
-insert into tblReview values ('S',100, 9,'100¹ø ÈÄ±â±Û  ÆÇ¸ÅÀÚ : °Å·¡Áö¿ª ¿Å±è¾øÀÌ ±ò²ûÇÏ°Ô °Å·¡Çß¾î¿ä!!');
-insert into tblReview values ('B',100, 8,'100¹ø ÈÄ±â±Û  ±¸¸ÅÀÚ : ½Î°Ô »ì ¼ö ÀÖ¾î¼­ ÁÁ¾Ò¾î¿ä');
+insert into tblReview values ('S',1, 10,'1ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',1, 8,'1ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',2, 7,'2ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',2, 8,'2ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',3, 9,'3ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',3, 9,'3ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',4, 9,'4ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',4, 8,'4ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',5, 8,'5ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',5, 8,'5ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',6, 7,'6ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',6, 9,'6ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',7, 7,'7ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',7, 8,'7ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',8, 10,'8ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',8, 9,'8ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',9, 8,'9ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',9, 8,'9ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',10, 9,'10ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',10, 10,'10ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',11, 7,'11ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',11, 8,'11ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',12, 10,'12ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',12, 8,'12ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',13, 8,'13ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',13, 9,'13ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',14, 10,'14ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',14, 8,'14ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',15, 7,'15ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',15, 9,'15ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',16, 9,'16ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',16, 9,'16ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',17, 9,'17ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',17, 7,'17ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',18, 8,'18ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',18, 7,'18ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',19, 7,'19ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',19, 9,'19ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',20, 7,'20ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',20, 8,'20ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',21, 9,'21ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',21, 10,'21ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',22, 9,'22ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',22, 9,'22ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',23, 8,'23ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',23, 10,'23ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',24, 9,'24ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',24, 9,'24ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',25, 8,'25ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',25, 10,'25ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',26, 7,'26ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',26, 10,'26ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',27, 10,'27ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',27, 8,'27ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',28, 8,'28ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',28, 8,'28ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',29, 10,'29ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',29, 9,'29ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',30, 9,'30ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',30, 10,'30ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',31, 8,'31ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',31, 10,'31ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',32, 10,'32ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',32, 8,'32ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',33, 7,'33ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',33, 10,'33ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',34, 8,'34ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',34, 10,'34ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',35, 9,'35ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',35, 9,'35ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',36, 9,'36ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',36, 9,'36ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',37, 8,'37ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',37, 9,'37ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',38, 7,'38ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',38, 10,'38ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',39, 9,'39ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',39, 9,'39ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',40, 10,'40ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',40, 9,'40ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',41, 9,'41ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',41, 10,'41ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',42, 8,'42ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',42, 10,'42ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',43, 8,'43ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',43, 8,'43ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',44, 9,'44ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',44, 9,'44ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',45, 9,'45ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',45, 8,'45ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',46, 8,'46ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',46, 7,'46ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',47, 9,'47ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',47, 10,'47ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',48, 9,'48ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',48, 9,'48ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',49, 7,'49ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',49, 9,'49ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',50, 8,'50ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',50, 7,'50ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',51, 7,'51ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',51, 7,'51ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',52, 7,'52ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',52, 10,'52ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',53, 10,'53ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',53, 10,'53ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',54, 9,'54ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',54, 7,'54ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',55, 9,'55ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',55, 9,'55ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',56, 7,'56ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',56, 10,'56ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',57, 10,'57ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',57, 9,'57ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',58, 9,'58ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',58, 10,'58ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',59, 9,'59ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',59, 8,'59ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',60, 9,'60ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',60, 10,'60ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',61, 10,'61ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',61, 7,'61ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',62, 8,'62ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',62, 7,'62ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',63, 7,'63ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',63, 8,'63ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',64, 9,'64ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',64, 8,'64ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',65, 7,'65ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',65, 8,'65ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',66, 10,'66ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',66, 9,'66ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',67, 10,'67ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',67, 10,'67ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',68, 8,'68ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',68, 8,'68ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',69, 7,'69ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',69, 8,'69ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',70, 8,'70ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',70, 10,'70ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',71, 7,'71ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',71, 10,'71ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',72, 7,'72ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',72, 8,'72ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',73, 8,'73ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',73, 10,'73ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',74, 10,'74ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',74, 8,'74ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',75, 10,'75ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',75, 7,'75ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',76, 8,'76ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',76, 9,'76ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',77, 10,'77ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',77, 8,'77ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',78, 10,'78ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',78, 10,'78ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',79, 7,'79ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',79, 10,'79ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',80, 9,'80ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',80, 8,'80ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',81, 9,'81ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',81, 10,'81ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',82, 9,'82ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',82, 7,'82ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',83, 10,'83ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',83, 9,'83ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',84, 7,'84ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',84, 8,'84ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½');
+insert into tblReview values ('S',85, 10,'85ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',85, 8,'85ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',86, 8,'86ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',86, 8,'86ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',87, 10,'87ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',87, 7,'87ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',88, 7,'88ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',88, 10,'88ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',89, 9,'89ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',89, 7,'89ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',90, 8,'90ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',90, 8,'90ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',91, 10,'91ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',91, 10,'91ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',92, 9,'92ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',92, 8,'92ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',93, 7,'93ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',93, 10,'93ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',94, 10,'94ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',94, 7,'94ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
+insert into tblReview values ('S',95, 7,'95ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½È¼ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.');
+insert into tblReview values ('B',95, 9,'95ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',96, 8,'96ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : Ä£ï¿½ï¿½ï¿½Ï¼Ì¾ï¿½ï¿½!');
+insert into tblReview values ('B',96, 10,'96ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',97, 9,'97ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',97, 8,'97ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',98, 7,'98ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',98, 7,'98ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!');
+insert into tblReview values ('S',99, 8,'99ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½×°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½!');
+insert into tblReview values ('B',99, 10,'99ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ :  ï¿½Õ»ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½Ø¿ï¿½!');
+insert into tblReview values ('S',100, 9,'100ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½Ç¸ï¿½ï¿½ï¿½ : ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å±ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Å·ï¿½ï¿½ß¾ï¿½ï¿½!!');
+insert into tblReview values ('B',100, 8,'100ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾î¼­ ï¿½ï¿½ï¿½Ò¾ï¿½ï¿½');
 
 
 CREATE TABLE tblCommunity(
 	community_seq NUMBER not null, 
 	id VARCHAR2(100) NOT NULL,
-	title VARCHAR2(100)	NOT NULL, --20ÀÚ
-    content VARCHAR2(4000) NOT NULL,--200ÀÚ
-	regDate DATE default sysdate NOT NULL,--·£´ý °ú°Å 28ÀÏ ÀÌÀü
+	title VARCHAR2(100)	NOT NULL, --20ï¿½ï¿½
+    content VARCHAR2(4000) NOT NULL,--200ï¿½ï¿½
+	regDate DATE default sysdate NOT NULL,--ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 28ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     readcount NUMBER default 0 NOT NULL --0
 ); --100
 
@@ -1634,115 +1634,115 @@ alter table tblCommunity
     add constraint tblc_id_fk FOREIGN Key(id) references tblUser(id);
 
 
-insert into tblCommunity values (1,'user65','1¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','1¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-01',66);
-insert into tblCommunity values (2,'user78','2¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','2¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-06',75);
-insert into tblCommunity values (3,'user18','3¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','3¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-11',53);
-insert into tblCommunity values (4,'user76','4¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','4¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-16',71);
-insert into tblCommunity values (5,'user55','5¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','5¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-21',71);
-insert into tblCommunity values (6,'user93','6¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','6¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-02-26',31);
-insert into tblCommunity values (7,'user91','7¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','7¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-02',0);
-insert into tblCommunity values (8,'user78','8¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','8¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-07',11);
-insert into tblCommunity values (9,'user88','9¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','9¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-12',76);
-insert into tblCommunity values (10,'user52','10¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','10¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-17',55);
-insert into tblCommunity values (11,'user12','11¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','11¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-22',80);
-insert into tblCommunity values (12,'user52','12¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','12¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-03-27',45);
-insert into tblCommunity values (13,'user39','13¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','13¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-01',8);
-insert into tblCommunity values (14,'user16','14¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','14¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-06',90);
-insert into tblCommunity values (15,'user45','15¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','15¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-11',20);
-insert into tblCommunity values (16,'user1','16¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','16¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-16',79);
-insert into tblCommunity values (17,'user92','17¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','17¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-21',37);
-insert into tblCommunity values (18,'user8','18¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','18¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-04-26',6);
-insert into tblCommunity values (19,'user59','19¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','19¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-01',30);
-insert into tblCommunity values (20,'user92','20¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','20¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-06',2);
-insert into tblCommunity values (21,'user7','21¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','21¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-11',93);
-insert into tblCommunity values (22,'user63','22¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','22¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-16',84);
-insert into tblCommunity values (23,'user51','23¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','23¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-21',88);
-insert into tblCommunity values (24,'user13','24¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','24¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-26',72);
-insert into tblCommunity values (25,'user51','25¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','25¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-05-31',49);
-insert into tblCommunity values (26,'user77','26¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','26¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-05',0);
-insert into tblCommunity values (27,'user17','27¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','27¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-10',47);
-insert into tblCommunity values (28,'user86','28¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','28¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-15',91);
-insert into tblCommunity values (29,'user87','29¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','29¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-20',62);
-insert into tblCommunity values (30,'user41','30¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','30¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-25',34);
-insert into tblCommunity values (31,'user73','31¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','31¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-06-30',3);
-insert into tblCommunity values (32,'user54','32¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','32¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-05',13);
-insert into tblCommunity values (33,'user56','33¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','33¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-10',69);
-insert into tblCommunity values (34,'user18','34¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','34¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-15',94);
-insert into tblCommunity values (35,'user21','35¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','35¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-20',32);
-insert into tblCommunity values (36,'user65','36¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','36¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-25',44);
-insert into tblCommunity values (37,'user52','37¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','37¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-07-30',85);
-insert into tblCommunity values (38,'user21','38¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','38¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-04',65);
-insert into tblCommunity values (39,'user69','39¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','39¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-09',93);
-insert into tblCommunity values (40,'user41','40¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','40¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-14',56);
-insert into tblCommunity values (41,'user60','41¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','41¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-19',74);
-insert into tblCommunity values (42,'user28','42¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','42¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-24',47);
-insert into tblCommunity values (43,'user53','43¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','43¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-08-29',84);
-insert into tblCommunity values (44,'user34','44¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','44¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-03',50);
-insert into tblCommunity values (45,'user67','45¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','45¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-08',53);
-insert into tblCommunity values (46,'user46','46¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','46¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-13',66);
-insert into tblCommunity values (47,'user14','47¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','47¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-18',42);
-insert into tblCommunity values (48,'user66','48¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','48¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-23',49);
-insert into tblCommunity values (49,'user68','49¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','49¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-09-28',3);
-insert into tblCommunity values (50,'user96','50¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','50¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-03',1);
-insert into tblCommunity values (51,'user29','51¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','51¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-08',90);
-insert into tblCommunity values (52,'user66','52¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','52¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-13',72);
-insert into tblCommunity values (53,'user47','53¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','53¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-18',39);
-insert into tblCommunity values (54,'user16','54¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','54¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-23',64);
-insert into tblCommunity values (55,'user53','55¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','55¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-10-28',67);
-insert into tblCommunity values (56,'user3','56¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','56¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-02',41);
-insert into tblCommunity values (57,'user76','57¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','57¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-07',87);
-insert into tblCommunity values (58,'user61','58¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','58¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-12',88);
-insert into tblCommunity values (59,'user41','59¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','59¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-17',56);
-insert into tblCommunity values (60,'user77','60¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','60¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-22',89);
-insert into tblCommunity values (61,'user86','61¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','61¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-11-27',57);
-insert into tblCommunity values (62,'user29','62¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','62¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-02',69);
-insert into tblCommunity values (63,'user75','63¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','63¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-07',45);
-insert into tblCommunity values (64,'user98','64¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','64¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-12',74);
-insert into tblCommunity values (65,'user17','65¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','65¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-17',76);
-insert into tblCommunity values (66,'user25','66¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','66¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-22',53);
-insert into tblCommunity values (67,'user65','67¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','67¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2020-12-27',84);
-insert into tblCommunity values (68,'user51','68¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','68¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-01',87);
-insert into tblCommunity values (69,'user48','69¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','69¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-06',45);
-insert into tblCommunity values (70,'user80','70¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','70¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-11',16);
-insert into tblCommunity values (71,'user79','71¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','71¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-16',14);
-insert into tblCommunity values (72,'user65','72¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','72¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-21',48);
-insert into tblCommunity values (73,'user83','73¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','73¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-26',68);
-insert into tblCommunity values (74,'user12','74¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','74¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-01-31',75);
-insert into tblCommunity values (75,'user71','75¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','75¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-02-05',14);
-insert into tblCommunity values (76,'user73','76¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','76¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-02-10',57);
-insert into tblCommunity values (77,'user21','77¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','77¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-02-15',26);
-insert into tblCommunity values (78,'user15','78¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','78¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-02-20',71);
-insert into tblCommunity values (79,'user8','79¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','79¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-02-25',86);
-insert into tblCommunity values (80,'user65','80¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','80¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-02',89);
-insert into tblCommunity values (81,'user98','81¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','81¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-07',90);
-insert into tblCommunity values (82,'user79','82¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','82¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-12',9);
-insert into tblCommunity values (83,'user39','83¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','83¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-17',27);
-insert into tblCommunity values (84,'user8','84¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','84¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-22',85);
-insert into tblCommunity values (85,'user54','85¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','85¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-03-27',2);
-insert into tblCommunity values (86,'user41','86¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','86¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-01',33);
-insert into tblCommunity values (87,'user88','87¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','87¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-06',23);
-insert into tblCommunity values (88,'user78','88¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','88¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-11',12);
-insert into tblCommunity values (89,'user96','89¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','89¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-16',4);
-insert into tblCommunity values (90,'user57','90¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','90¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-21',69);
-insert into tblCommunity values (91,'user60','91¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','91¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-04-26',6);
-insert into tblCommunity values (92,'user21','92¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','92¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-01',25);
-insert into tblCommunity values (93,'user83','93¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','93¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-06',56);
-insert into tblCommunity values (94,'user3','94¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','94¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-11',48);
-insert into tblCommunity values (95,'user88','95¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','95¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-16',0);
-insert into tblCommunity values (96,'user47','96¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','96¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-21',86);
-insert into tblCommunity values (97,'user48','97¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','97¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-26',34);
-insert into tblCommunity values (98,'user72','98¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','98¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-05-31',9);
-insert into tblCommunity values (99,'user21','99¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','99¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-06-05',82);
-insert into tblCommunity values (100,'user66','100¹ø Ä¿¹Â´ÏÆ¼±Û Á¦¸ñ  ','100¹ø Ä¿¹Â´ÏÆ¼±Û ³»¿ë ','2021-06-10',85);
+insert into tblCommunity values (1,'user65','1ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','1ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-01',66);
+insert into tblCommunity values (2,'user78','2ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','2ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-06',75);
+insert into tblCommunity values (3,'user18','3ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','3ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-11',53);
+insert into tblCommunity values (4,'user76','4ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','4ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-16',71);
+insert into tblCommunity values (5,'user55','5ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','5ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-21',71);
+insert into tblCommunity values (6,'user93','6ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','6ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-02-26',31);
+insert into tblCommunity values (7,'user91','7ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','7ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-02',0);
+insert into tblCommunity values (8,'user78','8ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','8ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-07',11);
+insert into tblCommunity values (9,'user88','9ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','9ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-12',76);
+insert into tblCommunity values (10,'user52','10ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','10ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-17',55);
+insert into tblCommunity values (11,'user12','11ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','11ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-22',80);
+insert into tblCommunity values (12,'user52','12ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','12ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-03-27',45);
+insert into tblCommunity values (13,'user39','13ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','13ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-01',8);
+insert into tblCommunity values (14,'user16','14ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','14ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-06',90);
+insert into tblCommunity values (15,'user45','15ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','15ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-11',20);
+insert into tblCommunity values (16,'user1','16ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','16ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-16',79);
+insert into tblCommunity values (17,'user92','17ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','17ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-21',37);
+insert into tblCommunity values (18,'user8','18ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','18ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-04-26',6);
+insert into tblCommunity values (19,'user59','19ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','19ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-01',30);
+insert into tblCommunity values (20,'user92','20ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','20ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-06',2);
+insert into tblCommunity values (21,'user7','21ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','21ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-11',93);
+insert into tblCommunity values (22,'user63','22ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','22ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-16',84);
+insert into tblCommunity values (23,'user51','23ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','23ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-21',88);
+insert into tblCommunity values (24,'user13','24ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','24ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-26',72);
+insert into tblCommunity values (25,'user51','25ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','25ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-05-31',49);
+insert into tblCommunity values (26,'user77','26ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','26ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-05',0);
+insert into tblCommunity values (27,'user17','27ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','27ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-10',47);
+insert into tblCommunity values (28,'user86','28ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','28ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-15',91);
+insert into tblCommunity values (29,'user87','29ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','29ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-20',62);
+insert into tblCommunity values (30,'user41','30ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','30ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-25',34);
+insert into tblCommunity values (31,'user73','31ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','31ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-06-30',3);
+insert into tblCommunity values (32,'user54','32ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','32ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-05',13);
+insert into tblCommunity values (33,'user56','33ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','33ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-10',69);
+insert into tblCommunity values (34,'user18','34ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','34ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-15',94);
+insert into tblCommunity values (35,'user21','35ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','35ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-20',32);
+insert into tblCommunity values (36,'user65','36ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','36ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-25',44);
+insert into tblCommunity values (37,'user52','37ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','37ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-07-30',85);
+insert into tblCommunity values (38,'user21','38ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','38ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-04',65);
+insert into tblCommunity values (39,'user69','39ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','39ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-09',93);
+insert into tblCommunity values (40,'user41','40ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','40ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-14',56);
+insert into tblCommunity values (41,'user60','41ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','41ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-19',74);
+insert into tblCommunity values (42,'user28','42ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','42ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-24',47);
+insert into tblCommunity values (43,'user53','43ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','43ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-08-29',84);
+insert into tblCommunity values (44,'user34','44ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','44ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-03',50);
+insert into tblCommunity values (45,'user67','45ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','45ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-08',53);
+insert into tblCommunity values (46,'user46','46ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','46ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-13',66);
+insert into tblCommunity values (47,'user14','47ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','47ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-18',42);
+insert into tblCommunity values (48,'user66','48ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','48ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-23',49);
+insert into tblCommunity values (49,'user68','49ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','49ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-09-28',3);
+insert into tblCommunity values (50,'user96','50ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','50ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-03',1);
+insert into tblCommunity values (51,'user29','51ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','51ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-08',90);
+insert into tblCommunity values (52,'user66','52ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','52ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-13',72);
+insert into tblCommunity values (53,'user47','53ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','53ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-18',39);
+insert into tblCommunity values (54,'user16','54ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','54ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-23',64);
+insert into tblCommunity values (55,'user53','55ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','55ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-10-28',67);
+insert into tblCommunity values (56,'user3','56ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','56ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-02',41);
+insert into tblCommunity values (57,'user76','57ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','57ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-07',87);
+insert into tblCommunity values (58,'user61','58ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','58ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-12',88);
+insert into tblCommunity values (59,'user41','59ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','59ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-17',56);
+insert into tblCommunity values (60,'user77','60ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','60ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-22',89);
+insert into tblCommunity values (61,'user86','61ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','61ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-11-27',57);
+insert into tblCommunity values (62,'user29','62ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','62ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-02',69);
+insert into tblCommunity values (63,'user75','63ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','63ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-07',45);
+insert into tblCommunity values (64,'user98','64ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','64ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-12',74);
+insert into tblCommunity values (65,'user17','65ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','65ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-17',76);
+insert into tblCommunity values (66,'user25','66ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','66ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-22',53);
+insert into tblCommunity values (67,'user65','67ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','67ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2020-12-27',84);
+insert into tblCommunity values (68,'user51','68ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','68ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-01',87);
+insert into tblCommunity values (69,'user48','69ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','69ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-06',45);
+insert into tblCommunity values (70,'user80','70ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','70ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-11',16);
+insert into tblCommunity values (71,'user79','71ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','71ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-16',14);
+insert into tblCommunity values (72,'user65','72ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','72ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-21',48);
+insert into tblCommunity values (73,'user83','73ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','73ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-26',68);
+insert into tblCommunity values (74,'user12','74ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','74ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-01-31',75);
+insert into tblCommunity values (75,'user71','75ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','75ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-02-05',14);
+insert into tblCommunity values (76,'user73','76ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','76ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-02-10',57);
+insert into tblCommunity values (77,'user21','77ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','77ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-02-15',26);
+insert into tblCommunity values (78,'user15','78ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','78ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-02-20',71);
+insert into tblCommunity values (79,'user8','79ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','79ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-02-25',86);
+insert into tblCommunity values (80,'user65','80ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','80ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-02',89);
+insert into tblCommunity values (81,'user98','81ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','81ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-07',90);
+insert into tblCommunity values (82,'user79','82ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','82ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-12',9);
+insert into tblCommunity values (83,'user39','83ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','83ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-17',27);
+insert into tblCommunity values (84,'user8','84ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','84ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-22',85);
+insert into tblCommunity values (85,'user54','85ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','85ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-03-27',2);
+insert into tblCommunity values (86,'user41','86ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','86ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-01',33);
+insert into tblCommunity values (87,'user88','87ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','87ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-06',23);
+insert into tblCommunity values (88,'user78','88ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','88ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-11',12);
+insert into tblCommunity values (89,'user96','89ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','89ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-16',4);
+insert into tblCommunity values (90,'user57','90ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','90ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-21',69);
+insert into tblCommunity values (91,'user60','91ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','91ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-04-26',6);
+insert into tblCommunity values (92,'user21','92ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','92ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-01',25);
+insert into tblCommunity values (93,'user83','93ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','93ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-06',56);
+insert into tblCommunity values (94,'user3','94ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','94ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-11',48);
+insert into tblCommunity values (95,'user88','95ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','95ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-16',0);
+insert into tblCommunity values (96,'user47','96ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','96ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-21',86);
+insert into tblCommunity values (97,'user48','97ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','97ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-26',34);
+insert into tblCommunity values (98,'user72','98ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','98ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-05-31',9);
+insert into tblCommunity values (99,'user21','99ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','99ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-06-05',82);
+insert into tblCommunity values (100,'user66','100ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  ','100ï¿½ï¿½ Ä¿ï¿½Â´ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ','2021-06-10',85);
 
 
--- Ä¿¹Â´ÏÆ¼ ´ñ±Û
+-- Ä¿ï¿½Â´ï¿½Æ¼ ï¿½ï¿½ï¿½
 CREATE TABLE tblComComment (
-	comcomment_seq	NUMBER	NOT NULL,       --´ñ±Û ¹øÈ£(PK) 
-	community_seq	NUMBER	NOT NULL,       --±Û ¹øÈ£(FK) --100
-	id	VARCHAR2(100)	NOT NULL,           --ÀÛ¼ºÀÚ id(FK)
-	content	VARCHAR2(4000)	NOT NULL,       --³»¿ë 20ÀÚ
-	regdate DATE DEFAULT sysdate NOT NULL   --ÀÛ¼º³¯Â¥ 28ÀÏ ÀÌÀü
+	comcomment_seq	NUMBER	NOT NULL,       --ï¿½ï¿½ï¿½ ï¿½ï¿½È£(PK) 
+	community_seq	NUMBER	NOT NULL,       --ï¿½ï¿½ ï¿½ï¿½È£(FK) --100
+	id	VARCHAR2(100)	NOT NULL,           --ï¿½Û¼ï¿½ï¿½ï¿½ id(FK)
+	content	VARCHAR2(4000)	NOT NULL,       --ï¿½ï¿½ï¿½ï¿½ 20ï¿½ï¿½
+	regdate DATE DEFAULT sysdate NOT NULL   --ï¿½Û¼ï¿½ï¿½ï¿½Â¥ 28ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 ); --100
 
 CREATE SEQUENCE comcomment_seq;
@@ -1751,113 +1751,113 @@ ALTER TABLE tblComComment ADD CONSTRAINT tblCC_comcomment_seq_pk PRIMARY KEY(com
 ALTER TABLE tblComComment ADD CONSTRAINT tblCC_community_seq_fk FOREIGN KEY(community_seq) REFERENCES tblCommunity(community_seq);
 ALTER TABLE tblComComment ADD CONSTRAINT tblCC_id_fk FOREIGN KEY(id) REFERENCES tblUser(id);
 
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (1, 48, 'user68', 'Àß º¸°í °©´Ï´Ù~', '2021-01-03');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (2, 100, 'user47', 'Àß º¸°í °©´Ï´Ù~', '2021-01-04');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (3, 19, 'user2', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-06');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (4, 19, 'user55', 'Àß º¸°í °©´Ï´Ù~', '2021-01-08');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (5, 74, 'user93', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-10');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (6, 13, 'user40', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-01-11');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (7, 9, 'user47', 'Àß º¸°í °©´Ï´Ù~', '2021-01-12');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (8, 100, 'user59', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-13');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (9, 6, 'user25', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-01-14');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (10, 84, 'user37', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-16');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (11, 23, 'user27', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-17');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (12, 21, 'user52', 'Àß º¸°í °©´Ï´Ù~', '2021-01-19');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (13, 20, 'user7', 'Àß º¸°í °©´Ï´Ù~', '2021-01-21');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (14, 81, 'user21', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-22');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (15, 84, 'user82', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-23');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (16, 79, 'user90', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-01-24');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (17, 41, 'user40', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-25');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (18, 44, 'user3', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-01-26');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (19, 94, 'user62', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-01-27');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (20, 81, 'user82', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-01-29');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (21, 96, 'user92', 'Àß º¸°í °©´Ï´Ù~', '2021-01-31');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (22, 26, 'user12', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-02-02');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (23, 18, 'user2', 'Àß º¸°í °©´Ï´Ù~', '2021-02-04');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (24, 24, 'user19', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-02-05');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (25, 6, 'user64', 'Àß º¸°í °©´Ï´Ù~', '2021-02-06');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (26, 51, 'user35', 'Àß º¸°í °©´Ï´Ù~', '2021-02-07');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (27, 59, 'user72', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-02-08');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (28, 29, 'user64', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-02-10');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (29, 85, 'user36', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-02-12');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (30, 57, 'user72', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-13');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (31, 74, 'user22', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-14');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (32, 41, 'user22', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-02-16');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (33, 76, 'user53', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-18');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (34, 3, 'user4', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-19');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (35, 95, 'user75', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-02-20');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (36, 47, 'user38', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-22');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (37, 83, 'user34', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-02-23');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (38, 78, 'user57', 'Àß º¸°í °©´Ï´Ù~', '2021-02-24');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (39, 36, 'user97', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-02-25');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (40, 76, 'user48', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-02-27');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (41, 13, 'user58', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-01');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (42, 15, 'user59', 'Àß º¸°í °©´Ï´Ù~', '2021-03-03');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (43, 21, 'user48', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-03-05');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (44, 49, 'user36', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-07');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (45, 4, 'user32', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-09');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (46, 26, 'user12', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-10');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (47, 77, 'user24', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-03-12');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (48, 70, 'user4', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-03-14');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (49, 25, 'user49', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-15');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (50, 3, 'user10', 'Àß º¸°í °©´Ï´Ù~', '2021-03-17');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (51, 91, 'user42', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-19');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (52, 73, 'user15', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-03-20');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (53, 41, 'user56', 'Àß º¸°í °©´Ï´Ù~', '2021-03-21');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (54, 83, 'user36', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-23');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (55, 65, 'user60', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-25');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (56, 4, 'user27', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-03-26');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (57, 97, 'user84', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-03-27');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (58, 39, 'user1', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-03-28');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (59, 77, 'user99', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-03-30');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (60, 69, 'user63', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-01');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (61, 48, 'user80', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-04-03');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (62, 50, 'user90', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-05');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (63, 67, 'user7', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-04-06');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (64, 84, 'user56', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-04-07');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (65, 72, 'user49', 'Àß º¸°í °©´Ï´Ù~', '2021-04-09');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (66, 95, 'user70', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-04-11');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (67, 84, 'user30', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-04-12');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (68, 7, 'user22', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-14');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (69, 41, 'user90', 'Àß º¸°í °©´Ï´Ù~', '2021-04-16');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (70, 88, 'user57', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-17');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (71, 88, 'user26', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-04-18');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (72, 40, 'user8', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-04-20');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (73, 99, 'user82', 'Àß º¸°í °©´Ï´Ù~', '2021-04-22');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (74, 87, 'user24', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-24');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (75, 91, 'user94', 'Àß º¸°í °©´Ï´Ù~', '2021-04-25');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (76, 93, 'user63', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-04-26');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (77, 67, 'user67', 'Àß º¸°í °©´Ï´Ù~', '2021-04-28');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (78, 63, 'user21', 'Àß º¸°í °©´Ï´Ù~', '2021-04-30');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (79, 59, 'user9', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-02');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (80, 91, 'user74', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-05-03');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (81, 58, 'user4', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-05-04');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (82, 79, 'user60', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-05-06');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (83, 27, 'user53', 'Àß º¸°í °©´Ï´Ù~', '2021-05-07');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (84, 81, 'user79', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-08');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (85, 7, 'user35', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-05-09');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (86, 17, 'user79', 'Àß º¸°í °©´Ï´Ù~', '2021-05-11');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (87, 65, 'user36', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-13');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (88, 84, 'user26', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-05-14');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (89, 48, 'user3', 'Àß º¸°í °©´Ï´Ù~', '2021-05-15');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (90, 83, 'user36', 'Àß º¸°í °©´Ï´Ù~', '2021-05-17');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (91, 60, 'user1', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-18');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (92, 53, 'user16', 'Àß º¸°í °©´Ï´Ù~', '2021-05-19');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (93, 60, 'user26', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-05-21');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (94, 96, 'user26', 'Àß º¸°í °©´Ï´Ù~', '2021-05-22');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (95, 9, 'user31', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-23');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (96, 9, 'user73', 'Àß º¸°í °©´Ï´Ù~', '2021-05-24');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (97, 9, 'user63', 'Àß º¸°í °©´Ï´Ù~', '2021-05-26');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (98, 59, 'user32', 'È­ÀÌÆÃÇÕ½Ã´Ù!!', '2021-05-28');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (99, 97, 'user35', 'ÁÁÀº ±ÛÀÌ³×¿ä^^', '2021-05-30');
-insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (100, 11, 'user70', '¾ó¸¥ ÄÚ·Î³ª°¡ »ç¶óÁ³À¸¸é ÁÁ°Ú½À´Ï´Ù', '2021-06-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (1, 48, 'user68', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (2, 100, 'user47', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-04');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (3, 19, 'user2', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (4, 19, 'user55', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (5, 74, 'user93', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (6, 13, 'user40', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-01-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (7, 9, 'user47', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (8, 100, 'user59', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-13');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (9, 6, 'user25', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-01-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (10, 84, 'user37', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (11, 23, 'user27', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (12, 21, 'user52', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (13, 20, 'user7', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-21');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (14, 81, 'user21', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (15, 84, 'user82', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (16, 79, 'user90', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-01-24');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (17, 41, 'user40', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (18, 44, 'user3', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-01-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (19, 94, 'user62', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-01-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (20, 81, 'user82', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-01-29');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (21, 96, 'user92', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-01-31');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (22, 26, 'user12', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-02-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (23, 18, 'user2', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-02-04');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (24, 24, 'user19', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-02-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (25, 6, 'user64', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-02-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (26, 51, 'user35', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-02-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (27, 59, 'user72', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-02-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (28, 29, 'user64', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-02-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (29, 85, 'user36', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-02-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (30, 57, 'user72', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-13');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (31, 74, 'user22', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (32, 41, 'user22', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-02-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (33, 76, 'user53', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (34, 3, 'user4', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (35, 95, 'user75', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-02-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (36, 47, 'user38', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (37, 83, 'user34', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-02-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (38, 78, 'user57', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-02-24');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (39, 36, 'user97', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-02-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (40, 76, 'user48', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-02-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (41, 13, 'user58', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (42, 15, 'user59', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-03-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (43, 21, 'user48', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-03-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (44, 49, 'user36', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (45, 4, 'user32', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (46, 26, 'user12', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (47, 77, 'user24', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-03-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (48, 70, 'user4', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-03-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (49, 25, 'user49', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-15');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (50, 3, 'user10', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-03-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (51, 91, 'user42', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (52, 73, 'user15', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-03-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (53, 41, 'user56', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-03-21');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (54, 83, 'user36', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (55, 65, 'user60', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (56, 4, 'user27', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-03-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (57, 97, 'user84', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-03-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (58, 39, 'user1', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-03-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (59, 77, 'user99', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-03-30');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (60, 69, 'user63', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (61, 48, 'user80', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-04-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (62, 50, 'user90', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (63, 67, 'user7', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-04-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (64, 84, 'user56', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-04-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (65, 72, 'user49', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (66, 95, 'user70', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-04-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (67, 84, 'user30', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-04-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (68, 7, 'user22', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (69, 41, 'user90', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (70, 88, 'user57', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (71, 88, 'user26', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-04-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (72, 40, 'user8', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-04-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (73, 99, 'user82', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (74, 87, 'user24', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-24');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (75, 91, 'user94', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (76, 93, 'user63', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-04-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (77, 67, 'user67', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (78, 63, 'user21', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-04-30');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (79, 59, 'user9', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (80, 91, 'user74', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-05-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (81, 58, 'user4', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-05-04');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (82, 79, 'user60', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-05-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (83, 27, 'user53', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (84, 81, 'user79', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (85, 7, 'user35', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-05-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (86, 17, 'user79', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (87, 65, 'user36', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-13');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (88, 84, 'user26', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-05-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (89, 48, 'user3', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-15');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (90, 83, 'user36', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (91, 60, 'user1', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (92, 53, 'user16', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (93, 60, 'user26', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-05-21');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (94, 96, 'user26', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (95, 9, 'user31', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (96, 9, 'user73', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-24');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (97, 9, 'user63', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½~', '2021-05-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (98, 59, 'user32', 'È­ï¿½ï¿½ï¿½ï¿½ï¿½Õ½Ã´ï¿½!!', '2021-05-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (99, 97, 'user35', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³×¿ï¿½^^', '2021-05-30');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (100, 11, 'user70', 'ï¿½ï¿½ ï¿½Ú·Î³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ï´ï¿½', '2021-06-01');
 
 
--- Ä¿¹Â´ÏÆ¼ ÀÌ¹ÌÁö
+-- Ä¿ï¿½Â´ï¿½Æ¼ ï¿½Ì¹ï¿½ï¿½ï¿½
 CREATE TABLE tblCommunityImage (
-	community_img_seq	NUMBER	NOT NULL,   --ÀÌ¹ÌÁö¹øÈ£(PK)
-	community_seq	NUMBER	NOT NULL,       --±Û¹øÈ£(FK)
-	path	VARCHAR2(4000)	NOT NULL        --ÀÌ¹ÌÁö°æ·Î
+	community_img_seq	NUMBER	NOT NULL,   --ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½È£(PK)
+	community_seq	NUMBER	NOT NULL,       --ï¿½Û¹ï¿½È£(FK)
+	path	VARCHAR2(4000)	NOT NULL        --ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 );
 
 CREATE SEQUENCE community_img_seq;
@@ -2068,14 +2068,14 @@ insert into tblCommunityImage (community_img_seq,community_seq,path) values (com
 insert into tblCommunityImage (community_img_seq,community_seq,path) values (community_img_seq.nextval,7,'img73.jpg');
 
 
--- ÀÔÂû
+-- ï¿½ï¿½ï¿½ï¿½
 CREATE TABLE tblBid (
 	bid_seq	NUMBER	NOT NULL,
 	id	VARCHAR2(100)	NOT NULL,
 	product_seq	NUMBER	NOT NULL, --160
 	price	NUMBER	NOT NULL, -- 1000~100000
 	time	DATE	DEFAULT sysdate NOT NULL
-); --Â¦¼ö °æ¸Å , È¦¼ö ÀÏ¹Ý
+); --Â¦ï¿½ï¿½ ï¿½ï¿½ï¿½ , È¦ï¿½ï¿½ ï¿½Ï¹ï¿½
 
 CREATE SEQUENCE bid_seq;
 
@@ -2218,7 +2218,7 @@ insert into tblBid (bid_seq, id, product_seq, price, time) values (132, 'user59'
 
 
 
---»óÇ°ÀÌ¹ÌÁö
+--ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½
 CREATE TABLE tblProductImage (
 	product_img_seq	NUMBER	NOT NULL,
 	product_seq	NUMBER	NOT NULL,
@@ -2529,322 +2529,322 @@ VALUES (100, 100, 'img100');
 
 
 
---»óÇ°°Ë»ö
+--ï¿½ï¿½Ç°ï¿½Ë»ï¿½
 CREATE TABLE tblSearch (
 	search_seq	number	NOT NULL,
-	keyword	varchar2(90)	NOT NULL, --¾Ë¾Æ¼­
+	keyword	varchar2(90)	NOT NULL, --ï¿½Ë¾Æ¼ï¿½
 	time date DEFAULT sysdate	NOT NULL
-);--100°³
+);--100ï¿½ï¿½
 CREATE SEQUENCE search_seq;
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (1, '»óÀÇ', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (1, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (2, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (2, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (3, 'µµ¼­', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (3, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (4, '¹ÙÁö', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (4, 'ï¿½ï¿½ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (5, 'ÇÚµåÆù', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (5, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (6, 'TV', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (7, '»óÀÇ', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (7, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (8, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (8, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (9, 'µµ¼­', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (9, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (10, '¹ÙÁö', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (10, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (11, 'ÇÚµåÆù', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (11, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (12, 'TV', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (13, '»óÀÇ', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (13, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (14, '°¡Àü', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (14, 'ï¿½ï¿½ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (15, 'µµ¼­', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (15, 'ï¿½ï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (16, '¹ÙÁö', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (16, 'ï¿½ï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (17, 'ÇÚµåÆù', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (17, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (18, 'TV', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (19, '»óÀÇ', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (19, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (20, '°¡Àü', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (20, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (21, 'µµ¼­', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (21, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (22, '³ëÆ®ºÏ', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (22, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (23, 'Ã¥»ó', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (23, 'Ã¥ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (24, '¹ÙÁö', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (24, 'ï¿½ï¿½ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (25, 'ÇÚµåÆù', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (25, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (26, 'TV', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (27, '»óÀÇ', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (27, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (28, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (28, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (29, 'µµ¼­', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (29, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (30, '¹ÙÁö', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (30, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (31, '°¡Àü', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (31, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (32, 'µµ¼­', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (32, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (33, '³ëÆ®ºÏ', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (33, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (34, 'Ã¥»ó', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (34, 'Ã¥ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (35, '¹ÙÁö', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (35, 'ï¿½ï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (36, 'ÇÚµåÆù', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (36, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (37, 'TV', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (38, '»óÀÇ', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (38, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (39, '°¡Àü', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (39, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (40, 'µµ¼­', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (40, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (41, '¹ÙÁö', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (41, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (42, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (42, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (43, 'µµ¼­', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (43, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (44, '³ëÆ®ºÏ', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (44, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (45, 'Ã¥»ó', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (45, 'Ã¥ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (46, '¹ÙÁö', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (46, 'ï¿½ï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (47, 'ÇÚµåÆù', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (47, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (48, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (48, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (49, 'µµ¼­', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (49, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (50, '¹ÙÁö', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (50, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (51, '°¡Àü', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (51, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (52, 'µµ¼­', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (52, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (53, '³ëÆ®ºÏ', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (53, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (54, 'Ã¥»ó', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (54, 'Ã¥ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (55, '¹ÙÁö', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (55, 'ï¿½ï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (56, 'ÇÚµåÆù', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (56, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (57, 'TV', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (58, '»óÀÇ', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (58, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (59, '°¡Àü', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (59, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (60, 'µµ¼­', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (60, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (61, '¹ÙÁö', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (61, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (62, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (62, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (63, 'µµ¼­', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (63, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (64, '³ëÆ®ºÏ', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (64, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (65, 'Ã¥»ó', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (65, 'Ã¥ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (66, '¹ÙÁö', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (66, 'ï¿½ï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (67, 'ÇÚµåÆù', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (67, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (68, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (68, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (69, 'µµ¼­', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (69, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (70, '¹ÙÁö', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (70, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (71, '°¡Àü', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (71, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (72, 'µµ¼­', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (72, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (73, '³ëÆ®ºÏ', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (73, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (74, 'Ã¥»ó', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (74, 'Ã¥ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (75, '¹ÙÁö', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (75, 'ï¿½ï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (76, 'ÇÚµåÆù', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (76, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (77, 'TV', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (78, '»óÀÇ', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (78, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (79, '°¡Àü', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (79, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (80, 'µµ¼­', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (80, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (81, '¹ÙÁö', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (81, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (82, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (82, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (83, 'µµ¼­', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (83, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (84, '³ëÆ®ºÏ', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (84, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (85, 'Ã¥»ó', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (85, 'Ã¥ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (86, '¹ÙÁö', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (86, 'ï¿½ï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (87, 'ÇÚµåÆù', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (87, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (88, '°¡Àü', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (88, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (89, 'µµ¼­', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (89, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (90, '¹ÙÁö', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (90, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (91, '°¡Àü', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (91, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (92, 'µµ¼­', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (92, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (93, '³ëÆ®ºÏ', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (93, 'ï¿½ï¿½Æ®ï¿½ï¿½', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (94, 'Ã¥»ó', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (94, 'Ã¥ï¿½ï¿½', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (95, '¹ÙÁö', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (95, 'ï¿½ï¿½ï¿½ï¿½', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (96, 'ÇÚµåÆù', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (96, 'ï¿½Úµï¿½ï¿½ï¿½', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
 VALUES (97, 'TV', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (98, '»óÀÇ', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (98, 'ï¿½ï¿½ï¿½ï¿½', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (99, '°¡Àü', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (99, 'ï¿½ï¿½ï¿½ï¿½', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLSEARCH (SEARCH_SEQ, KEYWORD, TIME) 
-VALUES (100, 'µµ¼­', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (100, 'ï¿½ï¿½ï¿½ï¿½', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 
 
---¸Þ½ÃÁö
+--ï¿½Þ½ï¿½ï¿½ï¿½
 CREATE TABLE tblMessage (
 	message_seq	number NOT NULL,
 	sender_id	VARCHAR2(100) NOT NULL, --fk
 	receiver_id	VARCHAR2(100) NOT NULL, --fk
-	content	varchar2(4000) NOT NULL, -- 10ÀÚ
+	content	varchar2(4000) NOT NULL, -- 10ï¿½ï¿½
 	sendtime DATE DEFAULT sysdate NOT NULL,
 	is_check CHAR(1) NOT NULL --
 ); --100
@@ -2852,313 +2852,313 @@ CREATE SEQUENCE message_seq;
 
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (1, 'user1', 'user2', '¾È³çÇÏ¼¼¿ä1', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (1, 'user1', 'user2', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½1', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (2, 'user2', 'user3', '¾È³çÇÏ¼¼¿ä2', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (2, 'user2', 'user3', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½2', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (3, 'user3', 'user4', '¾È³çÇÏ¼¼¿ä3', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (3, 'user3', 'user4', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½3', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (4, 'user4', 'user5', '¾È³çÇÏ¼¼¿ä4', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (4, 'user4', 'user5', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½4', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (5, 'user5', 'user6', '¾È³çÇÏ¼¼¿ä5', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (5, 'user5', 'user6', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½5', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (6, 'user6', 'user7', '¾È³çÇÏ¼¼¿ä6', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (6, 'user6', 'user7', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½6', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (7, 'user7', 'user8', '¾È³çÇÏ¼¼¿ä7', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (7, 'user7', 'user8', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½7', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (8, 'user8', 'user9', '¾È³çÇÏ¼¼¿ä8', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (8, 'user8', 'user9', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½8', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (9, 'user9', 'user10', '¾È³çÇÏ¼¼¿ä9', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (9, 'user9', 'user10', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½9', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (10, 'user10', 'user11', '¾È³çÇÏ¼¼¿ä10', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (10, 'user10', 'user11', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½10', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (11, 'user11', 'user12', '¾È³çÇÏ¼¼¿ä11', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (11, 'user11', 'user12', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½11', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (12, 'user12', 'user13', '¾È³çÇÏ¼¼¿ä12', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (12, 'user12', 'user13', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½12', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (13, 'user13', 'user14', '¾È³çÇÏ¼¼¿ä13', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (13, 'user13', 'user14', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½13', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (14, 'user14', 'user15', '¾È³çÇÏ¼¼¿ä14', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (14, 'user14', 'user15', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½14', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (15, 'user15', 'user16', '¾È³çÇÏ¼¼¿ä15', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (15, 'user15', 'user16', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½15', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (16, 'user16', 'user17', '¾È³çÇÏ¼¼¿ä16', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (16, 'user16', 'user17', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½16', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (17, 'user17', 'user18', '¾È³çÇÏ¼¼¿ä17', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (17, 'user17', 'user18', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½17', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (18, 'user18', 'user19', '¾È³çÇÏ¼¼¿ä18', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (18, 'user18', 'user19', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½18', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (19, 'user19', 'user20', '¾È³çÇÏ¼¼¿ä19', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (19, 'user19', 'user20', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½19', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (20, 'user20', 'user21', '¾È³çÇÏ¼¼¿ä20', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (20, 'user20', 'user21', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½20', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (21, 'user21', 'user22', '¾È³çÇÏ¼¼¿ä21', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (21, 'user21', 'user22', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½21', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (22, 'user22', 'user23', '¾È³çÇÏ¼¼¿ä22', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (22, 'user22', 'user23', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½22', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (23, 'user23', 'user24', '¾È³çÇÏ¼¼¿ä23', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (23, 'user23', 'user24', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½23', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (24, 'user24', 'user25', '¾È³çÇÏ¼¼¿ä24', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (24, 'user24', 'user25', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½24', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (25, 'user25', 'user26', '¾È³çÇÏ¼¼¿ä25', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (25, 'user25', 'user26', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½25', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (26, 'user26', 'user27', '¾È³çÇÏ¼¼¿ä26', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (26, 'user26', 'user27', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½26', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (27, 'user27', 'user28', '¾È³çÇÏ¼¼¿ä27', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (27, 'user27', 'user28', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½27', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (28, 'user28', 'user29', '¾È³çÇÏ¼¼¿ä28', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (28, 'user28', 'user29', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½28', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (29, 'user29', 'user30', '¾È³çÇÏ¼¼¿ä29', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (29, 'user29', 'user30', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½29', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (30, 'user30', 'user31', '¾È³çÇÏ¼¼¿ä30', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (30, 'user30', 'user31', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½30', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (31, 'user31', 'user32', '¾È³çÇÏ¼¼¿ä31', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (31, 'user31', 'user32', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½31', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (32, 'user32', 'user33', '¾È³çÇÏ¼¼¿ä32', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (32, 'user32', 'user33', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½32', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (33, 'user33', 'user34', '¾È³çÇÏ¼¼¿ä33', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (33, 'user33', 'user34', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½33', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (34, 'user34', 'user35', '¾È³çÇÏ¼¼¿ä34', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (34, 'user34', 'user35', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½34', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (35, 'user35', 'user36', '¾È³çÇÏ¼¼¿ä35', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (35, 'user35', 'user36', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½35', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (36, 'user36', 'user37', '¾È³çÇÏ¼¼¿ä36', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (36, 'user36', 'user37', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½36', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (37, 'user37', 'user38', '¾È³çÇÏ¼¼¿ä37', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (37, 'user37', 'user38', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½37', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (38, 'user38', 'user39', '¾È³çÇÏ¼¼¿ä38', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (38, 'user38', 'user39', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½38', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (39, 'user39', 'user40', '¾È³çÇÏ¼¼¿ä39', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (39, 'user39', 'user40', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½39', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (40, 'user40', 'user41', '¾È³çÇÏ¼¼¿ä40', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (40, 'user40', 'user41', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½40', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (41, 'user41', 'user42', '¾È³çÇÏ¼¼¿ä41', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (41, 'user41', 'user42', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½41', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (42, 'user42', 'user43', '¾È³çÇÏ¼¼¿ä42', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (42, 'user42', 'user43', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½42', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (43, 'user43', 'user44', '¾È³çÇÏ¼¼¿ä43', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (43, 'user43', 'user44', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½43', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (44, 'user44', 'user45', '¾È³çÇÏ¼¼¿ä44', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (44, 'user44', 'user45', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½44', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (45, 'user45', 'user46', '¾È³çÇÏ¼¼¿ä45', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (45, 'user45', 'user46', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½45', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (46, 'user46', 'user47', '¾È³çÇÏ¼¼¿ä46', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (46, 'user46', 'user47', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½46', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (47, 'user47', 'user48', '¾È³çÇÏ¼¼¿ä47', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (47, 'user47', 'user48', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½47', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (48, 'user48', 'user49', '¾È³çÇÏ¼¼¿ä48', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (48, 'user48', 'user49', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½48', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (49, 'user49', 'user50', '¾È³çÇÏ¼¼¿ä49', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (49, 'user49', 'user50', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½49', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (50, 'user50', 'user51', '¾È³çÇÏ¼¼¿ä50', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (50, 'user50', 'user51', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½50', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (51, 'user51', 'user52', '¾È³çÇÏ¼¼¿ä51', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (51, 'user51', 'user52', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½51', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (52, 'user52', 'user53', '¾È³çÇÏ¼¼¿ä52', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (52, 'user52', 'user53', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½52', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (53, 'user53', 'user54', '¾È³çÇÏ¼¼¿ä53', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (53, 'user53', 'user54', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½53', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (54, 'user54', 'user55', '¾È³çÇÏ¼¼¿ä54', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (54, 'user54', 'user55', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½54', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (55, 'user55', 'user56', '¾È³çÇÏ¼¼¿ä55', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (55, 'user55', 'user56', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½55', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (56, 'user56', 'user57', '¾È³çÇÏ¼¼¿ä56', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (56, 'user56', 'user57', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½56', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (57, 'user57', 'user58', '¾È³çÇÏ¼¼¿ä57', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (57, 'user57', 'user58', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½57', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (58, 'user58', 'user59', '¾È³çÇÏ¼¼¿ä58', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (58, 'user58', 'user59', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½58', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (59, 'user59', 'user60', '¾È³çÇÏ¼¼¿ä59', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (59, 'user59', 'user60', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½59', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (60, 'user60', 'user61', '¾È³çÇÏ¼¼¿ä60', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (60, 'user60', 'user61', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½60', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (61, 'user61', 'user62', '¾È³çÇÏ¼¼¿ä61', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (61, 'user61', 'user62', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½61', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (62, 'user62', 'user63', '¾È³çÇÏ¼¼¿ä62', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (62, 'user62', 'user63', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½62', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (63, 'user63', 'user64', '¾È³çÇÏ¼¼¿ä63', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (63, 'user63', 'user64', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½63', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (64, 'user64', 'user65', '¾È³çÇÏ¼¼¿ä64', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (64, 'user64', 'user65', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½64', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (65, 'user65', 'user66', '¾È³çÇÏ¼¼¿ä65', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (65, 'user65', 'user66', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½65', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (66, 'user66', 'user67', '¾È³çÇÏ¼¼¿ä66', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (66, 'user66', 'user67', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½66', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (67, 'user67', 'user68', '¾È³çÇÏ¼¼¿ä67', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (67, 'user67', 'user68', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½67', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (68, 'user68', 'user69', '¾È³çÇÏ¼¼¿ä68', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (68, 'user68', 'user69', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½68', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (69, 'user69', 'user70', '¾È³çÇÏ¼¼¿ä69', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (69, 'user69', 'user70', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½69', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (70, 'user70', 'user71', '¾È³çÇÏ¼¼¿ä70', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (70, 'user70', 'user71', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½70', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (71, 'user71', 'user72', '¾È³çÇÏ¼¼¿ä71', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (71, 'user71', 'user72', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½71', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (72, 'user72', 'user73', '¾È³çÇÏ¼¼¿ä72', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (72, 'user72', 'user73', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½72', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (73, 'user73', 'user74', '¾È³çÇÏ¼¼¿ä73', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (73, 'user73', 'user74', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½73', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (74, 'user74', 'user75', '¾È³çÇÏ¼¼¿ä74', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (74, 'user74', 'user75', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½74', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (75, 'user75', 'user76', '¾È³çÇÏ¼¼¿ä75', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (75, 'user75', 'user76', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½75', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (76, 'user76', 'user77', '¾È³çÇÏ¼¼¿ä76', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (76, 'user76', 'user77', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½76', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (77, 'user77', 'user78', '¾È³çÇÏ¼¼¿ä77', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (77, 'user77', 'user78', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½77', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (78, 'user78', 'user79', '¾È³çÇÏ¼¼¿ä78', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (78, 'user78', 'user79', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½78', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (79, 'user79', 'user80', '¾È³çÇÏ¼¼¿ä79', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (79, 'user79', 'user80', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½79', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (80, 'user80', 'user81', '¾È³çÇÏ¼¼¿ä80', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (80, 'user80', 'user81', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½80', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (81, 'user81', 'user82', '¾È³çÇÏ¼¼¿ä81', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (81, 'user81', 'user82', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½81', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (82, 'user82', 'user83', '¾È³çÇÏ¼¼¿ä82', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (82, 'user82', 'user83', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½82', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (83, 'user83', 'user84', '¾È³çÇÏ¼¼¿ä83', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (83, 'user83', 'user84', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½83', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (84, 'user84', 'user85', '¾È³çÇÏ¼¼¿ä84', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (84, 'user84', 'user85', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½84', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (85, 'user85', 'user86', '¾È³çÇÏ¼¼¿ä85', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (85, 'user85', 'user86', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½85', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (86, 'user86', 'user87', '¾È³çÇÏ¼¼¿ä86', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (86, 'user86', 'user87', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½86', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (87, 'user87', 'user88', '¾È³çÇÏ¼¼¿ä87', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (87, 'user87', 'user88', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½87', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (88, 'user88', 'user89', '¾È³çÇÏ¼¼¿ä88', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (88, 'user88', 'user89', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½88', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (89, 'user89', 'user90', '¾È³çÇÏ¼¼¿ä89', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (89, 'user89', 'user90', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½89', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (90, 'user90', 'user91', '¾È³çÇÏ¼¼¿ä90', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (90, 'user90', 'user91', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½90', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (91, 'user91', 'user92', '¾È³çÇÏ¼¼¿ä91', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (91, 'user91', 'user92', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½91', to_date('12/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (92, 'user92', 'user93', '¾È³çÇÏ¼¼¿ä92', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (92, 'user92', 'user93', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½92', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (93, 'user93', 'user94', '¾È³çÇÏ¼¼¿ä93', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (93, 'user93', 'user94', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½93', to_date('11/03/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (94, 'user94', 'user95', '¾È³çÇÏ¼¼¿ä94', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (94, 'user94', 'user95', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½94', to_date('10/10/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (95, 'user95', 'user96', '¾È³çÇÏ¼¼¿ä95', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (95, 'user95', 'user96', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½95', to_date('05/06/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (96, 'user96', 'user97', '¾È³çÇÏ¼¼¿ä96', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (96, 'user96', 'user97', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½96', to_date('07/12/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (97, 'user97', 'user98', '¾È³çÇÏ¼¼¿ä97', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (97, 'user97', 'user98', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½97', to_date('12/28/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (98, 'user98', 'user99', '¾È³çÇÏ¼¼¿ä98', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (98, 'user98', 'user99', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½98', to_date('12/20/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (99, 'user99', 'user100', '¾È³çÇÏ¼¼¿ä99', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (99, 'user99', 'user100', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½99', to_date('11/13/2021', 'MM/DD/RRRR'), 'Y');
 
 INSERT INTO TBLMESSAGE (MESSAGE_SEQ, SENDER_ID, RECEIVER_ID, CONTENT, SENDTIME, IS_CHECK) 
-VALUES (100, 'user100', 'user1', '¾È³çÇÏ¼¼¿ä100', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
+VALUES (100, 'user100', 'user1', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½100', to_date('09/09/2021', 'MM/DD/RRRR'), 'Y');
 
 
 
---°øÁö»çÇ×ÀÌ¹ÌÁö
+--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½
 CREATE TABLE tblNoticeImg (
 	notice_img_seq	NUMBER	NOT NULL,
 	notice_seq	number	NOT NULL,
 	path varchar2(4000)	NOT NULL
-); --³ªÁß¿¡
+); --ï¿½ï¿½ï¿½ß¿ï¿½
 CREATE SEQUENCE notice_img_seq;
 
 
@@ -3464,14 +3464,14 @@ VALUES (100, 100, 'img100');
 
 
 
---»óÇ°´ñ±Û
+--ï¿½ï¿½Ç°ï¿½ï¿½ï¿½
 CREATE TABLE tblProductComment (
 	product_comment_seq	NUMBER NOT NULL,
 	product_seq	NUMBER NOT NULL,
 	id VARCHAR2(100) NOT NULL,
-	comments VARCHAR2(4000) NOT NULL, --100ÀÚ
+	comments VARCHAR2(4000) NOT NULL, --100ï¿½ï¿½
 	time DATE DEFAULT sysdate NOT NULL 
-); --100°³
+); --100ï¿½ï¿½
 CREATE SEQUENCE product_comment_seq;
 
 ALTER TABLE tblProductImage ADD CONSTRAINT PK_TBLPRODUCTIMAGE PRIMARY KEY (product_img_seq);
@@ -3507,315 +3507,315 @@ ALTER TABLE tblMessage ADD CONSTRAINT CK_tblMessage_check check(is_check in ('N'
 
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (1, 1, 'user1', '°¨»çÇÕ´Ï´Ù1', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (1, 1, 'user1', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½1', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (2, 2, 'user2', '°¨»çÇÕ´Ï´Ù2', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (2, 2, 'user2', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½2', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (3, 3, 'user3', '°¨»çÇÕ´Ï´Ù3', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (3, 3, 'user3', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½3', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (4, 4, 'user4', '°¨»çÇÕ´Ï´Ù4', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (4, 4, 'user4', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½4', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (5, 5, 'user5', '°¨»çÇÕ´Ï´Ù5', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (5, 5, 'user5', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½5', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (6, 6, 'user6', '°¨»çÇÕ´Ï´Ù6', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (6, 6, 'user6', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½6', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (7, 7, 'user7', '°¨»çÇÕ´Ï´Ù7', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (7, 7, 'user7', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½7', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (8, 8, 'user8', '°¨»çÇÕ´Ï´Ù8', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (8, 8, 'user8', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½8', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (9, 9, 'user9', '°¨»çÇÕ´Ï´Ù9', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (9, 9, 'user9', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½9', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (10, 10, 'user10', '°¨»çÇÕ´Ï´Ù10', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (10, 10, 'user10', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½10', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (11, 11, 'user11', '°¨»çÇÕ´Ï´Ù11', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (11, 11, 'user11', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½11', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (12, 12, 'user12', '°¨»çÇÕ´Ï´Ù12', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (12, 12, 'user12', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½12', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (13, 13, 'user13', '°¨»çÇÕ´Ï´Ù13', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (13, 13, 'user13', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½13', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (14, 14, 'user14', '°¨»çÇÕ´Ï´Ù14', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (14, 14, 'user14', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½14', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (15, 15, 'user15', '°¨»çÇÕ´Ï´Ù15', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (15, 15, 'user15', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½15', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (16, 16, 'user16', '°¨»çÇÕ´Ï´Ù16', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (16, 16, 'user16', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½16', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (17, 17, 'user17', '°¨»çÇÕ´Ï´Ù17', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (17, 17, 'user17', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½17', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (18, 18, 'user18', '°¨»çÇÕ´Ï´Ù18', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (18, 18, 'user18', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½18', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (19, 19, 'user19', '°¨»çÇÕ´Ï´Ù19', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (19, 19, 'user19', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½19', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (20, 20, 'user20', '°¨»çÇÕ´Ï´Ù20', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (20, 20, 'user20', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½20', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (21, 21, 'user21', '°¨»çÇÕ´Ï´Ù21', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (21, 21, 'user21', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½21', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (22, 22, 'user22', '°¨»çÇÕ´Ï´Ù22', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (22, 22, 'user22', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½22', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (23, 23, 'user23', '°¨»çÇÕ´Ï´Ù23', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (23, 23, 'user23', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½23', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (24, 24, 'user24', '°¨»çÇÕ´Ï´Ù24', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (24, 24, 'user24', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½24', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (25, 25, 'user25', '°¨»çÇÕ´Ï´Ù25', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (25, 25, 'user25', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½25', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (26, 26, 'user26', '°¨»çÇÕ´Ï´Ù26', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (26, 26, 'user26', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½26', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (27, 27, 'user27', '°¨»çÇÕ´Ï´Ù27', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (27, 27, 'user27', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½27', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (28, 28, 'user28', '°¨»çÇÕ´Ï´Ù28', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (28, 28, 'user28', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½28', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (29, 29, 'user29', '°¨»çÇÕ´Ï´Ù29', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (29, 29, 'user29', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½29', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (30, 30, 'user30', '°¨»çÇÕ´Ï´Ù30', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (30, 30, 'user30', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½30', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (31, 31, 'user31', '°¨»çÇÕ´Ï´Ù31', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (31, 31, 'user31', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½31', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (32, 32, 'user32', '°¨»çÇÕ´Ï´Ù32', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (32, 32, 'user32', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½32', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (33, 33, 'user33', '°¨»çÇÕ´Ï´Ù33', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (33, 33, 'user33', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½33', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (34, 34, 'user34', '°¨»çÇÕ´Ï´Ù34', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (34, 34, 'user34', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½34', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (35, 35, 'user35', '°¨»çÇÕ´Ï´Ù35', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (35, 35, 'user35', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½35', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (36, 36, 'user36', '°¨»çÇÕ´Ï´Ù36', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (36, 36, 'user36', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½36', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (37, 37, 'user37', '°¨»çÇÕ´Ï´Ù37', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (37, 37, 'user37', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½37', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (38, 38, 'user38', '°¨»çÇÕ´Ï´Ù38', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (38, 38, 'user38', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½38', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (39, 39, 'user39', '°¨»çÇÕ´Ï´Ù39', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (39, 39, 'user39', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½39', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (40, 40, 'user40', '°¨»çÇÕ´Ï´Ù40', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (40, 40, 'user40', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½40', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (41, 41, 'user41', '°¨»çÇÕ´Ï´Ù41', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (41, 41, 'user41', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½41', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (42, 42, 'user42', '°¨»çÇÕ´Ï´Ù42', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (42, 42, 'user42', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½42', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (43, 43, 'user43', '°¨»çÇÕ´Ï´Ù43', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (43, 43, 'user43', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½43', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (44, 44, 'user44', '°¨»çÇÕ´Ï´Ù44', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (44, 44, 'user44', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½44', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (45, 45, 'user45', '°¨»çÇÕ´Ï´Ù45', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (45, 45, 'user45', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½45', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (46, 46, 'user46', '°¨»çÇÕ´Ï´Ù46', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (46, 46, 'user46', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½46', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (47, 47, 'user47', '°¨»çÇÕ´Ï´Ù47', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (47, 47, 'user47', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½47', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (48, 48, 'user48', '°¨»çÇÕ´Ï´Ù48', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (48, 48, 'user48', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½48', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (49, 49, 'user49', '°¨»çÇÕ´Ï´Ù49', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (49, 49, 'user49', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½49', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (50, 50, 'user50', '°¨»çÇÕ´Ï´Ù50', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (50, 50, 'user50', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½50', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (51, 51, 'user51', '°¨»çÇÕ´Ï´Ù51', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (51, 51, 'user51', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½51', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (52, 52, 'user52', '°¨»çÇÕ´Ï´Ù52', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (52, 52, 'user52', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½52', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (53, 53, 'user53', '°¨»çÇÕ´Ï´Ù53', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (53, 53, 'user53', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½53', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (54, 54, 'user54', '°¨»çÇÕ´Ï´Ù54', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (54, 54, 'user54', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½54', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (55, 55, 'user55', '°¨»çÇÕ´Ï´Ù55', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (55, 55, 'user55', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½55', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (56, 56, 'user56', '°¨»çÇÕ´Ï´Ù56', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (56, 56, 'user56', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½56', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (57, 57, 'user57', '°¨»çÇÕ´Ï´Ù57', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (57, 57, 'user57', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½57', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (58, 58, 'user58', '°¨»çÇÕ´Ï´Ù58', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (58, 58, 'user58', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½58', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (59, 59, 'user59', '°¨»çÇÕ´Ï´Ù59', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (59, 59, 'user59', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½59', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (60, 60, 'user60', '°¨»çÇÕ´Ï´Ù60', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (60, 60, 'user60', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½60', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (61, 61, 'user61', '°¨»çÇÕ´Ï´Ù61', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (61, 61, 'user61', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½61', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (62, 62, 'user62', '°¨»çÇÕ´Ï´Ù62', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (62, 62, 'user62', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½62', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (63, 63, 'user63', '°¨»çÇÕ´Ï´Ù63', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (63, 63, 'user63', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½63', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (64, 64, 'user64', '°¨»çÇÕ´Ï´Ù64', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (64, 64, 'user64', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½64', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (65, 65, 'user65', '°¨»çÇÕ´Ï´Ù65', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (65, 65, 'user65', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½65', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (66, 66, 'user66', '°¨»çÇÕ´Ï´Ù66', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (66, 66, 'user66', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½66', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (67, 67, 'user67', '°¨»çÇÕ´Ï´Ù67', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (67, 67, 'user67', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½67', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (68, 68, 'user68', '°¨»çÇÕ´Ï´Ù68', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (68, 68, 'user68', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½68', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (69, 69, 'user69', '°¨»çÇÕ´Ï´Ù69', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (69, 69, 'user69', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½69', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (70, 70, 'user70', '°¨»çÇÕ´Ï´Ù70', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (70, 70, 'user70', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½70', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (71, 71, 'user71', '°¨»çÇÕ´Ï´Ù71', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (71, 71, 'user71', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½71', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (72, 72, 'user72', '°¨»çÇÕ´Ï´Ù72', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (72, 72, 'user72', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½72', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (73, 73, 'user73', '°¨»çÇÕ´Ï´Ù73', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (73, 73, 'user73', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½73', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (74, 74, 'user74', '°¨»çÇÕ´Ï´Ù74', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (74, 74, 'user74', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½74', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (75, 75, 'user75', '°¨»çÇÕ´Ï´Ù75', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (75, 75, 'user75', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½75', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (76, 76, 'user76', '°¨»çÇÕ´Ï´Ù76', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (76, 76, 'user76', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½76', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (77, 77, 'user77', '°¨»çÇÕ´Ï´Ù77', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (77, 77, 'user77', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½77', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (78, 78, 'user78', '°¨»çÇÕ´Ï´Ù78', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (78, 78, 'user78', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½78', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (79, 79, 'user79', '°¨»çÇÕ´Ï´Ù79', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (79, 79, 'user79', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½79', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (80, 80, 'user80', '°¨»çÇÕ´Ï´Ù80', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (80, 80, 'user80', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½80', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (81, 81, 'user81', '°¨»çÇÕ´Ï´Ù81', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (81, 81, 'user81', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½81', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (82, 82, 'user82', '°¨»çÇÕ´Ï´Ù82', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (82, 82, 'user82', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½82', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (83, 83, 'user83', '°¨»çÇÕ´Ï´Ù83', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (83, 83, 'user83', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½83', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (84, 84, 'user84', '°¨»çÇÕ´Ï´Ù84', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (84, 84, 'user84', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½84', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (85, 85, 'user85', '°¨»çÇÕ´Ï´Ù85', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (85, 85, 'user85', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½85', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (86, 86, 'user86', '°¨»çÇÕ´Ï´Ù86', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (86, 86, 'user86', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½86', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (87, 87, 'user87', '°¨»çÇÕ´Ï´Ù87', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (87, 87, 'user87', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½87', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (88, 88, 'user88', '°¨»çÇÕ´Ï´Ù88', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (88, 88, 'user88', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½88', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (89, 89, 'user89', '°¨»çÇÕ´Ï´Ù89', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (89, 89, 'user89', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½89', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (90, 90, 'user90', '°¨»çÇÕ´Ï´Ù90', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (90, 90, 'user90', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½90', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (91, 91, 'user91', '°¨»çÇÕ´Ï´Ù91', to_date('12/12/2021', 'MM/DD/RRRR'));
+VALUES (91, 91, 'user91', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½91', to_date('12/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (92, 92, 'user92', '°¨»çÇÕ´Ï´Ù92', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (92, 92, 'user92', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½92', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (93, 93, 'user93', '°¨»çÇÕ´Ï´Ù93', to_date('11/03/2021', 'MM/DD/RRRR'));
+VALUES (93, 93, 'user93', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½93', to_date('11/03/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (94, 94, 'user94', '°¨»çÇÕ´Ï´Ù94', to_date('10/10/2021', 'MM/DD/RRRR'));
+VALUES (94, 94, 'user94', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½94', to_date('10/10/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (95, 95, 'user95', '°¨»çÇÕ´Ï´Ù95', to_date('05/06/2021', 'MM/DD/RRRR'));
+VALUES (95, 95, 'user95', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½95', to_date('05/06/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (96, 96, 'user96', '°¨»çÇÕ´Ï´Ù96', to_date('07/12/2021', 'MM/DD/RRRR'));
+VALUES (96, 96, 'user96', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½96', to_date('07/12/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (97, 97, 'user97', '°¨»çÇÕ´Ï´Ù97', to_date('12/28/2021', 'MM/DD/RRRR'));
+VALUES (97, 97, 'user97', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½97', to_date('12/28/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (98, 98, 'user98', '°¨»çÇÕ´Ï´Ù98', to_date('12/20/2021', 'MM/DD/RRRR'));
+VALUES (98, 98, 'user98', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½98', to_date('12/20/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (99, 99, 'user99', '°¨»çÇÕ´Ï´Ù99', to_date('11/13/2021', 'MM/DD/RRRR'));
+VALUES (99, 99, 'user99', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½99', to_date('11/13/2021', 'MM/DD/RRRR'));
 
 INSERT INTO TBLPRODUCTCOMMENT (PRODUCT_COMMENT_SEQ, PRODUCT_SEQ, ID, COMMENTS, TIME) 
-VALUES (100, 100, 'user100', '°¨»çÇÕ´Ï´Ù100', to_date('09/09/2021', 'MM/DD/RRRR'));
+VALUES (100, 100, 'user100', 'ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½100', to_date('09/09/2021', 'MM/DD/RRRR'));
 
 
 
 
--- Á¢¼Ó Å×ÀÌºí
+-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 CREATE TABLE tblvisit (
 	regdate	DATE DEFAULT sysdate NOT NULL,--2020~
 	COUNT NUMBER DEFAULT 0 NOT NULL --1000~5000
 ); --100
 ALTER TABLE tblvisit ADD CONSTRAINT tblv_regdate_pk PRIMARY KEY (regdate);
--- Á¢¼Ó Å×ÀÌºí
+-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 
 insert into tblvisit(regdate,count) values ('2020-01-01',1426);
 insert into tblvisit(regdate,count) values ('2020-01-02',3589);
@@ -4564,661 +4564,661 @@ insert into tblvisit(regdate,count) values ('2022-01-13',3024);
 insert into tblvisit(regdate,count) values ('2022-01-14',2308);
 
 
---ÀÚÁÖ¹¯´ÂÁú¹®
+--ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CREATE SEQUENCE faq_seq;
 CREATE TABLE tblfaq (
 	faq_seq	NUMBER NOT NULL,
 	question_type_seq NUMBER NOT NULL, --5
-	title VARCHAR2(100) NOT NULL, --20ÀÚ
-	CONTENTS VARCHAR2(4000)	NOT NULL --200ÀÚ
-);  --100°³
+	title VARCHAR2(100) NOT NULL, --20ï¿½ï¿½
+	CONTENTS VARCHAR2(4000)	NOT NULL --200ï¿½ï¿½
+);  --100ï¿½ï¿½
 ALTER TABLE tblfaq ADD CONSTRAINT tblf_faq_seq_pk PRIMARY KEY (faq_seq);
 ALTER TABLE tblfaq ADD CONSTRAINT tblf_question_type_seq_fk FOREIGN KEY (question_type_seq)
     REFERENCES tblquestiontype (question_type_seq);
---ÀÚÁÖ¹¯´ÂÁú¹®
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+--ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
 
 
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
 
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
 
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
-');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
-
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
-
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
-
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
-');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
-
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
-
-
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
-
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
-');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
-');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
-
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
-
-
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
 - noreply@coupang.com
 
 - noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
 
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
 
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
 
 
 
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
-
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
-
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
-
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
-
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
-
-- noreply@coupang.com
-
-- noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
+');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
 
 
 
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
 
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
 - noreply@coupang.com
 
 - noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
 
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
 
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
 
-
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
-
-
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
-
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
-
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
-
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
 
 
 
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
 
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
 - noreply@coupang.com
 
 - noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
 
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
 
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
-
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
-
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸¿ø°¡ÀÔ] ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÑ´Ù°í ³ª¿É´Ï´Ù.','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
 
 
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÁÖ¹®] ±ä±ÞÀç³­Áö¿ø±ÝÀ» ÄíÆÎ¿¡¼­ »ç¿ë °¡´ÉÇÑ°¡¿ä?',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
-
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
-
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
-
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
-
-
-
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','¾Æ´Ï¿À, ±ä±ÞÀç³­Áö¿ø±ÝÀº ¿Â¶óÀÎ »ó°Å·¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾øÀ¸¸ç, ÄíÆÎ¿¡¼­µµ »ç¿ëÀÌ °¡´ÉÇÏÁö ¾Ê½À´Ï´Ù,');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
-
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
-
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
-
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[¹è¼ÛÀÏÁ¤] ÁÖ¹®ÇÑ »óÇ°Àº ¾ðÁ¦ ¹è¼ÛµÇ³ª¿ä ?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[¹è¼ÛÀÏÁ¤] ¹è¼ÛÁßÀÎ »óÇ°ÀÇ À§Ä¡¸¦ ¾Ë°í ½Í¾î¿ä.','·Î±×ÀÎ ½Ã º»ÀÎÀÎÁõÀ» ÇÏ¸é »õ·Î¿î È¯°æ¿¡¼­ ·Î±×ÀÎ ÇÑ °ÍÀ» ¾Ë ¼ö ÀÖ¾î °í°´´ÔÀÇ Á¤º¸¸¦ º¸È£ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-
-
-ÀÎÁõ ½Ã ÀÎÁõ¹øÈ£´Â ¹®ÀÚ ¶Ç´Â ÀÌ¸ÞÀÏ·Î Àü¼ÛµË´Ï´Ù.
-
-¸¸¾à ÀÌ¸ÞÀÏ·Î ¿äÃ»ÇÑ ÈÄ ÀÎÁõ ¹øÈ£¸¦ ¹ÞÁö ¸øÇÏ¼Ì´Ù¸é
-
-¸ÞÀÏÇÔÀÇ ½ºÆÔ Æú´õ¿¡¼­ ¾Æ·¡ ÀÌ¸ÞÀÏ ÁÖ¼Ò·Î ¹ÞÀº ÀÌ¸ÞÀÏÀÌ ÀÖ´Â Áö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
 - noreply@coupang.com
 
 - noreply@e.coupang.com');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','¸¶ÀÌÄíÆÎ¿¡¼­ ½±°í ºü¸£°Ô ¹è¼Û ÇöÈ² È®ÀÎÀÌ °¡´ÉÇÕ´Ï´Ù. 
-
-¹è¼Û¿¹Á¤ÀÏ, ¹è¼Û½ÃÀÛ ¸Þ¼¼Áö´Â ¹®ÀÚ ¹× ¾Ë¸²³»¿ª(App push)¿¡¼­ È®ÀÎÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','°¢ ¸ÞÀÏ ¼­ºñ½º¿¡ µû¶ó ¸ÞÀÏ µµÂø ½Ã°£ÀÌ Á¶±Ý Áö¿¬µÉ ¼ö ÀÖ½À´Ï´Ù.
-¸ÞÀÏÀÌ µµÂøÇÏÁö ¾ÊÀ» °æ¿ì ½ºÆÔ¸ÞÀÏÇÔÀ» È®ÀÎÇØ º¸½Ã°Å³ª ÄíÆÎÀÇ ¸ÞÀÏ ÁÖ¼Ò°¡ ¼ö½Å Â÷´ÜµÇ¾î ÀÖÁö ¾ÊÀº Áö È®ÀÎÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
 
 
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.','ÄíÆÎÀº °í°´´ÔÀÇ °³ÀÎÁ¤º¸¸¦ [°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§] ¿¡¼­ °íÁöÇÑ ¹üÀ§ ³»¿¡¼­ »ç¿ëÇÏ¸ç °íÁöÇÑ ¹üÀ§¸¦ ÃÊ°úÇÏ¿© ÀÌ¿ëÇÏ°Å³ª, Å¸ÀÎ ¶Ç´Â Å¸±â¾÷, ±â°ü¿¡ Á¦°øÇÏÁö ¾Ê½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
 
-¡Ø ¸¸ÀÏ È¸¿ø ¾ÆÀÌµð¿Í ºñ¹Ð¹øÈ£ÀÇ ºÒ¹ý µµ¿ë µî È¸¿øÁ¤º¸¿Í °ü·ÃÇÑ ÇÇÇØ°¡ ¹ß»ýÇÑ °æ¿ì¿¡´Â ¹Ù·Î ÄíÆÎ °í°´¼¾ÅÍ(¢Ï1577-7011) ¶Ç´Â ¸ð¹ÙÀÏ ¾Û [°í°´¼¾ÅÍ> Ã¤ÆÃ¹®ÀÇ]¸¦ ÅëÇØ ÇÇÇØ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù. 
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
 
-¡Ø °³ÀÎÁ¤º¸¿Í °ü·ÃÇÏ¿© ºÐÀïÀÌ ÀÖ´Â °æ¿ì¿¡´Â 2Â÷ ¹Î¿øÃ³¸® ±â°üÀÎ °³ÀÎÁ¤º¸º¸È£ÁøÈï¿ø(KISA)ÀÇ °³ÀÎÁ¤º¸ºÐÀïÁ¶Á¤À§¿øÈ¸·Î °³ÀÎÁ¤º¸ ¹Î¿ø½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸¿øÁ¤º¸] °³ÀÎÁ¤º¸¿Í °ü·ÃµÈ ÇÇÇØ¸¦ ÀÔÀº °æ¿ì ¾î¶»°Ô ÇÏ³ª¿ä?','±âÁ¸¿¡ ÄíÆÎ¿¡ µî·ÏÇÑ ÈÞ´ëÆù ¹øÈ£°¡ ÇöÀç »ç¿ëÇÏ½Ã´Â ÈÞ´ëÆù ¹øÈ£¿Í ´Ù¸¦ °æ¿ì ÀÎÁõ¹øÈ£¸¦ ¹ÞÁö ¸øÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
-ÄíÆÎ °í°´¼¾ÅÍ(1577-7011)·Î ¹®ÀÇÇÏ¿© ¹øÈ£º¯°æÀ» ¿äÃ»ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.
+- noreply@coupang.com
+
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
 
 
-¶Ç´Â ÄíÆÎ °í°´¼¾ÅÍ ¹øÈ£(1577-7011)°¡ ¼ö½Å°ÅºÎ µÇ¾îÀÖ´ÂÁö È®ÀÎÇØ ÁÖ½Ê½Ã¿À.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] º»ÀÎÈ®ÀÎÀ» ÇÏ´Âµ¥ ÀÎÁõ¹øÈ£°¡ ¿ÀÁö ¾Ê½À´Ï´Ù.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
 
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
+- noreply@coupang.com
 
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¯ºÒ] ´Ù¸¥ »ç¶÷ ¸íÀÇÀÇ °èÁÂ·Î È¯ºÒ¹ÞÀ» ¼ö ÀÖ³ª¿ä?','ÁÖ¹®ÇÏ½Å »óÇ°Àº °áÁ¦¿Ï·á ÈÄ ¾È³»µÈ ¹è¼Û¿¹Á¤ÀÏ±îÁö ¹è¼ÛµË´Ï´Ù. 
-¹è¼Û¿¹Á¤ÀÏÀº ÆÇ¸ÅÀÚ ¹× ¹è¼ÛÁö¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-¶ÇÇÑ, µµ¼­»ê°£ Áö¿ª ¹è¼Û È¤Àº ÃµÀçÁöº¯À¸·Î ÀÎÇØ ¹è¼ÛÀÏÁ¤ÀÌ º¯µ¿µÉ ¼ö ÀÖ½À´Ï´Ù.
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-¡á ¹è¼Û¿¹Á¤ÀÏ È®ÀÎÇÏ±â (ÁÖ¹® Àü)
-1. »óÇ°ÆäÀÌÁö: »óÇ°¸í°ú °¡°Ý ÇÏ´Ü¿¡ Ç¥½Ã
-2. Àå¹Ù±¸´Ï: »óÇ°ÀÌ¹ÌÁö ¿ìÃø
-3. ÁÖ¹®/°áÁ¦ ÆäÀÌÁö: »óÇ°Á¤º¸¿¡ Ç¥½Ã');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ºñ¹Ð¹øÈ£] ºñ¹Ð¹øÈ£ Àç¼³Á¤ ¸ÞÀÏÀÌ ¿ÀÁö ¾Ê¾Ò¾î¿ä.',' ¨ç ÄíÆÎÀº °í°´ÀÌ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» Á¦±âÇÏ´Â °æ¿ì ±× ½ÅÃ»À» ¹ÞÀº ³¯·ÎºÎÅÍ °í°´ÀÇ ºÒ¸¸ ¿øÀÎ µîÀ» Á¶»çÇÏ¿© ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 3ÀÏ ÀÌ³»¿¡ ÁøÇà °á°ú¸¦ °í°´¿¡°Ô Àü´ÞÇÏ¿©¾ß ÇÏ°í, ÆòÀÏ(¿µ¾÷ÀÏ) ±âÁØ 10ÀÏ ÀÌ³»¿¡ Á¶»ç °á°ú ¶Ç´Â Ã³¸® ¹æ¾ÈÀ» °í°´¿¡°Ô ¾Ë·Á¾ß ÇÕ´Ï´Ù.
 
-  ¨è °í°´Àº Á¦1Ç×ÀÇ ºÐÀïÃ³¸® °á°ú¿¡ ´ëÇÏ¿© ÀÌÀÇ°¡ ÀÖÀ» ¶§¿¡´Â ÄíÆÎÀÇ Ã³¸®¼¾ÅÍ¸¦ ÅëÇÏ¿© ÀÌÀÇ¸¦ Á¦±âÇÒ ¼ö ÀÖÀ¸¸ç, ±× ÀÌÀÇ°¡ ¹Þ¾Æµé¿©ÁöÁö ¾ÊÀ» ¶§¿¡´Â ¼ÒºñÀÚºÐÀïÁ¶Á¤À§¿øÈ¸¿¡ ºÐÀïÁ¶Á¤ ½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-  ¨é ÄíÆÎÀº °í°´À¸·ÎºÎÅÍ ÀüÈ­, FAX, E-mail, »çÀÌÆ® °Ô½ÃÆÇ, ¾Û µîÀ» ÅëÇØ Á¤´çÇÑ ÀÇ°ßÀÌ³ª ºÒ¸¸À» ¹ÞÀ» ¼ö ÀÖÀ¸¸ç, ÀÌ¿Í °°Àº ÀýÂ÷´Â ½ÅÃ»¿¡¼­ºÎÅÍ Á¶»ç, Ã³¸® °á°ú±îÁö °í°´ÀÌ ¿øÇÏ´Â ¹æ½ÄÀ¸·Î ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
 
-  ¨ê ÄíÆÎÀº Á¦3Ç×ÀÇ ¼ö´ÜÀ¸·Î ºÒ¸¸ µîÀ» Á¢¼ö ¹ÞÀº °æ¿ì Á¢¼ö»ç½ÇÀ» Á¢¼ö ¹ÞÀº ¹æ¹ýÀ¸·Î ÅëÁöÇÏ°í ÁöÃ¼¾øÀÌ »ç½Ç°ü°è¸¦ ÆÄ¾ÇÇÏ¿© °í°´¿¡°Ô ¼ÕÇØ°¡ ¹ß»ýÇÏ¿´´ÂÁö ¿©ºÎ µîÀ» È®ÀÎÇÑ µÚ¿¡ Ã³¸® ¹æ¾ÈÀ» ¸¶·ÃÇÕ´Ï´Ù.
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
 
-  ¨ë ÄíÆÎÀº °í°´¹®ÀÇ¿¡ ´ëÇÏ¿© ÄíÆÎ »çÀÌÆ®, Á¤Ã¥, ¼­ºñ½º µîÀ» °³¼±ÇÏµµ·Ï ³ë·ÂÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ºÐÀïÃ³¸®] ºÐÀïÃ³¸®ÀýÂ÷´Â ¾î¶»°Ô µÇ³ª¿ä?','°í°´´Ô º»ÀÎ ¸íÀÇÀÇ °èÁÂ·Î¸¸ È¯ºÒÀÌ °¡´ÉÇÕ´Ï´Ù.');
-insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ÀÌÁßÀÎÁõ] ·Î±×ÀÎ ½Ã ¿Ö ÈÞ´ëÆù/ÀÌ¸ÞÀÏ º»ÀÎ ÀÎÁõÀ» ÇØ¾ß ÇÏ³ª¿ä?','	
-º»ÀÎÀÎÁõ ½Ãµµ ½Ã "È¸¿ø´Ô ¸íÀÇ·Î ÀÎÁõµÈ ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù."·Î ¾È³»µÇ´Â °æ¿ì, 
-°í°´´ÔÀÇ Á¤º¸·Î ÀÌ¹Ì °¡ÀÔµÈ ´Ù¸¥ ¾ÆÀÌµð°¡ Á¸ÀçÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ »õ·Î º»ÀÎÀÎÁõÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù. 
-ÀÌ¹Ì °¡ÀÔµÈ ¾ÆÀÌµð¸¦ »ç¿ëÇØÁÖ½Ã°í, ºñ¹Ð¹øÈ£¸¦ ¸ð¸£½Ã´Â °æ¿ì ·Î±×ÀÎ Ã¢¿¡¼­ ºñ¹Ð¹øÈ£ Ã£±â ¸¦ ÀÌ¿ëÇØÁÖ¼¼¿ä.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
+
+- noreply@coupang.com
+
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
+');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
+
+- noreply@coupang.com
+
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
+');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
+');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
+
+- noreply@coupang.com
+
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù°ï¿½ ï¿½ï¿½ï¿½É´Ï´ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½Ö¹ï¿½] ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ï¿½?',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½Æ´Ï¿ï¿½, ï¿½ï¿½ï¿½ï¿½ç³­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â¶ï¿½ï¿½ï¿½ ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½,');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµÇ³ï¿½ï¿½ï¿½ ?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í¾ï¿½ï¿½.','ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ È¯ï¿½æ¿¡ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ÛµË´Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¼Ì´Ù¸ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.
+
+- noreply@coupang.com
+
+- noreply@e.coupang.com');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,4,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È² È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
+
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½(App push)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ñ½º¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÜµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Þ¹ï¿½Ä§] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¿ï¿½ï¿½Ï°Å³ï¿½, Å¸ï¿½ï¿½ ï¿½Ç´ï¿½ Å¸ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ò¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½1577-7011) ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½> Ã¤ï¿½Ã¹ï¿½ï¿½ï¿½]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½. 
+
+ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Î¿ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½(KISA)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½Ï½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½Ø¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ö½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.
+
+
+
+ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£(1577-7011)ï¿½ï¿½ ï¿½ï¿½ï¿½Å°Åºï¿½ ï¿½Ç¾ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,1,'[È¯ï¿½ï¿½] ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ È¯ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?','ï¿½Ö¹ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ÛµË´Ï´ï¿½. 
+ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ê°£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¤ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+ï¿½ï¿½ ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï±ï¿½ (ï¿½Ö¹ï¿½ ï¿½ï¿½)
+1. ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Ü¿ï¿½ Ç¥ï¿½ï¿½
+2. ï¿½ï¿½Ù±ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+3. ï¿½Ö¹ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,2,'[ï¿½ï¿½Ð¹ï¿½È£] ï¿½ï¿½Ð¹ï¿½È£ ï¿½ç¼³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò¾ï¿½ï¿½.',' ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ ï¿½Ì³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç´ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Þ¾Æµé¿©ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Òºï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½È­, FAX, E-mail, ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ô½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½ï¿½Ì³ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½è¸¦ ï¿½Ä¾ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø°ï¿½ ï¿½ß»ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+
+  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®, ï¿½ï¿½Ã¥, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½Ç³ï¿½ï¿½ï¿½?','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·Î¸ï¿½ È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.');
+insert into tblFaq(faq_seq,question_type_seq,title,contents) values (faq_seq.nextval,3,'[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½] ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½/ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½?','	
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½ ï¿½ï¿½ "È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."ï¿½ï¿½ ï¿½È³ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½, 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. 
+ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ã°ï¿½, ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ð¸£½Ã´ï¿½ ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.
 ');
 
 
 
---È¸¿ø ÇÁ·ÎÇÊ
+--È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CREATE TABLE tbluserprofile (
-	ID VARCHAR2(100) NOT NULL,-- ½Äº° 
-	nickname VARCHAR2(45) NOT NULL, --ÇÑ±Û 15ÀÚ, ¿µ¾î 45ÀÚ
+	ID VARCHAR2(100) NOT NULL,-- ï¿½Äºï¿½ 
+	nickname VARCHAR2(45) NOT NULL, --ï¿½Ñ±ï¿½ 15ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ 45ï¿½ï¿½
 	intro VARCHAR2(300) NOT NULL, --30
 	PATH VARCHAR2(4000) NOT NULL --profileimg1~100?
-); --100°³ ³ªÁß¿¡
+); --100ï¿½ï¿½ ï¿½ï¿½ï¿½ß¿ï¿½
 ALTER TABLE tbluserprofile ADD CONSTRAINT tblup_id_pk PRIMARY KEY (ID);
 ALTER TABLE tbluserprofile ADD CONSTRAINT tblup_nickname_unique UNIQUE(nickname);
 ALTER TABLE tbluserprofile ADD CONSTRAINT tblup_id_fk FOREIGN KEY (ID)
     REFERENCES tbluser (ID);
 
-insert into tblUserProfile(id,nickname,intro,path) values ('user1','nickname1','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user2','nickname2','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user3','nickname3','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user4','nickname4','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user5','nickname5','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user6','nickname6','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user7','nickname7','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user8','nickname8','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user9','nickname9','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user10','nickname10','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user11','nickname11','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user12','nickname12','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user13','nickname13','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user14','nickname14','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user15','nickname15','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user16','nickname16','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user17','nickname17','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user18','nickname18','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user19','nickname19','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user20','nickname20','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user21','nickname21','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user22','nickname22','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user23','nickname23','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user24','nickname24','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user25','nickname25','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user26','nickname26','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user27','nickname27','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user28','nickname28','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user29','nickname29','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user30','nickname30','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user31','nickname31','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user32','nickname32','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user33','nickname33','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user34','nickname34','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user35','nickname35','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user36','nickname36','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user37','nickname37','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user38','nickname38','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user39','nickname39','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user40','nickname40','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user41','nickname41','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user42','nickname42','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user43','nickname43','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user44','nickname44','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user45','nickname45','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user46','nickname46','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user47','nickname47','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user48','nickname48','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user49','nickname49','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user50','nickname50','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user51','nickname51','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user52','nickname52','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user53','nickname53','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user54','nickname54','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user55','nickname55','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user56','nickname56','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user57','nickname57','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user58','nickname58','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user59','nickname59','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user60','nickname60','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user61','nickname61','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user62','nickname62','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user63','nickname63','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user64','nickname64','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user65','nickname65','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user66','nickname66','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user67','nickname67','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user68','nickname68','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user69','nickname69','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user70','nickname70','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user71','nickname71','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user72','nickname72','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user73','nickname73','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user74','nickname74','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user75','nickname75','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user76','nickname76','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user77','nickname77','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user78','nickname78','Àú´Â ¾öÃ» ¸¹ÀÌ »ì °Å¿¹¿ä','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user79','nickname79','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user80','nickname80','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user81','nickname81','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user82','nickname82','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user83','nickname83','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user84','nickname84','¹Ý°¡¿ö¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user85','nickname85','Àú´Â ´©±¸´©±¸ ÀÔ´Ï´Ù.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user86','nickname86','6°³¿ù°£ ÆÈ·Î¿ö 500¸í »ó½Â, ¾ÆÀÌµð¾îÀÇ ½Â¸®','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user87','nickname87','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user88','nickname88','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user89','nickname89','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user90','nickname90','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user91','nickname91','¾È³çÇÏ¼¼¿ä.','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user92','nickname92','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user93','nickname93','»õ·Î¿î °ü¸® ¹æ¾È ¸ð»öÀ¸·Î °í°´¸¸Á·µµ 1À§ µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user94','nickname94','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user95','nickname95','°í°´ ÄÄÇÃ·¹ÀÎ 50°Ç¿¡ ´ëÃ³ÇÏ¸ç Å°¿î À§±â°ü¸® ´É·Â','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user96','nickname96','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user97','nickname97','¸ñÇ¥¸¦ ´Þ¼ºÇÏ±â À§ÇØ ½ÇÇàÇÑ 3´Ü°è ½ÇÇà °èÈ¹','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user98','nickname98','Àú´Â ÆÇ¸Å ¹°°ÇÀÌ ¸¹¾Æ¿ä!','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user99','nickname99','ÇÑ ¹øÀÇ ¼º°øÀ» À§ÇÑ ³× ¹øÀÇ ²ö±â ÀÖ´Â µµÀü','default image.jpg');
-insert into tblUserProfile(id,nickname,intro,path) values ('user100','nickname100','2³â°£ 20¾ï ¸ÅÃâ¿¡ ±â¿©ÇÑ ¸¶ÄÉÅÍ','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user1','nickname1','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user2','nickname2','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user3','nickname3','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user4','nickname4','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user5','nickname5','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user6','nickname6','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user7','nickname7','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user8','nickname8','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user9','nickname9','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user10','nickname10','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user11','nickname11','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user12','nickname12','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user13','nickname13','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user14','nickname14','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user15','nickname15','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user16','nickname16','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user17','nickname17','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user18','nickname18','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user19','nickname19','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user20','nickname20','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user21','nickname21','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user22','nickname22','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user23','nickname23','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user24','nickname24','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user25','nickname25','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user26','nickname26','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user27','nickname27','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user28','nickname28','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user29','nickname29','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user30','nickname30','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user31','nickname31','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user32','nickname32','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user33','nickname33','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user34','nickname34','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user35','nickname35','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user36','nickname36','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user37','nickname37','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user38','nickname38','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user39','nickname39','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user40','nickname40','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user41','nickname41','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user42','nickname42','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user43','nickname43','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user44','nickname44','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user45','nickname45','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user46','nickname46','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user47','nickname47','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user48','nickname48','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user49','nickname49','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user50','nickname50','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user51','nickname51','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user52','nickname52','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user53','nickname53','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user54','nickname54','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user55','nickname55','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user56','nickname56','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user57','nickname57','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user58','nickname58','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user59','nickname59','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user60','nickname60','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user61','nickname61','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user62','nickname62','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user63','nickname63','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user64','nickname64','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user65','nickname65','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user66','nickname66','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user67','nickname67','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user68','nickname68','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user69','nickname69','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user70','nickname70','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user71','nickname71','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user72','nickname72','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user73','nickname73','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user74','nickname74','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user75','nickname75','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user76','nickname76','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user77','nickname77','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user78','nickname78','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Å¿ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user79','nickname79','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user80','nickname80','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user81','nickname81','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user82','nickname82','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user83','nickname83','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user84','nickname84','ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user85','nickname85','ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user86','nickname86','6ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ 500ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ ï¿½Â¸ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user87','nickname87','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user88','nickname88','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user89','nickname89','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user90','nickname90','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user91','nickname91','ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user92','nickname92','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user93','nickname93','ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user94','nickname94','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user95','nickname95','ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ 50ï¿½Ç¿ï¿½ ï¿½ï¿½Ã³ï¿½Ï¸ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É·ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user96','nickname96','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user97','nickname97','ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½Ü°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¹','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user98','nickname98','ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user99','nickname99','ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½','default image.jpg');
+insert into tblUserProfile(id,nickname,intro,path) values ('user100','nickname100','2ï¿½â°£ 20ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ ï¿½â¿©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','default image.jpg');
 
 
--- °Å·¡ ¹®ÀÇ
+-- ï¿½Å·ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 CREATE TABLE tblInquiryLog (
 	inquiry_log_seq number not null, 
