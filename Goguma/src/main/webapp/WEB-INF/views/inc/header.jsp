@@ -3,15 +3,15 @@
 
 <!-- inc/header.jsp -->
 <header>
-	<div class="innerHeader">
+	<div class="inner-header">
 		<h1 class="logo">
 			<img src="/goguma/asset/img/logo.png"><span>고구마장터</span>
 		</h1>
 		<form method="GET" action="">
 			<input class="search" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
-			<input class="searchImg" type="image" src="/goguma/asset/img/search.png" alt="">
+			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
 		</form>
-		<ul class="menuOption">
+		<ul class="menu-option">
 			<c:if test="${empty id}">
 			<li>로그인</li>
 			<li>회원가입</li>
