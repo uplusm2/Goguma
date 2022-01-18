@@ -7,13 +7,17 @@ a { color: inherit; text-decoration: none;}
 li {list-style: none;}
 address, em, i { font-style: none;}
 h1, h2, h3, h4, h5, h6 { font-size: inherit; }
-a:hover {text-decoration: none; color: inherit; }   
+a:hover {text-decoration: none; color: inherit; }  
+
+
+ /* layout  */
 body {
     background: #fff;
     color: #181818;
 }
 section {
-    height: 800px;
+	width: 1200px;
+	margin: 30px auto;
 }
 .wrap {
     width: 100%;
@@ -24,9 +28,47 @@ span {
 }
 
 
+/* section */
+.title {
+	margin-left: 20px;
+}
+.title h2 {
+	font-size: 32px;
+	font-weight: 700;
+}
+section .btn {
+	background: #fff;
+	border: 2px solid #9B59B6;
+	color: #9B59B6;
+}
+section .btn.important {
+	background: #9B59B6;
+	color: #fff;
+}
+section .text {
+	border: 2px solid #757575;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+section .text:focus {
+	outline: 0px;
+}
+section .new {
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	background: orange;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	border: 2px solid orange;
+	border-radius: 50%;
+}
+
+
+
 /* header */
 header {
-    position: absolute;
     width: 100%;
     height: 110px;
     background: #FAF7FB;
@@ -115,8 +157,6 @@ header {
 }
 
 
-
-
 /* footer */
 footer {
     position: absolute;
@@ -124,7 +164,6 @@ footer {
     width: 100%;
     height: 170px;
     background: #FAF7FB;
-    overflow: hidden;
 }
 .innerFooter {
     position: relative;
@@ -169,6 +208,8 @@ footer {
 .innerFooter .policy li{
     font-size: 13px;
 }
+
+
 
 
 

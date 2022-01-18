@@ -14,7 +14,16 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
-			시작 페이지
+			<div class="title">
+				<h2>시작 페이지</h2>
+				<input type="button" value="버튼" class="btn">
+				<input type="button" value="버튼" class="btn important">
+				<input type="text" class="text" placeholder="제목을 입력하세요.">
+				<input type="text" class="new" value="N">
+			</div>
+			<nav class="leftside">
+				<h3>ㅎㅇㅎㅇ</h3>
+			</nav>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
