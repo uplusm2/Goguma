@@ -23,7 +23,7 @@
 			</div>
 			<nav class="leftside">
 				<h3>check</h3>
-				
+				sss
 			</nav>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
