@@ -32,7 +32,12 @@
 				</tr>
 				</c:forEach>
 			</table>
-			<input>
+			<div class="button">
+				<button type="button" class="btn important add">
+					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+				</button>
+			</div>
+			
 			<div class="pagebar">${pagebar}</div>
 		</section>
 	</main>
