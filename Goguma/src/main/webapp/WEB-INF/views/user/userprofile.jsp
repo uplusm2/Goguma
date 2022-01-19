@@ -6,30 +6,28 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>	
-	.sidebar{
-		margin-top:30px;
-		margin-bottom:30px;
+	.left-nav{
 		height: 75vh;
 		width:20vh;
-		float: left;
 	}
-	.sidebar .profile{
+	.sidebar{
+		height:70%;
+	}
+	.sidebar:nth-child(0){
 		margin-top:60%;
 		margin-left:28%
 	}
-	.sidebar .userPostList{
+	.sidebar:nth-child(1){
 		margin-top:10%;
 		margin-left:28%
 	}
 	.sidebar_line{
 		background-color:#9B59B6;
-		margin-top:30px;
-		margin-bottom:30px;
-		height: 75vh;
+		height: 70%;
 		width:3px;
 		float: left;
 	}
-	.sidebar_line::after{
+	.left-nav:after{
 		clear: both;
 	}
 	.content{
@@ -42,12 +40,16 @@
 	<!-- main.jsp -->
 	<div class="container" style="width:1200px; position:absolute; top:0px; left:18vw;">
 		<main class="main">
-			<%@include file="/WEB-INF/views/inc/header.jsp" %> 
-			<div class= "sidebar">
-				<div class="profile">Profile  <i class="bi bi-arrow-down-circle"></i></div>
-				<div class="userPostList">작성글 내역</div>
-			</div>
-			<div class="sidebar_line"></div>
+			<%@include file="/WEB-INF/views/inc/header.jsp" %>
+			<nav class="left-nav">
+				<div class="sidebar">
+					<div>
+						Profile <i class="bi bi-arrow-down-circle"></i>
+					</div>
+					<div>작성글 내역</div>
+				</div>
+				<div class="sidebar_line"></div>
+			</nav>
 			<section class="content">
 				<div>sweetPotato님의 프로필 입니다.</div>
 				<table>
