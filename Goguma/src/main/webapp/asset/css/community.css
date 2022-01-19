@@ -61,16 +61,43 @@
 	font-weight: 700;
 	font-size: 16px;
 	padding: 3px;
-	position: relative;
+	/* background: orange; */
+	border: 0;
 }
 .community .button .btn.add {
-    position: absolute;
-    right: 100px;
-    transform: translateY(20px);
+    transform: translateX(1050px) translateY(20px);
     width: 80px;
     text-align: center;
     padding-left: 5px;
 }
 .community .button .btn.add span{
     color: #fff;
+}
+
+
+/* 검색 */
+.community .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(40px);
+    font-size: 18px;
+}
+.community .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.community .search .text {
+	border-radius: 0;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 30px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+.community .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
 }

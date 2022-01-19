@@ -11,10 +11,12 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
+		
 		<section class="community">
 			<div class="title">
 				<h2>커뮤니티</h2>
 			</div>
+			
 			<table class="table">
 				<tr>
 					<th colspan="2">제목</th>
@@ -32,6 +34,7 @@
 				</tr>
 				</c:forEach>
 			</table>
+			
 			<div class="button">
 				<button type="button" class="btn important add">
 					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -39,6 +42,18 @@
 			</div>
 			
 			<div class="pagebar">${pagebar}</div>
+
+			<div class="search">
+				<form method="GET" action="#!">
+					<select name="column" class="text">
+						<option value="subject">제목</option>
+						<option value="content">내용</option>
+						<option value="writer">작성자</option>
+					</select> 
+					<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
+					<input type="image" src="/goguma/asset/img/search.png" class="search-img">
+				</form>
+			</div>
 		</section>
 	</main>
 	
