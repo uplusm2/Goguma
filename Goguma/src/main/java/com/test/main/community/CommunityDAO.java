@@ -25,7 +25,7 @@ public class CommunityDAO {
 		}
 	}
 	
-	public ArrayList<CommunityDTO> list(){
+	public ArrayList<CommunityDTO> list(HashMap<String, String> map){
 		try {
 			String where = "";
 			
@@ -35,7 +35,7 @@ public class CommunityDAO {
 //							, map.get("word").replace("'","''"));
 //			}
 			
-			String sql = "select * from vwCommunity order by community_seq desc";
+			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity  order by community_seq desc) c ) where rnum between %s and %s", map.get("begin"), map.get("end"));
 			rs = stat.executeQuery(sql);
 			
 			ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();
