@@ -35,11 +35,11 @@ public class Test {
         conn = open();
         stat = conn.createStatement();
 
-        String sql = "select count() from tblUser";
+        String sql = "select count(*) from tblUser";
         rs = stat.executeQuery(sql);
 
         while (rs.next()) {
-            System.out.println(rs.getString("count()"));
+            System.out.println(rs.getString("count(*)"));
 
         }
     }
