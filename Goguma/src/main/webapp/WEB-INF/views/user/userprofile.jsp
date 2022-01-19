@@ -21,24 +21,25 @@
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@include file="/WEB-INF/views/userSideBar.jsp"%>
 			<section class="content">
-				<div>sweetPotato님의 프로필 입니다.</div>
+				<div>${userProfileData.id} 님의 프로필 입니다.</div>
 				<table>
 					<tr>
-						<td><img src="/goguma/asset/img/defaultprofile.PNG"
+						<td><img src="/goguma/asset/img/${userProfileData.path}"
 							style="width: 150px"></td>
 						<td>
 							<div>
-								<span>NickName </span><span> sweetpotato</span>
+								<span>NickName</span><span> ${userProfileData.nickName}</span>
 							</div>
 							<div>
-								<span>info </span><span> 저는 고구마 같은 사람입니다. 제 물건을 많이 구매해
-									주세요!</span>
+								<span>info </span><span> ${userProfileData.intro}</span>
 							</div>
 						</td>
 					</tr>
 					<tr>
-						<td><input type="button" value="버튼" class="btn important">
-							<input type="button" value="버튼" class="btn important"></td>
+						<td>
+							<input type="button" value="버튼" class="btn important" onclick="/goguma/user/salesReviewList.do">
+							<input type="button" value="버튼" class="btn important" onclick="/goguma/user/purchaseReviewList.do">
+						</td>
 					</tr>
 					<tr>
 						<td>
