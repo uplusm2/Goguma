@@ -1,0 +1,30 @@
+/* community */
+.community .table {
+    width: 1100px;
+    border: 2px solid #dadada;
+}
+.community .table,
+.community .table th,
+.community .table td{
+    border-left: 0px;
+    border-right: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 400;
+}
+.community .table th {
+    font-weight: 500;
+}
+.community .table tr {
+    height: 40px;
+}
+.community .table td:nth-child(1){
+    color: #757575;
+    padding-left: 30px;
+    font-size: 16px;
+}
+.community .table td:nth-child(2){
+    padding-left: 40px;
+    text-align: left;
+    width: 700px;
+}

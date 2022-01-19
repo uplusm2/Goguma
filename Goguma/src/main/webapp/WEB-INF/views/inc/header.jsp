@@ -4,7 +4,7 @@
 <!-- inc/header.jsp -->
 <header>
 	<div class="inner-header">
-		<h1 class="logo">
+		<h1 class="logo" onclick="location.href='/goguma/main.do';">
 			<img src="/goguma/asset/img/logo.png"><span>고구마장터</span>
 		</h1>
 		<form method="GET" action="">
@@ -25,7 +25,7 @@
 		</ul>
 		<ul class="menu">
 			<li><img src="/goguma/asset/img/menu1.png">중고거래</li>
-			<li><img src="/goguma/asset/img/menu2.png">커뮤니티</li>
+			<li onclick="location.href='/goguma/community/communityList.do';"><img src="/goguma/asset/img/menu2.png">커뮤니티</li>
 			<li><img src="/goguma/asset/img/menu3.png">고객센터</li>
 		</ul>
 	</div>
