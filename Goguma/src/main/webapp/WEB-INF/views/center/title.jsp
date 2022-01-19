@@ -17,6 +17,7 @@
 	    cursor: pointer;
 	    float: left;
 	    font-weight: 500;
+	    padding-left : 10px;
     }
     .menu li:after{
 	    content: '';
@@ -29,7 +30,18 @@
 	    height: 15px;
 	    z-index: 1;
 	}
-    
+	.menu li:hover{
+		cursur : pointer;
+	}
+	.container-text{
+		
+	}
+	.ddd{
+		background : #FAF7FB;
+		height : 100px;
+		padding-left : 15%;
+		border-right : 1px solid #9B59B6;
+    	
 }
 </style>
 </head>
@@ -41,7 +53,7 @@
 			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
 		</form>
 	</div>
-	<div>
+	<div class = "ddd">
 	
 		<ul class = "menu">
 			<li>자주묻는질문</li>
