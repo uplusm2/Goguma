@@ -9,7 +9,6 @@
 </style>
 </head>
 <body>
-	<!-- main.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="community">
@@ -33,7 +32,7 @@
 				</tr>
 				</c:forEach>
 			</table>
-
+			<input>
 			<div class="pagebar">${pagebar}</div>
 		</section>
 	</main>

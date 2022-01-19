@@ -29,6 +29,10 @@
     text-align: left;
     width: 700px;
 }
+.community .table th:nth-child(4),
+.community .table td:nth-child(5){
+    padding-right: 20px;
+}
 .community .pagebar {
 	text-align: center;
 	transform: translateY(50px); 
