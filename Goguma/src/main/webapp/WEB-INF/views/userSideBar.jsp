@@ -67,10 +67,4 @@
 		$(".sidebar").children().eq(1).toggle();
 		$(".sidebar").children().eq(2).toggle();
 	});
-	$(".sidebar").children().eq(1).click(()=>{
-		location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}';
-	});
-	$(".sidebar").children().eq(2).click(()=>{
-		location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}';
-	});
 </script>

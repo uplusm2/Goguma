@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/goguma/user/userprofile.do" method="get">
+	<form action="/goguma/user/user.do" method="get">
 		
 		<input type="text" name="userId">
 		

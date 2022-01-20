@@ -12,7 +12,6 @@
 <body>
 	<!-- main.jsp -->
 	<main class="main">
-		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
 			<div class="title">
 				<h2>시작 페이지</h2>
@@ -27,7 +26,6 @@
 				
 			</nav>
 		</section>
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>

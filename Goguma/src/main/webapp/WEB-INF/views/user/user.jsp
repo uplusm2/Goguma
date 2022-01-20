@@ -31,14 +31,22 @@
 			<%@include file="/WEB-INF/views/userSideBar.jsp"%>
 			<section class="content">
 				<h2>user1 님의 프로필 입니다.</h2>
-				<iframe src="/goguma//user/userprofile.do?userId=user1"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
+				<iframe class="frame" src="/goguma//user/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
 				</iframe>
 			</section>
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%>  --%>
 		</main>
 	</div>
 	<script>
-		
+		$(".sidebar").children().eq(0).click(()=>{
+			$(".frame").attr("src","/goguma//user/userprofile.do?userId=${userId}");
+		});
+		$(".sidebar").children().eq(1).click(()=>{
+			$(".frame").attr("src","/goguma/user/salesReviewList.do?userId=${userId}");
+		});
+		$(".sidebar").children().eq(2).click(()=>{
+			$(".frame").attr("src","/goguma/user/purchaseReviewList.do?userId=${userId}");
+		});
 	</script>
 </body>
 </html>
