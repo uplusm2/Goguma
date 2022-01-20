@@ -17,9 +17,13 @@ public class Test {
 	public static Connection open() {
 		Connection conn = null;
 		
-		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
+//		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
+//		String id = "admin";
+//		String pw = "Goguma970928";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String id = "team";
+		String pw = "java1234";
+		
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -31,18 +35,18 @@ public class Test {
 		}
 	}
 	
-	public static void main(String[] args) throws SQLException {
-
-		conn = open();
-		stat = conn.createStatement();
-		
-		String sql = "select count(*) from tblUser";
-		rs = stat.executeQuery(sql);
-		
-		while (rs.next()) {
-			System.out.println(rs.getString("count(*)"));
-			
-		}
-	}
+//	public static void main(String[] args) throws SQLException {
+//
+//		conn = open();
+//		stat = conn.createStatement();
+//		
+//		String sql = "select count(*) from tblUser";
+//		rs = stat.executeQuery(sql);
+//		
+//		while (rs.next()) {
+//			System.out.println(rs.getString("count(*)"));
+//			
+//		}
+//	}
 
 }

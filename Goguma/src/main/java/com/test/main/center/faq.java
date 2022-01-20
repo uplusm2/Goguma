@@ -15,9 +15,12 @@ public class faq extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		DAO dao = new DAO();
+		CenterDAO dao = new CenterDAO();
 		
-		ArrayList<DTO> dto =  dao.faqlist();
+		ArrayList<CenterDTO> list = dao.faqlist();
+		
+		req.setAttribute("list", list);
+		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/faq.jsp");
 		dispatcher.forward(req, resp);
