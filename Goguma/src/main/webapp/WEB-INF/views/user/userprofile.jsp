@@ -70,7 +70,7 @@
 				</table>
 				<!-- <div style="padding-top:100px;"><img src="/goguma/asset/img/defaultprofile.PNG" style="width:150px"></div> -->
 			</section>
-			<%@include file="/WEB-INF/views/inc/footer.jsp"%>
+			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
 		</main>
 	</div>
 	<script>
