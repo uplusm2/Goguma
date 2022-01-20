@@ -1,24 +1,40 @@
 package com.test.main.user;
 
 public class ReviewDTO {
-	private String type;
-	private int dealSeq;
+	private String buyId;
+	private String selId;
+	private String productcontent;
+	private String regdate;
 	private int score;
+	private String reviewcontent;
 	@Override
 	public String toString() {
-		return "ReviewDTO [type=" + type + ", dealSeq=" + dealSeq + ", score=" + score + ", content=" + content + "]";
+		return "ReviewDTO [buyId=" + buyId + ", selId=" + selId + ", productcontent=" + productcontent + ", regdate="
+				+ regdate + ", score=" + score + ", reviewcontent=" + reviewcontent + "]";
 	}
-	public String getType() {
-		return type;
+	public String getBuyId() {
+		return buyId;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setBuyId(String buyId) {
+		this.buyId = buyId;
 	}
-	public int getDealSeq() {
-		return dealSeq;
+	public String getSelId() {
+		return selId;
 	}
-	public void setDealSeq(int dealSeq) {
-		this.dealSeq = dealSeq;
+	public void setSelId(String selId) {
+		this.selId = selId;
+	}
+	public String getProductcontent() {
+		return productcontent;
+	}
+	public void setProductcontent(String productcontent) {
+		this.productcontent = productcontent;
+	}
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
 	}
 	public int getScore() {
 		return score;
@@ -26,11 +42,10 @@ public class ReviewDTO {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public String getContent() {
-		return content;
+	public String getReviewcontent() {
+		return reviewcontent;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setReviewcontent(String reviewcontent) {
+		this.reviewcontent = reviewcontent;
 	}
-	private String content;
 }
