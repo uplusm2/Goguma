@@ -17,13 +17,30 @@
 			<div class="title">
 				<h2>커뮤니티</h2>
 			</div>
-			
+			<table class="detail">
+				<tr>
+					<td colspan="3">${dto.title}</td>
+				</tr>
+				<tr>
+					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
+					<td colspan="2">${dto.nickname}</td>
+				</tr>
+				<tr>
+					<td>${dto.regDate}</td>
+					<td>조회 ${dto.readcount}</td>
+				</tr>
+				<tr>
+					<td colspan="3">${dto.content}</td>
+				</tr>
+
+			</table>
+
 			<div class="button">
-				<button type="button" class="btn important add">
-					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-				</button>
+				<input type="button" value=목록 class="btn list"
+					onclick="location.href='/goguma/community/communityList.do?page=${page}';"> 
+				<input type="button" value=수정 class="btn edit"> 
+				<input type="button" value=삭제 class="btn important del">
 			</div>
-			
 		</section>
 	</main>
 	

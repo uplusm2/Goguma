@@ -23,9 +23,17 @@ public class CommunityDetail extends HttpServlet {
 		String page = req.getParameter("page");
 		
 		dto = dao.get(seq);
+		refineDate(dto);
 		
-
+		req.setAttribute("dto", dto);
+		req.setAttribute("page", page);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityDetail.jsp");
 		dispatcher.forward(req, resp);
+	}
+
+	private void refineDate(CommunityDTO dto) {
+		String tmp = dto.getRegDate().substring(0, 16).replace("-", ".");
+		dto.setRegDate(tmp.substring(2));
 	}
 }

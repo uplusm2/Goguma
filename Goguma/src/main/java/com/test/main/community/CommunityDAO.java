@@ -90,6 +90,7 @@ public class CommunityDAO {
 				dto.setSeq(rs.getString("community_seq"));
 				dto.setId(rs.getString("id"));
 				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
 				dto.setRegDate(rs.getString("regDate"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));

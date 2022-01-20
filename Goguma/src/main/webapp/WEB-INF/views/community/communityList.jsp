@@ -29,7 +29,7 @@
 				<tr>
 					<td>${dto.seq}</td>
 					<td>
-						<a href="/goguma/community/commuityDetail.do?seq=${dto.seq}&column=${map.column}&word=${map.word}&page=${nowPage}">${dto.title}</a>
+						<a href="/goguma/community/communityDetail.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
 					</td>
 					<td>${dto.nickname}</td>
 					<td>${dto.regDate}</td>
