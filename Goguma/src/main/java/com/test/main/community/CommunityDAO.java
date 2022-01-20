@@ -57,6 +57,7 @@ public class CommunityDAO {
 		}
 		return null;
 	}
+	
 	public int getTotalCount(HashMap<String, String> map) {
 		try {
 			String where = "";
@@ -98,9 +99,26 @@ public class CommunityDAO {
 				return dto;
 			}
 		} catch (Exception e) {
-			System.out.println("BoardDAO.get()");
+			System.out.println("CommunityDAO.get()");
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public int add(CommunityDTO dto) {
+		try {
+			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, default, default)";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getId());
+			pstat.setString(2, dto.getTitle());
+			pstat.setString(3, dto.getContent());
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 }

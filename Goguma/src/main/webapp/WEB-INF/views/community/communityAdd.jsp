@@ -13,27 +13,29 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<section class="community form">
+		<section class="community add">
 			<div class="title">
 				<h2>커뮤니티</h2>
 			</div>
-
-			<form method="POST" action="/goguma/community/communityAdd.do">
-				<input type="text" name="title" placeholder="제목을 입력하세요." class="form-text" required>
-				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required></textarea>
-				
+			
+			<c:if test="${result == 1}">
+			<div class="add">
+				<p>게시물이 등록되었습니다.</p>
 				<div class="button">
-					<input type="button" value=취소 class="btn cancel"
-						onclick="location.href='/goguma/community/communityList.do';"> 
-					<input type="submit" value=등록 class="btn important add">
+					<input type="button" value="확인하기" class="btn"> 
+					<input type="button" value="목록으로" class="btn">
 				</div>
-			</form>
+			</div>
+			</c:if>
+			<c:if test="${result == 0}">
+			<p>에러 발생</p>
+			</c:if>
 
 		</section>
 	</main>
 	
 	<script>
-	
+		
 	</script>
 </body>
 </html>
