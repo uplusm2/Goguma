@@ -3,14 +3,15 @@ package com.test.main.center;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import com.test.main.community.Test;
+import com.test.jdbc.DBUtil;
+
 
 public class CenterDAO {
 
+	
 	private Connection conn;
 	private Statement stat; //매개변수X
 	private PreparedStatement pstat; //매개변수O
@@ -20,7 +21,7 @@ public class CenterDAO {
 		
 		try {
 
-			conn = Test.open();
+			conn = DBUtil.open();
 			stat = conn.createStatement();
 
 		} catch (Exception e) {
