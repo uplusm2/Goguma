@@ -73,4 +73,33 @@ public class CommunityDAO {
 		}
 		return 0;
 	}
+
+	public CommunityDTO get(String seq) {
+		
+		try {
+			String sql = "select * from vwCommunity where community_seq = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, seq);
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()){
+				CommunityDTO dto = new CommunityDTO();
+				dto.setSeq(rs.getString("community_seq"));
+				dto.setId(rs.getString("id"));
+				dto.setTitle(rs.getString("title"));
+				dto.setRegDate(rs.getString("regDate"));
+				dto.setReadcount(rs.getInt("readcount"));
+				dto.setNickname(rs.getString("nickname"));
+				
+				return dto;
+			}
+		} catch (Exception e) {
+			System.out.println("BoardDAO.get()");
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

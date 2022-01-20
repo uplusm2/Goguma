@@ -1,4 +1,5 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,9 @@
 				<c:forEach items="${list}" var="dto">
 				<tr>
 					<td>${dto.seq}</td>
-					<td>${dto.title}</td>
+					<td>
+						<a href="/goguma/community/commuityDetail.do?seq=${dto.seq}&column=${map.column}&word=${map.word}&page=${nowPage}">${dto.title}</a>
+					</td>
 					<td>${dto.nickname}</td>
 					<td>${dto.regDate}</td>
 					<td>${dto.readcount}</td>
