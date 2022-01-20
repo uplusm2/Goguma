@@ -13,9 +13,10 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<section class="community">
-			<div class="title">
-				<h2>커뮤니티</h2>
+		<section class="community content">
+			<div class="button personal">
+				<input type="button" value=수정 class="btn edit"> 
+				<input type="button" value=삭제 class="btn important del">
 			</div>
 			<table class="detail">
 				<tr>
@@ -35,11 +36,9 @@
 
 			</table>
 
-			<div class="button">
+			<div class="button common">
 				<input type="button" value=목록 class="btn list"
-					onclick="location.href='/goguma/community/communityList.do?page=${page}';"> 
-				<input type="button" value=수정 class="btn edit"> 
-				<input type="button" value=삭제 class="btn important del">
+					onclick="location.href='/goguma/community/communityList.do?page=${page}';">
 			</div>
 		</section>
 	</main>
