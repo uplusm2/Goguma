@@ -129,4 +129,17 @@ public class CommunityDAO {
 		}
 		return null;
 	}
+
+	public void addReadCount(String seq) {
+		try {
+			String sql = "update tblCommunity set readcount = readcount + 1 where community_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			pstat.executeUpdate();
+		} catch (Exception e) {
+			System.out.println("CommunityDAO.addReadCount()");
+			e.printStackTrace();
+		}
+	}
 }

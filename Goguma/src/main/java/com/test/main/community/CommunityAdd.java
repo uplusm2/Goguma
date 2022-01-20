@@ -33,7 +33,6 @@ public class CommunityAdd extends HttpServlet {
 		
 		req.setAttribute("dto", dto);
 		req.setAttribute("seq", seq);
-		System.out.println(dto.getTitle());
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityAdd.jsp");
 		dispatcher.forward(req, resp);
 	}

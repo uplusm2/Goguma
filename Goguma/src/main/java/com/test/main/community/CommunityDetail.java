@@ -22,6 +22,7 @@ public class CommunityDetail extends HttpServlet {
 		String seq = req.getParameter("seq");
 		String page = req.getParameter("page");
 		
+		dao.addReadCount(seq);
 		dto = dao.get(seq);
 		refineDate(dto);
 		
