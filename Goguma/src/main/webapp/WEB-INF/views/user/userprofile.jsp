@@ -11,6 +11,13 @@
 		margin-top: 5%;
 		margin-left: 20%;
 	}
+	
+	.content div:nth-child(1) {	
+		margin-bottom: 3%;
+	}
+	.content table{
+		padding-left:1000%;
+	}
 </style>
 </head>
 <body>
@@ -37,8 +44,10 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="button" value="버튼" class="btn important" onclick="/goguma/user/salesReviewList.do">
-							<input type="button" value="버튼" class="btn important" onclick="/goguma/user/purchaseReviewList.do">
+							<input type="button" value="구매 후기" class="btn important" 
+								onclick="location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}'">
+							<input type="button" value="판매 후기" class="btn important" 
+								onclick="location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}'">
 						</td>
 					</tr>
 					<tr>
@@ -46,7 +55,7 @@
 							<div>
 								<span style="color: gold;">★</span> <span style="color: gold;">★</span>
 								<span style="color: gold;">★</span> <span style="color: gold;">★</span>
-								<span style="color: gold;">★</span>
+								<span style="color: gold;">★</span> 
 								<!-- jquery 이횽해서 자식 위치 확인후  색을 지정  -->
 							</div> <span>구매별점</span>
 						</td>

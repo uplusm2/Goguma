@@ -1,12 +1,10 @@
 package com.test.main.user;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-
-import mylibrary.DBUtil;
 
 
 public class UserDAO {
@@ -15,11 +13,30 @@ public class UserDAO {
 	private Statement stat;
 	private PreparedStatement pstat;
 	private ResultSet rs;
+	
+	public static Connection open() {
+        Connection conn = null;
+
+        String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
+        String id = "admin";
+        String pw = "Goguma970928";
+
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            conn = DriverManager.getConnection(url, id, pw);
+            return conn;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 	public UserProfileDTO getUserProfile(String userId) {
+		
+		
 		String sql = "select * from tbluserprofile where id=?";
 		try {
-			conn = DBUtil.open();
+			conn = open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
