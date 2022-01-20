@@ -1,7 +1,7 @@
 /* community */
 .community .table {
     width: 1100px;
-    border: 2px solid #dadada;
+    border: 3px solid #dadada;
 }
 .community .table,
 .community .table th,
@@ -12,23 +12,92 @@
     text-align: center;
     font-weight: 400;
 }
-.community .table th {
-    font-weight: 500;
-}
 .community .table tr {
     height: 40px;
+}
+.community .table th {
+    font-weight: 500;
 }
 .community .table td:nth-child(1){
     color: #757575;
     padding-left: 30px;
     font-size: 16px;
+    width: 80px;
 }
 .community .table td:nth-child(2){
     padding-left: 40px;
     text-align: left;
     width: 700px;
 }
-.pagebar {
+.community .table th:nth-child(4),
+.community .table td:nth-child(5){
+    padding-right: 20px;
+}
+
+
+/* 페이지바 */
+.community .pagebar {
 	text-align: center;
-	margin-top: 20px; 
+	transform: translateY(50px); 
+}
+.community .pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.community .pagebar .pagination a:hover{
+	background: #fff;
+	color: #9B59B6;
+}
+.community .pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+
+
+/* 버튼 */
+.community .button .btn {
+	font-weight: 700;
+	font-size: 16px;
+	padding: 3px;
+	/* background: orange; */
+	border: 0;
+}
+.community .button .btn.add {
+    transform: translateX(1050px) translateY(20px);
+    width: 80px;
+    text-align: center;
+    padding-left: 5px;
+}
+.community .button .btn.add span{
+    color: #fff;
+}
+
+
+/* 검색 */
+.community .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(40px);
+    font-size: 18px;
+}
+.community .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.community .search .text {
+	border-radius: 0;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 30px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+.community .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
 }

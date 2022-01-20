@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.test.jdbc.DBUtil;
+
 
 public class Test {
 
@@ -14,39 +16,20 @@ public class Test {
 	private static Statement stat;
 	private static PreparedStatement pstat;
 	private static ResultSet rs;
-	public static Connection open() {
-		Connection conn = null;
+
+	
+	public static void main(String[] args) throws SQLException {
+
+		conn = DBUtil.open();
+		stat = conn.createStatement();
 		
-//		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
-//		String id = "admin";
-//		String pw = "Goguma970928";
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String id = "team";
-		String pw = "java1234";
+		String sql = "select count(*) from tblUser";
+		rs = stat.executeQuery(sql);
 		
-		
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url, id, pw);
-			return conn;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
+		while (rs.next()) {
+			System.out.println(rs.getString("count(*)"));
+			
 		}
 	}
-	
-//	public static void main(String[] args) throws SQLException {
-//
-//		conn = open();
-//		stat = conn.createStatement();
-//		
-//		String sql = "select count(*) from tblUser";
-//		rs = stat.executeQuery(sql);
-//		
-//		while (rs.next()) {
-//			System.out.println(rs.getString("count(*)"));
-//			
-//		}
-//	}
 
 }
