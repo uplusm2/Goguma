@@ -12,7 +12,7 @@ public class CommunityForm extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityForm.jsp");
 		dispatcher.forward(req, resp);
 	}
