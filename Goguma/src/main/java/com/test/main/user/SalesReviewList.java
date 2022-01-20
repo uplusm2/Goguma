@@ -25,7 +25,7 @@ public class SalesReviewList extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		
 		ArrayList<ReviewDTO> list = dao.getSalesReviewList(userId);
-		System.out.println(list.get(0).toString());
+		req.setAttribute("list", list);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/salesReviewList.jsp");
 		dispatcher.forward(req, resp);

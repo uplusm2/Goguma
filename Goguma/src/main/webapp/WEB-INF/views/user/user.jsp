@@ -30,7 +30,6 @@
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@include file="/WEB-INF/views/user/userSideBar.jsp"%>
 			<section class="content">
-				<h2>${userId} 님의 프로필 입니다.</h2>
 				<iframe class="frame" src="/goguma//user/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
 				</iframe>
 			</section>

@@ -57,6 +57,7 @@
 </head>
 <body>
 	<!-- main.jsp -->
+	<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
 	<div class="grid-container">
 		<div>
 			<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
