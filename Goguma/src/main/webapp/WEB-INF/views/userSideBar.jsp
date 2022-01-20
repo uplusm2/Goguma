@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <style>
@@ -51,8 +52,8 @@
 		<div>
 			Profile<i class="bi bi-arrow-down-circle" style="margin-left:10%"></i>
 		</div>
-		<div style="margin-left: 15%">구매후기</div>
 		<div style="margin-left: 15%">판매후기</div>
+		<div style="margin-left: 15%">구매후기</div>
 		<div>작성글 내역</div>
 	</div>
 	<div class="sidebar_line">
@@ -66,9 +67,6 @@
 		$(".sidebar").children().eq(2).toggle();
 	});
 	$(".sidebar").children().eq(1).click(()=>{
-		location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}';
-	});
-	$(".sidebar").children().eq(2).click(()=>{
-		location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}';
+		
 	});
 </script>
