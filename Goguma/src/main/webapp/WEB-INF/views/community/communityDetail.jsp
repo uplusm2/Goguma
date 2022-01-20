@@ -14,13 +14,15 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
 		<section class="community content">
-			<div class="button personal">
-				<input type="button" value=수정 class="btn edit"> 
-				<input type="button" value=삭제 class="btn important del">
+			<div class="title">
+				<h2>커뮤니티</h2>
 			</div>
+		
 			<table class="detail">
 				<tr>
 					<td colspan="3">${dto.title}</td>
+					<td class="button"><input type="button" value=수정 class="btn edit"></td>
+					<td class="button"><input type="button" value=삭제 class="btn important del"></td>
 				</tr>
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>

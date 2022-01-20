@@ -33,7 +33,8 @@ span {
 
 /* section */
 .title {
-	margin: 10px 70px;
+	margin: 20px 70px;
+	padding-top: 20px
 }
 .title h2 {
 	font-size: 32px;

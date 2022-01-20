@@ -38,7 +38,7 @@
 /* 페이지바 */
 .community .pagebar {
 	text-align: center;
-	transform: translateY(50px); 
+	transform: translateY(20px); 
 }
 .community .pagebar .pagination a{
 	border: 0px;
@@ -63,13 +63,13 @@
 	padding: 3px;
 	width: 60px;
 }
-.community .button .btn.add {
+.community .button .btn.write {
     transform: translateX(1050px) translateY(20px);
     width: 80px;
     text-align: center;
     padding-left: 5px;
 }
-.community .button .btn.add span{
+.community .button .btn.write span{
     color: #fff;
 }
 
@@ -78,7 +78,7 @@
 .community .search {
     width: 400px;
     margin: 0 auto;
-    transform: translateY(40px);
+    transform: translateY(20px);
     font-size: 18px;
 }
 .community .search .text:first-child{
@@ -118,7 +118,10 @@
 .community .detail tr:first-child td {
     padding: 10px 0px 0px 30px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 27px;
+}
+.community .detail tr:first-child td:first-child {
+	width: 700px;
 }
 /* .community .detail tr:first-child td:after {
 	position: absolute;
@@ -168,16 +171,42 @@
     transform: translateX(60px) translateY(20px);
 }
 .community .button .btn.edit {
-    transform: translateX(970px) translateY(60px); 
+    transform: translateX(40px); 
 }
 .community .button .btn.del {
-    transform: translateX(980px) translateY(60px); 
+    transform: translateX(0px); 
 }
 .community .button .btn {
 	outline: 0;
 }
+.community .button.personal {
+	display: inline-block;
+}
 .community .button .btn.edit:hover,
-.community .button .btn.list:hover { 
+.community .button .btn.list:hover,
+.community .button .btn.cancel:hover {
 	color: #9B59B6;
 }
 
+
+/* form */
+.community.form form{
+    width: 1070px;
+    margin: 0 auto;
+}
+.community.form .form-text{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 8px;
+    outline: 0;
+}
+.community.form .form-text:last-child{
+    height: 600px
+}
+.community.form .button .btn.cancel {
+    transform: translateX(970px) translateY(-10px); 
+}
+.community.form .button .btn.add {
+    transform: translateX(980px) translateY(-10px); 
+}

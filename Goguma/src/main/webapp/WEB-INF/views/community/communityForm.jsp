@@ -13,50 +13,22 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<section class="community">
+		<section class="community form">
 			<div class="title">
 				<h2>커뮤니티</h2>
 			</div>
-			
-			<table class="table">
-				<tr>
-					<th colspan="2">제목</th>
-					<th>작성자</th>
-					<th>작성일</th>
-					<th>조회</th>
-				</tr>
-				<c:forEach items="${list}" var="dto">
-				<tr>
-					<td>${dto.seq}</td>
-					<td>
-						<a href="/goguma/community/communityDetail.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
-					</td>
-					<td>${dto.nickname}</td>
-					<td>${dto.regDate}</td>
-					<td>${dto.readcount}</td>
-				</tr>
-				</c:forEach>
-			</table>
-			
-			<div class="button">
-				<button type="button" class="btn important add">
-					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-				</button>
-			</div>
-			
-			<div class="pagebar">${pagebar}</div>
 
-			<div class="search">
-				<form method="GET" action="#!">
-					<select name="column" class="text">
-						<option value="subject">제목</option>
-						<option value="content">내용</option>
-						<option value="writer">작성자</option>
-					</select> 
-					<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
-					<input type="image" src="/goguma/asset/img/search.png" class="search-img">
-				</form>
+			<form method="GET" action="">
+				<input type="text" placeholder="제목을 입력하세요." class="form-text">
+				<textarea placeholder="내용을 입력하세요." class="form-text"></textarea>
+			</form>
+
+			<div class="button">
+				<input type="button" value=취소 class="btn cancel"
+					onclick="location.href='/goguma/community/communityList.do';"> 
+				<input type="button" value=등록 class="btn important add">
 			</div>
+
 		</section>
 	</main>
 	
