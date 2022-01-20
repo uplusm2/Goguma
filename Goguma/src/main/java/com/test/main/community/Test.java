@@ -16,6 +16,7 @@ public class Test {
 	private static Statement stat;
 	private static PreparedStatement pstat;
 	private static ResultSet rs;
+
 	
 	public static void main(String[] args) throws SQLException {
 
