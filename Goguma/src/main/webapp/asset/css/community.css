@@ -37,8 +37,10 @@
 
 /* 페이지바 */
 .community .pagebar {
-	text-align: center;
 	transform: translateY(20px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
 }
 .community .pagebar .pagination a{
 	border: 0px;
@@ -52,6 +54,14 @@
 .community .pagebar .pagination .active a{
 	background: #fff;
 	font-weight: 700;
+	color: #9B59B6;
+}
+.community .pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.community .pagebar .pagination .next a:hover span,
+.community .pagebar .pagination .previous a:hover span {
 	color: #9B59B6;
 }
 
@@ -184,6 +194,7 @@
 }
 .community .button .btn.edit:hover,
 .community .button .btn.list:hover,
+.community .button .btn.check:hover,
 .community .button .btn.cancel:hover {
 	color: #9B59B6;
 }
@@ -225,7 +236,6 @@
 .community.add .add .btn {
     margin: 5px;
     width: 80px;
-    transform: translateY(-5px);
 }
 .community.add .add p {
     font-size: 20px;

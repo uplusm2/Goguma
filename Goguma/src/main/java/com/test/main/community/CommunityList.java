@@ -103,9 +103,9 @@ public class CommunityList extends HttpServlet {
 		pagebar += "<nav><ul class=\"pagination\">";
 
 		if (n == 1) {
-//			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>");
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/community/communityList.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
+			pagebar += String.format("<li class='previous'><a href='/goguma/community/communityList.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
 		}
 
 		while (!(loop > blockSize || n > totalPage)) {
@@ -119,9 +119,9 @@ public class CommunityList extends HttpServlet {
 		}
 
 		if (n > totalPage) {
-//			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>");
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/community/communityList.do?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);
+			pagebar += String.format("<li class='next'><a href='/goguma/community/communityList.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
 		}
 
 		pagebar += "</ul></nav>";
