@@ -29,9 +29,10 @@ public class CommunityAdd extends HttpServlet {
 		
 		setDto();
 		
-		int result = dao.add(dto);
+		String seq = dao.add(dto);
 		
-		req.setAttribute("result", result);
+		req.setAttribute("dto", dto);
+		req.setAttribute("seq", seq);
 		System.out.println(dto.getTitle());
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityAdd.jsp");
 		dispatcher.forward(req, resp);
