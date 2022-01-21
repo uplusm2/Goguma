@@ -53,7 +53,7 @@ public class CommunityDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public double isNew() {
+	public double getIsNew() {
 		return isNew;
 	}
 	public void setIsNew(double isNew) {

@@ -35,9 +35,9 @@ span {
 .title {
 	margin: 20px 70px;
 	padding-top: 20px;
-	cursor: pointer;
 }
 .title h2 {
+	cursor: pointer;
 	font-size: 32px;
 	font-weight: 700;
 }

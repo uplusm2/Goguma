@@ -30,6 +30,9 @@
 					<td>${dto.seq}</td>
 					<td>
 						<a href="/goguma/community/communityDetail.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
+						<c:if test="${dto.isNew <= 1}">
+						<span class="label label-danger">n</span>
+						</c:if>
 					</td>
 					<td>${dto.nickname}</td>
 					<td>${dto.regDate}</td>

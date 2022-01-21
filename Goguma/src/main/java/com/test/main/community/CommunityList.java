@@ -47,7 +47,7 @@ public class CommunityList extends HttpServlet {
 		for (CommunityDTO dto : list) {
 			
 			if (dto.getRegDate().startsWith(strNow)) {
-				dto.setRegDate(dto.getRegDate().substring(11));
+				dto.setRegDate(dto.getRegDate().substring(14));
 			} else {
 				String tmp = dto.getRegDate().substring(0, 10).replace("-", ".");
 				dto.setRegDate(tmp.substring(2));

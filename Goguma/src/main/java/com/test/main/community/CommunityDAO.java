@@ -48,6 +48,7 @@ public class CommunityDAO {
 				dto.setRegDate(rs.getString("regDate"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));
+				dto.setIsNew(rs.getDouble("isnew"));
 				
 				list.add(dto);
 			}
