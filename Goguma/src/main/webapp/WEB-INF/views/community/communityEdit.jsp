@@ -13,20 +13,22 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<section class="community edit">
+		<section class="community add">
 			<div class="title">
 				<h2>커뮤니티</h2>
 			</div>
 			
+			<c:if test="${result == 1}">
 			<div class="add">
 				<p>게시물이 수정되었습니다.</p>
 				<div class="button">
 					<input type="button" value="확인하기" class="btn check"
-						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${dto.seq}';"> 
 					<input type="button" value="목록으로" class="btn list"
 						onclick="location.href='/goguma/community/communityList.do';"> 
 				</div>
 			</div>
+			</c:if>
 
 		</section>
 	</main>

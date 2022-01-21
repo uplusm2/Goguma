@@ -105,7 +105,7 @@ public class CommunityDAO {
 		return null;
 	}
 
-	public String edit(CommunityDTO dto) {
+	public int edit(CommunityDTO dto) {
 		try {
 			String sql = "update tblCommunity set title = ?, content = ?  where community_seq = ?";
 			pstat = conn.prepareStatement(sql);
@@ -114,20 +114,11 @@ public class CommunityDAO {
 			pstat.setString(2, dto.getContent());
 			pstat.setString(3, dto.getSeq());
 			
-			pstat.executeUpdate();
-			
-			sql = "select community_seq from tblCommunity where rownum = 1 order by community_seq desc";
-			pstat = conn.prepareStatement(sql);
-			
-			rs = pstat.executeQuery();
-			
-			if(rs.next()) {
-				return rs.getString("community_seq");
-			}
+			return pstat.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return 0;
 	}
 	
 	public String add(CommunityDTO dto) {

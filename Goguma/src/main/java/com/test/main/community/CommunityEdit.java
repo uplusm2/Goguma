@@ -14,6 +14,7 @@ public class CommunityEdit extends HttpServlet {
 	
 	private String title;
 	private String content;
+	private String seq;
 	
 	{
 		dao = new CommunityDAO();
@@ -26,19 +27,21 @@ public class CommunityEdit extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		title = req.getParameter("title");
 		content = req.getParameter("content");
-		
+		seq = req.getParameter("seq");
 		setDto();
 		
-		String seq = dao.edit(dto);
+		int result = dao.edit(dto);
 		
+		System.out.println(dto.getTitle());
+		System.out.println(result);
 		req.setAttribute("dto", dto);
-		req.setAttribute("seq", seq);
+		req.setAttribute("result", result);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityEdit.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	private void setDto() {
-		dto.setId("user1");
+		dto.setSeq(seq);
 		dto.setTitle(title);
 		dto.setContent(content);
 	}
