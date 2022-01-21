@@ -30,7 +30,9 @@
     width: 700px;
 }
 .community .table td:nth-child(2):hover{
-	color: orange;
+	font-weight: 500;
+/* 	color: orange;
+	text-decoration: underline; */
 }
 .community .table th:nth-child(4),
 .community .table td:nth-child(5){
@@ -119,6 +121,7 @@
     outline: 0;
 }
 .community .search .text {
+	border: 1px solid #eee;
 	border-radius: 0;
     outline: 0;
     float: left;
