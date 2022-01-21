@@ -45,7 +45,7 @@
 
 			<table class="comment">
 				<tr>
-					<td rowspan="2"><img src="img/logo.png" alt=""></td>
+					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
 					<td>고구마</td>
 					<td>20:10</td>
 				</tr>
