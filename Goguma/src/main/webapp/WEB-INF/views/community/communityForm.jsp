@@ -24,8 +24,13 @@
 				
 				<div class="button">
 					<input type="button" value=취소 class="btn cancel"
-						onclick="location.href='/goguma/community/communityList.do';"> 
+						onclick="location.href='/goguma/community/communityList.do';">
+					<c:if test="${empty dto.seq}">
 					<input type="submit" value=등록 class="btn important add">
+					</c:if>
+					<c:if test="${not empty dto.seq}">
+					<input type="submit" value=수정 class="btn important add">
+					</c:if>
 				</div>
 			</form>
 
