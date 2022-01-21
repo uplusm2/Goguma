@@ -30,6 +30,9 @@
 					<td>${dto.seq}</td>
 					<td>
 						<a href="/goguma/community/communityDetail.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
+						<c:if test="${dto.commentCount > 0}">
+						<span class="cnt">[${dto.commentCount}]</span>
+						</c:if>
 						<c:if test="${dto.isNew <= 1}">
 						<span class="orange">N</span>
 						</c:if>

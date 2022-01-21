@@ -49,6 +49,7 @@ public class CommunityDAO {
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));
 				dto.setIsNew(rs.getDouble("isnew"));
+				dto.setCommentCount(rs.getInt("commentCount"));
 				
 				list.add(dto);
 			}

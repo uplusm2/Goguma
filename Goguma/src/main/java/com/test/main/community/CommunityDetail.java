@@ -27,6 +27,7 @@ public class CommunityDetail extends HttpServlet {
 		
 		dao.addReadCount(seq);
 		dto = dao.get(seq);
+		System.out.println(dto.getTitle());
 		commentList = commentDao.list(seq); 
 		refineDate(dto);
 		

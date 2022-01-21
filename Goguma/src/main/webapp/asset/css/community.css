@@ -52,6 +52,10 @@
 	z-index: -1;
 	transform: translateX(-3px) translateY(8px);
 }
+.community .cnt {
+	font-size: 14px;
+	font-weight: 500;
+}
 
 
 /* 페이지바 */

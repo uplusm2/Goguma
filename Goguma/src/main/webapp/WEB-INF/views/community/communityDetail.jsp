@@ -63,8 +63,12 @@
 
 
 			<div class="button common">
-				<input type="button" value=목록 class="btn list"
+				<input type="button" value="목록" class="btn list"
 					onclick="location.href='/goguma/community/communityList.do?page=${page}';">
+				<input type="button" value="이전" class="btn list"
+					onclick="location.href='/goguma/community/communityDetail.do?seq=${dto.seq-1}&page=${page}';">
+				<input type="button" value="다음" class="btn list"
+					onclick="location.href='/goguma/community/communityDetail.do?seq=${dto.seq+1}&page=${page}';">
 			</div>
 		</section>
 	</main>
