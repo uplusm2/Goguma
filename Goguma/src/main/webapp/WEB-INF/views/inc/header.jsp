@@ -26,7 +26,7 @@
 		<ul class="menu">
 			<li><img src="/goguma/asset/img/menu1.png">중고거래</li>
 			<li onclick="location.href='/goguma/community/communityList.do';"><img src="/goguma/asset/img/menu2.png">커뮤니티</li>
-			<li onclick="location.href='/goguma/center/faq.do';"><img src="/goguma/asset/img/menu3.png">고객센터</li>
+			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><img src="/goguma/asset/img/menu3.png">고객센터</li>
 		</ul>
 	</div>
 </header>
