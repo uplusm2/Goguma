@@ -33,7 +33,8 @@ span {
 
 /* section */
 .title {
-	margin: 10px 70px;
+	margin: 20px 70px;
+	padding-top: 20px
 }
 .title h2 {
 	font-size: 32px;
@@ -41,10 +42,11 @@ span {
 }
 section .btn {
 	background: #fff;
-	border: 2px solid #9B59B6;
+	border: 1px solid #757575;
 	color: #9B59B6;
 }
 section .btn.important {
+	border: 1px solid #9B59B6;
 	background: #9B59B6;
 	color: #fff;
 }

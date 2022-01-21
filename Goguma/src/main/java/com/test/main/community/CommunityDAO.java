@@ -57,6 +57,7 @@ public class CommunityDAO {
 		}
 		return null;
 	}
+	
 	public int getTotalCount(HashMap<String, String> map) {
 		try {
 			String where = "";
@@ -90,6 +91,7 @@ public class CommunityDAO {
 				dto.setSeq(rs.getString("community_seq"));
 				dto.setId(rs.getString("id"));
 				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
 				dto.setRegDate(rs.getString("regDate"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));
@@ -97,9 +99,47 @@ public class CommunityDAO {
 				return dto;
 			}
 		} catch (Exception e) {
-			System.out.println("BoardDAO.get()");
+			System.out.println("CommunityDAO.get()");
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public String add(CommunityDTO dto) {
+		try {
+			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, default, default)";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getId());
+			pstat.setString(2, dto.getTitle());
+			pstat.setString(3, dto.getContent());
+			
+			pstat.executeUpdate();
+			
+			sql = "select community_seq from tblCommunity where rownum = 1 order by community_seq desc";
+			pstat = conn.prepareStatement(sql);
+			
+			rs = pstat.executeQuery();
+			
+			if(rs.next()) {
+				return rs.getString("community_seq");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public void addReadCount(String seq) {
+		try {
+			String sql = "update tblCommunity set readcount = readcount + 1 where community_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			pstat.executeUpdate();
+		} catch (Exception e) {
+			System.out.println("CommunityDAO.addReadCount()");
+			e.printStackTrace();
+		}
 	}
 }

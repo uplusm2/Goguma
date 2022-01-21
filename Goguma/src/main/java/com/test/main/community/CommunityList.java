@@ -31,21 +31,31 @@ public class CommunityList extends HttpServlet {
 		setPage(req);
 		list = dao.list(map);
 
+		refineData();
+
+		req.setAttribute("list", list);
+		req.setAttribute("nowPage", nowPage);
+		req.setAttribute("pagebar", getPagebar());
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityList.jsp");
+		dispatcher.forward(req, resp);
+	}
+
+	private void refineData() {
 		String strNow = String.format("%tF", now);
-
 		for (CommunityDTO dto : list) {
-
+			
 			if (dto.getRegDate().startsWith(strNow)) {
 				dto.setRegDate(dto.getRegDate().substring(11));
 			} else {
 				String tmp = dto.getRegDate().substring(0, 10).replace("-", ".");
 				dto.setRegDate(tmp.substring(2));
 			}
-
+			
 			if (dto.getTitle().length() > 20) {
 				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
 			}
-
+			
 			//제목에서 검색 중 > 검색어 강조!!
 //			if (searchmode.equals("y") && column.equals("subject")) {
 //				
@@ -54,13 +64,6 @@ public class CommunityList extends HttpServlet {
 //				dto.setSubject(dto.getSubject().replace(word, "<span style='background-color:yellow;color:tomato;'>" + word + "</span>"));
 //			}
 		}
-
-		req.setAttribute("list", list);
-		req.setAttribute("nowPage", nowPage);
-		req.setAttribute("pagebar", getPagebar());
-
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityList.jsp");
-		dispatcher.forward(req, resp);
 	}
 
 	private void setPage(HttpServletRequest req) {
@@ -100,9 +103,9 @@ public class CommunityList extends HttpServlet {
 		pagebar += "<nav><ul class=\"pagination\">";
 
 		if (n == 1) {
-//			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>");
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/community/communityList.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
+			pagebar += String.format("<li class='previous'><a href='/goguma/community/communityList.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
 		}
 
 		while (!(loop > blockSize || n > totalPage)) {
@@ -116,9 +119,9 @@ public class CommunityList extends HttpServlet {
 		}
 
 		if (n > totalPage) {
-//			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>");
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/community/communityList.do?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);
+			pagebar += String.format("<li class='next'><a href='/goguma/community/communityList.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
 		}
 
 		pagebar += "</ul></nav>";

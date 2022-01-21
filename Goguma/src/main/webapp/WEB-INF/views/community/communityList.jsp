@@ -29,7 +29,7 @@
 				<tr>
 					<td>${dto.seq}</td>
 					<td>
-						<a href="/goguma/community/commuityDetail.do?seq=${dto.seq}&column=${map.column}&word=${map.word}&page=${nowPage}">${dto.title}</a>
+						<a href="/goguma/community/communityDetail.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
 					</td>
 					<td>${dto.nickname}</td>
 					<td>${dto.regDate}</td>
@@ -39,7 +39,8 @@
 			</table>
 			
 			<div class="button">
-				<button type="button" class="btn important add">
+				<button type="button" class="btn important write"
+					onclick="location.href='/goguma/community/communityForm.do';">
 					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 				</button>
 			</div>
