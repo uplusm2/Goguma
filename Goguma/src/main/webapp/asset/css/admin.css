@@ -1,0 +1,64 @@
+/* nav */
+.leftside {
+    padding-top: 3%;
+	padding-bottom: 3%;
+	min-height: 75vh;
+	width: 200px;
+	float: left;
+	border-right:3px solid #9B59B6;
+}
+
+/* 메뉴가 들어가는 공간 */
+.leftside .menu {
+	height: 100%;
+	width: 95%;
+	padding-top: 10%;
+	padding-left: 10%;
+	float: left;
+}
+
+.leftside .menu > ul {
+    margin-left:25px;
+    margin-top:50px;
+}
+
+.leftside .menu ul > li{
+    margin-bottom:10px;
+    cursor: pointer;
+}
+.menu ul li div.mainmenu {
+    color:#444;
+    font-size:16px;
+}
+
+.leftside .menu ul li div.mainmenu:hover {
+    color: orange;
+}
+
+.leftside .menu ul li ul{
+    margin-left:20px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.leftside .menu ul li ul li a{
+    color:#444;
+    font-size:14px;
+}
+
+.leftside .menu ul li ul li a:hover{
+    color: orange;
+}
+
+/* 보라색 라인 */
+/* TODO 선이 자꾸 내려간다.. */
+.sidebar-line { 
+	background-color: #9B59B6;
+	height: 100%;
+	width: 3px;
+	float: left;	
+}
+
+.leftside:after { /* float 처리 */
+	clear: both;
+}

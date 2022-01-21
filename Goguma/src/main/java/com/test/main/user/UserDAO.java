@@ -122,4 +122,37 @@ public class UserDAO {
 		return null;
 	}
 	
+	public UserDTO getLogin(String UserId) {
+		
+		String sql = "SELECT * FROM tbluser u LEFT JOIN tbluserinfo i ON u.id = i.id WHERE u.id=?";
+		try {
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, UserId);
+			rs = pstat.executeQuery();
+			
+			rs.next();
+			UserDTO login = new UserDTO();
+			
+			login.setId(rs.getString("id"));
+			login.setPw(rs.getString("pw"));
+			login.setName(rs.getString("name"));
+			login.setLv(rs.getString("lv"));
+			login.setAddress_seq(rs.getString("address_seq"));
+			login.setAddress(rs.getString("address"));
+			login.setTel(rs.getString("tel"));
+			login.setEmail(rs.getString("email"));
+			login.setBirth(rs.getString("birth"));
+			login.setGender(rs.getString("gender"));
+			login.setSince(rs.getString("since"));
+				
+			return login;
+		}catch(Exception e) {
+			System.out.println("UserDAO > getLogin Method");
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	
 }
