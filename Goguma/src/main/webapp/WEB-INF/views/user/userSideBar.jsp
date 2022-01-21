@@ -21,6 +21,7 @@
 	.sidebar div:nth-child(n+1) { /* 각각의 메뉴 */
 		margin-top: 15%;
 		cursor: pointer;
+		color:#697278;
 	}
 	
 	.sidebar div:nth-child(n+1):hover { /* 각각의 메뉴 호버 */
@@ -52,8 +53,8 @@
 		<div>
 			Profile<i class="bi bi-arrow-down-circle" style="margin-left:10%"></i>
 		</div>
-		<div style="margin-left: 15%">판매후기</div>
 		<div style="margin-left: 15%">구매후기</div>
+		<div style="margin-left: 15%">판매후기</div>
 		<div>작성글 내역</div>
 	</div>
 	<div class="sidebar_line">
@@ -65,8 +66,5 @@
 	$(".sidebar").children().eq(0).click(()=>{
 		$(".sidebar").children().eq(1).toggle();
 		$(".sidebar").children().eq(2).toggle();
-	});
-	$(".sidebar").children().eq(1).click(()=>{
-		
 	});
 </script>

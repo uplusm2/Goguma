@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.test.jdbc.DBUtil;
 
 
 public class UserDAO {
@@ -54,6 +57,68 @@ public class UserDAO {
 			System.out.println("UserDAO > getUserProfile Method");
 			e.printStackTrace();
 		}
+		return null;
+	}
+
+	public ArrayList<ReviewDTO> getPurchaseReviewList(String userId) {
+		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
+		String sql = "select * from vwReceived_buyer_reviews where buyid = ?";
+		try {
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, userId);
+			rs = pstat.executeQuery();
+			
+			while(rs.next()) {
+				ReviewDTO dto = new ReviewDTO();
+				
+				dto.setBuyId(rs.getString("buyid"));
+				dto.setSelId(rs.getString("selId"));
+				dto.setProductcontent(rs.getString("productcontent"));
+				dto.setRegdate(rs.getString("regdate"));
+				dto.setScore(rs.getInt("score"));
+				dto.setReviewcontent(rs.getString("reviewcontent"));
+				
+				list.add(dto);
+			}
+			
+			return list;
+		}catch(Exception e) {
+			System.out.println("UserDAO > getPurchaseReviewList Method");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	public ArrayList<ReviewDTO> getSalesReviewList(String userId) {
+		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
+		String sql = "select * from vwReceived_seller_reviews where selid = ?";
+		try {
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, userId);
+			rs = pstat.executeQuery();
+			
+			while(rs.next()) {
+				ReviewDTO dto = new ReviewDTO();
+				
+				dto.setBuyId(rs.getString("buyid"));
+				dto.setSelId(rs.getString("selId"));
+				dto.setProductcontent(rs.getString("productcontent"));
+				dto.setRegdate(rs.getString("regdate"));
+				dto.setScore(rs.getInt("score"));
+				dto.setReviewcontent(rs.getString("reviewcontent"));
+				
+				list.add(dto);
+			}
+			
+			return list;
+		}catch(Exception e) {
+			System.out.println("UserDAO > getSalesReviewList Method");
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 	
