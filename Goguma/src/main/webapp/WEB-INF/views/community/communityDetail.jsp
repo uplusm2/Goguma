@@ -14,7 +14,7 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
 		<section class="community content">
-			<div class="title">
+			<div class="title" onclick="location.href='/goguma/community/communityList.do';">
 				<h2>커뮤니티</h2>
 			</div>
 		
