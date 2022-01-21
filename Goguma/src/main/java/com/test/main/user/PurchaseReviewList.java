@@ -2,6 +2,7 @@ package com.test.main.user;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -43,6 +44,7 @@ public class PurchaseReviewList extends HttpServlet {
 		int loop = 0;
 		int blockSize = 10;
 		
+		HashMap map = new HashMap();
 		totalPage = dao.getTotalPage(userId);
 		
 
