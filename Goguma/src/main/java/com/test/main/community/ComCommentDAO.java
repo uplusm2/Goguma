@@ -25,27 +25,22 @@ public class ComCommentDAO {
 		}
 	}
 
-	public ArrayList<ComCommentDTO> list(HashMap<String, String> map){
+	public ArrayList<ComCommentDTO> list(String seq){
 		try {
-			String where = "";
-
-//			if (map.get("searchMod").equals("y")) {
-//				where = String.format("where %s like '%%%s%%'"
-//							, map.get("column")
-//							, map.get("word").replace("'","''"));
-//			}
-
-			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity  order by community_seq desc) c ) where rnum between %s and %s", map.get("begin"), map.get("end"));
+			String sql = "select * from vwComComment where community_seq = ? order by comcomment_seq";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
 			rs = stat.executeQuery(sql);
 
 			ArrayList<ComCommentDTO> list = new ArrayList<ComCommentDTO>();
 			
 			while(rs.next()){
 				ComCommentDTO dto = new ComCommentDTO();
-				dto.setSeq(rs.getString("community_seq"));
+				dto.setSeq(rs.getString("comcomment_seq"));
 				dto.setId(rs.getString("id"));
 				dto.setRegDate(rs.getString("regDate"));
-				dto.setCseq(rs.getString("cseq"));
+				dto.setCseq(rs.getString("community_seq"));
 				dto.setNickname(rs.getString("nickname"));
 				dto.setIsNew(rs.getDouble("isnew"));
 				

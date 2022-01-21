@@ -42,17 +42,19 @@
 				</tr>
 
 			</table>
-
+			
+			<c:forEach items="${commentList}" var="cdto">
 			<table class="comment">
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
-					<td>고구마</td>
-					<td>20:10</td>
+					<td>${cdto.nickname}</td>
+					<td>${cdto.regDate}</td>
 				</tr>
 				<tr>
-					<td>넵ㅎㅎ</td>
+					<td>${cdto.content}</td>
 				</tr>
 			</table>
+			</c:forEach>
 			
 			<form method="GET" action="#!" class="comment form">
 				<textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
