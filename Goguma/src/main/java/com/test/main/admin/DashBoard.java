@@ -19,6 +19,7 @@ public class DashBoard extends HttpServlet {
 
 		//user_level != 2 면 접근 제한
 		//TODO 테스트 안 해봄
+		
 		/*
 		HttpSession session = req.getSession();
 		if (!session.getAttribute("level").equals('2')) {
