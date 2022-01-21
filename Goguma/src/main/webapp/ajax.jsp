@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>상대방 프로필</h1>
-	<form action="/goguma/user/user.do" method="get">
-		
-		<input type="text" name="userId">userId
-		<input type="text" name="id">id
-		<button type="submit"></button>
-		
-	</form>
+	<input type="button" class="">
 </body>
 </html>

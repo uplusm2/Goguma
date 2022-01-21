@@ -153,6 +153,20 @@ public class UserDAO {
 		}
 		return null;
 	}
+
+	public int getTotalPage(String userId) {
+		String sql = "select \r\n"
+				+ "    * \r\n"
+				+ "from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = '?' order by regdate) a) \r\n"
+				+ "    where seq <=?";
+		try {
+			conn = open();
+		}catch(Exception e) {
+			System.out.println("UserDAO.getTotalPage");
+			e.printStackTrace();
+		}
+		return 0;
+	}
 	
 	
 }
