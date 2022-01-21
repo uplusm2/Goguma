@@ -17,6 +17,7 @@ public class CommunityList extends HttpServlet {
 	private int pageSize;	
 	private int nowPage;
 
+	
 	{
 		dao = new CommunityDAO();
 		map = new HashMap<String,String>();
