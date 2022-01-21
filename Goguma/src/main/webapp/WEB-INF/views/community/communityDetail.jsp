@@ -48,10 +48,10 @@
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
 					<td>${cdto.nickname}</td>
-					<td>${cdto.regDate}</td>
+					<td>&nbsp;&nbsp;${cdto.regDate}</td>
 				</tr>
 				<tr>
-					<td>${cdto.content}</td>
+					<td colspan="2">${cdto.content}</td>
 				</tr>
 			</table>
 			</c:forEach>
