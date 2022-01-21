@@ -11,7 +11,7 @@
 		height : 100px;
 		background-color : #9B59B6;
 	}
-	.content{
+	.center-content{
 		position : relative;
 		width : 1000px;
 		margin-left : auto;
@@ -23,6 +23,10 @@
 	.answer{
 		display : none;
 	}
+	.pagebar{
+		text-align : center;
+	}
+
 </style>
 </head>
 <body>
@@ -31,12 +35,20 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<%@include file="/WEB-INF/views/center/title.jsp" %>
 		<div class = "subcategory">
-			
+		<form method="GET" action="/goguma/center/faq.do">
+			<ul class = "menu">
+				<li onclick = "location.href='/goguma/center/faq.do?search=1&page=1'">계정/인증</li>
+				<li onclick = "location.href='/goguma/center/faq.do?search=2&page=1'">구매/판매</li>
+				<li onclick = "location.href='/goguma/center/faq.do?search=3&page=1'">운영정책</li>
+				<li onclick = "location.href='/goguma/center/faq.do?search=4&page=1'">서비스이용</li>
+				<li onclick = "location.href='/goguma/center/faq.do?search=5&page=1'">기타</li>
+			</ul>
+		</form>
 		</div>
-		<section class="content">
+		<section class="center-content">
 		<table class="table table-bordered list">
 			<c:forEach items="${list}" var="dto">
-				<tr class = "question" id = "q_${dto.seq}" onClick = "showcontent(this.id)">
+				<tr id = "q_${dto.seq}" onClick = "showid(this.id)" class = "question">
 					<td>Q . ${dto.title}</td>
 				</tr>
 				<tr class = "answer" id = "a_${dto.seq}" >
@@ -49,6 +61,9 @@
 			</tr>
 			</c:if>
 		</table>
+		
+		<div class="pagebar">${pagebar}</div>
+			
 		<div class="btns">
 
 			<c:if test="${not empty id}">
@@ -59,15 +74,16 @@
 			
 		</div>
 		</section>
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
 	
 	<script>
-		function showcontent(id){
+/* 		function showcontent(id){
+			alert(id);
 			int check = 0;
 			var el = document.getElementByClass(obj);
 			id = id.replace("q","a");
-			alert("id");
+			
 			
 			if(check == 1){
 				$(.answer).css({
@@ -80,7 +96,12 @@
 			})
 			
 			
+		} */
+		
+		function showid(id){
+			alert(id);
 		}
+		
 	</script>
 </body>
 </html>
