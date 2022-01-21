@@ -19,8 +19,8 @@
 			</div>
 
 			<form method="POST" action="/goguma/community/communityAdd.do">
-				<input type="text" name="title" placeholder="제목을 입력하세요." class="form-text" required>
-				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required></textarea>
+				<input type="text" name="title" value="${dto.title}" placeholder="제목을 입력하세요." class="form-text" required>
+				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required>${dto.content}</textarea>
 				
 				<div class="button">
 					<input type="button" value=취소 class="btn cancel"
@@ -28,6 +28,7 @@
 					<input type="submit" value=등록 class="btn important add">
 				</div>
 			</form>
+
 
 		</section>
 	</main>

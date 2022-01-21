@@ -21,8 +21,13 @@
 			<table class="detail">
 				<tr>
 					<td colspan="3">${dto.title}</td>
-					<td class="button"><input type="button" value=수정 class="btn edit"></td>
-					<td class="button"><input type="button" value=삭제 class="btn important del"></td>
+					<td class="button">
+						<input type="button" value=수정 class="btn edit"
+							onclick="location.href='/goguma/community/communityForm.do?seq=${dto.seq}';">
+					</td>
+					<td class="button">
+						<input type="button" value=삭제 class="btn important del">
+					</td>
 				</tr>
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
