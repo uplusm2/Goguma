@@ -43,6 +43,23 @@
 
 			</table>
 
+			<table class="comment">
+				<tr>
+					<td rowspan="2"><img src="img/logo.png" alt=""></td>
+					<td>고구마</td>
+					<td>20:10</td>
+				</tr>
+				<tr>
+					<td>넵ㅎㅎ</td>
+				</tr>
+			</table>
+			
+			<form method="GET" action="#!" class="comment form">
+				<textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
+				<input type="submit" value="등록" class="btn important">
+			</form>
+
+
 			<div class="button common">
 				<input type="button" value=목록 class="btn list"
 					onclick="location.href='/goguma/community/communityList.do?page=${page}';">

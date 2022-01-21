@@ -24,9 +24,9 @@
 			</c:if>
 		</ul>
 		<ul class="menu">
-			<li><img src="/goguma/asset/img/menu1.png">중고거래</li>
-			<li onclick="location.href='/goguma/community/communityList.do';"><img src="/goguma/asset/img/menu2.png">커뮤니티</li>
-			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><img src="/goguma/asset/img/menu3.png">고객센터</li>
+			<li><p><img src="/goguma/asset/img/menu1.png">중고거래</p></li>
+			<li onclick="location.href='/goguma/community/communityList.do';"><p><img src="/goguma/asset/img/menu2.png">커뮤니티</p></li>
+			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><p><img src="/goguma/asset/img/menu3.png">고객센터</p></li>
 		</ul>
 	</div>
 </header>

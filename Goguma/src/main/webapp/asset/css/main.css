@@ -143,7 +143,29 @@ header {
     cursor: pointer;
     float: left;
     font-weight: 500;
+	transition: all 0.1s;
 }
+/* .inner-header .menu li:nth-child(1) p:after{
+	position: absolute;
+	transform: translateX(-96px);
+	content: '';
+	width: 24px;
+	height: 25px;
+	background: url('/goguma/asset/img/menu1-hover.png') center/cover;
+	opacity: 0;
+	z-index: 2;
+}
+.inner-header .menu li:hover p:after{
+	transition: all 0.1s;
+	opacity: 1;
+}
+.inner-header .menu li:hover img{
+	opacity: 0;
+}
+.inner-header .menu li:hover {
+	color: orange;
+	transition: all 0.1s;
+} */
 .inner-header .menu li:before{
     content: '';
     position: absolute;
