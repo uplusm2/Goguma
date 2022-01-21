@@ -105,6 +105,31 @@ public class CommunityDAO {
 		return null;
 	}
 
+	public String edit(CommunityDTO dto) {
+		try {
+			String sql = "update tblCommunity set title = ?, content = ?  where community_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getTitle());
+			pstat.setString(2, dto.getContent());
+			pstat.setString(3, dto.getSeq());
+			
+			pstat.executeUpdate();
+			
+			sql = "select community_seq from tblCommunity where rownum = 1 order by community_seq desc";
+			pstat = conn.prepareStatement(sql);
+			
+			rs = pstat.executeQuery();
+			
+			if(rs.next()) {
+				return rs.getString("community_seq");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public String add(CommunityDTO dto) {
 		try {
 			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, default, default)";
