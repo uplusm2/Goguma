@@ -86,5 +86,33 @@ public class MessageDAO {
 		}
 		return null;
 	}
+
+	public MessageDTO getInDetail(String seq) {
+		try {
+			String sql = "select * from vwMessage where message_seq = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				MessageDTO dto = new MessageDTO();
+				dto.setSenderId(rs.getString("sender_id"));
+				dto.setReceiverId(rs.getString("receiver_id"));
+				dto.setSendTime(rs.getString("sendtime"));
+				dto.setIsCheck(rs.getString("is_check"));
+				dto.setSenderNickname(rs.getString("sender_nickname"));
+				dto.setReceiverNickname(rs.getString("receiver_nickname"));
+				dto.setMessageSeq(rs.getString("message_seq"));
+				
+				return dto;
+			}
+		} catch (Exception e) {
+			System.out.println("MessageDAO.getInDetail()");
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 }
