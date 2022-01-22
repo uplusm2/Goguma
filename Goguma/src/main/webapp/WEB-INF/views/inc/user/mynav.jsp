@@ -48,5 +48,20 @@
 		$(".mainmenu2").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
 		});
+		$(".mainmenu3").click(()=>{
+			$(".mainmenu1").next().slideUp(200);
+		});
+		$(".mainmenu4").click(()=>{
+			$(".mainmenu1").next().slideUp(200);
+		});
+		$(".mainmenu5").click(()=>{
+			$(".mainmenu1").next().slideUp(200);
+		});
+		$(".mainmenu6").click(()=>{
+			$(".mainmenu1").next().slideUp(200);
+		});
+		$(".mainmenu7").click(()=>{
+			$(".mainmenu1").next().slideUp(200);
+		});
 	});
 </script>

@@ -12,7 +12,6 @@
 	    background: #9B59B6;
 	    color: #fff;
 	}
-	div{margin:1px solid black;}
 	.grid-container{
 		margin-top:5%;
 		display:grid;

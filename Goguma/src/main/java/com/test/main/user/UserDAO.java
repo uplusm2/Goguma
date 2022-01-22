@@ -189,6 +189,19 @@ public class UserDAO {
 		return 0;
 		
 	}
+
+	public UserDTO getUserData(String id) {
+		String sql = "select * from tbluserinfo where id = 'user1'";
+		try {
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			
+		}catch(Exception e) {
+			System.out.println("UserDAO.getUserData");
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	
 }

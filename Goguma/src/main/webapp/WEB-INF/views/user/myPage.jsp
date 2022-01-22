@@ -48,6 +48,12 @@
 		$(".sub").children().eq(1).click(()=>{
 			$(".frame").attr("src","/goguma/user/purchaseReviewList.do?userId=${userId}");
 		});
+		$(".mainmenu2").click(()=>{
+			$(".frame").attr("src","/goguma/user/postlist.do?userid=${userId}"); // 나중에 세션으로 사용할것
+		});
+		$(".mainmenu3").click(()=>{
+			$(".frame").attr("src","/goguma/user/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것
+		});
 	</script>
 </body>
 </html>
