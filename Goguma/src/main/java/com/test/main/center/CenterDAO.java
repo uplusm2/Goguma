@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
-import com.test.test.DBUtil2;
 
 public class CenterDAO {
 
