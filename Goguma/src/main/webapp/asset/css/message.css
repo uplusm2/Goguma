@@ -1,20 +1,19 @@
-
-
 /* nav */
 .left-side {
-    padding-top: 30px;
+    padding-top: 20px;
 	padding-bottom: 3%;
 	min-height: 75vh;
-    margin-top: 50px;
 	width: 200px;
 	float: left;
-	border-right:3px solid #9B59B6;
+	border-right: 3px solid #9B59B6;
+	transform: translateY(-5px);
+	margin-right: 50px;
 }
 .left-side .menu {
 	height: 100%;
 	width: 95%;
 	padding-left: 10%;
-	float: left;
+	/* float: left; */
 }
 
 .left-side .menu > ul {
@@ -53,7 +52,7 @@
 
 /* section */
 .message-in {
-	position: relative;
-	width: 1000px;
+	/* position: relative; */
+	width: 1300px;
 	left: 30px;
 }
