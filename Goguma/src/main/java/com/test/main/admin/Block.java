@@ -45,9 +45,7 @@ public class Block extends HttpServlet {
 		dto.setId(id);
 		dto.setName(name);
 		
-		
-		
-		
+		req.setAttribute("dto", dto);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/block.jsp");
 		dispatcher.forward(req, resp);

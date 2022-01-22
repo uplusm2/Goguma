@@ -23,11 +23,11 @@
 					<table class="table table-bordered">
 						<tr>
 							<th>차단할 회원</th>
-							<td>${name}</td>
+							<td>${dto.name}</td>
 						</tr>
 						<tr>
 							<th>차단할 아이디</th>
-							<td>${id}</td>
+							<td>${dto.id}</td>
 						</tr>
 						<tr>
 							<th>차단 사유</th>
