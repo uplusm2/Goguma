@@ -11,6 +11,8 @@ public class CommunityDTO {
 	private String nickname;
 	private double isNew;
 	
+	private int commentCount;
+	
 	public String getSeq() {
 		return seq;
 	}
@@ -53,10 +55,16 @@ public class CommunityDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public double isNew() {
+	public double getIsNew() {
 		return isNew;
 	}
 	public void setIsNew(double isNew) {
 		this.isNew = isNew;
+	}
+	public int getCommentCount() {
+		return commentCount;
+	}
+	public void setCommentCount(int commentCount) {
+		this.commentCount = commentCount;
 	}
 }

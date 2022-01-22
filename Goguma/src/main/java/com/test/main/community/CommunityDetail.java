@@ -11,9 +11,12 @@ import javax.servlet.http.*;
 public class CommunityDetail extends HttpServlet {
 	private CommunityDAO dao;
 	private CommunityDTO dto;
+	private ComCommentDAO commentDao;
+	private ArrayList<ComCommentDTO> commentList;
 	
 	{
 		dao = new CommunityDAO();
+		commentDao = new ComCommentDAO();
 	}
 
 	@Override
@@ -24,11 +27,12 @@ public class CommunityDetail extends HttpServlet {
 		
 		dao.addReadCount(seq);
 		dto = dao.get(seq);
+		commentList = commentDao.list(seq); 
 		refineDate(dto);
 		
 		req.setAttribute("dto", dto);
+		req.setAttribute("commentList", commentList);
 		req.setAttribute("page", page);
-		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityDetail.jsp");
 		dispatcher.forward(req, resp);
 	}

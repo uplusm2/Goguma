@@ -18,7 +18,7 @@ public class CommunityDAO {
 	
 	public CommunityDAO() {
 		try {
-			conn = DBUtil.open();
+			conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -48,6 +48,8 @@ public class CommunityDAO {
 				dto.setRegDate(rs.getString("regDate"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));
+				dto.setIsNew(rs.getDouble("isnew"));
+				dto.setCommentCount(rs.getInt("commentCount"));
 				
 				list.add(dto);
 			}
@@ -105,9 +107,25 @@ public class CommunityDAO {
 		return null;
 	}
 
+	public int edit(CommunityDTO dto) {
+		try {
+			String sql = "update tblCommunity set title = ?, content = ?  where community_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getTitle());
+			pstat.setString(2, dto.getContent());
+			pstat.setString(3, dto.getSeq());
+			
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
 	public String add(CommunityDTO dto) {
 		try {
-			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, default, default)";
+			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, sysdate + 0.375, default)";
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, dto.getId());

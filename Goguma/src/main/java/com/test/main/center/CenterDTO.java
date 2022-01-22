@@ -1,5 +1,7 @@
 package com.test.main.center;
 
+import java.util.ArrayList;
+
 public class CenterDTO {
 	
 	private String seq;
@@ -7,8 +9,9 @@ public class CenterDTO {
 	private String title;
 	private String content;
 	private String regdate;
+	private String type;
 	private int readcount;
-	
+	private ArrayList<String> img;
 	
 	
 	public String getRegdate() {
@@ -47,6 +50,19 @@ public class CenterDTO {
 	public void setQuestionseq(String questionseq) {
 		this.questionseq = questionseq;
 	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public ArrayList<String> getImg() {
+		return img;
+	}
+	public void setImg(ArrayList<String> img) {
+		this.img = img;
+	}
+	
 	
 	
 	

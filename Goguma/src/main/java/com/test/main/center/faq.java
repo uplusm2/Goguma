@@ -49,7 +49,7 @@ public class faq extends HttpServlet {
 		
 		//페이지바
 		
-		totalCount = dao.getTotalCount(map);
+		totalCount = dao.getTotalCount(search);
 		System.out.println(totalCount);
 		
 		

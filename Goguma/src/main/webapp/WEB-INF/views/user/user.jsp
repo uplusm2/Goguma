@@ -1,11 +1,13 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
+<!-- window.top.location.href 아이프레임에서 부모창 변경시 -->
 <style>
 	.content {
 		margin-top: 5%;
@@ -28,22 +30,22 @@
 		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
 		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
-			<%@include file="/WEB-INF/views/user/userSideBar.jsp"%>
+			<%@ include file="/WEB-INF/views/inc/user/usernav.jsp"%>
 			<section class="content">
-				<iframe class="frame" src="/goguma//user/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
+				<iframe class="frame" src="/goguma/user/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
 				</iframe>
 			</section>
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
 		</main>
 	</div>
 	<script>
-		$(".sidebar").children().eq(0).click(()=>{
-			$(".frame").attr("src","/goguma//user/userprofile.do?userId=${userId}");
+		$(".mainmenu1").click(()=>{
+			$(".frame").attr("src","/goguma/user/userprofile.do?userId=${userId}");
 		});
-		$(".sidebar").children().eq(1).click(()=>{
+		$(".sub").children().eq(0).click(()=>{
 			$(".frame").attr("src","/goguma/user/salesReviewList.do?userId=${userId}");
 		});
-		$(".sidebar").children().eq(2).click(()=>{
+		$(".sub").children().eq(1).click(()=>{
 			$(".frame").attr("src","/goguma/user/purchaseReviewList.do?userId=${userId}");
 		});
 	</script>

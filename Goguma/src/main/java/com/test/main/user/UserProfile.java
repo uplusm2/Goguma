@@ -19,6 +19,8 @@ public class UserProfile extends HttpServlet {
 		
 		String userId = req.getParameter("userId");
 		
+		if(req.getParameter("id")!=null) userId = req.getParameter("id");
+		
 		UserProfileDTO userProfileData = dao.getUserProfile(userId);
 		
 		req.setAttribute("userProfileData", userProfileData);
