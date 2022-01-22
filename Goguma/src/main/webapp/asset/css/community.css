@@ -1,4 +1,4 @@
-/* community */
+/* community 목록 */
 .community .table {
     width: 1100px;
     border: 3px solid #dadada;
@@ -145,7 +145,7 @@
 }
 
 
-/* detail */
+/* 글 상세보기 */
 .community .detail {
 	margin-top: 300px;
     width: 1100px;
@@ -209,7 +209,7 @@
 }
 
 
-/* detail 버튼 */
+/* 글 상세보기 버튼 */
 .community .button.common .btn.list {
     transform: translateX(60px) translateY(20px);
 }
@@ -277,7 +277,7 @@
 }
 
 
-/* comment form */
+/* 댓글 작성 폼 */
 .community .comment.form {
     border-bottom: 3px solid #dadada;
     width: 1100px;
@@ -302,7 +302,7 @@
 }
 
 
-/* form */
+/* 글 작성 폼 */
 .community.form form{
     width: 1070px;
     margin: 0 auto;
@@ -325,7 +325,7 @@
 }
 
 
-/* add */
+/* 작성 완료 */
 .community.add .add {
     width: 1100px;
     height: 300px;
