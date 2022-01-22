@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,11 +9,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
-import com.test.main.profile.ReviewDTO;
-import com.test.main.profile.UserProfileDTO;
 
 
-public class UserDAO {
+public class ProfileDAO {
 	
 	private Connection conn;
 	private Statement stat;
@@ -42,7 +40,7 @@ public class UserDAO {
 		
 		String sql = "select * from tbluserprofile where id=?";
 		try {
-			conn = open();
+			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -67,7 +65,7 @@ public class UserDAO {
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
 		String sql = "select * from vwReceived_buyer_reviews where buyid = ?";
 		try {
-			conn = open();
+			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -98,7 +96,7 @@ public class UserDAO {
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
 		String sql = "select * from vwReceived_seller_reviews where selid = ?";
 		try {
-			conn = open();
+			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -125,42 +123,11 @@ public class UserDAO {
 		return null;
 	}
 	
-	public UserDTO getLogin(String UserId) {
-		
-		String sql = "SELECT * FROM tbluser u LEFT JOIN tbluserinfo i ON u.id = i.id WHERE u.id=?";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, UserId);
-			rs = pstat.executeQuery();
-			
-			rs.next();
-			UserDTO login = new UserDTO();
-			
-			login.setId(rs.getString("id"));
-			login.setPw(rs.getString("pw"));
-			login.setName(rs.getString("name"));
-			login.setLv(rs.getString("lv"));
-			login.setAddress_seq(rs.getString("address_seq"));
-			login.setAddress(rs.getString("address"));
-			login.setTel(rs.getString("tel"));
-			login.setEmail(rs.getString("email"));
-			login.setBirth(rs.getString("birth"));
-			login.setGender(rs.getString("gender"));
-			login.setSince(rs.getString("since"));
-				
-			return login;
-		}catch(Exception e) {
-			System.out.println("UserDAO > getLogin Method");
-			e.printStackTrace();
-		}
-		return null;
-	}
 
 	public int getTotalPage(String userId) {
 		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
 		try {
-			conn = open();
+			conn = DBUtil.open();
 			rs = conn.prepareStatement(sql).executeQuery();
 			rs.next();
 			return rs.getInt("cnt");
@@ -176,7 +143,7 @@ public class UserDAO {
 		String sql = "update tbluserprofile set intro = ? , nickname =? , path = 'default image.jpg' where id =?";
 		
 		try {
-			conn = open();
+			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, map.get("intro"));
@@ -191,19 +158,5 @@ public class UserDAO {
 		return 0;
 		
 	}
-
-	public UserDTO getUserData(String id) {
-		String sql = "select * from tbluserinfo where id = 'user1'";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			
-		}catch(Exception e) {
-			System.out.println("UserDAO.getUserData");
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
 	
 }

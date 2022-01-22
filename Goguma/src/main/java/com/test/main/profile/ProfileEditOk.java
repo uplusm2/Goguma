@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,19 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.test.main.user.UserDAO;
 
-@WebServlet("/user/profileeditok.do")
+@WebServlet("/profile/profileeditok.do")
 public class ProfileEditOk extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		
-		UserDAO dao  = new UserDAO();
-		
-		
-		
-		
+		ProfileDAO dao  = new ProfileDAO();
+
 		
 		 try {
 	         
@@ -69,7 +67,7 @@ public class ProfileEditOk extends HttpServlet {
 	         System.out.println("FileTestOk.doPost()");
 	         e.printStackTrace();
 	      }
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userprofile.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/userprofile.jsp");
 		dispatcher.forward(req, resp);
 	}
 

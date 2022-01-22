@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/user/user.do")
+@WebServlet("/profile/user.do")
 public class User extends HttpServlet {
 
 	@Override
@@ -35,10 +35,10 @@ public class User extends HttpServlet {
 		if(userId==null) userId="";
 		
 		if(id.equals(userId) || (!id.equals("") && userId.equals(""))) { // 본인
-			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/myPage.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/myPage.jsp");
 			dispatcher.forward(req, resp);
 		}else {
-			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/user.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/user.jsp");
 			dispatcher.forward(req, resp);			
 		}
 		

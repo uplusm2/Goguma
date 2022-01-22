@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/user/purchaseReviewList.do")
+import com.test.main.user.UserDAO;
+
+@WebServlet("/profile/purchaseReviewList.do")
 public class PurchaseReviewList extends HttpServlet {
 
 	@Override
@@ -23,7 +25,7 @@ public class PurchaseReviewList extends HttpServlet {
 		
 		String userId = req.getParameter("userId");
 		
-		UserDAO dao = new UserDAO();
+		ProfileDAO dao = new ProfileDAO();
 		
 		ArrayList<ReviewDTO> list = dao.getPurchaseReviewList(userId);
 		req.setAttribute("list", list);
@@ -48,7 +50,7 @@ public class PurchaseReviewList extends HttpServlet {
 		totalPage = dao.getTotalPage(userId);
 		
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/purchaseReviewList.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/purchaseReviewList.jsp");
 		dispatcher.forward(req, resp);
 	}
 }

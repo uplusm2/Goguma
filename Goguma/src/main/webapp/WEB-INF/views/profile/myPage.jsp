@@ -32,7 +32,7 @@
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
-				<iframe class="frame" src="/goguma/user/userprofile.do?userId=${userId}&id=${id}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
+				<iframe class="frame" src="/goguma/profile/userprofile.do?userId=${userId}&id=${id}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
 				</iframe>
 			</section>
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
@@ -40,19 +40,19 @@
 	</div>
 	<script>
 		$(".mainmenu1").click(()=>{
-			$(".frame").attr("src","/goguma/user/userprofile.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/userprofile.do?userId=${userId}");
 		});
 		$(".sub").children().eq(0).click(()=>{
-			$(".frame").attr("src","/goguma/user/salesReviewList.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/salesReviewList.do?userId=${userId}");
 		});
 		$(".sub").children().eq(1).click(()=>{
-			$(".frame").attr("src","/goguma/user/purchaseReviewList.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}");
 		});
 		$(".mainmenu2").click(()=>{
-			$(".frame").attr("src","/goguma/user/postlist.do?userid=${userId}"); // 나중에 세션으로 사용할것
+			$(".frame").attr("src","/goguma/profile/postlist.do?userid=${userId}"); // 나중에 세션으로 사용할것
 		});
 		$(".mainmenu3").click(()=>{
-			$(".frame").attr("src","/goguma/user/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것
+			$(".frame").attr("src","/goguma/profile/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것
 		});
 	</script>
 </body>
