@@ -121,14 +121,21 @@
     outline: 0;
 }
 .community .search .text {
-	border: 1px solid #eee;
-	border-radius: 0;
+	border: 0px solid #757575;
+	/* border-bottom: 1px solid #757575; */
+	border-radius: 5px;
     outline: 0;
     float: left;
     width: 270px;
-    height: 30px;
+    height: 35px;
     margin-left: 10px;
-    padding-left: 5px;
+    background: #E8F0FE;
+    text-align: center;
+    padding-right: 5px;
+}
+.community .search input.text {
+    padding-left: 15px;
+    text-align: left;
 }
 .community .search .search-img {
     width: 25px;

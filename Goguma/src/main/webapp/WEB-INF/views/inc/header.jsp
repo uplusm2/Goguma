@@ -12,12 +12,12 @@
 			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
 		</form>
 		<ul class="menu-option">
-			<c:if test="${empty id}">
+			<c:if test="${not empty id}">
 			<li>로그인</li>
 			<li>회원가입</li>
 			</c:if>
-			<c:if test="${not empty id}">
-			<li><img src="/goguma/asset/img/message.png"></li>
+			<c:if test="${empty id}">
+			<li onclick="location.href='/goguma/message/messageList.do';"><img src="/goguma/asset/img/message.png"></li>
 			<li>고구마님</li>
 			<!-- <li>${dto.nickname}님</li> -->
 			<li>로그아웃</li>
