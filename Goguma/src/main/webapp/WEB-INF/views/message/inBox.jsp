@@ -12,7 +12,18 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		
+		<nav class="left-side">
+			<div class="menu">
+				<ul>
+					<li><span class="glyphicon glyphicon-envelope message"></span>
+						<span class="glyphicon glyphicon-arrow-left arrow"></span> 받은 메시지
+					</li>
+					<li><span class="glyphicon glyphicon-envelope message"></span>
+						<span class="glyphicon glyphicon-arrow-right arrow"></span> 보낸 메시지
+					</li>
+				</ul>
+			</div>
+		</nav>
 		<section class="message-in">
 			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
 			
