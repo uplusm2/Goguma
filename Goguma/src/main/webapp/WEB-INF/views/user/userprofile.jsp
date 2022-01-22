@@ -12,6 +12,7 @@
 	    background: #9B59B6;
 	    color: #fff;
 	}
+	div{margin:1px solid black;}
 	.grid-container{
 		margin-top:5%;
 		display:grid;
@@ -55,6 +56,12 @@
 	.grid-container div:nth-child(7) {
 		margin-left:15%;
 		margin-top : 5%;
+		text-align: center;
+		
+	}
+	.grid-container div:nth-child(8) {
+		margin-left:20%;
+		margin-top : 50%;
 		text-align: center;
 		
 	}
@@ -102,6 +109,10 @@
 				<span style="color: #7777;">★</span> <span style="color: #7777;">★</span>
 				<span style="color: #7777;">★</span>
 				<div>판매점수</div>
+			</div>
+			<div>
+				<input type="button" value="정보 수정" class="btn important" 
+					onclick="location.href='/goguma/user/profileedit.do?id=${userProfileData.id}'">
 			</div>
 		</div>
 	<script>

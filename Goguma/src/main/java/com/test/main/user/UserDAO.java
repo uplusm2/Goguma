@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
 
@@ -155,17 +156,38 @@ public class UserDAO {
 	}
 
 	public int getTotalPage(String userId) {
-		String sql = "select \r\n"
-				+ "    * \r\n"
-				+ "from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = '?' order by regdate) a) \r\n"
-				+ "    where seq <=?";
+		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
 		try {
 			conn = open();
+			rs = conn.prepareStatement(sql).executeQuery();
+			rs.next();
+			return rs.getInt("cnt");
 		}catch(Exception e) {
 			System.out.println("UserDAO.getTotalPage");
 			e.printStackTrace();
 		}
+		return -1;
+	}
+
+	public int setProfile( HashMap<String,String> map) {
+		
+		String sql = "update tbluserprofile set intro = ? , nickname =? , path = 'default image.jpg' where id =?";
+		
+		try {
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, map.get("intro"));
+			pstat.setString(2, map.get("nickName"));
+			pstat.setString(3, map.get("id"));
+			
+			return pstat.executeUpdate();
+		}catch(Exception e) {
+			System.out.println("UserDAO.setProfile");
+			e.printStackTrace();
+		}
 		return 0;
+		
 	}
 	
 	

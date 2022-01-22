@@ -20,17 +20,29 @@ public class User extends HttpServlet {
 		req.setAttribute("userId", userId);
 		
 		// 로그인시 테스트용
-		HttpSession session = req.getSession();
-		req.getSession().setAttribute("id", req.getParameter("id"));
-		session.setMaxInactiveInterval(60*60);
-		Boolean check = false;
-		check = session.getAttribute("id") == req.getParameter(userId);
-		req.setAttribute("check", check);
+		String id;
+		try {
+			HttpSession session = req.getSession();
+			session.setAttribute("id", req.getParameter("id"));
+			session.setMaxInactiveInterval(60*60);
+			id = (String) session.getAttribute("id");
+		}catch(NullPointerException e) {
+			id = "";
+		}
 		// 로그인시 테스트용
 		
+		if(id==null) id="";
+		if(userId==null) userId="";
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/user.jsp");
-		dispatcher.forward(req, resp);
+		if(id.equals(userId) || (!id.equals("") && userId.equals(""))) { // 본인
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/myPage.jsp");
+			dispatcher.forward(req, resp);
+		}else {
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/user.jsp");
+			dispatcher.forward(req, resp);			
+		}
+		
+		
 	}
 
 }

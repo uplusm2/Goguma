@@ -36,7 +36,7 @@ public class PurchaseReviewList extends HttpServlet {
 		//페이징 ajax를 이용할꺼면 request를 이용해서 같은 페이지에서 도달시 dispatcher를 제외해 줘야됨.
 		int nowPage = 0;		//현재 페이지 번호
 		int totalCount = 0;
-		int pageSize = 10;		//한페이지당 출력할 게시물 수
+		int pageSize = 5;		//한페이지당 출력할 게시물 수
 		int totalPage = 0;
 		int begin = 0;			//where 시작 위치
 		int end = 0;			//where 끝 위치
@@ -44,7 +44,7 @@ public class PurchaseReviewList extends HttpServlet {
 		int loop = 0;
 		int blockSize = 10;
 		
-		HashMap map = new HashMap();
+		HashMap<String,Integer> map = new HashMap<String,Integer>();
 		totalPage = dao.getTotalPage(userId);
 		
 
