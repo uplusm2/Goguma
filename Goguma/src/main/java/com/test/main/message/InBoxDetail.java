@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.test.main.community.CommunityDTO;
 
 @WebServlet("/message/inBox.do")
-public class InBox extends HttpServlet {
+public class InBoxDetail extends HttpServlet {
 	private MessageDAO dao;
 	private ArrayList<MessageDTO> list;
 	private Calendar now;

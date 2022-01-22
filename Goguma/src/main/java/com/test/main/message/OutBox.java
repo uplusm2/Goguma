@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.test.main.community.CommunityDTO;
 
-@WebServlet("/message/inBox.do")
-public class InBox extends HttpServlet {
+@WebServlet("/message/outBox.do")
+public class OutBox extends HttpServlet {
 	private MessageDAO dao;
 	private ArrayList<MessageDTO> list;
 	private Calendar now;
@@ -29,12 +29,12 @@ public class InBox extends HttpServlet {
 		
 		String id = req.getParameter("id");
 		id = "user1";
-		list = dao.listIn(id);
+		list = dao.listOut(id);
 		refineData(list);
 		
 		req.setAttribute("list", list);
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBox.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/outBox.jsp");
 		dispatcher.forward(req, resp);
 	}
 	

@@ -7,7 +7,13 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <style>
+	.btn.important{
+		border: 1px solid #9B59B6;
+	    background: #9B59B6;
+	    color: #fff;
+	}
 	.grid-container{
+		margin-top:5%;
 		display:grid;
 		grid-template-columns: 15% 17% 20% 24% 24%;
 		grid-template-rows: 150px 50px 150px;
@@ -52,52 +58,62 @@
 		text-align: center;
 		
 	}
+	.grid-container div:nth-child(8) {
+		margin-left:20%;
+		margin-top : 50%;
+		text-align: center;
+		
+	}
 	
 </style>
 </head>
 <body>
 	<!-- main.jsp -->
 	<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
-	<div class="grid-container">
-		<div>
-			<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
+		<div class="grid-container">
+			<div>
+				<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
+			</div>
+			
+			<div>
+				<div style="background-color:#EEECEC">NickName</div>
+				<div style="background-color:#EEECEC">info </div>
+			</div>
+			
+			<div>
+				<div> ${userProfileData.nickName}</div>
+				<div> ${userProfileData.intro}</div>
+			</div>
+			
+			<div>
+				<input type="button" value="구매 후기" class="btn important"
+					onclick="location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}'">
+			</div>
+			
+			<div>
+				<input type="button" value="판매 후기" class="btn important" 
+					onclick="location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}'">
+			</div>
+			
+			<div>
+				<span style="color: gold;">★</span> <span style="color: gold;">★</span>
+				<span style="color: gold;">★</span> <span style="color: gold;">★</span>
+				<span style="color: gold;">★</span> 
+				<!-- jquery 이횽해서 자식 위치 확인후  색을 지정  -->
+				<div>구매점수</div>
+			</div> 
+			
+			<div>
+				<span style="color: gold;">★</span> <span style="color: #7777;">★</span>
+				<span style="color: #7777;">★</span> <span style="color: #7777;">★</span>
+				<span style="color: #7777;">★</span>
+				<div>판매점수</div>
+			</div>
+			<div>
+				<input type="button" value="정보 수정" class="btn important" 
+					onclick="location.href='/goguma/user/profileedit.do?id=${userProfileData.id}'">
+			</div>
 		</div>
-		
-		<div>
-			<div style="background-color:#EEECEC">NickName</div>
-			<div style="background-color:#EEECEC">info </div>
-		</div>
-		
-		<div>
-			<div> ${userProfileData.nickName}</div>
-			<div> ${userProfileData.intro}</div>
-		</div>
-		
-		<div>
-			<input type="button" value="구매 후기" class="btn important" 
-				onclick="location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}'">
-		</div>
-		
-		<div>
-			<input type="button" value="판매 후기" class="btn important" 
-				onclick="location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}'">
-		</div>
-		
-		<div>
-			<span style="color: gold;">★</span> <span style="color: gold;">★</span>
-			<span style="color: gold;">★</span> <span style="color: gold;">★</span>
-			<span style="color: gold;">★</span> 
-			<!-- jquery 이횽해서 자식 위치 확인후  색을 지정  -->
-			<div>구매점수</div>
-		</div> 
-		
-		<div>
-			<span style="color: gold;">★</span> <span style="color: #7777;">★</span>
-			<span style="color: #7777;">★</span> <span style="color: #7777;">★</span>
-			<span style="color: #7777;">★</span>
-			<div>판매점수</div>
-		</div>
-	</div>
 	<script>
 		
 	</script>

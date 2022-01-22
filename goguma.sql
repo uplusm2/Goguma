@@ -37,9 +37,15 @@ select --selid와 userid랑 매칭하면 user가 물건 판매 후 구매자에�
     where tblreview.type = 'B';
     
 select * from vwReceived_seller_reviews where selid = 'user5';
+
+
+select * from vwReceived_buyer_reviews where buyid = 'user5';
+
+select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'user2' order by regdate) a) ;
     
     
+select * from tbluserprofile where id = 'user5';
     
-    
+update tbluserprofile set intro = 'hello' , nickname ='히히' , path = 'default image.jpg' where id ='user5';
     
     

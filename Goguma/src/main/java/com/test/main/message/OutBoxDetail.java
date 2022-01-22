@@ -1,0 +1,38 @@
+package com.test.main.message;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.test.main.community.ComCommentDAO;
+import com.test.main.community.CommunityDAO;
+import com.test.main.community.CommunityDTO;
+
+@WebServlet("/message/outBoxDetail.do")
+public class OutBoxDetail extends HttpServlet {
+	private MessageDAO dao;
+	private MessageDTO dto;
+	
+	{
+		dao = new MessageDAO();
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String seq = req.getParameter("seq");
+		dto = dao.getInDetail(seq);
+		
+		
+		
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/outBoxDetail.jsp");
+		dispatcher.forward(req, resp);
+	}
+}

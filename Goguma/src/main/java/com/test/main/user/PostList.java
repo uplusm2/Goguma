@@ -9,26 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/user/userprofile.do")
-public class UserProfile extends HttpServlet {
+@WebServlet("/user/postlist.do")
+public class PostList extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		UserDAO dao  = new UserDAO();
-		
-		String userId = req.getParameter("userId");
-		
-		if(req.getParameter("id")!=null) userId = req.getParameter("id");
-		
-		UserProfileDTO userProfileData = dao.getUserProfile(userId);
-		
-		req.setAttribute("userProfileData", userProfileData);
+		String id = req.getParameter("id");// 나중에 세련으로 변경
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userprofile.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/postlist.jsp");
 		dispatcher.forward(req, resp);
 	}
+
 }
-
-
-

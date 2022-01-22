@@ -17,7 +17,7 @@
 			<li>회원가입</li>
 			</c:if>
 			<c:if test="${empty id}">
-			<li onclick="location.href='/goguma/message/messageList.do';"><img src="/goguma/asset/img/message.png"></li>
+			<li onclick="location.href='/goguma/message/outBox.do';"><img src="/goguma/asset/img/message.png"></li>
 			<li>고구마님</li>
 			<!-- <li>${dto.nickname}님</li> -->
 			<li>로그아웃</li>

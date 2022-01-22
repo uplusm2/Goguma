@@ -1,4 +1,3 @@
-
 package com.test.main.center;
 
 import java.io.IOException;
@@ -12,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/center/faq.do")
-public class faq extends HttpServlet {
+@WebServlet("/center/noticelist.do")
+public class NoticeList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
@@ -30,7 +29,6 @@ public class faq extends HttpServlet {
 		int loop = 0;
 		int blockSize = 10;
 		
-		String search = req.getParameter("search");
 		String page = req.getParameter("page");
 		
 		if (page == null || page == "") nowPage = 1;
@@ -40,7 +38,6 @@ public class faq extends HttpServlet {
 		end = begin + pageSize - 1;
 
 		
-		map.put("search", search);
 		map.put("begin", begin + "");
 		map.put("end", end + "");
 		
@@ -49,7 +46,7 @@ public class faq extends HttpServlet {
 		
 		//페이지바
 		
-		totalCount = dao.getTotalCount(search);
+		totalCount = dao.getTotalCount();
 		System.out.println(totalCount);
 		
 		
@@ -63,7 +60,7 @@ public class faq extends HttpServlet {
 		if (n == 1) {
 			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/center/faq.do?page=%d&search=%s' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1, search);
+			pagebar += String.format("<li><a href='/goguma/center/noticelist.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
 		}
 		
 		
@@ -73,7 +70,7 @@ public class faq extends HttpServlet {
 			if (n == nowPage) {
 				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);
 			} else {
-				pagebar += String.format("<li><a href='/goguma/center/faq.do?page=%d&search=%s'>%d</a></li>", n, search ,n);
+				pagebar += String.format("<li><a href='/goguma/center/noticelist.do?page=%d'>%d</a></li>", n ,n);
 			}			
 			
 			loop++;
@@ -84,18 +81,13 @@ public class faq extends HttpServlet {
 		if (n > totalPage) {
 			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/center/faq.do?page=%d&search=%s' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n, search);
+			pagebar += String.format("<li><a href='/goguma/center/noticelist.do?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);
 		}
 		
 		pagebar += "</ul></nav>";
 		
 		
-		
-		
-		
-		
-		
-		ArrayList<CenterDTO> list = dao.faqlist(map);
+		ArrayList<CenterDTO> list = dao.noticelist(map);
 		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
@@ -103,10 +95,12 @@ public class faq extends HttpServlet {
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/faq.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/noticelist.jsp");
 		dispatcher.forward(req, resp);
+		
+		
+		
 
 	}
 
 }
-

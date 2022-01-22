@@ -25,18 +25,19 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
-				<h2>받은 메시지</h2>
+			<div class="title"
+				onclick="location.href='/goguma/message/outBox.do';">
+				<h2>보낸 메시지</h2>
 			</div>
 			<table class="table">
 				<tr>
-					<th>보낸 사람</th>
+					<th>받는 사람</th>
 					<th>내용</th>
 					<th>날짜</th>
 				</tr>
 				<c:forEach items="${list}" var="dto">
 				<tr>
-					<td>${dto.senderNickname}</td>
+					<td>${dto.receiverNickname}</td>
 					<td>${dto.content}</td>
 					<td>${dto.sendTime}</td>
 				</tr>
