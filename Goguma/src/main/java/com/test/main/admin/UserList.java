@@ -98,9 +98,7 @@ public class UserList extends HttpServlet {
 		} else {
 			pagebar += String.format("<li><a href='/code/board/list.do?page=%d' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>", n);			
 		}
-		
-		//pagebar = String.format(" <a href='/code/board/list.do?page=%d'>[다음%d페이지]</a> ", n, blockSize);
-		
+				
 		pagebar += "</ul></nav>";
 		
 		

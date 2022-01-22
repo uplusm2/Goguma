@@ -119,6 +119,10 @@ public class UserDAO {
 		String id = "admin";
 		String pw = "Goguma970928";
 		
+//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//		String id = "goguma";
+//		String pw = "java1234";
+		
 		try {
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -132,5 +136,25 @@ public class UserDAO {
 		}
 		
 		return null;
+	}
+
+	//Block 서블릿이 id를 주면 tblBlock에 insert
+	public int block(String id) {
+		
+		try {
+			
+			String sql = "insert into tblBlock (id, block_type_seq, regdate) values (?, 1, default)";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println("UserDAO.block()");
+			e.printStackTrace();
+		}
+		
+		return 0;
 	}
 }
