@@ -40,9 +40,14 @@ public class Block extends HttpServlet {
 		String id = req.getParameter("id");
 		String name = req.getParameter("name");
 		
-		//TODO dto에 넣기!!!
-		req.setAttribute("id", id);
-		req.setAttribute("name", name);
+		UserDTO dto = new UserDTO();
+		
+		dto.setId(id);
+		dto.setName(name);
+		
+		
+		
+		
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/block.jsp");
 		dispatcher.forward(req, resp);

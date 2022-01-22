@@ -33,11 +33,11 @@
 							<th>차단 사유</th>
 							<td>
 								<select class="form-control">
-									<option value="1">1. 사기</option>
-									<option value="2">2. 잠수</option>
-									<option value="3">3. 욕설</option>
-									<option value="4">4. 타 사이트 광고</option>
-									<option value="5">5. 불법</option>
+									<option value="1">사기</option>
+									<option value="2">잠수</option>
+									<option value="3">욕설</option>
+									<option value="4">타 사이트 광고</option>
+									<option value="5">불법</option>
 								</select>
 							</td>
 						</tr>

@@ -37,7 +37,7 @@
 								<td>${dto.state}</td>
 
 								<c:if test="${dto.state == '정상'}">
-									<td><input type="button" value="차단" id="blockBtn"
+									<td><input type="button" value="차단" 
 										class="btn important btn-block" data-name="${dto.name}"
 										data-id="${dto.id}"></td>
 								</c:if>
@@ -140,15 +140,16 @@
 				location.href = '/goguma/admin/block.do?id=' + id + '&name=' + name;
 	        } 
 			
-		}) 
+		});
 		
 		//TODO
-		//아이디로 클릭했을때는 하나만 클릭되고 클래스로 주면 여러개 클릭된다 왜....?
+		//아이디로 클릭했을때는 하나만 클릭되고 클래스로 주면 여러개 클릭된다 왤까....
 		//this로 했을 땐 안 되고 event.srcElement으로 했을땐 된다...? 
 		/* 
 		$('.btn-block').click(() => {
-	        var id = event.srcElement.dataset['id'];
-			//var id = $(this).data('id')
+	        var id = event.srcElement.dataset['id'];				//O
+			//var id = $(this).data('id');							//X
+			//var id = $(this).attr('data-id');						//X
 			if (confirm(id + '님을 차단하시겠습니까?')) {
 				console.log(id);
 				//$(this).val("차단해제");
