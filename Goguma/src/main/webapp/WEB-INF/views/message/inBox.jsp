@@ -12,24 +12,37 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<nav class="left-side">
-			<div class="menu">
-				<ul>
-					<li><span class="glyphicon glyphicon-envelope message"></span>
-						<span class="glyphicon glyphicon-arrow-left arrow"></span> 받은 메시지
-					</li>
-					<li><span class="glyphicon glyphicon-envelope message"></span>
-						<span class="glyphicon glyphicon-arrow-right arrow"></span> 보낸 메시지
-					</li>
-				</ul>
-			</div>
-		</nav>
 		<section class="message-in">
-			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
-			
+			<nav class="left-side">
+				<div class="menu">
+					<ul>
+						<li><span class="glyphicon glyphicon-envelope message"></span>
+							<span class="glyphicon glyphicon-arrow-left arrow"></span> 받은 메시지
+						</li>
+						<li><span class="glyphicon glyphicon-envelope message"></span>
+							<span class="glyphicon glyphicon-arrow-right arrow"></span> 보낸 메시지
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="title"
+				onclick="location.href='/goguma/message/inBox.do';">
 				<h2>받은 메시지</h2>
 			</div>
-		
+			<table class="table">
+				<tr>
+					<th>보낸 사람</th>
+					<th>내용</th>
+					<th>날짜</th>
+				</tr>
+				<c:forEach items="${list}" var="dto">
+				<tr>
+					<td>${dto.senderNickname}</td>
+					<td>${dto.content}</td>
+					<td>${dto.sendTime}</td>
+				</tr>
+				</c:forEach>
+			</table>
 		</section>
 	</main>
 	
