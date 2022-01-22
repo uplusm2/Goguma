@@ -14,15 +14,20 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
 		<section class="community content">
-			<div class="title">
+			<div class="title" onclick="location.href='/goguma/community/communityList.do';">
 				<h2>커뮤니티</h2>
 			</div>
 		
 			<table class="detail">
 				<tr>
 					<td colspan="3">${dto.title}</td>
-					<td class="button"><input type="button" value=수정 class="btn edit"></td>
-					<td class="button"><input type="button" value=삭제 class="btn important del"></td>
+					<td class="button">
+						<input type="button" value=수정 class="btn edit"
+							onclick="location.href='/goguma/community/communityForm.do?seq=${dto.seq}';">
+					</td>
+					<td class="button">
+						<input type="button" value=삭제 class="btn important del">
+					</td>
 				</tr>
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
@@ -37,10 +42,33 @@
 				</tr>
 
 			</table>
+			
+			<c:forEach items="${commentList}" var="cdto">
+			<table class="comment">
+				<tr>
+					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
+					<td>${cdto.nickname}</td>
+					<td>&nbsp;&nbsp;${cdto.regDate}</td>
+				</tr>
+				<tr>
+					<td colspan="2">${cdto.content}</td>
+				</tr>
+			</table>
+			</c:forEach>
+			
+			<form method="GET" action="#!" class="comment form">
+				<textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
+				<input type="submit" value="등록" class="btn important">
+			</form>
+
 
 			<div class="button common">
-				<input type="button" value=목록 class="btn list"
+				<input type="button" value="목록" class="btn list"
 					onclick="location.href='/goguma/community/communityList.do?page=${page}';">
+				<input type="button" value="이전" class="btn list"
+					onclick="location.href='/goguma/community/communityDetail.do?seq=${dto.seq-1}&page=${page}';">
+				<input type="button" value="다음" class="btn list"
+					onclick="location.href='/goguma/community/communityDetail.do?seq=${dto.seq+1}&page=${page}';">
 			</div>
 		</section>
 	</main>

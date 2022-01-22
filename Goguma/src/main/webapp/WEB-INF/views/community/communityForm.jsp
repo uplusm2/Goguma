@@ -14,24 +14,38 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
 		<section class="community form">
-			<div class="title">
+			<div class="title" onclick="location.href='/goguma/community/communityList.do';">
 				<h2>커뮤니티</h2>
 			</div>
 
+			<c:if test="${empty dto}">
 			<form method="POST" action="/goguma/community/communityAdd.do">
 				<input type="text" name="title" placeholder="제목을 입력하세요." class="form-text" required>
 				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required></textarea>
 				
 				<div class="button">
-					<input type="button" value=취소 class="btn cancel"
-						onclick="location.href='/goguma/community/communityList.do';"> 
-					<input type="submit" value=등록 class="btn important add">
+					<input type="button" value="취소" class="btn cancel"
+						onclick="location.href='/goguma/community/communityList.do';">
+					<input type="submit" value="등록" class="btn important add">
 				</div>
 			</form>
-
+			</c:if>
+			
+			<c:if test="${not empty dto}">
+			<form method="POST" action="/goguma/community/communityEdit.do">
+				<input type="text" name="title" value="${dto.title}" placeholder="제목을 입력하세요." class="form-text" required>
+				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required>${dto.content}</textarea>
+				
+				<div class="button">
+					<input type="button" value="취소" class="btn cancel"
+						onclick="location.href='/goguma/community/communityList.do';">
+					<input type="submit" value="수정" class="btn important add">
+					<input type="hidden" name="seq" value="${dto.seq}">
+				</div>
+			</form>
+			</c:if>
 		</section>
 	</main>
-	
 	<script>
 	
 	</script>

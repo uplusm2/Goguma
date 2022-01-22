@@ -1,17 +1,14 @@
 package com.test.main.community;
 
-public class CommunityDTO {
+public class ComCommentDTO {
 	private String seq;
 	private String id;
-	private String title;
 	private String content;
 	private String regDate;
-	private int readcount;
 	
+	private String cseq;
 	private String nickname;
 	private double isNew;
-	
-	private int commentCount;
 	
 	public String getSeq() {
 		return seq;
@@ -25,11 +22,11 @@ public class CommunityDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getTitle() {
-		return title;
+	public String getCseq() {
+		return cseq;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setCseq(String cseq) {
+		this.cseq = cseq;
 	}
 	public String getContent() {
 		return content;
@@ -43,12 +40,6 @@ public class CommunityDTO {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
-	public int getReadcount() {
-		return readcount;
-	}
-	public void setReadcount(int readcount) {
-		this.readcount = readcount;
-	}
 	public String getNickname() {
 		return nickname;
 	}
@@ -60,11 +51,5 @@ public class CommunityDTO {
 	}
 	public void setIsNew(double isNew) {
 		this.isNew = isNew;
-	}
-	public int getCommentCount() {
-		return commentCount;
-	}
-	public void setCommentCount(int commentCount) {
-		this.commentCount = commentCount;
 	}
 }
