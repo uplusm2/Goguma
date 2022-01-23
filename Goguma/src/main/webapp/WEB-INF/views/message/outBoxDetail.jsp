@@ -41,10 +41,7 @@
 					<td colspan="2">${dto.content}</td>
 				</tr>
 				<tr>
-					<td><input type="button" value="답장" class="btn"
-						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
-					</td>
-					<td><input type="button" value="삭제" class="btn"
+					<td><input type="button" value="삭제" class="btn del"
 						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
 					</td>
 				</tr>
