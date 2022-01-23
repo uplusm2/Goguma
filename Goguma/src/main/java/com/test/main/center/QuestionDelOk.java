@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/center/faqedit.do")
-public class faqEdit extends HttpServlet {
+@WebServlet("/center/questiondelok.do")
+public class QuestionDelOk extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
@@ -17,12 +17,11 @@ public class faqEdit extends HttpServlet {
 		
 		CenterDAO dao = new CenterDAO();
 		
-		CenterDTO dto = dao.get(seq);
+		int result = dao.questionDel(seq);
 		
+		req.setAttribute("result", result);
 		
-		req.setAttribute("dto", dto);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/faqedit.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/questiondelok.jsp");
 		dispatcher.forward(req, resp);
 
 	}

@@ -15,11 +15,19 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
 			
-			<form method="POST" action="/goguma/center/faqeditok.do">
+			<form method="POST" action="/goguma/center/questioneditok.do">
 			<table class="table table-bordered add">
 				<tr>
 					<th>제목</th>
 					<td><input type="text" name="subject" class="form-control" required value="${dto.title}"></td>
+				</tr>
+				<tr>
+					<th>날짜</th>
+					<td>${dto.regdate}</td>
+				</tr>
+				<tr>
+					<th>날짜</th>
+					<td>${dto.user}</td>
 				</tr>
 				<tr>
 					<th>내용</th>
@@ -28,7 +36,7 @@
 				<tr>
 					<th>종류</th>
 					<td>
-						<select name = "type" value = "${dto.type}">
+						<select name = "type"">
 							<option value = "1">계정/인증</option>
 							<option value = "2">구매/판매</option>
 							<option value = "3">운영정책</option>
@@ -42,7 +50,7 @@
 			<div class="btns">
 				<input type="button" value="돌아가기"
 					class="btn btn-default"
-					onclick="location.href='/goguma/center/faq.do?search=1&page=1';">
+					onclick="location.href='/goguma/center/questionview.do?seq=${dto.seq}';">
 				<input type="submit" value="수정하기"
 					class="btn btn-primary">										
 			</div>
