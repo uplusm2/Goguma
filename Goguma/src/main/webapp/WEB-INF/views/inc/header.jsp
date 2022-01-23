@@ -24,7 +24,7 @@
 				<c:if test="${lv==2}">
 					<li onclick="location.href='goguma/admin/dashboard.do';">${id}님</li>
 				</c:if>
-				<li>로그아웃</li>
+				<li><a href="/goguma/user/logoutok.do">로그아웃</a></li>
 			</c:if>
 		</ul>
 		<ul class="menu">
