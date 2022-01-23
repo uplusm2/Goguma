@@ -12,7 +12,7 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="message-detail">
+		<section class="message">
 			<nav class="left-side">
 				<div class="menu">
 					<ul>
