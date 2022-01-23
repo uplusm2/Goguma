@@ -26,11 +26,11 @@
 				</div>
 			</nav>
 			<div class="title"
-				onclick="location.href='/goguma/message/message.do?receiverNickname=${dto.receiverNickname}';">
+				onclick="location.href='/goguma/message/message.do?receiverNickname=${receiver}';">
 				<h2>메시지 보내기</h2>
 			</div>
 			<form class="form">
-				<p>받는 사람: ${dto.receiverNickname}</p>
+				<p>받는 사람: ${receiver}</p>
 				<textarea name="content" class="content" maxlength="1000"
 					placeholder="내용을 입력해주세요."></textarea>
 				<div class="button">
