@@ -1,29 +1,26 @@
 /* nav */
-.left-side {
-    padding-top: 30px;
+.message-detail .left-side {
+    padding-top: 40px;
 	padding-bottom: 3%;
 	min-height: 75vh;
-	width: 200px;
+	width: 170px;
 	float: left;
 	border-right:3px solid #9B59B6;
 	transform: translateY(-25px);
 	margin-right: 50px;
 }
-.left-side .menu {
+.message-detail .left-side .menu {
 	height: 100%;
 	width: 95%;
-	padding-left: 10%;
-	float: left;
+	/* padding-left: 10%; */
+	/* float: left; */
 }
-.left-side .menu > ul {
-    margin-left:25px;
-}
-.left-side .menu ul > li{
+.message-detail .left-side .menu ul > li{
     margin-bottom:10px;
     cursor: pointer;
     font-size: 18px;
 }
-.left-side .menu ul > li .message {
+.message-detail .left-side .menu ul > li .message {
     text-align: center;
     color: #fff;
     background: #757575;
@@ -33,7 +30,7 @@
     font-size: 17px;
     /* font-weight: 600; */
 }
-.left-side .menu ul > li .arrow {
+.message-detail .left-side .menu ul > li .arrow {
     border-radius: 50%;
     color: #fff;
     background: #9B59B6;
@@ -48,47 +45,109 @@
 }
 
 
-/* section */
-.message-in {
-	width: 1500px;
+/* 메시지 목록 */
+.message-detail {
+	/* position: relative; */
+	left: 30px;
+	width: 1200px;
 }
-.message-in .table {
+.message-detail .title {
+	transform: translateX(20px);
+}
+.message-detail .table {
 	width: 970px;
     border: 3px solid #dadada;
 }
-.message-in .table,
-.message-in .table th,
-.message-in .table td{
+.message-detail .table,
+.message-detail .table th,
+.message-detail .table td{
     border-left: 0px;
     border-right: 0px;
     text-align: center;
     font-weight: 400;
+    cursor: pointer;
 }
-.message-in .table tr {
+.message-detail .table tr {
     height: 40px;
 }
-.message-in .table th {
+.message-detail .table th {
     font-weight: 500;
 }
-.message-in .table td:nth-child(1){
+.message-detail .table td:nth-child(1){
     color: #757575;
     padding-left: 30px;
     font-size: 16px;
     width: 80px;
 }
-.message-in .table th:nth-child(1){
+.message-detail .table th:nth-child(1){
     padding-left: 40px;
     text-align: center;
 }
-.message-in .table td:nth-child(2){
-    padding-left: 70px;
+.message-detail .table td:nth-child(2){
+    padding-left: 50px;
     text-align: left;
     width: 700px;
 }
-.message-in .table td:nth-child(2):hover{
+.message-detail .table td:nth-child(2):hover{
 	font-weight: 500;
 }
-.message-in .table th:nth-child(4),
-.message-in .table td:nth-child(5){
+.message-detail .table th:nth-child(4),
+.message-detail .table td:nth-child(5){
     padding-right: 20px;
+}
+
+
+/* 메시지 읽기 */
+.message-detail .detail {
+	width: 970px;
+    border: 3px solid #dadada;
+}
+.message-detail .detail,
+.message-detail .detail td{
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.message-detail .detail tr:nth-child(1) td{
+    padding-top: 10px;
+}
+.message-detail .detail tr td:nth-child(1) {
+    width: 85px;
+}
+.message-detail .detail tr:nth-child(2) td{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dadada;
+}
+.message-detail .detail tr:nth-child(3) td{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+
+/* 메시지 버튼 */
+.message-detail .btn{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px;
+    position: relative;
+    width: 55px;
+    transform: translateX(10px) translateY(10px);
+}
+.message-detail .detail .btn,
+.message-detail .button .btn {
+	outline: 0;
+}
+.message-detail .btn:hover {
+	color: #9B59B6;
+}
+.message-detail .detail td:nth-child(1) .btn{
+    transform: translateX(800px) translateY(-15px);
+}
+.message-detail .detail td:nth-child(2) .btn{
+    transform: translateX(780px) translateY(-15px);
+}
+.message-detail .detail td:nth-child(1) .btn.del {
+    transform: translateX(870px) translateY(-15px);
 }

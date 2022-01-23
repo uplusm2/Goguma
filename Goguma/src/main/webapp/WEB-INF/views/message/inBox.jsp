@@ -12,21 +12,20 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="message-in">
+		<section class="message-detail">
 			<nav class="left-side">
 				<div class="menu">
 					<ul>
-						<li><span class="glyphicon glyphicon-envelope message"></span>
+						<li onclick="location.href='/goguma/message/inBox.do';"><span class="glyphicon glyphicon-envelope message"></span>
 							<span class="glyphicon glyphicon-arrow-left arrow"></span> 받은 메시지
 						</li>
-						<li><span class="glyphicon glyphicon-envelope message"></span>
+						<li onclick="location.href='/goguma/message/outBox.do';"><span class="glyphicon glyphicon-envelope message"></span>
 							<span class="glyphicon glyphicon-arrow-right arrow"></span> 보낸 메시지
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<div class="title"
-				onclick="location.href='/goguma/message/inBox.do';">
+			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
 				<h2>받은 메시지</h2>
 			</div>
 			<table class="table">
@@ -38,7 +37,9 @@
 				<c:forEach items="${list}" var="dto">
 				<tr>
 					<td>${dto.senderNickname}</td>
-					<td>${dto.content}</td>
+					<td onclick="location.href='/goguma/message/inBoxDetail.do?message_seq=${dto.messageSeq}';">
+						${dto.content}
+					</td>
 					<td>${dto.sendTime}</td>
 				</tr>
 				</c:forEach>

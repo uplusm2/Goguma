@@ -9,6 +9,8 @@ public class MessageDTO {
 	private String isCheck;
 	private String senderNickname;
 	private String receiverNickname;
+	private String messageSeq; 
+	
 	public String getSeq() {
 		return seq;
 	}
@@ -56,5 +58,11 @@ public class MessageDTO {
 	}
 	public void setReceiverNickname(String receiverNickname) {
 		this.receiverNickname = receiverNickname;
+	}
+	public String getMessageSeq() {
+		return messageSeq;
+	}
+	public void setMessageSeq(String messageSeq) {
+		this.messageSeq = messageSeq;
 	}
 }

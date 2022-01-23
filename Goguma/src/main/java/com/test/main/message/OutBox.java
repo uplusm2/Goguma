@@ -29,7 +29,7 @@ public class OutBox extends HttpServlet {
 		
 		String id = req.getParameter("id");
 		id = "user1";
-		list = dao.list(id);
+		list = dao.listOut(id);
 		refineData(list);
 		
 		req.setAttribute("list", list);

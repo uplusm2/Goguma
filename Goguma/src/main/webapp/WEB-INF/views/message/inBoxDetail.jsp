@@ -25,26 +25,34 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="title"
-				onclick="location.href='/goguma/message/outBox.do';">
-				<h2>보낸 메시지</h2>
+			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
+				<h2>받은 메시지</h2>
 			</div>
-			<table class="table">
+			<table class="detail">
 				<tr>
-					<th>받는 사람</th>
-					<th>내용</th>
-					<th>날짜</th>
+					<td><b>보낸 사람</b></td>
+					<td>${dto.senderNickname}</td>
 				</tr>
-				<c:forEach items="${list}" var="dto">
 				<tr>
-					<td>${dto.receiverNickname}</td>
-					<td onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${dto.messageSeq}';">
-						${dto.content}
-					</td>
+					<td><b>보낸 시간</b></td>
 					<td>${dto.sendTime}</td>
 				</tr>
-				</c:forEach>
+				<tr>
+					<td colspan="2">${dto.content}</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="답장" class="btn"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+					</td>
+					<td><input type="button" value="삭제" class="btn"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+					</td>
+				</tr>
 			</table>
+			<div class="button common">
+				<input type="button" value="목록" class="btn list"
+					onclick="location.href='/goguma/message/inBox.do';">
+			</div>
 		</section>
 	</main>
 	
