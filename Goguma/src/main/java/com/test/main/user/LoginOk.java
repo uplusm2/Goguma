@@ -24,13 +24,18 @@ public class LoginOk extends HttpServlet {
 		//1.
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");
+		String nickname = req.getParameter("nickname");
+		String lv = req.getParameter("lv");
 		
 		//2.
 		UserDAO dao = new UserDAO();
 		
 		UserDTO dto = new UserDTO();
+		
 		dto.setId(id);
+		dto.setNickname(nickname);
 		dto.setPw(pw);
+		dto.setLv(lv);
 		
 		UserDTO result = dao.login(dto);
 		
@@ -38,9 +43,12 @@ public class LoginOk extends HttpServlet {
 			
 			//로그인 성공
 			HttpSession session = req.getSession();
-			
+				
 			session.setAttribute("id", result.getId()); //인증 티켓
-			
+			session.setAttribute("pw", result.getPw());
+			session.setAttribute("nickname", result.getNickname());
+			session.setAttribute("lv", result.getLv());
+				
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/loginok.jsp");
 			dispatcher.forward(req, resp);
 		
