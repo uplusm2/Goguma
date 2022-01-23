@@ -5,33 +5,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Code</title>
-
+<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
 </style>
 </head>
 <body>
-	<!-- member/loginok.jsp -->
+	<!-- user/loginok.jsp -->
 	<main class="main">
-		<%@include file="/WEB-INF/inc/header.jsp" %>
+		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
 					
+					
+					
 		</section>
-		<%@include file="/WEB-INF/inc/footer.jsp" %>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
+	
 	
 	<script>
 	
 		<c:if test="${not empty id}">
-			location.href = '.do';
+			location.href = '/goguma/user/user.do';
 		</c:if>
-		
+
 		<c:if test="${empty id}">
 			alert('실패;;');
 			history.back();
 		</c:if>
 		
 	</script>
+	
 </body>
 </html>
 
