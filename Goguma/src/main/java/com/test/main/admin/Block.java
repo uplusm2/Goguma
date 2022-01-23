@@ -20,22 +20,6 @@ public class Block extends HttpServlet {
 		//2. DB 작업 > insert > DAO 위임
 		//3. resp으로 jsp에 반환
 		
-		//1.
-		/*
-		String id = req.getParameter("id");
-		
-		//2.
-		UserDAO dao = new UserDAO();
-		
-		int result = dao.block(id);
-
-		//Ajax 요청
-		PrintWriter writer = resp.getWriter();
-		
-		writer.print(result + "");
-		
-		writer.close();
-		*/
 		
 		String id = req.getParameter("id");
 		String name = req.getParameter("name");

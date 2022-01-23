@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>고구마장터 차단</title>
+<title>고구마장터</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <link rel="stylesheet" href="/bangterior/css/main_admin.css">
 <style>
@@ -32,7 +32,7 @@
 						<tr>
 							<th>차단 사유</th>
 							<td>
-								<select class="form-control">
+								<select name="blockType" class="form-control">
 									<option value="1">사기</option>
 									<option value="2">잠수</option>
 									<option value="3">욕설</option>
@@ -42,7 +42,10 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="2"><input type="submit" value="차단하기" class="btn btn-default"></td>
+							<td colspan="2">
+								<input type="hidden" name="id" value="${dto.id}">
+								<input type="submit" value="차단하기" class="btn btn-default">
+							</td>
 						</tr>
 					</table>
 				</form>
