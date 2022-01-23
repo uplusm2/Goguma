@@ -95,3 +95,42 @@
 .message-in .table td:nth-child(5){
     padding-right: 20px;
 }
+
+
+/* 메시지 읽기 */
+.message-in .detail {
+	width: 970px;
+    border: 3px solid #dadada;
+}
+.message-in .detail,
+.message-in .detail td{
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.message-in .detail tr:nth-child(1) td{
+    padding-top: 10px;
+}
+.message-in .detail tr td:nth-child(1) {
+    width: 85px;
+}
+.message-in .detail tr:nth-child(2) td{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dadada;
+}
+.message-in .detail tr:nth-child(3) td{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.message-in .detail .btn{
+    transform: translateX(800px) translateY(-15px);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px;
+    position: relative;
+    width: 55px;
+}
+.message-in .detail td:nth-child(2) .btn{
+    transform: translateX(790px) translateY(-15px);
+}

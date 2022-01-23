@@ -28,22 +28,27 @@
 			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
 				<h2>받은 메시지</h2>
 			</div>
-		<!-- 	<table class="table">
+			<table class="detail">
 				<tr>
-					<th>보낸 사람</th>
-					<th>내용</th>
-					<th>날짜</th>
+					<td><b>보낸 사람</b></td>
+					<td>감자</td>
 				</tr>
-				<c:forEach items="${list}" var="dto">
 				<tr>
-					<td>${dto.senderNickname}</td>
-					<td onclick="location.href='/goguma/message/inBoxDetail.do?message_seq=${dto.messageSeq}';">
-						${dto.content}
+					<td><b>보낸 시간</b></td>
+					<td>22.01.16 22:10</td>
+				</tr>
+				<tr>
+					<td colspan="2">안녕하세여ㅎㅎ 친해지고 싶어요!</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="답장" class="btn"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
 					</td>
-					<td>${dto.sendTime}</td>
+					<td><input type="button" value="삭제" class="btn"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+					</td>
 				</tr>
-				</c:forEach>
-			</table> -->
+			</table>
 		</section>
 	</main>
 	

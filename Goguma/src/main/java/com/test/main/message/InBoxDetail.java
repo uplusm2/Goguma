@@ -26,13 +26,9 @@ public class InBoxDetail extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String seq = req.getParameter("message_seq");
-		System.out.println(seq);
-		System.out.println("d");
-//		dto = dao.getInDetail(seq);
-//		
-//		System.out.println(dto.getContent());
-//		
-//		req.setAttribute("dto", dto);
+		dto = dao.getInDetail(seq);
+		
+		req.setAttribute("dto", dto);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBoxDetail.jsp");
 		dispatcher.forward(req, resp);
 	}

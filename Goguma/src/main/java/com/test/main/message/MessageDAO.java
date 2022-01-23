@@ -103,6 +103,7 @@ public class MessageDAO {
 				dto.setSenderId(rs.getString("sender_id"));
 				dto.setReceiverId(rs.getString("receiver_id"));
 				dto.setSendTime(rs.getString("sendtime"));
+				dto.setContent(rs.getString("content"));
 				dto.setIsCheck(rs.getString("is_check"));
 				dto.setSenderNickname(rs.getString("sender_nickname"));
 				dto.setReceiverNickname(rs.getString("receiver_nickname"));
