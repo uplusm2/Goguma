@@ -28,6 +28,7 @@ public class InBoxDetail extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String seq = req.getParameter("message_seq");
+		dao.check(seq);
 		dto = dao.getMessage(seq);
 		refineData(dto);
 		

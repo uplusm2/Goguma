@@ -118,5 +118,17 @@ public class MessageDAO {
 		return null;
 	}
 
+	public void check(String seq) {
+		try {
+			String sql = "update tblMessage set is_check = 'Y'  where message_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	
 }
