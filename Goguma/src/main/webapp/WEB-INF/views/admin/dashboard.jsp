@@ -7,12 +7,11 @@
 <meta charset="UTF-8">
 <title>고구마장터 대시보드</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
-<link rel="stylesheet" href="/bangterior/css/main_admin.css">
 <style>
 </style>
 </head>
 <body>
-	<!-- main.jsp -->
+	<!-- dashboard.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">

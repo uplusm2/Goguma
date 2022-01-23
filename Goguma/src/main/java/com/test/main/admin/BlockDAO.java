@@ -113,7 +113,7 @@ public class BlockDAO {
 		
 		try {
 			
-			String sql = "delete from tblBlock where id = ?";
+			String sql = "delete from tblBlock where id =";
 			
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, id);

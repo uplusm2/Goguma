@@ -60,7 +60,18 @@ public class UserList extends HttpServlet {
 		ArrayList<UserDTO> list = dao.list(map);
 		
 		for(UserDTO dto : list) {
-			dto.setSince(dto.getSince().substring(0, 11));		
+			
+			//평가 없는 사람 처리 & 소수점 처리
+			double score = Double.parseDouble(dto.getScore());
+			
+			if(score < 0) {
+				dto.setScore("평가없음");
+			} else {
+				dto.setScore(String.format("%.1f", score));
+			}
+
+			//날짜 년월일로 자르기
+			dto.setSince(dto.getSince().substring(0, 11));
 		}
 				
 		totalCount = dao.getTotalCount(map);

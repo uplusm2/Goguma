@@ -35,10 +35,40 @@ public class UserDAO {
 		}
 	}
 	
+	
+	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
+	public static Connection open() {
+
+		Connection conn = null;
+		
+		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
+		String id = "admin";
+		String pw = "Goguma970928";
+		
+//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//		String id = "goguma";
+//		String pw = "java1234";
+		
+		try {
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			conn = DriverManager.getConnection(url, id, pw);
+			
+			return conn;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	
 	/**
 	 * 
-	 * @param map 검색할 컬럼, 단어, 검색 여부, 페이지 시작과 끝 번호가 담긴 map을 받는다.
-	 * @return select한 결과를 ArrayList<UserDTO> 담아 반환한다. 실패하면 null을 반환한다.
+	 * @param map 검색할 컬럼, 단어, 검색 여부, 페이지 시작과 끝 번호가 담긴 map을 매개변수로 받는다.
+	 * @return vwUserAll을 select한 결과를 ArrayList<UserDTO> 담아 반환한다. 실패하면 null을 반환한다.
 	 */
 	public ArrayList<UserDTO> list(HashMap<String, String> map) {
 		
@@ -65,7 +95,7 @@ public class UserDAO {
 				dto.setId(rs.getString("id"));
 				dto.setName(rs.getString("name"));
 				dto.setSince(rs.getString("since"));
-				dto.setScore(rs.getDouble("score"));
+				dto.setScore(rs.getString("score"));
 				dto.setState(rs.getString("state"));
 				
 				list.add(dto);
@@ -109,52 +139,58 @@ public class UserDAO {
 		
 		return 0;
 	}
-	
-	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
-	public static Connection open() {
 
-		Connection conn = null;
-		
-		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
-		
-//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-//		String id = "goguma";
-//		String pw = "java1234";
+	public UserDTO getUser(String id) {
 		
 		try {
 			
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String sql = "select * from vwUserAll where id = ?";
 			
-			conn = DriverManager.getConnection(url, id, pw);
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			rs = pstat.executeQuery();
 			
-			return conn;
+			if(rs.next()) {
+				
+				UserDTO dto = new UserDTO();
+				
+				dto.setId(rs.getString("id"));
+				dto.setName(rs.getString("name"));
+				dto.setNickname(rs.getString("nickname"));
+				dto.setTel(rs.getString("tel"));
+				dto.setEmail(rs.getString("email"));
+				dto.setAddress(rs.getString("address"));
+				dto.setBirth(rs.getString("birth"));
+				dto.setSince(rs.getString("since"));
+				dto.setScore(rs.getString("score"));
+				dto.setState(rs.getString("state"));
+				
+				return dto;
+			}
 			
 		} catch (Exception e) {
+			System.out.println("UserDAO.getUser()");
 			e.printStackTrace();
 		}
-		
 		return null;
 	}
 
 	//Block 서블릿이 id를 주면 tblBlock에 insert
-	public int block(String id) {
-		
-		try {
-			
-			String sql = "insert into tblBlock (id, block_type_seq, regdate) values (?, 1, default)";
-			
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, id);
-			
-			return pstat.executeUpdate();
-			
-		} catch (Exception e) {
-			System.out.println("UserDAO.block()");
-			e.printStackTrace();
-		}
-		
-		return 0;
-	}
+	/*
+	 * public int block(String id) {
+	 * 
+	 * try {
+	 * 
+	 * String sql =
+	 * "insert into tblBlock (id, block_type_seq, regdate) values (?, 1, default)";
+	 * 
+	 * pstat = conn.prepareStatement(sql); pstat.setString(1, id);
+	 * 
+	 * return pstat.executeUpdate();
+	 * 
+	 * } catch (Exception e) { System.out.println("UserDAO.block()");
+	 * e.printStackTrace(); }
+	 * 
+	 * return 0; }
+	 */
 }

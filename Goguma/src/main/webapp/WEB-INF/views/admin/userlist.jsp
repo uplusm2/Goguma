@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<!-- main.jsp -->
+	<!-- userlist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<section class="content">
@@ -30,16 +30,20 @@
 					<tr>
 						<c:forEach items="${list}" var="dto">
 							<tr>
-								<td>${dto.id}</td>
+								<td>
+									<a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
+								</td>
 								<td>${dto.name}</td>
 								<td>${dto.since}</td>
 								<td>${dto.score}</td>
 								<td>${dto.state}</td>
 
 								<c:if test="${dto.state == '정상'}">
-									<td><input type="button" value="차단" 
-										class="btn important btn-block" data-name="${dto.name}"
-										data-id="${dto.id}"></td>
+									<td>
+										<input type="button" value="차단" 
+										class="btn important btn-block"
+										data-name="${dto.name}" data-id="${dto.id}">
+									</td>
 								</c:if>
 
 								<c:if test="${dto.state == '탈퇴'}">

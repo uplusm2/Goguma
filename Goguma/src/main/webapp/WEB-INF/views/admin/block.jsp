@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>고구마장터</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
-<link rel="stylesheet" href="/bangterior/css/main_admin.css">
 <style>
 </style>
 </head>
