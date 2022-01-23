@@ -123,38 +123,7 @@ public class UserDAO {
 		return null;
 	}
 	
-	public UserDTO getLogin(String UserId) {
-		
-		String sql = "SELECT * FROM tbluser u LEFT JOIN tbluserinfo i ON u.id = i.id WHERE u.id=?";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, UserId);
-			rs = pstat.executeQuery();
-			
-			rs.next();
-			UserDTO login = new UserDTO();
-			
-			login.setId(rs.getString("id"));
-			login.setPw(rs.getString("pw"));
-			login.setName(rs.getString("name"));
-			login.setLv(rs.getString("lv"));
-			login.setAddress_seq(rs.getString("address_seq"));
-			login.setAddress(rs.getString("address"));
-			login.setTel(rs.getString("tel"));
-			login.setEmail(rs.getString("email"));
-			login.setBirth(rs.getString("birth"));
-			login.setGender(rs.getString("gender"));
-			login.setSince(rs.getString("since"));
-				
-			return login;
-		}catch(Exception e) {
-			System.out.println("UserDAO > getLogin Method");
-			e.printStackTrace();
-		}
-		return null;
-	}
-
+	
 	public int getTotalPage(String userId) {
 		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
 		try {
@@ -202,6 +171,100 @@ public class UserDAO {
 		}
 		return null;
 	}
+	public UserDTO login(UserDTO dto) {
+		try {
+
+
+			String sql = "select * from tblUser u LEFT JOIN tblUserinfo i ON u.id = i.id WHERE i.id=? and u.password=?";
+			
+			conn = open();
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getId()); //첫번째 ?
+			pstat.setString(2, dto.getPw()); //두번째 ?
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				
+				UserDTO result = new UserDTO();
+				
+				result.setId(rs.getString("id"));
+				result.setPw(rs.getString("password"));
+
+				
+				return result;
+				
+			}
+
+		} catch (Exception e) {
+			System.out.println("로그인 오류.login()");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+
+	public int registeruser(String userId, String userPassword) {
+		
+		String sql = "INSERT INTO tbluser VALUES (?, ?, ?)";	
+		
+		try {
+
+			pstat = conn.prepareStatement(sql);
+
+				pstat.setString(1, userId);
+				pstat.setString(2, userPassword);
+				pstat.setString(3, "1");
+				
+				pstat.executeUpdate();
+				
+				rs = pstat.executeQuery();
+				
+				if(rs.next()) {
+					return 1;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return 0;
+			
+		}
+	
+	public int registeruserinfo(String userId, String address1, String name, String address2, String tel, String email, String birth, String gender) {
+		
+		String sql = "INSERT INTO tbluser (id, address_seq, name, address, tel, email, birth, gender, since) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";	
+		
+		try {
+
+			pstat = conn.prepareStatement(sql);
+
+				pstat.setString(1, userId);
+				pstat.setInt(2, Integer.parseInt(address1));
+				pstat.setString(3, name);
+				pstat.setString(4, address2);
+				pstat.setString(5, tel);
+				pstat.setString(6, email);
+				pstat.setString(7, birth);
+				pstat.setString(8, gender);
+				pstat.setString(9, "sysdate");
+				
+				pstat.executeUpdate();
+				
+				rs = pstat.executeQuery();
+				
+				if(rs.next()) {
+					
+					return rs.getString("id");
+					
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+			
+		}
 	
 	
 }
