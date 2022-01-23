@@ -15,11 +15,15 @@ public class myPage extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		HttpSession session = req.getSession();
-		session.setAttribute("id", req.getParameter("id"));
-		session.setMaxInactiveInterval(60*60);
-		String id = (String) session.getAttribute("id");
+		String id;
+		if((String) req.getSession().getAttribute("id")==null) {
+			HttpSession session = req.getSession();
+			session.setAttribute("id", req.getParameter("id"));
+			session.setMaxInactiveInterval(60*60);
+			id = (String) session.getAttribute("id");			
+		}else {
+			id = (String) req.getSession().getAttribute("id");			
+		}
 		
 		ProfileDAO dao  = new ProfileDAO();
 		

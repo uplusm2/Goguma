@@ -115,11 +115,11 @@
 					</div>
 					<div>
 						<input type="button" value="구매 후기" class="btn important"
-						onclick="location.href='/goguma/profile/salesReviewList.do?userId=${userProfileData.id}'">
+						onclick="location.href='/goguma/profile/purchaseReviewList.do'">
 					</div>
 					<div>
 						<input type="button" value="판매 후기" class="btn important" 
-						onclick="location.href='/goguma/profile/purchaseReviewList.do?userId=${userProfileData.id}'">
+						onclick="location.href='/goguma/profile/salesReviewList.do'">
 					</div>
 					<div></div>
 					<div>
@@ -138,7 +138,7 @@
 					<div></div>
 					<div>
 						<input type="button" value="정보 수정" class="btn important" 
-						onclick="location.href='/goguma/profile/profileedit.do?id=${userProfileData.id}'">
+						onclick="location.href='/goguma/profile/profileedit.do'">
 					</div>
 					
 					<div></div>
@@ -166,13 +166,19 @@
 	</div>
 	<script>
 		$(".mainmenu1").click(()=>{
-			$(".frame").attr("src","/goguma/profile/userprofile.do?userId=${userId}");
+			/* $(".frame").attr("src","/goguma/profile/userprofile.do?userId=${userId}"); */
 		});
-		$(".sub").children().eq(0).click(()=>{
-			$(".frame").attr("src","/goguma/profile/salesReviewList.do?userId=${userId}");
+		$(".sub1").children().eq(0).click(()=>{
+			/* $(".frame").attr("src","/goguma/profile/salesReviewList.do?userId=${userId}"); */
+			location.href = "/goguma/profile/mypage.do";
 		});
-		$(".sub").children().eq(1).click(()=>{
-			$(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}");
+		$(".sub1").children().eq(1).click(()=>{
+			/* $(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}"); */
+			location.href = "/goguma/profile/purchaseReviewList.do";
+		});
+		$(".sub1").children().eq(2).click(()=>{
+			/* $(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}"); */
+			location.href = "/goguma/profile/salesReviewList.do";
 		});
 		$(".mainmenu2").click(()=>{
 			$(".frame").attr("src","/goguma/profile/postlist.do?userid=${userId}"); // 나중에 세션으로 사용할것

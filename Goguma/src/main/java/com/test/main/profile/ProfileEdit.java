@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.test.main.user.UserDAO;
 
@@ -20,7 +21,8 @@ public class ProfileEdit extends HttpServlet {
 		
 		ProfileDAO dao  = new ProfileDAO();
 		
-		String id = req.getParameter("id");
+		
+		String id = (String)req.getSession().getAttribute("id");
 		
 		UserProfileDTO userProfileData = dao.getUserProfile(id);
 		

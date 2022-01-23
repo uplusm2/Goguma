@@ -10,14 +10,15 @@
 		<ul>
 			<li>
 				<div class="mainmenu1">| Profile</div>
-				<ul class="sub">
+				<ul class="sub sub1">
+					<li><a href="#">· Profile 관리</a></li>
 					<li><a href="#">· 구매 후기</a></li>
 					<li><a href="#">· 판매 후기</a></li>
 				</ul>
 			</li>
 			<li>
 				<div class="mainmenu2">| 작성글 내역</div>
-				<ul class="sub">
+				<ul class="sub sub2">
 					<li><a href="#">· 커뮤니티 게시글</a></li>
 					<li><a href="#">· 거래글 목록</a></li>
 				</ul>
@@ -47,11 +48,13 @@
 	$(function() {
 		$(".sub").hide();
 		$(".mainmenu1").click(function() {
-			$(this).next().slideDown(200);
+			$(".mainmenu1").next().slideDown(200);
+			
 			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu2").click(()=>{
-			$(this).next().slideDown(200);
+			$(".mainmenu2").next().slideDown(200);
+			
 			$(".mainmenu1").next().slideUp(200);
 		});
 		$(".mainmenu3").click(()=>{

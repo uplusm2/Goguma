@@ -64,12 +64,14 @@ public class ProfileDAO {
 		return null;
 	}
 
-	public ArrayList<ReviewDTO> getPurchaseReviewList(String userId) {
+	public ArrayList<ReviewDTO> getPurchaseReviewList(HashMap<String, String> map) {
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
-		String sql = "select * from vwReceived_buyer_reviews where buyid = ?";
+		String sql = "select * from(select a.*,rownum as rnum from (select * from vwReceived_buyer_reviews where buyid = ? order by regdate) a) where rnum between ? and ?";
 		try {
 			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, userId);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
 			rs = pstat.executeQuery();
 			
 			while(rs.next()) {
@@ -94,12 +96,15 @@ public class ProfileDAO {
 		return null;
 	}
 
-	public ArrayList<ReviewDTO> getSalesReviewList(String userId) {
+	public ArrayList<ReviewDTO> getSalesReviewList(HashMap<String, String> map) {
+		
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
-		String sql = "select * from vwReceived_seller_reviews where selid = ?";
+		String sql = "select * from(select a.*,rownum as rnum from (select * from vwReceived_seller_reviews where selid = ? order by regdate) a) where rnum between ? and ?";
 		try {
 			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, userId);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
 			rs = pstat.executeQuery();
 			
 			while(rs.next()) {
@@ -117,18 +122,32 @@ public class ProfileDAO {
 			
 			return list;
 		}catch(Exception e) {
-			System.out.println("UserDAO > getSalesReviewList Method");
+			System.out.println("UserDAO > getPurchaseReviewList Method");
 			e.printStackTrace();
 		}
 		
 		return null;
 	}
-	
 
-	public int getTotalPage(String userId) {
-		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
+	public int getPurchaseTotalPage(HashMap<String, String> map) {
+		String sql = "select max(rnum) as cnt from(select a.*,rownum as rnum from (select * from vwReceived_buyer_reviews where buyid = ? order by regdate) a)";
 		try {
-			rs = conn.prepareStatement(sql).executeQuery();
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			rs.next();
+			return rs.getInt("cnt");
+		}catch(Exception e) {
+			System.out.println("UserDAO.getTotalPage");
+			e.printStackTrace();
+		}
+		return -1;
+	}
+	
+	public int getSalesTotalPage(HashMap<String, String> map) {
+		String sql = "select max(rnum) as cnt from(select a.*,rownum as rnum from (select * from vwReceived_seller_reviews where selid = ? order by regdate) a)";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
 			rs.next();
 			return rs.getInt("cnt");
 		}catch(Exception e) {
@@ -184,5 +203,9 @@ public class ProfileDAO {
 		return null;
 		
 	}
+
+	
+
+	
 	
 }

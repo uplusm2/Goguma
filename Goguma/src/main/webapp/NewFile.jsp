@@ -10,8 +10,8 @@
 	<h1>상대방 프로필</h1>
 	<form action="/goguma/profile/mypage.do" method="get">
 		
-		<input type="hidden" name="id" value="user2">
-		<button type="submit">user2</button>
+		<input type="hidden" name="id" value="user17">
+		<button type="submit">user17</button>
 		
 	</form>
 	<h1>상대방 프로필</h1>
