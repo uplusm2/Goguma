@@ -48,7 +48,7 @@
 }
 
 
-/* section */
+/* 메시지 목록 */
 .message-in {
 	/* position: relative; */
 	width: 1300px;
@@ -66,6 +66,7 @@
     border-right: 0px;
     text-align: center;
     font-weight: 400;
+    cursor: pointer;
 }
 .message-in .table tr {
     height: 40px;
@@ -122,15 +123,30 @@
 .message-in .detail tr:nth-child(3) td{
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 30px;
 }
-.message-in .detail .btn{
-    transform: translateX(800px) translateY(-15px);
+
+
+/* 메시지 버튼 */
+.message-in .btn{
     font-weight: 700;
     font-size: 16px;
     padding: 3px;
     position: relative;
     width: 55px;
+    transform: translateX(10px) translateY(10px);
+}
+.message-in .detail .btn,
+.message-in .button .btn {
+	outline: 0;
+}
+.message-in .btn:hover {
+	color: #9B59B6;
+}
+.message-in .detail td:nth-child(1) .btn{
+    transform: translateX(800px) translateY(-15px);
 }
 .message-in .detail td:nth-child(2) .btn{
-    transform: translateX(790px) translateY(-15px);
+    transform: translateX(780px) translateY(-15px);
 }
+

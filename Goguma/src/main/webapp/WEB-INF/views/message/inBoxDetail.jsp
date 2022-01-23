@@ -49,6 +49,10 @@
 					</td>
 				</tr>
 			</table>
+			<div class="button common">
+				<input type="button" value="목록" class="btn list"
+					onclick="location.href='/goguma/message/inBox.do';">
+			</div>
 		</section>
 	</main>
 	
