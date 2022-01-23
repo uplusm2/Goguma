@@ -89,7 +89,7 @@ public class MessageDAO {
 		return null;
 	}
 
-	public MessageDTO getInDetail(String seq) {
+	public MessageDTO getMessage(String seq) {
 		try {
 			String sql = "select * from vwMessage where message_seq = ?";
 			
@@ -117,5 +117,6 @@ public class MessageDAO {
 		}
 		return null;
 	}
+
 	
 }

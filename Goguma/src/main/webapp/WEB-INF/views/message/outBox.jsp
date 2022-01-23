@@ -12,7 +12,7 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="message-in">
+		<section class="message-detail">
 			<nav class="left-side">
 				<div class="menu">
 					<ul>
@@ -38,7 +38,9 @@
 				<c:forEach items="${list}" var="dto">
 				<tr>
 					<td>${dto.receiverNickname}</td>
-					<td>${dto.content}</td>
+					<td onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${dto.messageSeq}';">
+						${dto.content}
+					</td>
 					<td>${dto.sendTime}</td>
 				</tr>
 				</c:forEach>

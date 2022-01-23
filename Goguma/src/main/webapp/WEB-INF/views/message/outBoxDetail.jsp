@@ -25,13 +25,13 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
-				<h2>받은 메시지</h2>
+			<div class="title" onclick="location.href='/goguma/message/outBox.do';">
+				<h2>보낸 메시지</h2>
 			</div>
 			<table class="detail">
 				<tr>
-					<td><b>보낸 사람</b></td>
-					<td>${dto.senderNickname}</td>
+					<td><b>받는 사람</b></td>
+					<td>${dto.receiverNickname}</td>
 				</tr>
 				<tr>
 					<td><b>보낸 시간</b></td>
@@ -51,7 +51,7 @@
 			</table>
 			<div class="button common">
 				<input type="button" value="목록" class="btn list"
-					onclick="location.href='/goguma/message/inBox.do';">
+					onclick="location.href='/goguma/message/outBox.do';">
 			</div>
 		</section>
 	</main>
