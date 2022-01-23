@@ -12,14 +12,19 @@
 			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
 		</form>
 		<ul class="menu-option">
-			<c:if test="${not empty id}">
-			<li>로그인</li>
+			<c:if test="${empty id}">
+			<li><a href="/goguma/user/login.do">로그인</a></li>
 			<li>회원가입</li>
 			</c:if>
-			<c:if test="${empty id}">
+			<c:if test="${not empty id}">
 			<li onclick="location.href='/goguma/message/inBox.do';"><img src="/goguma/asset/img/message.png"></li>
-			<li>고구마님</li>
-			<li>로그아웃</li>
+				<c:if test="${lv==1}">
+					<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
+				</c:if>
+				<c:if test="${lv==2}">
+					<li onclick="location.href='goguma/admin/dashboard.do';">${id}님</li>
+				</c:if>
+				<li>로그아웃</li>
 			</c:if>
 		</ul>
 		<ul class="menu">

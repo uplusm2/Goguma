@@ -21,7 +21,7 @@ public class CenterDAO {
 		
 		try {
 
-			conn = DBUtil.open("goguma","java1234");
+			conn = DBUtil.open();
 			stat = conn.createStatement();
 
 		} catch (Exception e) {

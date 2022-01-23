@@ -26,7 +26,7 @@
 	<script>
 	
 		<c:if test="${not empty id}">
-			location.href = '/goguma/user/user.do';
+			location.href = '/goguma/main.do';
 		</c:if>
 
 		<c:if test="${empty id}">
