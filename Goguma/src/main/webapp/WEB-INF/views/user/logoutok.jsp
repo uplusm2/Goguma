@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Code</title>
-
+<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
 </style>
@@ -13,15 +13,15 @@
 <body>
 	<!-- logoutok.jsp -->
 	<main class="main">
-		<%@include file="/WEB-INF/views/header.jsp" %>
+		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
 			
 		</section>
-		<%@include file="/WEB-INF/views/footer.jsp" %>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>
-		location.href = '/.do';
+		location.href = 'main.do';
 	</script>
 </body>
 </html>
