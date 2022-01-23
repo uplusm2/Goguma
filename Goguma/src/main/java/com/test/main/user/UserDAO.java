@@ -174,27 +174,27 @@ public class UserDAO {
 	public UserDTO login(UserDTO dto) {
 		try {
 
-
-			String sql = "select * from tblUser u LEFT JOIN tblUserinfo i ON u.id = i.id WHERE i.id=? and u.password=?";
-			
+			String sql = "select * from vwUserALL WHERE id=? and password=?";
+				
 			conn = open();
 			pstat = conn.prepareStatement(sql);
-			
+				
 			pstat.setString(1, dto.getId()); //첫번째 ?
 			pstat.setString(2, dto.getPw()); //두번째 ?
-			
+				
 			rs = pstat.executeQuery();
-			
+					
 			if (rs.next()) {
-				
+					
 				UserDTO result = new UserDTO();
-				
+					
 				result.setId(rs.getString("id"));
 				result.setPw(rs.getString("password"));
-
-				
+				result.setNickname(rs.getString("nickname"));
+				result.setLv(rs.getString("lv"));
+					
 				return result;
-				
+					
 			}
 
 		} catch (Exception e) {
