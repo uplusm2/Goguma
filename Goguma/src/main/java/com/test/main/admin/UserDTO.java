@@ -11,7 +11,7 @@ public class UserDTO {
 	private String address;
 	private String birth;
 	private String since;
-	private double score;
+	private String score;
 	private String state;
 	
 	public String getId() {
@@ -62,10 +62,10 @@ public class UserDTO {
 	public void setSince(String since) {
 		this.since = since;
 	}
-	public double getScore() {
+	public String getScore() {
 		return score;
 	}
-	public void setScore(double score) {
+	public void setScore(String score) {
 		this.score = score;
 	}
 	public String getState() {
