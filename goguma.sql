@@ -3,6 +3,7 @@ select * from tblfavorite;
 select * from tbluserprofile;
 select * from tblreview;
 select * from tbldeal;
+select * from tblProduct;
 
 drop view vwReceived_buyer_reviews;   
 create or replace view vwReceived_buyer_reviews
@@ -64,6 +65,7 @@ select --판매한상품
     tblproduct.product_seq 
     ,'['||tblproduct.name||']'||tblproduct.content as content
     , tbluserprofile.nickname,tbluserprofile.id 
+    , tbldeal.deal_seq
     , tbldeal.REGDATE
     from tblproduct 
     inner join tbldeal on tblproduct.product_seq = tbldeal.product_seq
@@ -77,20 +79,71 @@ select --구매한상품
     tblproduct.product_seq 
     ,'['||tblproduct.name||']'||tblproduct.content as content
     , tbluserprofile.nickname,tbluserprofile.id 
+    , tbldeal.deal_seq
     , tbldeal.REGDATE
     from tblproduct 
     inner join tbldeal on tblproduct.product_seq = tbldeal.product_seq
     inner join tbluserprofile on tbluserprofile.id = tbldeal.id order by REGDATE;
 
 select * from vwPurchasedProduct where id = 'user2';
+
+
 select * from(select a.*,rownum as rnum from (select * from vwReceived_seller_reviews where selid = 'user17' order by regdate) a);
 
 
+select * from(select a.*,rownum as rnum from (select * from vwReceived_buyer_reviews where buyid = 'user17' order by regdate) a) where rnum between 1 and 10;
+
+
+select -- 판매한것
+    a.PRODUCT_SEQ
+    ,a.content
+    ,a.nickname
+    ,a.id
+    ,a.regdate
+    ,re.DEAL_SEQ
+    ,re.Type
+from(select a.*,rownum as rnum from(select * from vwproductsold where id = 'user17' order by regdate) a) a
+            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B';
+
+select * from(select a.* , rownum as rnum from( select * from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+        where id = 'user2' and type='B' order by p.regdate) a) where rnum between ? and ?;
+
+select -- 판매한것
+    count(*) as cnt
+from(select a.*,rownum as rnum from(select * from vwproductsold where id = ? order by regdate) a) a
+            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B';
 
 
 
-select * from(select a.*,rownum as rnum from (select * from vwReceived_buyer_reviews where buyid = 'user17' order by regdate) a);
+select -- 구매한것
+    a.PRODUCT_SEQ
+    ,a.content
+    ,a.nickname
+    ,a.id
+    ,a.regdate
+    ,re.DEAL_SEQ
+    ,re.Type
+from(select a.*,rownum as rnum from(select * from vwPurchasedProduct where id = 'user17' order by regdate) a) a
+            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B' and a.rnum >0;
 
+select -- 구매한것
+    count(*)
+from(select a.*,rownum as rnum from(select * from vwPurchasedProduct where id = 'user17' order by regdate) a) a
+            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B' and a.rnum >0;
+
+
+select * from(select a.* , rownum as rnum from( select * from (vwPurchasedProduct p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+        where id = 'user2' and type='B' order by p.regdate) a) where rnum between ? and ?;
+
+
+
+
+
+
+select 
+    a.*
+from(select a.*,rownum as rnum from(select * from vwproductsold where id = 'user17'  order by regdate) a) a;
+commit;
 
 
 

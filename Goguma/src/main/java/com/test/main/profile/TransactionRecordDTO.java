@@ -1,13 +1,35 @@
 package com.test.main.profile;
 
 public class TransactionRecordDTO {
-
+	
 	private int PRODUCT_SEQ;
 	private String contetnt;
 	private String nickname;
 	private String id;
 	private String regdate;
+	private int DEAL_SEQ;
+	private String Type;
 	
+	private int rnum;
+	
+	public int getRnum() {
+		return rnum;
+	}
+	public void setRnum(int rnum) {
+		this.rnum = rnum;
+	}
+	public int getDEAL_SEQ() {
+		return DEAL_SEQ;
+	}
+	public void setDEAL_SEQ(int dEAL_SEQ) {
+		DEAL_SEQ = dEAL_SEQ;
+	}
+	public String getType() {
+		return Type;
+	}
+	public void setType(String type) {
+		Type = type;
+	}
 	public int getPRODUCT_SEQ() {
 		return PRODUCT_SEQ;
 	}

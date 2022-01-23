@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/profile/purchaserecord.do")
-public class PurchaseRecord extends HttpServlet {
+@WebServlet("/profile/salesrecord.do")
+public class SalesRecord extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -55,7 +55,7 @@ public class PurchaseRecord extends HttpServlet {
 		
 		String pagebar="";
 		
-		ArrayList<TransactionRecordDTO> list = dao.getPurchaseRecord(map);
+		ArrayList<TransactionRecordDTO> list = dao.getSalesRecord(map);
 		System.out.println(list.size());
 		req.setAttribute("list", list);
 		for (TransactionRecordDTO dto : list) {
@@ -68,7 +68,7 @@ public class PurchaseRecord extends HttpServlet {
 			}
 		}
 		
-		totalCount = dao.getPurchaseRecordTotalPage(map);
+		totalCount = dao.getSalesRecordTotalPage(map);
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 		
 		n = ((nowPage - 1) / blockSize) * blockSize + 1; //페이지 번호
@@ -107,7 +107,7 @@ public class PurchaseRecord extends HttpServlet {
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/purchaserecord.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/salesrecord.jsp");
 		dispatcher.forward(req, resp);
 	}
 

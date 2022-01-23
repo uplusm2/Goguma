@@ -177,22 +177,30 @@ public class ProfileDAO {
 		
 	}
 
-	public ArrayList<TransactionRecordDTO> getPurchaseRecord(String id) {
+	public ArrayList<TransactionRecordDTO> getPurchaseRecord(HashMap<String, String> map) {
 		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
-		String sql = "select * from vwPurchasedProduct where id = ?";
+		String sql = "select * from(select a.* , rownum as rnum from( select * from (vwPurchasedProduct p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "        where id = ? and type='B' order by p.regdate) a) where rnum between ? and ?";
 		try {
 			
 			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, id);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
 			rs = pstat.executeQuery();
 			
 			while(rs.next()) {
 				TransactionRecordDTO dto = new TransactionRecordDTO();
+				
 				dto.setPRODUCT_SEQ(rs.getInt("product_seq"));
 				dto.setContetnt(rs.getString("CONTENT"));
 				dto.setNickname(rs.getString("NICKNAME"));
 				dto.setId(rs.getString("id"));
 				dto.setRegdate(rs.getString("REGDATE"));
+				dto.setDEAL_SEQ(rs.getInt("DEAL_SEQ"));
+				dto.setType(rs.getString("type"));
+				
+				dto.setRnum(rs.getInt("rnum"));
 				
 				list.add(dto);
 			}
@@ -202,6 +210,75 @@ public class ProfileDAO {
 		}
 		return null;
 		
+	}
+
+	public int getPurchaseRecordTotalPage(HashMap<String, String> map) {
+		String sql = "select -- 구매한것\r\n"
+				+ "    count(*) as cnt\r\n"
+				+ "from(select a.*,rownum as rnum from(select * from vwPurchasedProduct where id = ? order by regdate) a) a\r\n"
+				+ "            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B'";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			rs.next();
+			return rs.getInt("cnt");
+		}catch(Exception e) {
+			System.out.println("UserDAO.getTotalPage");
+			e.printStackTrace();
+		}
+		return -1;
+	}
+	
+	public ArrayList<TransactionRecordDTO> getSalesRecord(HashMap<String, String> map) {
+		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
+		String sql = "select * from(select a.* , rownum as rnum from( select * from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "        where id = 'user2' and type='B' order by p.regdate) a) where rnum between ? and ?";
+		try {
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
+			rs = pstat.executeQuery();
+			
+			while(rs.next()) {
+				TransactionRecordDTO dto = new TransactionRecordDTO();
+				
+				dto.setPRODUCT_SEQ(rs.getInt("product_seq"));
+				dto.setContetnt(rs.getString("CONTENT"));
+				dto.setNickname(rs.getString("NICKNAME"));
+				dto.setId(rs.getString("id"));
+				dto.setRegdate(rs.getString("REGDATE"));
+				dto.setDEAL_SEQ(rs.getInt("DEAL_SEQ"));
+				dto.setType(rs.getString("type"));
+				
+				dto.setRnum(rs.getInt("rnum"));
+				
+				list.add(dto);
+			}
+			return list;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+
+	public int getSalesRecordTotalPage(HashMap<String, String> map) {
+		String sql = "select -- 판매한것\r\n"
+				+ "    count(*) as cnt\r\n"
+				+ "from(select a.*,rownum as rnum from(select * from vwproductsold where id = ? order by regdate) a) a\r\n"
+				+ "            left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where re.type='B'";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			rs.next();
+			return rs.getInt("cnt");
+		}catch(Exception e) {
+			System.out.println("UserDAO.getTotalPage");
+			e.printStackTrace();
+		}
+		return -1;
 	}
 
 	
