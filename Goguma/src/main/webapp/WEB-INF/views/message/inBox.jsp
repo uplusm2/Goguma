@@ -35,7 +35,7 @@
 					<th>날짜</th>
 				</tr>
 				<c:forEach items="${list}" var="dto">
-				<tr>
+				<tr class="${dto.isCheck}">
 					<td>${dto.senderNickname}</td>
 					<td onclick="location.href='/goguma/message/inBoxDetail.do?message_seq=${dto.messageSeq}';">
 						${dto.content}
@@ -48,7 +48,6 @@
 	</main>
 	
 	<script>
-	
 	</script>
 </body>
 </html>

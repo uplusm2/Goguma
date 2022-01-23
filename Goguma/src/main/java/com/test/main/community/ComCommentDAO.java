@@ -19,7 +19,7 @@ public class ComCommentDAO {
 	
 	public ComCommentDAO() {
 		try {
-			conn = DBUtil.open();
+			conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -95,6 +95,9 @@
 .message-detail .table td:nth-child(5){
     padding-right: 20px;
 }
+.message-detail .table .Y {
+	color: #757575;
+}
 
 
 /* 메시지 읽기 */
