@@ -34,13 +34,16 @@ public class ProfileDAO {
             return null;
         }
     }
-
+	
+	public ProfileDAO() {
+//		conn = DBUtil.open("GOGUMA","java1234");
+		conn = open();
+	}
 	public UserProfileDTO getUserProfile(String userId) {
 		
 		
 		String sql = "select * from tbluserprofile where id=?";
 		try {
-			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -65,7 +68,6 @@ public class ProfileDAO {
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
 		String sql = "select * from vwReceived_buyer_reviews where buyid = ?";
 		try {
-			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -96,7 +98,6 @@ public class ProfileDAO {
 		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
 		String sql = "select * from vwReceived_seller_reviews where selid = ?";
 		try {
-			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, userId);
 			rs = pstat.executeQuery();
@@ -127,7 +128,6 @@ public class ProfileDAO {
 	public int getTotalPage(String userId) {
 		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
 		try {
-			conn = DBUtil.open();
 			rs = conn.prepareStatement(sql).executeQuery();
 			rs.next();
 			return rs.getInt("cnt");
@@ -143,7 +143,6 @@ public class ProfileDAO {
 		String sql = "update tbluserprofile set intro = ? , nickname =? , path = 'default image.jpg' where id =?";
 		
 		try {
-			conn = DBUtil.open();
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, map.get("intro"));
@@ -156,6 +155,33 @@ public class ProfileDAO {
 			e.printStackTrace();
 		}
 		return 0;
+		
+	}
+
+	public ArrayList<TransactionRecordDTO> getPurchaseRecord(String id) {
+		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
+		String sql = "select * from vwPurchasedProduct where id = ?";
+		try {
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			rs = pstat.executeQuery();
+			
+			while(rs.next()) {
+				TransactionRecordDTO dto = new TransactionRecordDTO();
+				dto.setPRODUCT_SEQ(rs.getInt("product_seq"));
+				dto.setContetnt(rs.getString("CONTENT"));
+				dto.setNickname(rs.getString("NICKNAME"));
+				dto.setId(rs.getString("id"));
+				dto.setRegdate(rs.getString("REGDATE"));
+				
+				list.add(dto);
+			}
+			return list;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 		
 	}
 	

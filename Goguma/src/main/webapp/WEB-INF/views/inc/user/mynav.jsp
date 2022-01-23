@@ -17,6 +17,10 @@
 			</li>
 			<li>
 				<div class="mainmenu2">| 작성글 내역</div>
+				<ul class="sub">
+					<li><a href="#">· 커뮤니티 게시글</a></li>
+					<li><a href="#">· 거래글 목록</a></li>
+				</ul>
 			</li>
 			<li>
 				<div class="mainmenu3">| 회원 정보</div>
@@ -44,24 +48,31 @@
 		$(".sub").hide();
 		$(".mainmenu1").click(function() {
 			$(this).next().slideDown(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu2").click(()=>{
+			$(this).next().slideDown(200);
 			$(".mainmenu1").next().slideUp(200);
 		});
 		$(".mainmenu3").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu4").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu5").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu6").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 		$(".mainmenu7").click(()=>{
 			$(".mainmenu1").next().slideUp(200);
+			$(".mainmenu2").next().slideUp(200);
 		});
 	});
 </script>

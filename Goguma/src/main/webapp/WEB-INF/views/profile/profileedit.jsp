@@ -108,39 +108,47 @@
 </head>
 <body>
 	<!-- main.jsp -->
-	<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
-		<form method="POST" action="/goguma/user/profileeditok.do"
-			 enctype="multipart/form-data">
-			<div class="grid-container">
-				<div>
-					<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
-				</div>
-				
-				<div>
-					<div style="background-color:#EEECEC">NickName</div>
-					<div style="background-color:#EEECEC">info </div>
-				</div>
-				
-				<div>
-					<div> <input type="text" class="text" placeholder="닉네임을 입력하세요." name="nickName"></div>
-					<div> <input type="text" class="text" placeholder="소개글을 입력하세요." name="intro"></div>
-				</div>
-				
-				<div><div class="filebox">
-					  <label for="ex_file">업로드</label>
-					  <input type="file" id="ex_file" name="attach">
-					</div>
-				</div>
-				<div><input type="hidden" name="id" value="${userProfileData.id}"></div>
-				<div></div>
-				<div></div>
-				<div>
-					<input type="submit" value="정보 수정" class="btn important">
-				</div>
-			</div>
-		</form>
+	<div class="container"
+		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
+		<main class="main">
+			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
+			<section class="content">
+				<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
+					<form method="POST" action="/goguma/profile/profileeditok.do"
+						 enctype="multipart/form-data">
+						<div class="grid-container">
+							<div>
+								<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
+							</div>
+							
+							<div>
+								<div style="background-color:#EEECEC">NickName</div>
+								<div style="background-color:#EEECEC">info </div>
+							</div>
+							
+							<div>
+								<div> <input type="text" class="text" placeholder="닉네임을 입력하세요." name="nickName"></div>
+								<div> <input type="text" class="text" placeholder="소개글을 입력하세요." name="intro"></div>
+							</div>
+							
+							<div><div class="filebox">
+								  <label for="ex_file">업로드</label>
+								  <input type="file" id="ex_file" name="attach">
+								</div>
+							</div>
+							<div><input type="hidden" name="id" value="${userProfileData.id}"></div>
+							<div></div>
+							<div></div>
+							<div>
+								<input type="submit" value="정보 수정" class="btn important">
+							</div>
+						</div>
+					</form>
+				</section>
+			</main>
+		</div>
 	<script>
-		
 	</script>
 </body>
 </html>

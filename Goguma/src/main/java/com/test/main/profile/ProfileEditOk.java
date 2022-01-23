@@ -20,9 +20,7 @@ public class ProfileEditOk extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
 		ProfileDAO dao  = new ProfileDAO();
-
 		
 		 try {
 	         
@@ -48,7 +46,6 @@ public class ProfileEditOk extends HttpServlet {
 	         
 	         String path = multi.getFilesystemName("attach");
 	         
-	         
 	         UserProfileDTO userProfileData = dao.getUserProfile(id);
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
@@ -67,7 +64,7 @@ public class ProfileEditOk extends HttpServlet {
 	         System.out.println("FileTestOk.doPost()");
 	         e.printStackTrace();
 	      }
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/userprofile.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/mypage.jsp");
 		dispatcher.forward(req, resp);
 	}
 

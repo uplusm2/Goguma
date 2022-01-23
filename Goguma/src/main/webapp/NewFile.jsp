@@ -8,10 +8,10 @@
 </head>
 <body>
 	<h1>상대방 프로필</h1>
-	<form action="/goguma/profile/user.do" method="get">
+	<form action="/goguma/profile/mypage.do" method="get">
 		
-		<input type="text" name="id">id
-		<button type="submit"></button>
+		<input type="hidden" name="id" value="user2">
+		<button type="submit">user2</button>
 		
 	</form>
 	<h1>상대방 프로필</h1>

@@ -111,7 +111,7 @@
 			</div>
 			<div>
 				<input type="button" value="정보 수정" class="btn important" 
-					onclick="location.href='/goguma/user/profileedit.do?id=${userProfileData.id}'">
+					onclick="location.href='/goguma/profile/profileedit.do?id=${userProfileData.id}'">
 			</div>
 		</div>
 	<script>
