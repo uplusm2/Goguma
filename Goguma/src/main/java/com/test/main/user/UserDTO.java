@@ -13,7 +13,14 @@ public class UserDTO {
 	private String birth;
 	private String gender;
 	private String since;
+	private String nickname;
 	
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
 	public String getId() {
 		return id;
 	}
