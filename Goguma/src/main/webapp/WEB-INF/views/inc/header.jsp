@@ -14,7 +14,7 @@
 		<ul class="menu-option">
 			<c:if test="${empty id}">
 			<li><a href="/goguma/user/login.do">로그인</a></li>
-			<li>회원가입</li>
+			<li><a href="/goguma/user/userregister.do">회원가입</a></li>
 			</c:if>
 			<c:if test="${not empty id}">
 			<li onclick="location.href='/goguma/message/inBox.do';"><img src="/goguma/asset/img/message.png"></li>
