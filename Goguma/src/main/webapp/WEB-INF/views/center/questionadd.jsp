@@ -10,12 +10,12 @@
 </style>
 </head>
 <body>
-	<!-- .jsp -->
+	<!-- questionadd.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="content">
 			
-			<form method="POST" action="/goguma/center/faqaddok.do">
+			<form method="POST" action="/goguma/center/questionaddok.do">
 				<table class="table table-bordered add">
 					<tr>
 						<th>제목</th>
@@ -36,17 +36,17 @@
 							</select>
 						</td>
 					</tr>
-					 
 				</table>
 				
 				<div class="btns">
 					<input type="button" value="돌아가기"
 						class="btn btn-default"
-						onclick="location.href='/goguma/center/faq.do?search=1&page=1';">
+						onclick="location.href='/goguma/center/questionlist.do?search=1&page=1';">
 					<input type="submit" value="글쓰기"
 						class="btn btn-primary">										
 				</div>
 			</form>
+			
 			
 		</section>
 			

@@ -10,8 +10,10 @@ public class CenterDTO {
 	private String content;
 	private String regdate;
 	private String type;
+	private String User;
 	private int readcount;
 	private ArrayList<String> img;
+	
 	
 	
 	public String getRegdate() {
@@ -61,6 +63,12 @@ public class CenterDTO {
 	}
 	public void setImg(ArrayList<String> img) {
 		this.img = img;
+	}
+	public String getUser() {
+		return User;
+	}
+	public void setUser(String user) {
+		User = user;
 	}
 	
 	

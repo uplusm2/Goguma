@@ -8,21 +8,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/center/faqedit.do")
-public class faqEdit extends HttpServlet {
+@WebServlet("/center/questionview.do")
+public class QuestionView extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String seq = req.getParameter("seq");
+		String page = req.getParameter("page");
 		
 		CenterDAO dao = new CenterDAO();
 		
-		CenterDTO dto = dao.get(seq);
+		CenterDTO dto = dao.questionGet(seq);
+		CenterDTO reply = dao.replyGet(seq);
+		
 		
 		
 		req.setAttribute("dto", dto);
+		req.setAttribute("reply", reply);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/faqedit.jsp");
+		req.setAttribute("page", page);
+		
+		
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/questionview.jsp");
 		dispatcher.forward(req, resp);
 
 	}
