@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 
@@ -8,27 +8,28 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/user/userprofile.do")
-public class UserProfile extends HttpServlet {
+import com.test.main.user.UserDAO;
+
+@WebServlet("/profile/profileedit.do")
+public class ProfileEdit extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		UserDAO dao  = new UserDAO();
 		
-		String userId = req.getParameter("userId");
+		ProfileDAO dao  = new ProfileDAO();
 		
-		if(req.getParameter("id")!=null) userId = req.getParameter("id");
 		
-		UserProfileDTO userProfileData = dao.getUserProfile(userId);
+		String id = (String)req.getSession().getAttribute("id");
+		
+		UserProfileDTO userProfileData = dao.getUserProfile(id);
 		
 		req.setAttribute("userProfileData", userProfileData);
-
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userprofile.jsp");
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/profileedit.jsp");
 		dispatcher.forward(req, resp);
 	}
+
 }
-
-
-

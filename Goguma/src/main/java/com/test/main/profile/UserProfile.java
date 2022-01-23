@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 
@@ -9,23 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/user/profileedit.do")
-public class ProfileEdit extends HttpServlet {
+import com.test.main.user.UserDAO;
+
+@WebServlet("/profile/userprofile.do")
+public class UserProfile extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		ProfileDAO dao  = new ProfileDAO();
 		
-		UserDAO dao  = new UserDAO();
+		String userId = req.getParameter("userId");
 		
-		String id = req.getParameter("id");
+		if(req.getParameter("id")!=null) userId = req.getParameter("id");
 		
-		UserProfileDTO userProfileData = dao.getUserProfile(id);
+		UserProfileDTO userProfileData = dao.getUserProfile(userId);
 		
 		req.setAttribute("userProfileData", userProfileData);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/profileedit.jsp");
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/userprofile.jsp");
 		dispatcher.forward(req, resp);
 	}
-
 }
+
+
+

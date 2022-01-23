@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 public class UserProfileDTO {
 	private String id;

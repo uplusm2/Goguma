@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,20 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.test.main.user.UserDAO;
 
-@WebServlet("/user/profileeditok.do")
+@WebServlet("/profile/profileeditok.do")
 public class ProfileEditOk extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
-		UserDAO dao  = new UserDAO();
-		
-		
-		
-		
-		
+		ProfileDAO dao  = new ProfileDAO();
 		 try {
 	         
 	         //Request -> (대신 + 파일 업로드) -> com.reilly.servlet.MultipartRequest
@@ -43,15 +38,12 @@ public class ProfileEditOk extends HttpServlet {
 	                                 "UTF-8",
 	                                 new DefaultFileRenamePolicy()
 	                            );
-	         
-	         String id = multi.getParameter("id");
+	         String id = (String)req.getSession().getAttribute("id");
 	         String nickName = multi.getParameter("nickName");
 	         String intro = multi.getParameter("intro");
 	         
 	         String path = multi.getFilesystemName("attach");
 	         
-	         
-	         UserProfileDTO userProfileData = dao.getUserProfile(id);
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
 	         
@@ -61,15 +53,17 @@ public class ProfileEditOk extends HttpServlet {
 	         map.put("path", path);
 	         
 	         int check = dao.setProfile(map);
+	         
 	         System.out.println(check); // 나중에 처리
 	 		 System.out.println(req.getRealPath("/files/profile"));
-	 		 req.setAttribute("userProfileData", userProfileData);
+	 		 
+	 		 req.setAttribute("check", check);
 	 		 
 	      } catch (Exception e) {
-	         System.out.println("FileTestOk.doPost()");
+	         System.out.println("ProfileEditOk.doPost()");
 	         e.printStackTrace();
 	      }
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userprofile.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/profileeditok.jsp");
 		dispatcher.forward(req, resp);
 	}
 

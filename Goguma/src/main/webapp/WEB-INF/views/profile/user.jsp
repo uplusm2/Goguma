@@ -32,7 +32,7 @@
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/usernav.jsp"%>
 			<section class="content">
-				<iframe class="frame" src="/goguma/user/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
+				<iframe class="frame" src="/goguma/profile/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
 				</iframe>
 			</section>
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
@@ -40,13 +40,13 @@
 	</div>
 	<script>
 		$(".mainmenu1").click(()=>{
-			$(".frame").attr("src","/goguma/user/userprofile.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/userprofile.do?userId=${userId}");
 		});
 		$(".sub").children().eq(0).click(()=>{
-			$(".frame").attr("src","/goguma/user/salesReviewList.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/salesReviewList.do?userId=${userId}");
 		});
 		$(".sub").children().eq(1).click(()=>{
-			$(".frame").attr("src","/goguma/user/purchaseReviewList.do?userId=${userId}");
+			$(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}");
 		});
 	</script>
 </body>

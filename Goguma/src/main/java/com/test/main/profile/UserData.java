@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/user/memberdata.do")
-public class MemberData extends HttpServlet {
+@WebServlet("/profile/userdata.do")
+public class UserData extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class MemberData extends HttpServlet {
 		
 		
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/memberdata.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/memberdata.jsp");
 		dispatcher.forward(req, resp);
 	}
 

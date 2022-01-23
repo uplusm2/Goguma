@@ -1,4 +1,4 @@
-package com.test.main.user;
+package com.test.main.profile;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/user/postlist.do")
+@WebServlet("/profile/postlist.do")
 public class PostList extends HttpServlet {
 
 	@Override
@@ -17,7 +17,7 @@ public class PostList extends HttpServlet {
 		
 		String id = req.getParameter("id");// 나중에 세련으로 변경
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/postlist.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/postlist.jsp");
 		dispatcher.forward(req, resp);
 	}
 

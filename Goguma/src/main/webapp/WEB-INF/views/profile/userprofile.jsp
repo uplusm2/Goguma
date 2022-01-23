@@ -87,12 +87,12 @@
 			
 			<div>
 				<input type="button" value="구매 후기" class="btn important"
-					onclick="location.href='/goguma/user/salesReviewList.do?userId=${userProfileData.id}'">
+					onclick="location.href='/goguma/profile/salesReviewList.do?userId=${userProfileData.id}'">
 			</div>
 			
 			<div>
 				<input type="button" value="판매 후기" class="btn important" 
-					onclick="location.href='/goguma/user/purchaseReviewList.do?userId=${userProfileData.id}'">
+					onclick="location.href='/goguma/profile/purchaseReviewList.do?userId=${userProfileData.id}'">
 			</div>
 			
 			<div>
@@ -111,7 +111,7 @@
 			</div>
 			<div>
 				<input type="button" value="정보 수정" class="btn important" 
-					onclick="location.href='/goguma/user/profileedit.do?id=${userProfileData.id}'">
+					onclick="location.href='/goguma/profile/profileedit.do?id=${userProfileData.id}'">
 			</div>
 		</div>
 	<script>
