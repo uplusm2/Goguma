@@ -31,14 +31,14 @@
 			<table class="detail">
 				<tr>
 					<td><b>보낸 사람</b></td>
-					<td>감자</td>
+					<td>${dto.senderNickname}</td>
 				</tr>
 				<tr>
 					<td><b>보낸 시간</b></td>
-					<td>22.01.16 22:10</td>
+					<td>${dto.sendTime}</td>
 				</tr>
 				<tr>
-					<td colspan="2">안녕하세여ㅎㅎ 친해지고 싶어요!</td>
+					<td colspan="2">${dto.content}</td>
 				</tr>
 				<tr>
 					<td><input type="button" value="답장" class="btn"

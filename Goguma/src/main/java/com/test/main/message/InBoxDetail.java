@@ -17,9 +17,11 @@ import com.test.main.community.CommunityDTO;
 public class InBoxDetail extends HttpServlet {
 	private MessageDAO dao;
 	private MessageDTO dto;
+	private Calendar now;
 	
 	{
 		dao = new MessageDAO();
+		now = Calendar.getInstance();
 	}
 	
 	@Override
@@ -27,9 +29,15 @@ public class InBoxDetail extends HttpServlet {
 		
 		String seq = req.getParameter("message_seq");
 		dto = dao.getInDetail(seq);
+		refineData(dto);
 		
 		req.setAttribute("dto", dto);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBoxDetail.jsp");
 		dispatcher.forward(req, resp);
+	}
+	
+	private void refineData(MessageDTO dto) {
+		String tmp = dto.getSendTime().replace("-", ".");
+		dto.setSendTime(tmp.substring(2));
 	}
 }
