@@ -28,7 +28,7 @@
 			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
 				<h2>받은 메시지</h2>
 			</div>
-			<table class="table">
+		<!-- 	<table class="table">
 				<tr>
 					<th>보낸 사람</th>
 					<th>내용</th>
@@ -43,7 +43,7 @@
 					<td>${dto.sendTime}</td>
 				</tr>
 				</c:forEach>
-			</table>
+			</table> -->
 		</section>
 	</main>
 	

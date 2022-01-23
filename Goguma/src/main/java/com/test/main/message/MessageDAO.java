@@ -44,6 +44,7 @@ public class MessageDAO {
 				dto.setIsCheck(rs.getString("is_check"));
 				dto.setSenderNickname(rs.getString("sender_nickname"));
 				dto.setReceiverNickname(rs.getString("receiver_nickname"));
+				dto.setMessageSeq(rs.getString("message_seq"));
 				
 				list.add(dto);
 			}
@@ -75,6 +76,7 @@ public class MessageDAO {
 				dto.setIsCheck(rs.getString("is_check"));
 				dto.setSenderNickname(rs.getString("sender_nickname"));
 				dto.setReceiverNickname(rs.getString("receiver_nickname"));
+				dto.setMessageSeq(rs.getString("message_seq"));
 				
 				list.add(dto);
 			}
