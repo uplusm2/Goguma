@@ -23,6 +23,9 @@ public class InBox extends HttpServlet {
 	private Calendar now;
 	private HashMap<String, String> map;
 
+	private String column;
+	private String word;
+	private String searchmode;
 	private int pageSize;	
 	private int nowPage;
 	
@@ -31,6 +34,7 @@ public class InBox extends HttpServlet {
 		now = Calendar.getInstance();
 		map = new HashMap<String,String>();
 		
+		searchmode = "n";
 		pageSize = 10;
 	}
 
@@ -41,6 +45,7 @@ public class InBox extends HttpServlet {
 		map.put("user", session.getAttribute("id").toString());
 		map.put("position", "receiver");
 		
+		setSearchmode(req);
 		setPage(req);
 		list = dao.list(map);
 		refineData(list);
@@ -53,45 +58,20 @@ public class InBox extends HttpServlet {
 		dispatcher.forward(req, resp);
 	}
 	
-	private String getPagebar() {
-		int totalCount = 0;
-		int totalPage = 0;
-		int n;
-		int loop;
-
-		totalCount = dao.getTotalCount(map);
-		totalPage = (int)Math.ceil((double)totalCount / pageSize);
-		String pagebar = "";
+	private void setSearchmode(HttpServletRequest req) {
+		column = req.getParameter("column");
+		word = req.getParameter("word");
 		
-		loop = 1; 
-		n = ((nowPage - 1) / pageSize) * pageSize + 1; 
-		
-		pagebar += "<nav><ul class=\"pagination\">";
-
-		if (n == 1) {
-			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
+		if ((column == null && word == null) 
+				|| (column.equals("") && word.equals(""))) {
+			searchmode = "n";
 		} else {
-			pagebar += String.format("<li class='previous'><a href='/goguma/message/inBox.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
+			searchmode = "y";
 		}
 
-		while (!(loop > pageSize || n > totalPage)) {
-			if (n == nowPage) {
-				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);
-			} else {
-				pagebar += String.format("<li><a href='/goguma/message/inBox.do?page=%d'>%d</a></li>", n, n);
-			}			
-			loop++;
-			n++;
-		}
-
-		if (n > totalPage) {
-			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
-		} else {
-			pagebar += String.format("<li class='next'><a href='/goguma/message/inBox.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
-		}
-
-		pagebar += "</ul></nav>";
-		return pagebar;
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 	}
 
 	private void setPage(HttpServletRequest req) {
@@ -114,6 +94,47 @@ public class InBox extends HttpServlet {
 		
 	}
 
+	private String getPagebar() {
+		int totalCount = 0;
+		int totalPage = 0;
+		int n;
+		int loop;
+		
+		totalCount = dao.getTotalCount(map);
+		totalPage = (int)Math.ceil((double)totalCount / pageSize);
+		String pagebar = "";
+		
+		loop = 1; 
+		n = ((nowPage - 1) / pageSize) * pageSize + 1; 
+		
+		pagebar += "<nav><ul class=\"pagination\">";
+		
+		if (n == 1) {
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
+		} else {
+			pagebar += String.format("<li class='previous'><a href='/goguma/message/inBox.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
+		}
+		
+		while (!(loop > pageSize || n > totalPage)) {
+			if (n == nowPage) {
+				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);
+			} else {
+				pagebar += String.format("<li><a href='/goguma/message/inBox.do?page=%d'>%d</a></li>", n, n);
+			}			
+			loop++;
+			n++;
+		}
+		
+		if (n > totalPage) {
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
+		} else {
+			pagebar += String.format("<li class='next'><a href='/goguma/message/inBox.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
+		}
+		
+		pagebar += "</ul></nav>";
+		return pagebar;
+	}
+	
 	private void refineData(ArrayList<MessageDTO> list) {
 		String strNow = String.format("%tF", now);
 		for (MessageDTO dto : list) {

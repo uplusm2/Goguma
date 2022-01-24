@@ -49,6 +49,17 @@
 			</table>
 			
 			<div class="pagebar">${pagebar}</div>
+			
+			<div class="search">
+				<form method="GET" action="#!">
+					<select name="column" class="text">
+						<option value="sender">닉네임</option>
+						<option value="content">내용</option>
+					</select> 
+					<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
+					<input type="image" src="/goguma/asset/img/search.png" class="search-img">
+				</form>
+			</div>
 		</section>
 	</main>
 	

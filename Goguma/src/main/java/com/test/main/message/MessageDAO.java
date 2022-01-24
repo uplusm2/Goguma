@@ -32,11 +32,17 @@ public class MessageDAO {
 									, map.get("position")
 									, map.get("user"));
 			
-			System.out.println(where);
+			if (map.get("searchmode").equals("y")) {
+				where += String.format(" and %s like '%%%s%%'"
+								, map.get("column")
+								, map.get("word"));	
+			}
+			
 			String sql = String.format("select * from (select m.* , rownum as rnum from (select * from vwMessage %s order by message_seq desc) m ) where rnum between %s and %s"
 								, where
 								, map.get("begin")
 								, map.get("end"));
+			
 			rs = stat.executeQuery(sql);
 			
 			ArrayList<MessageDTO> list = new ArrayList<MessageDTO>();
@@ -139,6 +145,12 @@ public class MessageDAO {
 			String where = String.format("where %s_id = '%s'" 
 									, map.get("position")
 									, map.get("user"));	
+			
+			if (map.get("searchmode").equals("y")) {
+				where += String.format(" and %s like '%%%s%%'"
+								, map.get("column")
+								, map.get("word"));	
+			}
 			
 			String sql = String.format("select count(*) as cnt from vwMessage %s", where);
 			rs = stat.executeQuery(sql);
