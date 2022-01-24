@@ -87,7 +87,7 @@
 	    	if (confirm("선택한 회원을 차단 해제하시겠습니까?")) {
 	        	
 	    		$.ajax({
-	                url: '/goguma/admin/unblock2.do',
+	                url: '/goguma/admin/unblock.do',
 	                type: "POST",
 	                async: true,
 	                data: {id: id},
