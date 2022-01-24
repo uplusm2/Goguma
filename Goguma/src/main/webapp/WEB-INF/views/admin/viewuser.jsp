@@ -114,6 +114,16 @@
 								<th>거래날짜</th>
 							</tr>
 						</table>
+						<c:forEach items="list" var="dto">
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</c:forEach>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="profile">
 						<table class="table table-bordered">
