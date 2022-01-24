@@ -21,6 +21,7 @@
 			<table class="detail">
 				<tr>
 					<td colspan="3">${dto.title}</td>
+					<c:if test="${id == dto.id}">
 					<td class="button">
 						<input type="button" value=수정 class="btn edit"
 							onclick="location.href='/goguma/community/communityForm.do?seq=${dto.seq}';">
@@ -28,6 +29,7 @@
 					<td class="button">
 						<input type="button" value=삭제 class="btn important del">
 					</td>
+					</c:if>
 				</tr>
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
