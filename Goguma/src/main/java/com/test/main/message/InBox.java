@@ -51,6 +51,7 @@ public class InBox extends HttpServlet {
 		refineData(list);
 		
 		req.setAttribute("list", list);
+		req.setAttribute("map", map);
 		req.setAttribute("nowPage", nowPage);
 		req.setAttribute("pagebar", getPagebar());
 

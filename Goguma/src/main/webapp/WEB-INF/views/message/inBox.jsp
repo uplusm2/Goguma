@@ -64,6 +64,10 @@
 	</main>
 	
 	<script>
+		<c:if test="${map.searchmode == 'y'}">
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 	</script>
 </body>
 </html>
