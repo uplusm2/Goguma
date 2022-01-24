@@ -3,7 +3,6 @@ package com.test.main.admin;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,25 +13,27 @@ import javax.servlet.http.HttpServletResponse;
 public class Block extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		//1. 아이디 가져오기(id)
-		//2. DB 작업 > insert > DAO 위임
-		//3. resp으로 jsp에 반환
-		
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		req.setCharacterEncoding("UTF-8");
 		
 		String id = req.getParameter("id");
-		String name = req.getParameter("name");
+		String blockTypeSeq = req.getParameter("blockTypeSeq");
 		
-		UserDTO dto = new UserDTO();
-		
+		BlockDTO dto = new BlockDTO();
 		dto.setId(id);
-		dto.setName(name);
+		dto.setBlockTypeSeq(blockTypeSeq);
 		
-		req.setAttribute("dto", dto);
+		BlockDAO dao = new BlockDAO();
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/block.jsp");
-		dispatcher.forward(req, resp);
+		int result = dao.block(dto);
+		
+		resp.setCharacterEncoding("UTF-8");
+		resp.setContentType("application/json");
+		PrintWriter writer = resp.getWriter();
+		
+		writer.printf("{ \"result\" : %d}", result);
+		writer.close();
 
 	}
 }
