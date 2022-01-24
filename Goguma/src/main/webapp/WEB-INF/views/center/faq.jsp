@@ -8,25 +8,43 @@
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 	.subcategory{
-		height : 100px;
-		background-color : #9B59B6;
-	}
-	.center-content{
-		position : relative;
-		width : 1000px;
+		margin-top : 20px;
+		width : 1150px;
+		height : 60px;
 		margin-left : auto;
 		margin-right : auto;
 	}
-	.question:hover{
+		
+	.subcategory .menu li{
+		float : left;
+		text-align : center;
 		cursor : pointer;
+		height : 60px;
+		padding : 15px;
+		width : 200px;
+		border : 1px solid #9B59B6;
+		
 	}
+	.subcategory .menu li:hover{
+		background-color: #FAF7FB;
+	}
+	
+	
+	.subcategory .menu{
+		margin-left : 70px;
+	}
+
 	.answer{
 		display : none;
 	}
 	.pagebar{
 		text-align : center;
 	}
-
+	
+	.faqlist{
+		width : 1150px;
+		
+	}
 </style>
 </head>
 <body>
@@ -35,16 +53,17 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<%@include file="/WEB-INF/views/center/title.jsp" %>
 		<div class = "subcategory">
-		<form method="GET" action="/goguma/center/faq.do">
-			<ul class = "menu">
-				<li onclick = "location.href='/goguma/center/faq.do?search=1&page=1'">계정/인증</li>
-				<li onclick = "location.href='/goguma/center/faq.do?search=2&page=1'">구매/판매</li>
-				<li onclick = "location.href='/goguma/center/faq.do?search=3&page=1'">운영정책</li>
-				<li onclick = "location.href='/goguma/center/faq.do?search=4&page=1'">서비스이용</li>
-				<li onclick = "location.href='/goguma/center/faq.do?search=5&page=1'">기타</li>
-			</ul>
-		</form>
+			<form method="GET" action="/goguma/center/faq.do">
+				<ul class = "menu">
+					<li onclick = "location.href='/goguma/center/faq.do?search=1&page=1'">계정/인증</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=2&page=1'">구매/판매</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=3&page=1'">운영정책</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=4&page=1'">서비스이용</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=5&page=1'">기타</li>
+				</ul>
+			</form>
 		</div>
+		
 		<section class="faqlist">
 		<table class="table table-bordered list">
 			<c:forEach items="${list}" var="dto">

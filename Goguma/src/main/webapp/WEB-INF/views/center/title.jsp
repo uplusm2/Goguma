@@ -23,24 +23,25 @@
 		font-size : 15px;
 		padding : 5px;
 		border : 1px solid white;
+		vertical-align : middle;
 		
 	}
 	.center-search .title-form{
-		border : 1px solid black;
-		vertical-align : middle;
+		padding-top : 25px;
 	}
 	
 	.center-search .sub{
 		margin-left : 50px;
 		margin-top : 5px;
+		vertical-align : middle;
 	}
 	
 	.center-subtitle{
-		border : 1px solid black;
+		border-bottom : 1px solid #9B59B6;
 		width : 1150px;
 		margin-left : auto;
 		margin-right : auto;
-		height : 100px;
+		height : 80px;
 		
 	}
 	
@@ -49,16 +50,24 @@
 		text-align : center;
 		vertical-align : middle;
 		width : 150px;
-		margin-top : 10px;
+		margin-top : 25px;
+		margin-left : 20px;
 		cursor : pointer;
-		margin-top : 35px;
 	}
-	
-
 	
 	.center-subtitle .center-menu li:hover{
-		font-style : #9B59B6;
+		color : #9B59B6;
 	}
+	
+	.title-form .mag{
+		color : white;
+		cursor : pointer;
+		vertical-align : middle;
+		margin-left : 15px;
+		font-size : 20px;
+	}
+	
+	
 </style>
 </head>
 <body>
@@ -67,7 +76,7 @@
 		<form method="GET" action="">
 			<span class="sub" style= "color : white; font-size : 30px;">공지사항</span>
 			<input class="search" type="text" placeholder="찾고 싶은 글을 검색해보세요!">
-			<!-- <input class="search-img" type="image" src="/goguma/asset/img/search.png" alt=""> -->
+			<div class="glyphicon glyphicon-search mag" onclick ="location.href = '/goguma/center/noticelist.do'"></div>
 		</form>
 		</div>
 	</div>
