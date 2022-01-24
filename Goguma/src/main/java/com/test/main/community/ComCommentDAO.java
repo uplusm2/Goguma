@@ -87,4 +87,20 @@ public class ComCommentDAO {
 		return 0;
 	}
 
+	public int add(ComCommentDTO dto) {
+		try {
+			String sql = "insert into tblComComment values (comComment_seq.nextVal+100, ?, ?, ?, default)";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, dto.getCseq());
+			pstat.setString(2, dto.getId());
+			pstat.setString(3, dto.getContent());
+
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return 0;
+	}
+
 }

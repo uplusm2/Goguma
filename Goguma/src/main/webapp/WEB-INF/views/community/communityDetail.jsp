@@ -59,8 +59,9 @@
 			</table>
 			</c:forEach>
 			
-			<form method="GET" action="#!" class="comment form">
-				<textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
+			<form method="GET" action="/goguma/community/commentAdd.do" class="comment form">
+				<textarea name="content" placeholder="내용을 입력하세요." class="content"></textarea>
+				<input type="hidden" name="seq" value="${dto.seq}">
 				<input type="submit" value="등록" class="btn important">
 			</form>
 

@@ -145,6 +145,14 @@
 }
 
 
+/* 검색 결과 */
+.community .search-result {
+	text-align: center;
+	color: #757575;
+	margin: 30px auto;
+	margin-top: 40px;
+}
+
 /* 글 상세보기 */
 .community .detail {
 	margin-top: 300px;
