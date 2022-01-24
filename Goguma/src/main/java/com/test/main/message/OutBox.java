@@ -23,14 +23,19 @@ public class OutBox extends HttpServlet {
 	private Calendar now;
 	private HashMap<String, String> map;
 
+	private String column;
+	private String word;
+	private String searchmode;
 	private int pageSize;	
 	private int nowPage;
+	private int totalPage;
 	
 	{
 		dao = new MessageDAO();
 		now = Calendar.getInstance();
 		map = new HashMap<String,String>();
 		
+		searchmode = "n";
 		pageSize = 10;
 	}
 
@@ -40,17 +45,36 @@ public class OutBox extends HttpServlet {
 		session = req.getSession();
 		map.put("user", session.getAttribute("id").toString());
 		map.put("position", "sender");
-		
+
+		setSearchmode(req);
 		setPage(req);
 		list = dao.list(map);
 		refineData(list);
-
+		
 		req.setAttribute("list", list);
+		req.setAttribute("map", map);
 		req.setAttribute("nowPage", nowPage);
 		req.setAttribute("pagebar", getPagebar());
+		req.setAttribute("totalPage", totalPage);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/outBox.jsp");
 		dispatcher.forward(req, resp);
+	}
+	
+	private void setSearchmode(HttpServletRequest req) {
+		column = req.getParameter("column");
+		word = req.getParameter("word");
+		
+		if ((column == null && word == null) 
+				|| (column.equals("") && word.equals(""))) {
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
+
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 	}
 	
 	private void refineData(ArrayList<MessageDTO> list) {
@@ -95,7 +119,6 @@ public class OutBox extends HttpServlet {
 	
 	private String getPagebar() {
 		int totalCount = 0;
-		int totalPage = 0;
 		int n;
 		int loop;
 
