@@ -165,13 +165,9 @@ public class MessageDAO {
 
 	public int getTotalCount(HashMap<String, String> map) {
 		try {
-			String where = "";
-			
-			if(map.get("postion").equals("receiver")) {
-				where = String.format("where %s_id = %s" 
-								, map.get("position")
-								, map.get("user"));	
-			}
+			String where = String.format("where %s_id = '%s'" 
+									, map.get("position")
+									, map.get("user"));	
 			
 			String sql = String.format("select count(*) as cnt from vwMessage %s", where);
 			rs = stat.executeQuery(sql);

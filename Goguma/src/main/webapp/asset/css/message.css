@@ -104,6 +104,36 @@
 }
 
 
+/* 페이지바 */
+.message .pagebar {
+	transform: translateY(20px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
+}
+.message .pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.message .pagebar .pagination a:hover{
+	background: #fff;
+	color: orange;
+}
+.message .pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+.message .pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.message .pagebar .pagination .next a:hover span,
+.message .pagebar .pagination .previous a:hover span {
+	color: orange;
+}
+
 /* 메시지 읽기 */
 .message .detail {
 	width: 970px;

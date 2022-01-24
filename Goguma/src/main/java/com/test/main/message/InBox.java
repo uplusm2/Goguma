@@ -56,31 +56,29 @@ public class InBox extends HttpServlet {
 	private String getPagebar() {
 		int totalCount = 0;
 		int totalPage = 0;
-		int blockSize = 10;
 		int n;
 		int loop;
 
 		totalCount = dao.getTotalCount(map);
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
-
 		String pagebar = "";
 		
 		loop = 1; 
-		n = ((nowPage - 1) / blockSize) * blockSize + 1; 
+		n = ((nowPage - 1) / pageSize) * pageSize + 1; 
 		
 		pagebar += "<nav><ul class=\"pagination\">";
 
 		if (n == 1) {
 			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
 		} else {
-			pagebar += String.format("<li class='previous'><a href='/goguma/community/communityList.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
+			pagebar += String.format("<li class='previous'><a href='/goguma/message/inBox.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
 		}
 
-		while (!(loop > blockSize || n > totalPage)) {
+		while (!(loop > pageSize || n > totalPage)) {
 			if (n == nowPage) {
 				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);
 			} else {
-				pagebar += String.format("<li><a href='/goguma/community/communityList.do?page=%d'>%d</a></li>", n, n);
+				pagebar += String.format("<li><a href='/goguma/message/inBox.do?page=%d'>%d</a></li>", n, n);
 			}			
 			loop++;
 			n++;
@@ -89,7 +87,7 @@ public class InBox extends HttpServlet {
 		if (n > totalPage) {
 			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
 		} else {
-			pagebar += String.format("<li class='next'><a href='/goguma/community/communityList.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
+			pagebar += String.format("<li class='next'><a href='/goguma/message/inBox.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
 		}
 
 		pagebar += "</ul></nav>";
