@@ -164,17 +164,21 @@
     border-top: 3px solid #dadada;
     padding-top: 10px;
     font-size: 18px;
-    transform: translateX(105px);
+    /* transform: translateX(105px); */
+    overflow: hidden;
+    height: 400px;
 }
 .message form p {
     font-size: 18px;
-    /* margin-left: 50px; */
-    padding: 3px;
+    margin-left: 50px;
+    padding: 10px;
+    transform: translateX(-30px);
 }
 .message form .content {
     padding: 8px;
     /* margin-left: 10px; */
-    width: 87%;
+    width: 95%;
     height: 300px;
     outline: 0;
+    transform: translateX(30px);
 }

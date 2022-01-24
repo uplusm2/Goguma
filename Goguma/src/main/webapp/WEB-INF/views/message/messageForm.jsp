@@ -26,7 +26,7 @@
 				</div>
 			</nav>
 			<div class="title"
-				onclick="location.href='/goguma/message/message.do?receiverNickname=${receiver}';">
+				onclick="location.href='/goguma/message/inBox.do';">
 				<h2>메시지 보내기</h2>
 			</div>
 			<form class="form">
