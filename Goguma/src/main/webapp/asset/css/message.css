@@ -2,7 +2,7 @@
 .message .left-side {
     padding-top: 40px;
 	padding-bottom: 3%;
-	min-height: 75vh;
+	min-height: 800px;
 	width: 170px;
 	float: left;
 	border-right:3px solid #9B59B6;
@@ -106,7 +106,7 @@
 
 /* 페이지바 */
 .message .pagebar {
-	transform: translateY(20px) translateX(100px); 
+	transform: translateY(-10px) translateX(100px); 
 	width: 510px;
 	text-align: center;
 	margin: 0 auto;
@@ -265,7 +265,7 @@
 .message .search {
     width: 400px;
     margin: 0 auto;
-    transform: translateY(20px);
+    transform: translateY(20px) translateX(105px);
     font-size: 18px;
 }
 .message .search .text:first-child{
