@@ -44,6 +44,8 @@
 				</tr>
 				</c:forEach>
 			</table>
+			
+			<div class="pagebar">${pagebar}</div>
 		</section>
 	</main>
 	

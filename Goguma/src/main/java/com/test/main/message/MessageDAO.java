@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
 
@@ -24,12 +25,16 @@ public class MessageDAO {
 		}
 	}
 
-	public ArrayList<MessageDTO> listIn(String id) {
+	public ArrayList<MessageDTO> list(HashMap<String, String> map) {
 		try {
-			String sql = "select m.*, rownum from vwMessage m where receiver_id = ?";
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, id);
-			rs = pstat.executeQuery();
+			
+			String where = String.format("where %s_id = '%s'"
+									, map.get("position")
+									, map.get("user"));
+			
+			System.out.println(where);
+			String sql = String.format("select m.*, rownum from vwMessage m %s", where);
+			rs = stat.executeQuery(sql);
 			
 			ArrayList<MessageDTO> list = new ArrayList<MessageDTO>();
 			
@@ -156,5 +161,26 @@ public class MessageDAO {
 		return null;
 	}
 
-	
+	public int getTotalCount(HashMap<String, String> map) {
+		try {
+			String where = "";
+			
+			if(map.get("postion").equals("receiver")) {
+				where = String.format("where %s_id = %s" 
+								, map.get("position")
+								, map.get("user"));	
+			}
+			
+			String sql = String.format("select count(*) as cnt from vwMessage %s", where);
+			rs = stat.executeQuery(sql);
+			
+			if (rs.next()) {
+				return rs.getInt("cnt");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }
