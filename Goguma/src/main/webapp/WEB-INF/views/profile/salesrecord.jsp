@@ -23,6 +23,24 @@
 	    background: #9B59B6;
 	    color: #fff;
 	}
+	#tbl{
+		width: 100%;
+	}
+	#tbl td:nth-child(1) {
+		width:5%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(2) {
+		width:70%; 
+	}
+	#tbl td:nth-child(3) {
+		width: 10%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(4) {
+		width: 25%; 
+		vertical-align: middle;
+	}
 </style>
 </head>
 <body>
@@ -31,9 +49,12 @@
 		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
-			<section class="content">
+			<section class="community">
 				<div class="grid-container">
-					<table class="table">
+					<div class="title">
+						<h2>판매 내역</h2>
+					</div>
+					<table class="table" id ="tbl">
 						<tr>
 							<th>No.</th>
 							<th>내용</th>

@@ -55,13 +55,13 @@
 		padding-left:10px;
 	}
 	.grid-container div:nth-child(4) {
-		line-height: center;
+		padding-top:20px;
 		text-align: center; 
 		grid-column-start :1;
 		grid-column-end:2;
 	}
 	.grid-container div:nth-child(5) {
-		line-height: center;
+		padding-top:20px;
 		text-align: center; 
 		grid-column-start :2;
 		grid-column-end:3;
