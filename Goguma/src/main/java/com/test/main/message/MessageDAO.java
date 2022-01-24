@@ -152,4 +152,17 @@ public class MessageDAO {
 		}
 		return 0;
 	}
+
+	public int del(String seq) {
+		try {
+			String sql = "delete from tblMessage where message_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			
+		}
+		return 0;
+	}
 }

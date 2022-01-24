@@ -59,7 +59,7 @@
 	<script>
 		function confirmDelete() {
 			if(confirm("정말 삭제하시겠습니까?")){
-				location.href='/goguma/message/inBox.do';
+				location.href='/goguma/message/messageDel.do?seq=${dto.messageSeq}';
 			} else {
 				location.href='/goguma/message/inBox.do';
 			}
