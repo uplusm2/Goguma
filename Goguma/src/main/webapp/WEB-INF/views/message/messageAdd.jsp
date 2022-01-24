@@ -35,7 +35,7 @@
 				<p>메시지가 전송되었습니다.</p>
 				<div class="button">
 					<input type="button" value="확인하기" class="btn check"
-						onclick="location.href='/goguma/message/inBoxDetail.do?message_seq=${seq}';"> 
+						onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${seq}';"> 
 					<input type="button" value="목록으로" class="btn list"
 						onclick="location.href='/goguma/community/communityList.do';"> 
 				</div>
