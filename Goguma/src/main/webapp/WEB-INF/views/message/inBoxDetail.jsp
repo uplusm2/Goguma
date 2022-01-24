@@ -42,7 +42,7 @@
 				</tr>
 				<tr>
 					<td><input type="button" value="답장" class="btn"
-						onclick="location.href='/goguma/message/messageForm.do?receiver=${dto.receiverNickname}&sender=${dto.senderNickname}';">
+						onclick="location.href='/goguma/message/messageForm.do?receiver=${dto.senderId}';">
 					</td>
 					<td><input type="button" value="삭제" class="btn"
 						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">

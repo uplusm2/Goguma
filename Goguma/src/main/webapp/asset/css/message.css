@@ -8,6 +8,9 @@
 	border-right:3px solid #9B59B6;
 	transform: translateY(-25px);
 	margin-right: 50px;
+	/* overflow: hidden; */
+	background: #fff;
+	z-index: 1;
 }
 .message .left-side .menu {
 	height: 100%;
@@ -167,6 +170,7 @@
     /* transform: translateX(105px); */
     overflow: hidden;
     height: 400px;
+    margin-left: 20px;
 }
 .message form p {
     font-size: 18px;
@@ -181,4 +185,22 @@
     height: 300px;
     outline: 0;
     transform: translateX(30px);
+}
+
+
+/* 메시지 전송 */
+.message.add .add {
+    width: 970px;
+    height: 300px;
+    padding: 100px;
+    text-align: center;
+    margin: 0 auto;
+    border-top: 3px solid #dadada;
+    border-bottom: 3px solid #dadada;
+    transform: translateX(105px);
+}
+.message.add .add .btn {
+    margin: 5px;
+    width: 80px;
+    transform: translateX(0px) translateY(5px);
 }

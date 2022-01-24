@@ -130,5 +130,31 @@ public class MessageDAO {
 		}
 	}
 
+	public String add(MessageDTO dto) {
+		try {
+			String sql = "insert into tblMessage values (message_seq.nextVal, ?, ?, ?, sysdate+0.375, 'N')";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getSenderId());
+			pstat.setString(2, dto.getReceiverId());
+			pstat.setString(3, dto.getContent());
+			
+			pstat.executeUpdate();
+			
+			sql = "select message_seq from tblMessage where sender_id = 'user1' and rownum = 1 order by message_seq desc";
+			pstat = conn.prepareStatement(sql);
+			
+			rs = pstat.executeQuery();
+			
+			if(rs.next()) {
+				return rs.getString("message_seq");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	
 }
