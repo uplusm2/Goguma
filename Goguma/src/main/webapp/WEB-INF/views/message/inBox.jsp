@@ -49,14 +49,14 @@
 				</c:forEach>
 			</table>
 			
+			<c:if test="${totalPage > 1}">
+			<div class="pagebar">${pagebar}</div>
+			</c:if>
+			
 			<c:if test="${map.searchmode == 'y'}">
 			<div class="search-result">
 				'${map.word}'(으)로 검색한 ${list.size()}개의 게시물이 있습니다.
 			</div>
-			</c:if>
-			
-			<c:if test="${totalPage != 1}">
-			<div class="pagebar">${pagebar}</div>
 			</c:if>
 			
 			<div class="search">
