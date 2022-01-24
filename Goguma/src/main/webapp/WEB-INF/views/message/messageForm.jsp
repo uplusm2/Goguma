@@ -26,28 +26,22 @@
 				</div>
 			</nav>
 			<div class="title"
-				onclick="location.href='/goguma/message/outBox.do';">
-				<h2>보낸 메시지</h2>
+				onclick="location.href='/goguma/message/inBox.do';">
+				<h2>메시지 보내기</h2>
 			</div>
-			<table class="table">
-				<tr>
-					<th>받는 사람</th>
-					<th>내용</th>
-					<th>날짜</th>
-				</tr>
-				<c:forEach items="${list}" var="dto">
-				<tr>
-					<td>${dto.receiverNickname}</td>
-					<td onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${dto.messageSeq}';">
-						${dto.content}
-					</td>
-					<td>${dto.sendTime}</td>
-				</tr>
-				</c:forEach>
-			</table>
+			<form class="form">
+				<p>받는 사람: ${receiver}</p>
+				<textarea name="content" class="content" maxlength="1000"
+					placeholder="내용을 입력해주세요."></textarea>
+				<div class="button">
+					<input type="button" value="취소" class="btn check"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+					<input type="button" value="보내기" class="btn check"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+				</div>
+			</form>
 		</section>
 	</main>
-	
 	<script>
 	
 	</script>

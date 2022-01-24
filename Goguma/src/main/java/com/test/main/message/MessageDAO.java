@@ -16,7 +16,7 @@ public class MessageDAO {
 	
 	public MessageDAO() {
 		try {
-			conn = DBUtil.open();
+			conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("MessageDAO.MessageDAO()");
@@ -116,6 +116,18 @@ public class MessageDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public void check(String seq) {
+		try {
+			String sql = "update tblMessage set is_check = 'Y'  where message_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	

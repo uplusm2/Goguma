@@ -1,5 +1,5 @@
 /* nav */
-.message-detail .left-side {
+.message .left-side {
     padding-top: 40px;
 	padding-bottom: 3%;
 	min-height: 75vh;
@@ -9,18 +9,18 @@
 	transform: translateY(-25px);
 	margin-right: 50px;
 }
-.message-detail .left-side .menu {
+.message .left-side .menu {
 	height: 100%;
 	width: 95%;
 	/* padding-left: 10%; */
 	/* float: left; */
 }
-.message-detail .left-side .menu ul > li{
+.message .left-side .menu ul > li{
     margin-bottom:10px;
     cursor: pointer;
     font-size: 18px;
 }
-.message-detail .left-side .menu ul > li .message {
+.message .left-side .menu ul > li span.message {
     text-align: center;
     color: #fff;
     background: #757575;
@@ -28,9 +28,10 @@
     height: 17px;
     line-height: 17px;
     font-size: 17px;
+    transform: translateX(-33px);
     /* font-weight: 600; */
 }
-.message-detail .left-side .menu ul > li .arrow {
+.message .left-side .menu ul > li .arrow {
     border-radius: 50%;
     color: #fff;
     background: #9B59B6;
@@ -46,88 +47,91 @@
 
 
 /* 메시지 목록 */
-.message-detail {
+.message {
 	/* position: relative; */
 	left: 30px;
 	width: 1200px;
 }
-.message-detail .title {
+.message .title {
 	transform: translateX(20px);
 }
-.message-detail .table {
+.message .table {
 	width: 970px;
     border: 3px solid #dadada;
 }
-.message-detail .table,
-.message-detail .table th,
-.message-detail .table td{
+.message .table,
+.message .table th,
+.message .table td{
     border-left: 0px;
     border-right: 0px;
     text-align: center;
     font-weight: 400;
     cursor: pointer;
 }
-.message-detail .table tr {
+.message .table tr {
     height: 40px;
 }
-.message-detail .table th {
+.message .table th {
     font-weight: 500;
 }
-.message-detail .table td:nth-child(1){
+.message .table td:nth-child(1){
     color: #757575;
     padding-left: 30px;
     font-size: 16px;
     width: 80px;
 }
-.message-detail .table th:nth-child(1){
+.message .table th:nth-child(1){
     padding-left: 40px;
     text-align: center;
 }
-.message-detail .table td:nth-child(2){
+.message .table td:nth-child(2){
     padding-left: 50px;
     text-align: left;
     width: 700px;
 }
-.message-detail .table td:nth-child(2):hover{
+.message .table td:nth-child(2):hover{
 	font-weight: 500;
 }
-.message-detail .table th:nth-child(4),
-.message-detail .table td:nth-child(5){
+.message .table th:nth-child(4),
+.message .table td:nth-child(5){
     padding-right: 20px;
+}
+.message .table .Y {
+	color: #757575;
 }
 
 
 /* 메시지 읽기 */
-.message-detail .detail {
+.message .detail {
 	width: 970px;
     border: 3px solid #dadada;
 }
-.message-detail .detail,
-.message-detail .detail td{
+.message .detail,
+.message .detail td{
     border-left: 0px;
     border-right: 0px;
     font-weight: 400;
     padding-left: 10px;
 }
-.message-detail .detail tr:nth-child(1) td{
+.message .detail tr:nth-child(1) td{
     padding-top: 10px;
 }
-.message-detail .detail tr td:nth-child(1) {
+.message .detail tr td:nth-child(1) {
     width: 85px;
 }
-.message-detail .detail tr:nth-child(2) td{
+.message .detail tr:nth-child(2) td{
     padding-bottom: 10px;
     border-bottom: 1px dashed #dadada;
 }
-.message-detail .detail tr:nth-child(3) td{
+.message .detail tr:nth-child(3) td{
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px;
 }
 
 
-/* 메시지 버튼 */
-.message-detail .btn{
+/* 상세 메시지 버튼 */
+.message .btn{
     font-weight: 700;
     font-size: 16px;
     padding: 3px;
@@ -135,19 +139,46 @@
     width: 55px;
     transform: translateX(10px) translateY(10px);
 }
-.message-detail .detail .btn,
-.message-detail .button .btn {
+.message .detail .btn,
+.message .button .btn {
 	outline: 0;
 }
-.message-detail .btn:hover {
+.message .btn:hover {
 	color: #9B59B6;
 }
-.message-detail .detail td:nth-child(1) .btn{
+.message .detail td:nth-child(1) .btn{
     transform: translateX(800px) translateY(-15px);
 }
-.message-detail .detail td:nth-child(2) .btn{
+.message .detail td:nth-child(2) .btn{
     transform: translateX(780px) translateY(-15px);
 }
-.message-detail .detail td:nth-child(1) .btn.del {
+.message .detail td:nth-child(1) .btn.del {
     transform: translateX(870px) translateY(-15px);
+}
+
+
+/* 메시지 보내기 */
+.message form {
+    width: 970px;
+    margin: 0 auto;
+    border-top: 3px solid #dadada;
+    padding-top: 10px;
+    font-size: 18px;
+    /* transform: translateX(105px); */
+    overflow: hidden;
+    height: 400px;
+}
+.message form p {
+    font-size: 18px;
+    margin-left: 50px;
+    padding: 10px;
+    transform: translateX(-30px);
+}
+.message form .content {
+    padding: 8px;
+    /* margin-left: 10px; */
+    width: 95%;
+    height: 300px;
+    outline: 0;
+    transform: translateX(30px);
 }

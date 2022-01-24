@@ -12,7 +12,7 @@
 <body>
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="message-detail">
+		<section class="message">
 			<nav class="left-side">
 				<div class="menu">
 					<ul>
@@ -42,7 +42,7 @@
 				</tr>
 				<tr>
 					<td><input type="button" value="답장" class="btn"
-						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+						onclick="location.href='/goguma/message/messageForm.do?receiver=${dto.receiverNickname}&sender=${dto.senderNickname}';">
 					</td>
 					<td><input type="button" value="삭제" class="btn"
 						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
