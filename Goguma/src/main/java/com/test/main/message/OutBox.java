@@ -58,7 +58,7 @@ public class OutBox extends HttpServlet {
 		for (MessageDTO dto : list) {
 			
 			if (dto.getSendTime().startsWith(strNow)) {
-				dto.setSendTime(dto.getSendTime().substring(14));
+				dto.setSendTime(dto.getSendTime().substring(11, 16));
 			} else {
 				String tmp = dto.getSendTime().substring(0, 10).replace("-", ".");
 				dto.setSendTime(tmp.substring(2));
