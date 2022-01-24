@@ -1,0 +1,91 @@
+package com.test.main.product;
+
+public class ProductDTO {
+	private String seq;
+	private String id;
+	private String address_seq;
+	private String product_type;
+	private String name;
+	private String price;
+	private String is_auction;
+	private String content;
+	private String regdate;
+	
+	public String getSeq() {
+		return seq;
+	}
+	public void setSeq(String seq) {
+		this.seq = seq;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getAddress_seq() {
+		return address_seq;
+	}
+	public void setAddress_seq(String address_seq) {
+		this.address_seq = address_seq;
+	}
+	public String getProduct_type() {
+		return product_type;
+	}
+	public void setProduct_type(String product_type) {
+		this.product_type = product_type;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getIs_auction() {
+		return is_auction;
+	}
+	public void setIs_auction(String is_auction) {
+		this.is_auction = is_auction;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+	public String getIs_completion() {
+		return is_completion;
+	}
+	public void setIs_completion(String is_completion) {
+		this.is_completion = is_completion;
+	}
+	public int getReadcount() {
+		return readcount;
+	}
+	public void setReadcount(int readcount) {
+		this.readcount = readcount;
+	}
+	public String getIs_deletion() {
+		return is_deletion;
+	}
+	public void setIs_deletion(String is_deletion) {
+		this.is_deletion = is_deletion;
+	}
+	private String is_completion;
+	private int readcount;
+	private String is_deletion;
+	
+	
+}

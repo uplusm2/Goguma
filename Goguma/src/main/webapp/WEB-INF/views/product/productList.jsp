@@ -10,6 +10,14 @@
 
 .dropdown{
 	height: 50px;
+	
+}
+
+select{
+	margin-right: 10px;
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: gray;
 }
 
 div.container{
@@ -51,7 +59,6 @@ a {
 .img-box > img {
     display: block;
     width: 100%;
-    height: 80%;
 }
 /*커스텀*/
 html,
