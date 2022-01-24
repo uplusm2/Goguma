@@ -45,14 +45,20 @@
 			</ul>
 		</form>
 		</div>
-		<section class="center-content">
+		<section class="faqlist">
 		<table class="table table-bordered list">
 			<c:forEach items="${list}" var="dto">
-				<tr id = "q_${dto.seq}" onClick = "showid(this.id)" class = "question">
+				<tr id = "q_${dto.seq}" onClick = "showcon(this.id)" class = "question">
 					<td>Q . ${dto.title}</td>
 				</tr>
 				<tr class = "answer" id = "a_${dto.seq}" >
-					<td style="padding-left : 30px;">A . ${dto.content}</td>
+					<td style="padding-left : 30px;">A . ${dto.content}
+					<c:if test="${not empty id && lv.equals('2')}">
+					<input type="button" class = "btn btn-default" value="수정" onclick = "location.href='/goguma/center/faqedit.do?seq=${dto.seq}'">
+					<input type="button" class = "btn btn-default" value="삭제" onclick = "location.href='/goguma/center/faqdel.do?seq=${dto.seq}'">
+					</c:if>
+					</td>
+					
 				</tr>
 			</c:forEach>
 			<c:if test="${list.size() == 0}">
@@ -66,7 +72,7 @@
 			
 		<div class="btns">
 
-			<c:if test="${not empty id}">
+			<c:if test="${not empty id && lv.equals('2')}">
 			<input type="button" value="글쓰기"
 				class="btn btn-primary"
 				onclick="location.href='/code/board/add.do';">
@@ -78,29 +84,24 @@
 	</main>
 	
 	<script>
-/* 		function showcontent(id){
-			alert(id);
-			int check = 0;
-			var el = document.getElementByClass(obj);
-			id = id.replace("q","a");
+	
+ 		function showcon(id){
 			
+ 			id = id.replace("q","#a");
+ 			
+			$(".answer").css({
+				"display" : "none"
+			});
 			
-			if(check == 1){
-				$(.answer).css({
-					"display" : "none"
-				})
-			}
-			
-			$(#id).css({
+			$(id).css({
 				"display" : "block"
-			})
+			});
 			
-			
-		} */
-		
-		function showid(id){
-			alert(id);
 		}
+		
+		/* function showid(id){
+			alert(id);
+		} */
 		
 	</script>
 </body>

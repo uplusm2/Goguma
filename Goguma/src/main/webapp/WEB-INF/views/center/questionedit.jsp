@@ -36,7 +36,7 @@
 				<tr>
 					<th>종류</th>
 					<td>
-						<select name = "type"">
+						<select name = "type">
 							<option value = "1">계정/인증</option>
 							<option value = "2">구매/판매</option>
 							<option value = "3">운영정책</option>

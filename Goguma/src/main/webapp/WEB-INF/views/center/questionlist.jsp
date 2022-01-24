@@ -37,7 +37,7 @@
 				<c:forEach items="${list}" var="dto">
 				
 				<tr>
-					<td>${dto.seq}</td>
+					<td>${dto.rnum}</td>
 					<td>
 						<a href="/goguma/center/questionview.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
 						<c:if test="${dto.isNew == 1}">

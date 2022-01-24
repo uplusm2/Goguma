@@ -59,7 +59,7 @@
 				</c:if>
 			</table>
 			<div class="pagebar">${pagebar}</div>
-			<c:if test="${not empty id}">
+			<c:if test="${not empty id && lv.equals('2')}">
 			<div class="btns">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"

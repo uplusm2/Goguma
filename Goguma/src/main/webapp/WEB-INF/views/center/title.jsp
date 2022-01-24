@@ -47,19 +47,18 @@
 </style>
 </head>
 <body>
-	<div class = "container">
+	<div class = "center-search">
 		<form method="GET" action="">
 			<span style= "color : white">공지사항</span>
 			<input class="search" type="text" placeholder="찾고 싶은 글을 검색해보세요!">
 			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
 		</form>
 	</div>
-	<div class = "ddd">
-	
-		<ul class = "menu">
-			<li>자주묻는질문</li>
-			<li>공지사항</li>
-			<li>문의사항</li>
+	<div class = "center-subtitle">
+		<ul class = "center-menu">
+			<li onclick = "location.href = '/goguma/center/faq.do?page=1&search=1'">자주묻는질문</li>
+			<li onclick = "location.href = '/goguma/center/noticelist.do'">공지사항</li>
+			<li onclick = "location.href = '/goguma/center/questionlist.do?page=1&search=1'">문의사항</li>
 		</ul>
 	</div>
 	
