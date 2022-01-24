@@ -196,12 +196,13 @@ public class ProfileDAO {
 			while(rs.next()) {
 				TransactionRecordDTO dto = new TransactionRecordDTO();
 				
-				dto.setPRODUCT_SEQ(rs.getInt("product_seq"));
+				dto.setProduct_seq(rs.getInt("product_seq"));
 				dto.setContetnt(rs.getString("CONTENT"));
 				dto.setNickname(rs.getString("NICKNAME"));
 				dto.setId(rs.getString("id"));
+				dto.setSelid(rs.getString("selid"));
 				dto.setRegdate(rs.getString("REGDATE"));
-				dto.setDEAL_SEQ(rs.getInt("DEAL_SEQ"));
+				dto.setDeal_seq(rs.getInt("DEAL_SEQ"));
 				dto.setType(rs.getString("type"));
 				
 				dto.setRnum(rs.getInt("rnum"));
@@ -249,12 +250,12 @@ public class ProfileDAO {
 			while(rs.next()) {
 				TransactionRecordDTO dto = new TransactionRecordDTO();
 				
-				dto.setPRODUCT_SEQ(rs.getInt("product_seq"));
+				dto.setProduct_seq(rs.getInt("product_seq"));
 				dto.setContetnt(rs.getString("CONTENT"));
 				dto.setNickname(rs.getString("NICKNAME"));
 				dto.setId(rs.getString("id"));
 				dto.setRegdate(rs.getString("REGDATE"));
-				dto.setDEAL_SEQ(rs.getInt("DEAL_SEQ"));
+				dto.setDeal_seq(rs.getInt("DEAL_SEQ"));
 				dto.setType(rs.getString("type"));
 				
 				dto.setRnum(rs.getInt("rnum"));

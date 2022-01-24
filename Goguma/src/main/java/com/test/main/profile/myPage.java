@@ -38,7 +38,6 @@ public class myPage extends HttpServlet {
 		map.put("salesAvg",Math.round(map.get("salesAvg")/2));
 		map.put("purchaseAvg",Math.round(map.get("purchaseAvg")/2));
 		req.setAttribute("score", map);
-		System.out.println(map.toString());
 		
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/mypage.jsp");
