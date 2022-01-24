@@ -39,6 +39,9 @@
 					<td>${dto.receiverNickname}</td>
 					<td onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${dto.messageSeq}';">
 						${dto.content}
+						<c:if test="${dto.isNew <= 1}">
+						<span class="orange">N</span>
+						</c:if>
 					</td>
 					<td>${dto.sendTime}</td>
 				</tr>

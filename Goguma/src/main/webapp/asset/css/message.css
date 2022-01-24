@@ -134,6 +134,25 @@
 	color: orange;
 }
 
+
+/* 최근 메시지 */
+.message .orange {
+	position: relative;
+	top: -3px; left: 5px;
+	color: #fff;
+	font-size: 12px;
+}
+.message .orange:before {
+	content: '';
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background: orange;
+	border-radius: 50%;
+	z-index: -1;
+	transform: translateX(-3px) translateY(8px);
+}
+
 /* 메시지 읽기 */
 .message .detail {
 	width: 950px;
@@ -215,6 +234,12 @@
     height: 300px;
     outline: 0;
     transform: translateX(30px);
+}
+.message .form .button .btn {
+    transform: translateX(790px) translateY(0px);
+}
+.message .form .button .btn.send {
+	transform: translateX(800px);
 }
 
 

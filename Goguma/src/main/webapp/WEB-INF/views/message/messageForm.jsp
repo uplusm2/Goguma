@@ -34,10 +34,10 @@
 				<textarea name="content" class="content" maxlength="1000"
 					placeholder="내용을 입력해주세요."></textarea>
 				<div class="button">
-					<input type="button" value="취소" class="btn check"
+					<input type="button" value="취소" class="btn cancle"
 						onclick="location.href='/goguma/message/inBox.do';">
 					<input type="hidden" name="receiver" value="${dto.id}">
-					<input type="submit" value="보내기" class="btn check">
+					<input type="submit" value="보내기" class="btn send">
 				</div>
 			</form>
 		</section>
