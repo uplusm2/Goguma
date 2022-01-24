@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
+import com.test.main.profile.ReviewDTO;
+import com.test.main.profile.UserProfileDTO;
 
 
 public class UserDAO {
