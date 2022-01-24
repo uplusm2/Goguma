@@ -106,7 +106,7 @@
 
 /* 페이지바 */
 .message .pagebar {
-	transform: translateY(20px); 
+	transform: translateY(20px) translateX(100px); 
 	width: 510px;
 	text-align: center;
 	margin: 0 auto;
