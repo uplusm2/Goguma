@@ -34,7 +34,7 @@ public class ProfileEditOk extends HttpServlet {
 			 
 			 MultipartRequest  multi = new MultipartRequest(
 	                                 req,
-	                                 "./",
+	                                 "C:\\Goguma\\Goguma\\src\\main\\webapp\\files\\profile",
 	                                 1024 * 1024 * 100,
 	                                 "UTF-8",
 	                                 new DefaultFileRenamePolicy()
@@ -43,7 +43,7 @@ public class ProfileEditOk extends HttpServlet {
 	         String nickName = multi.getParameter("nickName");
 	         String intro = multi.getParameter("intro");
 	         
-	         String path = multi.getFilesystemName("attach");
+	         String path = multi.getFilesystemName("pathDir");
 	         
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
@@ -56,7 +56,7 @@ public class ProfileEditOk extends HttpServlet {
 	         int check = dao.setProfile(map);
 	         
 	         System.out.println(check); // 나중에 처리
-	 		 System.out.println(req.getRealPath("/files/profile"));
+	 		 System.out.println(path);
 	 		 
 	 		 req.setAttribute("check", check);
 	 		 

@@ -121,7 +121,7 @@
 						 enctype="multipart/form-data">
 						<div class="grid-container">
 							<div>
-								<img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px">
+								<div><img src="/goguma/files/profile/${userProfileData.path}" style="width: 130px"></div>
 							</div>
 							
 							<div>
@@ -136,7 +136,7 @@
 							
 							<div><div class="filebox">
 								  <label for="ex_file">업로드</label>
-								  <input type="file" id="ex_file" name="attach" multiple>
+								  <input type="file" id="ex_file" name="pathDir" multiple>
 								</div>
 							</div>
 							<div></div>

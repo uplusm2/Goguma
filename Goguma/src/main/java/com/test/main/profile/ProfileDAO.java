@@ -162,14 +162,15 @@ public class ProfileDAO {
 
 	public int setProfile( HashMap<String,String> map) {
 		
-		String sql = "update tbluserprofile set intro = ? , nickname =? , path = 'default image.jpg' where id =?";
+		String sql = "update tbluserprofile set intro = ? , nickname =? , path = ? where id =?";
 		
 		try {
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, map.get("intro"));
 			pstat.setString(2, map.get("nickName"));
-			pstat.setString(3, map.get("id"));
+			pstat.setString(3, map.get("path"));
+			pstat.setString(4, map.get("id"));
 			
 			return pstat.executeUpdate();
 		}catch(Exception e) {
