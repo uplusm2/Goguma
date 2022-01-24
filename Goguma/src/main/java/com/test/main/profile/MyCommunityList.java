@@ -22,6 +22,7 @@ public class MyCommunityList extends HttpServlet {
 	private ArrayList<CommunityDTO> list;
 	private HashMap<String, String> map;
 	private Calendar now;
+	private String id;
 
 	private int pageSize;	
 	private int nowPage;
@@ -37,9 +38,14 @@ public class MyCommunityList extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
+		
+		id = (String)req.getSession().getAttribute("id");
 		setPage(req);
-		list = dao.myCommunitylist(map);
+		try {
+			list = dao.myCommunitylist(map);			
+		}catch(Exception e) {
+		}
 
 		refineData();
 
@@ -93,6 +99,7 @@ public class MyCommunityList extends HttpServlet {
 
 		map.put("begin", begin + "");
 		map.put("end", end + "");
+		map.put("id", id);
 	}
 
 	private String getPagebar() {

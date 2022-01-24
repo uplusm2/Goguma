@@ -291,7 +291,13 @@ public class ProfileDAO {
 		try {
 			String where = "";
 			
-			String sql = "select count(*) as cnt from vwCommunity";
+			String sql = "select count(*) as cnt from vwCommunity where id =";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			
+			rs = pstat.executeQuery();
+			
 			rs = stat.executeQuery(sql);
 			
 			if (rs.next()) {
@@ -307,15 +313,20 @@ public class ProfileDAO {
 	public ArrayList<CommunityDTO> myCommunitylist(HashMap<String, String> map){
 		try {
 			String where = "";
-			stat = conn.createStatement();
 
 //			if (map.get("searchMod").equals("y")) {
 //				where = String.format("where %s like '%%%s%%'"
 //							, map.get("column")
 //							, map.get("word").replace("'","''"));
 //			}
-			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity  order by community_seq desc) c ) where rnum between %s and %s", map.get("begin"), map.get("end"));
-			rs = stat.executeQuery(sql);
+			String sql = "select * from (select c.* , rownum as rnum from (select * from vwCommunity where id = ?  order by community_seq desc) c ) where rnum between ? and ?";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
+			
+			rs = pstat.executeQuery();
 
 			ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();
 			
