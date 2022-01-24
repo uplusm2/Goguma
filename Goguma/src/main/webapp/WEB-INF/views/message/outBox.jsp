@@ -25,8 +25,7 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="title"
-				onclick="location.href='/goguma/message/outBox.do';">
+			<div class="title" onclick="location.href='/goguma/message/outBox.do';">
 				<h2>보낸 메시지</h2>
 			</div>
 			<table class="table">
@@ -45,6 +44,8 @@
 				</tr>
 				</c:forEach>
 			</table>
+			
+			<div class="pagebar">${pagebar}</div>
 		</section>
 	</main>
 	
