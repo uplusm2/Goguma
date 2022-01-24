@@ -13,7 +13,7 @@
 	<!-- noticeview.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
+		<section class="center">
 			<table class="table table-bordered add">
 				<tr>
 					<th>제목</th>
@@ -34,17 +34,17 @@
 					class="btn btn-default"
 					onclick="location.href='/goguma/center/noticeview.do?&page=${page}';">
 				
-				<%-- <c:if test="${not empty id && dto.id == id}"> --%>
-				<input type="button" value="수정하기"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
-				
-				<input type="button" value="삭제하기"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
-				<%-- </c:if> --%>						
+				<c:if test="${not empty id && lv.equals("2")}">
+					<input type="button" value="수정하기"
+						class="btn btn-primary"
+						onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
+					
+					<input type="button" value="삭제하기"
+						class="btn btn-primary"
+						onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
+				</c:if>						
 			</div>
-			
+			</section>
 		
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>

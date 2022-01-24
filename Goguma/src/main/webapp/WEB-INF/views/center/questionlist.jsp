@@ -16,7 +16,7 @@
 		<%@include file="/WEB-INF/views/center/title.jsp" %>
 		<div class = "subcategory">
 		<form method="GET" action="/goguma/center/faq.do">
-			<ul class = "center-menu">
+			<ul class = "center-submenu">
 				<li onclick = "location.href='/goguma/center/questionlist.do?search=1&page=1'">계정/인증</li>
 				<li onclick = "location.href='/goguma/center/questionlist.do?search=2&page=1'">구매/판매</li>
 				<li onclick = "location.href='/goguma/center/questionlist.do?search=3&page=1'">운영정책</li>
@@ -25,7 +25,7 @@
 			</ul>
 		</form>
 		</div>
-			<section class="content">
+			<section class="center">
 			<div><h2>문의사항</h2></div>
 			<table class="table table-bordered list">
 				<tr>
@@ -40,6 +40,9 @@
 					<td>${dto.seq}</td>
 					<td>
 						<a href="/goguma/center/questionview.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
+						<c:if test="${dto.isNew == 1}">
+						<span class="orange">N</span>
+						</c:if>
 					</td>
 					<td>${dto.user}</td>
 					<td>${dto.regdate}</td>
@@ -55,11 +58,11 @@
 			<div class="pagebar">${pagebar}</div>
 			<div class="btns">
 		
-				<%-- <c:if test="${not empty id}"> --%>
-				<input type="button" value="글쓰기"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/questionadd.do';">
-				<%-- </c:if> --%>
+			<c:if test="${not empty id}">
+			<input type="button" value="글쓰기"
+				class="btn btn-primary"
+				onclick="location.href='/goguma/center/questionadd.do';">
+			</c:if>
 				
 			</div>
 		</section>

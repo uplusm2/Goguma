@@ -13,7 +13,7 @@
 	<!-- noticelist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
+		<section class="center">
 			<table class="table table-bordered add">
 				<tr>
 					<th>제목</th>
@@ -32,7 +32,6 @@
 					<td style="height:300px;vertical-align:middle;">${dto.content}</td>
 				</tr>
 			</table>
-			<%-- <c:if test="${not empty id && dto.id == id}"> --%>
 			<table class="table table-bordered add">
 				<tr>
 					<th>제목</th>
@@ -47,31 +46,32 @@
 					<td style="height:300px;vertical-align:middle;">${reply.content}</td>
 				</tr>
 			</table>
-			<%-- </c:if> --%>		
 			<div class="btns">
-			
 				<input type="button" value="돌아가기"
 					class="btn btn-default"
 					onclick="location.href='/goguma/center/questionlist.do?search=1&page=1';">
 				
-				<%-- <c:if test="${not empty id && dto.id == id}"> --%>
-				<input type="button" value="수정하기"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/questionedit.do?seq=${dto.seq}';">
-				
-				<input type="button" value="삭제하기"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/questiondel.do?seq=${dto.seq}';">
-				<%-- </c:if> --%>
-				
-				<input type="button" value="답변작성"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/reply.do?seq=${dto.seq}';">
+				<c:if test="${not empty id && dto.user == id}">
+					<input type="button" value="수정하기"
+						class="btn btn-primary"
+						onclick="location.href='/goguma/center/questionedit.do?seq=${dto.seq}';">
 					
-				<input type="button" value="답변수정"
-					class="btn btn-primary"
-					onclick="location.href='/goguma/center/replydeit.do?seq=${dto.seq}';">
-				
+					<input type="button" value="삭제하기"
+						class="btn btn-primary"
+						onclick="location.href='/goguma/center/questiondel.do?seq=${dto.seq}';">
+				</c:if>
+				<c:if test="${lv.equals('2')}">
+					<c:if test="${reply.content == null}">
+						<input type="button" value="답변작성"
+							class="btn btn-primary"
+							onclick="location.href='/goguma/center/replyadd.do?seq=${dto.seq}';">
+					</c:if>
+					<c:if test="${reply.content != null}">
+						<input type="button" value="답변수정"
+							class="btn btn-primary"
+							onclick="location.href='/goguma/center/replyedit.do?seq=${dto.seq}';">
+					</c:if>
+				</c:if>
 			</div>
 			
 			

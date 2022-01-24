@@ -13,7 +13,7 @@
 	<!-- faqEdit.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
+		<section class="center">
 			
 			<form method="POST" action="/goguma/center/questioneditok.do">
 			<table class="table table-bordered add">

@@ -13,22 +13,17 @@
 	<!-- faqEdit.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">	
-			<form method="POST" action="/goguma/center/faqeditok.do">
+		<section class="center">
+			
+			<form method="POST" action="/goguma/center/replyeditok.do">
 			<table class="table table-bordered add">
 				<tr>
 					<th>제목</th>
-					<td>${dto.title}</td>
+					<td><input type="text" name="subject" class="form-control" required value="re : ${dto.title}"></td>
 				</tr>
 				<tr>
-					<th>내용</th>
-					<td>${dto.content}</td>
-				</tr>
-			</table>
-			<table class="table table-bordered add">
-			<tr>
-					<th>제목</th>
-					<td><input type="text" name="subject" class="form-control" required value="${dto.title}"></td>
+					<th>날짜</th>
+					<td>${dto.user}</td>
 				</tr>
 				<tr>
 					<th>내용</th>

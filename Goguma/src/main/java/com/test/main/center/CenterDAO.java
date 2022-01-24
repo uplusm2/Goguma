@@ -21,7 +21,7 @@ public class CenterDAO {
 		
 		try {
 
-			conn = DBUtil.open();
+			conn = DBUtil.open("goguma","java1234");
 			stat = conn.createStatement();
 
 		} catch (Exception e) {
@@ -195,7 +195,7 @@ public class CenterDAO {
 	public ArrayList<CenterDTO> noticelist(HashMap<String, String> map) {
 		try {
 					
-			String sql  = String.format("select * from tblnotice where notice_seq between %s and %s order by notice_seq",map.get("begin"),map.get("end"));
+			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblnotice order by notice_seq desc) a) where rnum between %s and %s",map.get("begin"),map.get("end"));
 			
 
 			rs = stat.executeQuery(sql);
@@ -324,7 +324,7 @@ public class CenterDAO {
 	public ArrayList<CenterDTO> questionlist(HashMap<String, String> map) {
 		try {
 			
-			String sql  = String.format("select * from (select rownum as rnum, a.* from tblquestion a where question_type_seq = %s) where rnum between %s and %s order by question_seq",map.get("search"),map.get("begin"),map.get("end"));
+			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblquestion order by regdate desc) a where question_type_seq = %s order by regdate desc) where rnum between %s and %s",map.get("search"),map.get("begin"),map.get("end"));
 			
 			rs = stat.executeQuery(sql);
 			
@@ -508,6 +508,52 @@ public class CenterDAO {
 			
 		} catch (Exception e) {
 			System.out.println("CenterDAO.noticeDel()");
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+
+
+	public int replyadd(CenterDTO dto) {
+		try {
+
+			String sql = "insert into tblquestionandanswer (question_seq, content, regdate) values (?, ?, default)";
+			pstat = conn.prepareStatement(sql);
+			
+			
+			pstat.setString(1, dto.getSeq());  //X
+			pstat.setString(2, dto.getContent()); //O
+				
+			return pstat.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			System.out.println("CenterDAO.replyadd()");
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+
+
+	public int replyedit(CenterDTO dto) {
+		try {
+
+			String sql = "update tblquestionandanswer set content = ? where question_seq = ?";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			
+			pstat.setString(1, dto.getContent());
+			pstat.setString(2, dto.getSeq());
+			
+			return pstat.executeUpdate();
+
+		} catch (Exception e) {
+			System.out.println("CenterDAO.questionedit()");
 			e.printStackTrace();
 		}
 		

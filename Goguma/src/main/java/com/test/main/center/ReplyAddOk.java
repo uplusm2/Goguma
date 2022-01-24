@@ -8,34 +8,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/center/questionaddok.do")
-public class QuestionAddOk extends HttpServlet {
+@WebServlet("/center/replyaddok.do")
+public class ReplyAddOk extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		
 		req.setCharacterEncoding("UTF-8");
 		
-		CenterDAO dao = new CenterDAO();
 		
+		CenterDAO dao = new CenterDAO();
 		CenterDTO dto = new CenterDTO();
 		
-		
-		String title = req.getParameter("subject");
+		String seq = req.getParameter("seq");
 		String content = req.getParameter("content");
-		String id = (String)req.getSession().getAttribute("id");
-		String type= req.getParameter("type");
-		
-		dto.setTitle(title);
+	
+		dto.setSeq(seq);
 		dto.setContent(content);
-		dto.setUser(id);
-		dto.setType(type);
 		
-		int result = dao.questionadd(dto);	
 		
+		int result = dao.replyadd(dto);
 		
 		req.setAttribute("result", result);
+		req.setAttribute("seq", seq);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/questionaddok.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/replyaddok.jsp");
 		dispatcher.forward(req, resp);
 
 	}

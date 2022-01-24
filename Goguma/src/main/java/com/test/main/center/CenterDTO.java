@@ -14,7 +14,7 @@ public class CenterDTO {
 	private int readcount;
 	private ArrayList<String> img;
 	
-	
+	private int isNew = 0;
 	
 	public String getRegdate() {
 		return regdate;
@@ -69,6 +69,12 @@ public class CenterDTO {
 	}
 	public void setUser(String user) {
 		User = user;
+	}
+	public double getIsNew() {
+		return isNew;
+	}
+	public void setIsNew(int isNew) {
+		this.isNew = isNew;
 	}
 	
 	
