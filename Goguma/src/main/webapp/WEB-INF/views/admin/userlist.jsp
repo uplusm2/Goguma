@@ -154,11 +154,13 @@
 				var id = $(this).find('input[name=id]').val();
 				var blockTypeSeq = $(this).find('select[name=blockType]').val();
 
+				
 				$.ajax({
 					url : '/goguma/admin/block2.do',
 					type : "POST",
 					async : true,
-					data : {'id=' + id + '&blocktypeseq=' + blockTypeSeq},
+					data : $('#myModal').find('form').serialize(),
+					data
 					success : function(result) {
 						//console.log(data);
 						if (result.result != 0) {
@@ -169,7 +171,7 @@
 							window.alert("차단 실패했습니다.");
 						}
 					},
-				})  */
+				})
 				
 			})
 		
