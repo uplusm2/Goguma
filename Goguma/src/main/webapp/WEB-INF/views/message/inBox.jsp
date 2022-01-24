@@ -28,6 +28,7 @@
 			<div class="title" onclick="location.href='/goguma/message/inBox.do';">
 				<h2>받은 메시지</h2>
 			</div>
+			
 			<table class="table">
 				<tr>
 					<th>보낸 사람</th>
@@ -48,7 +49,15 @@
 				</c:forEach>
 			</table>
 			
+			<c:if test="${map.searchmode == 'y'}">
+			<div class="search-result">
+				'${map.word}'(으)로 검색한 ${list.size()}개의 게시물이 있습니다.
+			</div>
+			</c:if>
+			
+			<c:if test="${totalPage != 1}">
 			<div class="pagebar">${pagebar}</div>
+			</c:if>
 			
 			<div class="search">
 				<form method="GET" action="/goguma/message/inBox.do">

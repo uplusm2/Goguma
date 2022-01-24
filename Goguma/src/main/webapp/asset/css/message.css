@@ -295,3 +295,11 @@
     right: 25px;
     top: 2px;
 }
+
+
+/* 검색 결과 */
+.message .search-result {
+	text-align: center;
+	color: #757575;
+	margin: 30px auto;
+}

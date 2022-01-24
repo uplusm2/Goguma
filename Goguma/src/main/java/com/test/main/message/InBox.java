@@ -28,6 +28,7 @@ public class InBox extends HttpServlet {
 	private String searchmode;
 	private int pageSize;	
 	private int nowPage;
+	private int totalPage;
 	
 	{
 		dao = new MessageDAO();
@@ -54,6 +55,7 @@ public class InBox extends HttpServlet {
 		req.setAttribute("map", map);
 		req.setAttribute("nowPage", nowPage);
 		req.setAttribute("pagebar", getPagebar());
+		req.setAttribute("totalPage", totalPage);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBox.jsp");
 		dispatcher.forward(req, resp);
@@ -97,7 +99,6 @@ public class InBox extends HttpServlet {
 
 	private String getPagebar() {
 		int totalCount = 0;
-		int totalPage = 0;
 		int n;
 		int loop;
 		
