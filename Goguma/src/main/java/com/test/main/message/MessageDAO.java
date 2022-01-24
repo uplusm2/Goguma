@@ -148,8 +148,10 @@ public class MessageDAO {
 			
 			pstat.executeUpdate();
 			
-			sql = "select message_seq from tblMessage where sender_id = 'user1' and rownum = 1 order by message_seq desc";
+			sql = "select message_seq from tblMessage where sender_id = ? and rownum = 1 order by message_seq desc";
 			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, dto.getSenderId());
 			
 			rs = pstat.executeQuery();
 			

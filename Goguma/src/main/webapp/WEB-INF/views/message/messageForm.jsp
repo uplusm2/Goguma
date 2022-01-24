@@ -36,8 +36,8 @@
 				<div class="button">
 					<input type="button" value="취소" class="btn check"
 						onclick="location.href='/goguma/message/inBox.do';">
-					<input type="submit" value="보내기" class="btn check">
 					<input type="hidden" name="receiver" value="${dto.id}">
+					<input type="submit" value="보내기" class="btn check">
 				</div>
 			</form>
 		</section>
