@@ -27,7 +27,8 @@
 							onclick="location.href='/goguma/community/communityForm.do?seq=${dto.seq}';">
 					</td>
 					<td class="button">
-						<input type="button" value=삭제 class="btn important del">
+						<input type="button" value=삭제 class="btn important del"
+							onclick="confirmDelete();">
 					</td>
 					</c:if>
 				</tr>
@@ -76,7 +77,11 @@
 	</main>
 	
 	<script>
-	
+		function confirmDelete() {
+			if(confirm("정말 삭제하시겠습니까?")){
+				location.href='/goguma/community/communityDel.do?seq=${dto.seq}';
+			}
+		}
 	</script>
 </body>
 </html>
