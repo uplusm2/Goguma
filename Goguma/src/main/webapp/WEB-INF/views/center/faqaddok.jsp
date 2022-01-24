@@ -14,7 +14,7 @@
 	<!-- center/faqaddok.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
+		<section class="center">
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>

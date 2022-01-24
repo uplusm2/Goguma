@@ -2,6 +2,7 @@ package com.test.main.center;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -92,6 +93,24 @@ public class QuestionList extends HttpServlet {
 		
 		
 		ArrayList<CenterDTO> list = dao.questionlist(map);
+		
+		Calendar now = Calendar.getInstance();
+		String strNow = String.format("%tF", now); //"2022-01-13"
+		
+		for (CenterDTO dto : list) {
+			
+			//날짜 자르기
+			if (dto.getRegdate().startsWith(strNow)) {
+				dto.setRegdate(dto.getRegdate().substring(0, 16));
+				dto.setIsNew(1);
+			} else {
+				dto.setRegdate(dto.getRegdate().substring(0, 10));
+			}
+			//20자 이상 자르기
+			if (dto.getTitle().length() > 20) {
+				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
+			}
+		}
 		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);

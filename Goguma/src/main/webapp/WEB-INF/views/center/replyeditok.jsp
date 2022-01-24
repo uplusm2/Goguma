@@ -14,7 +14,7 @@
 	<!-- center/faqaddok.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">
+		<section class="center-content">
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
@@ -24,7 +24,7 @@
 		<c:if test="${result == 1}">
 		//성공
 		
-		location.href = '/goguma/center/questionlist.do?search=1&page=1';
+		location.href = '/goguma/center/questionview.do?seq=${seq}';
 		</c:if>
 		
 		<c:if test="${result == 0}">
