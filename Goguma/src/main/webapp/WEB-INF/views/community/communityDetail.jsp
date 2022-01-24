@@ -52,6 +52,12 @@
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
 					<td>${cdto.nickname}</td>
 					<td>&nbsp;&nbsp;${cdto.regDate}</td>
+					<c:if test="${id == cdto.id}">
+					<td class="button">
+						<input type="button" value=삭제 class="btn del"
+							onclick="confirmDelete();">
+					</td>
+					</c:if>
 				</tr>
 				<tr>
 					<td colspan="2">${cdto.content}</td>
