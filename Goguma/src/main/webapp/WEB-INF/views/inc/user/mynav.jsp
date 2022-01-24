@@ -97,6 +97,14 @@
 	$(".mainmenu2").click(()=>{
 		$(".frame").attr("src","/goguma/profile/postlist.do?userid=${userId}"); // 나중에 세션으로 사용할것
 	});
+	$(".sub2").children().eq(0).click(()=>{
+		/* $(".frame").attr("src","/goguma/profile/salesReviewList.do?userId=${userId}"); */
+		location.href = "/goguma/profile/mycommunitylist.do";
+	});
+	$(".sub2").children().eq(1).click(()=>{
+		/* $(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}"); */
+		/* location.href = "/goguma/profile/purchaseReviewList.do"; */
+	});
 	$(".mainmenu3").click(()=>{
 		$(".frame").attr("src","/goguma/profile/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것
 	});
@@ -104,6 +112,6 @@
 		location.href = "/goguma/profile/purchaserecord.do";
 	});
 	$(".mainmenu5").click(()=>{
-		location.href = "/profile/salesrecord.do";
+		location.href = "/goguma/profile/salesrecord.do";
 	});
 </script>

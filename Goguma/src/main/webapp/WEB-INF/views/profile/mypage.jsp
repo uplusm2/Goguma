@@ -122,14 +122,14 @@
 						onclick="location.href='/goguma/profile/salesReviewList.do'">
 					</div>
 					<div></div>
-					<div>
+					<div class="salesAvg">
 						<span style="color: gold;">★</span> <span style="color: gold;">★</span>
 						<span style="color: gold;">★</span> <span style="color: gold;">★</span>
 						<span style="color: gold;">★</span> 
 						<!-- jquery 이횽해서 자식 위치 확인후  색을 지정  -->
 						<div>구매점수</div>
 					</div>
-					<div>
+					<div class="purchaseAvg">
 						<span style="color: gold;">★</span> <span style="color: #7777;">★</span>
 						<span style="color: #7777;">★</span> <span style="color: #7777;">★</span>
 						<span style="color: #7777;">★</span>
@@ -165,7 +165,8 @@
 		</main>
 	</div>
 	<script>
-	
+		$('salesAvg')
+		$('purchaseAvg')
 	</script>
 </body>
 </html>
