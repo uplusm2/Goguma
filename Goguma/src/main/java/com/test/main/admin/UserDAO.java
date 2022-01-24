@@ -26,8 +26,8 @@ public class UserDAO {
 	public UserDAO() {
 		try {
 			//TODO dbutil로 바꾸기
-			//conn = DBUtil.open();
-			conn = open();
+			conn = DBUtil.open("goguma", "java1234");
+//			conn = open();
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("UserDAO.UserDAO()");

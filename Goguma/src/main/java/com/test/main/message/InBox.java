@@ -41,10 +41,9 @@ public class InBox extends HttpServlet {
 		map.put("user", session.getAttribute("id").toString());
 		map.put("position", "receiver");
 		
-		System.out.println(map.get("user") + map.get("position"));
+		setPage(req);
 		list = dao.list(map);
 		refineData(list);
-		setPage(req);
 		
 		req.setAttribute("list", list);
 		req.setAttribute("nowPage", nowPage);

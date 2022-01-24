@@ -33,7 +33,10 @@ public class MessageDAO {
 									, map.get("user"));
 			
 			System.out.println(where);
-			String sql = String.format("select m.*, rownum from vwMessage m %s", where);
+			String sql = String.format("select * from (select m.* , rownum as rnum from (select * from vwMessage %s order by message_seq desc) m ) where rnum between %s and %s"
+								, where
+								, map.get("begin")
+								, map.get("end"));
 			rs = stat.executeQuery(sql);
 			
 			ArrayList<MessageDTO> list = new ArrayList<MessageDTO>();
@@ -41,7 +44,7 @@ public class MessageDAO {
 			while(rs.next()) {
 				MessageDTO dto = new MessageDTO();
 				
-				dto.setSeq(rs.getString("rownum"));;
+				dto.setSeq(rs.getString("rnum"));;
 				dto.setContent(rs.getString("content"));
 				dto.setSenderId(rs.getString("sender_id"));
 				dto.setReceiverId(rs.getString("receiver_id"));
@@ -50,7 +53,6 @@ public class MessageDAO {
 				dto.setSenderNickname(rs.getString("sender_nickname"));
 				dto.setReceiverNickname(rs.getString("receiver_nickname"));
 				dto.setMessageSeq(rs.getString("message_seq"));
-				
 				list.add(dto);
 			}
 			
