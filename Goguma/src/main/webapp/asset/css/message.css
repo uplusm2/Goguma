@@ -210,7 +210,7 @@
 
 
 /* 메시지 보내기 */
-.message form {
+.message .form {
     width: 950px;
     margin: 0 auto;
     border-top: 3px solid #dadada;
@@ -221,13 +221,13 @@
     height: 400px;
     margin-left: 20px;
 }
-.message form p {
+.message .form p {
     font-size: 18px;
     margin-left: 50px;
     padding: 10px;
     transform: translateX(-30px);
 }
-.message form .content {
+.message .form .content {
     padding: 8px;
     /* margin-left: 10px; */
     width: 95%;
@@ -258,4 +258,40 @@
     margin: 5px;
     width: 80px;
     transform: translateX(0px) translateY(5px);
+}
+
+
+/* 메시지 검색 */
+.message .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    font-size: 18px;
+}
+.message .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.message .search .text {
+	border: 0px solid #757575;
+	/* border-bottom: 1px solid #757575; */
+	border-radius: 5px;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 35px;
+    margin-left: 10px;
+    background: #E8F0FE;
+    text-align: center;
+    padding-right: 5px;
+}
+.message .search input.text {
+    padding-left: 15px;
+    text-align: left;
+}
+.message .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
 }
