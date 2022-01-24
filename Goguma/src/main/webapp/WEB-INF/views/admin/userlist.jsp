@@ -154,6 +154,7 @@
 				var id = $(this).find('input[name=id]').val();
 				var blockTypeSeq = $(this).find('select[name=blockType]').val();
 
+				
 				$.ajax({
 					url : '/goguma/admin/block2.do',
 					type : "POST",
