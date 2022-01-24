@@ -98,7 +98,20 @@ public class ComCommentDAO {
 			return pstat.executeUpdate();
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	public int del(String seq) {
+		try {
+			String sql = "delete from tblComComment where comComment_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return 0;
 	}

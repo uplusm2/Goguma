@@ -28,7 +28,7 @@
 					</td>
 					<td class="button">
 						<input type="button" value=삭제 class="btn important del"
-							onclick="confirmDelete();">
+							onclick="confirmDel();">
 					</td>
 					</c:if>
 				</tr>
@@ -54,8 +54,8 @@
 					<td>&nbsp;&nbsp;${cdto.regDate}</td>
 					<c:if test="${id == cdto.id}">
 					<td class="button">
-						<input type="button" value=삭제 class="btn del"
-							onclick="confirmDelete();">
+						<input type="button" value=삭제 class="btn del" id="${cdto.id}"
+							onclick="location.href='/goguma/community/commentDel.do?seq=${dto.seq}&commentSeq=${cdto.seq}';">
 					</td>
 					</c:if>
 				</tr>
@@ -84,7 +84,8 @@
 	</main>
 	
 	<script>
-		function confirmDelete() {
+		const commentId = $(#cdto.id)
+		function confirmDel() {
 			if(confirm("정말 삭제하시겠습니까?")){
 				location.href='/goguma/community/communityDel.do?seq=${dto.seq}';
 			}
