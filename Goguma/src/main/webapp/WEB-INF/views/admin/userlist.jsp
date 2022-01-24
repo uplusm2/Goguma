@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>고구마장터 전체 회원 관리</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
-<link rel="stylesheet" href="/bangterior/css/main_admin.css">
 <style>
 </style>
 </head>
@@ -30,8 +29,7 @@
 					<tr>
 						<c:forEach items="${list}" var="dto">
 							<tr>
-								<td>
-									<a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
+								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
 								</td>
 								<td>${dto.name}</td>
 								<td>${dto.since}</td>
@@ -40,10 +38,55 @@
 
 								<c:if test="${dto.state == '정상'}">
 									<td>
-										<input type="button" value="차단" 
-										class="btn important btn-block"
-										data-name="${dto.name}" data-id="${dto.id}">
+										<button type="button" class="btn btn-primary btn-lg"
+											data-toggle="modal" data-target="#myModal" data-id="${dto.id}">차단</button>
+
+										<div class="modal fade" id="myModal" tabindex="-1"
+											role="dialog" aria-labelledby="myModalLabel"
+											aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal"
+															aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+														<h4 class="modal-title" id="myModalLabel">차단하기</h4>
+													</div>
+													<div class="modal-body">
+														<form>
+															<table class="table table-bordered">
+																<tr>
+																	<th>차단할 회원</th>
+																	<td>${dto.name}</td>
+																</tr>
+																<tr>
+																	<th>차단할 아이디</th>
+																	<td><input type="text" name="id" value="${dto.id}" readonly style="border: 0px"></td>
+																</tr>
+																<tr>
+																	<th>차단 사유</th>
+																	<td><select name="blockType" class="form-control">
+																			<option value="1">사기</option>
+																			<option value="2">잠수</option>
+																			<option value="3">욕설</option>
+																			<option value="4">타 사이트 광고</option>
+																			<option value="5">불법</option>
+																	</select></td>
+																</tr>
+															</table>
+														</form>
+													</div>
+													<div class="modal-footer">
+														<button type="button" id="blockBtn" class="btn btn-primary">차단</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">취소</button>
+													</div>
+												</div>
+											</div>
+										</div>
 									</td>
+
 								</c:if>
 
 								<c:if test="${dto.state == '탈퇴'}">
@@ -53,8 +96,7 @@
 
 								<c:if test="${dto.state == '차단'}">
 									<td><input type="button" value="차단해제"
-										class="btn btn-default"
-										onclick="location.href='/goguma/admin/unblock.do?id=${dto.id}';">
+										class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
 									</td>
 								</c:if>
 							</tr>
@@ -66,6 +108,9 @@
 						</c:if>
 					</tr>
 				</table>
+
+				<!-- Modal -->
+
 
 				<div class="pagebar">${pagebar}</div>
 
@@ -102,86 +147,60 @@
 
 	<script>
 		
-		/* 
-		$('.btn-block').click(() => {
-			
-	        //var id = event.srcElement.dataset['id'];
-	        var blockBtn = event.srcElement;
-	        
-			if (confirm(blockBtn.dataset['name'] + '(' + blockBtn.dataset['id'] + ')' + '님을 차단하시겠습니까?')) {
+		$('#myModal').on('show.bs.modal', function(event) {
+						
+			$(this).find("#blockBtn").click(() => {
 				
-				
+				var id = $(this).find('input[name=id]').val();
+				var blockTypeSeq = $(this).find('select[name=blockType]').val();
+
 				$.ajax({
-					type: 'GET',
-					url: '/goguma/admin/block.do?id=' + blockBtn.dataset['id'],
-					success: function(result) {
-						if(result == 1) {
-							alert(blockBtn.dataset['name'] + '(' + blockBtn.dataset['id'] + ')' + '님을 차단했습니다.');
-							blockBtn.value = '차단해제';
-							blockBtn.classList.remove('important');
-							blockBtn.classList.add('btn-default');							
+					url : '/goguma/admin/block2.do',
+					type : "POST",
+					async : true,
+					data : {'id=' + id + '&blocktypeseq=' + blockTypeSeq},
+					success : function(result) {
+						//console.log(data);
+						if (result.result != 0) {
+							$('#myModal').modal("hide");
+							window.alert("차단되었습니다.");
+							document.location.reload(true);
 						} else {
-							alert('차단을 실패했습니다.');
+							window.alert("차단 실패했습니다.");
 						}
-					}
-				});
+					},
+				})  */
 				
-	        
-			} else {
-	            alert('차단을 취소했습니다');
-	        }
-			
-			
-		})
-		 */
-		 
-		$('.btn-block').click(() => {
-			
-			var id = event.srcElement.dataset['id'];
-			var name = event.srcElement.dataset['name'];
-	        
-			if (confirm(name + '(' + id + ')' + '님을 차단하시겠습니까?')) {
-				location.href = '/goguma/admin/block.do?id=' + id + '&name=' + name;
-	        } 
-			
+			})
+		
 		});
-		
-		//TODO
-		//아이디로 클릭했을때는 하나만 클릭되고 클래스로 주면 여러개 클릭된다 왤까....
-		//this로 했을 땐 안 되고 event.srcElement으로 했을땐 된다...? 
-		/* 
-		$('.btn-block').click(() => {
-	        var id = event.srcElement.dataset['id'];				//O
-			//var id = $(this).data('id');							//X
-			//var id = $(this).attr('data-id');						//X
-			if (confirm(id + '님을 차단하시겠습니까?')) {
-				console.log(id);
-				//$(this).val("차단해제");
-				event.srcElement.value = '차단해제';
-				//console.log($(this).data('id'))					//X
-	            //console.log(event.srcElement.dataset['id']);		//O
-	        } else {
-	            console.log('취소');
-	        }
-		}) 
-		*/
-		
-		/* 
-		$(document).ready(function(){
-			$('#blockBtn').click(() => {
-		        //var id = event.srcElement.dataset['id'];
-				var id = $(this).data('id')
-				if (confirm(id + '님을 차단하시겠습니까?')) {
-					console.log(id);					
-		        } else {
-		            console.log('취소');
-		        }
-			});			
+
+		$(document).on("click", ".btn-unblock", function() {
+
+			var id = $(this).attr("data-id");
+
+			if (confirm("선택한 회원을 차단 해제하시겠습니까?")) {
+
+				$.ajax({
+					url : '/goguma/admin/unblock2.do',
+					type : "POST",
+					async : true,
+					data : {
+						id : id
+					},
+					dataType : "text",
+					success : function(result) {
+						//console.log(data);
+						if (result != 0) {
+							window.alert("차단 해제되었습니다.");
+							document.location.reload(true);
+						} else {
+							window.alert("차단 해제를 실패했습니다.");
+						}
+					},
+				})
+			}
 		});
-		*/
-		
-		
-		
 	</script>
 </body>
 </html>

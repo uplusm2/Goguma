@@ -21,10 +21,8 @@ public class Unblock extends HttpServlet {
 		BlockDAO dao = new BlockDAO();
 		BlockDTO dto = new BlockDTO();
 		
-		//ArrayList<BlockDTO> list = dao.getBlockUser(id);
 		dto = dao.getBlockUser(id);
 		
-		//req.setAttribute("list", list);
 		req.setAttribute("dto", dto);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/unblock.jsp");

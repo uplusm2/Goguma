@@ -77,12 +77,12 @@ public class UserDAO {
 			String where = "";
 			
 			if(map.get("searchmode").equals("y")) {
-				where = String.format("where %s like '%%%s%%'"
+				where = String.format("and %s like '%%%s%%'"
 								, map.get("column")
 								, map.get("word").replace("'", "''"));
 			}
 			
-			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state from vwUserAll %s order by since desc) a) where rnum between %s and %s order by since desc", where, map.get("begin"), map.get("end"));
+			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state, lv from vwUserAll where lv = 1 %s order by since desc) a) where rnum between %s and %s", where, map.get("begin"), map.get("end"));
 			
 			rs = stat.executeQuery(sql);
 			
@@ -133,7 +133,7 @@ public class UserDAO {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("BoardDAO.getTotalCount()");
+			System.out.println("UserDAO.getTotalCount()");
 			e.printStackTrace();
 		}
 		

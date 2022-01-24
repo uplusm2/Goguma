@@ -17,7 +17,7 @@
 				<div class="mainmenu">| 회원 관리</div>
 				<ul class="sub">
 					<li><a href="/goguma/admin/userlist.do">· 전체 회원 관리</a></li>
-					<li><a href="#">· 차단 회원 관리</a></li>
+					<li><a href="/goguma/admin/blocklist.do">· 차단 회원 관리</a></li>
 					<li><a href="#">· 탈퇴 회원 관리</a></li>
 				</ul>
 			</li>
