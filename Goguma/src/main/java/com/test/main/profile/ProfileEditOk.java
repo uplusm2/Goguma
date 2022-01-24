@@ -31,9 +31,10 @@ public class ProfileEditOk extends HttpServlet {
 	         //매개변수 = (리퀘스트, 업로드할 파일위치, 파일 크기 제한, 인코딩, 디폴트)
 	         
 	         //MultipartRequest 객체 생성 순간 파일 업로드 처리도 같이 완료!!
-	         MultipartRequest multi = new MultipartRequest(
+			 
+			 MultipartRequest  multi = new MultipartRequest(
 	                                 req,
-	                                 req.getRealPath("/files/profile"),
+	                                 "./",
 	                                 1024 * 1024 * 100,
 	                                 "UTF-8",
 	                                 new DefaultFileRenamePolicy()

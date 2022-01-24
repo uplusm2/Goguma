@@ -136,7 +136,7 @@
 							
 							<div><div class="filebox">
 								  <label for="ex_file">업로드</label>
-								  <input type="file" id="ex_file" name="attach">
+								  <input type="file" id="ex_file" name="attach" multiple>
 								</div>
 							</div>
 							<div></div>
