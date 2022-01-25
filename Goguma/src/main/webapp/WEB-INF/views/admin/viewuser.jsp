@@ -257,7 +257,7 @@
 		});
 		
 		/* 작성댓글 클릭하면 불러오기 */
-		$("a[href$='#communityRecord']").click(() => {
+		$("a[href$='#comcommentRecord']").click(() => {
 			$.ajax({
 				type: 'GET',
 				url: '/goguma/admin/comcommentrecord.do',
