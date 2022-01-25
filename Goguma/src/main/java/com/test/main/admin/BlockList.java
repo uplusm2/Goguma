@@ -77,7 +77,7 @@ public class BlockList extends HttpServlet {
 		if (n == 1) {
 			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>");	
 		} else {
-			pagebar += String.format("<li><a href='/goguma/admin/userlist.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);				
+			pagebar += String.format("<li><a href='/goguma/admin/blocklist.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);				
 		}
 		
 		while (!(loop > blockSize || n > totalPage)) {
@@ -85,7 +85,7 @@ public class BlockList extends HttpServlet {
 			if(n == nowPage) {
 				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);				
 			} else {
-				pagebar += String.format("<li><a href='/goguma/admin/userlist.do?page=%d'>%d</a></li>", n, n);								
+				pagebar += String.format("<li><a href='/goguma/admin/blocklist.do?page=%d'>%d</a></li>", n, n);								
 			}
 			
 			loop++;

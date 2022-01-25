@@ -17,6 +17,24 @@
 		grid-template-columns:1fr;
 		grid-template-rows: 1fr;
 	}
+	#tbl{
+		width: 100%;
+	}
+	#tbl td:nth-child(1) {
+		width:5%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(2) {
+		width:70%; 
+	}
+	#tbl td:nth-child(3) {
+		width: 10%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(4) {
+		width: 25%; 
+		vertical-align: middle;
+	}
 </style>
 </head>
 <body>
@@ -25,9 +43,12 @@
 		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
-			<section class="content">
+			<section class="community">
 				<div class="grid-container">
-					<table class="table">
+					<div class="title">
+						<h2>구매 후기</h2>
+					</div>
+					<table class="table" id ="tbl">
 						<tr>
 							<th>No.</th>
 							<th>내용</th>
@@ -40,13 +61,24 @@
 							<td><%=i++ %></td>
 							<td>
 								${dto.productcontent}<br>
-								>${dto.selId} : ${dto.reviewcontent}
+								<i class="bi bi-arrow-return-right"></i>
+								${dto.selId} : ${dto.reviewcontent}
 							</td>
 							<td>${dto.score}</td>
 							<td>${dto.regdate}</td>
 						</tr>
 						</c:forEach>
-					</table>
+						</table>
+					<div class="search">
+						<form method="GET" action="#!">
+							<select name="column" class="text">
+								<option value="subject">제목</option>
+								<option value="content">내용</option>
+							</select> 
+							<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
+							<input type="image" src="/goguma/asset/img/search.png" class="search-img">
+						</form>
+					</div>
 					<div class="pagebar">${pagebar}</div>
 				</div>
 			</section>

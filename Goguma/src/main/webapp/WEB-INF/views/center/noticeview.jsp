@@ -25,16 +25,19 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td style="height:300px;vertical-align:middle;">${dto.content}</td>
+					<td style="height:300px;vertical-align:middle;">
+					<img src="/goguma/files/notice/img1.jpg" style = "width : 300px; height : 200px;" >
+					<br>
+					${dto.content}</td>
 				</tr>
 			</table>
 			<div class="btns">
 			
 				<input type="button" value="돌아가기"
 					class="btn btn-default"
-					onclick="location.href='/goguma/center/noticeview.do?&page=${page}';">
+					onclick="location.href='/goguma/center/noticelist.do?&page=${page}';">
 				
-				<c:if test="${not empty id && lv.equals("2")}">
+				<c:if test="${not empty id && lv.equals('2')}">
 					<input type="button" value="수정하기"
 						class="btn btn-primary"
 						onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">

@@ -23,6 +23,24 @@
 	    background: #9B59B6;
 	    color: #fff;
 	}
+	#tbl{
+		width: 100%;
+	}
+	#tbl td:nth-child(1) {
+		width:5%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(2) {
+		width:70%; 
+	}
+	#tbl td:nth-child(3) {
+		width: 10%; 
+		vertical-align: middle;
+	}
+	#tbl td:nth-child(4) {
+		width: 25%; 
+		vertical-align: middle;
+	}
 </style>
 </head>
 <body>
@@ -31,9 +49,12 @@
 		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
-			<section class="content">
+			<section class="community">
 				<div class="grid-container">
-					<table class="table">
+					<div class="title">
+						<h2>판매 내역</h2>
+					</div>
+					<table class="table" id ="tbl">
 						<tr>
 							<th>No.</th>
 							<th>내용</th>
@@ -42,7 +63,7 @@
 							<th>리뷰작성</th>
 						</tr>
 						<c:forEach items="${list}" var="dto" >
-						<c:if test="${dto.DEAL_SEQ!=null}">
+						<c:if test="${dto.deal_seq!=null}">
 						<tr>
 							<td>
 								${dto.rnum} 
@@ -62,7 +83,7 @@
 							</td>
 							<td>
 								<c:if test="${dto.type==null}">
-									<input type="button" value="리뷰 작성" class="btn important" >
+									<input type="button" value="리뷰 작성" class="btn important" onclick="location.href='/goguma/profile/salesreview.do?selid=${dto.selid}&deal_seq=${dto.deal_seq}'">
 								</c:if>
 								<c:if test="${dto.type!=null}">
 									<input type="button" value="작성 완료" class="btn" disabled>	

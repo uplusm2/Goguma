@@ -47,7 +47,7 @@
 					</form>
 					
 					<div class = "bottom line">
-					<li><a href="/goguma/user/userregister.do">아이디 찾기</a></li>
+					<li><a href="/goguma/user/findid.do">아이디 찾기</a></li>
 					<li><a href="/goguma/user/userregister.do">비밀번호 찾기</a></li>
 					<li><a href="/goguma/user/userregister.do">회원가입</a></li>
 					</div>

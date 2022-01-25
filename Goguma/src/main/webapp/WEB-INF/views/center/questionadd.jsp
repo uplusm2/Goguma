@@ -36,6 +36,10 @@
 							</select>
 						</td>
 					</tr>
+					<tr>
+						<th><input type="file" value = "파일 업로드"></th>
+						<td></td>
+					</tr>
 				</table>
 				
 				<div class="btns">

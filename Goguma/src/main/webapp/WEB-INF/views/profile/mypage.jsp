@@ -1,6 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,13 +56,13 @@
 		padding-left:10px;
 	}
 	.grid-container div:nth-child(4) {
-		line-height: center;
+		padding-top:20px;
 		text-align: center; 
 		grid-column-start :1;
 		grid-column-end:2;
 	}
 	.grid-container div:nth-child(5) {
-		line-height: center;
+		padding-top:20px;
 		text-align: center; 
 		grid-column-start :2;
 		grid-column-end:3;
@@ -91,6 +92,12 @@
 		grid-column-start :1;
 		grid-column-end:7;
 	}
+	.fa.fa-star.checked {
+	  color: orange;
+	}
+	.fa.fa-star{
+		color:#7777;
+	}
 </style>
 </head>
 <body>
@@ -104,7 +111,7 @@
 				<h2>${userProfileData.id}   님의 프로필 입니다.</h2>
 				<div class="grid-container">
 				
-					<div><img src="/goguma/asset/img/${userProfileData.path}" style="width: 130px"></div>
+					<div><img src="/goguma/files/profile/${userProfileData.path}" style="width: 130px"></div>
 					<div>
 						<div style="background-color:#EEECEC">NickName</div>
 						<div style="background-color:#EEECEC">info </div>
@@ -123,17 +130,37 @@
 					</div>
 					<div></div>
 					<div class="salesAvg">
-						<span style="color: gold;">★</span> <span style="color: gold;">★</span>
-						<span style="color: gold;">★</span> <span style="color: gold;">★</span>
-						<span style="color: gold;">★</span> 
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
 						<!-- jquery 이횽해서 자식 위치 확인후  색을 지정  -->
-						<div>구매점수</div>
+						<c:if test="${score.salesCnt<=3}">
+						<div>초보 고구마</div>
+						</c:if>
+						<c:if test="${score.salesCnt>3}">
+						<div>중급 고구마</div>
+						</c:if>
+						<c:if test="${score.salesCnt>5}">
+						<div>고급 고구마</div>
+						</c:if>
 					</div>
 					<div class="purchaseAvg">
-						<span style="color: gold;">★</span> <span style="color: #7777;">★</span>
-						<span style="color: #7777;">★</span> <span style="color: #7777;">★</span>
-						<span style="color: #7777;">★</span>
-						<div>판매점수</div>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<c:if test="${score.purchaseCnt<=3}">
+						<div>초보 고구마</div>
+						</c:if>
+						<c:if test="${score.purchaseCnt>3}">
+						<div>중급 고구마</div>
+						</c:if>
+						<c:if test="${score.purchaseCnt>5}">
+						<div>고급 고구마</div>
+						</c:if>
 					</div>
 					<div></div>
 					<div>
@@ -165,8 +192,20 @@
 		</main>
 	</div>
 	<script>
-		$('salesAvg')
-		$('purchaseAvg')
+		if(${score.salesCnt}==0){
+			$('.salesAvg span').addClass('checked');			
+		}else{
+			for(let i=1; i<=${score.salesAvg};i++){
+				$('.salesAvg span:nth-child('+i+')').addClass('checked');
+			}
+		}
+		if(${score.purchaseCnt}==0){
+			$('.purchaseAvg span').addClass('checked');			
+		}else{
+			for(let i=1; i<=${score.purchaseAvg};i++){
+				$('.purchaseAvg span:nth-child('+i+')').addClass('checked');
+			}
+		}
 	</script>
 </body>
 </html>

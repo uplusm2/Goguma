@@ -82,7 +82,7 @@ public class UserDAO {
 								, map.get("word").replace("'", "''"));
 			}
 			
-			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state, lv from vwUserAll where lv = 1 %s order by since desc) a) where rnum between %s and %s", where, map.get("begin"), map.get("end"));
+			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state from vwUserAll where lv = 1 %s order by since desc) a) where rnum between %s and %s", where, map.get("begin"), map.get("end"));
 			
 			rs = stat.executeQuery(sql);
 			

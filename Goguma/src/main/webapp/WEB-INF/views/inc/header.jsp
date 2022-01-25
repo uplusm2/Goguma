@@ -22,7 +22,7 @@
 					<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
 				</c:if>
 				<c:if test="${lv==2}">
-					<li onclick="location.href='goguma/admin/dashboard.do';">${id}님</li>
+					<li onclick="location.href='/goguma/admin/dashboard.do';">${id}님</li>
 				</c:if>
 				<li><a href="/goguma/user/logoutok.do">로그아웃</a></li>
 			</c:if>
