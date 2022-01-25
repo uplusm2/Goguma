@@ -53,15 +53,7 @@
 				<section class="content">
 					<h2>${dto.id}   님의 회원 정보 입니다.</h2>
 					<div class="grid-container">
-	   <!-- dto.setId(rs.getString("id"));
-			dto.setName(rs.getString("name"));
-			dto.setNickname(rs.getString("nickname"));
-			dto.setGender(rs.getString("gender"));
-			dto.setTel(rs.getString("tel"));
-			dto.setEmail(rs.getString("email"));
-			dto.setAddress(rs.getString("address"));
-			dto.setBirth(rs.getString("birth")); 
-	    -->
+					
 						<div></div>
 						<div>
 							<div>ID</div>
@@ -145,7 +137,7 @@
 						
 					</div>
 					<input type="button" value="회원 정보 수정" class="btn important" 
-					onclick="location.href='/goguma'">
+					onclick="location.href='/goguma/profile/reconfirmpassword.do'">
 					
 				</section>
 			</main>
