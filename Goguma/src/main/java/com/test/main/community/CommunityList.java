@@ -110,7 +110,6 @@ public class CommunityList extends HttpServlet {
 
 	private String getPagebar() {
 		int totalCount = 0;
-		int totalPage = 0;
 		int blockSize = 10;
 		int n;
 		int loop;
