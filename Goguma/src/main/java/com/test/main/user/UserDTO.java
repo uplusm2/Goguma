@@ -14,6 +14,14 @@ public class UserDTO {
 	private String gender;
 	private String since;
 	private String nickname;
+	private String emd;
+	
+	public String getEmd() {
+		return emd;
+	}
+	public void setEmd(String emd) {
+		this.emd = emd;
+	}
 	
 	public String getNickname() {
 		return nickname;
