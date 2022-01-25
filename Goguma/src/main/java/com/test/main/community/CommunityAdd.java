@@ -7,6 +7,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 @WebServlet("/community/communityAdd.do")
 public class CommunityAdd extends HttpServlet {
 	private CommunityDAO dao;
@@ -29,6 +32,7 @@ public class CommunityAdd extends HttpServlet {
 		content = req.getParameter("content");
 		
 		setDto(req);
+		setImg(req);
 		
 		String seq = dao.add(dto);
 		
@@ -36,6 +40,19 @@ public class CommunityAdd extends HttpServlet {
 		req.setAttribute("seq", seq);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityAdd.jsp");
 		dispatcher.forward(req, resp);
+	}
+
+	private void setImg(HttpServletRequest req) throws IOException {
+		MultipartRequest  multi = new MultipartRequest(
+						                req,
+						                "C:\\Goguma\\Goguma\\src\\main\\webapp\\files\\community",
+						                1024 * 1024 * 100,
+						                "UTF-8",
+						                new DefaultFileRenamePolicy()
+						           );
+		String path = multi.getFilesystemName("pathDir");
+		
+		map.put("path", path);
 	}
 
 	private void setDto(HttpServletRequest req) {
