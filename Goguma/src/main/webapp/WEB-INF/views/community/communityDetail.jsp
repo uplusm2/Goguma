@@ -33,7 +33,7 @@
 					</c:if>
 				</tr>
 				<tr>
-					<td rowspan="2"><img src="/goguma/asset/img/default image.png" alt=""></td>
+					<td rowspan="2"><img src="/goguma/files/profile/${dto.path}" alt=""></td>
 					<td colspan="2">${dto.nickname}</td>
 				</tr>
 				<tr>
@@ -49,7 +49,7 @@
 			<c:forEach items="${commentList}" var="cdto">
 			<table class="comment">
 				<tr>
-					<td rowspan="2"><img src="/goguma/asset/img/default image.png" alt=""></td>
+					<td rowspan="2"><img src="/goguma/files/profile/${dto.path}" alt=""></td>
 					<td>${cdto.nickname}</td>
 					<td>
 						&nbsp;&nbsp;${cdto.regDate}

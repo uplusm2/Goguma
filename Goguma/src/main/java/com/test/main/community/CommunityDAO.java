@@ -113,6 +113,7 @@ public class CommunityDAO {
 				dto.setRegDate(rs.getString("regDate"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setNickname(rs.getString("nickname"));
+				dto.setPath(rs.getString("path"));
 				
 				return dto;
 			}
