@@ -29,12 +29,6 @@ public class CommunityDAO {
 		try {
 			String where = "";
 
-//			if (map.get("searchMod").equals("y")) {
-//				where = String.format("where %s like '%%%s%%'"
-//							, map.get("column")
-//							, map.get("word").replace("'","''"));
-//			}
-
 			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity  order by community_seq desc) c ) where rnum between %s and %s", map.get("begin"), map.get("end"));
 			rs = stat.executeQuery(sql);
 
