@@ -7,8 +7,8 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-@WebServlet("/community/commentAdd.do")
-public class ComCommentAdd extends HttpServlet {
+@WebServlet("/community/commentDel.do")
+public class ComCommentDel extends HttpServlet {
 	private HttpSession session;
 	private ComCommentDAO dao;
 	private ComCommentDTO dto;
@@ -22,17 +22,10 @@ public class ComCommentAdd extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		req.setCharacterEncoding("UTF-8");
-		String content = req.getParameter("content");
 		String seq = req.getParameter("seq");
+		String commentSeq = req.getParameter("commentSeq");
 		
-		session = req.getSession();
-		
-		dto.setContent(content);
-		dto.setId(session.getAttribute("id").toString());
-		dto.setCseq(seq);
-		
-		int result = dao.add(dto);
+		int result = dao.del(commentSeq);
 		
 		if (result == 1) {
 			resp.sendRedirect("/goguma/community/communityDetail.do?seq=" + seq);

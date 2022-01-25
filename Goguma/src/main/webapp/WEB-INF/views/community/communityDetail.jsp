@@ -21,16 +21,19 @@
 			<table class="detail">
 				<tr>
 					<td colspan="3">${dto.title}</td>
+					<c:if test="${id == dto.id}">
 					<td class="button">
 						<input type="button" value=수정 class="btn edit"
 							onclick="location.href='/goguma/community/communityForm.do?seq=${dto.seq}';">
 					</td>
 					<td class="button">
-						<input type="button" value=삭제 class="btn important del">
+						<input type="button" value=삭제 class="btn important del"
+							onclick="confirmDel();">
 					</td>
+					</c:if>
 				</tr>
 				<tr>
-					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
+					<td rowspan="2"><img src="/goguma/asset/img/default image.png" alt=""></td>
 					<td colspan="2">${dto.nickname}</td>
 				</tr>
 				<tr>
@@ -46,9 +49,20 @@
 			<c:forEach items="${commentList}" var="cdto">
 			<table class="comment">
 				<tr>
-					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
+					<td rowspan="2"><img src="/goguma/asset/img/default image.png" alt=""></td>
 					<td>${cdto.nickname}</td>
-					<td>&nbsp;&nbsp;${cdto.regDate}</td>
+					<td>
+						&nbsp;&nbsp;${cdto.regDate}
+						<c:if test="${dto.isNew <= 1}">
+						<span class="orange">N</span>
+						</c:if>
+					</td>
+					<c:if test="${id == cdto.id}">
+					<td class="button">
+						<input type="button" value=삭제 class="btn del" id="${cdto.id}"
+							onclick="location.href='/goguma/community/commentDel.do?seq=${dto.seq}&commentSeq=${cdto.seq}';">
+					</td>
+					</c:if>
 				</tr>
 				<tr>
 					<td colspan="2">${cdto.content}</td>
@@ -56,8 +70,9 @@
 			</table>
 			</c:forEach>
 			
-			<form method="GET" action="#!" class="comment form">
-				<textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
+			<form method="GET" action="/goguma/community/commentAdd.do" class="comment form">
+				<textarea name="content" placeholder="내용을 입력하세요." class="content"></textarea>
+				<input type="hidden" name="seq" value="${dto.seq}">
 				<input type="submit" value="등록" class="btn important">
 			</form>
 
@@ -74,7 +89,11 @@
 	</main>
 	
 	<script>
-	
+		function confirmDel() {
+			if(confirm("정말 삭제하시겠습니까?")){
+				location.href='/goguma/community/communityDel.do?seq=${dto.seq}';
+			}
+		}
 	</script>
 </body>
 </html>

@@ -14,40 +14,62 @@ public class CommunityList extends HttpServlet {
 	private HashMap<String, String> map;
 	private Calendar now;
 
+	private String column;
+	private String word;
+	private String searchmode;
 	private int pageSize;	
 	private int nowPage;
-
+	private int totalPage;
 	
 	{
 		dao = new CommunityDAO();
 		map = new HashMap<String,String>();
 		now = Calendar.getInstance();
-
+		
+		searchmode = "n";
 		pageSize = 10;
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		setSearchmode(req);
 		setPage(req);
 		list = dao.list(map);
-
-		refineData();
+		refineDate();
 
 		req.setAttribute("list", list);
+		req.setAttribute("map", map);
 		req.setAttribute("nowPage", nowPage);
 		req.setAttribute("pagebar", getPagebar());
+		req.setAttribute("totalPage", totalPage);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/communityList.jsp");
 		dispatcher.forward(req, resp);
 	}
 
-	private void refineData() {
+	private void setSearchmode(HttpServletRequest req) {
+		column = req.getParameter("column");
+		word = req.getParameter("word");
+		
+		if ((column == null && word == null) 
+				|| (column.equals("") && word.equals(""))) {
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
+
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
+	}
+
+	private void refineDate() {
 		String strNow = String.format("%tF", now);
 		for (CommunityDTO dto : list) {
 			
 			if (dto.getRegDate().startsWith(strNow)) {
-				dto.setRegDate(dto.getRegDate().substring(14));
+				dto.setRegDate(dto.getRegDate().substring(11, 16));
 			} else {
 				String tmp = dto.getRegDate().substring(0, 10).replace("-", ".");
 				dto.setRegDate(tmp.substring(2));
@@ -88,7 +110,6 @@ public class CommunityList extends HttpServlet {
 
 	private String getPagebar() {
 		int totalCount = 0;
-		int totalPage = 0;
 		int blockSize = 10;
 		int n;
 		int loop;
