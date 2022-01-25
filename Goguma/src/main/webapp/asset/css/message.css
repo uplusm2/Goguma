@@ -2,12 +2,15 @@
 .message .left-side {
     padding-top: 40px;
 	padding-bottom: 3%;
-	min-height: 75vh;
+	min-height: 800px;
 	width: 170px;
 	float: left;
 	border-right:3px solid #9B59B6;
 	transform: translateY(-25px);
 	margin-right: 50px;
+	/* overflow: hidden; */
+	background: #fff;
+	z-index: 1;
 }
 .message .left-side .menu {
 	height: 100%;
@@ -56,7 +59,7 @@
 	transform: translateX(20px);
 }
 .message .table {
-	width: 970px;
+	width: 950px;
     border: 3px solid #dadada;
 }
 .message .table,
@@ -101,9 +104,58 @@
 }
 
 
+/* 페이지바 */
+.message .pagebar {
+	transform: translateY(-10px) translateX(100px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
+}
+.message .pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.message .pagebar .pagination a:hover{
+	background: #fff;
+	color: orange;
+}
+.message .pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+.message .pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.message .pagebar .pagination .next a:hover span,
+.message .pagebar .pagination .previous a:hover span {
+	color: orange;
+}
+
+
+/* 최근 메시지 */
+.message .orange {
+	position: relative;
+	top: -3px; left: 5px;
+	color: #fff;
+	font-size: 12px;
+}
+.message .orange:before {
+	content: '';
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background: orange;
+	border-radius: 50%;
+	z-index: -1;
+	transform: translateX(-3px) translateY(8px);
+}
+
 /* 메시지 읽기 */
 .message .detail {
-	width: 970px;
+	width: 950px;
     border: 3px solid #dadada;
 }
 .message .detail,
@@ -158,8 +210,8 @@
 
 
 /* 메시지 보내기 */
-.message form {
-    width: 970px;
+.message .form {
+    width: 950px;
     margin: 0 auto;
     border-top: 3px solid #dadada;
     padding-top: 10px;
@@ -167,18 +219,88 @@
     /* transform: translateX(105px); */
     overflow: hidden;
     height: 400px;
+    margin-left: 20px;
 }
-.message form p {
+.message .form p {
     font-size: 18px;
     margin-left: 50px;
     padding: 10px;
     transform: translateX(-30px);
 }
-.message form .content {
+.message .form .content {
     padding: 8px;
     /* margin-left: 10px; */
     width: 95%;
     height: 300px;
     outline: 0;
     transform: translateX(30px);
+}
+.message .form .button .btn {
+    transform: translateX(790px) translateY(0px);
+}
+.message .form .button .btn.send {
+	transform: translateX(800px);
+}
+
+
+/* 메시지 전송 */
+.message.add .add {
+    width: 950px;
+    height: 300px;
+    padding: 100px;
+    text-align: center;
+    margin: 0 auto;
+    border-top: 3px solid #dadada;
+    border-bottom: 3px solid #dadada;
+    transform: translateX(95px);
+}
+.message.add .add .btn {
+    margin: 5px;
+    width: 80px;
+    transform: translateX(0px) translateY(5px);
+}
+
+
+/* 메시지 검색 */
+.message .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(20px) translateX(105px);
+    font-size: 18px;
+}
+.message .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.message .search .text {
+	border: 0px solid #757575;
+	/* border-bottom: 1px solid #757575; */
+	border-radius: 5px;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 35px;
+    margin-left: 10px;
+    background: #E8F0FE;
+    text-align: center;
+    padding-right: 5px;
+}
+.message .search input.text {
+    padding-left: 15px;
+    text-align: left;
+}
+.message .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
+}
+
+
+/* 검색 결과 */
+.message .search-result {
+	text-align: center;
+	color: #757575;
+	margin: 30px auto;
+	margin-top: 40px;
 }

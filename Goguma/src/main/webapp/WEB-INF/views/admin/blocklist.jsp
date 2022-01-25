@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>고구마장터 전체 회원 관리</title>
+<title>고구마장터</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <style>
 </style>
@@ -21,15 +21,14 @@
 					<tr>
 						<th>아이디</th>
 						<th>이름</th>
-						<th>차단날짜</th>
-						<th>차단유형</th>
+						<th>탈퇴날짜</th>
+						<th>탈퇴유형</th>
 						<th>처리</th>
 					</tr>
 					<tr>
 						<c:forEach items="${list}" var="dto">
 							<tr>
-								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
-								</td>
+								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
 								<td>${dto.name}</td>
 								<td>${dto.regDate}</td>
 								<td>${dto.type}</td>
@@ -85,21 +84,20 @@
 	        
 	    	var id = $(this).attr("data-id");
 	    	
-	    	if (confirm(id + "선택한 회원을 차단 해제하시겠습니까?")) {
+	    	if (confirm("선택한 회원을 차단 해제하시겠습니까?")) {
 	        	
 	    		$.ajax({
-	                url: '/goguma/admin/unblock2.do',
+	                url: '/goguma/admin/unblock.do',
 	                type: "POST",
 	                async: true,
 	                data: {id: id},
 	                dataType: "text",
 	                success: function (result) { 
-	                    //console.log(data);
 	                    if (result != 0){
 		                	window.alert("차단 해제되었습니다."); 
 	                        document.location.reload(true);                     	
 	                    } else {
-		                	window.alert("차단 실패했습니다."); 
+		                	window.alert("차단 해제 실패했습니다."); 
 	                    }
 	                },
 	            })

@@ -11,6 +11,7 @@ import javax.servlet.http.*;
 public class CommunityAdd extends HttpServlet {
 	private CommunityDAO dao;
 	private CommunityDTO dto;
+	private HttpSession session;
 	
 	private String title;
 	private String content;
@@ -27,7 +28,7 @@ public class CommunityAdd extends HttpServlet {
 		title = req.getParameter("title");
 		content = req.getParameter("content");
 		
-		setDto();
+		setDto(req);
 		
 		String seq = dao.add(dto);
 		
@@ -37,8 +38,10 @@ public class CommunityAdd extends HttpServlet {
 		dispatcher.forward(req, resp);
 	}
 
-	private void setDto() {
-		dto.setId("user1");
+	private void setDto(HttpServletRequest req) {
+		session = req.getSession();
+		
+		dto.setId(session.getAttribute("id").toString());
 		dto.setTitle(title);
 		dto.setContent(content);
 	}

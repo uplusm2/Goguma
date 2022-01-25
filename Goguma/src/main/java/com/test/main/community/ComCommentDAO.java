@@ -63,7 +63,8 @@ public class ComCommentDAO {
 		String strNow = String.format("%tF", now);
 		
 		if (date.startsWith(strNow)) {
-			return date.substring(14);
+			return date.substring(11, 16);
+			
 		} else {
 			String tmp = date.substring(0, 16).replace("-", ".");
 			return tmp.substring(2);
@@ -81,6 +82,35 @@ public class ComCommentDAO {
 				return rs.getInt("cnt");
 			}
 			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	public int add(ComCommentDTO dto) {
+		try {
+			String sql = "insert into tblComComment values (comComment_seq.nextVal+100, ?, ?, ?, default)";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, dto.getCseq());
+			pstat.setString(2, dto.getId());
+			pstat.setString(3, dto.getContent());
+
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	public int del(String seq) {
+		try {
+			String sql = "delete from tblComComment where comComment_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			return pstat.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 
 <!-- nav -->
 <nav class="leftside">
@@ -10,7 +9,7 @@
 		<ul>
 			<li>
 				<div class="mainmenu">
-					| 대시보드
+					<a href="/goguma/admin/dashboard.do">| 대시보드</a>
 				</div>
 			</li>
 			<li>
@@ -18,7 +17,7 @@
 				<ul class="sub">
 					<li><a href="/goguma/admin/userlist.do">· 전체 회원 관리</a></li>
 					<li><a href="/goguma/admin/blocklist.do">· 차단 회원 관리</a></li>
-					<li><a href="#">· 탈퇴 회원 관리</a></li>
+					<li><a href="/goguma/admin/withdrawlist.do">· 탈퇴 회원 관리</a></li>
 				</ul>
 			</li>
 			<li>

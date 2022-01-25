@@ -2,6 +2,7 @@ package com.test.main.center;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 public class NoticeList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String word = req.getParameter("word");
+		String searchmode = "n";
+		
+		if (word == null|| word.equals("")) {
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
+		
 		
 		CenterDAO dao = new CenterDAO();
 		HashMap<String,String> map = new HashMap<String,String>();
@@ -40,15 +51,15 @@ public class NoticeList extends HttpServlet {
 		
 		map.put("begin", begin + "");
 		map.put("end", end + "");
-		
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 		
 		String pagebar = "";
 		
 		//페이지바
 		
-		totalCount = dao.getTotalCount();
+		totalCount = dao.getnTotalCount(map);
 		System.out.println(totalCount);
-		
 		
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 		
@@ -86,8 +97,34 @@ public class NoticeList extends HttpServlet {
 		
 		pagebar += "</ul></nav>";
 		
-		
 		ArrayList<CenterDTO> list = dao.noticelist(map);
+		
+		Calendar now = Calendar.getInstance();
+		String strNow = String.format("%tF", now); //"2022-01-13"
+		
+		for (CenterDTO dto : list) {
+			
+			//날짜 자르기
+			if (dto.getRegdate().startsWith(strNow)) {
+				dto.setRegdate(dto.getRegdate().substring(0, 16));
+				dto.setIsNew(1);
+			} else {
+				dto.setRegdate(dto.getRegdate().substring(0, 10));
+			}
+			//20자 이상 자르기
+			if (dto.getTitle().length() > 20) {
+				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
+			}
+			if (searchmode.equals("y")) {
+				
+				//안녕하세요. 홍길동입니다.
+				//안녕하세요. <span style="">홍길동</span>입니다.
+				dto.setTitle(dto.getTitle().replace(word, "<span style='background-color:yellow;color:tomato;'>" + word + "</span>"));
+			}
+		}
+		
+		
+		
 		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);

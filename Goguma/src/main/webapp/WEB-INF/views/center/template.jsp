@@ -13,9 +13,11 @@
 	<!-- noticelist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
+		<section class="center">
 		
-			
 		
+		
+		</section>
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
 	

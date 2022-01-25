@@ -7,9 +7,11 @@ public class MessageDTO {
 	private String content;
 	private String sendTime;
 	private String isCheck;
+	private String messageSeq; 
+	
 	private String senderNickname;
 	private String receiverNickname;
-	private String messageSeq; 
+	private double isNew;
 	
 	public String getSeq() {
 		return seq;
@@ -64,5 +66,11 @@ public class MessageDTO {
 	}
 	public void setMessageSeq(String messageSeq) {
 		this.messageSeq = messageSeq;
+	}
+	public double getIsNew() {
+		return isNew;
+	}
+	public void setIsNew(double isNew) {
+		this.isNew = isNew;
 	}
 }

@@ -66,7 +66,7 @@
 																</tr>
 																<tr>
 																	<th>차단 사유</th>
-																	<td><select name="blockType" class="form-control">
+																	<td><select name="blockTypeSeq" class="form-control">
 																			<option value="1">사기</option>
 																			<option value="2">잠수</option>
 																			<option value="3">욕설</option>
@@ -86,7 +86,6 @@
 											</div>
 										</div>
 									</td>
-
 								</c:if>
 
 								<c:if test="${dto.state == '탈퇴'}">
@@ -97,7 +96,6 @@
 								<c:if test="${dto.state == '차단'}">
 									<td><input type="button" value="차단해제"
 										class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
-									</td>
 								</c:if>
 							</tr>
 						</c:forEach>
@@ -147,18 +145,19 @@
 
 	<script>
 		
+		//차단하기
 		$('#myModal').on('show.bs.modal', function(event) {
 						
 			$(this).find("#blockBtn").click(() => {
 				
 				var id = $(this).find('input[name=id]').val();
 				var blockTypeSeq = $(this).find('select[name=blockType]').val();
-
+				
 				$.ajax({
-					url : '/goguma/admin/block2.do',
+					url : '/goguma/admin/block.do',
 					type : "POST",
 					async : true,
-					data : {'id=' + id + '&blocktypeseq=' + blockTypeSeq},
+					data : $('#myModal').find('form').serialize(),
 					success : function(result) {
 						//console.log(data);
 						if (result.result != 0) {
@@ -169,12 +168,13 @@
 							window.alert("차단 실패했습니다.");
 						}
 					},
-				})  */
+				})
 				
 			})
 		
 		});
 
+		//차단해제
 		$(document).on("click", ".btn-unblock", function() {
 
 			var id = $(this).attr("data-id");
@@ -182,7 +182,7 @@
 			if (confirm("선택한 회원을 차단 해제하시겠습니까?")) {
 
 				$.ajax({
-					url : '/goguma/admin/unblock2.do',
+					url : '/goguma/admin/unblock.do',
 					type : "POST",
 					async : true,
 					data : {
@@ -201,6 +201,8 @@
 				})
 			}
 		});
+		
+		
 	</script>
 </body>
 </html>

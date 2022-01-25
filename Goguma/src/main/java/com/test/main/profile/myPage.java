@@ -29,21 +29,16 @@ public class myPage extends HttpServlet {
 		ProfileDAO dao  = new ProfileDAO();
 		
 		UserProfileDTO userProfileData = dao.getUserProfile(id);
+		req.setAttribute("userProfileData", userProfileData);
+		
+		
 		
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		
 		map = dao.getAvgScore(id);
+		map.put("salesAvg",Math.round(map.get("salesAvg")/2));
+		map.put("purchaseAvg",Math.round(map.get("purchaseAvg")/2));
+		req.setAttribute("score", map);
 		
-		req.setAttribute("userProfileData", userProfileData);
-		System.out.println(map.toString());
-
-		String score = "<span style='color: gold;'>★</span>";
-		String notScore = "<span style='color: #7777;'>★</span>";
-		
-		Math.round(map.get("salesAvg"));
-		Math.round(map.get("purchaseAvg"));
-		
-		System.out.println(Math.round(map.get("salesAvg")/2.0) +""+ Math.round(map.get("purchaseAvg")/2.0)+""+ Math.round(13/2.0));
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/mypage.jsp");
 		dispatcher.forward(req, resp);

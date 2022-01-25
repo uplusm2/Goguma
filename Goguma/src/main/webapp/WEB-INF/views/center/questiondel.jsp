@@ -13,9 +13,9 @@
 	<!-- faqdel.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-			<section class="content">
+			<section class="center">
 			
-			<div class="panel panel-default">
+			<div class="panel panel-default del">
 				<div class="panel-heading">삭제하기</div>
 				<div class="panel-body">
 				

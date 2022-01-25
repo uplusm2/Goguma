@@ -1,0 +1,134 @@
+/* center 목록 */
+.center .table {
+    width: 1100px;
+    border: 3px solid #dadada;
+}
+.center .table,
+.center .table th,
+.center .table td{
+    border-left: 0px;
+    border-right: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 400;
+}
+.center .table tr {
+    height: 40px;
+}
+.center .table th {
+    font-weight: 500;
+}
+.center .table td:nth-child(1){
+    color: #757575;
+    padding-left: 35px;
+    font-size: 16px;
+    width: 80px;
+}
+.center .table td:nth-child(2){
+    padding-left: 40px;
+    text-align: left;
+    width: 700px;
+}
+.center .table td:nth-child(2):hover{
+	font-weight: 500;
+/* 	color: orange;
+	text-decoration: underline; */
+}
+.center .table th:nth-child(4),
+.center .table td:nth-child(5){
+    padding-right: 20px;
+}
+.center .orange {
+	position: relative;
+	top: -2px; left: 5px;
+	color: #fff;
+	font-size: 12px;
+}
+.center .orange:before {
+	content: '';
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background: orange;
+	border-radius: 50%;
+	z-index: -1;
+	transform: translateX(-3px) translateY(8px);
+}
+.center .cnt {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+
+/*페이지 바*/
+.center .pagebar {
+	transform: translateY(20px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
+}
+.center .pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.center .pagebar .pagination a:hover{
+	background: #fff;
+	color: orange;
+}
+.center .pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+.center .pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.center .pagebar .pagination .next a:hover span,
+.center .pagebar .pagination .previous a:hover span {
+	color: orange;
+}
+
+
+
+/* 검색 바 */
+
+.center .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    font-size: 18px;
+}
+.center .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.center .search .text {
+	border: 0px solid #757575;
+	/* border-bottom: 1px solid #757575; */
+	border-radius: 5px;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 35px;
+    margin-left: 10px;
+    background: #E8F0FE;
+    text-align: center;
+    padding-right: 5px;
+}
+
+.center .search input.text {
+    padding-left: 15px;
+    text-align: left;
+}
+
+.center .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
+}
+
+
+

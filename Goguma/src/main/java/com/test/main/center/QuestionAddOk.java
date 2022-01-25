@@ -22,12 +22,12 @@ public class QuestionAddOk extends HttpServlet {
 		
 		String title = req.getParameter("subject");
 		String content = req.getParameter("content");
-		String user = "user1";
+		String id = (String)req.getSession().getAttribute("id");
 		String type= req.getParameter("type");
 		
 		dto.setTitle(title);
 		dto.setContent(content);
-		dto.setUser(user);
+		dto.setUser(id);
 		dto.setType(type);
 		
 		int result = dao.questionadd(dto);	

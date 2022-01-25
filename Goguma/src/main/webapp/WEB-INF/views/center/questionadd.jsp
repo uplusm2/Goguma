@@ -13,7 +13,7 @@
 	<!-- questionadd.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
+		<section class="center">
 			
 			<form method="POST" action="/goguma/center/questionaddok.do">
 				<table class="table table-bordered add">
@@ -35,6 +35,10 @@
 								<option value = "5">기타</option>
 							</select>
 						</td>
+					</tr>
+					<tr>
+						<th><input type="file" value = "파일 업로드"></th>
+						<td></td>
 					</tr>
 				</table>
 				

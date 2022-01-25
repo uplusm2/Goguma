@@ -18,9 +18,10 @@ import com.test.main.user.UserDTO;
 public class LoginOk extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 
+		req.setCharacterEncoding("utf-8");
 		//1.
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");

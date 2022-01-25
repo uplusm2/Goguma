@@ -25,8 +25,7 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="title"
-				onclick="location.href='/goguma/message/outBox.do';">
+			<div class="title" onclick="location.href='/goguma/message/outBox.do';">
 				<h2>보낸 메시지</h2>
 			</div>
 			<table class="table">
@@ -40,16 +39,43 @@
 					<td>${dto.receiverNickname}</td>
 					<td onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${dto.messageSeq}';">
 						${dto.content}
+						<c:if test="${dto.isNew <= 1}">
+						<span class="orange">N</span>
+						</c:if>
 					</td>
 					<td>${dto.sendTime}</td>
 				</tr>
 				</c:forEach>
 			</table>
+			
+			<c:if test="${totalPage > 1}">
+			<div class="pagebar">${pagebar}</div>
+			</c:if>
+			
+			<c:if test="${map.searchmode == 'y'}">
+			<div class="search-result">
+				'${map.word}'(으)로 검색한 ${list.size()}개의 게시물이 있습니다.
+			</div>
+			</c:if>
+			
+			<div class="search">
+				<form method="GET" action="#!">
+					<select name="column" class="text">
+						<option value="receiver_nickname">닉네임</option>
+						<option value="content">내용</option>
+					</select> 
+					<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
+					<input type="image" src="/goguma/asset/img/search.png" class="search-img">
+				</form>
+			</div>
 		</section>
 	</main>
 	
 	<script>
-	
+		<c:if test="${map.searchmode == 'y'}">
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 	</script>
 </body>
 </html>

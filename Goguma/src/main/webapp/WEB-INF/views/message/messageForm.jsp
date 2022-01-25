@@ -27,17 +27,17 @@
 			</nav>
 			<div class="title"
 				onclick="location.href='/goguma/message/inBox.do';">
-				<h2>메시지 보내기</h2>
+				<h2>메시지</h2>
 			</div>
-			<form class="form">
-				<p>받는 사람: ${receiver}</p>
+			<form method="POST" class="form" action="/goguma/message/messageAdd.do">
+				<p>받는 사람: ${dto.nickname}</p>
 				<textarea name="content" class="content" maxlength="1000"
 					placeholder="내용을 입력해주세요."></textarea>
 				<div class="button">
-					<input type="button" value="취소" class="btn check"
-						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
-					<input type="button" value="보내기" class="btn check"
-						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';">
+					<input type="button" value="취소" class="btn cancle"
+						onclick="location.href='/goguma/message/inBox.do';">
+					<input type="hidden" name="receiver" value="${dto.id}">
+					<input type="submit" value="보내기" class="btn send">
 				</div>
 			</form>
 		</section>

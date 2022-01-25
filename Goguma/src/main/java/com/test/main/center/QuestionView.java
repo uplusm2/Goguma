@@ -15,7 +15,7 @@ public class QuestionView extends HttpServlet {
 		
 		String seq = req.getParameter("seq");
 		String page = req.getParameter("page");
-		
+		String id = (String) req.getSession().getAttribute("id"); 
 		CenterDAO dao = new CenterDAO();
 		
 		CenterDTO dto = dao.questionGet(seq);
@@ -24,6 +24,7 @@ public class QuestionView extends HttpServlet {
 		
 		
 		req.setAttribute("dto", dto);
+		req.setAttribute("id", id);
 		req.setAttribute("reply", reply);
 		
 		req.setAttribute("page", page);

@@ -29,7 +29,19 @@ public class CommunityDAO {
 		try {
 			String where = "";
 
-			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity  order by community_seq desc) c ) where rnum between %s and %s", map.get("begin"), map.get("end"));
+			if (map.get("searchmode").equals("y")) {
+				where = String.format("where %s like '%%%s%%'"
+							, map.get("column")
+							, map.get("word"));
+			}
+
+			String sql = String.format("select * from (select c.* , rownum as rnum from (select * from vwCommunity %s order by community_seq desc) c ) where rnum between %s and %s"
+								, where
+								, map.get("begin")
+								, map.get("end"));
+			
+			System.out.println(sql);
+			
 			rs = stat.executeQuery(sql);
 
 			ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();
@@ -50,6 +62,7 @@ public class CommunityDAO {
 			return list;
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("CommunityDAO.list()");
 		}
 		return null;
 	}
@@ -58,7 +71,15 @@ public class CommunityDAO {
 		try {
 			String where = "";
 			
-			String sql = "select count(*) as cnt from vwCommunity";
+			if (map.get("searchmode").equals("y")) {
+				where += String.format(" and %s like '%%%s%%'"
+								, map.get("column")
+								, map.get("word"));	
+			}
+			
+			String sql = String.format("select count(*) as cnt from vwCommunity %s"
+								, where);
+			
 			rs = stat.executeQuery(sql);
 			
 			if (rs.next()) {
@@ -67,6 +88,7 @@ public class CommunityDAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("CommunityDAO.getTotalCount()");
 		}
 		return 0;
 	}
@@ -153,5 +175,18 @@ public class CommunityDAO {
 			System.out.println("CommunityDAO.addReadCount()");
 			e.printStackTrace();
 		}
+	}
+
+	public int del(String seq) {
+		try {
+			String sql = "delete from tblCommunity where community_seq = ?";
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, seq);
+			
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 }

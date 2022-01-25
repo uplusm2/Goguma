@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.test.jdbc.DBUtil;
+import com.test.main.profile.ReviewDTO;
+import com.test.main.profile.UserProfileDTO;
 
 
 public class UserDAO {
@@ -206,64 +208,126 @@ public class UserDAO {
 	}
 
 
-	public int registeruser(String userId, String userPassword) {
-		
-		String sql = "INSERT INTO tbluser VALUES (?, ?, ?)";	
+	public int userregisterok(UserDTO dto) {
 		
 		try {
-
-			pstat = conn.prepareStatement(sql);
-
-				pstat.setString(1, userId);
-				pstat.setString(2, userPassword);
-				pstat.setString(3, "1");
+		String sql = "INSERT INTO tbluser VALUES (?, ?, 1)";	
+		
+		conn = open();
+		pstat = conn.prepareStatement(sql);
+			
+		pstat.setString(1, dto.getId());
+		pstat.setString(2, dto.getPw());
+			
+		return pstat.executeUpdate();
 				
-				pstat.executeUpdate();
-				
-				rs = pstat.executeQuery();
-				
-				if(rs.next()) {
-					return 1;
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			return 0;
+		}catch (Exception e) {
+			System.out.println("회원가입 오류.login()");
+			e.printStackTrace();
+		}
+		
+		return -1;
 			
 		}
 	
-	public int registeruserinfo(String userId, String address1, String name, String address2, String tel, String email, String birth, String gender) {
-		
-		String sql = "INSERT INTO tbluser (id, address_seq, name, address, tel, email, birth, gender, since) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";	
+	public int userinforegisterok(UserDTO dto) {
 		
 		try {
-
-			pstat = conn.prepareStatement(sql);
-
-				pstat.setString(1, userId);
-				pstat.setInt(2, Integer.parseInt(address1));
-				pstat.setString(3, name);
-				pstat.setString(4, address2);
-				pstat.setString(5, tel);
-				pstat.setString(6, email);
-				pstat.setString(7, birth);
-				pstat.setString(8, gender);
-				pstat.setString(9, "sysdate");
-				
-				pstat.executeUpdate();
-				
-				rs = pstat.executeQuery();
-				
-				if(rs.next()) {
-					
-					return rs.getString("id");
-					
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			return null;
+		String sql = "INSERT INTO tbluserinfo (id, address_seq, name, address, tel, email, birth, gender) VALUES (?, 1, ?, ?, ?, ?, ?, ?)";	
+		
+		conn = open();
+		pstat = conn.prepareStatement(sql);
 			
+		pstat.setString(1, dto.getId());
+		pstat.setString(2, dto.getName());
+		pstat.setString(3, dto.getAddress());
+		pstat.setString(4, dto.getTel());
+		pstat.setString(5, dto.getEmail());
+		pstat.setString(6, dto.getBirth().substring(0, 1)
+							+ "/"
+							+ dto.getBirth().substring(2, 3)
+							+ "/"
+							+ dto.getBirth().substring(4, 5));
+		pstat.setString(7, dto.getGender());
+			
+		return pstat.executeUpdate();
+				
+		}catch (Exception e) {
+			System.out.println("회원가입 오류.login()");
+			e.printStackTrace();
+		}
+		
+		return -1;
+			
+		}
+	
+		public int checkId(String id) {
+			int result = 0;
+				try {
+						String sql = "SELECT count(*) as cnt FROM tbluser WHERE id = ?";	
+						
+						
+							conn = open();
+							pstat = conn.prepareStatement(sql);
+			
+							pstat.setString(1, id);
+			
+							rs = pstat.executeQuery();
+							
+							if(rs.next()) {
+								return rs.getInt("cnt");
+							} else {
+								
+							}
+				
+					}catch (Exception e) {
+							System.out.println("ID 중복체크 오류.login()");
+								e.printStackTrace();
+						}
+				return result;
+		
+					
+			
+		}
+
+		public int userdelete(String id) {
+			
+			try {
+				String sql = "DELETE FROM tbluser WHERE id = ?";	
+				
+				
+					conn = open();
+					pstat = conn.prepareStatement(sql);
+	
+					pstat.setString(1, id);
+	
+					return pstat.executeUpdate();
+		
+			}catch (Exception e) {
+					System.out.println("ID 중복체크 오류.login()");
+						e.printStackTrace();
+				}
+			return 0;
+		}
+		
+		public int userinfodelete(String id) {
+			
+			try {
+				String sql = "DELETE FROM tbluserinfo WHERE id = ?";	
+				
+				
+					conn = open();
+					pstat = conn.prepareStatement(sql);
+	
+					pstat.setString(1, id);
+	
+					return pstat.executeUpdate();
+		
+			}catch (Exception e) {
+					System.out.println("ID 중복체크 오류.login()");
+						e.printStackTrace();
+				}
+			return 0;
 		}
 	
 	

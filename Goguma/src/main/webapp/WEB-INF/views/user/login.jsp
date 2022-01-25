@@ -38,8 +38,8 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">로그인</div>
 				<div class="panel-body">
-				
-					<form method="GET" action="/goguma/user/loginok.do">
+					
+					<form method="POST" action="/goguma/user/loginok.do">
 						<input type="text" name="id" class="form-control" placeholder="아이디" required autofocus>
 						<input type="password" name="pw" class="form-control" placeholder="비밀번호" required>
 						<div align="right"><input type="submit" value="로그인" class="btn btn-default" >
@@ -47,8 +47,8 @@
 					</form>
 					
 					<div class = "bottom line">
-					<li><a href="/goguma/user/userregister.do">아이디 찾기</a></li>
-					<li><a href="/goguma/user/userregister.do">비밀번호 찾기</a></li>
+					<li><a href="/goguma/user/findid.do">아이디 찾기</a></li>
+					<li><a href="/goguma/user/findpw.do">비밀번호 찾기</a></li>
 					<li><a href="/goguma/user/userregister.do">회원가입</a></li>
 					</div>
 				</div>

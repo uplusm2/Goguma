@@ -3,12 +3,11 @@
     padding-top: 3%;
 	padding-bottom: 3%;
 	min-height: 75vh;
-	width: 200px;
+	width: 15%;
 	float: left;
 	border-right:3px solid #9B59B6;
 }
 
-/* 메뉴가 들어가는 공간 */
 .leftside .menu {
 	height: 100%;
 	width: 95%;
@@ -26,6 +25,7 @@
     margin-bottom:10px;
     cursor: pointer;
 }
+
 .menu ul li div.mainmenu {
     color:#444;
     font-size:16px;
@@ -52,13 +52,66 @@
 
 /* 보라색 라인 */
 /* TODO 선이 자꾸 내려간다.. */
+/* 
 .sidebar-line { 
 	background-color: #9B59B6;
 	height: 100%;
 	width: 3px;
 	float: left;	
 }
+*/
 
-.leftside:after { /* float 처리 */
+/* dashboard */
+.dashboard {
+	float: left;
+	width: 85%;
+	min-height: 75vh;
+	padding: 3%;
+}
+
+.dashboard .subtitle {
+	font-size: 1.8em;
+	margin-bottom: 20px;
+}
+
+
+/* dashboard card*/
+.dashboard .card .item {
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-right: 30px;
+	/* border: 1px solid black; */
+	border-radius: 20px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.dashboard .card .item:hover {
+	transform: scale(1.02, 1.02);
+	cursor: pointer;
+}
+
+.dashboard .card .item:nth-child(4){
+	margin-right: 0px;
+}
+
+.dashboard .card .item .item-icon{
+	float: left;
+	margin: auto 0px;
+}
+
+.dashboard .card::after {
+	content: '';
+	display: block;
 	clear: both;
 }
+
+.dashboard .chart-container{
+	width:100%;
+	margin-top: 40px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+	
+}
+
+
+

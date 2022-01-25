@@ -2,6 +2,7 @@ package com.test.main.center;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 public class QuestionList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String column = req.getParameter("column");
+		String word = req.getParameter("word");
+		String searchmode = "n";
+		
+		if ((column == null && word == null) || (column.equals("") && word.equals(""))) {
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
 		
 		CenterDAO dao = new CenterDAO();
 		HashMap<String,String> map = new HashMap<String,String>();
@@ -30,6 +41,9 @@ public class QuestionList extends HttpServlet {
 		int blockSize = 10;
 		
 		String search = req.getParameter("search");
+		if(search.equals("") || search == null) {
+			search = "1";
+		}
 		String page = req.getParameter("page");
 		
 		if (page == null || page == "") nowPage = 1;
@@ -42,13 +56,16 @@ public class QuestionList extends HttpServlet {
 		map.put("search", search);
 		map.put("begin", begin + "");
 		map.put("end", end + "");
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 		
 		
 		String pagebar = "";
 		
 		//페이지바
 		
-		totalCount = dao.getqTotalCount(search);
+		totalCount = dao.getqTotalCount(map);
 		
 		
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
@@ -93,9 +110,27 @@ public class QuestionList extends HttpServlet {
 		
 		ArrayList<CenterDTO> list = dao.questionlist(map);
 		
+		Calendar now = Calendar.getInstance();
+		String strNow = String.format("%tF", now); //"2022-01-13"
+		
+		for (CenterDTO dto : list) {
+			
+			//날짜 자르기
+			if (dto.getRegdate().startsWith(strNow)) {
+				dto.setRegdate(dto.getRegdate().substring(0, 16));
+				dto.setIsNew(1);
+			} else {
+				dto.setRegdate(dto.getRegdate().substring(0, 10));
+			}
+			//20자 이상 자르기
+			if (dto.getTitle().length() > 20) {
+				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
+			}
+		}
+		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
-		
+		req.setAttribute("search",	search);
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		
