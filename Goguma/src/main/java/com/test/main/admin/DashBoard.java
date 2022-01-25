@@ -1,7 +1,8 @@
 package com.test.main.admin;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Stack;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,6 +31,14 @@ public class DashBoard extends HttpServlet {
 		}
 		*/
 		
+		ConnDAO dao = new ConnDAO();
+		ConnDTO dto = new ConnDTO();
+		
+		Stack<ConnDTO> list = dao.list();
+		ArrayList<ConnDTO> avgList = dao.avgList();
+
+		req.setAttribute("list", list);
+		req.setAttribute("avglist", avgList);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/dashboard.jsp");
 		dispatcher.forward(req, resp);

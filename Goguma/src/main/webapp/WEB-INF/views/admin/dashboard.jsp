@@ -63,8 +63,6 @@
 			</div>
 		</div>
 
-
-
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 
 	</main>
@@ -105,13 +103,11 @@
 	    },
 
 	    series: [{
-	    	<c:forEach items="${list}" var="dto">
-	        {
-	            name: '${dto.name}(${dto.id})',
-	            y: ${dto.count}
-	        }
-	        ,
-	        </c:forEach>
+	        name: '최근 12개월 방문자 수',
+	        data: [ <c:forEach items="${list}" var="dto">${dto.count}, </c:forEach> ]
+	    }, {
+	        name: '연간 평균 방문자 수',
+	        data: [ <c:forEach items="${avglist}" var="dto">${dto.count}, </c:forEach>]
 	    }],
 
 	    responsive: {

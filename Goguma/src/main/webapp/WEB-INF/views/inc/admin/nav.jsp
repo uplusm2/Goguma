@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 
 <!-- nav -->
 <nav class="leftside">
@@ -10,7 +9,7 @@
 		<ul>
 			<li>
 				<div class="mainmenu">
-					| 대시보드
+					<a href="/goguma/admin/dashboard.do">| 대시보드</a>
 				</div>
 			</li>
 			<li>
