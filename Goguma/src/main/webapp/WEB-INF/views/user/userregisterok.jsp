@@ -17,6 +17,11 @@
 		width:500px;
 		margin: auto;
 	}
+	
+	#welcome {
+		margin-top: 
+		font-size: 50px;
+	}
 </style>
 </head>
 <body>
@@ -24,18 +29,23 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<div>
+		<div id="container" align="center">
+
 		
-			<h1 align="center">환영합니다!</h1>
+			<h1 align="center" id="welcome">환영합니다!</h1>
 			
 			<div align="center">국내 최고의 중고거래 사이트 고구마 장터에 회원으로 가입되신것을 축하드립니다!</div>
 			<div align="center">고구마장터에서 따듯하고 달콤한 중고거래 하세요!</div>
 			
-			<p><img src="/goguma/asset/img/userregister.png"></p>
+			<div align="center">
+				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
+			</div>
 			
-			<button class="margin-auto" type ="button" onclick="/goguma/user/main.do">메인으로 돌아가기</button>
-			
+			<div align="center">
+				<button class="margin-auto" type ="button" onclick="location.href='/goguma/main.do'">메인으로 돌아가기</button>
+			</div>
 		
+
 		</div>
 		
 		
