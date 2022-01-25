@@ -31,9 +31,10 @@ public class ProfileEditOk extends HttpServlet {
 	         //매개변수 = (리퀘스트, 업로드할 파일위치, 파일 크기 제한, 인코딩, 디폴트)
 	         
 	         //MultipartRequest 객체 생성 순간 파일 업로드 처리도 같이 완료!!
-	         MultipartRequest multi = new MultipartRequest(
+			 
+			 MultipartRequest  multi = new MultipartRequest(
 	                                 req,
-	                                 req.getRealPath("/files/profile"),
+	                                 "C:\\Goguma\\Goguma\\src\\main\\webapp\\files\\profile",
 	                                 1024 * 1024 * 100,
 	                                 "UTF-8",
 	                                 new DefaultFileRenamePolicy()
@@ -42,7 +43,7 @@ public class ProfileEditOk extends HttpServlet {
 	         String nickName = multi.getParameter("nickName");
 	         String intro = multi.getParameter("intro");
 	         
-	         String path = multi.getFilesystemName("attach");
+	         String path = multi.getFilesystemName("pathDir");
 	         
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
@@ -55,7 +56,7 @@ public class ProfileEditOk extends HttpServlet {
 	         int check = dao.setProfile(map);
 	         
 	         System.out.println(check); // 나중에 처리
-	 		 System.out.println(req.getRealPath("/files/profile"));
+	 		 System.out.println(path);
 	 		 
 	 		 req.setAttribute("check", check);
 	 		 

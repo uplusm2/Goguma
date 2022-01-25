@@ -90,7 +90,6 @@
 							<select name="column" class="text">
 								<option value="subject">제목</option>
 								<option value="content">내용</option>
-								<option value="writer">작성자</option>
 							</select> 
 							<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
 							<input type="image" src="/goguma/asset/img/search.png" class="search-img">
