@@ -45,7 +45,6 @@ public class LoginOk extends HttpServlet {
 		
 		UserDTO result = dao.login(dto);
 		int newMessage = msgDao.getNewMessage(id);
-		
 		if (result != null) {
 			
 			//로그인 성공

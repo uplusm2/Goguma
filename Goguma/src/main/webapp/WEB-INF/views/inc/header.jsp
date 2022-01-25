@@ -19,7 +19,7 @@
 			</c:if>
 			
 			<c:if test="${not empty id}">
-			<li class="message-count">3</li>
+			<li class="message-count">${newMessage}</li>
 			<li onclick="location.href='/goguma/message/inBox.do';"><img src="/goguma/asset/img/message.png"></li>
 			<c:if test="${lv==1}">
 			<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
