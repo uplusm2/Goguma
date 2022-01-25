@@ -186,8 +186,9 @@
 .community .detail img {
     width: 40px;
     height: 40px;
-    border: 1px solid #757575;
+    /* border: 1px solid #757575; */
     border-radius: 50%;
+    background: #FAF7FB;
 }
 .community .detail tr:nth-child(2) td {
     width: 50px;
@@ -297,9 +298,10 @@
 .community .comment img {
     width: 40px;
     height: 40px;
-    border: 1px solid #757575;
+    /* border: 1px solid #757575; */
     border-radius: 50%;
     transform: translateY(-5px);
+    background: #FAF7FB;
 }
 .community .comment tr:nth-child(1) td:nth-child(1) {
     padding-left: 20px;
@@ -353,7 +355,7 @@
     width: 1000px;
     height: 100px;
     padding: 8px;
-    transform: translateY(2px);
+    transform: translateY(3px);
     outline: 0;
 }
 .community .comment.form .btn {
