@@ -31,11 +31,10 @@
 		
 		<div id="container" align="center">
 
-		
 			<h1 align="center" id="welcome">환영합니다!</h1>
 			
 			<div align="center">국내 최고의 중고거래 사이트 고구마 장터에 회원으로 가입되신것을 축하드립니다!</div>
-			<div align="center">고구마장터에서 따듯하고 달콤한 중고거래 하세요!</div>
+			<div align="center">고구마켓에서 따듯하고 달콤한 중고거래 하세요!</div>
 			
 			<div align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
