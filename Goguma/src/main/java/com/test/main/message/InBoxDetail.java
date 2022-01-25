@@ -35,6 +35,7 @@ public class InBoxDetail extends HttpServlet {
 		dao.check(seq);
 		dto = dao.getMessage(seq);
 		refineData(dto);
+		dto.setContent(dto.getContent().replace("\r\n", "<br>"));
 		
 		int newMessage = dao.getNewMessage(id);
 		
