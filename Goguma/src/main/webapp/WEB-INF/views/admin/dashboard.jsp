@@ -26,7 +26,7 @@
 			<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 			
 			<!-- 본문 -->
-			<div class="dashboard">
+			<div class="article dashboard">
 
 				<!-- 제목 -->
 				<div class="subtitle"><h2>대시보드</h2></div>

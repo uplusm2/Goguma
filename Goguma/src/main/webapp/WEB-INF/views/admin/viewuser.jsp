@@ -35,150 +35,170 @@
 </style>
 </head>
 <body>
-	<!-- block.jsp -->
+	<!-- viewuser.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<div class="container">
+			
+			<!-- 왼쪽 네비게이션바 -->
 			<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 			
-			<div class="dashboard">
-			<div class="user-title">
-				<p>${dto.name}(${dto.id})님의회원정보</p>
-			</div>
-
-			<table class="table table-bordered">
-				<tr>
-					<td class="user-img"><img
-						src="/goguma/asset/img/logo_goguma_.png" style="width: 130px"></td>
-					<td class="user-info">
-						<p>
-							<span class="info-title">아이디</span><span>${dto.id}</span>
-						</p>
-						<p>
-							<span class="info-title">이름</span><span>${dto.name}</span>
-						</p>
-						<p>
-							<span class="info-title">닉네임</span><span>${dto.nickname}</span>
-						</p>
-						<p>
-							<span class="info-title">전화번호</span><span>${dto.tel}</span>
-						</p>
-						<p>
-							<span class="info-title">이메일</span><span>${dto.email}</span>
-						</p>
-						<p>
-							<span class="info-title">주소</span><span>${dto.address}</span>
-						</p>
-						<p>
-							<span class="info-title">생년월일</span><span>${dto.birth}</span>
-						</p>
-						<p>
-							<span class="info-title">가입일</span><span>${dto.since}</span>
-						</p>
-						<p>
-							<span class="info-title">평점</span><span>${dto.score}</span>
-						</p>
-						<p>
-							<span class="info-title">상태</span><span>${dto.state}</span>
-						</p>
-					</td>
-				</tr>
-			</table>
-
-			<div role="tabpanel">
-
-				<!-- Nav tabs -->
-				<ul class="nav nav-pills" role="tablist">
-					<li role="presentation" class="active">
-						<a href="#sellRecord" aria-controls="sellRecord" role="tab" data-toggle="tab">판매내역</a>
-					</li>
-					<li role="presentation">
-						<a href="#buyRecord" aria-controls="buyRecord" role="tab" data-toggle="tab">구매내역</a>
-					</li>
-					<li role="presentation">
-						<a href="#communityRecord" aria-controls="communityRecord" role="tab" data-toggle="tab">작성글</a>
-					</li>
-					<li role="presentation">
-						<a href="#comcommentRecord" aria-controls="comcommentRecord" role="tab" data-toggle="tab">작성댓글</a>
-					</li>
-					<li role="presentation">
-						<a href="#questionRecord" aria-controls="questionRecord" role="tab" data-toggle="tab">문의내역</a>
-					</li>
+			<!-- 본문 -->
+			<div class="article">
+			
+				<!-- 제목 -->
+				<div class="subtitle">
+					<p>${dto.name}(${dto.id})님의회원정보</p>
+				</div>
+	
+				<!-- 회원 정보 -->
+				<table class="table table-bordered">
+					<tr>
+						<td class="user-img"><img src="/goguma/asset/img/logo_goguma_.png" style="width: 130px"></td>
+						<td class="user-info">
+							<p>
+								<span class="info-title">아이디</span><span>${dto.id}</span>
+							</p>
+							<p>
+								<span class="info-title">이름</span><span>${dto.name}</span>
+							</p>
+							<p>
+								<span class="info-title">닉네임</span><span>${dto.nickname}</span>
+							</p>
+							<p>
+								<span class="info-title">전화번호</span><span>${dto.tel}</span>
+							</p>
+							<p>
+								<span class="info-title">이메일</span><span>${dto.email}</span>
+							</p>
+							<p>
+								<span class="info-title">주소</span><span>${dto.address}</span>
+							</p>
+							<p>
+								<span class="info-title">생년월일</span><span>${dto.birth}</span>
+							</p>
+							<p>
+								<span class="info-title">가입일</span><span>${dto.since}</span>
+							</p>
+							<p>
+								<span class="info-title">평점</span><span>${dto.score}</span>
+							</p>
+							<p>
+								<span class="info-title">상태</span><span>${dto.state}</span>
+							</p>
+						</td>
+					</tr>
+				</table>
 				
-				</ul>
-
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="sellRecord">
-						<table class="table table-bordered" id="sellTable">
-							<thead>
+				<!-- 회원 활동 내역 -->
+				<div role="tabpanel">
+	
+					<!-- 회원 활동 내역 네비게이션바 -->
+					<ul class="nav nav-pills" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#sellRecord" aria-controls="sellRecord" role="tab" data-toggle="tab">판매내역</a>
+						</li>
+						<li role="presentation">
+							<a href="#buyRecord" aria-controls="buyRecord" role="tab" data-toggle="tab">구매내역</a>
+						</li>
+						<li role="presentation">
+							<a href="#communityRecord" aria-controls="communityRecord" role="tab" data-toggle="tab">작성글</a>
+						</li>
+						<li role="presentation">
+							<a href="#comcommentRecord" aria-controls="comcommentRecord" role="tab" data-toggle="tab">작성댓글</a>
+						</li>
+						<li role="presentation">
+							<a href="#questionRecord" aria-controls="questionRecord" role="tab" data-toggle="tab">문의내역</a>
+						</li>
+					</ul>
+	
+					<!-- 회원 활동 내역 테이블 -->
+					<div class="tab-content">
+						
+						<!-- 판매 내역 -->
+						<div role="tabpanel" class="tab-pane active" id="sellRecord">
+							<table class="table table-bordered" id="sellTable">
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>상품명</th>
+										<th>등록날짜</th>
+										<th>판매날짜</th>
+										<th>거래자 아이디</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						
+						<!-- 구매 내역 -->
+						<div role="tabpanel" class="tab-pane" id="buyRecord">
+							<table class="table table-bordered" id="buyTable">
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>상품명</th>
+										<th>등록날짜</th>
+										<th>구매날짜</th>
+										<th>거래자 아이디</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						
+						<!-- 작성글 -->
+						<div role="tabpanel" class="tab-pane" id="communityRecord">
+							<table class="table table-bordered" id="communityTable">
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>제목</th>
+										<th>작성날짜</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						
+						<!-- 작성댓글 -->
+						<div role="tabpanel" class="tab-pane" id="comcommentRecord">
+							<table class="table table-bordered" id="comcommentTable">
+								<thead>
+									<tr>
+										<th>댓글번호</th>
+										<th>글번호</th>
+										<th>댓글내용</th>
+										<th>작성날짜</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						
+						<!-- 문의내역 -->
+						<div role="tabpanel" class="tab-pane" id="questionRecord">
+							<table class="table table-bordered" id="questionTable">
 								<tr>
 									<th>번호</th>
-									<th>상품명</th>
-									<th>등록날짜</th>
-									<th>판매날짜</th>
-									<th>거래자 아이디</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="buyRecord">
-						<table class="table table-bordered" id="buyTable">
-							<thead>
-								<tr>
-									<th>번호</th>
-									<th>상품명</th>
-									<th>등록날짜</th>
-									<th>구매날짜</th>
-									<th>거래자 아이디</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="communityRecord">
-						<table class="table table-bordered" id="communityTable">
-							<thead>
-								<tr>
-									<th>번호</th>
+									<th>문의유형</th>
 									<th>제목</th>
 									<th>작성날짜</th>
+									<th>상태</th>
 								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="comcommentRecord">
-						<table class="table table-bordered" id="comcommentTable">
-							<tr>
-								<th>댓글번호</th>
-								<th>글번호</th>
-								<th>댓글내용</th>
-								<th>작성날짜</th>
-							</tr>
-						</table>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="questionRecord">
-						<table class="table table-bordered" id="questionTable">
-							<tr>
-								<th>번호</th>
-								<th>문의유형</th>
-								<th>제목</th>
-								<th>작성날짜</th>
-								<th>상태</th>
-							</tr>
-						</table>
-					</div>
-				</div>
-
-			</div>
+							</table>
+						</div>
+					</div><!-- 회원 활동 내역 테이블 끝 -->
+					
+				</div><!-- 회원 활동 내역 끝-->
 			
-			</div>
-		</div>
+			</div><!-- 본문 끝 -->
+			
+		</div><!-- container 끝 -->
 
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 
