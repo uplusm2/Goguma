@@ -15,12 +15,12 @@ import com.test.main.user.UserDAO;
 import com.test.main.user.UserDTO;
 
 @WebServlet("/user/userregisterok.do")
-public class userRegisterOk extends HttpServlet {
+public class userregisterOk extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-
+		req.setCharacterEncoding("utf-8");
 		//1.
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");
@@ -54,23 +54,21 @@ public class userRegisterOk extends HttpServlet {
 		dto1.setBirth(birth);
 		dto1.setGender(gender);
 
-		
 		int result1 = dao.userinforegisterok(dto1);
-		
+			
 		if (result == -1 || result1 == -1) {
 			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
-			script.println("alert('이미 존재하는 아이디입니다.')");
+			script.println("alert('pre-existing ID, plaese try agian')");
 			script.println("history.back();");
 			script.println("</script>");
-		
-		} else {
-			PrintWriter script = resp.getWriter();
-			script.println("<script>");
-			script.println("location.href = 'userregisterok.jsp'");
-			script.println("</script>");
 			
+		} else {
+			
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userregisterok.jsp");
+			dispatcher.forward(req, resp);
+
 		}
 
 	}
