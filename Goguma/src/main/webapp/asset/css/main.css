@@ -306,6 +306,7 @@ footer {
    height: 500px;
    position: relative;
    background: #F9F7FC;
+   border-radius: 10px;
 }
 /* .main-img .slide li:nth-child(2){
    background: #F5FAFD;
