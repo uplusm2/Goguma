@@ -26,6 +26,19 @@
 				</li>
 			</ul>
 		</section>
+		<section class="today-product">
+			<div class="title" onclick="location.href='/goguma/main.do';">
+				<h2>오늘의 상품 추천</h2>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</section>
+		<section class="today-notice">
+			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">
+				<h2>공지사항</h2>
+				<br><br>
+			</div>
+		</section>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>
