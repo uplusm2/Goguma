@@ -55,7 +55,9 @@
 				</tr>
 				</c:if>
 			</table>
+			
 			<div class="pagebar">${pagebar}</div>
+			
 			<c:if test="${not empty id && lv.equals('2')}">
 			<div class="btns">
 				<input type="button" value="글쓰기"
@@ -70,7 +72,10 @@
 	</main>
 	
 	<script>
-		
+		<c:if test="${map.searchmode == 'y'}">
+		//검색 상태를 유지
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 	</script>
 </body>
 </html>

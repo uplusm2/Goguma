@@ -14,22 +14,24 @@
 	<!-- center/faqaddok.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<div class="add">
-			<p>게시물이 등록되었습니다.</p>
-			<div class="button">
-				<input type="button" value="확인하기" class="btn check"
-					onclick="location.href='/goguma/center/faq.do?search=1&page=1';"> 
-			</div>
-		</div>
+		<section class="center">
+		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>
+	
+		<c:if test="${result == 1}">
+		//성공
+		location.href = '/goguma/center/notice.do';
+		</c:if>
+		
 		<c:if test="${result == 0}">
 		//실패
-		alert('게시물 작성에 실패했습니다.');
+		alert('failed');
 		history.back();
 		</c:if>
+	
 	</script>
 </body>
 </html>

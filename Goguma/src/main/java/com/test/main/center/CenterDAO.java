@@ -105,7 +105,7 @@ public class CenterDAO {
 			
 			
 		} catch (Exception e) {
-			System.out.println("BoardDAO.add()");
+			System.out.println("CenterDAO.faqadd()");
 			e.printStackTrace();
 		}
 		
@@ -194,8 +194,14 @@ public class CenterDAO {
 	//공지사항리스트 가져오기
 	public ArrayList<CenterDTO> noticelist(HashMap<String, String> map) {
 		try {
-					
-			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblnotice order by notice_seq desc) a) where rnum between %s and %s",map.get("begin"),map.get("end"));
+			String where = "";
+			
+			if(map.get("searchmode").equals("y")) {
+				
+	            where = String.format("where title like '%%%s%%'", map.get("word").replace("'", "''"));
+	         }
+			
+			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblnotice %s order by notice_seq desc) a) where rnum between %s and %s", where ,map.get("begin"),map.get("end"));
 			
 
 			rs = stat.executeQuery(sql);
@@ -220,11 +226,18 @@ public class CenterDAO {
 		return null;
 	}
 	
-	public int getTotalCount() {
+	public int getnTotalCount(HashMap<String, String> map) {
 		
 		try {
-						
-			String sql  = "select count(*) as cnt from tblnotice";
+			String where = "";
+			
+			
+			if (map.get("searchmode").equals("y")) {
+				where = String.format(" where title like '%%%s%%'", map.get("word").replace("'", "''"));
+			}
+			
+			String sql  = "select count(*) as cnt from tblnotice" + where;
+			System.out.println(sql);
 			
 			rs = stat.executeQuery(sql);
 			
@@ -234,7 +247,7 @@ public class CenterDAO {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("CenterDAO.getTotalCount()");
+			System.out.println("CenterDAO.getnTotalCount()");
 			e.printStackTrace();
 		}
 		
@@ -245,7 +258,7 @@ public class CenterDAO {
 	public CenterDTO noticeGet(String seq) {
 		try {
 
-			String sql = "select * from tblnotice where notice_seq = ?";
+			String sql = "select * from tblnoticeandimg where notice_seq = ?";
 			
 			pstat = conn.prepareStatement(sql);
 			
@@ -261,7 +274,7 @@ public class CenterDAO {
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setRegdate(rs.getString("regdate"));
-				/* dto.Img(rs.getString("path")); */
+				dto.setPath(rs.getNString("path"));
 				
 				return dto;
 			}
@@ -324,7 +337,17 @@ public class CenterDAO {
 	public ArrayList<CenterDTO> questionlist(HashMap<String, String> map) {
 		try {
 			
-			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblquestion order by regdate desc) a where question_type_seq = %s order by regdate desc) where rnum between %s and %s",map.get("search"),map.get("begin"),map.get("end"));
+			String where = "";
+			
+			if(map.get("searchmode").equals("y")) {
+	            where = String.format("where %s like '%%%s%%'", map.get("column"), map.get("word").replace("'", "''"));
+	         }
+			
+			System.out.println(where);
+			
+			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblquestion %s order by regdate desc) a where question_type_seq = %s order by regdate desc) where rnum between %s and %s",where ,map.get("search"),map.get("begin"),map.get("end"));
+			
+			System.out.println(sql);
 			
 			rs = stat.executeQuery(sql);
 			
@@ -351,11 +374,19 @@ public class CenterDAO {
 		}
 		return null;
 	}
-	public int getqTotalCount(String search) {
+	
+	public int getqTotalCount(HashMap<String, String> map) {
 		
 		try {
-						
-			String sql  = String.format("select count(*) as cnt from tblquestion where question_type_seq = %s", search);
+			String where = "";
+			
+			if (map.get("searchmode").equals("y")) {
+				where = String.format(" and title like '%%%s%%'", map.get("word").replace("'", "''"));
+			}
+			
+			String sql  = String.format("select count(*) as cnt from tblquestion where question_type_seq = %s", map.get("search"));
+			sql = sql + where;
+			
 			
 			rs = stat.executeQuery(sql);
 			
@@ -460,7 +491,7 @@ public class CenterDAO {
 			
 			
 		} catch (Exception e) {
-			System.out.println("BoardDAO.add()");
+			System.out.println("CenterDAO.questionadd()");
 			e.printStackTrace();
 		}
 		
@@ -554,6 +585,42 @@ public class CenterDAO {
 
 		} catch (Exception e) {
 			System.out.println("CenterDAO.questionedit()");
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+
+
+	public int noticeadd(CenterDTO dto) {
+		try {
+
+			String sql = "insert into tblnotice (notice_seq, title, content, regdate) values (notice_seq.nextVal, ?, ?, default)";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getTitle()); //O
+			pstat.setString(2, dto.getContent()); //O
+				
+			int result =  pstat.executeUpdate();
+			
+			if(dto.getPath() != null) {
+				String sql2 = "insert into tblnoticeimg (notice_img_seq, notice_seq, path) values (notice_img_seq.nextVal, ?, ?)";
+				pstat = conn.prepareStatement(sql2);
+				
+				pstat.setString(1, dto.getSeq()); //O
+				pstat.setString(2, dto.getPath()); //O
+					
+				result *= pstat.executeUpdate();
+			}
+			
+			
+			return result;
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("CenterDAO.noticeadd()");
 			e.printStackTrace();
 		}
 		

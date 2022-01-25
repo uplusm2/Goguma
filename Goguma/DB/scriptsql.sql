@@ -499,172 +499,172 @@ CREATE TABLE tblProduct (
 CREATE SEQUENCE product_seq;
 
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_product_seq_pk PRIMARY KEY(product_seq);
-ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_seller_id_fk FOREIGN KEY(id) REFERENCES tblUser(id);
+ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_id_fk FOREIGN KEY(id) REFERENCES tblUser(id);
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_address_seq_fk FOREIGN KEY(address_seq) REFERENCES tblAddress(address_seq);
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_product_type_fk FOREIGN KEY(product_type_seq) REFERENCES tblProductType(product_type_seq);
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_is_auction_ck CHECK(is_auction IN ('n', 'y'));
 ALTER TABLE tblProduct ADD CONSTRAINT tblProduct_is_completion_ck CHECK(is_completion IN ('n', 'y'));
 
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user14', 47, 10, '에어컨', 308000, 'n', '싸게 내놓습니다.', '2020-01-10', 'y', 7, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 25, 13, '갤럭시탭', 197000, 'y', '정말 좋은 상품이에요~', '2020-01-14', 'y', 19, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user95', 18, 1, '냄비받침', 531000, 'n', '좋은 거래 원해요^^', '2020-01-20', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 16, 1, '얼마 안 쓴 배드민턴라켓 팝니다', 224000, 'y', '싸게 내놓습니다.', '2020-01-25', 'y', 18, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 21, 2, '중고 이동장 판매', 392000, 'n', '정말 좋은 상품이에요~', '2020-01-27', 'y', 5, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 40, 10, '얼마 안 쓴 핸드크림', 990000, 'y', '새제품입니다.', '2020-01-29', 'y', 18, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 6, 15, '중고 자기개발 도서', 131000, 'n', '좋은 거래 원해요^^', '2020-01-31', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user54', 33, 11, '걸음마보조기', 106000, 'y', '직거래 원해요', '2020-02-08', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user20', 8, 6, '얼마 안 쓴 과학동화전집', 593000, 'n', '싸게 내놓습니다.', '2020-02-10', 'y', 2, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user44', 32, 9, '니트', 27000, 'y', '쿨거래 원합니다', '2020-02-15', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 19, 10, '선반 팝니다', 63000, 'n', '쿨거래 원합니다', '2020-02-22', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user90', 10, 3, '중고 갤럭시탭 팝니다', 483000, 'y', '새제품입니다.', '2020-02-24', 'y', 9, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user40', 44, 9, '가습기 판매합니다', 642000, 'n', '새제품입니다.', '2020-03-04', 'y', 2, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 37, 15, '미개봉 선인장 팝니다', 384000, 'y', '새제품입니다.', '2020-03-07', 'y', 28, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user93', 18, 3, '테이블', 372000, 'n', '정말 좋은 상품이에요~', '2020-03-14', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 6, 11, '영어동화', 817000, 'y', '새제품입니다.', '2020-03-16', 'y', 3, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user86', 8, 10, '중고 틴트', 646000, 'n', '싸게 내놓습니다.', '2020-03-18', 'y', 9, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 35, 15, '얼마 안 쓴 청바지 새상품', 329000, 'y', '택배거래 원해요', '2020-03-24', 'y', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user67', 48, 12, '아이패드 판매합니다', 817000, 'n', '직거래 원해요', '2020-04-02', 'y', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 37, 7, '얼마 안 쓴 위인전', 896000, 'y', '정말 좋은 상품이에요~', '2020-04-11', 'y', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user16', 28, 6, '고양이간식', 344000, 'n', '새제품입니다.', '2020-04-13', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 23, 4, '걸음마보조기 새상품', 641000, 'y', '새제품입니다.', '2020-04-16', 'y', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 48, 3, '축구공 정리합니다', 270000, 'n', '싸게 내놓습니다.', '2020-04-17', 'y', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 19, 1, '얼마 안 쓴 배드민턴라켓 판매', 281000, 'y', '쿨거래 원합니다', '2020-04-25', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 35, 6, '미개봉 소파', 751000, 'n', '직거래 원해요', '2020-04-29', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user66', 45, 7, '얼마 안 쓴 가습기 새상품', 757000, 'y', '싸게 내놓습니다.', '2020-04-30', 'y', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user75', 7, 11, '미개봉 셔츠', 317000, 'n', '새제품입니다.', '2020-05-03', 'y', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user99', 7, 7, '자기개발 도서 팔아요', 201000, 'y', '쿨거래 원합니다', '2020-05-10', 'y', 27, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 48, 8, '압력밥솥 팝니다', 77000, 'n', '좋은 거래 원해요^^', '2020-05-19', 'y', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user13', 32, 9, '미개봉 신비아파트 만화책', 734000, 'y', '좋은 거래 원해요^^', '2020-05-26', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 26, 13, '걸음마보조기', 831000, 'n', '싸게 내놓습니다.', '2020-05-27', 'y', 19, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user52', 13, 13, '걸음마보조기 새상품', 833000, 'y', '싸게 내놓습니다.', '2020-06-01', 'y', 28, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 34, 3, '얼마 안 쓴 핸드크림 팔아요', 236000, 'n', '정말 좋은 상품이에요~', '2020-06-06', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 37, 9, '딥러닝의 기초', 85000, 'y', '쿨거래 원합니다', '2020-06-13', 'y', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 2, 1, '미개봉 책상', 749000, 'n', '직거래 원해요', '2020-06-19', 'y', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 22, 2, '미개봉 아이패드', 533000, 'y', '정말 좋은 상품이에요~', '2020-06-20', 'y', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user8', 3, 14, '중고 아이비', 357000, 'n', '쿨거래 원합니다', '2020-06-23', 'y', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user87', 7, 10, '숏패딩 판매', 592000, 'y', '정말 좋은 상품이에요~', '2020-07-01', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 42, 8, '미개봉 스투키', 985000, 'n', '좋은 거래 원해요^^', '2020-07-02', 'y', 27, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 12, 8, '미개봉 영어동화', 925000, 'y', '싸게 내놓습니다.', '2020-07-06', 'y', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 15, 12, '중고 자바의 정석 정리합니다', 670000, 'n', '택배거래 원해요', '2020-07-09', 'y', 22, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user60', 35, 3, '청소기 팔아요', 154000, 'y', '직거래 원해요', '2020-07-18', 'y', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user26', 12, 12, '미개봉 수세미 정리합니다', 128000, 'n', '택배거래 원해요', '2020-07-26', 'y', 7, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user51', 6, 10, '축구공 팔아요', 889000, 'y', '정말 좋은 상품이에요~', '2020-07-31', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 24, 5, '얼마 안 쓴 위인전', 56000, 'n', '좋은 거래 원해요^^', '2020-08-02', 'y', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 3, 15, '자전거', 881000, 'y', '직거래 원해요', '2020-08-11', 'y', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 45, 14, '중고 책상', 750000, 'n', '쿨거래 원합니다', '2020-08-12', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user76', 20, 2, '얼마 안 쓴 냉장고', 321000, 'y', '정말 좋은 상품이에요~', '2020-08-16', 'y', 21, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user70', 27, 3, '책상 팔아요', 457000, 'n', '싸게 내놓습니다.', '2020-08-20', 'y', 19, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user59', 10, 9, '중고 갤럭시탭 팝니다', 888000, 'y', '쿨거래 원합니다', '2020-08-23', 'y', 15, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 46, 8, '얼마 안 쓴 자전거', 190000, 'n', '좋은 거래 원해요^^', '2020-08-28', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 13, 14, '신비아파트 만화책', 282000, 'y', '싸게 내놓습니다.', '2020-09-06', 'y', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 7, 13, '수영복 판매합니다', 540000, 'n', '정말 좋은 상품이에요~', '2020-09-14', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 5, 10, '갤럭시탭 판매합니다', 76000, 'y', '직거래 원해요', '2020-09-15', 'y', 15, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 37, 5, '미개봉 고양이간식', 619000, 'n', '쿨거래 원합니다', '2020-09-16', 'y', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 6, 5, '중고 걸음마보조기', 420000, 'y', '택배거래 원해요', '2020-09-19', 'y', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user7', 25, 12, '테이블', 90000, 'n', '싸게 내놓습니다.', '2020-09-20', 'y', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 27, 14, '테이블 팝니다', 668000, 'y', '좋은 거래 원해요^^', '2020-09-29', 'y', 6, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 22, 14, '원피스 팔아요', 799000, 'n', '택배거래 원해요', '2020-10-06', 'y', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user38', 24, 11, '자전거', 831000, 'y', '택배거래 원해요', '2020-10-14', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user37', 36, 13, '니트', 956000, 'n', '정말 좋은 상품이에요~', '2020-10-22', 'y', 22, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user2', 8, 12, '자기개발 도서 판매', 65000, 'y', '싸게 내놓습니다.', '2020-10-31', 'y', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 28, 4, '얼마 안 쓴 전자레인지', 87000, 'n', '싸게 내놓습니다.', '2020-11-01', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 32, 12, '위인전 내놓습니다.', 686000, 'y', '쿨거래 원합니다', '2020-11-06', 'y', 18, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user53', 43, 12, '에어컨 정리합니다', 592000, 'n', '싸게 내놓습니다.', '2020-11-14', 'y', 21, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 13, 1, '아기자동차', 380000, 'y', '택배거래 원해요', '2020-11-17', 'y', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 18, 4, '아이비 정리합니다', 441000, 'n', '택배거래 원해요', '2020-11-19', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 35, 15, '미개봉 셔츠', 627000, 'y', '쿨거래 원합니다', '2020-11-20', 'y', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user72', 19, 12, '중고 지갑', 517000, 'n', '정말 좋은 상품이에요~', '2020-11-29', 'y', 28, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 47, 11, '중고 후드집업 정리합니다', 942000, 'y', '택배거래 원해요', '2020-12-08', 'y', 4, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user59', 4, 6, '냉장고', 787000, 'n', '택배거래 원해요', '2020-12-14', 'y', 11, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 20, 5, '지갑 판매합니다', 921000, 'y', '싸게 내놓습니다.', '2020-12-19', 'y', 18, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user51', 44, 8, '미개봉 의자 판매합니다', 572000, 'n', '싸게 내놓습니다.', '2020-12-23', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 32, 13, '얼마 안 쓴 셔츠', 818000, 'y', '직거래 원해요', '2020-12-24', 'y', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user23', 10, 10, '중고 자바의 정석 판매', 145000, 'n', '좋은 거래 원해요^^', '2020-12-31', 'y', 22, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 6, 11, '얼마 안 쓴 샴푸', 641000, 'y', '싸게 내놓습니다.', '2021-01-07', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user86', 36, 2, '얼마 안 쓴 스투키 판매', 364000, 'n', '정말 좋은 상품이에요~', '2021-01-08', 'y', 3, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user16', 45, 12, '수영복', 134000, 'y', '정말 좋은 상품이에요~', '2021-01-16', 'y', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user27', 21, 12, '미개봉 원피스 정리합니다', 674000, 'n', '쿨거래 원합니다', '2021-01-24', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 26, 12, '얼마 안 쓴 자전거', 451000, 'y', '직거래 원해요', '2021-01-25', 'y', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 6, 14, '미개봉 청소기 팝니다', 306000, 'n', '새제품입니다.', '2021-01-31', 'y', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user22', 2, 4, '중고 스투키', 721000, 'y', '싸게 내놓습니다.', '2021-02-01', 'y', 9, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user77', 40, 13, '중고 자전거 새상품', 542000, 'n', '좋은 거래 원해요^^', '2021-02-04', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 47, 2, '스타벅스 5만원 쿠폰 판매', 710000, 'y', '정말 좋은 상품이에요~', '2021-02-08', 'y', 3, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 50, 13, '갤럭시탭', 347000, 'n', '정말 좋은 상품이에요~', '2021-02-12', 'y', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user96', 20, 13, '아이패드 팔아요', 902000, 'y', '좋은 거래 원해요^^', '2021-02-20', 'y', 5, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 7, 7, '신비아파트 만화책', 271000, 'n', '쿨거래 원합니다', '2021-02-21', 'y', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user22', 19, 12, '미개봉 스타벅스 5만원 쿠폰', 410000, 'y', '쿨거래 원합니다', '2021-03-02', 'y', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 25, 1, '미개봉 모니터 내놓습니다.', 824000, 'n', '택배거래 원해요', '2021-03-05', 'y', 13, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user28', 18, 4, '얼마 안 쓴 선반', 517000, 'y', '새제품입니다.', '2021-03-06', 'y', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user97', 1, 8, '얼마 안 쓴 냉장고', 571000, 'n', '택배거래 원해요', '2021-03-13', 'y', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 21, 7, '아이패드', 594000, 'y', '새제품입니다.', '2021-03-22', 'y', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user27', 34, 14, '후드집업', 436000, 'n', '새제품입니다.', '2021-03-23', 'y', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 45, 11, '얼마 안 쓴 스투키 팝니다', 866000, 'y', '싸게 내놓습니다.', '2021-03-27', 'y', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user73', 32, 10, '중고 이동장', 371000, 'n', '싸게 내놓습니다.', '2021-04-03', 'y', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 29, 8, '에어컨', 350000, 'y', '직거래 원해요', '2021-04-05', 'y', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 1, 14, '미개봉 냄비받침', 987000, 'n', '싸게 내놓습니다.', '2021-04-08', 'y', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 50, 6, '중고 책꽂이', 343000, 'y', '좋은 거래 원해요^^', '2021-04-14', 'y', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 7, 4, '에코백 판매합니다', 787000, 'n', '좋은 거래 원해요^^', '2021-04-19', 'y', 27, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user62', 2, 12, '중고 청소기', 254000, 'y', '택배거래 원해요', '2021-04-21', 'y', 5, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user66', 40, 15, '얼마 안 쓴 자기개발 도서 새상품', 730000, 'n', '직거래 원해요', '2021-04-23', 'n', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 3, 7, '걸음마보조기 정리합니다', 676000, 'y', '정말 좋은 상품이에요~', '2021-05-02', 'n', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 19, 6, '얼마 안 쓴 이동장 정리합니다', 150000, 'n', '정말 좋은 상품이에요~', '2021-05-09', 'n', 4, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 22, 13, '얼마 안 쓴 청소기', 603000, 'y', '쿨거래 원합니다', '2021-05-12', 'n', 12, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user11', 18, 9, '영어동화 팔아요', 119000, 'n', '새제품입니다.', '2021-05-17', 'n', 18, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user93', 45, 8, '미개봉 선인장', 198000, 'y', '싸게 내놓습니다.', '2021-05-25', 'n', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user88', 21, 2, '신비아파트 만화책', 260000, 'n', '택배거래 원해요', '2021-06-01', 'n', 6, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 31, 8, '전자레인지 팔아요', 134000, 'y', '좋은 거래 원해요^^', '2021-06-03', 'n', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user17', 20, 4, '미개봉 모니터', 397000, 'n', '싸게 내놓습니다.', '2021-06-06', 'n', 28, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user35', 23, 6, '자바의 정석', 613000, 'y', '직거래 원해요', '2021-06-12', 'n', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user28', 19, 8, '얼마 안 쓴 위인전 팝니다', 618000, 'n', '택배거래 원해요', '2021-06-20', 'n', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 12, 14, '얼마 안 쓴 선인장 새상품', 276000, 'y', '택배거래 원해요', '2021-06-24', 'n', 4, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 47, 9, '에어컨', 605000, 'n', '쿨거래 원합니다', '2021-06-26', 'n', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user82', 41, 6, '얼마 안 쓴 위인전', 743000, 'y', '직거래 원해요', '2021-07-04', 'n', 21, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user49', 16, 4, '소파', 678000, 'n', '싸게 내놓습니다.', '2021-07-12', 'n', 4, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 48, 13, '얼마 안 쓴 고양이간식 내놓습니다.', 440000, 'y', '싸게 내놓습니다.', '2021-07-20', 'n', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user8', 15, 10, '딥러닝의 기초', 619000, 'n', '정말 좋은 상품이에요~', '2021-07-26', 'n', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 45, 4, '핸드크림 판매', 273000, 'y', '쿨거래 원합니다', '2021-07-31', 'n', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 35, 15, '걸음마보조기', 22000, 'n', '싸게 내놓습니다.', '2021-08-01', 'n', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 25, 13, '아이비 내놓습니다.', 560000, 'y', '싸게 내놓습니다.', '2021-08-07', 'n', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user79', 47, 14, '청바지', 332000, 'n', '직거래 원해요', '2021-08-14', 'n', 15, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 11, 3, '미개봉 후드집업', 573000, 'y', '직거래 원해요', '2021-08-21', 'n', 27, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user64', 44, 4, '중고 원피스', 595000, 'n', '직거래 원해요', '2021-08-22', 'n', 3, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user52', 10, 6, '과학동화전집 팔아요', 388000, 'y', '새제품입니다.', '2021-08-27', 'n', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 34, 10, '아이폰 판매합니다', 161000, 'n', '정말 좋은 상품이에요~', '2021-09-03', 'n', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 39, 14, '미개봉 걸음마보조기', 383000, 'y', '직거래 원해요', '2021-09-04', 'n', 14, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 36, 3, '아이폰', 486000, 'n', '쿨거래 원합니다', '2021-09-08', 'n', 13, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user72', 22, 5, '미개봉 강아지옷 팔아요', 223000, 'y', '직거래 원해요', '2021-09-12', 'n', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 39, 4, '미개봉 배드민턴라켓', 947000, 'n', '싸게 내놓습니다.', '2021-09-16', 'n', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user95', 40, 10, '미개봉 자기개발 도서', 785000, 'y', '택배거래 원해요', '2021-09-22', 'n', 13, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 46, 9, '중고 책꽂이 새상품', 463000, 'n', '정말 좋은 상품이에요~', '2021-09-24', 'n', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user24', 7, 8, '미개봉 아이패드 내놓습니다.', 258000, 'y', '택배거래 원해요', '2021-10-01', 'n', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 28, 12, '미개봉 테이블 내놓습니다.', 242000, 'n', '직거래 원해요', '2021-10-05', 'n', 7, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user91', 43, 13, '중고 전자레인지', 742000, 'y', '싸게 내놓습니다.', '2021-10-08', 'n', 22, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user5', 1, 7, '미개봉 냄비받침 판매합니다', 693000, 'n', '직거래 원해요', '2021-10-12', 'n', 25, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 47, 13, '아이비', 261000, 'y', '새제품입니다.', '2021-10-15', 'n', 24, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 12, 3, '강아지옷 정리합니다', 738000, 'n', '쿨거래 원합니다', '2021-10-18', 'n', 5, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user26', 48, 14, '자바의 정석 내놓습니다.', 235000, 'y', '쿨거래 원합니다', '2021-10-22', 'n', 21, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 9, 11, '중고 선반 판매', 846000, 'n', '직거래 원해요', '2021-10-23', 'n', 10, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user82', 29, 15, '배드민턴라켓 팔아요', 454000, 'y', '새제품입니다.', '2021-10-28', 'n', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user23', 31, 9, '중고 책꽂이 정리합니다', 348000, 'n', '좋은 거래 원해요^^', '2021-10-30', 'n', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 37, 15, '얼마 안 쓴 고양이간식 내놓습니다.', 401000, 'y', '정말 좋은 상품이에요~', '2021-11-08', 'n', 2, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 40, 7, '미개봉 선인장 새상품', 21000, 'n', '정말 좋은 상품이에요~', '2021-11-13', 'n', 7, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 8, 12, '얼마 안 쓴 아이패드 판매', 822000, 'y', '정말 좋은 상품이에요~', '2021-11-16', 'n', 26, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user92', 1, 4, '에코백', 318000, 'n', '좋은 거래 원해요^^', '2021-11-21', 'n', 17, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user15', 13, 14, '얼마 안 쓴 셔츠', 342000, 'y', '새제품입니다.', '2021-11-26', 'n', 1, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 5, 14, '얼마 안 쓴 책상 판매합니다', 650000, 'n', '쿨거래 원합니다', '2021-11-29', 'n', 6, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user34', 27, 1, '아이비', 46000, 'y', '쿨거래 원합니다', '2021-12-05', 'n', 29, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user88', 50, 15, '원피스 판매', 192000, 'n', '직거래 원해요', '2021-12-08', 'n', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 18, 8, '영어동화', 939000, 'y', '직거래 원해요', '2021-12-13', 'n', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user37', 45, 14, '청바지 판매합니다', 370000, 'n', '쿨거래 원합니다', '2021-12-19', 'n', 20, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user5', 42, 5, '미개봉 강아지옷 판매', 753000, 'y', '직거래 원해요', '2021-12-21', 'n', 27, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user43', 18, 2, '미개봉 이동장 내놓습니다.', 203000, 'n', '정말 좋은 상품이에요~', '2021-12-28', 'n', 16, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 31, 3, '틴트', 224000, 'y', '택배거래 원해요', '2021-12-29', 'n', 8, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user21', 25, 14, '미개봉 자전거', 676000, 'n', '싸게 내놓습니다.', '2022-01-04', 'n', 7, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user76', 26, 8, '미개봉 소파 내놓습니다.', 449000, 'y', '택배거래 원해요', '2022-01-12', 'n', 15, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user49', 11, 9, '중고 수세미', 695000, 'n', '싸게 내놓습니다.', '2022-01-17', 'n', 23, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 12, 1, '중고 소파', 651000, 'y', '직거래 원해요', '2022-01-23', 'n', 22, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user53', 43, 4, '미개봉 책꽂이', 661000, 'n', '좋은 거래 원해요^^', '2022-01-24', 'n', 13, 'n');
-insert into tblProduct (product_seq, seller_id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 33, 7, '피아노장난감 팔아요', 285000, 'y', '정말 좋은 상품이에요~', '2022-01-27', 'n', 28, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user14', 47, 10, '에어컨', 308000, 'n', '싸게 내놓습니다.', '2020-01-10', 'y', 7, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 25, 13, '갤럭시탭', 197000, 'y', '정말 좋은 상품이에요~', '2020-01-14', 'y', 19, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user95', 18, 1, '냄비받침', 531000, 'n', '좋은 거래 원해요^^', '2020-01-20', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 16, 1, '얼마 안 쓴 배드민턴라켓 팝니다', 224000, 'y', '싸게 내놓습니다.', '2020-01-25', 'y', 18, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 21, 2, '중고 이동장 판매', 392000, 'n', '정말 좋은 상품이에요~', '2020-01-27', 'y', 5, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 40, 10, '얼마 안 쓴 핸드크림', 990000, 'y', '새제품입니다.', '2020-01-29', 'y', 18, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 6, 15, '중고 자기개발 도서', 131000, 'n', '좋은 거래 원해요^^', '2020-01-31', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user54', 33, 11, '걸음마보조기', 106000, 'y', '직거래 원해요', '2020-02-08', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user20', 8, 6, '얼마 안 쓴 과학동화전집', 593000, 'n', '싸게 내놓습니다.', '2020-02-10', 'y', 2, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user44', 32, 9, '니트', 27000, 'y', '쿨거래 원합니다', '2020-02-15', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 19, 10, '선반 팝니다', 63000, 'n', '쿨거래 원합니다', '2020-02-22', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user90', 10, 3, '중고 갤럭시탭 팝니다', 483000, 'y', '새제품입니다.', '2020-02-24', 'y', 9, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user40', 44, 9, '가습기 판매합니다', 642000, 'n', '새제품입니다.', '2020-03-04', 'y', 2, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 37, 15, '미개봉 선인장 팝니다', 384000, 'y', '새제품입니다.', '2020-03-07', 'y', 28, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user93', 18, 3, '테이블', 372000, 'n', '정말 좋은 상품이에요~', '2020-03-14', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 6, 11, '영어동화', 817000, 'y', '새제품입니다.', '2020-03-16', 'y', 3, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user86', 8, 10, '중고 틴트', 646000, 'n', '싸게 내놓습니다.', '2020-03-18', 'y', 9, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 35, 15, '얼마 안 쓴 청바지 새상품', 329000, 'y', '택배거래 원해요', '2020-03-24', 'y', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user67', 48, 12, '아이패드 판매합니다', 817000, 'n', '직거래 원해요', '2020-04-02', 'y', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 37, 7, '얼마 안 쓴 위인전', 896000, 'y', '정말 좋은 상품이에요~', '2020-04-11', 'y', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user16', 28, 6, '고양이간식', 344000, 'n', '새제품입니다.', '2020-04-13', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 23, 4, '걸음마보조기 새상품', 641000, 'y', '새제품입니다.', '2020-04-16', 'y', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 48, 3, '축구공 정리합니다', 270000, 'n', '싸게 내놓습니다.', '2020-04-17', 'y', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 19, 1, '얼마 안 쓴 배드민턴라켓 판매', 281000, 'y', '쿨거래 원합니다', '2020-04-25', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 35, 6, '미개봉 소파', 751000, 'n', '직거래 원해요', '2020-04-29', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user66', 45, 7, '얼마 안 쓴 가습기 새상품', 757000, 'y', '싸게 내놓습니다.', '2020-04-30', 'y', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user75', 7, 11, '미개봉 셔츠', 317000, 'n', '새제품입니다.', '2020-05-03', 'y', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user99', 7, 7, '자기개발 도서 팔아요', 201000, 'y', '쿨거래 원합니다', '2020-05-10', 'y', 27, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 48, 8, '압력밥솥 팝니다', 77000, 'n', '좋은 거래 원해요^^', '2020-05-19', 'y', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user13', 32, 9, '미개봉 신비아파트 만화책', 734000, 'y', '좋은 거래 원해요^^', '2020-05-26', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 26, 13, '걸음마보조기', 831000, 'n', '싸게 내놓습니다.', '2020-05-27', 'y', 19, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user52', 13, 13, '걸음마보조기 새상품', 833000, 'y', '싸게 내놓습니다.', '2020-06-01', 'y', 28, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 34, 3, '얼마 안 쓴 핸드크림 팔아요', 236000, 'n', '정말 좋은 상품이에요~', '2020-06-06', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 37, 9, '딥러닝의 기초', 85000, 'y', '쿨거래 원합니다', '2020-06-13', 'y', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 2, 1, '미개봉 책상', 749000, 'n', '직거래 원해요', '2020-06-19', 'y', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 22, 2, '미개봉 아이패드', 533000, 'y', '정말 좋은 상품이에요~', '2020-06-20', 'y', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user8', 3, 14, '중고 아이비', 357000, 'n', '쿨거래 원합니다', '2020-06-23', 'y', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user87', 7, 10, '숏패딩 판매', 592000, 'y', '정말 좋은 상품이에요~', '2020-07-01', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 42, 8, '미개봉 스투키', 985000, 'n', '좋은 거래 원해요^^', '2020-07-02', 'y', 27, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 12, 8, '미개봉 영어동화', 925000, 'y', '싸게 내놓습니다.', '2020-07-06', 'y', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 15, 12, '중고 자바의 정석 정리합니다', 670000, 'n', '택배거래 원해요', '2020-07-09', 'y', 22, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user60', 35, 3, '청소기 팔아요', 154000, 'y', '직거래 원해요', '2020-07-18', 'y', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user26', 12, 12, '미개봉 수세미 정리합니다', 128000, 'n', '택배거래 원해요', '2020-07-26', 'y', 7, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user51', 6, 10, '축구공 팔아요', 889000, 'y', '정말 좋은 상품이에요~', '2020-07-31', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 24, 5, '얼마 안 쓴 위인전', 56000, 'n', '좋은 거래 원해요^^', '2020-08-02', 'y', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 3, 15, '자전거', 881000, 'y', '직거래 원해요', '2020-08-11', 'y', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 45, 14, '중고 책상', 750000, 'n', '쿨거래 원합니다', '2020-08-12', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user76', 20, 2, '얼마 안 쓴 냉장고', 321000, 'y', '정말 좋은 상품이에요~', '2020-08-16', 'y', 21, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user70', 27, 3, '책상 팔아요', 457000, 'n', '싸게 내놓습니다.', '2020-08-20', 'y', 19, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user59', 10, 9, '중고 갤럭시탭 팝니다', 888000, 'y', '쿨거래 원합니다', '2020-08-23', 'y', 15, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 46, 8, '얼마 안 쓴 자전거', 190000, 'n', '좋은 거래 원해요^^', '2020-08-28', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 13, 14, '신비아파트 만화책', 282000, 'y', '싸게 내놓습니다.', '2020-09-06', 'y', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 7, 13, '수영복 판매합니다', 540000, 'n', '정말 좋은 상품이에요~', '2020-09-14', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 5, 10, '갤럭시탭 판매합니다', 76000, 'y', '직거래 원해요', '2020-09-15', 'y', 15, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 37, 5, '미개봉 고양이간식', 619000, 'n', '쿨거래 원합니다', '2020-09-16', 'y', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 6, 5, '중고 걸음마보조기', 420000, 'y', '택배거래 원해요', '2020-09-19', 'y', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user7', 25, 12, '테이블', 90000, 'n', '싸게 내놓습니다.', '2020-09-20', 'y', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 27, 14, '테이블 팝니다', 668000, 'y', '좋은 거래 원해요^^', '2020-09-29', 'y', 6, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 22, 14, '원피스 팔아요', 799000, 'n', '택배거래 원해요', '2020-10-06', 'y', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user38', 24, 11, '자전거', 831000, 'y', '택배거래 원해요', '2020-10-14', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user37', 36, 13, '니트', 956000, 'n', '정말 좋은 상품이에요~', '2020-10-22', 'y', 22, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user2', 8, 12, '자기개발 도서 판매', 65000, 'y', '싸게 내놓습니다.', '2020-10-31', 'y', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 28, 4, '얼마 안 쓴 전자레인지', 87000, 'n', '싸게 내놓습니다.', '2020-11-01', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 32, 12, '위인전 내놓습니다.', 686000, 'y', '쿨거래 원합니다', '2020-11-06', 'y', 18, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user53', 43, 12, '에어컨 정리합니다', 592000, 'n', '싸게 내놓습니다.', '2020-11-14', 'y', 21, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 13, 1, '아기자동차', 380000, 'y', '택배거래 원해요', '2020-11-17', 'y', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 18, 4, '아이비 정리합니다', 441000, 'n', '택배거래 원해요', '2020-11-19', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 35, 15, '미개봉 셔츠', 627000, 'y', '쿨거래 원합니다', '2020-11-20', 'y', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user72', 19, 12, '중고 지갑', 517000, 'n', '정말 좋은 상품이에요~', '2020-11-29', 'y', 28, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 47, 11, '중고 후드집업 정리합니다', 942000, 'y', '택배거래 원해요', '2020-12-08', 'y', 4, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user59', 4, 6, '냉장고', 787000, 'n', '택배거래 원해요', '2020-12-14', 'y', 11, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 20, 5, '지갑 판매합니다', 921000, 'y', '싸게 내놓습니다.', '2020-12-19', 'y', 18, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user51', 44, 8, '미개봉 의자 판매합니다', 572000, 'n', '싸게 내놓습니다.', '2020-12-23', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 32, 13, '얼마 안 쓴 셔츠', 818000, 'y', '직거래 원해요', '2020-12-24', 'y', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user23', 10, 10, '중고 자바의 정석 판매', 145000, 'n', '좋은 거래 원해요^^', '2020-12-31', 'y', 22, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 6, 11, '얼마 안 쓴 샴푸', 641000, 'y', '싸게 내놓습니다.', '2021-01-07', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user86', 36, 2, '얼마 안 쓴 스투키 판매', 364000, 'n', '정말 좋은 상품이에요~', '2021-01-08', 'y', 3, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user16', 45, 12, '수영복', 134000, 'y', '정말 좋은 상품이에요~', '2021-01-16', 'y', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user27', 21, 12, '미개봉 원피스 정리합니다', 674000, 'n', '쿨거래 원합니다', '2021-01-24', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 26, 12, '얼마 안 쓴 자전거', 451000, 'y', '직거래 원해요', '2021-01-25', 'y', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 6, 14, '미개봉 청소기 팝니다', 306000, 'n', '새제품입니다.', '2021-01-31', 'y', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user22', 2, 4, '중고 스투키', 721000, 'y', '싸게 내놓습니다.', '2021-02-01', 'y', 9, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user77', 40, 13, '중고 자전거 새상품', 542000, 'n', '좋은 거래 원해요^^', '2021-02-04', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 47, 2, '스타벅스 5만원 쿠폰 판매', 710000, 'y', '정말 좋은 상품이에요~', '2021-02-08', 'y', 3, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user45', 50, 13, '갤럭시탭', 347000, 'n', '정말 좋은 상품이에요~', '2021-02-12', 'y', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user96', 20, 13, '아이패드 팔아요', 902000, 'y', '좋은 거래 원해요^^', '2021-02-20', 'y', 5, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 7, 7, '신비아파트 만화책', 271000, 'n', '쿨거래 원합니다', '2021-02-21', 'y', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user22', 19, 12, '미개봉 스타벅스 5만원 쿠폰', 410000, 'y', '쿨거래 원합니다', '2021-03-02', 'y', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user36', 25, 1, '미개봉 모니터 내놓습니다.', 824000, 'n', '택배거래 원해요', '2021-03-05', 'y', 13, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user28', 18, 4, '얼마 안 쓴 선반', 517000, 'y', '새제품입니다.', '2021-03-06', 'y', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user97', 1, 8, '얼마 안 쓴 냉장고', 571000, 'n', '택배거래 원해요', '2021-03-13', 'y', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 21, 7, '아이패드', 594000, 'y', '새제품입니다.', '2021-03-22', 'y', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user27', 34, 14, '후드집업', 436000, 'n', '새제품입니다.', '2021-03-23', 'y', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user6', 45, 11, '얼마 안 쓴 스투키 팝니다', 866000, 'y', '싸게 내놓습니다.', '2021-03-27', 'y', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user73', 32, 10, '중고 이동장', 371000, 'n', '싸게 내놓습니다.', '2021-04-03', 'y', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user41', 29, 8, '에어컨', 350000, 'y', '직거래 원해요', '2021-04-05', 'y', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user58', 1, 14, '미개봉 냄비받침', 987000, 'n', '싸게 내놓습니다.', '2021-04-08', 'y', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 50, 6, '중고 책꽂이', 343000, 'y', '좋은 거래 원해요^^', '2021-04-14', 'y', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user12', 7, 4, '에코백 판매합니다', 787000, 'n', '좋은 거래 원해요^^', '2021-04-19', 'y', 27, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user62', 2, 12, '중고 청소기', 254000, 'y', '택배거래 원해요', '2021-04-21', 'y', 5, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user66', 40, 15, '얼마 안 쓴 자기개발 도서 새상품', 730000, 'n', '직거래 원해요', '2021-04-23', 'n', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 3, 7, '걸음마보조기 정리합니다', 676000, 'y', '정말 좋은 상품이에요~', '2021-05-02', 'n', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 19, 6, '얼마 안 쓴 이동장 정리합니다', 150000, 'n', '정말 좋은 상품이에요~', '2021-05-09', 'n', 4, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 22, 13, '얼마 안 쓴 청소기', 603000, 'y', '쿨거래 원합니다', '2021-05-12', 'n', 12, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user11', 18, 9, '영어동화 팔아요', 119000, 'n', '새제품입니다.', '2021-05-17', 'n', 18, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user93', 45, 8, '미개봉 선인장', 198000, 'y', '싸게 내놓습니다.', '2021-05-25', 'n', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user88', 21, 2, '신비아파트 만화책', 260000, 'n', '택배거래 원해요', '2021-06-01', 'n', 6, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 31, 8, '전자레인지 팔아요', 134000, 'y', '좋은 거래 원해요^^', '2021-06-03', 'n', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user17', 20, 4, '미개봉 모니터', 397000, 'n', '싸게 내놓습니다.', '2021-06-06', 'n', 28, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user35', 23, 6, '자바의 정석', 613000, 'y', '직거래 원해요', '2021-06-12', 'n', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user28', 19, 8, '얼마 안 쓴 위인전 팝니다', 618000, 'n', '택배거래 원해요', '2021-06-20', 'n', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user18', 12, 14, '얼마 안 쓴 선인장 새상품', 276000, 'y', '택배거래 원해요', '2021-06-24', 'n', 4, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user32', 47, 9, '에어컨', 605000, 'n', '쿨거래 원합니다', '2021-06-26', 'n', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user82', 41, 6, '얼마 안 쓴 위인전', 743000, 'y', '직거래 원해요', '2021-07-04', 'n', 21, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user49', 16, 4, '소파', 678000, 'n', '싸게 내놓습니다.', '2021-07-12', 'n', 4, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 48, 13, '얼마 안 쓴 고양이간식 내놓습니다.', 440000, 'y', '싸게 내놓습니다.', '2021-07-20', 'n', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user8', 15, 10, '딥러닝의 기초', 619000, 'n', '정말 좋은 상품이에요~', '2021-07-26', 'n', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user80', 45, 4, '핸드크림 판매', 273000, 'y', '쿨거래 원합니다', '2021-07-31', 'n', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 35, 15, '걸음마보조기', 22000, 'n', '싸게 내놓습니다.', '2021-08-01', 'n', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user30', 25, 13, '아이비 내놓습니다.', 560000, 'y', '싸게 내놓습니다.', '2021-08-07', 'n', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user79', 47, 14, '청바지', 332000, 'n', '직거래 원해요', '2021-08-14', 'n', 15, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user50', 11, 3, '미개봉 후드집업', 573000, 'y', '직거래 원해요', '2021-08-21', 'n', 27, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user64', 44, 4, '중고 원피스', 595000, 'n', '직거래 원해요', '2021-08-22', 'n', 3, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user52', 10, 6, '과학동화전집 팔아요', 388000, 'y', '새제품입니다.', '2021-08-27', 'n', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user19', 34, 10, '아이폰 판매합니다', 161000, 'n', '정말 좋은 상품이에요~', '2021-09-03', 'n', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user78', 39, 14, '미개봉 걸음마보조기', 383000, 'y', '직거래 원해요', '2021-09-04', 'n', 14, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user100', 36, 3, '아이폰', 486000, 'n', '쿨거래 원합니다', '2021-09-08', 'n', 13, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user72', 22, 5, '미개봉 강아지옷 팔아요', 223000, 'y', '직거래 원해요', '2021-09-12', 'n', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 39, 4, '미개봉 배드민턴라켓', 947000, 'n', '싸게 내놓습니다.', '2021-09-16', 'n', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user95', 40, 10, '미개봉 자기개발 도서', 785000, 'y', '택배거래 원해요', '2021-09-22', 'n', 13, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user94', 46, 9, '중고 책꽂이 새상품', 463000, 'n', '정말 좋은 상품이에요~', '2021-09-24', 'n', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user24', 7, 8, '미개봉 아이패드 내놓습니다.', 258000, 'y', '택배거래 원해요', '2021-10-01', 'n', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user3', 28, 12, '미개봉 테이블 내놓습니다.', 242000, 'n', '직거래 원해요', '2021-10-05', 'n', 7, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user91', 43, 13, '중고 전자레인지', 742000, 'y', '싸게 내놓습니다.', '2021-10-08', 'n', 22, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user5', 1, 7, '미개봉 냄비받침 판매합니다', 693000, 'n', '직거래 원해요', '2021-10-12', 'n', 25, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 47, 13, '아이비', 261000, 'y', '새제품입니다.', '2021-10-15', 'n', 24, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 12, 3, '강아지옷 정리합니다', 738000, 'n', '쿨거래 원합니다', '2021-10-18', 'n', 5, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user26', 48, 14, '자바의 정석 내놓습니다.', 235000, 'y', '쿨거래 원합니다', '2021-10-22', 'n', 21, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user25', 9, 11, '중고 선반 판매', 846000, 'n', '직거래 원해요', '2021-10-23', 'n', 10, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user82', 29, 15, '배드민턴라켓 팔아요', 454000, 'y', '새제품입니다.', '2021-10-28', 'n', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user23', 31, 9, '중고 책꽂이 정리합니다', 348000, 'n', '좋은 거래 원해요^^', '2021-10-30', 'n', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user9', 37, 15, '얼마 안 쓴 고양이간식 내놓습니다.', 401000, 'y', '정말 좋은 상품이에요~', '2021-11-08', 'n', 2, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user85', 40, 7, '미개봉 선인장 새상품', 21000, 'n', '정말 좋은 상품이에요~', '2021-11-13', 'n', 7, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user46', 8, 12, '얼마 안 쓴 아이패드 판매', 822000, 'y', '정말 좋은 상품이에요~', '2021-11-16', 'n', 26, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user92', 1, 4, '에코백', 318000, 'n', '좋은 거래 원해요^^', '2021-11-21', 'n', 17, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user15', 13, 14, '얼마 안 쓴 셔츠', 342000, 'y', '새제품입니다.', '2021-11-26', 'n', 1, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user63', 5, 14, '얼마 안 쓴 책상 판매합니다', 650000, 'n', '쿨거래 원합니다', '2021-11-29', 'n', 6, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user34', 27, 1, '아이비', 46000, 'y', '쿨거래 원합니다', '2021-12-05', 'n', 29, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user88', 50, 15, '원피스 판매', 192000, 'n', '직거래 원해요', '2021-12-08', 'n', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user84', 18, 8, '영어동화', 939000, 'y', '직거래 원해요', '2021-12-13', 'n', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user37', 45, 14, '청바지 판매합니다', 370000, 'n', '쿨거래 원합니다', '2021-12-19', 'n', 20, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user5', 42, 5, '미개봉 강아지옷 판매', 753000, 'y', '직거래 원해요', '2021-12-21', 'n', 27, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user43', 18, 2, '미개봉 이동장 내놓습니다.', 203000, 'n', '정말 좋은 상품이에요~', '2021-12-28', 'n', 16, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user65', 31, 3, '틴트', 224000, 'y', '택배거래 원해요', '2021-12-29', 'n', 8, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user21', 25, 14, '미개봉 자전거', 676000, 'n', '싸게 내놓습니다.', '2022-01-04', 'n', 7, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user76', 26, 8, '미개봉 소파 내놓습니다.', 449000, 'y', '택배거래 원해요', '2022-01-12', 'n', 15, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user49', 11, 9, '중고 수세미', 695000, 'n', '싸게 내놓습니다.', '2022-01-17', 'n', 23, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user10', 12, 1, '중고 소파', 651000, 'y', '직거래 원해요', '2022-01-23', 'n', 22, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user53', 43, 4, '미개봉 책꽂이', 661000, 'n', '좋은 거래 원해요^^', '2022-01-24', 'n', 13, 'n');
+insert into tblProduct (product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) values (product_seq.nextVal, 'user39', 33, 7, '피아노장난감 팔아요', 285000, 'y', '정말 좋은 상품이에요~', '2022-01-27', 'n', 28, 'n');
 
 
 
@@ -1152,106 +1152,107 @@ create sequence Notice_seq start with 1;
 alter table tblNotice 
     add constraint tbln_notice_type_pk primary key(notice_seq);
 
-insert into tblNotice values (1,'1번 공지사항 제목  ','1번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-01');
-insert into tblNotice values (2,'2번 공지사항 제목  ','2번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-08');
-insert into tblNotice values (3,'3번 공지사항 제목  ','3번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-15');
-insert into tblNotice values (4,'4번 공지사항 제목  ','4번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-22');
-insert into tblNotice values (5,'5번 공지사항 제목  ','5번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-29');
-insert into tblNotice values (6,'6번 공지사항 제목  ','6번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-07');
-insert into tblNotice values (7,'7번 공지사항 제목  ','7번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-14');
-insert into tblNotice values (8,'8번 공지사항 제목  ','8번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-21');
-insert into tblNotice values (9,'9번 공지사항 제목  ','9번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-28');
-insert into tblNotice values (10,'10번 공지사항 제목  ','10번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-04');
-insert into tblNotice values (11,'11번 공지사항 제목  ','11번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-11');
-insert into tblNotice values (12,'12번 공지사항 제목  ','12번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-18');
-insert into tblNotice values (13,'13번 공지사항 제목  ','13번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-25');
-insert into tblNotice values (14,'14번 공지사항 제목  ','14번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-02');
-insert into tblNotice values (15,'15번 공지사항 제목  ','15번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-09');
-insert into tblNotice values (16,'16번 공지사항 제목  ','16번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-16');
-insert into tblNotice values (17,'17번 공지사항 제목  ','17번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-23');
-insert into tblNotice values (18,'18번 공지사항 제목  ','18번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-30');
-insert into tblNotice values (19,'19번 공지사항 제목  ','19번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-06');
-insert into tblNotice values (20,'20번 공지사항 제목  ','20번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-13');
-insert into tblNotice values (21,'21번 공지사항 제목  ','21번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-20');
-insert into tblNotice values (22,'22번 공지사항 제목  ','22번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-27');
-insert into tblNotice values (23,'23번 공지사항 제목  ','23번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-04');
-insert into tblNotice values (24,'24번 공지사항 제목  ','24번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-11');
-insert into tblNotice values (25,'25번 공지사항 제목  ','25번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-18');
-insert into tblNotice values (26,'26번 공지사항 제목  ','26번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-25');
-insert into tblNotice values (27,'27번 공지사항 제목  ','27번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-01');
-insert into tblNotice values (28,'28번 공지사항 제목  ','28번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-08');
-insert into tblNotice values (29,'29번 공지사항 제목  ','29번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-15');
-insert into tblNotice values (30,'30번 공지사항 제목  ','30번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-22');
-insert into tblNotice values (31,'31번 공지사항 제목  ','31번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-29');
-insert into tblNotice values (32,'32번 공지사항 제목  ','32번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-05');
-insert into tblNotice values (33,'33번 공지사항 제목  ','33번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-12');
-insert into tblNotice values (34,'34번 공지사항 제목  ','34번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-19');
-insert into tblNotice values (35,'35번 공지사항 제목  ','35번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-26');
-insert into tblNotice values (36,'36번 공지사항 제목  ','36번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-03');
-insert into tblNotice values (37,'37번 공지사항 제목  ','37번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-10');
-insert into tblNotice values (38,'38번 공지사항 제목  ','38번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-17');
-insert into tblNotice values (39,'39번 공지사항 제목  ','39번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-24');
-insert into tblNotice values (40,'40번 공지사항 제목  ','40번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-31');
-insert into tblNotice values (41,'41번 공지사항 제목  ','41번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-07');
-insert into tblNotice values (42,'42번 공지사항 제목  ','42번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-14');
-insert into tblNotice values (43,'43번 공지사항 제목  ','43번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-21');
-insert into tblNotice values (44,'44번 공지사항 제목  ','44번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-28');
-insert into tblNotice values (45,'45번 공지사항 제목  ','45번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-05');
-insert into tblNotice values (46,'46번 공지사항 제목  ','46번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-12');
-insert into tblNotice values (47,'47번 공지사항 제목  ','47번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-19');
-insert into tblNotice values (48,'48번 공지사항 제목  ','48번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-26');
-insert into tblNotice values (49,'49번 공지사항 제목  ','49번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-02');
-insert into tblNotice values (50,'50번 공지사항 제목  ','50번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-09');
-insert into tblNotice values (51,'51번 공지사항 제목  ','51번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-16');
-insert into tblNotice values (52,'52번 공지사항 제목  ','52번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-23');
-insert into tblNotice values (53,'53번 공지사항 제목  ','53번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-30');
-insert into tblNotice values (54,'54번 공지사항 제목  ','54번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-06');
-insert into tblNotice values (55,'55번 공지사항 제목  ','55번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-13');
-insert into tblNotice values (56,'56번 공지사항 제목  ','56번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-20');
-insert into tblNotice values (57,'57번 공지사항 제목  ','57번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-27');
-insert into tblNotice values (58,'58번 공지사항 제목  ','58번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-06');
-insert into tblNotice values (59,'59번 공지사항 제목  ','59번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-13');
-insert into tblNotice values (60,'60번 공지사항 제목  ','60번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-20');
-insert into tblNotice values (61,'61번 공지사항 제목  ','61번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-27');
-insert into tblNotice values (62,'62번 공지사항 제목  ','62번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-03');
-insert into tblNotice values (63,'63번 공지사항 제목  ','63번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-10');
-insert into tblNotice values (64,'64번 공지사항 제목  ','64번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-17');
-insert into tblNotice values (65,'65번 공지사항 제목  ','65번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-24');
-insert into tblNotice values (66,'66번 공지사항 제목  ','66번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-01');
-insert into tblNotice values (67,'67번 공지사항 제목  ','67번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-08');
-insert into tblNotice values (68,'68번 공지사항 제목  ','68번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-15');
-insert into tblNotice values (69,'69번 공지사항 제목  ','69번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-22');
-insert into tblNotice values (70,'70번 공지사항 제목  ','70번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-29');
-insert into tblNotice values (71,'71번 공지사항 제목  ','71번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-05');
-insert into tblNotice values (72,'72번 공지사항 제목  ','72번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-12');
-insert into tblNotice values (73,'73번 공지사항 제목  ','73번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-19');
-insert into tblNotice values (74,'74번 공지사항 제목  ','74번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-26');
-insert into tblNotice values (75,'75번 공지사항 제목  ','75번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-03');
-insert into tblNotice values (76,'76번 공지사항 제목  ','76번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-10');
-insert into tblNotice values (77,'77번 공지사항 제목  ','77번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-17');
-insert into tblNotice values (78,'78번 공지사항 제목  ','78번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-24');
-insert into tblNotice values (79,'79번 공지사항 제목  ','79번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-31');
-insert into tblNotice values (80,'80번 공지사항 제목  ','80번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-07');
-insert into tblNotice values (81,'81번 공지사항 제목  ','81번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-14');
-insert into tblNotice values (82,'82번 공지사항 제목  ','82번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-21');
-insert into tblNotice values (83,'83번 공지사항 제목  ','83번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-28');
-insert into tblNotice values (84,'84번 공지사항 제목  ','84번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-04');
-insert into tblNotice values (85,'85번 공지사항 제목  ','85번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-11');
-insert into tblNotice values (86,'86번 공지사항 제목  ','86번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-18');
-insert into tblNotice values (87,'87번 공지사항 제목  ','87번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-25');
-insert into tblNotice values (88,'88번 공지사항 제목  ','88번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-02');
-insert into tblNotice values (89,'89번 공지사항 제목  ','89번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-09');
-insert into tblNotice values (90,'90번 공지사항 제목  ','90번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-16');
-insert into tblNotice values (91,'91번 공지사항 제목  ','91번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-23');
-insert into tblNotice values (92,'92번 공지사항 제목  ','92번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-30');
-insert into tblNotice values (93,'93번 공지사항 제목  ','93번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-06');
-insert into tblNotice values (94,'94번 공지사항 제목  ','94번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-13');
-insert into tblNotice values (95,'95번 공지사항 제목  ','95번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-20');
-insert into tblNotice values (96,'96번 공지사항 제목  ','96번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-27');
-insert into tblNotice values (97,'97번 공지사항 제목  ','97번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-04');
-insert into tblNotice values (98,'98번 공지사항 제목  ','98번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-11');
-insert into tblNotice values (99,'99번 공지사항 제목  ','99번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-18');
-insert into tblNotice values (100,'100번 공지사항 제목  ','100번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-25');
+insert into tblNotice values (notice_seq.nextVal,'1번 공지사항 제목  ','1번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-01');
+insert into tblNotice values (notice_seq.nextVal,'2번 공지사항 제목  ','2번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-08');
+insert into tblNotice values (notice_seq.nextVal,'3번 공지사항 제목  ','3번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-15');
+insert into tblNotice values (notice_seq.nextVal,'4번 공지사항 제목  ','4번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-22');
+insert into tblNotice values (notice_seq.nextVal,'5번 공지사항 제목  ','5번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-02-29');
+insert into tblNotice values (notice_seq.nextVal,'6번 공지사항 제목  ','6번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-07');
+insert into tblNotice values (notice_seq.nextVal,'7번 공지사항 제목  ','7번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-14');
+insert into tblNotice values (notice_seq.nextVal,'8번 공지사항 제목  ','8번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-21');
+insert into tblNotice values (notice_seq.nextVal,'9번 공지사항 제목  ','9번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-03-28');
+insert into tblNotice values (notice_seq.nextVal,'10번 공지사항 제목  ','10번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-04');
+insert into tblNotice values (notice_seq.nextVal,'11번 공지사항 제목  ','11번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-11');
+insert into tblNotice values (notice_seq.nextVal,'12번 공지사항 제목  ','12번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-18');
+insert into tblNotice values (notice_seq.nextVal,'13번 공지사항 제목  ','13번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-04-25');
+insert into tblNotice values (notice_seq.nextVal,'14번 공지사항 제목  ','14번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-02');
+insert into tblNotice values (notice_seq.nextVal,'15번 공지사항 제목  ','15번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-09');
+insert into tblNotice values (notice_seq.nextVal,'16번 공지사항 제목  ','16번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-16');
+insert into tblNotice values (notice_seq.nextVal,'17번 공지사항 제목  ','17번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-23');
+insert into tblNotice values (notice_seq.nextVal,'18번 공지사항 제목  ','18번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-05-30');
+insert into tblNotice values (notice_seq.nextVal,'19번 공지사항 제목  ','19번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-06');
+insert into tblNotice values (notice_seq.nextVal,'20번 공지사항 제목  ','20번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-13');
+insert into tblNotice values (notice_seq.nextVal,'21번 공지사항 제목  ','21번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-20');
+insert into tblNotice values (notice_seq.nextVal,'22번 공지사항 제목  ','22번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-06-27');
+insert into tblNotice values (notice_seq.nextVal,'23번 공지사항 제목  ','23번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-04');
+insert into tblNotice values (notice_seq.nextVal,'24번 공지사항 제목  ','24번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-11');
+insert into tblNotice values (notice_seq.nextVal,'25번 공지사항 제목  ','25번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-18');
+insert into tblNotice values (notice_seq.nextVal,'26번 공지사항 제목  ','26번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-07-25');
+insert into tblNotice values (notice_seq.nextVal,'27번 공지사항 제목  ','27번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-01');
+insert into tblNotice values (notice_seq.nextVal,'28번 공지사항 제목  ','28번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-08');
+insert into tblNotice values (notice_seq.nextVal,'29번 공지사항 제목  ','29번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-15');
+insert into tblNotice values (notice_seq.nextVal,'30번 공지사항 제목  ','30번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-22');
+insert into tblNotice values (notice_seq.nextVal,'31번 공지사항 제목  ','31번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-08-29');
+insert into tblNotice values (notice_seq.nextVal,'32번 공지사항 제목  ','32번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-05');
+insert into tblNotice values (notice_seq.nextVal,'33번 공지사항 제목  ','33번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-12');
+insert into tblNotice values (notice_seq.nextVal,'34번 공지사항 제목  ','34번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-19');
+insert into tblNotice values (notice_seq.nextVal,'35번 공지사항 제목  ','35번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-09-26');
+insert into tblNotice values (notice_seq.nextVal,'36번 공지사항 제목  ','36번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-03');
+insert into tblNotice values (notice_seq.nextVal,'37번 공지사항 제목  ','37번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-10');
+insert into tblNotice values (notice_seq.nextVal,'38번 공지사항 제목  ','38번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-17');
+insert into tblNotice values (notice_seq.nextVal,'39번 공지사항 제목  ','39번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-24');
+insert into tblNotice values (notice_seq.nextVal,'40번 공지사항 제목  ','40번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-10-31');
+insert into tblNotice values (notice_seq.nextVal,'41번 공지사항 제목  ','41번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-07');
+insert into tblNotice values (notice_seq.nextVal,'42번 공지사항 제목  ','42번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-14');
+insert into tblNotice values (notice_seq.nextVal,'43번 공지사항 제목  ','43번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-21');
+insert into tblNotice values (notice_seq.nextVal,'44번 공지사항 제목  ','44번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-11-28');
+insert into tblNotice values (notice_seq.nextVal,'45번 공지사항 제목  ','45번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-05');
+insert into tblNotice values (notice_seq.nextVal,'46번 공지사항 제목  ','46번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-12');
+insert into tblNotice values (notice_seq.nextVal,'47번 공지사항 제목  ','47번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-19');
+insert into tblNotice values (notice_seq.nextVal,'48번 공지사항 제목  ','48번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2020-12-26');
+insert into tblNotice values (notice_seq.nextVal,'49번 공지사항 제목  ','49번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-02');
+insert into tblNotice values (notice_seq.nextVal,'50번 공지사항 제목  ','50번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-09');
+insert into tblNotice values (notice_seq.nextVal,'51번 공지사항 제목  ','51번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-16');
+insert into tblNotice values (notice_seq.nextVal,'52번 공지사항 제목  ','52번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-23');
+insert into tblNotice values (notice_seq.nextVal,'53번 공지사항 제목  ','53번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-01-30');
+insert into tblNotice values (notice_seq.nextVal,'54번 공지사항 제목  ','54번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-06');
+insert into tblNotice values (notice_seq.nextVal,'55번 공지사항 제목  ','55번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-13');
+insert into tblNotice values (notice_seq.nextVal,'56번 공지사항 제목  ','56번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-20');
+insert into tblNotice values (notice_seq.nextVal,'57번 공지사항 제목  ','57번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-02-27');
+insert into tblNotice values (notice_seq.nextVal,'58번 공지사항 제목  ','58번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-06');
+insert into tblNotice values (notice_seq.nextVal,'59번 공지사항 제목  ','59번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-13');
+insert into tblNotice values (notice_seq.nextVal,'60번 공지사항 제목  ','60번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-20');
+insert into tblNotice values (notice_seq.nextVal,'61번 공지사항 제목  ','61번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-03-27');
+insert into tblNotice values (notice_seq.nextVal,'62번 공지사항 제목  ','62번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-03');
+insert into tblNotice values (notice_seq.nextVal,'63번 공지사항 제목  ','63번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-10');
+insert into tblNotice values (notice_seq.nextVal,'64번 공지사항 제목  ','64번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-17');
+insert into tblNotice values (notice_seq.nextVal,'65번 공지사항 제목  ','65번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-04-24');
+insert into tblNotice values (notice_seq.nextVal,'66번 공지사항 제목  ','66번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-01');
+insert into tblNotice values (notice_seq.nextVal,'67번 공지사항 제목  ','67번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-08');
+insert into tblNotice values (notice_seq.nextVal,'68번 공지사항 제목  ','68번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-15');
+insert into tblNotice values (notice_seq.nextVal,'69번 공지사항 제목  ','69번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-22');
+insert into tblNotice values (notice_seq.nextVal,'70번 공지사항 제목  ','70번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-05-29');
+insert into tblNotice values (notice_seq.nextVal,'71번 공지사항 제목  ','71번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-05');
+insert into tblNotice values (notice_seq.nextVal,'72번 공지사항 제목  ','72번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-12');
+insert into tblNotice values (notice_seq.nextVal,'73번 공지사항 제목  ','73번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-19');
+insert into tblNotice values (notice_seq.nextVal,'74번 공지사항 제목  ','74번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-06-26');
+insert into tblNotice values (notice_seq.nextVal,'75번 공지사항 제목  ','75번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-03');
+insert into tblNotice values (notice_seq.nextVal,'76번 공지사항 제목  ','76번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-10');
+insert into tblNotice values (notice_seq.nextVal,'77번 공지사항 제목  ','77번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-17');
+insert into tblNotice values (notice_seq.nextVal,'78번 공지사항 제목  ','78번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-24');
+insert into tblNotice values (notice_seq.nextVal,'79번 공지사항 제목  ','79번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-07-31');
+insert into tblNotice values (notice_seq.nextVal,'80번 공지사항 제목  ','80번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-07');
+insert into tblNotice values (notice_seq.nextVal,'81번 공지사항 제목  ','81번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-14');
+insert into tblNotice values (notice_seq.nextVal,'82번 공지사항 제목  ','82번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-21');
+insert into tblNotice values (notice_seq.nextVal,'83번 공지사항 제목  ','83번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-08-28');
+insert into tblNotice values (notice_seq.nextVal,'84번 공지사항 제목  ','84번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-04');
+insert into tblNotice values (notice_seq.nextVal,'85번 공지사항 제목  ','85번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-11');
+insert into tblNotice values (notice_seq.nextVal,'86번 공지사항 제목  ','86번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-18');
+insert into tblNotice values (notice_seq.nextVal,'87번 공지사항 제목  ','87번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-09-25');
+insert into tblNotice values (notice_seq.nextVal,'88번 공지사항 제목  ','88번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-02');
+insert into tblNotice values (notice_seq.nextVal,'89번 공지사항 제목  ','89번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-09');
+insert into tblNotice values (notice_seq.nextVal,'90번 공지사항 제목  ','90번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-16');
+insert into tblNotice values (notice_seq.nextVal,'91번 공지사항 제목  ','91번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-23');
+insert into tblNotice values (notice_seq.nextVal,'92번 공지사항 제목  ','92번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-10-30');
+insert into tblNotice values (notice_seq.nextVal,'93번 공지사항 제목  ','93번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-06');
+insert into tblNotice values (notice_seq.nextVal,'94번 공지사항 제목  ','94번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-13');
+insert into tblNotice values (notice_seq.nextVal,'95번 공지사항 제목  ','95번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-20');
+insert into tblNotice values (notice_seq.nextVal,'96번 공지사항 제목  ','96번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-11-27');
+insert into tblNotice values (notice_seq.nextVal,'97번 공지사항 제목  ','97번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-04');
+insert into tblNotice values (notice_seq.nextVal,'98번 공지사항 제목  ','98번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-11');
+insert into tblNotice values (notice_seq.nextVal,'99번 공지사항 제목  ','99번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-18');
+insert into tblNotice values (notice_seq.nextVal,'100번 공지사항 제목  ','100번 공지사항 내용  1번 공지사항 내용입니다. 감사합니다.','2021-12-25');
+
 
 
 
@@ -1843,106 +1844,106 @@ ALTER TABLE tblComComment ADD CONSTRAINT tblCC_comcomment_seq_pk PRIMARY KEY(com
 ALTER TABLE tblComComment ADD CONSTRAINT tblCC_community_seq_fk FOREIGN KEY(community_seq) REFERENCES tblCommunity(community_seq);
 ALTER TABLE tblComComment ADD CONSTRAINT tblCC_id_fk FOREIGN KEY(id) REFERENCES tblUser(id);
 
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 81, 'user52', '화이팅합시다!!', '2021-01-02');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 41, 'user1', '잘 보고 갑니다~', '2021-01-04');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 50, 'user38', '화이팅합시다!!', '2021-01-06');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 97, 'user92', '잘 보고 갑니다~', '2021-01-07');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 22, 'user8', '화이팅합시다!!', '2021-01-08');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 23, 'user83', '잘 보고 갑니다~', '2021-01-10');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 88, 'user50', '잘 보고 갑니다~', '2021-01-11');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user94', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-01-12');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user69', '잘 보고 갑니다~', '2021-01-14');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user65', '좋은 글이네요^^', '2021-01-16');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 2, 'user49', '좋은 글이네요^^', '2021-01-18');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 29, 'user77', '좋은 글이네요^^', '2021-01-20');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user34', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-01-22');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 36, 'user63', '화이팅합시다!!', '2021-01-23');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 57, 'user28', '좋은 글이네요^^', '2021-01-25');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 66, 'user10', '화이팅합시다!!', '2021-01-27');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 78, 'user77', '좋은 글이네요^^', '2021-01-29');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 45, 'user90', '잘 보고 갑니다~', '2021-01-30');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 10, 'user63', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-01');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 8, 'user29', '화이팅합시다!!', '2021-02-03');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 6, 'user52', '좋은 글이네요^^', '2021-02-05');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user51', '좋은 글이네요^^', '2021-02-07');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 83, 'user56', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-08');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 32, 'user63', '좋은 글이네요^^', '2021-02-09');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 17, 'user27', '잘 보고 갑니다~', '2021-02-10');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 82, 'user65', '화이팅합시다!!', '2021-02-11');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 79, 'user90', '잘 보고 갑니다~', '2021-02-12');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user71', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-14');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 69, 'user28', '잘 보고 갑니다~', '2021-02-16');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 39, 'user62', '화이팅합시다!!', '2021-02-17');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 82, 'user90', '화이팅합시다!!', '2021-02-18');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 67, 'user8', '화이팅합시다!!', '2021-02-19');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 97, 'user88', '화이팅합시다!!', '2021-02-20');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 41, 'user45', '잘 보고 갑니다~', '2021-02-21');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 12, 'user20', '잘 보고 갑니다~', '2021-02-23');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 99, 'user72', '잘 보고 갑니다~', '2021-02-25');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user32', '화이팅합시다!!', '2021-02-27');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user24', '화이팅합시다!!', '2021-03-01');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 37, 'user70', '화이팅합시다!!', '2021-03-02');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 43, 'user65', '좋은 글이네요^^', '2021-03-03');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 91, 'user93', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-05');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user58', '좋은 글이네요^^', '2021-03-07');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 7, 'user98', '좋은 글이네요^^', '2021-03-08');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 48, 'user3', '좋은 글이네요^^', '2021-03-09');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user93', '화이팅합시다!!', '2021-03-11');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 50, 'user94', '좋은 글이네요^^', '2021-03-12');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 69, 'user63', '화이팅합시다!!', '2021-03-14');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user31', '좋은 글이네요^^', '2021-03-15');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 19, 'user72', '좋은 글이네요^^', '2021-03-17');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user73', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-19');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 76, 'user72', '좋은 글이네요^^', '2021-03-21');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user4', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-22');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 95, 'user55', '좋은 글이네요^^', '2021-03-23');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 4, 'user63', '좋은 글이네요^^', '2021-03-25');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 93, 'user63', '잘 보고 갑니다~', '2021-03-27');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 35, 'user57', '화이팅합시다!!', '2021-03-28');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 12, 'user34', '좋은 글이네요^^', '2021-03-29');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 79, 'user50', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-31');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 36, 'user18', '좋은 글이네요^^', '2021-04-02');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 57, 'user16', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-03');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 20, 'user42', '화이팅합시다!!', '2021-04-05');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 62, 'user100', '좋은 글이네요^^', '2021-04-06');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 2, 'user52', '잘 보고 갑니다~', '2021-04-07');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user80', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-08');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 58, 'user19', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-09');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 78, 'user76', '좋은 글이네요^^', '2021-04-10');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 6, 'user68', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-12');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 62, 'user54', '잘 보고 갑니다~', '2021-04-14');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user54', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-16');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 27, 'user88', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-18');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 35, 'user4', '잘 보고 갑니다~', '2021-04-19');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 38, 'user74', '잘 보고 갑니다~', '2021-04-20');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 98, 'user7', '잘 보고 갑니다~', '2021-04-22');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 43, 'user79', '잘 보고 갑니다~', '2021-04-23');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 91, 'user26', '잘 보고 갑니다~', '2021-04-24');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 39, 'user19', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-26');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 9, 'user91', '화이팅합시다!!', '2021-04-28');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user7', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-29');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user13', '화이팅합시다!!', '2021-05-01');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 56, 'user42', '잘 보고 갑니다~', '2021-05-02');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 92, 'user98', '좋은 글이네요^^', '2021-05-04');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 26, 'user7', '잘 보고 갑니다~', '2021-05-06');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 51, 'user91', '좋은 글이네요^^', '2021-05-08');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user46', '화이팅합시다!!', '2021-05-10');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user9', '화이팅합시다!!', '2021-05-12');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 15, 'user98', '잘 보고 갑니다~', '2021-05-13');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 23, 'user68', '좋은 글이네요^^', '2021-05-15');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 74, 'user10', '화이팅합시다!!', '2021-05-16');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 75, 'user3', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-05-17');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 56, 'user61', '좋은 글이네요^^', '2021-05-18');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user9', '좋은 글이네요^^', '2021-05-19');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 5, 'user79', '좋은 글이네요^^', '2021-05-20');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 60, 'user80', '잘 보고 갑니다~', '2021-05-22');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 5, 'user32', '화이팅합시다!!', '2021-05-23');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user41', '잘 보고 갑니다~', '2021-05-25');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 90, 'user54', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-05-26');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 59, 'user92', '화이팅합시다!!', '2021-05-27');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user33', '잘 보고 갑니다~', '2021-05-28');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 94, 'user86', '화이팅합시다!!', '2021-05-30');
-insert into tblComComment (comcomment_seq, commutity_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user39', '좋은 글이네요^^', '2021-05-31');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 81, 'user52', '화이팅합시다!!', '2021-01-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 41, 'user1', '잘 보고 갑니다~', '2021-01-04');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 50, 'user38', '화이팅합시다!!', '2021-01-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 97, 'user92', '잘 보고 갑니다~', '2021-01-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 22, 'user8', '화이팅합시다!!', '2021-01-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 23, 'user83', '잘 보고 갑니다~', '2021-01-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 88, 'user50', '잘 보고 갑니다~', '2021-01-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user94', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-01-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user69', '잘 보고 갑니다~', '2021-01-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user65', '좋은 글이네요^^', '2021-01-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 2, 'user49', '좋은 글이네요^^', '2021-01-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 29, 'user77', '좋은 글이네요^^', '2021-01-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user34', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-01-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 36, 'user63', '화이팅합시다!!', '2021-01-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 57, 'user28', '좋은 글이네요^^', '2021-01-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 66, 'user10', '화이팅합시다!!', '2021-01-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 78, 'user77', '좋은 글이네요^^', '2021-01-29');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 45, 'user90', '잘 보고 갑니다~', '2021-01-30');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 10, 'user63', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 8, 'user29', '화이팅합시다!!', '2021-02-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 6, 'user52', '좋은 글이네요^^', '2021-02-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user51', '좋은 글이네요^^', '2021-02-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 83, 'user56', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 32, 'user63', '좋은 글이네요^^', '2021-02-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 17, 'user27', '잘 보고 갑니다~', '2021-02-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 82, 'user65', '화이팅합시다!!', '2021-02-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 79, 'user90', '잘 보고 갑니다~', '2021-02-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user71', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-02-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 69, 'user28', '잘 보고 갑니다~', '2021-02-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 39, 'user62', '화이팅합시다!!', '2021-02-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 82, 'user90', '화이팅합시다!!', '2021-02-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 67, 'user8', '화이팅합시다!!', '2021-02-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 97, 'user88', '화이팅합시다!!', '2021-02-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 41, 'user45', '잘 보고 갑니다~', '2021-02-21');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 12, 'user20', '잘 보고 갑니다~', '2021-02-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 99, 'user72', '잘 보고 갑니다~', '2021-02-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user32', '화이팅합시다!!', '2021-02-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user24', '화이팅합시다!!', '2021-03-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 37, 'user70', '화이팅합시다!!', '2021-03-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 43, 'user65', '좋은 글이네요^^', '2021-03-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 91, 'user93', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user58', '좋은 글이네요^^', '2021-03-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 7, 'user98', '좋은 글이네요^^', '2021-03-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 48, 'user3', '좋은 글이네요^^', '2021-03-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user93', '화이팅합시다!!', '2021-03-11');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 50, 'user94', '좋은 글이네요^^', '2021-03-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 69, 'user63', '화이팅합시다!!', '2021-03-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user31', '좋은 글이네요^^', '2021-03-15');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 19, 'user72', '좋은 글이네요^^', '2021-03-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user73', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 76, 'user72', '좋은 글이네요^^', '2021-03-21');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user4', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 95, 'user55', '좋은 글이네요^^', '2021-03-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 4, 'user63', '좋은 글이네요^^', '2021-03-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 93, 'user63', '잘 보고 갑니다~', '2021-03-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 35, 'user57', '화이팅합시다!!', '2021-03-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 12, 'user34', '좋은 글이네요^^', '2021-03-29');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 79, 'user50', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-03-31');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 36, 'user18', '좋은 글이네요^^', '2021-04-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 57, 'user16', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-03');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 20, 'user42', '화이팅합시다!!', '2021-04-05');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 62, 'user100', '좋은 글이네요^^', '2021-04-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 2, 'user52', '잘 보고 갑니다~', '2021-04-07');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 54, 'user80', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 58, 'user19', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-09');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 78, 'user76', '좋은 글이네요^^', '2021-04-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 6, 'user68', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 62, 'user54', '잘 보고 갑니다~', '2021-04-14');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 33, 'user54', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 27, 'user88', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 35, 'user4', '잘 보고 갑니다~', '2021-04-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 38, 'user74', '잘 보고 갑니다~', '2021-04-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 98, 'user7', '잘 보고 갑니다~', '2021-04-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 43, 'user79', '잘 보고 갑니다~', '2021-04-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 91, 'user26', '잘 보고 갑니다~', '2021-04-24');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 39, 'user19', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 9, 'user91', '화이팅합시다!!', '2021-04-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user7', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-04-29');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user13', '화이팅합시다!!', '2021-05-01');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 56, 'user42', '잘 보고 갑니다~', '2021-05-02');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 92, 'user98', '좋은 글이네요^^', '2021-05-04');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 26, 'user7', '잘 보고 갑니다~', '2021-05-06');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 51, 'user91', '좋은 글이네요^^', '2021-05-08');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 70, 'user46', '화이팅합시다!!', '2021-05-10');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 53, 'user9', '화이팅합시다!!', '2021-05-12');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 15, 'user98', '잘 보고 갑니다~', '2021-05-13');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 23, 'user68', '좋은 글이네요^^', '2021-05-15');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 74, 'user10', '화이팅합시다!!', '2021-05-16');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 75, 'user3', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-05-17');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 56, 'user61', '좋은 글이네요^^', '2021-05-18');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 25, 'user9', '좋은 글이네요^^', '2021-05-19');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 5, 'user79', '좋은 글이네요^^', '2021-05-20');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 60, 'user80', '잘 보고 갑니다~', '2021-05-22');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 5, 'user32', '화이팅합시다!!', '2021-05-23');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user41', '잘 보고 갑니다~', '2021-05-25');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 90, 'user54', '얼른 코로나가 사라졌으면 좋겠습니다', '2021-05-26');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 59, 'user92', '화이팅합시다!!', '2021-05-27');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 3, 'user33', '잘 보고 갑니다~', '2021-05-28');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 94, 'user86', '화이팅합시다!!', '2021-05-30');
+insert into tblComComment (comcomment_seq, community_seq, id, content, regdate) values (comcomment_seq.nextVal, 42, 'user39', '좋은 글이네요^^', '2021-05-31');
 
 
 -- 커뮤니티 이미지
@@ -3244,306 +3245,106 @@ CREATE TABLE tblNoticeImg (
 ); --나중에
 CREATE SEQUENCE notice_img_seq;
 
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (1, 1, 'img1');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (2, 2, 'img2');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (3, 3, 'img3');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (4, 4, 'img4');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (5, 5, 'img5');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (6, 6, 'img6');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (7, 7, 'img7');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (8, 8, 'img8');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (9, 9, 'img9');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (10, 10, 'img10');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (11, 11, 'img11');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (12, 12, 'img12');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (13, 13, 'img13');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (14, 14, 'img14');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (15, 15, 'img15');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (16, 16, 'img16');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (17, 17, 'img17');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (18, 18, 'img18');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (19, 19, 'img19');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (20, 20, 'img20');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (21, 21, 'img21');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (22, 22, 'img22');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (23, 23, 'img23');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (24, 24, 'img24');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (25, 25, 'img25');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (26, 26, 'img26');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (27, 27, 'img27');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (28, 28, 'img28');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (29, 29, 'img29');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (30, 30, 'img30');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (31, 31, 'img31');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (32, 32, 'img32');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (33, 33, 'img33');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (34, 34, 'img34');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (35, 35, 'img35');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (36, 36, 'img36');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (37, 37, 'img37');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (38, 38, 'img38');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (39, 39, 'img39');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (40, 40, 'img40');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (41, 41, 'img41');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (42, 42, 'img42');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (43, 43, 'img43');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (44, 44, 'img44');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (45, 45, 'img45');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (46, 46, 'img46');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (47, 47, 'img47');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (48, 48, 'img48');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (49, 49, 'img49');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (50, 50, 'img50');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (51, 51, 'img51');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (52, 52, 'img52');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (53, 53, 'img53');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (54, 54, 'img54');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (55, 55, 'img55');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (56, 56, 'img56');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (57, 57, 'img57');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (58, 58, 'img58');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (59, 59, 'img59');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (60, 60, 'img60');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (61, 61, 'img61');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (62, 62, 'img62');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (63, 63, 'img63');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (64, 64, 'img64');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (65, 65, 'img65');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (66, 66, 'img66');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (67, 67, 'img67');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (68, 68, 'img68');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (69, 69, 'img69');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (70, 70, 'img70');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (71, 71, 'img71');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (72, 72, 'img72');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (73, 73, 'img73');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (74, 74, 'img74');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (75, 75, 'img75');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (76, 76, 'img76');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (77, 77, 'img77');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (78, 78, 'img78');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (79, 79, 'img79');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (80, 80, 'img80');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (81, 81, 'img81');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (82, 82, 'img82');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (83, 83, 'img83');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (84, 84, 'img84');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (85, 85, 'img85');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (86, 86, 'img86');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (87, 87, 'img87');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (88, 88, 'img88');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (89, 89, 'img89');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (90, 90, 'img90');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (91, 91, 'img91');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (92, 92, 'img92');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (93, 93, 'img93');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (94, 94, 'img94');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (95, 95, 'img95');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (96, 96, 'img96');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (97, 97, 'img97');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (98, 98, 'img98');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (99, 99, 'img99');
-
-INSERT INTO TBLNOTICEIMG (NOTICE_IMG_SEQ, NOTICE_SEQ, PATH) 
-VALUES (100, 100, 'img100');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 1,'1');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 2,'2');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 3,'3');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 4,'4');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 5,'5');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 6,'6');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 7,'7');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 8,'8');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 9,'9');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 10,'10');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 11,'11');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 12,'12');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 13,'13');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 14,'14');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 15,'15');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 16,'16');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 17,'17');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 18,'18');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 19,'19');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 20,'20');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 21,'21');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 22,'22');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 23,'23');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 24,'24');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 25,'25');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 26,'26');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 27,'27');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 28,'28');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 29,'29');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 30,'30');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 31,'31');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 32,'32');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 33,'33');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 34,'34');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 35,'35');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 36,'36');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 37,'37');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 38,'38');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 39,'39');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 40,'40');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 41,'41');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 42,'42');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 43,'43');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 44,'44');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 45,'45');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 46,'46');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 47,'47');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 48,'48');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 49,'49');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 50,'50');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 51,'51');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 52,'52');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 53,'53');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 54,'54');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 55,'55');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 56,'56');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 57,'57');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 58,'58');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 59,'59');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 60,'60');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 61,'61');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 62,'62');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 63,'63');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 64,'64');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 65,'65');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 66,'66');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 67,'67');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 68,'68');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 69,'69');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 70,'70');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 71,'71');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 72,'72');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 73,'73');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 74,'74');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 75,'75');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 76,'76');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 77,'77');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 78,'78');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 79,'79');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 80,'80');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 81,'81');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 82,'82');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 83,'83');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 84,'84');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 85,'85');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 86,'86');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 87,'87');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 88,'88');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 89,'89');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 90,'90');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 91,'91');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 92,'92');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 93,'93');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 94,'94');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 95,'95');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 96,'96');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 97,'97');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 98,'98');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 99,'99');
+insert into tblNoticeimg values (notice_img_seq.nextVal, 100,'100');
 
 
 

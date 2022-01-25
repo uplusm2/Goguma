@@ -84,13 +84,36 @@
 				</c:if>
 			</table>
 			<div class="pagebar">${pagebar}</div>
+			
+			<div class="search">
+				<form method="GET" action="/goguma/center/questionlist.do">
+					<table style="width:500px;margin:20px auto;">
+						<tr>
+							<td>
+								<select name="column" class="form-control">
+									<option value="title">제목</option>
+									<option value="content">내용</option>
+									<option value="id">이름</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" name="word" class="form-control" required>
+							</td>
+							<td>
+								<input type="submit" value="검색하기" class="btn btn-default">
+							</td>
+						</tr>
+					</table>
+					<input type="hidden" name="search" value="${search}">
+				</form>
+			</div>			
+			
 			<div class="btns">
-		
-			<c:if test="${not empty id}">
-			<input type="button" value="글쓰기"
-				class="btn btn-primary"
-				onclick="location.href='/goguma/center/questionadd.do';">
-			</c:if>
+				<c:if test="${not empty id}">
+				<input type="button" value="글쓰기"
+					class="btn btn-primary"
+					onclick="location.href='/goguma/center/questionadd.do';">
+				</c:if>
 				
 			</div>
 		</section>
@@ -99,7 +122,11 @@
 	</main>
 	
 	<script>
-		
+		<c:if test="${map.searchmode == 'y'}">
+		//검색 상태를 유지
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 		
 	</script>
 </body>
