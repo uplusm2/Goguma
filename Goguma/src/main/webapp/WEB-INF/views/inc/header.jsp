@@ -5,7 +5,8 @@
 <header>
 	<div class="inner-header">
 		<h1 class="logo" onclick="location.href='/goguma/main.do';">
-			<img src="/goguma/asset/img/logo.png"><span>고구마장터</span>
+			<img src="/goguma/asset/img/logo_goguma.png" class="img">
+			<img src="/goguma/asset/img/logo_txt.png" class="txt">
 		</h1>
 		<form method="GET" action="">
 			<input class="search" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">

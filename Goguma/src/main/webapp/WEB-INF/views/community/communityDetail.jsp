@@ -50,9 +50,8 @@
 			<table class="comment">
 				<tr>
 					<td rowspan="2"><img src="/goguma/files/profile/${dto.path}" alt=""></td>
-					<td>${cdto.nickname}</td>
-					<td>
-						&nbsp;&nbsp;${cdto.regDate}
+					<td>${cdto.nickname}
+						<small>&nbsp;&nbsp;${cdto.regDate}</small>
 						<c:if test="${dto.isNew <= 1}">
 						<span class="orange">N</span>
 						</c:if>
