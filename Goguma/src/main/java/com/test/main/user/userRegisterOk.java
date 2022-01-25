@@ -31,9 +31,13 @@ public class userRegisterOk extends HttpServlet {
 		String email = req.getParameter("email");
 		String birth = req.getParameter("birth");
 		String gender = req.getParameter("gender");
-		String address = req.getParameter("address");
+
+		String sido = req.getParameter("sido");
+		String sgg = req.getParameter("sgg");
+		String emd = req.getParameter("emd");
+
+		String address = sido + sgg + emd;
 		
-		//2.
 		UserDAO dao = new UserDAO();
 		
 		UserDTO dto = new UserDTO();
@@ -47,13 +51,15 @@ public class userRegisterOk extends HttpServlet {
 		UserDTO dto1 = new UserDTO();
 		
 		dto1.setId(id);
+		dto1.setNickname(id);
 		dto1.setName(name);
+		dto1.setAddress_seq(emd);
 		dto1.setAddress(address);
 		dto1.setTel(tel);
 		dto1.setEmail(email);
 		dto1.setBirth(birth);
 		dto1.setGender(gender);
-
+		
 		int result1 = dao.userinforegisterok(dto1);
 			
 		if (result == -1 || result1 == -1) {
