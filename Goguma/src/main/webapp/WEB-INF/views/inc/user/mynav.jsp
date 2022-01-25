@@ -114,4 +114,7 @@
 	$(".mainmenu5").click(()=>{
 		location.href = "/goguma/profile/salesrecord.do";
 	});
+	$(".mainmenu6").click(()=>{
+		location.href = "/goguma/profile/myquestionlist.do";
+	});
 </script>
