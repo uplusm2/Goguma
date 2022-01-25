@@ -63,7 +63,7 @@
 							<th>리뷰작성</th>
 						</tr>
 						<c:forEach items="${list}" var="dto" >
-						<c:if test="${dto.DEAL_SEQ!=null}">
+						<c:if test="${dto.deal_seq!=null}">
 						<tr>
 							<td>
 								${dto.rnum} 

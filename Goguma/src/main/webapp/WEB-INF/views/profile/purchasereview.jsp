@@ -99,7 +99,7 @@
 				<div class="title">
 					<h2>구매 후기 등록</h2>
 				</div>
-				<form action="">
+				<form action="/goguma/profile/profileeditok.do" method="get">
 				<div class="grid-container">
 						<div>
 							<div>
@@ -114,16 +114,18 @@
 						<div>
 							<div>판매자 아이디 : ${selId}</div>
 						</div>
-						
+				
 						<div>
-							<div><textarea rows="5" cols="33"></textarea></div>
+							<div><textarea rows="5" cols="33" name="content"></textarea></div>
 						</div>
 						
-						<div></div>
+						<div>
+							<input type="hidden" name="deal_seq" value="${deal_seq}">
+							<input type="hidden" class="score" name="score" value="">
+						</div>
 						
 						<div>
-							<input type="button" value="후기 등록" class="btn important" 
-							onclick="location.href='/goguma/profile/salesReviewList.do'">
+							<input type="submit" value="후기 등록" class="btn important" >
 						</div>
 					</div>
 				</form>
@@ -140,6 +142,7 @@
 			$(".grid-container div:nth-child(1) span:nth-child(2)").addClass('checked');
 			$(".grid-container div:nth-child(1) span:nth-child(1)").addClass('checked');
 			score=5;
+			$(".score").val(score);
 		});
 		$(".grid-container div:nth-child(1) span:nth-child(4)").click(()=>{
 			$(".grid-container div:nth-child(1) span:nth-child(5)").removeClass('checked');
@@ -148,6 +151,7 @@
 			$(".grid-container div:nth-child(1) span:nth-child(2)").addClass('checked');
 			$(".grid-container div:nth-child(1) span:nth-child(1)").addClass('checked');
 			score=4;
+			$(".score").val(score);
 		});
 		$(".grid-container div:nth-child(1) span:nth-child(3)").click(()=>{
 			$(".grid-container div:nth-child(1) span:nth-child(5)").removeClass('checked');
@@ -156,6 +160,7 @@
 			$(".grid-container div:nth-child(1) span:nth-child(2)").addClass('checked');
 			$(".grid-container div:nth-child(1) span:nth-child(1)").addClass('checked');
 			score=3;
+			$(".score").val(score);
 		});
 		$(".grid-container div:nth-child(1) span:nth-child(2)").click(()=>{
 			$(".grid-container div:nth-child(1) span:nth-child(5)").removeClass('checked');
@@ -164,6 +169,7 @@
 			$(".grid-container div:nth-child(1) span:nth-child(2)").addClass('checked');
 			$(".grid-container div:nth-child(1) span:nth-child(1)").addClass('checked');
 			score=2;
+			$(".score").val(score);
 		});
 		$(".grid-container div:nth-child(1) span:nth-child(1)").click(()=>{
 			$(".grid-container div:nth-child(1) span:nth-child(5)").removeClass('checked');
@@ -172,6 +178,7 @@
 			$(".grid-container div:nth-child(1) span:nth-child(2)").removeClass('checked');
 			$(".grid-container div:nth-child(1) span:nth-child(1)").addClass('checked');
 			score=1;
+			$(".score").val(score);
 		});
 	</script>
 </body>

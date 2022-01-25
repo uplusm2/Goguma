@@ -9,14 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/profile/purchasereview.do")
+@WebServlet("/profile/profileeditok.do")
 public class PurchaseReviewOk extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String selId = req.getParameter("selid");
-		req.setAttribute("selId", selId);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/purchasereview.jsp");
+		String deal_seq = req.getParameter("deal_seq");
+		String content = req.getParameter("content");
+		
+		System.out.println(deal_seq);
+		System.out.println(content);
+		
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/profileeditok.jsp");
 		dispatcher.forward(req, resp);
 	}
 

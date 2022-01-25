@@ -54,7 +54,6 @@ public class PurchaseRecord extends HttpServlet {
 		String strNow = String.format("%tF", now); //"2022-01-13"
 		
 		String pagebar="";
-		
 		ArrayList<TransactionRecordDTO> list = dao.getPurchaseRecord(map);
 		System.out.println(list.size());
 		req.setAttribute("list", list);
