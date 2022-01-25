@@ -12,8 +12,14 @@ public class CenterDTO {
 	private String type;
 	private String User;
 	private int readcount;
-	private ArrayList<String> img;
+	private String path;
 	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
 	private int isNew = 0;
 	private String rnum;
 	
@@ -59,12 +65,7 @@ public class CenterDTO {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public ArrayList<String> getImg() {
-		return img;
-	}
-	public void setImg(ArrayList<String> img) {
-		this.img = img;
-	}
+	
 	public String getUser() {
 		return User;
 	}

@@ -17,6 +17,16 @@ public class QuestionList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		String column = req.getParameter("column");
+		String word = req.getParameter("word");
+		String searchmode = "n";
+		
+		if ((column == null && word == null) || (column.equals("") && word.equals(""))) {
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
+		
 		CenterDAO dao = new CenterDAO();
 		HashMap<String,String> map = new HashMap<String,String>();
 		
@@ -31,6 +41,9 @@ public class QuestionList extends HttpServlet {
 		int blockSize = 10;
 		
 		String search = req.getParameter("search");
+		if(search.equals("") || search == null) {
+			search = "1";
+		}
 		String page = req.getParameter("page");
 		
 		if (page == null || page == "") nowPage = 1;
@@ -43,13 +56,16 @@ public class QuestionList extends HttpServlet {
 		map.put("search", search);
 		map.put("begin", begin + "");
 		map.put("end", end + "");
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 		
 		
 		String pagebar = "";
 		
 		//페이지바
 		
-		totalCount = dao.getqTotalCount(search);
+		totalCount = dao.getqTotalCount(map);
 		
 		
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);

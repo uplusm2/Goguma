@@ -7,6 +7,37 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
+	.faqlist .pagebar {
+		transform: translateY(20px); 
+		width: 510px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.faqlist .pagebar .pagination a{
+		border: 0px;
+		margin: 0px 3px;
+		color: #181818;
+	}
+	.faqlist .pagebar .pagination a:hover{
+		background: #fff;
+		color: orange;
+	}
+	.faqlist .pagebar .pagination .active a{
+		background: #fff;
+		font-weight: 700;
+		color: #9B59B6;
+	}
+	.faqlist .pagebar .pagination span {
+		transform: translateY(2px);
+		color: #757575;
+	}
+	.faqlist .pagebar .pagination .next a:hover span,
+	.faqlist .pagebar .pagination .previous a:hover span {
+		color: orange;
+	}
+		
+	
+	
 	.subcategory{
 		margin-top : 20px;
 		width : 1150px;
@@ -94,7 +125,7 @@
 			<c:if test="${not empty id && lv.equals('2')}">
 			<input type="button" value="글쓰기"
 				class="btn btn-primary"
-				onclick="location.href='/code/board/add.do';">
+				onclick="location.href='/goguma/center/faqadd.do';">
 			</c:if>
 			
 		</div>

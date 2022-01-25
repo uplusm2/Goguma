@@ -16,7 +16,7 @@
 		margin-left : auto;
 		margin-right : auto;
 	}
-	.center-search .search {
+	.center-search .word {
 		border-radius : 10px;
 		width : 500px;
 		margin-left : 50px;
@@ -73,11 +73,12 @@
 <body>
 	<div class = "center-search">
 		<div class = "title-form">
-		<form method="GET" action="">
-			<span class="sub" style= "color : white; font-size : 30px;">공지사항</span>
-			<input class="search" type="text" placeholder="찾고 싶은 글을 검색해보세요!">
-			<div class="glyphicon glyphicon-search mag" onclick ="location.href = '/goguma/center/noticelist.do'"></div>
-		</form>
+			<form method="GET" action="/goguma/center/noticelist.do">
+				<span class="sub" style= "color : white; font-size : 30px;">공지사항</span>
+				<input class="word" type="text" name = "word" placeholder="찾고 싶은 공지사항 제목을 입력 후 엔터키 입력">
+			<%-- 	<div class="glyphicon glyphicon-search mag" onclick ="location.href = '/goguma/center/noticelist.do?word=${wrod}'"></div> --%>
+				<!-- <input type="submit" class = "glyphicon glyphicon-search mag" value ="검색"> -->
+			</form>
 		</div>
 	</div>
 	<div class = "center-subtitle">

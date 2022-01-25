@@ -25,7 +25,10 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td style="height:300px;vertical-align:middle;">${dto.content}</td>
+					<td style="height:300px;vertical-align:middle;">
+					<img src="/goguma/files/notice/img1.jpg" style = "width : 300px; height : 200px;" >
+					<br>
+					${dto.content}</td>
 				</tr>
 			</table>
 			<div class="btns">
