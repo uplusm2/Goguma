@@ -245,7 +245,7 @@ public class CenterDAO {
 	public CenterDTO noticeGet(String seq) {
 		try {
 
-			String sql = "select * from noticeview where notice_seq = ?";
+			String sql = "select * from tblnotice where notice_seq = ?";
 			
 			pstat = conn.prepareStatement(sql);
 			
@@ -340,7 +340,7 @@ public class CenterDAO {
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setRegdate(rs.getString("regdate"));
-				
+				dto.setRnum(rs.getString("rnum"));
 				list.add(dto);
 			}
 			

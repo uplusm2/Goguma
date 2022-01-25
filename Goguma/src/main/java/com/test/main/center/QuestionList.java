@@ -114,7 +114,7 @@ public class QuestionList extends HttpServlet {
 		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
-		
+		req.setAttribute("search",	search);
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		

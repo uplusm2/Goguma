@@ -34,6 +34,18 @@
 					<th>내용</th>
 					<td><textarea name="content" class="form-control" required>${dto.content}</textarea></td>
 				</tr>
+				<tr>
+					<th>종류</th>
+					<td>
+						<select name = "type">
+							<option value = "1">계정/인증</option>
+							<option value = "2">구매/판매</option>
+							<option value = "3">운영정책</option>
+							<option value = "4">서비스이용</option>
+							<option value = "5">기타</option>
+						</select>
+					</td>
+				</tr>
 			</table>
 			
 			<div class="btns">

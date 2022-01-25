@@ -15,6 +15,7 @@ public class CenterDTO {
 	private ArrayList<String> img;
 	
 	private int isNew = 0;
+	private String rnum;
 	
 	public String getRegdate() {
 		return regdate;
@@ -75,6 +76,12 @@ public class CenterDTO {
 	}
 	public void setIsNew(int isNew) {
 		this.isNew = isNew;
+	}
+	public String getRnum() {
+		return rnum;
+	}
+	public void setRnum(String string) {
+		this.rnum = string;
 	}
 	
 	

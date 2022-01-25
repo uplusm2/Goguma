@@ -8,58 +8,83 @@
 <title>Insert title here</title>
 <%@ include file="../inc/asset.jsp" %>
 <style>
-	.container{
-		background : #9B59B6;
-		width : 100%;
+	.center-search{
+		/* border : 1px solid black; */
+		background-color : #9B59B6;
 		height : 100px;
-		padding-left : 15%;
+		width : 1150px;
+		margin-left : auto;
+		margin-right : auto;
 	}
-	.menu li{
-	    cursor: pointer;
-	    float: left;
-	    font-weight: 500;
-	    padding-left : 10px;
-    }
-    .menu li:after{
-	    content: '';
-	    position: absolute;
-	    top: 6px;
-	    left: 133px;
-	    border-left: 1px solid #757575;
-	    border-right: 1px solid #757575;
-	    width: 124px;
-	    height: 15px;
-	    z-index: 1;
-	}
-	.menu li:hover{
-		cursur : pointer;
-	}
-	.container-text{
+	.center-search .search {
+		border-radius : 10px;
+		width : 500px;
+		margin-left : 50px;
+		font-size : 15px;
+		padding : 5px;
+		border : 1px solid white;
+		vertical-align : middle;
 		
 	}
-	.ddd{
-		background : #FAF7FB;
-		height : 100px;
-		padding-left : 15%;
-		border-right : 1px solid #9B59B6;
-    	
-}
+	.center-search .title-form{
+		padding-top : 25px;
+	}
+	
+	.center-search .sub{
+		margin-left : 50px;
+		margin-top : 5px;
+		vertical-align : middle;
+	}
+	
+	.center-subtitle{
+		border-bottom : 1px solid #9B59B6;
+		width : 1150px;
+		margin-left : auto;
+		margin-right : auto;
+		height : 80px;
+		
+	}
+	
+	.center-subtitle .center-menu li{
+		float : left;
+		text-align : center;
+		vertical-align : middle;
+		width : 150px;
+		margin-top : 25px;
+		margin-left : 20px;
+		cursor : pointer;
+	}
+	
+	.center-subtitle .center-menu li:hover{
+		color : #9B59B6;
+	}
+	
+	.title-form .mag{
+		color : white;
+		cursor : pointer;
+		vertical-align : middle;
+		margin-left : 15px;
+		font-size : 20px;
+	}
+	
+	
 </style>
 </head>
 <body>
-	<div class = "container">
+	<div class = "center-search">
+		<div class = "title-form">
 		<form method="GET" action="">
-			<span style= "color : white">공지사항</span>
+			<span class="sub" style= "color : white; font-size : 30px;">공지사항</span>
 			<input class="search" type="text" placeholder="찾고 싶은 글을 검색해보세요!">
-			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
+			<div class="glyphicon glyphicon-search mag" onclick ="location.href = '/goguma/center/noticelist.do'"></div>
 		</form>
+		</div>
 	</div>
-	<div class = "ddd">
-	
-		<ul class = "menu">
-			<li>자주묻는질문</li>
-			<li>공지사항</li>
-			<li>문의사항</li>
+	<div class = "center-subtitle">
+		<ul class = "center-menu">
+			<li onclick = "location.href = '/goguma/center/faq.do?page=1&search=1'">자주묻는질문</li>
+			<li onclick = "location.href = '/goguma/center/noticelist.do'">공지사항</li>
+			<li onclick = "location.href = '/goguma/center/questionlist.do?page=1&search=1'">문의사항</li>
 		</ul>
 	</div>
 	

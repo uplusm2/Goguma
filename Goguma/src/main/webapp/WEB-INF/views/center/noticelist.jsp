@@ -30,9 +30,6 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<%@include file="/WEB-INF/views/center/title.jsp" %>
 		<section class="center">
-		
-
-			<div><h2>공지사항</h2></div>
 			<table class="table table-bordered list">
 				<tr>
 					<th>번호</th>
@@ -59,7 +56,7 @@
 				</c:if>
 			</table>
 			<div class="pagebar">${pagebar}</div>
-			<c:if test="${not empty id}">
+			<c:if test="${not empty id && lv.equals('2')}">
 			<div class="btns">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
@@ -73,7 +70,6 @@
 	</main>
 	
 	<script>
-	
 		
 	</script>
 </body>

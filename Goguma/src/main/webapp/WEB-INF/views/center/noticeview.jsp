@@ -32,9 +32,9 @@
 			
 				<input type="button" value="돌아가기"
 					class="btn btn-default"
-					onclick="location.href='/goguma/center/noticeview.do?&page=${page}';">
+					onclick="location.href='/goguma/center/noticelist.do?&page=${page}';">
 				
-				<c:if test="${not empty id && lv.equals("2")}">
+				<c:if test="${not empty id && lv.equals('2')}">
 					<input type="button" value="수정하기"
 						class="btn btn-primary"
 						onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
