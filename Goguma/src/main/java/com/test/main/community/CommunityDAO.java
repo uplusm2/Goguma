@@ -40,8 +40,6 @@ public class CommunityDAO {
 								, map.get("begin")
 								, map.get("end"));
 			
-			System.out.println(sql);
-			
 			rs = stat.executeQuery(sql);
 
 			ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();

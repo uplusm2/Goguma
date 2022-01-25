@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.test.main.community.CommunityDTO;
 
@@ -18,6 +19,7 @@ public class InBoxDetail extends HttpServlet {
 	private MessageDAO dao;
 	private MessageDTO dto;
 	private Calendar now;
+	private HttpSession session;
 	
 	{
 		dao = new MessageDAO();
@@ -26,13 +28,19 @@ public class InBoxDetail extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		session = req.getSession();
 		String seq = req.getParameter("message_seq");
+		String id = session.getAttribute("id").toString();
+		
 		dao.check(seq);
 		dto = dao.getMessage(seq);
 		refineData(dto);
 		
+		int newMessage = dao.getNewMessage(id);
+		
 		req.setAttribute("dto", dto);
+		session.setAttribute("newMessage", newMessage);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBoxDetail.jsp");
 		dispatcher.forward(req, resp);
 	}

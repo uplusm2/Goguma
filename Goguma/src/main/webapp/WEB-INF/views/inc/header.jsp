@@ -19,9 +19,14 @@
 			</c:if>
 			
 			<c:if test="${not empty id}">
-			<li class="message-count">${newMessage}</li>
-			<li onclick="location.href='/goguma/message/inBox.do';"><img src="/goguma/asset/img/message.png"></li>
-			<c:if test="${lv==1}">
+			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img"><span class="glyphicon glyphicon-envelope"></span></li>
+			<c:if test="${newMessage > 0}">
+			<li class="message-count"><span>${newMessage}</span></li>
+			</c:if>
+			<c:if test="${not empty nickname && lv==1}">
+			<li onclick="location.href='/goguma/profile/mypage.do';">${nickname}님</li>
+			</c:if>
+			<c:if test="${empty nickname && lv==1}">
 			<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
 			</c:if>
 			<c:if test="${lv==2}">

@@ -133,7 +133,7 @@ public class MessageDAO {
 
 	public String add(MessageDTO dto) {
 		try {
-			String sql = "insert into tblMessage values (message_seq.nextVal, ?, ?, ?, sysdate+0.375, 'N')";
+			String sql = "insert into tblMessage values (message_seq.nextVal+100, ?, ?, ?, sysdate+0.375, 'N')";
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, dto.getSenderId());
