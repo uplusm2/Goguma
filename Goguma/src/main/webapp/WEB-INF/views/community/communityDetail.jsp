@@ -89,7 +89,6 @@
 	</main>
 	
 	<script>
-		const commentId = $(#cdto.id)
 		function confirmDel() {
 			if(confirm("정말 삭제하시겠습니까?")){
 				location.href='/goguma/community/communityDel.do?seq=${dto.seq}';
