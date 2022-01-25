@@ -10,6 +10,14 @@
 
 .dropdown{
 	height: 50px;
+	
+}
+
+select{
+	margin-right: 10px;
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: gray;
 }
 
 div.container{
@@ -51,7 +59,6 @@ a {
 .img-box > img {
     display: block;
     width: 100%;
-    height: 80%;
 }
 /*커스텀*/
 html,
@@ -188,6 +195,32 @@ body {
 					</select>
 				</div>
 	    	</nav>
+	    	
+	    	
+			<table>
+				<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>가격</th>
+					<th>날짜</th>
+				</tr>
+				<c:forEach items="${list}" var="dto">
+				
+				<tr>
+					<td>${dto.seq}</td>
+					<td>${dto.name}</td>
+					<td>${dto.price}</td>
+					<td>${dto.regdate}</td>
+				</tr>
+				
+				</c:forEach>
+				<c:if test="${list.size() == 0}">
+				<tr>
+					<td colspan="4">게시물이 없습니다.</td>
+				</tr>
+				</c:if>
+			</table>
+					
     		<div class="list con">
     <ul class="row">
         <li class="cell">
