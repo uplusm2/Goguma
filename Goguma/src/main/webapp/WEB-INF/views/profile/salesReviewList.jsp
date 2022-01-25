@@ -7,18 +7,14 @@
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <style>
-	.grid-container{
-		padding-left:50px;
-		padding-right:50px;
-		width:970px;
-		height:500px;
-		margin-top:5%;
-		display:grid;
-		grid-template-columns:1fr;
-		grid-template-rows: 1fr;
+	.btn.important{
+		border: 1px solid #9B59B6;
+	    background: #9B59B6;
+	    color: #fff;
 	}
 	#tbl{
-		width: 100%;
+		margin-top:100px;
+		width: 80%;
 	}
 	#tbl td:nth-child(1) {
 		width:5%; 
