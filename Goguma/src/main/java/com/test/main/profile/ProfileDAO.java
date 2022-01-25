@@ -12,6 +12,7 @@ import java.util.HashMap;
 import com.test.jdbc.DBUtil;
 import com.test.main.center.CenterDTO;
 import com.test.main.community.CommunityDTO;
+import com.test.main.user.UserDTO;
 
 public class ProfileDAO {
 
@@ -488,4 +489,49 @@ public class ProfileDAO {
 		}
 		return null;
 	}
+	public UserDTO getAllUserData(String id) {
+		
+		try {
+		String sql = "select \r\n"
+				+ "    v.id\r\n"
+				+ "    ,v.name\r\n"
+				+ "    ,v.nickname\r\n"
+				+ "    ,case when tbluserinfo.gender = 'm' then '남성'\r\n"
+				+ "          when tbluserinfo.gender = 'f' then '여성'\r\n"
+				+ "          end as gender\r\n"
+				+ "    ,v.tel"
+				+ "    ,v.email\r\n"
+				+ "    ,v.address\r\n"
+				+ "    ,TO_CHAR(v.birth, 'YYYY-MM-DD') as birth \r\n"
+				+ "from vwuserall v inner join tbluserinfo on v.id = tbluserinfo.id \r\n"
+				+ "    where v.id=?";	
+		
+		conn = open();
+		pstat = conn.prepareStatement(sql);
+		
+		pstat.setString(1, id);
+		
+		rs = pstat.executeQuery();
+		
+		UserDTO dto = new UserDTO();
+		
+		if(rs.next()) {
+			dto.setId(rs.getString("id"));
+			dto.setName(rs.getString("name"));
+			dto.setNickname(rs.getString("nickname"));
+			dto.setGender(rs.getString("gender"));
+			dto.setTel(rs.getString("tel"));
+			dto.setEmail(rs.getString("email"));
+			dto.setAddress(rs.getString("address"));
+			dto.setBirth(rs.getString("birth"));
+		}
+		return dto ;
+		}catch (Exception e) {
+			System.out.println("회원가입 오류.login()");
+			e.printStackTrace();
+		}
+		
+		return null;
+			
+		}
 }

@@ -57,6 +57,7 @@ public class ProfileEditOk extends HttpServlet {
 	         
 	         System.out.println(check); // 나중에 처리
 	 		 System.out.println(path);
+	 		 System.out.println(id);
 	 		 
 	 		 req.setAttribute("check", check);
 	 		 

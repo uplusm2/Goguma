@@ -106,7 +106,8 @@
 		/* location.href = "/goguma/profile/purchaseReviewList.do"; */
 	});
 	$(".mainmenu3").click(()=>{
-		$(".frame").attr("src","/goguma/profile/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것
+		/* $(".frame").attr("src","/goguma/profile/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것 */
+		location.href = "/goguma/profile/memberdata.do";
 	});
 	$(".mainmenu4").click(()=>{
 		location.href = "/goguma/profile/purchaserecord.do";

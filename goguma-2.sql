@@ -102,8 +102,18 @@ select * from(select a.* , rownum as rnum from( select * from (vwproductsold p l
 				where id = 'user1' order by p.regdate) a) where rnum between 1 and 100  and type = 'B' or type is null  ;    
       
 
-      
-      
-      
+select 
+    v.id
+    ,v.name
+    ,v.nickname
+    ,case when tbluserinfo.gender = 'm' then '남성'
+          when tbluserinfo.gender = 'f' then '여성'
+          end as gender
+    ,v.tel,v.email
+    ,v.address
+    ,TO_CHAR(v.birth, 'YYYY-MM-DD') as birth
+from vwuserall v inner join tbluserinfo on v.id = tbluserinfo.id 
+    where v.id='user1';      
+-- 회원 데이터 확인용     
              
 
