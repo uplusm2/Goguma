@@ -259,10 +259,31 @@
     height: 600px
 }
 .community.form .button .btn.cancel {
-    transform: translateX(930px) translateY(-10px); 
+    transform: translateX(930px) translateY(-52px); 
 }
 .community.form .button .btn.add {
-    transform: translateX(940px) translateY(-10px); 
+    transform: translateX(940px) translateY(-52px); 
+}
+.community.form .button label {
+	width: 80px;
+	height: auto;
+	background: #9B59B6;
+	margin-left: 10px;
+	color: #fff;
+	padding: 3px;
+	font-weight: 500;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.community.form .button label span{
+	font-weight: 400;
+	color: #fff;
+}
+.community.form .button .file {
+	transform: translateY(-25px) translateX(10px);
+	width: 80px;
+	height: 20px;
+	opacity: 0;
 }
 
 
