@@ -83,7 +83,7 @@
 							</td>
 							<td>
 								<c:if test="${dto.type==null}">
-									<input type="button" value="리뷰 작성" class="btn important" >
+									<input type="button" value="리뷰 작성" class="btn important" onclick="location.href='/goguma/profile/salesreview.do?selid=${dto.selid}&deal_seq=${dto.deal_seq}'">
 								</c:if>
 								<c:if test="${dto.type!=null}">
 									<input type="button" value="작성 완료" class="btn" disabled>	

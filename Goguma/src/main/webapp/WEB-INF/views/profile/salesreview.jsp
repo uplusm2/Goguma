@@ -112,7 +112,7 @@
 						</div>
 						
 						<div>
-							<div>판매자 아이디 : ${selId}</div>
+							<div>구매자 아이디 : ${buyId}</div>
 						</div>
 				
 						<div>

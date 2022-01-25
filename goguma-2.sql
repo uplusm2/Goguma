@@ -94,12 +94,14 @@ select avg(SCORE) as avg , count(score) as cnt from vwReceived_seller_reviews wh
       
       
       
+select * from tblreview;   
+
+insert into tbldeal_seq(type , deal_seq , score , content ) values (?,?,?,?);
       
+select * from(select a.* , rownum as rnum from( select * from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+				where id = 'user1' order by p.regdate) a) where rnum between 1 and 100  and type = 'B' or type is null  ;    
       
-      
-      
-      
-      
+
       
       
       

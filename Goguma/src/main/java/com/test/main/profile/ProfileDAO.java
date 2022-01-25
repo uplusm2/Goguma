@@ -238,7 +238,7 @@ public class ProfileDAO {
 	public ArrayList<TransactionRecordDTO> getSalesRecord(HashMap<String, String> map) {
 		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
 		String sql = "select * from(select a.* , rownum as rnum from( select * from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
-				+ "where id = ? order by p.regdate) a) where rnum between ? and ?  and type = 'S' or type is null" ;//판판매한것
+				+ "where id = ? order by p.regdate) a) where rnum between ? and ?  and type = 'S' or type is null" ;//판매한것
 		try {
 			
 			pstat = conn.prepareStatement(sql);
@@ -375,5 +375,39 @@ public class ProfileDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public int setPurchaseReview(HashMap<String, String> map) {
+		String sql = "insert into tblReview values (?,?,?,?)";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("type"));
+			pstat.setString(2, map.get("deal_seq"));
+			pstat.setString(3, map.get("score"));
+			pstat.setString(4, map.get("content"));
+			
+			return pstat.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	public int setSalesReview(HashMap<String, String> map) {
+		String sql = "insert into tblReview values (?,?,?,?)";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("type"));
+			pstat.setString(2, map.get("deal_seq"));
+			pstat.setString(3, map.get("score"));
+			pstat.setString(4, map.get("content"));
+			
+			return pstat.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 }

@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/profile/purchasereviewok.do")
-public class PurchaseReviewOk extends HttpServlet {
+@WebServlet("/profile/salesreviewok.do")
+public class SalesReviewOk extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,7 +21,7 @@ public class PurchaseReviewOk extends HttpServlet {
 		String deal_seq = req.getParameter("deal_seq");
 		String content = req.getParameter("content");
 		String score = req.getParameter("score");
-		String type = "B";
+		String type = "S";
 		
 		HashMap<String, String> map = new HashMap<String, String>();
 		
@@ -32,11 +32,11 @@ public class PurchaseReviewOk extends HttpServlet {
 		
 		ProfileDAO dao = new ProfileDAO();
 		
-		int check = dao.setPurchaseReview(map);
+		int check = dao.setSalesReview(map);
 		
 		req.setAttribute("check", check);
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/purchasereviewok.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/salesreviewok.jsp");
 		dispatcher.forward(req, resp);
 	}
 
