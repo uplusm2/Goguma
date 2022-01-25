@@ -165,6 +165,7 @@ public class RecordDAO {
 
 
 	public ArrayList<ComCommentDTO> comCommentRecordList(String id) {
+		
 		try {
 
 			String sql = "select * from tblcomcomment where id = ?";
@@ -184,6 +185,44 @@ public class RecordDAO {
 				dto.setCseq(rs.getString("community_seq"));
 				dto.setContent(rs.getString("content"));
 				dto.setRegDate(rs.getString("regdate"));
+
+				list.add(dto);
+
+			}
+
+			return list;
+
+		} catch (Exception e) {
+			System.out.println("sellRecordList");
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+
+	public ArrayList<QuestionDTO> questionList(String id) {
+		
+		try {
+
+			String sql = "select * from vwQuestion where id = ?";
+
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+
+			rs = pstat.executeQuery();
+
+			ArrayList<QuestionDTO> list = new ArrayList<QuestionDTO>();
+
+			while (rs.next()) {
+
+				QuestionDTO dto = new QuestionDTO();
+
+				dto.setQuestionSeq(rs.getString("question_seq"));
+				dto.setType(rs.getString("type"));
+				dto.setTitle(rs.getString("title"));
+				dto.setRegDate(rs.getString("regdate"));
+				dto.setAnswerSeq(rs.getString("answer_seq"));
 
 				list.add(dto);
 

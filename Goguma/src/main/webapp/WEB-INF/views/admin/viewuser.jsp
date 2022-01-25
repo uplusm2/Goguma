@@ -102,7 +102,7 @@
 						<a href="#comcommentRecord" aria-controls="comcommentRecord" role="tab" data-toggle="tab">작성댓글</a>
 					</li>
 					<li role="presentation">
-						<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">문의내역</a>
+						<a href="#questionRecord" aria-controls="questionRecord" role="tab" data-toggle="tab">문의내역</a>
 					</li>
 				
 				</ul>
@@ -162,14 +162,14 @@
 							</tr>
 						</table>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="settings">
-						<table class="table table-bordered">
+					<div role="tabpanel" class="tab-pane" id="questionRecord">
+						<table class="table table-bordered" id="questionTable">
 							<tr>
 								<th>번호</th>
 								<th>문의유형</th>
 								<th>제목</th>
-								<th>상태</th>
 								<th>작성날짜</th>
+								<th>상태</th>
 							</tr>
 						</table>
 					</div>
@@ -278,6 +278,26 @@
 		});
 		
 		/* 문의내역 클릭하면 불러오기 */
+		$("a[href$='#questionRecord']").click(() => {
+			$.ajax({
+				type: 'GET',
+				url: '/goguma/admin/questionrecord.do',
+				data: 'id=${dto.id}',
+				dataType: "json",
+				success: function(list){
+					$('#comcommentTable tbody').empty();
+					list.forEach((item) => {
+						$('#questionTable tbody').append('<tr>');
+						$('#questionTable tbody').append(`<td>\${item.seq}</td>`);
+						$('#questionTable tbody').append(`<td>\${item.type}</td>`);
+ 						$('#questionTable tbody').append(`<td>\${item.title}</td>`);
+						$('#questionTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#questionTable tbody').append(`<td>\${item.state}</td>`);
+						$('#questionTable tbody').append('</tr>');
+					});
+				}
+			});
+		});
 		
 	</script>
 </body>
