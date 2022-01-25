@@ -96,7 +96,7 @@
 						<a href="#buyRecord" aria-controls="buyRecord" role="tab" data-toggle="tab">구매내역</a>
 					</li>
 					<li role="presentation">
-						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">작성글</a>
+						<a href="#communityRecord" aria-controls="communityRecord" role="tab" data-toggle="tab">작성글</a>
 					</li>
 					<li role="presentation">
 						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">작성댓글</a>
@@ -139,13 +139,17 @@
 							</tbody>
 						</table>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="profile">
-						<table class="table table-bordered">
-							<tr>
-								<th>번호</th>
-								<th>제목</th>
-								<th>작성날짜</th>
-							</tr>
+					<div role="tabpanel" class="tab-pane" id="communityRecord">
+						<table class="table table-bordered" id="communityTable">
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>제목</th>
+									<th>작성날짜</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
 						</table>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="messages">
@@ -227,6 +231,25 @@
 						$('#buyTable tbody').append(`<td>\${item.dealDate}</td>`);
 						$('#buyTable tbody').append(`<td>\${item.dealerId}</td>`);
 						$('#buyTable tbody').append('</tr>');
+					});
+				}
+			});
+		});
+		
+		$("a[href$='#communityRecord']").click(() => {
+			$.ajax({
+				type: 'GET',
+				url: '/goguma/admin/communityrecord.do',
+				data: 'id=${dto.id}',
+				dataType: "json",
+				success: function(list){
+					$('#communityTable tbody').empty();
+					list.forEach((item) => {
+						$('#communityTable tbody').append('<tr>');
+						$('#communityTable tbody').append(`<td>\${item.seq}</td>`);
+ 						$('#communityTable tbody').append(`<td>\${item.title}</td>`);
+						$('#communityTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#communityTable tbody').append('</tr>');
 					});
 				}
 			});
