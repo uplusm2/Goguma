@@ -16,6 +16,7 @@ public class userregister extends HttpServlet {
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/userregister.jsp");
 		dispatcher.forward(req, resp);
+		
 	}
 
 }

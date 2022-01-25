@@ -230,25 +230,27 @@ public class UserDAO {
 			
 		}
 	
-	public int userinforegisterok(UserDTO dto) {
+public int userinforegisterok(UserDTO dto) {
 		
 		try {
-		String sql = "INSERT INTO tbluserinfo (id, address_seq, name, address, tel, email, birth, gender) VALUES (?, 1, ?, ?, ?, ?, ?, ?)";	
+		String sql = "INSERT INTO tbluserinfo (id, address_seq, name, address, tel, email, birth, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";	
 		
 		conn = open();
 		pstat = conn.prepareStatement(sql);
-			
+		
 		pstat.setString(1, dto.getId());
-		pstat.setString(2, dto.getName());
-		pstat.setString(3, dto.getAddress());
-		pstat.setString(4, dto.getTel());
-		pstat.setString(5, dto.getEmail());
-		pstat.setString(6, dto.getBirth().substring(0, 1)
+		pstat.setString(2, dto.getEmd());
+		pstat.setString(3, dto.getName());
+		pstat.setString(4, dto.getAddress());
+		pstat.setString(5, dto.getTel());
+		pstat.setString(6, dto.getEmail());
+		pstat.setString(7, dto.getBirth().substring(0, 1)
 							+ "/"
 							+ dto.getBirth().substring(2, 3)
 							+ "/"
 							+ dto.getBirth().substring(4, 5));
-		pstat.setString(7, dto.getGender());
+		pstat.setString(8, dto.getGender());
+
 			
 		return pstat.executeUpdate();
 				
@@ -328,6 +330,36 @@ public class UserDAO {
 						e.printStackTrace();
 				}
 			return 0;
+		}
+		
+		public String findid(String name, String email) {
+			
+			String id = null;
+			
+			try {
+
+				String sql = "SELECT id FROM tbluserinfo WHERE name = ? AND email = ?";
+					
+				conn = open();
+				pstat = conn.prepareStatement(sql);
+					
+				pstat.setString(1, name); //첫번째 ?
+				pstat.setString(2, email); //두번째 ?
+					
+				rs = pstat.executeQuery();
+						
+				if (rs.next()) {
+					
+					id = rs.getString("id");
+							
+				}
+
+			} catch (Exception e) {
+				System.out.println("아이디 찾기 오류()");
+				e.printStackTrace();
+			}
+			
+			return id;
 		}
 	
 	

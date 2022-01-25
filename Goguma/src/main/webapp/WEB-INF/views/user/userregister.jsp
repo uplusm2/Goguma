@@ -51,7 +51,7 @@
 				</tr>
 				<tr>
 					<td style="width: 110px;"><h5>비밀번호</h5></td>
-					<td><input class="form-control" placeholder="비밀번호" type="password" onkeyup="passwordCheckFunction();" id="pw" name="pw" maxLength="16"></td>
+					<td><input class="form-control" placeholder="비밀번호" type="password" id="pw" name="pw" maxLength="16"></td>
 				</tr>
 				<tr>
 					<td style="width: 110px;"><h5>비밀번호 확인</h5></td>
@@ -95,7 +95,36 @@
 				</tr>
 				<tr>
 					<td style="width: 110px;"><h5>주소</h5></td>
-					<td><input class="form-control" type="text" id="address" name="address" maxLength="50"></td>
+					<td><select id="sido" name="sido">
+		                <option value="서울" selected="selected">서울</option>
+		                <option value="부산">부산</option>
+		                <option value="대구">대구</option>
+		                <option value="대전">대전</option>
+		              </select>  
+		              <select id="sgg" name="sgg">
+		                <option value="송파구" selected="selected">송파구</option>
+		                <option value="강서구">강서구</option>
+		                <option value="강북구">강북구</option>
+		                <option value="서대문구">서대문구</option>
+		                <option value="광진구">광진구</option>
+		                <option value="마포구">마포구</option>
+		                <option value="동작구">동작구</option>
+		                <option value="종로구">종로구</option>
+		              </select>
+		              <select id="emd" name="emd">
+		                <option value="1" selected="selected">풍납동</option>
+		                <option value="2">석촌동</option>
+		                <option value="3">성내동</option>
+		                <option value="4">삼전동</option>
+		                <option value="5">화곡동</option>
+		                <option value="6">오쇠동</option>
+		                <option value="7">등촌동</option>
+		                <option value="8">마곡동</option>
+		                <option value="9">우장산동</option>
+		                <option value="10">개화동</option>
+		                <option value="11">방화동</option>
+		              </select>
+		             </td>
 				</tr>
 				<tr>
 					<td style="text-align: left" colspan="3"><input class="btn btn-primary pull-right" type="submit" value="회원가입"></td>
