@@ -15,7 +15,7 @@ import com.test.main.user.UserDAO;
 import com.test.main.user.UserDTO;
 
 @WebServlet("/user/userregisterok.do")
-public class userregisterOk extends HttpServlet {
+public class userRegisterOk extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
