@@ -77,7 +77,7 @@ section .new {
 header {
     width: 100%;
     height: 110px;
-    background: #FDFCFE;
+    background: #F9F7FC;
 }
 .inner-header h1{
 	cursor: pointer;
@@ -104,10 +104,19 @@ header {
 .inner-header .logo img.img {
     transform: rotate(75deg);
     top: 35px;
+	/* translate: all 3s; */
 }
 .inner-header .logo img.txt {
     width: 210px;
     left: 70px;
+    
+}
+.inner-header .logo:hover .img {
+	animation: dance 0.5s;
+}
+@keyframes dance {
+    0% { transform: rotate(75deg); }
+    100% { transform: rotate(435deg); }
 }
 .inner-header .search {
     position: absolute;

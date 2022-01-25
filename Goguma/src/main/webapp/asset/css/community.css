@@ -43,13 +43,14 @@
 	top: -2px; left: 5px;
 	color: #fff;
 	font-size: 12px;
+	font-weight: 400;
 }
 .community .orange:before {
 	content: '';
 	position: absolute;
 	height: 15px;
 	width: 15px;
-	background: orange;
+	background: #F4BF35;
 	border-radius: 50%;
 	z-index: -1;
 	transform: translateX(-3px) translateY(8px);
@@ -74,7 +75,7 @@
 }
 .community .pagebar .pagination a:hover{
 	background: #fff;
-	color: orange;
+	color: #F4BF35;
 }
 .community .pagebar .pagination .active a{
 	background: #fff;
@@ -87,7 +88,7 @@
 }
 .community .pagebar .pagination .next a:hover span,
 .community .pagebar .pagination .previous a:hover span {
-	color: orange;
+	color: #F4BF35;
 }
 
 
@@ -311,7 +312,7 @@
 .community .comment tr:nth-child(1) td:nth-child(2) {
     padding-left: 10px;
     font-weight: 500;
-    /* width: ; */
+    width: 600px;
 }
 .community .comment tr:nth-child(1) td:nth-child(2) small { 
     font-weight: 400;
@@ -319,6 +320,9 @@
     color: #757575;
     padding-left: 0px;
 }
+.community .comment tr:nth-child(1) td:nth-child(3) {
+	transform: translateX(360px);
+} 
 .community .comment tr:nth-child(1) td {
     padding-top: 10px;
 }

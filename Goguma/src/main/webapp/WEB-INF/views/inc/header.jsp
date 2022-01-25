@@ -17,15 +17,17 @@
 			<li><a href="/goguma/user/login.do">로그인</a></li>
 			<li><a href="/goguma/user/userregister.do">회원가입</a></li>
 			</c:if>
+			
 			<c:if test="${not empty id}">
+			<li class="message-count">3</li>
 			<li onclick="location.href='/goguma/message/inBox.do';"><img src="/goguma/asset/img/message.png"></li>
-				<c:if test="${lv==1}">
-					<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
-				</c:if>
-				<c:if test="${lv==2}">
-					<li onclick="location.href='/goguma/admin/dashboard.do';">${id}님</li>
-				</c:if>
-				<li><a href="/goguma/user/logoutok.do">로그아웃</a></li>
+			<c:if test="${lv==1}">
+			<li onclick="location.href='/goguma/profile/mypage.do';">${id}님</li>
+			</c:if>
+			<c:if test="${lv==2}">
+			<li onclick="location.href='/goguma/admin/dashboard.do';">${id}님</li>
+			</c:if>
+			<li><a href="/goguma/user/logoutok.do">로그아웃</a></li>
 			</c:if>
 		</ul>
 		<ul class="menu">
