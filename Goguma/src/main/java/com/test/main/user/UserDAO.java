@@ -243,7 +243,11 @@ public class UserDAO {
 		pstat.setString(3, dto.getAddress());
 		pstat.setString(4, dto.getTel());
 		pstat.setString(5, dto.getEmail());
-		pstat.setString(6, dto.getBirth());
+		pstat.setString(6, dto.getBirth().substring(0, 1)
+							+ "/"
+							+ dto.getBirth().substring(2, 3)
+							+ "/"
+							+ dto.getBirth().substring(4, 5));
 		pstat.setString(7, dto.getGender());
 			
 		return pstat.executeUpdate();
@@ -255,6 +259,75 @@ public class UserDAO {
 		
 		return -1;
 			
+		}
+	
+		public int checkId(String id) {
+			int result = 0;
+				try {
+						String sql = "SELECT count(*) as cnt FROM tbluser WHERE id = ?";	
+						
+						
+							conn = open();
+							pstat = conn.prepareStatement(sql);
+			
+							pstat.setString(1, id);
+			
+							rs = pstat.executeQuery();
+							
+							if(rs.next()) {
+								return rs.getInt("cnt");
+							} else {
+								
+							}
+				
+					}catch (Exception e) {
+							System.out.println("ID 중복체크 오류.login()");
+								e.printStackTrace();
+						}
+				return result;
+		
+					
+			
+		}
+
+		public int userdelete(String id) {
+			
+			try {
+				String sql = "DELETE FROM tbluser WHERE id = ?";	
+				
+				
+					conn = open();
+					pstat = conn.prepareStatement(sql);
+	
+					pstat.setString(1, id);
+	
+					return pstat.executeUpdate();
+		
+			}catch (Exception e) {
+					System.out.println("ID 중복체크 오류.login()");
+						e.printStackTrace();
+				}
+			return 0;
+		}
+		
+		public int userinfodelete(String id) {
+			
+			try {
+				String sql = "DELETE FROM tbluserinfo WHERE id = ?";	
+				
+				
+					conn = open();
+					pstat = conn.prepareStatement(sql);
+	
+					pstat.setString(1, id);
+	
+					return pstat.executeUpdate();
+		
+			}catch (Exception e) {
+					System.out.println("ID 중복체크 오류.login()");
+						e.printStackTrace();
+				}
+			return 0;
 		}
 	
 	
