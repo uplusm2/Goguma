@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>고구마장터</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
+<link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
 
 	.table .user-img {
@@ -36,9 +37,11 @@
 <body>
 	<!-- block.jsp -->
 	<main class="main">
-		<%-- <%@include file="/WEB-INF/views/inc/header.jsp"%> --%>
-		<section class="content">
-			<%-- <%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%> --%>
+		<%@include file="/WEB-INF/views/inc/header.jsp"%>
+		<div class="container">
+			<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
+			
+			<div class="dashboard">
 			<div class="user-title">
 				<p>${dto.name}(${dto.id})님의회원정보</p>
 			</div>
@@ -87,7 +90,10 @@
 				<!-- Nav tabs -->
 				<ul class="nav nav-pills" role="tablist">
 					<li role="presentation" class="active">
-						<a href="#home" aria-controls="home" role="tab" data-toggle="tab">거래내역</a>
+						<a href="#sellRecord" aria-controls="sellRecord" role="tab" data-toggle="tab">판매내역</a>
+					</li>
+					<li role="presentation">
+						<a href="#buyRecord" aria-controls="buyRecord" role="tab" data-toggle="tab">구매내역</a>
 					</li>
 					<li role="presentation">
 						<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">작성글</a>
@@ -103,14 +109,29 @@
 
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="home">
-						<table class="table table-bordered" id="dealTbl">
+					<div role="tabpanel" class="tab-pane active" id="sellRecord">
+						<table class="table table-bordered" id="sellTable">
 							<thead>
 								<tr>
 									<th>번호</th>
-									<th>등록일</th>
+									<th>상품명</th>
 									<th>등록날짜</th>
-									<th>거래날짜</th>
+									<th>판매날짜</th>
+									<th>거래자 아이디</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="buyRecord">
+						<table class="table table-bordered" id="buyTable">
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>상품명</th>
+									<th>등록날짜</th>
+									<th>구매날짜</th>
 									<th>거래자 아이디</th>
 								</tr>
 							</thead>
@@ -152,9 +173,8 @@
 
 			</div>
 			
-			<div class="well txt5"></div>
-
-		</section>
+			</div>
+		</div>
 
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 
@@ -162,30 +182,55 @@
 
 	<script>
 		
-		$("a[href$='#home']").click(() =>{
+		/* 판매내역 가져오는 함수 */
+		function loadSellRecord() {
 			$.ajax({
 				type: 'GET',
 				url: '/goguma/admin/sellrecord.do',
 				data: 'id=${dto.id}',
 				dataType: "json",
 				success: function(list){
-					$('#dealTbl tbody').empty();
+					$('#sellTable tbody').empty();
 					list.forEach((item) => {
-						$('#dealTbl tbody').append('<tr>');
-						$('#dealTbl tbody').append(`<td>\${item.productSeq}</td>`);
- 						$('#dealTbl tbody').append(`<td>\${item.name}</td>`);
-						$('#dealTbl tbody').append(`<td>\${item.regDate}</td>`);
-						$('#dealTbl tbody').append(`<td>\${item.dealDate}</td>`);
-						$('#dealTbl tbody').append(`<td>\${item.dealerId}</td>`);
-						$('#dealTbl tbody').append('</tr>');
+						$('#sellTable tbody').append('<tr>');
+						$('#sellTable tbody').append(`<td>\${item.productSeq}</td>`);
+ 						$('#sellTable tbody').append(`<td>\${item.name}</td>`);
+						$('#sellTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#sellTable tbody').append(`<td>\${item.dealDate}</td>`);
+						$('#sellTable tbody').append(`<td>\${item.dealerId}</td>`);
+						$('#sellTable tbody').append('</tr>');
 					});
-				},
-				error:function(request,status,error){
-			        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-			    }
-
-			})
-		})
+				}
+			});
+		}
+		
+		/* 페이지 로드될 때 판매내역 불러오기 */
+		$(document).ready(loadSellRecord);
+		
+		/* 판매내역 클릭할 때 판매내역 불러오기 */
+		$("a[href$='#sellRecord']").click(loadSellRecord);
+		
+		/* 구매내역 클릭할 때 구매내역 불러오기 */
+		$("a[href$='#buyRecord']").click(() => {
+			$.ajax({
+				type: 'GET',
+				url: '/goguma/admin/buyrecord.do',
+				data: 'id=${dto.id}',
+				dataType: "json",
+				success: function(list){
+					$('#buyTable tbody').empty();
+					list.forEach((item) => {
+						$('#buyTable tbody').append('<tr>');
+						$('#buyTable tbody').append(`<td>\${item.productSeq}</td>`);
+ 						$('#buyTable tbody').append(`<td>\${item.name}</td>`);
+						$('#buyTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#buyTable tbody').append(`<td>\${item.dealDate}</td>`);
+						$('#buyTable tbody').append(`<td>\${item.dealerId}</td>`);
+						$('#buyTable tbody').append('</tr>');
+					});
+				}
+			});
+		});
 		
 	</script>
 </body>
