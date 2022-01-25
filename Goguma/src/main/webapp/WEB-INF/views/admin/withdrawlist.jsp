@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-	<!-- blocklist.jsp -->
+	<!-- withdrawlist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<section class="content">
@@ -28,12 +28,13 @@
 					<tr>
 						<c:forEach items="${list}" var="dto">
 							<tr>
-								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
+								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
+								</td>
 								<td>${dto.name}</td>
 								<td>${dto.regDate}</td>
 								<td>${dto.type}</td>
-								<td><input type="button" value="차단해제"
-									class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
+								<td><input type="button" value="영구탈퇴"
+									class="btn btn-default btn-withdraw" data-id="${dto.id}"></td>
 							</tr>
 						</c:forEach>
 
@@ -67,7 +68,7 @@
 				<div class="btns">
 
 					<input type="button" value="목록보기" class="btn btn-default"
-						onclick="location.href='/goguma/admin/blocklist.do';">
+						onclick="location.href='/goguma/admin/withdrawlist.do';">
 
 				</div>
 
@@ -80,30 +81,32 @@
 
 	<script>
 		
-	    $(document).on("click", ".btn-unblock", function () {
+		//영구 탈퇴 버튼 추가
+		/* 
+	    $(document).on("click", ".btn-withdraw", function () {
 	        
 	    	var id = $(this).attr("data-id");
 	    	
-	    	if (confirm("선택한 회원을 차단 해제하시겠습니까?")) {
+	    	if (confirm("선택한 회원을 영구 탈퇴시키겠습니까?")) {
 	        	
 	    		$.ajax({
-	                url: '/goguma/admin/unblock.do',
+	                url: '/goguma/admin/withdraw.do',
 	                type: "POST",
-	                async: true,
 	                data: {id: id},
 	                dataType: "text",
 	                success: function (result) { 
+	                    //console.log(data);
 	                    if (result != 0){
 		                	window.alert("차단 해제되었습니다."); 
 	                        document.location.reload(true);                     	
 	                    } else {
-		                	window.alert("차단 해제 실패했습니다."); 
+		                	window.alert("차단 실패했습니다."); 
 	                    }
 	                },
 	            })
 	        }
 	    })
-	
+	 	*/
 			
 	</script>
 </body>

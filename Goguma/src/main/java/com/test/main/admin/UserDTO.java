@@ -1,6 +1,5 @@
 package com.test.main.admin;
 
-//TODO 다른 분 userdto 써야 되나?
 public class UserDTO {
 	
 	private String id;

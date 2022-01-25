@@ -6,7 +6,36 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
+	.subcategory{
+		margin-top : 20px;
+		width : 1150px;
+		height : 60px;
+		margin-left : auto;
+		margin-right : auto;
+	}
+	
+	.subcategory .menu li{
+		float : left;
+		text-align : center;
+		cursor : pointer;
+		height : 60px;
+		padding : 15px;
+		width : 200px;
+		border : 1px solid #9B59B6;
+		
+	}
+	.subcategory .menu li:hover{
+		background-color: #FAF7FB;
+	}
+	
+	
+	.subcategory .menu{
+		
+		margin-left : 70px;
+	}
 
+
+	
 </style>
 </head>
 <body>
@@ -16,17 +45,16 @@
 		<%@include file="/WEB-INF/views/center/title.jsp" %>
 		<div class = "subcategory">
 		<form method="GET" action="/goguma/center/faq.do">
-			<ul class = "center-submenu">
-				<li onclick = "location.href='/goguma/center/questionlist.do?search=1&page=1'">계정/인증</li>
-				<li onclick = "location.href='/goguma/center/questionlist.do?search=2&page=1'">구매/판매</li>
-				<li onclick = "location.href='/goguma/center/questionlist.do?search=3&page=1'">운영정책</li>
-				<li onclick = "location.href='/goguma/center/questionlist.do?search=4&page=1'">서비스이용</li>
-				<li onclick = "location.href='/goguma/center/questionlist.do?search=5&page=1'">기타</li>
+			<ul class = "menu">
+				<li onclick = "location.href='/goguma/center/questionlist.do?search=1&page=1'" id = "menu1">계정/인증</li>
+				<li onclick = "location.href='/goguma/center/questionlist.do?search=2&page=1'" id = "menu2">구매/판매</li>
+				<li onclick = "location.href='/goguma/center/questionlist.do?search=3&page=1'" id = "menu3">운영정책</li>
+				<li onclick = "location.href='/goguma/center/questionlist.do?search=4&page=1'" id = "menu4">서비스이용</li>
+				<li onclick = "location.href='/goguma/center/questionlist.do?search=5&page=1'" id = "menu5">기타</li>
 			</ul>
 		</form>
 		</div>
 			<section class="center">
-			<div><h2>문의사항</h2></div>
 			<table class="table table-bordered list">
 				<tr>
 					<th>번호</th>
@@ -37,7 +65,7 @@
 				<c:forEach items="${list}" var="dto">
 				
 				<tr>
-					<td>${dto.seq}</td>
+					<td>${dto.rnum}</td>
 					<td>
 						<a href="/goguma/center/questionview.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
 						<c:if test="${dto.isNew == 1}">
@@ -56,13 +84,36 @@
 				</c:if>
 			</table>
 			<div class="pagebar">${pagebar}</div>
+			
+			<div class="search">
+				<form method="GET" action="/goguma/center/questionlist.do">
+					<table style="width:500px;margin:20px auto;">
+						<tr>
+							<td>
+								<select name="column" class="form-control">
+									<option value="title">제목</option>
+									<option value="content">내용</option>
+									<option value="id">이름</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" name="word" class="form-control" required>
+							</td>
+							<td>
+								<input type="submit" value="검색하기" class="btn btn-default">
+							</td>
+						</tr>
+					</table>
+					<input type="hidden" name="search" value="${search}">
+				</form>
+			</div>			
+			
 			<div class="btns">
-		
-			<c:if test="${not empty id}">
-			<input type="button" value="글쓰기"
-				class="btn btn-primary"
-				onclick="location.href='/goguma/center/questionadd.do';">
-			</c:if>
+				<c:if test="${not empty id}">
+				<input type="button" value="글쓰기"
+					class="btn btn-primary"
+					onclick="location.href='/goguma/center/questionadd.do';">
+				</c:if>
 				
 			</div>
 		</section>
@@ -71,7 +122,11 @@
 	</main>
 	
 	<script>
-	
+		<c:if test="${map.searchmode == 'y'}">
+		//검색 상태를 유지
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 		
 	</script>
 </body>

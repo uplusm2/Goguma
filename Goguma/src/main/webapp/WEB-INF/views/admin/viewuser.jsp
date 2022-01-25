@@ -105,25 +105,18 @@
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="home">
 						<table class="table table-bordered">
-							<tr>
-								<th>번호</th>
-								<th>구분</th>
-								<th>상태</th>
-								<th>상품이름</th>
-								<th>거래자 아이디</th>
-								<th>거래날짜</th>
-							</tr>
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>등록일</th>
+									<th>판매날짜</th>
+									<th>거래날짜</th>
+									<th>거래자 아이디</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
 						</table>
-						<c:forEach items="list" var="dto">
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</c:forEach>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="profile">
 						<table class="table table-bordered">
@@ -166,6 +159,27 @@
 	</main>
 
 	<script>
+		
+		$("a[href$='#home']").click(() =>{
+			alert();
+			$.ajax({
+				type: 'GET',
+				url: '/goguma/admin/sellRecord.do',
+				data: 'id=' + ${dto.id},
+				success: function(list){
+					$('#home table tbody').empty();
+					list.forEach((item) => {
+						$('#home table tbody').append('<tr>');
+						$('#home table tbody').append(`<td>\${item.productSeq}</td>`);
+						$('#home table tbody').append(`<td>\${item.id}</td>`);
+						$('#home table tbody').append(`<td>\${item.regDate}</td>`);
+						$('#home table tbody').append(`<td>\${item.dealDate}</td>`);
+						$('#home table tbody').append(`<td>\${item.dealerId}</td>`);
+						$('#home table tbody').append('</tr>');
+					});
+				}
+			})
+		})
 		
 	</script>
 </body>
