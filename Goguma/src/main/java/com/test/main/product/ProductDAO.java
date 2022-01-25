@@ -21,7 +21,6 @@ public class ProductDAO {
 	public static Connection open() {
 		Connection conn = null;
 
-	//	String url = "jdbc:oracle:thin:admin@goguma_medium=C://Wallet_goguma";
 		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
 		String id = "admin";
 		String pw = "Goguma970928";
@@ -37,7 +36,7 @@ public class ProductDAO {
 	}
 	
 	//댓글리스트 가져오기
-	public ArrayList<ProductComDTO> listComment(String seq) {
+	public ArrayList<ProductComDTO> productlistComment(String seq) {
 		
 		try {
 
@@ -75,7 +74,7 @@ public class ProductDAO {
 	  
 	 
 	//게시물리스트
-	  public ArrayList<ProductDTO> list(HashMap<String, String> map) {
+	  public ArrayList<ProductDTO> productlist(HashMap<String, String> map) {
 			
 			try {
 
@@ -218,8 +217,30 @@ public class ProductDAO {
 
 			pstat.executeUpdate();
 		} catch (Exception e) {
-			System.out.println("CommunityDAO.addReadCount()");
+			System.out.println("ProductDAO.addReadCount()");
 			e.printStackTrace();
 		}
+	}
+	
+	public int getqTotalCount(String search) {
+		
+		try {
+						
+			String sql  = String.format("select count(*) as cnt from tblProduct where product_seq = %s", search);
+			
+			rs = stat.executeQuery(sql);
+			
+			
+			if (rs.next()) {
+				return rs.getInt("cnt");
+			}
+			
+		} catch (Exception e) {
+			System.out.println("ProductDAO.getqTotalCount()");
+			e.printStackTrace();
+		}
+		
+		return 0;
+		
 	}
 }

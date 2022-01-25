@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.test.main.center.CenterDAO;
 import com.test.main.product.ProductDAO;
 
 @WebServlet("/product/productList.do")
@@ -21,7 +22,9 @@ public class ProductList extends HttpServlet {
 		
 		ProductDAO dao = new ProductDAO();
 		HashMap<String,String> map = new HashMap<String,String>();
-		ArrayList<ProductDTO> list = dao.list(map);
+		
+		
+		ArrayList<ProductDTO> list = dao.productlist(map);
 		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
