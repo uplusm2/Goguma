@@ -39,7 +39,6 @@ public class MyCommunityList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
 		id = (String)req.getSession().getAttribute("id");
 		setPage(req);
 		try {
@@ -84,7 +83,12 @@ public class MyCommunityList extends HttpServlet {
 
 	private void setPage(HttpServletRequest req) {
 		int begin = 0;		
-		int end = 0;		
+		int end = 0;	
+		
+		String search = req.getParameter("search");
+		if(search == null) {
+			search = "1";
+		}
 
 		String page = req.getParameter("page");
 
@@ -96,9 +100,25 @@ public class MyCommunityList extends HttpServlet {
 
 		begin = ((nowPage - 1) * pageSize) + 1;
 		end = begin + pageSize - 1;
+		
+		String column = req.getParameter("column");
+		String word = req.getParameter("word");
+		String searchmode = "n";
+		String id = (String) req.getSession().getAttribute("id");
+		
+		if ((column == null && word == null) || (column.equals("") && word.equals(""))) {
+			word=" ";
+			searchmode = "n";
+		} else {
+			searchmode = "y";
+		}
 
 		map.put("begin", begin + "");
 		map.put("end", end + "");
+		
+		map.put("column", column);
+		map.put("word", word);
+		map.put("searchmode", searchmode);
 		map.put("id", id);
 	}
 
@@ -108,7 +128,7 @@ public class MyCommunityList extends HttpServlet {
 		int blockSize = 10;
 		int n;
 		int loop;
-
+		System.out.println(map.toString());
 		totalCount = dao.getMyCommunityTotalCount(map);
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 

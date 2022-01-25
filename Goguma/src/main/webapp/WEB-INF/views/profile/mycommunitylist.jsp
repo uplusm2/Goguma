@@ -88,10 +88,10 @@
 					<div class="search">
 						<form method="GET" action="#!">
 							<select name="column" class="text">
-								<option value="subject">제목</option>
+								<option value="title">제목</option>
 								<option value="content">내용</option>
 							</select> 
-							<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
+							<input type="text" name="word" placeholder="검색어를 입력하세요."class="text"> 
 							<input type="image" src="/goguma/asset/img/search.png" class="search-img">
 						</form>
 					</div>
@@ -101,7 +101,11 @@
 	</div>
 	
 	<script>
-	
+		<c:if test="${map.searchmode == 'y'}">
+		//검색 상태를 유지
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 	</script>
 </body>
 </html>
