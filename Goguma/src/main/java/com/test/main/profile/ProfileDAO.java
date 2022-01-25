@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc.DBUtil;
+import com.test.jdbc2.DBUtil;
 import com.test.main.center.CenterDTO;
 import com.test.main.community.CommunityDTO;
 import com.test.main.user.UserDTO;
@@ -21,26 +21,28 @@ public class ProfileDAO {
 	private PreparedStatement pstat;
 	private ResultSet rs;
 
-	public static Connection open() {
-		Connection conn = null;
-
-		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
-
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url, id, pw);
-			return conn;
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
+//	public static Connection open() {
+//		Connection conn = null;
+//
+//		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
+//		String id = "admin";
+//		String pw = "Goguma970928";
+//
+//		try {
+//			Class.forName("oracle.jdbc.driver.OracleDriver");
+//			conn = DriverManager.getConnection(url, id, pw);
+//			return conn;
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//	}
 
 	public ProfileDAO() {
 //		conn = DBUtil.open("GOGUMA","java1234");
-		conn = open();
+		conn = DBUtil.open("localhost","GOGUMA", "java1234");
+//		conn = DBUtil.open();
+//		conn = open();
 		try {
 			stat = conn.createStatement();
 		} catch (SQLException e) {
@@ -506,7 +508,6 @@ public class ProfileDAO {
 				+ "from vwuserall v inner join tbluserinfo on v.id = tbluserinfo.id \r\n"
 				+ "    where v.id=?";	
 		
-		conn = open();
 		pstat = conn.prepareStatement(sql);
 		
 		pstat.setString(1, id);
@@ -534,4 +535,33 @@ public class ProfileDAO {
 		return null;
 			
 		}
+
+	public int setMemberData(UserDTO dto) {
+		int check = 0;
+		String updatePw = "update tbluser set password = ? where id = ?";
+		String UpdateInfo= "update tbluserinfo set address = ? , email = ? ,gender= ? where id = ?";
+		
+		try {
+			System.out.println(dto.toString());
+			pstat = conn.prepareStatement(updatePw);
+			pstat.setString(1, dto.getPw());
+			pstat.setString(2, dto.getId());
+			check = pstat.executeUpdate();
+			System.out.println("test : "+check);
+			
+			
+			pstat = conn.prepareStatement(UpdateInfo);
+			pstat.setString(1, dto.getAddress());
+			pstat.setString(2, dto.getEmail());
+			pstat.setString(3, dto.getGender());
+			pstat.setString(4, dto.getId());
+			check = pstat.executeUpdate();
+			System.out.println("test : "+check);
+			
+			return check;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }
