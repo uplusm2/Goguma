@@ -63,7 +63,8 @@ public class ComCommentDAO {
 		String strNow = String.format("%tF", now);
 		
 		if (date.startsWith(strNow)) {
-			return date.substring(14);
+			return date.substring(11, 16);
+			
 		} else {
 			String tmp = date.substring(0, 16).replace("-", ".");
 			return tmp.substring(2);

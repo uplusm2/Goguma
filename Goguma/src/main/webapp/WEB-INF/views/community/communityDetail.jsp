@@ -51,7 +51,12 @@
 				<tr>
 					<td rowspan="2"><img src="/goguma/asset/img/logo.png" alt=""></td>
 					<td>${cdto.nickname}</td>
-					<td>&nbsp;&nbsp;${cdto.regDate}</td>
+					<td>
+						&nbsp;&nbsp;${cdto.regDate}
+						<c:if test="${dto.isNew <= 1}">
+						<span class="orange">N</span>
+						</c:if>
+					</td>
 					<c:if test="${id == cdto.id}">
 					<td class="button">
 						<input type="button" value=삭제 class="btn del" id="${cdto.id}"
