@@ -11,6 +11,7 @@ public class MessageDTO {
 	
 	private String senderNickname;
 	private String receiverNickname;
+	private int messageCount;
 	private double isNew;
 	
 	public String getSeq() {
@@ -72,5 +73,11 @@ public class MessageDTO {
 	}
 	public void setIsNew(double isNew) {
 		this.isNew = isNew;
+	}
+	public int getMessageCount() {
+		return messageCount;
+	}
+	public void setMessageCount(int messageCount) {
+		this.messageCount = messageCount;
 	}
 }
