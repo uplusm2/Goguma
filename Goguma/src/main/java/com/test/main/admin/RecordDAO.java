@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.test.main.community.ComCommentDTO;
 import com.test.main.community.CommunityDTO;
 
 public class RecordDAO {
@@ -128,31 +129,68 @@ public class RecordDAO {
 
 
 	public ArrayList<CommunityDTO> communityRecordList(String id) {
-try {
-			
+		
+		try {
+
 			String sql = "select community_seq, title, regdate from tblCommunity where id = ?";
-			
+
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, id);
-			
+
 			rs = pstat.executeQuery();
-			
+
 			ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();
-			
-			while(rs.next()) {
-			
+
+			while (rs.next()) {
+
 				CommunityDTO dto = new CommunityDTO();
-				
+
 				dto.setSeq(rs.getString("community_seq"));
 				dto.setTitle(rs.getString("title"));
 				dto.setRegDate(rs.getString("regdate"));
-				
+
 				list.add(dto);
 
 			}
-			
+
 			return list;
-			
+
+		} catch (Exception e) {
+			System.out.println("sellRecordList");
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+
+	public ArrayList<ComCommentDTO> comCommentRecordList(String id) {
+		try {
+
+			String sql = "select * from tblcomcomment where id = ?";
+
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+
+			rs = pstat.executeQuery();
+
+			ArrayList<ComCommentDTO> list = new ArrayList<ComCommentDTO>();
+
+			while (rs.next()) {
+
+				ComCommentDTO dto = new ComCommentDTO();
+
+				dto.setSeq(rs.getString("comcomment_seq"));
+				dto.setCseq(rs.getString("community_seq"));
+				dto.setContent(rs.getString("content"));
+				dto.setRegDate(rs.getString("regdate"));
+
+				list.add(dto);
+
+			}
+
+			return list;
+
 		} catch (Exception e) {
 			System.out.println("sellRecordList");
 			e.printStackTrace();

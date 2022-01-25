@@ -99,7 +99,7 @@
 						<a href="#communityRecord" aria-controls="communityRecord" role="tab" data-toggle="tab">작성글</a>
 					</li>
 					<li role="presentation">
-						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">작성댓글</a>
+						<a href="#comcommentRecord" aria-controls="comcommentRecord" role="tab" data-toggle="tab">작성댓글</a>
 					</li>
 					<li role="presentation">
 						<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">문의내역</a>
@@ -152,11 +152,11 @@
 							</tbody>
 						</table>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="messages">
-						<table class="table table-bordered">
+					<div role="tabpanel" class="tab-pane" id="comcommentRecord">
+						<table class="table table-bordered" id="comcommentTable">
 							<tr>
-								<th>번호</th>
-								<th>제목</th>
+								<th>댓글번호</th>
+								<th>글번호</th>
 								<th>댓글내용</th>
 								<th>작성날짜</th>
 							</tr>
@@ -211,10 +211,10 @@
 		/* 페이지 로드될 때 판매내역 불러오기 */
 		$(document).ready(loadSellRecord);
 		
-		/* 판매내역 클릭할 때 판매내역 불러오기 */
+		/* 판매내역 클릭하면 불러오기 */
 		$("a[href$='#sellRecord']").click(loadSellRecord);
 		
-		/* 구매내역 클릭할 때 구매내역 불러오기 */
+		/* 구매내역 클릭하면 불러오기 */
 		$("a[href$='#buyRecord']").click(() => {
 			$.ajax({
 				type: 'GET',
@@ -236,6 +236,7 @@
 			});
 		});
 		
+		/* 작성글 클릭하면 불러오기 */
 		$("a[href$='#communityRecord']").click(() => {
 			$.ajax({
 				type: 'GET',
@@ -254,6 +255,29 @@
 				}
 			});
 		});
+		
+		/* 작성댓글 클릭하면 불러오기 */
+		$("a[href$='#communityRecord']").click(() => {
+			$.ajax({
+				type: 'GET',
+				url: '/goguma/admin/comcommentrecord.do',
+				data: 'id=${dto.id}',
+				dataType: "json",
+				success: function(list){
+					$('#comcommentTable tbody').empty();
+					list.forEach((item) => {
+						$('#comcommentTable tbody').append('<tr>');
+						$('#comcommentTable tbody').append(`<td>\${item.seq}</td>`);
+ 						$('#comcommentTable tbody').append(`<td>\${item.cseq}</td>`);
+						$('#comcommentTable tbody').append(`<td>\${item.content}</td>`);
+						$('#comcommentTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#comcommentTable tbody').append('</tr>');
+					});
+				}
+			});
+		});
+		
+		/* 문의내역 클릭하면 불러오기 */
 		
 	</script>
 </body>
