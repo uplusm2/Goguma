@@ -51,7 +51,7 @@
 				</tr>
 				<tr>
 					<td style="width: 110px;"><h5>비밀번호</h5></td>
-					<td><input class="form-control" placeholder="비밀번호" type="password" onkeyup="passwordCheckFunction();" id="pw" name="pw" maxLength="16"></td>
+					<td><input class="form-control" placeholder="비밀번호" type="password" id="pw" name="pw" maxLength="16"></td>
 				</tr>
 				<tr>
 					<td style="width: 110px;"><h5>비밀번호 확인</h5></td>
