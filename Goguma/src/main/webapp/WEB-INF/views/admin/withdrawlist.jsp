@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-	<!-- blocklist.jsp -->
+	<!-- withdrawlist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<section class="content">
