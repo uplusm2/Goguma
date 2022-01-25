@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/sellrecord.do")
+@WebServlet("/admin/sellrecord.do")
 public class SellRecord extends HttpServlet {
 
 	@Override
@@ -34,8 +34,8 @@ public class SellRecord extends HttpServlet {
 				temp += String.format("\"productSeq\" : \"%s\",", dto.getProductSeq());
 				temp += String.format("\"name\" : \"%s\",", dto.getName());
 				temp += String.format("\"regDate\" : \"%s\",", dto.getRegDate());
-				temp += String.format("\"dealDate\" : %s", dto.getDealDate());
-				temp += String.format("\"dealerId\" : %s", dto.getDealerId());
+				temp += String.format("\"dealDate\" : \"%s\",", dto.getDealDate());
+				temp += String.format("\"dealerId\" : \"%s\"", dto.getDealerId());
 			temp += "},";
 		}
 		

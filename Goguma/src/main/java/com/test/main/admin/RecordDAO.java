@@ -59,6 +59,8 @@ public class RecordDAO {
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, id);
 			
+			rs = pstat.executeQuery();
+			
 			ArrayList<SellRecordDTO> list = new ArrayList<SellRecordDTO>();
 			
 			while(rs.next()) {

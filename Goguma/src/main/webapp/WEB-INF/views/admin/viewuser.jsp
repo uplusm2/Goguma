@@ -104,12 +104,12 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="home">
-						<table class="table table-bordered">
+						<table class="table table-bordered" id="dealTbl">
 							<thead>
 								<tr>
 									<th>번호</th>
 									<th>등록일</th>
-									<th>판매날짜</th>
+									<th>등록날짜</th>
 									<th>거래날짜</th>
 									<th>거래자 아이디</th>
 								</tr>
@@ -151,6 +151,8 @@
 				</div>
 
 			</div>
+			
+			<div class="well txt5"></div>
 
 		</section>
 
@@ -161,23 +163,27 @@
 	<script>
 		
 		$("a[href$='#home']").click(() =>{
-			alert();
 			$.ajax({
 				type: 'GET',
-				url: '/goguma/admin/sellRecord.do',
-				data: 'id=' + ${dto.id},
+				url: '/goguma/admin/sellrecord.do',
+				data: 'id=${dto.id}',
+				dataType: "json",
 				success: function(list){
-					$('#home table tbody').empty();
+					$('#dealTbl tbody').empty();
 					list.forEach((item) => {
-						$('#home table tbody').append('<tr>');
-						$('#home table tbody').append(`<td>\${item.productSeq}</td>`);
-						$('#home table tbody').append(`<td>\${item.id}</td>`);
-						$('#home table tbody').append(`<td>\${item.regDate}</td>`);
-						$('#home table tbody').append(`<td>\${item.dealDate}</td>`);
-						$('#home table tbody').append(`<td>\${item.dealerId}</td>`);
-						$('#home table tbody').append('</tr>');
+						$('#dealTbl tbody').append('<tr>');
+						$('#dealTbl tbody').append(`<td>\${item.productSeq}</td>`);
+ 						$('#dealTbl tbody').append(`<td>\${item.name}</td>`);
+						$('#dealTbl tbody').append(`<td>\${item.regDate}</td>`);
+						$('#dealTbl tbody').append(`<td>\${item.dealDate}</td>`);
+						$('#dealTbl tbody').append(`<td>\${item.dealerId}</td>`);
+						$('#dealTbl tbody').append('</tr>');
 					});
-				}
+				},
+				error:function(request,status,error){
+			        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+			    }
+
 			})
 		})
 		
