@@ -140,9 +140,8 @@ public class CommunityDAO {
 	
 	public String add(CommunityDTO dto) {
 		try {
-			String sql = "insert into tblCommunity values (community_seq.nextVal, ?, ?, ?, sysdate + 0.375, default)";
+			String sql = "insert into tblCommunity values (community_seq.nextVal+100, ?, ?, ?, sysdate + 0.375, default)";
 			pstat = conn.prepareStatement(sql);
-			
 			pstat.setString(1, dto.getId());
 			pstat.setString(2, dto.getTitle());
 			pstat.setString(3, dto.getContent());
@@ -155,12 +154,29 @@ public class CommunityDAO {
 			rs = pstat.executeQuery();
 			
 			if(rs.next()) {
-				return rs.getString("community_seq");
+				dto.setSeq(rs.getString("community_seq"));
+				addImg(dto);
+				return dto.getSeq();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	private void addImg(CommunityDTO dto) {
+		try {
+			String sql = "insert into tblCommunityImage values (community_img_seq.nextVal, ?, ?)";
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getSeq());
+			pstat.setString(2, dto.getPath());
+			
+			pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void addReadCount(String seq) {

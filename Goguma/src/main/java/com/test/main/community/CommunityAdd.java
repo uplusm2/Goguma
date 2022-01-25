@@ -18,6 +18,7 @@ public class CommunityAdd extends HttpServlet {
 	
 	private String title;
 	private String content;
+	private String path;
 	
 	{
 		dao = new CommunityDAO();
@@ -28,11 +29,9 @@ public class CommunityAdd extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		req.setCharacterEncoding("UTF-8");
-		title = req.getParameter("title");
-		content = req.getParameter("content");
 		
+		setPath(req);
 		setDto(req);
-		setImg(req);
 		
 		String seq = dao.add(dto);
 		
@@ -42,7 +41,7 @@ public class CommunityAdd extends HttpServlet {
 		dispatcher.forward(req, resp);
 	}
 
-	private void setImg(HttpServletRequest req) throws IOException {
+	private void setPath(HttpServletRequest req) throws IOException {
 		MultipartRequest  multi = new MultipartRequest(
 						                req,
 						                "C:\\Goguma\\Goguma\\src\\main\\webapp\\files\\community",
@@ -50,9 +49,9 @@ public class CommunityAdd extends HttpServlet {
 						                "UTF-8",
 						                new DefaultFileRenamePolicy()
 						           );
-		String path = multi.getFilesystemName("pathDir");
-		
-		map.put("path", path);
+		path = multi.getFilesystemName("pathDir");
+		title = multi.getParameter("title");
+		content = multi.getParameter("content");
 	}
 
 	private void setDto(HttpServletRequest req) {
@@ -61,5 +60,6 @@ public class CommunityAdd extends HttpServlet {
 		dto.setId(session.getAttribute("id").toString());
 		dto.setTitle(title);
 		dto.setContent(content);
+		dto.setPath(path);
 	}
 }
