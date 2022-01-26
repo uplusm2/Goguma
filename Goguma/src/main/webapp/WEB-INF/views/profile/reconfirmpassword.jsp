@@ -54,7 +54,9 @@
 		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
-				<h2>회원 정보를 변경하기 위해서 재 로그인해 주세요.</h2>
+				<div class="title">
+					<h2>회원 정보를 변경하기 위해서 재 로그인해 주세요.</h2>
+				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">정보 확인</div>
 					<div class="panel-body">

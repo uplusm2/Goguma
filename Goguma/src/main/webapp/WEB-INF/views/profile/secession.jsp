@@ -93,6 +93,9 @@ option {
 		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
+			<div class="title">
+				<h2>회원 탈퇴</h2>
+			</div>
 			<form method="POST" action="/goguma/profile/reconfirmsecession.do">
 				<div class="grid-container">
 

@@ -115,7 +115,9 @@
 		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
-				<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
+				<div class="title">
+					<h2>${userProfileData.id} 님의 프로필 입니다.</h2>
+				</div>
 					<form method="POST" action="/goguma/profile/profileeditok.do"
 						 enctype="multipart/form-data">
 						<div class="grid-container">
