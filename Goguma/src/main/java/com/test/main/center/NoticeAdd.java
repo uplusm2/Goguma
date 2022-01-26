@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class NoticeAdd extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/noticeadd.jsp");
 		dispatcher.forward(req, resp);
 

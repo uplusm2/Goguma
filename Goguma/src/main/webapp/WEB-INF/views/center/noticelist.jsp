@@ -58,13 +58,13 @@
 			
 			<div class="pagebar">${pagebar}</div>
 			
-			<c:if test="${not empty id && lv.equals('2')}">
-			<div class="btns">
+			<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+			<div class="list-btn">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
 					onclick="location.href='/goguma/center/noticeadd.do';">
 			</div>
-			</c:if>	
+			<%--</c:if>--%>
 		</section>
 			
 		

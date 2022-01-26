@@ -6,29 +6,46 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-
+	/* .detail table, td, th{
+		border : 1px solid black;
+	} */
+	.btns{
+		float : right;
+		margin-top : 20px;
+	}
 </style>
 </head>
 <body>
 	<!-- noticeview.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">
-			<table class="table table-bordered add">
+		
+		<section class="center content">
+			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">
+					<h2>공지사항</h2>
+			</div>
+			<table class="detail">
 				<tr>
-					<th>제목</th>
-					<td>${dto.title}</td>
+					<td id="title">${dto.title}</td>
+					<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+					<td class="button">
+						<input type="button" value="수정하기" class="btn-edit"
+							onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
+					</td>
+					<td class="button">
+						<input type="button" value="삭제하기" class="btn-del"
+							onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
+					</td>
+					<%--</c:if>--%>
 				</tr>
 				<tr>
-					<th>날짜</th>
-					<td>${dto.regdate}</td>
+					<td colspan = "3" id="date">작성일 ${dto.regdate}</td>
 				</tr>
 				<tr>
-					<th>내용</th>
-					<td style="height:300px;vertical-align:middle;">
-					<img src="/goguma/files/notice/img1.jpg" style = "width : 300px; height : 200px;" >
-					<br>
-					${dto.content}</td>
+					<td colspan = "3" id="image"><img src="/goguma/files/notice/${dto.path}" ></td>
+				</tr>
+				<tr>
+					<td colspan = "3" id="content">${dto.content}</td>
 				</tr>
 			</table>
 			<div class="btns">
@@ -37,15 +54,7 @@
 					class="btn btn-default"
 					onclick="location.href='/goguma/center/noticelist.do?&page=${page}';">
 				
-				<c:if test="${not empty id && lv.equals('2')}">
-					<input type="button" value="수정하기"
-						class="btn btn-primary"
-						onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
-					
-					<input type="button" value="삭제하기"
-						class="btn btn-primary"
-						onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
-				</c:if>						
+								
 			</div>
 			</section>
 		

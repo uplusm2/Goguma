@@ -1,12 +1,11 @@
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<%@ include file="../inc/asset.jsp" %>
+<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 	.center-search{
 		/* border : 1px solid black; */
@@ -74,10 +73,7 @@
 	<div class = "center-search">
 		<div class = "title-form">
 			<form method="GET" action="/goguma/center/noticelist.do">
-				<span class="sub" style= "color : white; font-size : 30px;">공지사항</span>
-				<input class="word" type="text" name = "word" placeholder="찾고 싶은 공지사항 제목을 입력 후 엔터키 입력">
-			<%-- 	<div class="glyphicon glyphicon-search mag" onclick ="location.href = '/goguma/center/noticelist.do?word=${wrod}'"></div> --%>
-				<!-- <input type="submit" class = "glyphicon glyphicon-search mag" value ="검색"> -->
+				<span class="sub" style= "color : white; font-size : 30px;">고객센터</span>
 			</form>
 		</div>
 	</div>
@@ -90,7 +86,6 @@
 	</div>
 	
 	<script>
-	
 	</script>
 </body>
 </html>

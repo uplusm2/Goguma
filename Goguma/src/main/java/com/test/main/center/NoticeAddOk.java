@@ -16,25 +16,30 @@ public class NoticeAddOk extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		req.setCharacterEncoding("UTF-8");
+		
+		
 		CenterDAO dao = new CenterDAO();
 		CenterDTO dto = new CenterDTO();
 		
-		String title = req.getParameter("subject");
-		String content = req.getParameter("content");
-
 		
-		req.setCharacterEncoding("UTF-8");
+		
 		
 		try {
 			MultipartRequest multi = new MultipartRequest(
 					req,
-					req.getRealPath("/files"),
+					"C:/Goguma/Goguma/src/main/webapp/files/notice",
 					1024 * 1024 * 100,
 					"UTF-8",
 					new DefaultFileRenamePolicy()
 				);
-			String filename = multi.getFilesystemName("imgfile");
 			
+			String filename = multi.getFilesystemName("imgfile");
+			String title = multi.getParameter("subject");
+			String content = multi.getParameter("content");
+
+			dto.setTitle(title);
+			dto.setContent(content);
 			dto.setPath(filename);
 			
 		} catch (Exception e) {
@@ -43,8 +48,7 @@ public class NoticeAddOk extends HttpServlet {
 		}
 		
 		
-		dto.setTitle(title);
-		dto.setContent(content);
+		
 		
 		
 		int result = dao.noticeadd(dto);

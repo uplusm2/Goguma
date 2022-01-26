@@ -59,7 +59,6 @@ public class NoticeList extends HttpServlet {
 		//페이지바
 		
 		totalCount = dao.getnTotalCount(map);
-		System.out.println(totalCount);
 		
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 		

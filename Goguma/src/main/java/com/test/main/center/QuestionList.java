@@ -133,6 +133,7 @@ public class QuestionList extends HttpServlet {
 		req.setAttribute("search",	search);
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
+		req.setAttribute("search", search);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/questionlist.jsp");
 		dispatcher.forward(req, resp);

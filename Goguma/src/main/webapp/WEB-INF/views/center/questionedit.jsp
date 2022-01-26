@@ -26,8 +26,8 @@
 					<td>${dto.regdate}</td>
 				</tr>
 				<tr>
-					<th>날짜</th>
-					<td>${dto.user}</td>
+					<th>사진</th>
+					<td>${dto.path}</td>
 				</tr>
 				<tr>
 					<th>내용</th>

@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 @WebServlet("/center/questionaddok.do")
 public class QuestionAddOk extends HttpServlet {
 	@Override
@@ -19,16 +22,34 @@ public class QuestionAddOk extends HttpServlet {
 		
 		CenterDTO dto = new CenterDTO();
 		
+		try {
+			MultipartRequest multi = new MultipartRequest(
+					req,
+					"C:/Goguma/Goguma/src/main/webapp/files/question",
+					1024 * 1024 * 100,
+					"UTF-8",
+					new DefaultFileRenamePolicy()
+				);
+			
+			String title = multi.getParameter("subject");
+			String content = multi.getParameter("content");
+			String filename = multi.getFilesystemName("file");
+			String type= multi.getParameter("type");
+
+			dto.setTitle(title);
+			dto.setContent(content);
+			dto.setPath(filename);
+			dto.setType(type);
+			
+		} catch (Exception e) {
+			System.out.println("questionaddOk.doPost()");
+			e.printStackTrace();
+		}
 		
-		String title = req.getParameter("subject");
-		String content = req.getParameter("content");
 		String id = (String)req.getSession().getAttribute("id");
-		String type= req.getParameter("type");
 		
-		dto.setTitle(title);
-		dto.setContent(content);
 		dto.setUser(id);
-		dto.setType(type);
+		
 		
 		int result = dao.questionadd(dto);	
 		

@@ -21,8 +21,6 @@ public class QuestionView extends HttpServlet {
 		CenterDTO dto = dao.questionGet(seq);
 		CenterDTO reply = dao.replyGet(seq);
 		
-		
-		
 		req.setAttribute("dto", dto);
 		req.setAttribute("id", id);
 		req.setAttribute("reply", reply);

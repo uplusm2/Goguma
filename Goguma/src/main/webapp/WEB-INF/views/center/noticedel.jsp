@@ -15,8 +15,8 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 			<section class="center">
 			
-			<div class="panel panel-default del">
-				<div class="panel-heading">삭제하기</div>
+			<div class="del">
+				<p>정말로 삭제하시겠습니까?</p>
 				<div class="panel-body">
 				
 					<input type="button" value="돌아가기"

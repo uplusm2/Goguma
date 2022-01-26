@@ -19,8 +19,6 @@ public class NoticeEdit extends HttpServlet {
 		
 		CenterDTO dto = dao.noticeGet(seq);
 		
-		
-		
 		req.setAttribute("dto", dto);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/center/noticeedit.jsp");
