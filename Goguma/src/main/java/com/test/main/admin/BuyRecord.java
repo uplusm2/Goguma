@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/sellrecord.do")
-public class SellRecord extends HttpServlet {
+@WebServlet("/admin/buyrecord.do")
+public class BuyRecord extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class SellRecord extends HttpServlet {
 		String id = req.getParameter("id");
 		
 		RecordDAO dao = new RecordDAO();
-		ArrayList<DealRecordDTO> list = dao.sellRecordList(id);
+		ArrayList<DealRecordDTO> list = dao.buyRecordList(id);
 		
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");

@@ -1,6 +1,6 @@
 package com.test.main.admin;
 
-public class SellRecordDTO {
+public class DealRecordDTO {
 	
 	private String productSeq;
 	private String name;
@@ -38,7 +38,6 @@ public class SellRecordDTO {
 	public void setDealDate(String dealDate) {
 		this.dealDate = dealDate;
 	}
-	
-	
+
 	
 }

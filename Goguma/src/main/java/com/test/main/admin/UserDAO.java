@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc.DBUtil;
+import com.test.jdbc2.DBUtil;
 
 
 /**
@@ -27,7 +27,8 @@ public class UserDAO {
 		try {
 			//TODO dbutil로 바꾸기
 //			conn = DBUtil.open();
-			conn = open();
+			//conn = open();
+			conn = DBUtil.open("localhost","goguma", "java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("UserDAO.UserDAO()");
@@ -77,19 +78,19 @@ public class UserDAO {
 			String where = "";
 			
 			if(map.get("searchmode").equals("y")) {
-				where = String.format("and %s like '%%%s%%'"
+				where = String.format("where %s like '%%%s%%'"
 								, map.get("column")
 								, map.get("word").replace("'", "''"));
 			}
 			
-			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state from vwUserAll where lv = 1 %s order by since desc) a) where rnum between %s and %s", where, map.get("begin"), map.get("end"));
+			String sql = String.format("select * from (select rownum as rnum, a.* from (select id, name, since, score, state from vwUserAll %s order by since desc) a) where rnum between %s and %s", where, map.get("begin"), map.get("end"));
 			
 			rs = stat.executeQuery(sql);
 			
 			ArrayList<UserDTO> list = new ArrayList<UserDTO>();
 			
 			while (rs.next()) {
-				//레코드 1줄 -> BoardDTO 1개
+				
 				UserDTO dto = new UserDTO();
 				
 				dto.setId(rs.getString("id"));

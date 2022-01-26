@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>고구마장터</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
+<link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
 </style>
 </head>
@@ -15,62 +16,65 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<section class="content">
-			<%--<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"--%>
-			<div>
-				<table class="table table-bordered list">
-					<tr>
-						<th>아이디</th>
-						<th>이름</th>
-						<th>탈퇴날짜</th>
-						<th>탈퇴유형</th>
-						<th>처리</th>
-					</tr>
-					<tr>
-						<c:forEach items="${list}" var="dto">
-							<tr>
-								<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
-								<td>${dto.name}</td>
-								<td>${dto.regDate}</td>
-								<td>${dto.type}</td>
-								<td><input type="button" value="차단해제"
-									class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
-							</tr>
-						</c:forEach>
+			<div class="container">
+				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 
-						<c:if test="${list.size() == 0 }">
-							<tr>
-								<td colspan="6">일치하는 회원이 없습니다.</td>
-							</tr>
-						</c:if>
-					</tr>
-				</table>
+				<div class="article">
+					<table class="table table-bordered list">
+						<tr>
+							<th>아이디</th>
+							<th>이름</th>
+							<th>차단날짜</th>
+							<th>차단유형</th>
+							<th>처리</th>
+						</tr>
+						<tr>
+							<c:forEach items="${list}" var="dto">
+								<tr>
+									<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
+									<td>${dto.name}</td>
+									<td>${dto.regDate}</td>
+									<td>${dto.type}</td>
+									<td><input type="button" value="차단해제"
+										class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
+								</tr>
+							</c:forEach>
 
-				<div class="pagebar">${pagebar}</div>
+							<c:if test="${list.size() == 0 }">
+								<tr>
+									<td colspan="6">일치하는 회원이 없습니다.</td>
+								</tr>
+							</c:if>
+						</tr>
+					</table>
 
-				<div class="search">
-					<form method="GET" action="/goguma/admin/blocklist.do">
-						<table style="width: 500px; margin: 20px auto">
-							<tr>
-								<td><select name="column" class="form-control">
-										<option value="id">아이디</option>
-										<option value="name">이름</option>
-								</select></td>
-								<td><input type="text" name="word" class="form-control"
-									required></td>
-								<td><input type="submit" value="검색하기"
-									class="btn btn-default"></td>
-							</tr>
-						</table>
-					</form>
+					<!--페이지바 -->
+					<div class="pagebar">${pagebar}</div>
+
+					<!-- 검색 -->
+					<div class="search">
+						<form method="GET" action="/goguma/admin/blocklist.do">
+							<table style="width: 500px; margin: 20px auto">
+								<tr>
+									<td><select name="column" class="form-control">
+											<option value="id">아이디</option>
+											<option value="name">이름</option>
+									</select></td>
+									<td><input type="text" name="word" class="form-control"
+										required></td>
+									<td><input type="submit" value="검색하기"
+										class="btn btn-default"></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+
+					<!-- 목록보기 -->
+					<div class="btns">
+						<input type="button" value="목록보기" class="btn btn-default"
+							onclick="location.href='/goguma/admin/blocklist.do';">
+					</div>
 				</div>
-
-				<div class="btns">
-
-					<input type="button" value="목록보기" class="btn btn-default"
-						onclick="location.href='/goguma/admin/blocklist.do';">
-
-				</div>
-
 			</div>
 		</section>
 

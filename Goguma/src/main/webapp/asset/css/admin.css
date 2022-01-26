@@ -61,14 +61,15 @@
 }
 */
 
-/* dashboard */
-.dashboard {
+/* 본문 */
+.article {
 	float: left;
 	width: 85%;
 	min-height: 75vh;
 	padding: 3%;
 }
 
+/* dashboard */
 .dashboard .subtitle {
 	font-size: 1.8em;
 	margin-bottom: 20px;

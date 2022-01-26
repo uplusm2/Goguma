@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Stack;
 
+import com.test.jdbc2.DBUtil;
+
 public class ConnDAO {
 	
 	private Connection conn;
@@ -19,7 +21,7 @@ public class ConnDAO {
 		
 		try {
 			
-			conn = open();
+			conn = DBUtil.open("localhost","goguma", "java1234");
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
@@ -28,44 +30,61 @@ public class ConnDAO {
 		}
 	}
 	
+	/*
+	 * public static Connection open() {
+	 * 
+	 * Connection conn = null;
+	 * 
+	 * String url = "jdbc:oracle:thin:@localhost:1521:xe"; String id = "goguma";
+	 * String pw = "java1234";
+	 * 
+	 * try {
+	 * 
+	 * Class.forName("oracle.jdbc.driver.OracleDriver");
+	 * 
+	 * conn = DriverManager.getConnection(url, id, pw);
+	 * 
+	 * return conn;
+	 * 
+	 * } catch (Exception e) { e.printStackTrace(); }
+	 * 
+	 * return null; }
+	 */
+	
 	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
-	public static Connection open() {
+	/*
+	 * public static Connection open() {
+	 * 
+	 * Connection conn = null;
+	 * 
+	 * String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
+	 * String id = "admin"; String pw = "Goguma970928";
+	 * 
+	 * 
+	 * try {
+	 * 
+	 * Class.forName("oracle.jdbc.driver.OracleDriver");
+	 * 
+	 * conn = DriverManager.getConnection(url, id, pw);
+	 * 
+	 * return conn;
+	 * 
+	 * } catch (Exception e) { e.printStackTrace(); }
+	 * 
+	 * return null; }
+	 */
 
-		Connection conn = null;
-		
-		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
-		
-		
-		try {
-			
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-			conn = DriverManager.getConnection(url, id, pw);
-			
-			return conn;
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
-
-	public Stack<ConnDTO> list() {
+	public ArrayList<ConnDTO> MonthList() {
 
 		try {
 			
-			String sql = "select to_char(regDate, 'YYYYMM') as month, sum(count) as cnt from tblvisit group by to_char(regDate, 'YYYYMM') order by month desc";
+			String sql = "select v.*, rownum from (select to_char(regDate, 'YYYYMM') as month, sum(count) as cnt from tblvisit group by to_char(regDate, 'YYYYMM') order by month desc) v where rownum <= 12 order by rownum desc";
 			
-			Stack<ConnDTO> list = new Stack<ConnDTO>();
+			ArrayList<ConnDTO> list = new ArrayList<ConnDTO>();
 			
 			rs = stat.executeQuery(sql);
-			
-			int count = 0;
-			
-			while (rs.next() && count < 12) {
+						
+			while (rs.next()) {
 				
 				ConnDTO dto = new ConnDTO();
 				
@@ -74,7 +93,6 @@ public class ConnDAO {
 				
 				list.add(dto);
 				
-				count++;
 			}
 			
 			return list;
@@ -87,7 +105,7 @@ public class ConnDAO {
 		return null;
 	}
 
-	public ArrayList<ConnDTO> avgList() {
+	public ArrayList<ConnDTO> avgMonthList() {
 
 		try {
 
@@ -117,6 +135,37 @@ public class ConnDAO {
 
 		return null;
 
+	}
+
+	public ArrayList<ConnDTO> daliyList() {
+		
+		try {
+			
+			String sql = "select a.*, rownum from (select regdate, count from tblVisit order by regdate desc) a where rownum <= 7";
+			
+			ArrayList<ConnDTO> list = new ArrayList<ConnDTO>();
+			
+			rs = stat.executeQuery(sql);
+						
+			while (rs.next()) {
+				
+				ConnDTO dto = new ConnDTO();
+				
+				dto.setRegdate(rs.getString("regdate"));
+				dto.setCount(rs.getInt("count"));
+				
+				list.add(dto);
+				
+			}
+			
+			return list;
+			
+		} catch (Exception e) {
+			System.out.println("ConnDAO.list()");
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
 
 }

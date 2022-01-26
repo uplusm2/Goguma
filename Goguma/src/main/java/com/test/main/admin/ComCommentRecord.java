@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/sellrecord.do")
-public class SellRecord extends HttpServlet {
+import com.test.main.community.ComCommentDTO;
+
+@WebServlet("/admin/comcommentrecord.do")
+public class ComCommentRecord extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,7 +21,7 @@ public class SellRecord extends HttpServlet {
 		String id = req.getParameter("id");
 		
 		RecordDAO dao = new RecordDAO();
-		ArrayList<DealRecordDTO> list = dao.sellRecordList(id);
+		ArrayList<ComCommentDTO> list = dao.comCommentRecordList(id);
 		
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");
@@ -29,13 +31,12 @@ public class SellRecord extends HttpServlet {
 		
 		temp += "[";
 		
-		for(DealRecordDTO dto : list) {			
+		for(ComCommentDTO dto : list) {			
 			temp += "{";
-				temp += String.format("\"productSeq\" : \"%s\",", dto.getProductSeq());
-				temp += String.format("\"name\" : \"%s\",", dto.getName());
-				temp += String.format("\"regDate\" : \"%s\",", dto.getRegDate());
-				temp += String.format("\"dealDate\" : \"%s\",", dto.getDealDate());
-				temp += String.format("\"dealerId\" : \"%s\"", dto.getDealerId());
+				temp += String.format("\"seq\" : \"%s\",", dto.getSeq());
+				temp += String.format("\"cseq\" : \"%s\",", dto.getCseq());
+				temp += String.format("\"content\" : \"%s\",", dto.getContent());
+				temp += String.format("\"regDate\" : \"%s\"", dto.getRegDate().substring(0, 11));
 			temp += "},";
 		}
 		
