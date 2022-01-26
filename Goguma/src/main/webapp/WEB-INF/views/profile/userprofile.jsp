@@ -114,6 +114,7 @@
 					onclick="location.href='/goguma/profile/profileedit.do?id=${userProfileData.id}'">
 			</div>
 		</div>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
 		
 	</script>

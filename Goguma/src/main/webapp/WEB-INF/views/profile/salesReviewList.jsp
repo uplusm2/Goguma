@@ -34,10 +34,9 @@
 </style>
 </head>
 <body>
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="grid-container">
@@ -65,7 +64,7 @@
 						</tr>
 						</c:forEach>
 						</table>
-					<div class="search">
+				<!-- 	<div class="search">
 						<form method="GET" action="#!">
 							<select name="column" class="text">
 								<option value="subject">제목</option>
@@ -74,13 +73,13 @@
 							<input type="text" name="word" placeholder="검색어를 입력하세요." required class="text"> 
 							<input type="image" src="/goguma/asset/img/search.png" class="search-img">
 						</form>
-					</div>
+					</div> -->
 					<div class="pagebar">${pagebar}</div>
 				</div>
 			</section>
 		</main>
 	</div>
-	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
 	
 	</script>

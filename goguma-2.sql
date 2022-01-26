@@ -117,3 +117,24 @@ from vwuserall v inner join tbluserinfo on v.id = tbluserinfo.id
 -- 회원 데이터 확인용     
              
 
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'UI 불만');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'서버 불만');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'판매자가 너무 없어요.');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'타 사이트 이용');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'개인 사유');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'구매자가 너무 없어요.');
+insert into tblWithdrawType(withdraw_type_seq,type) values (withdrawtype_seq.nextVal,'기타');
+
+update tblWithdrawType set type = '이용자 부족' where type = '구매자가 너무 없어요.';
+
+select * from tblWithdrawType;
+commit;
+
+delete from tblWithdrawType where type = '판매자가 너무 없어요.';
+
+select * from v$resource_limit where resource_name = 'processes';
+alter system set processes=300 scope=spfile;
+
+
+select count(*) from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);
+select * from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);

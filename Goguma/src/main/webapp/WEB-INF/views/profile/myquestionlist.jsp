@@ -26,7 +26,8 @@
 	}
 	.btns{
 		position: absolute;
-		right: 100px;
+		top:370px;
+		left:1400px;
 	}
 
 	
@@ -34,10 +35,9 @@
 </head>
 <body>
 	<!-- noticelist.jsp -->
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
+<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
 		<main class="main">
-			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="title">
@@ -105,7 +105,7 @@
 			</section>
 		</main>
 	</div>
-		
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	
 	<script>

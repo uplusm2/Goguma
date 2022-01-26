@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 
 <!-- nav -->
-<nav class="leftside">
+<nav class="leftside" style="margin-right: 50px;">
 
 	<div class="menu">
 
@@ -19,7 +19,7 @@
 			<li>
 				<div class="mainmenu2">| 작성글 내역</div>
 				<ul class="sub sub2">
-					<li><a href="#">· 커뮤니티 게시글</a></li>
+					<li><a href="#">· 커뮤니티 <br>&nbsp;&nbsp;게시글</a></li>
 					<li><a href="#">· 거래글 목록</a></li>
 				</ul>
 			</li>
