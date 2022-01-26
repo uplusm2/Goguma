@@ -91,11 +91,14 @@
 	
 	}
 	.dropdown-button { 
-		background-color: #9E7CAF; 
+		background-color: #ffffff; 
 		padding: 8px; 
 		border: none; 
 		width : 1150px;
 		text-aling : left;
+		font-color : #9E7CAF;
+		border : 1px solid #aaaaaa;
+		border-radius : 10px;
 	}
 
     .dropdown { position: relative; }
@@ -106,10 +109,13 @@
 		
         position: relative;
 
-        background-color: white;
+        background-color: F9F7FC;
         
 		padding : 30px;
-
+	
+		border : 1px solid gold;
+		
+		border-radius : 10px;
     }
 
     .dropdown-content a { color: black; padding: 8px; text-decoration: none; display: block; }
@@ -120,11 +126,9 @@
 	}
 	
 	
-    .dropdown-content a:hover { background-color: white; border : 1px solid #9E7CAF;}
+    .dropdown-content a:hover { background-color: #9E7CAF; border : 1px solid #9E7CAF;}
 	
-    /* .dropdown:hover .dropdown-content { display: block; } */
-
-    .dropdown:hover .dropdown-button:focus { background-color: white; border : 1px solid #9E7CAF; }
+    .dropdown:hover .dropdown-button:hover { background-color: #9E7CAF; border : 1px solid #9E7CAF; }
 </style>
 </head>
 <body>
@@ -151,10 +155,10 @@
 					<div class = "dropdown-content" id = "a_${dto.seq}"> 
 						A . ${dto.content}
 						<div class = "b">
-							<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+							<c:if test="${not empty id && lv.equals('2')}">
 							<input type="button" class = "btn btn-default" value="수정" onclick = "location.href='/goguma/center/faqedit.do?seq=${dto.seq}'">
 							<input type="button" class = "btn btn-default" value="삭제" onclick = "location.href='/goguma/center/faqdel.do?seq=${dto.seq}'">
-							<%-- </c:if> --%>
+							</c:if>
 						</div>
 					</div>
 				</div>
@@ -165,13 +169,13 @@
 			<div class="pagebar">${pagebar}</div>
 				
 			<div class="list-btn">
-				<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
-				<input type="button" value="글쓰기" class="btn btn-primary"
-					onclick="location.href='/goguma/center/faqadd.do';">
-				<%-- </c:if> --%>
+				<c:if test="${not empty id && lv.equals('2')}">
+					<input type="button" value="글쓰기" class="btn btn-primary"
+						onclick="location.href='/goguma/center/faqadd.do';">
+				</c:if>
 			</div>
 		</section>
-		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>

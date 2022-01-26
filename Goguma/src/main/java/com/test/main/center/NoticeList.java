@@ -105,7 +105,7 @@ public class NoticeList extends HttpServlet {
 			
 			//날짜 자르기
 			if (dto.getRegdate().startsWith(strNow)) {
-				dto.setRegdate(dto.getRegdate().substring(0, 16));
+				dto.setRegdate(dto.getRegdate().substring(11, 16));
 				dto.setIsNew(1);
 			} else {
 				dto.setRegdate(dto.getRegdate().substring(0, 10));

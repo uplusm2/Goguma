@@ -8,10 +8,12 @@
 <style>
 	.btns{
 		float : right;
+		margin-right : 100px;
 	}
 	.btns .btn{
 		margin : 10px;
 		margin-bottom : 30px;
+		
 	}
 </style>
 </head>
@@ -26,18 +28,18 @@
 			<table class="detail">
 				<tr>
 					<td id="title">${dto.title}</td>
-					<%-- <c:if test="${id == dto.user}"> --%>
+					<c:if test="${id == dto.user}">
 					<td class="button">
 						<input type="button" value="수정하기" class="btn-edit"
-							onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
+							onclick="location.href='/goguma/center/questionedit.do?seq=${dto.seq}';">
 					</td>
-					<%-- </c:if> --%>
-					<%-- <c:if test="${id == dto.user || lv == 2}"> --%>
+					</c:if>
+					<c:if test="${id == dto.user || lv == 2}">
 					<td class="button">
 						<input type="button" value="삭제하기" class="btn-del"
-							onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
+							onclick="location.href='/goguma/center/questiondel.do?seq=${dto.seq}';">
 					</td>
-					<%-- </c:if> --%>
+					</c:if>
 				</tr>
 				<tr>
 					<td id="date" colspan = "3">작성일 : ${dto.regdate}   작성자 : ${dto.user}</td>
@@ -67,7 +69,7 @@
 				<input type="button" value="돌아가기"
 					class="btn btn-default"
 					onclick="location.href='/goguma/center/questionlist.do?search=${search}&page=${page}';">
-				<%-- <c:if test="${lv.equals('2')}"> --%>
+				<c:if test="${lv.equals('2')}">
 					<c:if test="${reply.content == null}">
 						<input type="button" value="답변작성"
 							class="btn btn-primary"
@@ -78,12 +80,12 @@
 							class="btn btn-primary"
 							onclick="location.href='/goguma/center/replyedit.do?seq=${dto.seq}';">
 					</c:if>
-				<%-- </c:if> --%>
+				</c:if>
 			</div>
 			
 			
 		
-		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>

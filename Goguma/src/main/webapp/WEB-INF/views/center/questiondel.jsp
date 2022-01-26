@@ -6,7 +6,7 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-
+	
 </style>
 </head>
 <body>
@@ -14,21 +14,20 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 			<section class="center">
-			
-			<div class="panel panel-default del">
-				<div class="panel-heading">삭제하기</div>
-				<div class="panel-body">
-				
-					<input type="button" value="돌아가기"
-						class="btn btn-default"
-						onclick="history.back();">
-					
-					<input type="button" value="삭제하기"
-						class="btn btn-primary"
-						onclick="location.href='/goguma/center/questiondelok.do?seq=${seq}';">
-					
+				<div class="del">
+					<div class="bi bi-trash"></div>	
+					<p>정말로 삭제하시겠습니까?</p>
+					<div class="panel-body">
+						<input type="button" value="돌아가기"
+							class="btn btn-default"
+							onclick="history.back();">
+						
+						<input type="button" value="삭제하기"
+							class="btn btn-primary"
+							onclick="location.href='/goguma/center/questiondelok.do?seq=${seq}';">
+						
+					</div>
 				</div>
-			</div>
 			
 		</section>
 			
