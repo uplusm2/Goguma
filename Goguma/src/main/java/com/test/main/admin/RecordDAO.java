@@ -6,7 +6,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 import com.test.jdbc.DBUtil;
+=======
+//import com.test.jdbc2.DBUtil;
+>>>>>>> refs/remotes/origin/hyein
 import com.test.main.community.ComCommentDTO;
 import com.test.main.community.CommunityDTO;
 
@@ -19,8 +23,15 @@ public class RecordDAO {
 	
 	public RecordDAO() {
 		try {
+<<<<<<< HEAD
 			conn = DBUtil.open();
 			//conn = DBUtil.open("goguma", "java1234");
+=======
+			//TODO dbutil로 바꾸기
+			//conn = DBUtil.open();
+			conn = open();
+			//conn = DBUtil.open("localhost","goguma", "java1234");
+>>>>>>> refs/remotes/origin/hyein
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("UserDAO.UserDAO()");

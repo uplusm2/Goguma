@@ -7,7 +7,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+<<<<<<< HEAD
 import com.test.jdbc.DBUtil;
+=======
+//import com.test.jdbc2.DBUtil;
+>>>>>>> refs/remotes/origin/hyein
 
 
 /**
@@ -24,8 +28,15 @@ public class UserDAO {
 	
 	public UserDAO() {
 		try {
+<<<<<<< HEAD
 			conn = DBUtil.open();
 			//conn = DBUtil.open("goguma", "java1234");
+=======
+			//TODO dbutil로 바꾸기
+//			conn = DBUtil.open();
+			conn = open();
+			//conn = DBUtil.open("localhost","goguma", "java1234");
+>>>>>>> refs/remotes/origin/hyein
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("UserDAO.UserDAO()");

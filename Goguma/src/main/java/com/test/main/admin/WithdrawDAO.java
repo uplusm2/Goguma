@@ -57,7 +57,6 @@ public class WithdrawDAO {
 		return null;
 	}
 	
-	
 	public ArrayList<WithdrawDTO> list(HashMap<String, String> map) {
 
 		try {
