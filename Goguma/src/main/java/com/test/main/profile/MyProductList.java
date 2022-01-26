@@ -14,12 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import com.test.main.community.CommunityDTO;
+import com.test.main.product.ProductDTO;
 
 @WebServlet("/profile/myproductlist.do")
 public class MyProductList extends HttpServlet {
 	
 	private ProfileDAO dao;
-	private ArrayList<CommunityDTO> list;
+	private ArrayList<ProductDTO> list;
 	private HashMap<String, String> map;
 	private Calendar now;
 	private String id;
@@ -42,7 +43,7 @@ public class MyProductList extends HttpServlet {
 		id = (String)req.getSession().getAttribute("id");
 		setPage(req);
 		try {
-			list = dao. (map);			
+			list = dao.getMyProductList(map);			
 		}catch(Exception e) {
 		}
 
@@ -58,17 +59,17 @@ public class MyProductList extends HttpServlet {
 
 	private void refineData() {
 		String strNow = String.format("%tF", now);
-		for (CommunityDTO dto : list) {
+		for (ProductDTO dto : list) {
 			
-			if (dto.getRegDate().startsWith(strNow)) {
-				dto.setRegDate(dto.getRegDate().substring(14));
+			if (dto.getRegdate().startsWith(strNow)) {
+				dto.setRegdate(dto.getRegdate().substring(14));
 			} else {
-				String tmp = dto.getRegDate().substring(0, 10).replace("-", ".");
-				dto.setRegDate(tmp.substring(2));
+				String tmp = dto.getRegdate().substring(0, 10).replace("-", ".");
+				dto.setRegdate(tmp.substring(2));
 			}
 			
-			if (dto.getTitle().length() > 20) {
-				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
+			if (dto.getName().length() > 20) {
+				dto.setName(dto.getName().substring(0, 20) + "..");
 			}
 			
 			//제목에서 검색 중 > 검색어 강조!!
@@ -127,7 +128,7 @@ public class MyProductList extends HttpServlet {
 		int n;
 		int loop;
 		System.out.println(map.toString());
-		totalCount = dao. (map);
+		totalCount = dao.getMyProductTotalPage(map);
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 
 		String pagebar = "";

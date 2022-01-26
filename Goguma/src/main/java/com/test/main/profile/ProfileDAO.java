@@ -12,6 +12,7 @@ import java.util.HashMap;
 import com.test.jdbc.DBUtil;
 import com.test.main.center.CenterDTO;
 import com.test.main.community.CommunityDTO;
+import com.test.main.product.ProductDTO;
 import com.test.main.user.UserDTO;
 
 public class ProfileDAO {
@@ -576,4 +577,86 @@ public class ProfileDAO {
 		}
 		return -1;
 	}
+
+	public int getMyProductTotalPage(HashMap<String, String> map) {
+		String sql = "select count(*) as cnt from(select a.*,rownum as num from( select * from tblproduct where id = ? order by regdate desc) a)";
+		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			rs = pstat.executeQuery();
+			
+			rs.next();
+			
+			return rs.getInt("cnt");
+		}catch(Exception e ) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	public ArrayList<ProductDTO> getMyProductList(HashMap<String, String> map) {
+		String sql = "select * from(select a.*,rownum as rnum from( select * from tblproduct where id = ? order by regdate desc) a) where rnum between ? and ?";
+		try {
+			ArrayList<ProductDTO> list = new ArrayList<ProductDTO>();
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("begin"));
+			pstat.setString(3, map.get("end"));
+			rs = pstat.executeQuery();
+			
+			while(rs.next()) {
+				ProductDTO dto = new ProductDTO();
+				
+				dto.setSeq(rs.getString("PRODUCT_SEQ"));
+				dto.setId(rs.getString("ID"));
+				dto.setAddress_seq(rs.getString("ADDRESS_SEQ"));
+				dto.setProduct_type_seq(rs.getString("PRODUCT_TYPE_SEQ"));
+				dto.setName(rs.getString("NAME"));
+				dto.setPrice(rs.getString("PRICE"));
+				dto.setIs_auction(rs.getString("IS_AUCTION"));
+				dto.setContent(rs.getString("CONTENT"));
+				dto.setRegdate(rs.getString("REGDATE"));
+				dto.setIs_completion(rs.getString("IS_COMPLETION"));
+				dto.setReadcount(rs.getInt("READCOUNT"));
+				dto.setIs_deletion(rs.getString("IS_DELETION"));		
+				list.add(dto);
+			}
+			return list;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,23 +18,19 @@
 			grid-template-rows: 1fr;
 		}
 		#tbl{
-			width: 70%;
+			width: 80%;
 		}
-		#tbl td:nth-child(2) {
+		#tbl tr td:nth-child(1) {
+			width:10%; 
+		}
+		#tbl tr td:nth-child(2) {
 			width:60%; 
 		}
-		#tbl td:nth-child(3) {
-			width: 20%; 
+		#tbl tr td:nth-child(3) {
+			width: 10%; 
 		}
 		#tbl td:nth-child(4) {
 			width: 10%; 
-		}
-		#tbl td:nth-child(5) {
-			width: 10%; 
-		}
-		.btn.important.write{
-			position: absolute;
-			left:380px;
 		}
 </style>
 </head>
@@ -48,7 +44,7 @@
 					<div class="title">
 						<h2>거래글 목록</h2>
 					</div>
-					
+
 					<table class="table" id ="tbl">
 						<tr>
 							<th colspan="2">제목</th>
@@ -58,13 +54,12 @@
 						</tr>
 						<c:forEach items="${list}" var="dto">
 						<tr>
-							<td>${dto.}</td>
+							<td>${dto.seq}</td>
 							<td>
-								<a href=" ">${dto.}</a>
+								<a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name} ${dto.content}</a>
 							</td>
-							<td>${dto.}</td>
-							<td>${dto.}</td>
-							<td>${dto.}</td>
+							<td>${dto.id}</td>
+							<td>${dto.regdate}</td>
 						</tr>
 						</c:forEach>
 						
