@@ -37,146 +37,11 @@ public class UserDAO {
         }
     }
 
-	public UserProfileDTO getUserProfile(String userId) {
-		
-		
-		String sql = "select * from tbluserprofile where id=?";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, userId);
-			rs = pstat.executeQuery();
-			
-			rs.next();
-			UserProfileDTO userProfile = new UserProfileDTO();
-			
-			userProfile.setId(rs.getString("id"));
-			userProfile.setNickName(rs.getString("nickname"));
-			userProfile.setIntro(rs.getString("intro"));
-			userProfile.setPath(rs.getString("path"));
-				
-			return userProfile;
-		}catch(Exception e) {
-			System.out.println("UserDAO > getUserProfile Method");
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	public ArrayList<ReviewDTO> getPurchaseReviewList(String userId) {
-		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
-		String sql = "select * from vwReceived_buyer_reviews where buyid = ?";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, userId);
-			rs = pstat.executeQuery();
-			
-			while(rs.next()) {
-				ReviewDTO dto = new ReviewDTO();
-				
-				dto.setBuyId(rs.getString("buyid"));
-				dto.setSelId(rs.getString("selId"));
-				dto.setProductcontent(rs.getString("productcontent"));
-				dto.setRegdate(rs.getString("regdate"));
-				dto.setScore(rs.getInt("score"));
-				dto.setReviewcontent(rs.getString("reviewcontent"));
-				
-				list.add(dto);
-			}
-			
-			return list;
-		}catch(Exception e) {
-			System.out.println("UserDAO > getPurchaseReviewList Method");
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
-
-	public ArrayList<ReviewDTO> getSalesReviewList(String userId) {
-		ArrayList<ReviewDTO> list = new ArrayList<ReviewDTO>();
-		String sql = "select * from vwReceived_seller_reviews where selid = ?";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, userId);
-			rs = pstat.executeQuery();
-			
-			while(rs.next()) {
-				ReviewDTO dto = new ReviewDTO();
-				
-				dto.setBuyId(rs.getString("buyid"));
-				dto.setSelId(rs.getString("selId"));
-				dto.setProductcontent(rs.getString("productcontent"));
-				dto.setRegdate(rs.getString("regdate"));
-				dto.setScore(rs.getInt("score"));
-				dto.setReviewcontent(rs.getString("reviewcontent"));
-				
-				list.add(dto);
-			}
-			
-			return list;
-		}catch(Exception e) {
-			System.out.println("UserDAO > getSalesReviewList Method");
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
 	
-	
-	public int getTotalPage(String userId) {
-		String sql = "select count(*) as cnt from(select rownum as seq, a.* from (select * from vwReceived_buyer_reviews where buyid = 'userId' order by regdate) a)";
-		try {
-			conn = open();
-			rs = conn.prepareStatement(sql).executeQuery();
-			rs.next();
-			return rs.getInt("cnt");
-		}catch(Exception e) {
-			System.out.println("UserDAO.getTotalPage");
-			e.printStackTrace();
-		}
-		return -1;
-	}
-
-	public int setProfile( HashMap<String,String> map) {
-		
-		String sql = "update tbluserprofile set intro = ? , nickname =? , path = 'default image.jpg' where id =?";
-		
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			
-			pstat.setString(1, map.get("intro"));
-			pstat.setString(2, map.get("nickName"));
-			pstat.setString(3, map.get("id"));
-			
-			return pstat.executeUpdate();
-		}catch(Exception e) {
-			System.out.println("UserDAO.setProfile");
-			e.printStackTrace();
-		}
-		return 0;
-		
-	}
-
-	public UserDTO getUserData(String id) {
-		String sql = "select * from tbluserinfo where id = 'user1'";
-		try {
-			conn = open();
-			pstat = conn.prepareStatement(sql);
-			
-		}catch(Exception e) {
-			System.out.println("UserDAO.getUserData");
-			e.printStackTrace();
-		}
-		return null;
-	}
 	public UserDTO login(UserDTO dto) {
 		try {
 
-			String sql = "select * from tbluser u  WHERE id=? and password=?";
+			String sql = "select * from tbluser u LEFT JOIN tbluserinfo i ON u.id = i.id LEFT JOIN tbluserprofile p ON u.id = p.id  WHERE u.id = ? and u.password = ?";
 				
 			conn = open();
 			pstat = conn.prepareStatement(sql);
@@ -193,7 +58,7 @@ public class UserDAO {
 				result.setId(rs.getString("id"));
 				result.setPw(rs.getString("password"));
 				result.setNickname(rs.getString("nickname"));
-				result.setLv(rs.getString("lv"));
+				result.setLv(rs.getString("user_level"));
 					
 				return result;
 					
