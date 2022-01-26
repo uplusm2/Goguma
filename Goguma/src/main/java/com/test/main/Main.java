@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.test.main.search.SearchDAO;
-import com.test.main.search.SearchDTO;
+import com.test.main.main.SearchDAO;
+import com.test.main.main.SearchDTO;
 
 @WebServlet("/main.do")
 public class Main extends HttpServlet {
