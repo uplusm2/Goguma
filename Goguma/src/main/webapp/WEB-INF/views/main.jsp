@@ -11,22 +11,32 @@
 </head>
 <body>
 	<!-- main.jsp -->
-	<main class="main">
+	<main class="real-main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="content">
-			<div class="title">
-				<h2>시작 페이지</h2>
-				<input type="button" value="버튼" class="btn">
-				<input type="button" value="버튼" class="btn important">
-				<input type="text" class="text" placeholder="제목을 입력하세요.">
-				<input type="text" class="new" value="N">
+		<section class="main-img">
+			<ul class="slide">
+				<li><img src="/goguma/asset/img/main1.png">
+					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+				</li>
+				<li><img src="/goguma/asset/img/main3.png">
+					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+				</li>
+				<li><img src="/goguma/asset/img/main2.png">
+					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+				</li>
+			</ul>
+		</section>
+		<section class="today-product">
+			<div class="title" onclick="location.href='/goguma/main.do';">
+				<h2>오늘의 상품 추천</h2>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
-			<nav class="leftside">
-				<h3>check</h3>
-				
-				
-				
-			</nav>
+		</section>
+		<section class="today-notice">
+			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">
+				<h2>공지사항</h2>
+				<br><br>
+			</div>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>

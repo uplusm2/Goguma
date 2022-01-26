@@ -7,8 +7,9 @@ public class CommunityDTO {
 	private String content;
 	private String regDate;
 	private int readcount;
-	
+
 	private String nickname;
+	private String path;
 	private double isNew;
 	
 	private int commentCount;
@@ -66,5 +67,11 @@ public class CommunityDTO {
 	}
 	public void setCommentCount(int commentCount) {
 		this.commentCount = commentCount;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
 	}
 }

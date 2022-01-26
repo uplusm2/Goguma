@@ -19,11 +19,14 @@
 			</div>
 
 			<c:if test="${empty dto}">
-			<form method="POST" action="/goguma/community/communityAdd.do">
+			<form method="POST" action="/goguma/community/communityAdd.do"
+				enctype="multipart/form-data">
 				<input type="text" name="title" placeholder="제목을 입력하세요." class="form-text" required>
 				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required></textarea>
 				
 				<div class="button">
+					<label><span class="glyphicon glyphicon-picture"></span>&nbsp;업로드</label>
+					<input type="file" name="pathDir" class="file" multiple>
 					<input type="button" value="취소" class="btn cancel"
 						onclick="location.href='/goguma/community/communityList.do';">
 					<input type="submit" value="등록" class="btn important add">

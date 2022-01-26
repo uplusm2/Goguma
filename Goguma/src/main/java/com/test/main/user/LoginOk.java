@@ -11,11 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.test.main.message.MessageDAO;
 import com.test.main.user.UserDAO;
 import com.test.main.user.UserDTO;
 
 @WebServlet("/user/loginok.do")
 public class LoginOk extends HttpServlet {
+	private MessageDAO msgDao;
+	
+	{
+		msgDao = new MessageDAO();
+	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,7 +45,7 @@ public class LoginOk extends HttpServlet {
 		dto.setLv(lv);
 		
 		UserDTO result = dao.login(dto);
-		
+		int newMessage = msgDao.getNewMessage(id);
 		if (result != null) {
 			
 			//로그인 성공
@@ -49,6 +55,7 @@ public class LoginOk extends HttpServlet {
 			session.setAttribute("pw", result.getPw());
 			session.setAttribute("nickname", result.getNickname());
 			session.setAttribute("lv", result.getLv());
+			session.setAttribute("newMessage", newMessage);
 				
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/loginok.jsp");
 			dispatcher.forward(req, resp);

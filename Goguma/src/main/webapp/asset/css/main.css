@@ -77,7 +77,7 @@ section .new {
 header {
     width: 100%;
     height: 110px;
-    background: #FAF7FB;
+    background: #F9F7FC;
 }
 .inner-header h1{
 	cursor: pointer;
@@ -97,8 +97,26 @@ header {
 }
 .inner-header .logo img {
     position: absolute;
-    top: 30px;
-    width: 80px;
+    top: 31px;
+    width: 60px;
+    left: 10px
+}
+.inner-header .logo img.img {
+    transform: rotate(75deg);
+    top: 35px;
+	/* translate: all 3s; */
+}
+.inner-header .logo img.txt {
+    width: 210px;
+    left: 70px;
+    
+}
+.inner-header .logo:hover .img {
+	animation: dance 0.5s;
+}
+@keyframes dance {
+    0% { transform: rotate(75deg); }
+    100% { transform: rotate(435deg); }
 }
 .inner-header .search {
     position: absolute;
@@ -107,8 +125,9 @@ header {
     width: 370px;
     height: 40px;
     font-size: 18px;
-    border: 2px solid #9B59B6;
-    border-radius: 5px;
+    border: 0px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #9B59B6;
     padding-left: 5px;
 }
 .inner-header .search-img {
@@ -130,9 +149,35 @@ header {
     margin-left: 30px;
     font-size: 16px;
 }
-.inner-header .menu-option img{
-	width: 25px;
-	transform: translateX(25px);
+.inner-header .menu-option .message-count {
+	transform: translateX(8px) translateY(-9px);
+}
+.inner-header .menu-option .message-count span {
+	color: #fff;
+	z-index: 5;
+}
+.inner-header .menu-option .message-count span:before {
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	background: #F4BF35;
+	border-radius: 50%;
+	z-index: -1;
+	transform: translateX(-6px) translateY(2px);
+}
+.inner-header .menu-option .message-img span{
+	position: absolute;
+	right: 183px;
+	top: 3px;
+    text-align: center;
+    color: #fff;
+    background: #9B59B6;
+    width: 22px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+	cursor: pointer;
 }
 .inner-header .menu {
     position: absolute;
@@ -193,12 +238,43 @@ header {
 .inner-header .menu li:nth-child(3) img{
     margin-right: 1px;
 }
+.inner-header .popular-keyword {
+   position: absolute;
+   left: 375px;
+   top: 97px;
+   border: 2px solid #9B59B6;
+   border-radius: 5px;
+   width: 360px;
+   height: 215px;
+   background-color: #fff;
+   z-index: 1;
+   padding: 13px;
+   padding-left: 22px;
+}
+.inner-header .popular-keyword p {
+   font-weight: 700;
+   width: 310px;
+   border-bottom: 2px solid #9B59B6;
+   padding-left: 15px;
+   margin-bottom: 5px;
+}
+.inner-header .popular-keyword li {
+   padding-left: 15px;
+   margin-bottom: -10px;
+}
+.inner-header .popular-keyword li:nth-child(odd) {
+   transform: translateX(165px) translateY(-16.4px);
+   /* color: #757575; */
+}
+.inner-header .popular-keyword li:last-child {
+   transform: translateX(154.6px) translateY(-16.4px);
+}
 
 
 /* footer */
 footer {
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute; */
+    /* bottom: 0px; */
     width: 100%;
     height: 170px;
     background: #FAF7FB;
@@ -248,7 +324,162 @@ footer {
 }
 
 
+/* 메인 이미지 */
+.real-main header {
+    background: #fff;
+}
+.main-img {
+   position: relative;
+   margin: 0 auto;
+}
+.main-img .slide li {
+   width: 1200px;
+   height: 500px;
+   position: relative;
+   background: #F9F7FC;
+   border-radius: 10px;
+   /* background: #FEFDF6; */
+}
+ /* 
+ .main-img .slide li:nth-child(2){
+   background: #F5FAFD;
+ }
+ .main-img .slide li:nth-child(3){
+   background: #F7FCF9;
+ } */ 
+/* .main-img .slide li:nth-child(2){
+   background: #F5FAFD;
+}
+.main-img .slide li:nth-child(3){
+   background: #F7FCF9;
+} */
+.main-img .slide li img {
+   background: none;
+   position: absolute;
+   right: 5%;
+   bottom: 0%;
+   width: auto;
+   height: 500px;
+}
+.main-img .slide li img.txt {
+   height: 160px;
+   left: 9%;
+   bottom: 20%;
+}
+.main-img .slide li:nth-child(2) img {
+   height: 540px;
+   left: 7%;
+   bottom: -5%;
+}
+.main-img .slide li:nth-child(2) .txt {
+   height: 160px;
+   transform: translateX(470px) translateY(-120px);
+}
+.main-img .slide li:nth-child(3) .txt {
+   transform: translateX(55px) translateY(-100px);
+}
 
 
+/* slick */
+.slick-arrow {
+   position: absolute;
+   top:200px;
+   z-index: 1;
+   width: 60px;
+   height: 60px;
+   line-height: 60px;
+   border: none;
+   text-indent: -9999px;
+   background: none;
+}
+.slick-arrow:after {
+   content: '<';
+   font-family: 'Rubik', sans-serif;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   color: #fff;
+   font-size: 80px;
+   left: 0;
+   top: 0;
+   text-indent: 0px;
+   transition: all 0.3s;
+}
+.slick-next {
+   right: 1px;
+   text-align: left;
+}
+.slick-next:after {
+   content: '>';
+   left: 10px;
+}
+.slick-arrow:hover:after {
+   transition: all 0.3s;
+   color: #9B59B6;
+}
 
 
+/* 메인 이미지 애니메이션 */
+li:nth-child(1).slick-active .txt{
+   animation-name: txt1;
+   animation-duration: 0.8s;
+}
+@keyframes txt1 {
+   0% {opacity: 0; transform: rotateY(-80deg) translateX(-150px);}
+   20% {opacity: 0; transform: rotateY(-80deg) translateX(-150px);}
+   100% {opacity: 1; transform: rotateY(0deg) translateX(0px);}
+}
+li:nth-child(2).slick-active .txt{
+   animation-name: txt2;
+   animation-duration: 0.8s;
+}
+@keyframes txt2 {
+   0% {opacity: 0; transform: rotateY(60deg) translateX(900px) translateY(-120px);}
+   20% {opacity: 0; transform: rotateY(60deg) translateX(900px) translateY(-120px);}
+   100% {opacity: 1; transform: rotateY(0deg) translateX(470px) translateY(-120px);}
+}
+li:nth-child(3).slick-active .txt{
+   animation-name: txt3;
+   animation-duration: 0.8s;
+}
+@keyframes txt3 {
+   0% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
+   20% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
+   100% {opacity: 1; transform: rotateY(0deg) translateX(55px) translateY(-100px);}
+}
+li:nth-child(1).slick-active img {
+   animation-name: img1;
+   animation-duration: 1s;
+}
+@keyframes img1 {
+   0% {opacity: 0; transform: translateY(-150px);}
+   20% {opacity: 0; transform: translateY(-150px);}
+   100% {opacity: 1; transform: translateX(0px);}
+}
+li:nth-child(2).slick-active img {
+   animation-name: img2;
+   animation-duration: 1s;
+}
+@keyframes img2 {
+   0% {opacity: 0; transform: translateY(150px);}
+   20% {opacity: 0; transform: translateY(150px);}
+   100% {opacity: 1; transform: translateY(0px);}
+}
+li:nth-child(3).slick-active img {
+   animation-name: img3;
+   animation-duration: 1s;
+}
+@keyframes img3 {
+   0% {opacity: 0; transform: translateX(150px);}
+   20% {opacity: 0; transform: translateX(150px);}
+   100% {opacity: 1; transform: translateY(0px);}
+}
+
+
+/* 검색어 */
+.popular-keyword {
+	opacity: 0;
+}
+.real-main .popular-keyword {
+	opacity: 1;
+}

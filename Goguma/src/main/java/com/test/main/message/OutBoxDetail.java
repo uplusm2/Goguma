@@ -32,6 +32,7 @@ public class OutBoxDetail extends HttpServlet {
 		String seq = req.getParameter("message_seq");
 		dto = dao.getMessage(seq);
 		refineData(dto);
+		dto.setContent(dto.getContent().replace("\r\n", "<br>"));
 		
 		req.setAttribute("dto", dto);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/outBoxDetail.jsp");

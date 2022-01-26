@@ -43,7 +43,9 @@ public class InBox extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		session = req.getSession();
-		map.put("user", session.getAttribute("id").toString());
+		String id = session.getAttribute("id").toString();
+		
+		map.put("user", id);
 		map.put("position", "receiver");
 		
 		setSearchmode(req);
@@ -51,11 +53,15 @@ public class InBox extends HttpServlet {
 		list = dao.list(map);
 		refineData(list);
 		
+		int newMessage = dao.getNewMessage(id);
+		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
 		req.setAttribute("nowPage", nowPage);
 		req.setAttribute("pagebar", getPagebar());
 		req.setAttribute("totalPage", totalPage);
+		
+		session.setAttribute("newMessage", newMessage);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/message/inBox.jsp");
 		dispatcher.forward(req, resp);

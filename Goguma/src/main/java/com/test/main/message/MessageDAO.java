@@ -99,6 +99,25 @@ public class MessageDAO {
 		}
 		return null;
 	}
+	public int getNewMessage(String id) {
+		try {
+			String sql = "select count(*) as cnt from vwMessage where receiver_id=? and is_check='N'";
+			
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			
+			rs = pstat.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getInt("cnt");
+			}
+			
+		} catch (Exception e) {
+			System.out.println("MessageDAO.getMessageCount()");
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 	public void check(String seq) {
 		try {
@@ -114,7 +133,7 @@ public class MessageDAO {
 
 	public String add(MessageDTO dto) {
 		try {
-			String sql = "insert into tblMessage values (message_seq.nextVal, ?, ?, ?, sysdate+0.375, 'N')";
+			String sql = "insert into tblMessage values (message_seq.nextVal+100, ?, ?, ?, sysdate+0.375, 'N')";
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, dto.getSenderId());

@@ -29,6 +29,7 @@ public class CommunityDetail extends HttpServlet {
 		dto = dao.get(seq);
 		commentList = commentDao.list(seq); 
 		refineDate(dto);
+		dto.setContent(dto.getContent().replace("\r\n", "<br>"));
 		
 		req.setAttribute("dto", dto);
 		req.setAttribute("commentList", commentList);

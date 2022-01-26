@@ -8,6 +8,7 @@ public class ComCommentDTO {
 	
 	private String cseq;
 	private String nickname;
+	private String path;
 	private double isNew;
 	
 	public String getSeq() {
@@ -51,5 +52,11 @@ public class ComCommentDTO {
 	}
 	public void setIsNew(double isNew) {
 		this.isNew = isNew;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
 	}
 }
