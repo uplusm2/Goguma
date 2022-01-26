@@ -1,4 +1,3 @@
-<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import = "java.util.Calendar" %>
@@ -131,12 +130,73 @@
     clear: both;
 }
 .img-box > img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-left:20px;
 }
 
+.main-product-price::after {
+    content: "원";
+    font-size: 3rem;
+    font-weight:normal;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.img-box  img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+/*커스텀*/
+html,
+body {
+    overflow-x: hidden;
+}
+.con {
+    max-width: 1000px;
+}
+
+
+.list > ul > li {
+    padding: 0 10px;
+}
+.list > ul {
+    margin: 0 -10px;
+}
+
+.list > ul > li .product-name {
+    text-align: Center;
+    font-weight: bold;
+}
+.list > ul > li:hover .product-name {
+    text-decoration: underline;
+}
+.list > ul > li .product-price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.list > ul > li .product-price::after {
+    content: "원";
+    font-size: 1rem;
+    font-weight:normal;
+}
 
 </style>
 </head>
@@ -145,9 +205,11 @@
 	<main class="main">
 	
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
+		
 		<section>
 		<div id="main-box">
-			<div class="main-img-box"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
+			<div class="main-img-box"><img src="/goguma/files/product/${dto.main_img}" 
+					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></div>
 			<div id="main-right">
 				<div class="main-product-name">${dto.name}</div>
 				<div id="price-tab">
@@ -161,7 +223,7 @@
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
 				</div>
 				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
-				<div style="overflow:auto; width:500px; height:315px; padding-top: 30px">
+				<div style="overflow:auto; width:500px; height:300px; padding-top: 15px">
 				<p class="main-text">
 				${dto.content}</p>
 				</div>
@@ -191,37 +253,28 @@
 		<hr width="1100px">
  		<h2>비슷한 상품</h2>
  		<br>
- 		<ul class="row">
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_02_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_03_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_04_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_05_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        </ul>
+ 		<div class="list con" style="margin-left: 30px;">
+	    	<ul class="row">
+		
+				<c:forEach items="${list}" var="dto">
+			
+				<li class="cell">
+					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
+            		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
+            		<div class="product-price">${dto.price}</div>
+        		</li>
+				</c:forEach>
+			</ul>
+			</div>
+				<c:if test="${list.size() == 0}">
+					<h2>게시물이 없습니다.</h2>
+				</c:if>
+ 		
 		</section>
 		
 	</main>
-	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
   
         
