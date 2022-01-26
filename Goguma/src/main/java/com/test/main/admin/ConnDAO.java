@@ -31,7 +31,7 @@ public class ConnDAO {
 		}
 	}
 
-	public ArrayList<ConnDTO> MonthList() {
+	public ArrayList<ConnDTO> monthList() {
 
 		try {
 

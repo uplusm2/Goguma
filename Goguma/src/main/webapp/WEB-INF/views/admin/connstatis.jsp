@@ -32,7 +32,6 @@
 						<div id="connchart"></div>
 					</div>
 
-					<!-- <input type="button" id="visitBtn" style="width: 100px;"> -->
 					<div class="chart-container">
 						<div id="visitChart"></div>
 					</div>

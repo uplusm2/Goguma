@@ -35,7 +35,7 @@ public class DashBoard extends HttpServlet {
 		
 		ConnDAO dao = new ConnDAO();
 		
-		//ArrayList<ConnDTO> list = dao.MonthList();
+		//ArrayList<ConnDTO> list = dao.monthList();
 		//ArrayList<ConnDTO> avgList = dao.avgMonthList();
 		ArrayList<ConnDTO> daliyList = dao.daliyList();
 		
