@@ -32,7 +32,7 @@
 		<section class="center">
 			<table class="table table-bordered list">
 				<tr>
-					<th>번호</th>
+					<th></th>
 					<th>제목</th>
 					<th>날짜</th>
 				</tr>
