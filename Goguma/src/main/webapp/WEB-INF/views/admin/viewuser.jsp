@@ -193,13 +193,17 @@
 						<!-- 문의내역 -->
 						<div role="tabpanel" class="tab-pane" id="questionRecord">
 							<table class="table table-bordered" id="questionTable">
-								<tr>
-									<th>번호</th>
-									<th>문의유형</th>
-									<th>제목</th>
-									<th>작성날짜</th>
-									<th>상태</th>
-								</tr>
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>문의유형</th>
+										<th>제목</th>
+										<th>작성날짜</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
 							</table>
 						</div>
 					</div><!-- 회원 활동 내역 테이블 끝 -->
