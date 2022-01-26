@@ -11,6 +11,21 @@
 		<form method="GET" action="">
 			<input class="search" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
 			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
+			<ul class="popular-keyword">
+	            <p>인기 검색어</p>
+	            <c:if test="${searchList.size() != 0}">
+				<li>1 ${searchList[1].keyword}</li>
+				<li>2 ${searchList[2].keyword}</li>
+				<li>3 ${searchList[3].keyword}</li>
+				<li>4 ${searchList[4].keyword}</li>
+				<li>5 ${searchList[5].keyword}</li>
+				<li>6 ${searchList[6].keyword}</li>
+				<li>7 ${searchList[7].keyword}</li>
+				<li>8 ${searchList[8].keyword}</li>
+				<li>9 ${searchList[9].keyword}</li>
+				<li>10 ${searchList[10].keyword}</li>
+				</c:if>
+         	</ul>
 		</form>
 		<ul class="menu-option">
 			<c:if test="${empty id}">
