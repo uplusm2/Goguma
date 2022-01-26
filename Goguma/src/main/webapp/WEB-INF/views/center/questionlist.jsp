@@ -34,7 +34,9 @@
 		margin-left : 70px;
 	}
 
-
+	.list-btn{
+		
+	}
 	
 </style>
 </head>
@@ -67,7 +69,7 @@
 				<tr>
 					<td>${dto.rnum}</td>
 					<td>
-						<a href="/goguma/center/questionview.do?seq=${dto.seq}&page=${nowPage}">${dto.title}</a>
+						<a href="/goguma/center/questionview.do?seq=${dto.seq}&page=${nowPage}%search=${search}">${dto.title}</a>
 						<c:if test="${dto.isNew == 1}">
 						<span class="orange">N</span>
 						</c:if>
@@ -108,12 +110,12 @@
 				</form>
 			</div>			
 			
-			<div class="btns">
-				<c:if test="${not empty id}">
+			<div class="list-btn">
+				<%-- <c:if test="${not empty id}"> --%>
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
 					onclick="location.href='/goguma/center/questionadd.do';">
-				</c:if>
+				<%-- </c:if> --%>
 				
 			</div>
 		</section>

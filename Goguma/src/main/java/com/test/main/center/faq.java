@@ -38,7 +38,7 @@ public class faq extends HttpServlet {
 		
 		begin = ((nowPage - 1) * pageSize) + 1;
 		end = begin + pageSize - 1;
-
+		
 		
 		map.put("search", search);
 		map.put("begin", begin + "");
@@ -92,14 +92,20 @@ public class faq extends HttpServlet {
 		
 		
 		
-		
+		String check = "1";
 		
 		
 		ArrayList<CenterDTO> list = dao.faqlist(map);
 		
+		for(CenterDTO dto : list) {
+			dto.setTitle(dto.getTitle().replace("<", "&lt;").replace(">", "&gt;"));
+			dto.setContent(dto.getContent().replace("<", "&lt;").replace(">", "&gt;"));
+			dto.setContent(dto.getContent().replace("\r\n", "<br>"));
+		}
+		
 		req.setAttribute("list", list);
 		req.setAttribute("map", map);
-		
+		req.setAttribute("check", check);
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		

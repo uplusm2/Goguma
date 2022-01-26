@@ -56,6 +56,7 @@
 		border : 1px solid #9B59B6;
 		
 	}
+	
 	.subcategory .menu li:hover{
 		background-color: #FAF7FB;
 	}
@@ -68,14 +69,62 @@
 	.answer{
 		display : none;
 	}
-	.pagebar{
-		text-align : center;
-	}
+	
 	
 	.faqlist{
 		width : 1150px;
-		
 	}
+	
+	
+	/* .faqlist .b .btn{
+		display: inline-block;
+		float : left;
+		margin-right : 0;
+	} */
+	
+	.faqlist .empt{
+		border-top : 1px solid #9E7CAF;
+		border-bottom : 1px solid #9E7CAF;
+		padding : 20px;
+		font-size : 20px;
+		text-align : center;
+	
+	}
+	.dropdown-button { 
+		background-color: #9E7CAF; 
+		padding: 8px; 
+		border: none; 
+		width : 1150px;
+		text-aling : left;
+	}
+
+    .dropdown { position: relative; }
+
+    .dropdown-content {
+
+        display: none;
+		
+        position: relative;
+
+        background-color: white;
+        
+		padding : 30px;
+
+    }
+
+    .dropdown-content a { color: black; padding: 8px; text-decoration: none; display: block; }
+	
+	.dropdown-content .b{
+		float : right;
+		margin-top : 10px;
+	}
+	
+	
+    .dropdown-content a:hover { background-color: white; border : 1px solid #9E7CAF;}
+	
+    /* .dropdown:hover .dropdown-content { display: block; } */
+
+    .dropdown:hover .dropdown-button:focus { background-color: white; border : 1px solid #9E7CAF; }
 </style>
 </head>
 <body>
@@ -96,39 +145,31 @@
 		</div>
 		
 		<section class="faqlist">
-		<table class="table table-bordered list">
 			<c:forEach items="${list}" var="dto">
-				<tr id = "q_${dto.seq}" onClick = "showcon(this.id)" class = "question">
-					<td>Q . ${dto.title}</td>
-				</tr>
-				<tr class = "answer" id = "a_${dto.seq}" >
-					<td style="padding-left : 30px;">A . ${dto.content}
-					<c:if test="${not empty id && lv.equals('2')}">
-					<input type="button" class = "btn btn-default" value="수정" onclick = "location.href='/goguma/center/faqedit.do?seq=${dto.seq}'">
-					<input type="button" class = "btn btn-default" value="삭제" onclick = "location.href='/goguma/center/faqdel.do?seq=${dto.seq}'">
-					</c:if>
-					</td>
-					
-				</tr>
+				<div class = dropdown>
+					<button class="dropdown-button" id = "q_${dto.seq}" onClick = "showcon(this.id)">Q . ${dto.title}</button>
+					<div class = "dropdown-content" id = "a_${dto.seq}"> 
+						A . ${dto.content}
+						<div class = "b">
+							<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+							<input type="button" class = "btn btn-default" value="수정" onclick = "location.href='/goguma/center/faqedit.do?seq=${dto.seq}'">
+							<input type="button" class = "btn btn-default" value="삭제" onclick = "location.href='/goguma/center/faqdel.do?seq=${dto.seq}'">
+							<%-- </c:if> --%>
+						</div>
+					</div>
+				</div>
 			</c:forEach>
 			<c:if test="${list.size() == 0}">
-			<tr>
-				<td colspan="5">게시물이 없습니다.</td>
-			</tr>
+				<div class = "empt">게시물이 없습니다.</div>
 			</c:if>
-		</table>
-		
-		<div class="pagebar">${pagebar}</div>
-			
-		<div class="btns">
-
-			<c:if test="${not empty id && lv.equals('2')}">
-			<input type="button" value="글쓰기"
-				class="btn btn-primary"
-				onclick="location.href='/goguma/center/faqadd.do';">
-			</c:if>
-			
-		</div>
+			<div class="pagebar">${pagebar}</div>
+				
+			<div class="list-btn">
+				<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+				<input type="button" value="글쓰기" class="btn btn-primary"
+					onclick="location.href='/goguma/center/faqadd.do';">
+				<%-- </c:if> --%>
+			</div>
 		</section>
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
@@ -139,7 +180,7 @@
 			
  			id = id.replace("q","#a");
  			
-			$(".answer").css({
+			$(".dropdown-content").css({
 				"display" : "none"
 			});
 			

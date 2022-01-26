@@ -15,18 +15,18 @@
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section class="center">
 			
-			<form method="POST" action="/goguma/center/questionaddok.do">
+			<form method="POST" action="/goguma/center/questionaddok.do" enctype="multipart/form-data">
 				<table class="table table-bordered add">
 					<tr>
-						<th>제목</th>
+						<th class = "title">제목</th>
 						<td><input type="text" name="subject" class="form-control" required></td>
 					</tr>
 					<tr>
-						<th>내용</th>
+						<th class = "content">내용</th>
 						<td><textarea name="content" class="form-control" required></textarea></td>
 					</tr>
 					<tr>
-						<th>종류</th>
+						<th class = "type">종류</th>
 						<td><select name = "type">
 								<option value = "1">계정/인증</option>
 								<option value = "2">구매/판매</option>
@@ -37,8 +37,8 @@
 						</td>
 					</tr>
 					<tr>
-						<th><input type="file" value = "파일 업로드"></th>
-						<td></td>
+						<th>사진</th>
+						<td><input type="file" name="file"></td>
 					</tr>
 				</table>
 				

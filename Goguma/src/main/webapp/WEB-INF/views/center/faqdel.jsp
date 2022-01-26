@@ -13,7 +13,7 @@
 	<!-- faqdel.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">
+		<section class="faqdel">
 		
 			<div class="panel panel-default del">
 				<div class="panel-heading">삭제하기</div>

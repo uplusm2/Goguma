@@ -6,14 +6,36 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-
+	.notice{
+		width : 1150px;
+	}
+	
+	.notice th{
+		text-align : center;
+		vertical-align : middle;
+	}
+	
+	.btns{
+		float : right;
+	}
+	.btns .btn{
+		margin : 10px;
+	}
+	
+	.notice .title{
+		height : 75px;
+	}
+	
+	.notice textarea{
+		height : 300px;
+	}
 </style>
 </head>
 <body>
 	<!-- noticelist.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-			<section class="center">
+			<section class="notice">
 			<form method="POST" action="/goguma/center/noticeeditok.do">
 			<table class="table table-bordered add">
 				<tr>
@@ -27,6 +49,10 @@
 				<tr>
 					<th>내용</th>
 					<td><textarea name="content" class="form-control" required>${dto.content}</textarea></td>
+				</tr>
+				<tr>
+					<th>사진</th>
+					<td>${dto.path}</td>
 				</tr>
 			</table>
 			

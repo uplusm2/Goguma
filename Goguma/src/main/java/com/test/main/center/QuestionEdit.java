@@ -18,7 +18,7 @@ public class QuestionEdit extends HttpServlet {
 		
 		CenterDAO dao = new CenterDAO();
 		
-		CenterDTO dto = dao.replyGet(seq);
+		CenterDTO dto = dao.questionGet(seq);
 		
 		
 		req.setAttribute("dto", dto);

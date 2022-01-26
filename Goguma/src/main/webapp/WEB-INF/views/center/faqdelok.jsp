@@ -13,19 +13,17 @@
 	<!-- faqdelok.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">
-		</section>
-			
-		
-		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<div class="del">
+			<p>자주묻는 질문이 삭제되었습니다.</p>
+			<div class="button">
+				<input type="button" value="확인하기" class="btn btn-default"
+					onclick="location.href = '/goguma/center/faq.do?search=1&page=1';"> 
+			</div>
+		</div>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>
-		
-		<c:if test="${result == 1}">
-			//성공
-			location.href = '/goguma/center/faq.do?search=1&page=1';
-		</c:if>
 		
 		<c:if test="${result == 0}">
 		//실패
