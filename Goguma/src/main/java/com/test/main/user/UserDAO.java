@@ -176,7 +176,7 @@ public class UserDAO {
 	public UserDTO login(UserDTO dto) {
 		try {
 
-			String sql = "select * from vwUserALL WHERE id=? and password=?";
+			String sql = "select * from tbluser u  WHERE id=? and password=?";
 				
 			conn = open();
 			pstat = conn.prepareStatement(sql);

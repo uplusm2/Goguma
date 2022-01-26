@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc.DBUtil;
+import com.test.jdbc2.DBUtil;
 import com.test.main.community.CommunityDTO;
 
 public class SearchDAO {
@@ -19,7 +19,7 @@ public class SearchDAO {
 	
 	public SearchDAO() {
 		try {
-			conn = DBUtil.open("goguma", "java1234");
+			conn = DBUtil.open();
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
