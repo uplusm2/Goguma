@@ -18,7 +18,7 @@ public class CommunityDAO {
 	
 	public CommunityDAO() {
 		try {
-			conn = DBUtil.open("goguma", "java1234");
+			conn = DBUtil.open();
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();

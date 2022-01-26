@@ -332,6 +332,7 @@ public int userinforegisterok(UserDTO dto) {
 			return 0;
 		}
 		
+		
 		public String findid(String name, String email) {
 			
 			String id = null;
