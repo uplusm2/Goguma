@@ -180,6 +180,7 @@
 			$(".score").val(score*2);
 		});
 	</script>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>
 

@@ -26,7 +26,8 @@
 	}
 	.btns{
 		position: absolute;
-		right: 100px;
+		top:370px;
+		left:1400px;
 	}
 
 	

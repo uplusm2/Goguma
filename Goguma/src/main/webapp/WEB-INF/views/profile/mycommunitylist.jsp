@@ -21,10 +21,10 @@
 			width: 70%;
 		}
 		#tbl td:nth-child(2) {
-			width:70%; 
+			width:60%; 
 		}
 		#tbl td:nth-child(3) {
-			width: 10%; 
+			width: 20%; 
 		}
 		#tbl td:nth-child(4) {
 			width: 10%; 
@@ -34,7 +34,7 @@
 		}
 		.btn.important.write{
 			position: absolute;
-			left: -10px;
+			left:380px;
 		}
 </style>
 </head>
@@ -98,7 +98,7 @@
 			</section>
 		</main>
 	</div>
-	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
 		<c:if test="${map.searchmode == 'y'}">
 		//검색 상태를 유지

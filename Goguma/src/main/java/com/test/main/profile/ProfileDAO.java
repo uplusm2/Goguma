@@ -564,9 +564,13 @@ public class ProfileDAO {
 	}
 
 	public int addSecessionUser(HashMap<String, String> map) {
-		String sql = "";
+		String sql = "insert into tblWithdraw (id, withdraw_type_seq, time) values (?, ?, default)";
 		try {
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("withdrawtype"));
 			
+			return pstat.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

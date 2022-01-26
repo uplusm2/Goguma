@@ -59,7 +59,7 @@
 								${dto.rnum} 
 														
 							</td>
-							<td>
+							<td style="cursor: pointer;" onclick="location.href='/goguma/product/productDetail.do?seq=${dto.product_seq}';">
 								${dto.contetnt}
 								
 							</td>
@@ -89,5 +89,6 @@
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>
