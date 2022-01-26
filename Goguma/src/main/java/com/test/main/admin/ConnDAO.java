@@ -5,11 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-<<<<<<< HEAD
 
 import com.test.jdbc.DBUtil;
-=======
->>>>>>> refs/remotes/origin/hyein
+
 
 public class ConnDAO {
 
@@ -21,14 +19,10 @@ public class ConnDAO {
 	public ConnDAO() {
 
 		try {
-<<<<<<< HEAD
+
 			conn = DBUtil.open();
 			//conn = DBUtil.open("goguma", "java1234");
-=======
 
-			conn = open();
-			// conn = DBUtil.open("localhost","goguma", "java1234");
->>>>>>> refs/remotes/origin/hyein
 			stat = conn.createStatement();
 
 		} catch (Exception e) {
@@ -36,76 +30,6 @@ public class ConnDAO {
 			e.printStackTrace();
 		}
 	}
-<<<<<<< HEAD
-=======
-
-	/*
-	 * public static Connection open() {
-	 * 
-	 * Connection conn = null;
-	 * 
-	 * String url = "jdbc:oracle:thin:@localhost:1521:xe"; String id = "goguma";
-	 * String pw = "java1234";
-	 * 
-	 * try {
-	 * 
-	 * Class.forName("oracle.jdbc.driver.OracleDriver");
-	 * 
-	 * conn = DriverManager.getConnection(url, id, pw);
-	 * 
-	 * return conn;
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); }
-	 * 
-	 * return null; }
-	 */
-	
-	public static Connection open() {
-
-		Connection conn = null;
-		
-		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
-		
-		try {
-			
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-			conn = DriverManager.getConnection(url, id, pw);
-			
-			return conn;
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
-
-	// TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
-	/*
-	 * public static Connection open() {
-	 * 
-	 * Connection conn = null;
-	 * 
-	 * String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
-	 * String id = "admin"; String pw = "Goguma970928";
-	 * 
-	 * 
-	 * try {
-	 * 
-	 * Class.forName("oracle.jdbc.driver.OracleDriver");
-	 * 
-	 * conn = DriverManager.getConnection(url, id, pw);
-	 * 
-	 * return conn;
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); }
-	 * 
-	 * return null; }
-	 */
->>>>>>> refs/remotes/origin/hyein
 
 	public ArrayList<ConnDTO> MonthList() {
 
