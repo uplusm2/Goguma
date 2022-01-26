@@ -118,4 +118,7 @@
 	$(".mainmenu6").click(()=>{
 		location.href = "/goguma/profile/myquestionlist.do";
 	});
+	$(".mainmenu7").click(()=>{
+		location.href = "/goguma/profile/secession.do";
+	});
 </script>
