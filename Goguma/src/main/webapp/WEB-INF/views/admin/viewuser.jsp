@@ -10,6 +10,15 @@
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
 
+	.article {
+		padding-top: 0;
+	}
+	
+	.article .title {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	
 	.table .user-img {
 		text-align: center;
 		vertical-align: middle;
@@ -38,6 +47,7 @@
 	<!-- viewuser.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
+		<section class="content">
 		<div class="container">
 			
 			<!-- 왼쪽 네비게이션바 -->
@@ -47,8 +57,8 @@
 			<div class="article">
 			
 				<!-- 제목 -->
-				<div class="subtitle">
-					<p>${dto.name}(${dto.id})님의회원정보</p>
+				<div class="title">
+					<h2>${dto.name}(${dto.id})님의회원정보</h2>
 				</div>
 	
 				<!-- 회원 정보 -->
@@ -201,7 +211,7 @@
 		</div><!-- container 끝 -->
 
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
-
+		</section>
 	</main>
 
 	<script>

@@ -7,7 +7,9 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <script src="/goguma/asset/js/highcharts.js"></script>
+<link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
+
 </style>
 </head>
 <body>
@@ -15,12 +17,36 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 		<section class="content">
-			<div>
-				<h3>접속량 통계</h3>
-				<div id="connchart"></div>
+			<div class="container">
+
+				<!-- 왼쪽 네비게이션바 -->
+				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
+
+				<!-- 본문 -->
+				<div class="article dashboard">
+
+					<!-- 제목 -->
+					<div class="subtitle"><h2>접속 통계</h2></div>
+					
+					<div class="chart-container">
+						<div id="connchart"></div>
+					</div>
+
+					<!-- <input type="button" id="visitBtn" style="width: 100px;"> -->
+					<div class="chart-container">
+						<div id="visitChart"></div>
+					</div>
+
+					<div class="chart-container">
+						<div id="daliyVisitChart"></div>
+					</div>
+
+				</div>
 			</div>
 		</section>
-		<%@include file="/WEB-INF/views/inc/footer.jsp"%>
+
+		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+
 	</main>
 
 	<script >
