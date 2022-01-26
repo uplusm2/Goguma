@@ -1,4 +1,4 @@
-package com.test.main.search;
+package com.test.main.main;
 
 public class SearchDTO {
 	private String keyword;

@@ -264,6 +264,10 @@
 .community.form .button .btn.add {
     transform: translateX(940px) translateY(-52px); 
 }
+.community.form .button .btn.edit {
+	transform: translateX(920px) translateY(-5px);
+	margin-left: 10px;
+}
 .community.form .button label {
 	width: 80px;
 	height: auto;
