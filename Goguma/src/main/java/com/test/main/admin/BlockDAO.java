@@ -21,8 +21,8 @@ public class BlockDAO {
 		
 		try {
 			
-			//conn = open();
-			conn = DBUtil.open("localhost","goguma", "java1234");
+			conn = open();
+			//conn = DBUtil.open("localhost","goguma", "java1234");
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
@@ -39,10 +39,6 @@ public class BlockDAO {
 		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
 		String id = "admin";
 		String pw = "Goguma970928";
-		
-//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-//		String id = "goguma";
-//		String pw = "java1234";
 		
 		try {
 			

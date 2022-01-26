@@ -21,8 +21,8 @@ public class WithdrawDAO {
 		
 		try {
 			
-			//conn = open();
-			conn = DBUtil.open("localhost","goguma", "java1234");
+			conn = open();
+			//conn = DBUtil.open("localhost","goguma", "java1234");
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
