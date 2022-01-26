@@ -88,12 +88,14 @@ option {
 </style>
 <body>
 
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
+			<div class="title">
+				<h2>회원 탈퇴</h2>
+			</div>
 			<form method="POST" action="/goguma/profile/reconfirmsecession.do">
 				<div class="grid-container">
 
@@ -105,15 +107,13 @@ option {
 					<div>
 						<div>탈퇴사유</div>
 					</div>
-
 					<div>
 						<select id="withdrawtype" name="type">
 							<option value="1" selected="selected">UI 불만</option>
 							<option value="2">서버 불만</option>
-							<option value="3">판매자가 너무 없어요.</option>
 							<option value="4">타 사이트 이용</option>
 							<option value="5">개인 사유</option>
-							<option value="6">구매자가 너무 없어요.</option>
+							<option value="6">이용자 부족</option>
 							<option value="7">기타</option>
 						</select>
 					</div>
@@ -136,5 +136,6 @@ option {
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>

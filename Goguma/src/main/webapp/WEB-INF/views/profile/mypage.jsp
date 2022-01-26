@@ -24,9 +24,6 @@
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
 	}
 /* 	.grid-container div{border :1px solid black;} */
-	.content h2{
-		margin-left:300px;
-	}
 	.grid-container div:nth-child(1) {
 		text-align: center; 
 		grid-column-start :1;
@@ -102,13 +99,14 @@
 </head>
 <body>
 	<!-- main.jsp -->
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
-				<h2>${userProfileData.id}   님의 프로필 입니다.</h2>
+				<div class="title">
+					<h2>${userProfileData.id}   님의 프로필 입니다.</h2>
+				</div>
 				<div class="grid-container">
 				
 					<div><img src="/goguma/files/profile/${userProfileData.path}" style="width: 130px"></div>
@@ -191,6 +189,7 @@
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
 		if(${score.salesCnt}==0){
 			$('.salesAvg span').addClass('checked');			

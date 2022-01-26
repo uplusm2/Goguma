@@ -35,10 +35,9 @@
 </style>
 </head>
 <body>
-<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="grid-container">
@@ -60,7 +59,7 @@
 								${dto.rnum} 
 														
 							</td>
-							<td>
+							<td style="cursor: pointer;" onclick="location.href='/goguma/product/productDetail.do?seq=${dto.product_seq}';">
 								${dto.contetnt}
 								
 							</td>
@@ -89,5 +88,6 @@
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>

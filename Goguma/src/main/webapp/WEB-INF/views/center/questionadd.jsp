@@ -6,24 +6,43 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-
+	.question{
+			width : 1150px;
+	}
+	
+	.question th{
+		text-align : center;
+		vertical-align : middle;
+	}
+	
+	.btns{
+		float : right;
+	}
+	
+	.btns .btn{
+		margin : 10px;
+	}
+	
+	.question .title{
+		height : 75px;
+	}
+	
+	.question textarea{
+		height : 300px;
+	}
 </style>
 </head>
 <body>
 	<!-- questionadd.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<section class="center">
+		<section class="question">
 			
 			<form method="POST" action="/goguma/center/questionaddok.do" enctype="multipart/form-data">
 				<table class="table table-bordered add">
 					<tr>
 						<th class = "title">제목</th>
 						<td><input type="text" name="subject" class="form-control" required></td>
-					</tr>
-					<tr>
-						<th class = "content">내용</th>
-						<td><textarea name="content" class="form-control" required></textarea></td>
 					</tr>
 					<tr>
 						<th class = "type">종류</th>
@@ -35,6 +54,10 @@
 								<option value = "5">기타</option>
 							</select>
 						</td>
+					</tr>
+					<tr>
+						<th class = "content">내용</th>
+						<td><textarea name="content" class="form-control" required></textarea></td>
 					</tr>
 					<tr>
 						<th>사진</th>

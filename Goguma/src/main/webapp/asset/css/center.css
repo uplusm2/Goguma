@@ -177,8 +177,17 @@
 	font-size : 30px;
 	margin-bottom : 50px;
 }
-.center .del btn{
+
+.center .del .btn{
 	border : 3px solid #9B59B6;
+	margin : 20px;
+	
+}
+
+.center .del .bi{
+	
+	font-size : 100px;
+	color : #9B59B6;
 }
 
 
@@ -208,19 +217,20 @@
 
 .center .btn-edit{
 	width : 80px;
-	height : 30px;
+	height : 40px;
 	background : white;
-	color : #9B59B6;
-	border : 1px solid #9B59B6;
+	color : black;
+	border : 3px solid #9B59B6;
 	border-radius : 15px;
 }
 
 .center .btn-del{
 	width : 80px;
-	height : 30px;
+	height : 40px;
 	background : white;
-	color : #9B59B6;
-	border : 1px solid #9B59B6;
+	
+	color : black;
+	border : 3px solid #9B59B6;
 	border-radius : 15px;
 }
 

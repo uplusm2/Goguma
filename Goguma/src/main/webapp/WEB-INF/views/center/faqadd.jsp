@@ -23,7 +23,7 @@
 	}
 	
 	.faq .title{
-		height : 75px;
+		height : 50px;
 	}
 	
 	.faq textarea{
@@ -45,10 +45,6 @@
 						<td><input type="text" name="subject" class="form-control" required></td>
 					</tr>
 					<tr>
-						<th class = "content">내용</th>
-						<td><textarea name="content" class="form-control" required></textarea></td>
-					</tr>
-					<tr>
 						<th class = "type">종류</th>
 						<td><select name = "type">
 								<option value = "1">계정/인증</option>
@@ -59,7 +55,10 @@
 							</select>
 						</td>
 					</tr>
-					
+					<tr>
+						<th class = "content">내용</th>
+						<td><textarea name="content" class="form-control" required></textarea></td>
+					</tr>
 					 
 				</table>
 				

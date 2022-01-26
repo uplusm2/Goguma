@@ -26,10 +26,9 @@
 </head>
 <body>
 	<!-- main.jsp -->
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/usernav.jsp"%>
 			<section class="content">
 				<iframe class="frame" src="/goguma/profile/userprofile.do?userId=${userId}"  frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0>
@@ -49,6 +48,7 @@
 			$(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}");
 		});
 	</script>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>
 

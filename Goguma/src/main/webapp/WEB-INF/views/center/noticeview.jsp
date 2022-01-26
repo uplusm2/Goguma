@@ -27,7 +27,7 @@
 			<table class="detail">
 				<tr>
 					<td id="title">${dto.title}</td>
-					<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+					<c:if test="${not empty id && lv.equals('2')}">
 					<td class="button">
 						<input type="button" value="수정하기" class="btn-edit"
 							onclick="location.href='/goguma/center/noticeedit.do?seq=${dto.seq}';">
@@ -36,7 +36,7 @@
 						<input type="button" value="삭제하기" class="btn-del"
 							onclick="location.href='/goguma/center/noticedel.do?seq=${dto.seq}';">
 					</td>
-					<%--</c:if>--%>
+					</c:if>
 				</tr>
 				<tr>
 					<td colspan = "3" id="date">작성일 ${dto.regdate}</td>

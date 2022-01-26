@@ -16,9 +16,9 @@
 			<section class="center">
 			
 			<div class="del">
-				<p>정말로 삭제하시겠습니까?</p>
+				<div class="bi bi-trash"></div>
+				<p>정말로 삭제하시겠습니까?</p>	
 				<div class="panel-body">
-				
 					<input type="button" value="돌아가기"
 						class="btn btn-default"
 						onclick="history.back();">

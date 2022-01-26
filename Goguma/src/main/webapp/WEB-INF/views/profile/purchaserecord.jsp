@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
@@ -35,10 +35,9 @@
 </style>
 </head>
 <body>
-<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="grid-container">
@@ -60,7 +59,7 @@
 								${dto.rnum} 
 														
 							</td>
-							<td>
+							<td style="cursor: pointer;" onclick="location.href='/goguma/product/productDetail.do?seq=${dto.product_seq}';">
 								${dto.contetnt}
 								
 							</td>
@@ -90,5 +89,6 @@
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>

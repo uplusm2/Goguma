@@ -25,6 +25,10 @@ public class MemberData extends HttpServlet {
 		
 		dto = dao.getAllUserData(id);
 		
+		System.out.println(dto.toString());
+		dto.setTel(dto.getTel().substring(0,3)+"-"+dto.getTel().substring(3,7)+"-"+dto.getTel().substring(7));
+		dto.setBirth(dto.getBirth().replaceAll("-", ""));
+		dto.setBirth(dto.getBirth().substring(0,4)+"년"+dto.getBirth().substring(4,6)+"월"+dto.getBirth().substring(6)+"일");
 		req.setAttribute("dto", dto);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/memberdata.jsp");

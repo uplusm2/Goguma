@@ -60,6 +60,7 @@ public class ProfileEditOk extends HttpServlet {
 	 		 System.out.println(id);
 	 		 
 	 		 req.setAttribute("check", check);
+	 		 req.setAttribute("nickName", nickName);
 	 		 
 	      } catch (Exception e) {
 	         System.out.println("ProfileEditOk.doPost()");
