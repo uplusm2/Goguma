@@ -32,7 +32,6 @@ public class WithdrawDAO {
 		
 	}
 	
-	
 	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
 	public static Connection open() {
 
