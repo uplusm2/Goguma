@@ -341,6 +341,9 @@ footer {
    position: relative;
    margin: 0 auto;
 }
+.main-img .slide {
+	margin-top: 20px;
+}
 .main-img .slide li {
    width: 1200px;
    height: 500px;
@@ -372,9 +375,9 @@ footer {
    height: 500px;
 }
 .main-img .slide li img.txt {
-   height: 160px;
+   height: 170px;
    left: 9%;
-   bottom: 20%;
+   bottom: 30%;
 }
 .main-img .slide li:nth-child(2) img {
    height: 540px;
@@ -386,6 +389,7 @@ footer {
    transform: translateX(470px) translateY(-120px);
 }
 .main-img .slide li:nth-child(3) .txt {
+   bottom: 20%;
    transform: translateX(55px) translateY(-100px);
 }
 
