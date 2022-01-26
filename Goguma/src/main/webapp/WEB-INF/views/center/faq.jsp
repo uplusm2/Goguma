@@ -165,10 +165,10 @@
 			<div class="pagebar">${pagebar}</div>
 				
 			<div class="list-btn">
-				<c:if test="${not empty id && lv.equals('2')}">
+				<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
 				<input type="button" value="글쓰기" class="btn btn-primary"
 					onclick="location.href='/goguma/center/faqadd.do';">
-				</c:if>
+				<%-- </c:if> --%>
 			</div>
 		</section>
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
