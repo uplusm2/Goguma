@@ -39,10 +39,21 @@
     .text2{
     	color : blue;
     }
+    
+    #blank {
+    	font-size: 0px;
+    
+    }
     </style>
   </head>
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 
+
+        <%
+    		String id = (String)request.getAttribute("id");
+       	 	String name = (String)request.getAttribute("name");
+        	String email = (String)request.getAttribute("email");
+		%>
   <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
 
 				<div class="panel panel-default">
@@ -59,11 +70,12 @@
         <input type="password" name="pw2" id="pw2" class="form-control" placeholder="새 비밀번호 확인" required><br>
         	<p class="check" id="check">${check}</p><br/>
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">찾기</button>
-        <%
-    		String id = (String)request.getAttribute("id");
-       	 	String name = (String)request.getAttribute("name");
-        	String email = (String)request.getAttribute("email");
-		%>
+		
+		<div id = "blank">
+			<div id = "id" name = "id">${id}</div>
+			<div id = "name" name = "name">${name}</div>
+			<div id = "email" name = "email">${email}</div>
+      	</div>
       
       </form>
         

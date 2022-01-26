@@ -35,21 +35,28 @@ public class rePW extends HttpServlet {
 		dto.setId(id);
 		dto.setName(pw);
 		
-		UserDTO result = dao.repw(dto);
+		int result = dao.repw(dto);
 
 		
-		if (result != null) {
-			
-			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/repwok.jsp");
-			dispatcher.forward(req, resp);
+		System.out.println(result);
 		
-		} else {
+		if (result == -1) {
 			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
 			script.println("alert('ID or name or email be wrong')");
 			script.println("history.back();");
 			script.println("</script>");
+
+		
+		} else {
+			
+			resp.setCharacterEncoding("UTF-8");
+			
+			req.setAttribute("pw", pw);
+			
+			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/repwok.jsp");
+			dispatcher.forward(req, resp);
 			
 		}
 	}
