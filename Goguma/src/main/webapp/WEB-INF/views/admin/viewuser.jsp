@@ -315,7 +315,7 @@
 				data: 'id=${dto.id}',
 				dataType: "json",
 				success: function(list){
-					$('#comcommentTable tbody').empty();
+					$('#questionTable tbody').empty();
 					list.forEach((item) => {
 						$('#questionTable tbody').append('<tr>');
 						$('#questionTable tbody').append(`<td>\${item.seq}</td>`);
