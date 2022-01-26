@@ -21,28 +21,28 @@ public class ProfileDAO {
 	private PreparedStatement pstat;
 	private ResultSet rs;
 
-//	public static Connection open() {
-//		Connection conn = null;
-//
-//		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
-//		String id = "admin";
-//		String pw = "Goguma970928";
-//
-//		try {
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			conn = DriverManager.getConnection(url, id, pw);
-//			return conn;
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-//	}
+	public static Connection open() {
+		Connection conn = null;
+
+		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
+		String id = "admin";
+		String pw = "Goguma970928";
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, id, pw);
+			return conn;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 
 	public ProfileDAO() {
 //		conn = DBUtil.open("GOGUMA","java1234");
-		conn = DBUtil.open("localhost","GOGUMA", "java1234");
+//		conn = DBUtil.open("localhost","GOGUMA", "java1234");
 //		conn = DBUtil.open();
-//		conn = open();
+		conn = open();
 		try {
 			stat = conn.createStatement();
 		} catch (SQLException e) {
