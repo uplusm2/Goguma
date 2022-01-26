@@ -8,7 +8,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc2.DBUtil;
+<<<<<<< HEAD
+import com.test.jdbc.DBUtil;
+=======
+//import com.test.jdbc2.DBUtil;
+>>>>>>> refs/remotes/origin/hyein
 
 public class BlockDAO {
 
@@ -21,8 +25,13 @@ public class BlockDAO {
 		
 		try {
 			
+<<<<<<< HEAD
+			conn = DBUtil.open();
+			//conn = DBUtil.open("goguma", "java1234");
+=======
 			conn = open();
 			//conn = DBUtil.open("localhost","goguma", "java1234");
+>>>>>>> refs/remotes/origin/hyein
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
@@ -30,6 +39,8 @@ public class BlockDAO {
 			e.printStackTrace();
 		}
 	}
+<<<<<<< HEAD
+=======
 	
 	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
 	public static Connection open() {
@@ -39,10 +50,6 @@ public class BlockDAO {
 		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
 		String id = "admin";
 		String pw = "Goguma970928";
-		
-//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-//		String id = "goguma";
-//		String pw = "java1234";
 		
 		try {
 			
@@ -58,6 +65,7 @@ public class BlockDAO {
 		
 		return null;
 	}
+>>>>>>> refs/remotes/origin/hyein
 
 	public int block(BlockDTO dto) {
 

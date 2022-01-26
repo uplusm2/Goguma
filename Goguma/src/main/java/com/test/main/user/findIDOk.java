@@ -23,27 +23,24 @@ public class findIDOk extends HttpServlet {
 
 		String name = req.getParameter("name");
 		String email = req.getParameter("email");
-		String id = req.getParameter("id");
 		
 		UserDTO dto = new UserDTO();
 		UserDAO dao = new UserDAO();
-		
+
 		dto.setName(name);
 		dto.setEmail(email);
 
-		
-		String userid = dao.findid(name, email);
+		String result = dao.findid(name, email);
 		
 		System.out.println(name);
 		System.out.println(email);
-		System.out.println(userid);
+		System.out.println(result);
 		
-		
-		if (userid != null) {
+		if (result != null) {
 			
 			resp.setCharacterEncoding("UTF-8");
 			
-			req.setAttribute("userid", userid);
+			req.setAttribute("result", result);
 			
 			ServletContext context = getServletContext();
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/findidtel.jsp");
