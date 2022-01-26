@@ -542,12 +542,11 @@ public class ProfileDAO {
 		String UpdateInfo= "update tbluserinfo set address = ? , email = ? ,gender= ? where id = ?";
 		
 		try {
-			System.out.println(dto.toString());
+			
 			pstat = conn.prepareStatement(updatePw);
 			pstat.setString(1, dto.getPw());
 			pstat.setString(2, dto.getId());
-			check = pstat.executeUpdate();
-			System.out.println("test : "+check);
+			check += pstat.executeUpdate();
 			
 			
 			pstat = conn.prepareStatement(UpdateInfo);
@@ -555,8 +554,7 @@ public class ProfileDAO {
 			pstat.setString(2, dto.getEmail());
 			pstat.setString(3, dto.getGender());
 			pstat.setString(4, dto.getId());
-			check = pstat.executeUpdate();
-			System.out.println("test : "+check);
+			check += pstat.executeUpdate();
 			
 			return check;
 		}catch(Exception e) {

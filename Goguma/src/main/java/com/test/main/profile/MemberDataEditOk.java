@@ -23,7 +23,12 @@ public class MemberDataEditOk extends HttpServlet {
 		String pw = req.getParameter("pw");
 		String email = req.getParameter("email");
 		String gender = req.getParameter("gender");
-		String address = req.getParameter("address");
+		
+		String sido = req.getParameter("sido");
+		String sgg = req.getParameter("sgg");
+		String emd = req.getParameter("emd");
+		
+		String address = sido + sgg + emd;
 		
 		//2.
 		ProfileDAO dao = new ProfileDAO();
@@ -32,6 +37,7 @@ public class MemberDataEditOk extends HttpServlet {
 		
 		dto.setId(id);
 		dto.setPw(pw);
+		dto.setAddress_seq(emd);
 		dto.setAddress(address);
 		dto.setEmail(email);
 		dto.setGender(gender);
@@ -41,8 +47,10 @@ public class MemberDataEditOk extends HttpServlet {
 		System.out.println(result);
 		
 		if (result == 2) {
-			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/memberdataeditok.jsp");
-			dispatcher.forward(req, resp);			
+			PrintWriter script = resp.getWriter();
+			script.println("<script>");
+			script.println("location.href='/goguma/profile/memberdata.do'");
+			script.println("</script>");		
 			
 		} else {
 			PrintWriter script = resp.getWriter();
