@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import com.test.jdbc2.DBUtil;
+//import com.test.jdbc2.DBUtil;
 import com.test.main.community.ComCommentDTO;
 import com.test.main.community.CommunityDTO;
 

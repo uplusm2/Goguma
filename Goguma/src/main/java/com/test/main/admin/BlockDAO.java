@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc2.DBUtil;
+//import com.test.jdbc2.DBUtil;
 
 public class BlockDAO {
 
