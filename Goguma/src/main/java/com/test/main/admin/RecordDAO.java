@@ -19,8 +19,8 @@ public class RecordDAO {
 	
 	public RecordDAO() {
 		try {
-			//conn = DBUtil.open();
-			conn = DBUtil.open("goguma", "java1234");
+			conn = DBUtil.open();
+			//conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			System.out.println("UserDAO.UserDAO()");
