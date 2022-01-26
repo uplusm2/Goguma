@@ -81,7 +81,6 @@
 								<select name="column" class="form-control">
 									<option value="title">제목</option>
 									<option value="content">내용</option>
-									<option value="id">이름</option>
 								</select>
 							</td>
 							<td>
