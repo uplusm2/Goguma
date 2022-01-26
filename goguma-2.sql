@@ -136,3 +136,5 @@ select * from v$resource_limit where resource_name = 'processes';
 alter system set processes=300 scope=spfile;
 
 
+select count(*) from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);
+select * from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);

@@ -24,9 +24,6 @@
 		grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
 	}
 /* 	.grid-container div{border :1px solid black;} */
-	.content h2{
-		margin-left:300px;
-	}
 	.grid-container div:nth-child(1) {
 		text-align: center; 
 		grid-column-start :1;
