@@ -103,7 +103,7 @@
 	});
 	$(".sub2").children().eq(1).click(()=>{
 		/* $(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}"); */
-		/* location.href = "/goguma/profile/purchaseReviewList.do"; */
+		location.href = "/goguma//profile/myproductlist.do";
 	});
 	$(".mainmenu3").click(()=>{
 		/* $(".frame").attr("src","/goguma/profile/memberdata.do?id=${userId}"); // 나중에 세션으로 사용할것 */
