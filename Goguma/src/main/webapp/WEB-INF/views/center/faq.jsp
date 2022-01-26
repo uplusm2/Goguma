@@ -151,10 +151,10 @@
 					<div class = "dropdown-content" id = "a_${dto.seq}"> 
 						A . ${dto.content}
 						<div class = "b">
-							<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+							<c:if test="${not empty id && lv.equals('2')}">
 							<input type="button" class = "btn btn-default" value="수정" onclick = "location.href='/goguma/center/faqedit.do?seq=${dto.seq}'">
 							<input type="button" class = "btn btn-default" value="삭제" onclick = "location.href='/goguma/center/faqdel.do?seq=${dto.seq}'">
-							<%-- </c:if> --%>
+							</c:if>
 						</div>
 					</div>
 				</div>
@@ -165,10 +165,10 @@
 			<div class="pagebar">${pagebar}</div>
 				
 			<div class="list-btn">
-				<%-- <c:if test="${not empty id && lv.equals('2')}"> --%>
+				<c:if test="${not empty id && lv.equals('2')}">
 				<input type="button" value="글쓰기" class="btn btn-primary"
 					onclick="location.href='/goguma/center/faqadd.do';">
-				<%-- </c:if> --%>
+				</c:if>
 			</div>
 		</section>
 		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
