@@ -23,7 +23,7 @@ public class LogoutOk extends HttpServlet {
 
 		
 		session.invalidate(); //주의!!
-		
+
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/user/logoutok.jsp");
 		dispatcher.forward(req, resp);
