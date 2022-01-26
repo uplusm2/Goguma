@@ -47,6 +47,7 @@ String id = (String) request.getSession().getAttribute("id");
 
 .grid-container div:nth-child(6) {
 	margin-top: 30px;
+	margin-right: 30px;
 	text-align: center;
 	vertical-align: middle;
 	
@@ -93,7 +94,7 @@ option {
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
-				<h2>${id}님의 회원 정보 입니다.</h2>
+			<form method="POST" action="/goguma/profile/reconfirmsecession.do">
 				<div class="grid-container">
 
 					<div></div>
@@ -119,19 +120,19 @@ option {
 						<div class="panel panel-default">
 							<div class="panel-heading">정보 확인</div>
 							<div class="panel-body">
-								<form method="POST"
-									action="/goguma/profile/reconfirmpasswordok.do">
-									<input type="text" name="id" class="form-control"
-										placeholder="아이디" required autofocus> <input
-										type="password" name="pw" class="form-control"
-										placeholder="비밀번호" required>
-									<div align="right">
-										<input type="submit" value="로그인" class="btn btn-default">
-									</div>
-								</form>
-							</div>
+							
+								<input type="text" name="id" class="form-control"
+									placeholder="아이디" required autofocus> <input
+									type="password" name="pw" class="form-control"
+									placeholder="비밀번호" required>
+								<div align="right">
+									<input type="submit" value="로그인" class="btn btn-default">
+								</div>
+							
+						</div>
 						</div>
 					</div>
+					</form>
 			</section>
 		</main>
 	</div>

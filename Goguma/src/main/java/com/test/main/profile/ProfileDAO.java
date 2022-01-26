@@ -562,4 +562,14 @@ public class ProfileDAO {
 		}
 		return -1;
 	}
+
+	public int addSecessionUser(HashMap<String, String> map) {
+		String sql = "";
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 }
