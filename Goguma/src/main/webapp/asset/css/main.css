@@ -129,6 +129,7 @@ header {
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid #9B59B6;
     padding-left: 5px;
+    color: #fff;
 }
 .inner-header .search-img {
     position: absolute;
@@ -242,25 +243,33 @@ header {
    position: absolute;
    left: 375px;
    top: 97px;
-   border: 2px solid #9B59B6;
-   border-radius: 5px;
+   border: 2px solid #9b59b6;
+   /* border: 2px solid #fff; */
+   /* border-radius: 5px; */
    width: 360px;
-   height: 215px;
-   background-color: #fff;
+   height: 230px;
+   background-color: #Fff;
    z-index: 1;
-   padding: 13px;
+   padding: 15px;
    padding-left: 22px;
+   /* opacity: 0.1; */
 }
 .inner-header .popular-keyword p {
    font-weight: 700;
    width: 310px;
-   border-bottom: 2px solid #9B59B6;
-   padding-left: 15px;
-   margin-bottom: 5px;
+   /* border-bottom: 2px solid #D0B1DD; */
+   border-bottom: 2px solid #fff;
+   padding-left: 24px;
+   margin-bottom: 7px;
+   font-size: 20px;
 }
 .inner-header .popular-keyword li {
    padding-left: 15px;
    margin-bottom: -10px;
+   cursor: pointer;
+}
+.inner-header .popular-keyword li:hover {
+	font-weight: 700;
 }
 .inner-header .popular-keyword li:nth-child(odd) {
    transform: translateX(165px) translateY(-16.4px);
@@ -278,6 +287,8 @@ footer {
     width: 100%;
     height: 170px;
     background: #FAF7FB;
+    
+   
 }
 .inner-footer {
     position: relative;
@@ -332,6 +343,9 @@ footer {
    position: relative;
    margin: 0 auto;
 }
+.main-img .slide {
+	margin-top: 20px;
+}
 .main-img .slide li {
    width: 1200px;
    height: 500px;
@@ -339,6 +353,7 @@ footer {
    background: #F9F7FC;
    border-radius: 10px;
    /* background: #FEFDF6; */
+   /* background: #FAF3DD; */
 }
  /* 
  .main-img .slide li:nth-child(2){
@@ -346,7 +361,7 @@ footer {
  }
  .main-img .slide li:nth-child(3){
    background: #F7FCF9;
- } */ 
+ } */  
 /* .main-img .slide li:nth-child(2){
    background: #F5FAFD;
 }
@@ -362,9 +377,9 @@ footer {
    height: 500px;
 }
 .main-img .slide li img.txt {
-   height: 160px;
+   height: 170px;
    left: 9%;
-   bottom: 20%;
+   bottom: 30%;
 }
 .main-img .slide li:nth-child(2) img {
    height: 540px;
@@ -376,6 +391,7 @@ footer {
    transform: translateX(470px) translateY(-120px);
 }
 .main-img .slide li:nth-child(3) .txt {
+   bottom: 20%;
    transform: translateX(55px) translateY(-100px);
 }
 
@@ -476,7 +492,7 @@ li:nth-child(3).slick-active img {
 }
 
 
-/* 검색어 */
+/* 메인에만 적용 */
 .popular-keyword {
 	opacity: 0;
 }

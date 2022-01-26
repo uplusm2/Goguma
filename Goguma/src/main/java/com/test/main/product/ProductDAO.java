@@ -113,6 +113,7 @@ public class ProductDAO {
 					dto.setIs_completion(rs.getString("is_completion"));
 					dto.setReadcount(rs.getInt("readcount"));
 					dto.setIs_deletion(rs.getString("is_deletion"));			
+					dto.setMain_img(rs.getString("main_img"));			
 					
 					list.add(dto);
 				}
@@ -192,6 +193,36 @@ public class ProductDAO {
 			
 			return null;
 		}
+		
+		  public ArrayList<ProductImgDTO> imglist(String seq) {
+		  
+		  try {
+		  
+		  String sql = String.format("select * from tblproductimage where product_seq = ?");
+		  
+		  stat = conn.createStatement();
+		  
+		  rs = stat.executeQuery(sql);
+		  pstat.setString(1, seq);
+		  ArrayList<ProductImgDTO> list = new ArrayList<ProductImgDTO>();
+		  
+		  while (rs.next()) { //레코드 1줄 -> BoardDTO 1개 
+			  ProductImgDTO dto = new ProductImgDTO();
+		  
+			  dto.setProduct_img_seq(rs.getString("product_img_seq"));
+			  dto.setProduct_seq(rs.getString("product_seq"));
+			  dto.setPath(rs.getString("path"));
+		  
+			  list.add(dto); 
+		  	}
+		  
+		  	return list;
+		  
+		  } catch (Exception e) { System.out.println("ProductDAO.imglist()");
+		  e.printStackTrace(); }
+		  
+		  return null; }
+		 
 	  
 	  public ProductTypeDTO getProductType(ProductDTO dto) {
 		  try {
@@ -248,8 +279,7 @@ public class ProductDAO {
 			}
 			return null;
 	  }
-	  
-	  
+	 
 	  
 	// 레코드 받아오기
 	public ProductDTO getProduct(String seq) {
@@ -279,6 +309,7 @@ public class ProductDAO {
 				dto.setIs_completion(rs.getString("is_completion"));
 				dto.setReadcount(rs.getInt("readcount"));
 				dto.setIs_deletion(rs.getString("is_deletion"));
+				dto.setMain_img(rs.getString("main_img"));
 
 				return dto;
 			}

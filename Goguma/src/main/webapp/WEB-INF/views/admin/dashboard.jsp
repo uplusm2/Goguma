@@ -35,31 +35,25 @@
 				<!-- 박스들 -->
 				<div class="card">
 
-					<div class="item">
-						<div class="item-icon"><i class="fas fa-won-sign" style="font-size:2.5em;"></i></div>
-						<div class="itme-"><span>오늘 거래금액</span><br>
-						 	<span>₩5,495,000</span></div>
+					<div class="item" id="moneyBtn">
+						<div class="item-icon" ><i class="fas fa-money-bill-wave"></i></div>
+						<div class="item-text"><span class="item-num">5,495,000</span><br><span class="item-info">오늘 거래금액</span></div>
 					</div>
-					<div class="item">
-						<div class="item-icon"><i class="fas fa-won-sign" style="font-size:2.5em;"></i></div>
-						<div class="itme-"><span>오늘 거래금액</span><br>
-						 	<span>₩5,495,000</span></div>
+					
+					<div class="item" id="productBtn">
+						<div class="item-icon"><i class="fas fa-shopping-cart"></i></i></div>
+						<div class="item-text"><span class="item-num">126</span><br><span class="item-info">업데이트된 상품</span></div>
 					</div>
-					<div class="item">
-						<div class="item-icon"><i class="fas fa-won-sign" style="font-size:2.5em;"></i></div>
-						<div class="itme-"><span>오늘 거래금액</span><br>
-						 	<span>₩5,495,000</span></div>
+					
+					<div class="item" id="visitBtn">
+						<div class="item-icon"><i class="fas fa-user"></i></div>
+						<div class="item-text"><span class="item-num">1,270</span><br><span class="item-info">오늘 방문자수</span></div>
 					</div>
-					<div class="item">
-						<div class="item-icon"><i class="fas fa-won-sign" style="font-size:2.5em;"></i></div>
-						<div class="itme-"><span>오늘 거래금액</span><br>
-						 	<span>₩5,495,000</span></div>
-					</div>
+					
 				</div>
-				<input type="button" id="btn1" style="width:100px;">
-				<input type="button" id="btn2" style="width:100px;">
-				
-				<div class="chart-container">
+
+<!-- 				<input type="button" id="visitBtn" style="width: 100px;">
+ -->				<div class="chart-container">
 					<div id="visitChart"></div>
 				</div>
 				
@@ -136,61 +130,65 @@
 		});
 	});
 	
-	$('#btn2').click(function() {
-		Highcharts.chart('visitChart', {
+	$('#visitBtn').click(function() {
+		
+	});
+	
+	Highcharts.chart('visitChart', {
 
-		    title: {
-		        text: '일별 홈페이지 방문자 수'
-		    },
+	    title: {
+	        text: '일별 홈페이지 방문자 수'
+	    },
 
-		    yAxis: {
-		        title: {
-		            text: '방문자 수(명)'
-		        }
-		    },
+	    yAxis: {
+	        title: {
+	            text: '방문자 수(명)'
+	        }
+	    },
 
-		    xAxis: {
-		        type: 'datetime',
-		        dateTimeLabelFormats: {
-		           day: '%e. %b.'    //ex- 01 Jan 2016
-		        }
-			},
+	    xAxis:{
 
-		    legend: {
-		        layout: 'vertical',
-		        align: 'right',
-		        verticalAlign: 'middle'
-		    },
+	    	   labels:{rotaton:-45}   //라벨 기울이기
 
-		    plotOptions: {
-		        series: {
-		            label: {
-		                connectorAllowed: false
-		            }
-		        }
-		    },
+	    	   ,categories:['19','20','21','22', '23', '24', '25']   //x축 표시값 직접지정
 
-		    series: [{
-		        name: '최근 일주일 방문자 수',
-		        data: [ <c:forEach items="${daliyList}" var="dto">${dto.count}, </c:forEach> ]
-		    }],
+	    },
+		
 
-		    responsive: {
-		        rules: [{
-		            condition: {
-		                maxWidth: 500
-		            },
-		            chartOptions: {
-		                legend: {
-		                    layout: 'horizontal',
-		                    align: 'center',
-		                    verticalAlign: 'bottom'
-		                }
-		            }
-		        }]
-		    }
+	    legend: {
+	        layout: 'vertical',
+	        align: 'right',
+	        verticalAlign: 'middle'
+	    },
 
-		});
+	    plotOptions: {
+	        series: {
+	            label: {
+	                connectorAllowed: false
+	            }
+	        }
+	    },
+
+	    series: [{
+	        name: '최근 일주일 방문자 수',
+	        data: [ <c:forEach items="${daliyList}" var="dto">${dto.count}, </c:forEach> ]
+	    }],
+
+	    responsive: {
+	        rules: [{
+	            condition: {
+	                maxWidth: 500
+	            },
+	            chartOptions: {
+	                legend: {
+	                    layout: 'horizontal',
+	                    align: 'center',
+	                    verticalAlign: 'bottom'
+	                }
+	            }
+	        }]
+	    }
+
 	});
 	
 	</script>

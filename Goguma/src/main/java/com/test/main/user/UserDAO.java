@@ -228,5 +228,55 @@ public int userinforegisterok(UserDTO dto) {
 			return id;
 		}
 	
+
+		public int repw(UserDTO dto) {
+			
+			try {
+
+				String sql = "UPDATE tbluser SET password = ? WHERE id = ?";
+					
+				conn = open();
+				pstat = conn.prepareStatement(sql);
+				
+				pstat.setString(1, dto.getPw());					
+				pstat.setString(2, dto.getId());
+						
+				return pstat.executeUpdate();
+				
+			}	catch (Exception e) {
+				System.out.println("회원가입 오류.login()");
+				e.printStackTrace();
+			}
+			
+			
+			return -1;
+				
+			}
+		public UserDTO findpw(UserDTO dto) {
+			
+			try {
+				String sql = "SELECT * FROM tbluserinfo WHERE name = ? AND email = ? AND id = ?";	
+				
+				conn = open();
+				pstat = conn.prepareStatement(sql);
+				
+				pstat.setString(1, dto.getId());
+				pstat.setString(2, dto.getName());
+				pstat.setString(3, dto.getEmail());
+					
+				rs = pstat.executeQuery();
+						
+				}catch (Exception e) {
+					System.out.println("비밀번호 찾기 오류.login()");
+					e.printStackTrace();
+				}
+				
+				return dto;
+				
+				
+				
+				
+		}
+		
 	
 }

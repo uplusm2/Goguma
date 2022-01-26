@@ -41,7 +41,9 @@ div.container{
 }
 .img-box  img {
     display: block;
-    width: 100%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
 }
 /*커스텀*/
 html,
@@ -126,7 +128,8 @@ body {
 				<c:forEach items="${list}" var="dto">
 			
 				<li class="cell">
-					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></a></div>
+					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
             		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
             		<div class="product-price">${dto.price}</div>
         		</li>
@@ -158,7 +161,7 @@ body {
 		</section>
 		
 	</main>
-	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
         
         

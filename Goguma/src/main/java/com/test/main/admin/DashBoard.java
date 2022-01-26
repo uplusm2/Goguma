@@ -33,7 +33,6 @@ public class DashBoard extends HttpServlet {
 		} 
 		*/
 		
-		
 		ConnDAO dao = new ConnDAO();
 		
 		ArrayList<ConnDTO> list = dao.MonthList();

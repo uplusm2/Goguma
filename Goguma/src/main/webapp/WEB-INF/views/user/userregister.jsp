@@ -64,21 +64,15 @@
 					<td style="width: 110px;"><h5>이름</h5></td>
 					<td><input class="form-control" placeholder="이름" type="text" id="name" name="name" maxLength="15"></td>
 				</tr>
-				<tr>
-					<td style="width: 110px;"><h5>성별</h5></td>
-					<td>
-						<div class="form-group" style="text-align: center; margin: 0 auto;">
-							<div class="btn-group" data-toggle="buttons">
-							<label class="btn btn-primary active" style="margin: 30 auto;">
-								<input type="radio" id="gender" name="gender" autocomplete="off" value="m" checked>남자
-							</label>
-							<label class="btn btn-primary">
-								<input type="radio" id="gender" name="gender" autocomplete="off" value="f">여자
-							</label>
-							</div>
-						</div>
-					</td>
-				</tr>
+					<tr>
+							<td style="width: 110px;"><h5>성별</h5></td>
+							<td>
+								<div class="form-group"
+									style="text-align: center; margin: 0 auto;">
+
+									<input type="radio" id="gender" name="gender" value="m">남자
+									<input type="radio" id="gender" name="gender" value="f">여자
+
 				<tr>
 					<td style="width: 110px;"><h5>이메일</h5></td>
 					<td><input class="form-control" placeholder="예시) xxx@naver.com" type="email" id="email" name="email" maxLength="50"></td>

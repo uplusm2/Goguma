@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc2.DBUtil;
+import com.test.jdbc.DBUtil;
 import com.test.main.center.CenterDTO;
 import com.test.main.community.CommunityDTO;
 import com.test.main.user.UserDTO;
@@ -40,8 +40,8 @@ public class ProfileDAO {
 
 	public ProfileDAO() {
 //		conn = DBUtil.open("GOGUMA","java1234");
-		conn = DBUtil.open("localhost","GOGUMA", "java1234");
-//		conn = DBUtil.open();
+//		conn = DBUtil.open("localhost","GOGUMA", "java1234");
+		conn = DBUtil.open();
 //		conn = open();
 		try {
 			stat = conn.createStatement();

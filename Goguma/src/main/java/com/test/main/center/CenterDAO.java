@@ -21,6 +21,7 @@ public class CenterDAO {
 		
 		try {
 
+			//conn = DBUtil.open();
 			conn = DBUtil.open("goguma","java1234");
 			stat = conn.createStatement();
 
@@ -53,7 +54,7 @@ public class CenterDAO {
 				dto.setQuestionseq(rs.getString("question_type_seq"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("contents"));
-			
+				
 	
 				list.add(dto);
 			}
@@ -237,7 +238,6 @@ public class CenterDAO {
 			}
 			
 			String sql  = "select count(*) as cnt from tblnotice" + where;
-			System.out.println(sql);
 			
 			rs = stat.executeQuery(sql);
 			
@@ -255,6 +255,49 @@ public class CenterDAO {
 		
 	}
 	
+	public int noticeadd(CenterDTO dto) {
+		try {
+
+			String sql = "insert into tblnotice (notice_seq, title, content, regdate) values (notice_seq.nextVal, ?, ?, default)";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getTitle()); //O
+			pstat.setString(2, dto.getContent()); //O
+				
+			int result =  pstat.executeUpdate();
+			
+			String max  = "select max(notice_seq) as max from tblnotice";
+			
+			rs = stat.executeQuery(max);
+			
+			if (rs.next()) {
+				dto.setSeq(rs.getInt("max")+"");
+			}
+			
+			
+			if(dto.getPath() != null) {
+				String sql2 = "insert into tblnoticeimg (notice_img_seq, notice_seq, path) values (notice_img_seq.nextVal, ?, ?)";
+				pstat = conn.prepareStatement(sql2);
+				
+				pstat.setString(1, dto.getSeq()); //O
+				pstat.setString(2, dto.getPath()); //O
+					
+				result *= pstat.executeUpdate();
+			}
+			
+			
+			return result;
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("CenterDAO.noticeadd()");
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
 	public CenterDTO noticeGet(String seq) {
 		try {
 
@@ -409,7 +452,7 @@ public class CenterDAO {
 	public CenterDTO questionGet(String seq) {
 		try {
 
-			String sql = "select * from tblquestion where question_seq = ?";
+			String sql = "select * from  VWquestionandimg where question_seq = ?";
 			
 			pstat = conn.prepareStatement(sql);
 			
@@ -417,20 +460,20 @@ public class CenterDAO {
 			
 			rs = pstat.executeQuery();
 			
+			CenterDTO dto = new CenterDTO();
 			
 			if (rs.next()) {
-				CenterDTO dto = new CenterDTO();
-				
 				dto.setSeq(rs.getString("question_seq"));
 				dto.setUser(rs.getString("id"));
 				dto.setType(rs.getString("question_type_seq"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setRegdate(rs.getString("regdate"));
+				dto.setPath(rs.getString("path"));
 				
 				return dto;
 			}
-
+			
 		} catch (Exception e) {
 			System.out.println("CenterDAO.questionget()");
 			e.printStackTrace();
@@ -480,14 +523,36 @@ public class CenterDAO {
 
 			String sql = "insert into tblquestion (question_seq, id, question_type_seq ,title, content, regdate) values (question_seq.nextVal, ?, ?, ?, ?, default)";
 			pstat = conn.prepareStatement(sql);
-			
-			
+	
 			pstat.setString(1, dto.getUser());  //X
 			pstat.setString(2, dto.getType());  //X
 			pstat.setString(3, dto.getTitle()); //O
 			pstat.setString(4, dto.getContent()); //O
 				
-			return pstat.executeUpdate();
+			
+			int result = pstat.executeUpdate();
+			
+			String max  = "select max(question_seq) as max from tblquestion";
+			
+			rs = stat.executeQuery(max);
+			
+			if (rs.next()) {
+				dto.setSeq(rs.getInt("max")+"");
+			}
+			
+			
+			if(dto.getPath() != null) {
+				String sql2 = "insert into tblquestionimg (questionimg_seq, question_seq, path) values (questionimg_seq.nextVal, ?, ?)";
+				pstat = conn.prepareStatement(sql2);
+				
+				pstat.setString(1, dto.getSeq()); //O
+				pstat.setString(2, dto.getPath()); //O
+					
+				result *= pstat.executeUpdate();
+			}
+			
+			
+			return result;
 			
 			
 		} catch (Exception e) {
@@ -593,39 +658,7 @@ public class CenterDAO {
 
 
 
-	public int noticeadd(CenterDTO dto) {
-		try {
-
-			String sql = "insert into tblnotice (notice_seq, title, content, regdate) values (notice_seq.nextVal, ?, ?, default)";
-			pstat = conn.prepareStatement(sql);
-			
-			pstat.setString(1, dto.getTitle()); //O
-			pstat.setString(2, dto.getContent()); //O
-				
-			int result =  pstat.executeUpdate();
-			
-			if(dto.getPath() != null) {
-				String sql2 = "insert into tblnoticeimg (notice_img_seq, notice_seq, path) values (notice_img_seq.nextVal, ?, ?)";
-				pstat = conn.prepareStatement(sql2);
-				
-				pstat.setString(1, dto.getSeq()); //O
-				pstat.setString(2, dto.getPath()); //O
-					
-				result *= pstat.executeUpdate();
-			}
-			
-			
-			return result;
-			
-			
-			
-		} catch (Exception e) {
-			System.out.println("CenterDAO.noticeadd()");
-			e.printStackTrace();
-		}
-		
-		return 0;
-	}
+	
 
 }
 	
