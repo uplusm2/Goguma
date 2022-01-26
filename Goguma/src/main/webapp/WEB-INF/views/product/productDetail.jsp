@@ -161,7 +161,7 @@
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
 				</div>
 				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
-				<div style="overflow:auto; width:500px; height:315px; padding-top: 30px">
+				<div style="overflow:auto; width:500px; height:300px; padding-top: 20px">
 				<p class="main-text">
 				${dto.content}</p>
 				</div>
