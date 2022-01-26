@@ -159,7 +159,7 @@ form {
 	</div>
 	<div></div>
 	<div></div>
-
+<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script type="text/javascript">
 		function passwordCheckFunction() {
 

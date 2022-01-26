@@ -192,6 +192,7 @@
 			<%-- <%@include file="/WEB-INF/views/inc/footer.jsp"%> --%>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
 		if(${score.salesCnt}==0){
 			$('.salesAvg span').addClass('checked');			

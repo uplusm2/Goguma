@@ -48,6 +48,7 @@
 			$(".frame").attr("src","/goguma/profile/purchaseReviewList.do?userId=${userId}");
 		});
 	</script>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>
 

@@ -138,5 +138,6 @@ option {
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>
