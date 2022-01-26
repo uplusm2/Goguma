@@ -23,9 +23,9 @@
 			<li>
 				<div class="mainmenu">| 홈페이지 통계</div>
 				<ul class="sub">
-					<li><a href="#">· 접속 통계</a></li>
-					<li><a href="#">· 거래 통계</a></li>
-					<li><a href="#">· 회원 통계</a></li>
+					<li><a href="/goguma/admin/connstatis.do">· 접속 통계</a></li>
+					<li><a href="/goguma/admin/dealstatis.do">· 거래 통계</a></li>
+					<li><a href="/goguma/admin/userstatis.do">· 회원 통계</a></li>
 				</ul>
 			</li>
 		</ul>
