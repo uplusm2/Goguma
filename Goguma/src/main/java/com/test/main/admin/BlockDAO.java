@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc2.DBUtil;
+import com.test.jdbc.DBUtil;
 
 public class BlockDAO {
 
@@ -21,42 +21,14 @@ public class BlockDAO {
 		
 		try {
 			
-			conn = open();
-			//conn = DBUtil.open("localhost","goguma", "java1234");
+			//conn = DBUtil.open();
+			conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
 			System.out.println("BlockDAO.BlockDAO()");
 			e.printStackTrace();
 		}
-	}
-	
-	//TODO DBUtil 오류나서 잠깐 사용 나중에 지우기
-	public static Connection open() {
-
-		Connection conn = null;
-		
-		String url="jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C:/Wallet_goguma";
-		String id = "admin";
-		String pw = "Goguma970928";
-		
-//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-//		String id = "goguma";
-//		String pw = "java1234";
-		
-		try {
-			
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
-			conn = DriverManager.getConnection(url, id, pw);
-			
-			return conn;
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return null;
 	}
 
 	public int block(BlockDTO dto) {

@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.test.jdbc2.DBUtil;
+import com.test.jdbc.DBUtil;
 
 public class WithdrawDAO {
 
@@ -21,8 +21,8 @@ public class WithdrawDAO {
 		
 		try {
 			
-			conn = open();
-			//conn = DBUtil.open("localhost","goguma", "java1234");
+			//conn = open();
+			conn = DBUtil.open("goguma", "java1234");
 			stat = conn.createStatement();
 			
 		} catch (Exception e) {
