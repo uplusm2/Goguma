@@ -8,23 +8,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	.grid-container{
-		padding-left:50px;
-		padding-right:150px;
-		width:970px;
-		height:500px;
-		margin-top:5%;
-		display:grid;
-		grid-template-columns:1fr;
-		grid-template-rows: 1fr;
-	}
 	.btn.important{
 		border: 1px solid #9B59B6;
 	    background: #9B59B6;
 	    color: #fff;
 	}
 	#tbl{
-		width: 100%;
+		margin-top:100px;
+		width: 80%;
 	}
 	#tbl td:nth-child(1) {
 		width:5%; 

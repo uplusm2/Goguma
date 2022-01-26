@@ -95,6 +95,12 @@ public class UserDTO {
 	public void setSince(String since) {
 		this.since = since;
 	}
+	@Override
+	public String toString() {
+		return "UserDTO [id=" + id + ", pw=" + pw + ", name=" + name + ", lv=" + lv + ", address_seq=" + address_seq
+				+ ", address=" + address + ", tel=" + tel + ", email=" + email + ", birth=" + birth + ", gender="
+				+ gender + ", since=" + since + ", nickname=" + nickname + "]";
+	}
 	
 	
 	

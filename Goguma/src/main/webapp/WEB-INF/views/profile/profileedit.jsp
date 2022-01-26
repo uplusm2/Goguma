@@ -121,7 +121,7 @@
 						 enctype="multipart/form-data">
 						<div class="grid-container">
 							<div>
-								<div><img src="/goguma/files/profile/${userProfileData.path}" style="width: 130px"></div>
+								<div id="image_container" ><img src="/goguma/files/profile/${userProfileData.path}" id="profilImg" style="width: 130px"></div>
 							</div>
 							
 							<div>
@@ -136,7 +136,7 @@
 							
 							<div><div class="filebox">
 								  <label for="ex_file">업로드</label>
-								  <input type="file" id="ex_file" name="pathDir" multiple>
+								  <input type="file" id="ex_file" name="pathDir" onchange="setThumbnail(event);" multiple>
 								</div>
 							</div>
 							<div></div>
@@ -151,6 +151,16 @@
 			</main>
 		</div>
 	<script>
+	
+	function setThumbnail(event){
+		var reader = new FileReader();
+		
+		reader.onload = function(event){
+			$("#profilImg").attr("src", event.target.result);
+		};
+		reader.readAsDataURL(event.target.files[0]);
+	}
+	
 	</script>
 </body>
 </html>
