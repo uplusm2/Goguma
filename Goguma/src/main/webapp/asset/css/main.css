@@ -129,6 +129,7 @@ header {
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid #9B59B6;
     padding-left: 5px;
+    color: #fff;
 }
 .inner-header .search-img {
     position: absolute;
@@ -242,25 +243,32 @@ header {
    position: absolute;
    left: 375px;
    top: 97px;
-   border: 2px solid #9B59B6;
-   border-radius: 5px;
+   border: 10px solid #E5D4EC;
+   /* border: 2px solid #fff; */
+   /* border-radius: 5px; */
    width: 360px;
-   height: 215px;
-   background-color: #fff;
+   height: 240px;
+   background-color: #Fff;
    z-index: 1;
-   padding: 13px;
+   padding: 15px;
    padding-left: 22px;
+   /* opacity: 0.1; */
 }
 .inner-header .popular-keyword p {
    font-weight: 700;
    width: 310px;
-   border-bottom: 2px solid #9B59B6;
+   /* border-bottom: 2px solid #D0B1DD; */
+   border-bottom: 2px solid #fff;
    padding-left: 15px;
    margin-bottom: 5px;
 }
 .inner-header .popular-keyword li {
    padding-left: 15px;
    margin-bottom: -10px;
+   cursor: pointer;
+}
+.inner-header .popular-keyword li:hover {
+	font-weight: 700;
 }
 .inner-header .popular-keyword li:nth-child(odd) {
    transform: translateX(165px) translateY(-16.4px);
@@ -339,9 +347,10 @@ footer {
    background: #F9F7FC;
    border-radius: 10px;
    /* background: #FEFDF6; */
+   /* background: #FAF3DD; */
 }
- /* 
- .main-img .slide li:nth-child(2){
+ 
+ /* .main-img .slide li:nth-child(2){
    background: #F5FAFD;
  }
  .main-img .slide li:nth-child(3){
@@ -476,7 +485,7 @@ li:nth-child(3).slick-active img {
 }
 
 
-/* 검색어 */
+/* 메인에만 적용 */
 .popular-keyword {
 	opacity: 0;
 }
