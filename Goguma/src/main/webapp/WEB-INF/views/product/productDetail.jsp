@@ -223,7 +223,9 @@ body {
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
 				</div>
 				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
+
 				<div style="overflow:auto; width:500px; height:300px; padding-top: 15px">
+
 				<p class="main-text">
 				${dto.content}</p>
 				</div>
@@ -256,7 +258,7 @@ body {
  		<div class="list con" style="margin-left: 30px;">
 	    	<ul class="row">
 		
-				<c:forEach items="${list}" var="dto">
+				<c:forEach items="${list}" var="dto"> 
 			
 				<li class="cell">
 					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
