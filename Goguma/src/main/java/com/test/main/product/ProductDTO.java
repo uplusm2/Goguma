@@ -4,7 +4,7 @@ public class ProductDTO {
 	private String seq;
 	private String id;
 	private String address_seq;
-	private String product_type;
+	private String product_type_seq;
 	private String name;
 	private String price;
 	private String is_auction;
@@ -29,11 +29,11 @@ public class ProductDTO {
 	public void setAddress_seq(String address_seq) {
 		this.address_seq = address_seq;
 	}
-	public String getProduct_type() {
-		return product_type;
+	public String getProduct_type_seq() {
+		return product_type_seq;
 	}
-	public void setProduct_type(String product_type) {
-		this.product_type = product_type;
+	public void setProduct_type_seq(String product_type) {
+		this.product_type_seq = product_type;
 	}
 	public String getName() {
 		return name;

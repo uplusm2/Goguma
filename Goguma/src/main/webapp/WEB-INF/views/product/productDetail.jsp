@@ -1,5 +1,10 @@
+<%@page import="jdk.internal.misc.FileSystemOption"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.util.Calendar" %>
+
+
+      
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,8 +58,6 @@
 }
 .main-text{
 	font-size: 16px;
-	padding: 0px 50px 0px 0px;
-	height:295px;
 	text-overflow: ellipsis;
 }
 .view-more{
@@ -146,21 +149,25 @@
 		<div id="main-box">
 			<div class="main-img-box"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
 			<div id="main-right">
-				<div class="main-product-name">코코 베이직핏 미니멀 셔츠</div>
+				<div class="main-product-name">${dto.name}</div>
 				<div id="price-tab">
-				<div class="main-product-price">17,800원</div>
-				<button type="button" class="red-btn">
-					경매마감 2일전
-				</button>
+				<div class="main-product-price">${dto.price}</div>
+				<c:if test="${dto.is_auction == 'y'}">
+					<button type="button" class="red-btn">
+						경매
+					</button>
+				</c:if>
+				
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
 				</div>
-				<div class="product-address">서울 송파구 천호동 / 여성의류</div>
+				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
+				<div style="overflow:auto; width:500px; height:315px; padding-top: 30px">
 				<p class="main-text">
-				여행가서 딱 한번입었습니다. <br>하자없이 깨끗해요. <br>산뜻한 바이올렛 컬러입니다. <br>봄, 가을에 입기 좋아요.<br> 
-				사이즈는 44-66 추천합니당 <br>기장감 넉넉하게 나와서 바지에 넣어입었을때 <br>핏감이 예쁘게 잘떨어지구요 <br>단품으로도 루즈한 느낌살려서 입기좋아요.
-				<br><br><br>*사이즈(단면, cm) - 어깨44 가슴57 암홀24 
-				<br>소매단면20 소매길이53 총장71 <br>직거래 세곡동, 천호동 택배별도
-				</p>
+				${dto.content}</p>
+				</div>
+				
+				
+				
 				<button type="button" class="view-more">
 					더보기
 				</button>

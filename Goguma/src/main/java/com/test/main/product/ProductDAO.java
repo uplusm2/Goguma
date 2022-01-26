@@ -20,7 +20,8 @@ public class ProductDAO {
 
 	public static Connection open() {
 		Connection conn = null;
-
+		
+		
 		String url = "jdbc:oracle:thin:@goguma_medium?TNS_ADMIN=C://Wallet_goguma";
 		String id = "admin";
 		String pw = "Goguma970928";
@@ -34,7 +35,9 @@ public class ProductDAO {
 			return null;
 		}
 	}
-	
+	public ProductDAO() {
+		conn = open();
+	}
 	//댓글리스트 가져오기
 	public ArrayList<ProductComDTO> productlistComment(String seq) {
 		
@@ -86,8 +89,10 @@ public class ProductDAO {
 									, map.get("word").replace("'", "''"));
 				}
 				
-				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct order by seq desc) a) where rnum between %s and %s %s order by seq desc", map.get("begin"), map.get("end"), where);
+				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct order by product_seq desc) a) where rnum between %s and %s %s order by product_seq desc", map.get("begin"), map.get("end"), where);
 				
+				stat = conn.createStatement();
+						
 				rs = stat.executeQuery(sql);
 				
 				ArrayList<ProductDTO> list = new ArrayList<ProductDTO>();
@@ -99,7 +104,7 @@ public class ProductDAO {
 					dto.setSeq(rs.getString("product_seq"));
 					dto.setId(rs.getString("id"));
 					dto.setAddress_seq(rs.getString("address_seq"));
-					dto.setProduct_type(rs.getString("product_type"));
+					dto.setProduct_type_seq(rs.getString("product_type_seq"));
 					dto.setName(rs.getString("name"));
 					dto.setPrice(rs.getString("price"));
 					dto.setIs_auction(rs.getString("is_auction"));
@@ -121,13 +126,139 @@ public class ProductDAO {
 			
 			return null;
 		}
+	  
+	  public ArrayList<ProductAddressDTO> addresslist() {
+			
+			try {
 
+				String sql = String.format("select * from tbladdress");
+				
+				stat = conn.createStatement();
+						
+				rs = stat.executeQuery(sql);
+				
+				ArrayList<ProductAddressDTO> list = new ArrayList<ProductAddressDTO>();
+				
+				while (rs.next()) {
+					//레코드 1줄 -> BoardDTO 1개
+					ProductAddressDTO dto = new ProductAddressDTO();
+					
+					dto.setAddress_seq(rs.getString("address_seq"));
+					dto.setSido(rs.getString("sido"));
+					dto.setSgg(rs.getString("sgg"));
+					dto.setEmd(rs.getString("emd"));
+					
+					list.add(dto);
+				}
+				
+				return list;
+
+			} catch (Exception e) {
+				System.out.println("ProductDAO.addresslist()");
+				e.printStackTrace();
+			}
+			
+			return null;
+		}
+	  
+	  public ArrayList<ProductTypeDTO> categorylist() {
+			
+			try {
+
+				String sql = String.format("select * from tblproducttype");
+				
+				stat = conn.createStatement();
+						
+				rs = stat.executeQuery(sql);
+				
+				ArrayList<ProductTypeDTO> list = new ArrayList<ProductTypeDTO>();
+				
+				while (rs.next()) {
+					//레코드 1줄 -> BoardDTO 1개
+					ProductTypeDTO dto = new ProductTypeDTO();
+					
+					dto.setProduct_type_seq(rs.getString("product_type_seq"));
+					dto.setName(rs.getString("name"));
+
+					list.add(dto);
+				}
+				
+				return list;
+
+			} catch (Exception e) {
+				System.out.println("ProductDAO.categorylist()");
+				e.printStackTrace();
+			}
+			
+			return null;
+		}
+	  
+	  public ProductTypeDTO getProductType(ProductDTO dto) {
+		  try {
+				String sql = "select * from tblProductType where product_type_seq = ?";
+
+
+				
+				pstat = conn.prepareStatement(sql);
+
+				pstat.setString(1, dto.getProduct_type_seq());
+
+				rs = pstat.executeQuery();
+				
+
+				if (rs.next()) {
+					ProductTypeDTO tdto = new ProductTypeDTO();
+					tdto.setProduct_type_seq(rs.getString("product_type_seq"));
+					tdto.setName(rs.getString("name"));
+
+					return tdto;
+				}
+			} catch (Exception e) {
+				System.out.println("ProductDAO.getProductType()");
+				e.printStackTrace();
+			}
+			return null;
+	  }
+	  
+	  public ProductAddressDTO getAddressName(ProductDTO dto) {
+		  try {
+				String sql = "select * from tblAddress where address_seq = ?";
+
+
+				
+				pstat = conn.prepareStatement(sql);
+
+				pstat.setString(1, dto.getAddress_seq());
+
+				rs = pstat.executeQuery();
+				
+
+				if (rs.next()) {
+					ProductAddressDTO adto = new ProductAddressDTO();
+					adto.setAddress_seq(rs.getString("address_seq"));
+					adto.setSido(rs.getString("sido"));
+					adto.setSgg(rs.getString("sgg"));
+					adto.setEmd(rs.getString("emd"));
+
+					return adto;
+				}
+			} catch (Exception e) {
+				System.out.println("ProductDAO.getAddressName()");
+				e.printStackTrace();
+			}
+			return null;
+	  }
+	  
+	  
+	  
 	// 레코드 받아오기
-	public ProductDTO get(String seq) {
+	public ProductDTO getProduct(String seq) {
 
 		try {
 			String sql = "select * from tblProduct where product_seq = ?";
 
+
+			
 			pstat = conn.prepareStatement(sql);
 
 			pstat.setString(1, seq);
@@ -139,7 +270,7 @@ public class ProductDAO {
 				dto.setSeq(rs.getString("product_seq"));
 				dto.setId(rs.getString("id"));
 				dto.setAddress_seq(rs.getString("address_seq"));
-				dto.setProduct_type(rs.getString("product_type"));
+				dto.setProduct_type_seq(rs.getString("product_type_seq"));
 				dto.setName(rs.getString("name"));
 				dto.setPrice(rs.getString("price"));
 				dto.setIs_auction(rs.getString("is_auction"));
@@ -168,7 +299,7 @@ public class ProductDAO {
 			pstat.setString(2, dto.getPrice());
 			pstat.setString(3, dto.getIs_auction());
 			pstat.setString(4, dto.getAddress_seq());
-			pstat.setString(5, dto.getProduct_type());
+			pstat.setString(5, dto.getProduct_type_seq());
 			pstat.setString(6, dto.getContent());
 			pstat.setString(7, dto.getSeq());
 
@@ -187,7 +318,7 @@ public class ProductDAO {
 
 			pstat.setString(1, dto.getId());
 			pstat.setString(2, dto.getAddress_seq());
-			pstat.setString(3, dto.getProduct_type());
+			pstat.setString(3, dto.getProduct_type_seq());
 			pstat.setString(4, dto.getName());
 			pstat.setString(5, dto.getPrice());
 			pstat.setString(6, dto.getIs_auction());
@@ -222,21 +353,28 @@ public class ProductDAO {
 		}
 	}
 	
-	public int getqTotalCount(String search) {
+	public int getTotalCount(HashMap<String, String> map) {
 		
 		try {
-						
-			String sql  = String.format("select count(*) as cnt from tblProduct where product_seq = %s", search);
+
+			String where = "";
+			
+			if (map.get("searchmode").equals("y")) {
+				where = String.format("where %s like '%%%s%%'"
+								, map.get("column")
+								, map.get("word").replace("'", "''"));
+			}
+			
+			String sql = "select count(*) as cnt from tblProduct" + where;
 			
 			rs = stat.executeQuery(sql);
-			
 			
 			if (rs.next()) {
 				return rs.getInt("cnt");
 			}
 			
 		} catch (Exception e) {
-			System.out.println("ProductDAO.getqTotalCount()");
+			System.out.println("ProductDAO.getTotalCount()");
 			e.printStackTrace();
 		}
 		

@@ -23,23 +23,6 @@ select{
 div.container{
     overflow: hidden;
 }
-/* div.title{
-	height: 50px;
-} */
-
-body,
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/*라이브러리*/
 
 .con {
     margin-left: auto;
@@ -56,7 +39,7 @@ a {
     display: block;
     clear: both;
 }
-.img-box > img {
+.img-box  img {
     display: block;
     width: 100%;
 }
@@ -68,69 +51,7 @@ body {
 .con {
     max-width: 1000px;
 }
-.logo-bar {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
 
-.bn-box {
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-@media ( max-width:700px ) {
-    .top-bn-box-1 {
-        overflow-x:hidden;
-    }
-
-    .top-bn-box-1 > .img-box {
-        margin-left:-50%;
-    }
-}
-
-.menu-box {
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-.menu-box > ul > li {
-    width: calc(100% / 7);
-    height: calc(100% / 7);
-}
-@media (max-width: 800px) {
-    .menu-box {
-        display: none;
-    }
-}
-
-.menu-box > ul > li > a {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
-}
-.menu-box > ul > li:hover > a {
-    color: red;
-    text-decoration: underline;
-}
-.menu-box > ul > li > a::before,
-.menu-box > ul > li > a::after {
-    content: "";
-    width: 1px;
-    height: 13px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translatey(-50%);
-    left: 0;
-}
-.menu-box > ul > li > a::after {
-    left: auto;
-    right: 0;
-}
-.menu-box > ul > li:first-child > a::before,
-.menu-box > ul > li:last-child > a::after {
-    width: 2px;
-}
 .list > ul > li {
     width: calc(100% / 5);
     height: calc(100% / 5);
@@ -143,19 +64,19 @@ body {
     margin: 0 -10px;
 }
 
-.list > ul > li > .product-name {
+.list > ul > li .product-name {
     text-align: Center;
     font-weight: bold;
 }
-.list > ul > li:hover > .product-name {
+.list > ul > li:hover .product-name {
     text-decoration: underline;
 }
-.list > ul > li > .product-price {
+.list > ul > li .product-price {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
 }
-.list > ul > li > .product-price::after {
+.list > ul > li .product-price::after {
     content: "원";
     font-size: 1rem;
     font-weight:normal;
@@ -176,6 +97,7 @@ body {
 			<div class="title">
 				<h2>판매중인 상품</h2>
 			</div>
+			
 			<nav class="dropdown" align="right">
 				<div class="container">
 					<select name="trade">
@@ -185,120 +107,38 @@ body {
 					</select>
 					<select name="address">
 					    <option value="">거래지역</option>
-					    <option value="서울">서울</option>
-					    <option value="경기">경기</option>
+					    <c:forEach items="${addresslist}" var="add">
+					    <option value="${add.sido} ${add.sgg} ${add.emd}">${add.sido} ${add.sgg} ${add.emd}</option>
+					    </c:forEach>
 					</select>
 					<select name="category">
 					    <option value="">카테고리</option>
-					    <option value="카테고리1">카테고리1</option>
-					    <option value="카테고리2">카테고리2</option>
+					    <c:forEach items="${categorylist}" var="cate">
+					    <option value="${cate.name}">${cate.name}</option>
+					    </c:forEach>
+					   
 					</select>
 				</div>
 	    	</nav>
-	    	
-	    	
-			<table>
-				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>가격</th>
-					<th>날짜</th>
-				</tr>
+	    	<div class="list con">
+	    	<ul class="row">
+		
 				<c:forEach items="${list}" var="dto">
-				
-				<tr>
-					<td>${dto.seq}</td>
-					<td>${dto.name}</td>
-					<td>${dto.price}</td>
-					<td>${dto.regdate}</td>
-				</tr>
-				
+			
+				<li class="cell">
+					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></a></div>
+            		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
+            		<div class="product-price">${dto.price}</div>
+        		</li>
 				</c:forEach>
+			</ul>
+			</div>
 				<c:if test="${list.size() == 0}">
-				<tr>
-					<td colspan="4">게시물이 없습니다.</td>
-				</tr>
+					<h2>게시물이 없습니다.</h2>
 				</c:if>
-			</table>
+			
 					
-    		<div class="list con">
-    <ul class="row">
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_02_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_03_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_04_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_05_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_06_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800원</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_07_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_08_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_09_list.jpg" alt=""></div>
-           <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_10_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_11_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_12_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명 </div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_13_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명 </div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_14_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명 </div>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_15_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</div>
-            <div class="product-price">19800</div>
-        </li>
-    </ul>
+    		
 	    <div class="wrap_paging" align="center">
 		<a href="#none" class="first">맨처음</a>
 		<a href="#none" class="prev">이전</a>
