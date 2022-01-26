@@ -27,10 +27,9 @@
 	}
 </style>
 <body>
-	<div class="container"
-			style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-			<main class="main">
 				<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+			<main class="main">
 				<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 				<section class="content">
 					<h2>${userProfileData.id}   님의 회원 정보 입니다.</h2>

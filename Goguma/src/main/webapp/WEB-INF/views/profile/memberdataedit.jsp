@@ -41,10 +41,9 @@ form {
 </head>
 <body>
 	
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<div class="title">
 				<h2>문의 내역</h2>

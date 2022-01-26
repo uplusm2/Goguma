@@ -34,10 +34,9 @@
 </head>
 <body>
 	<!-- noticelist.jsp -->
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
+<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
 		<main class="main">
-			<%@include file="/WEB-INF/views/inc/header.jsp"%>
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="title">

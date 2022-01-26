@@ -40,9 +40,9 @@ public class ProfileDAO {
 
 	public ProfileDAO() {
 //		conn = DBUtil.open("GOGUMA","java1234");
-//		conn = DBUtil.open("localhost","GOGUMA", "java1234");
+		conn = DBUtil.open("localhost","GOGUMA", "java1234");
 //		conn = DBUtil.open();
-		conn = open();
+//		conn = open();
 		try {
 			stat = conn.createStatement();
 		} catch (SQLException e) {

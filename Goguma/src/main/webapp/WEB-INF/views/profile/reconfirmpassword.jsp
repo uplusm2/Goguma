@@ -49,10 +49,9 @@
 }
 </style>
 <body>
-	<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+	<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="content">
 				<h2>회원 정보를 변경하기 위해서 재 로그인해 주세요.</h2>

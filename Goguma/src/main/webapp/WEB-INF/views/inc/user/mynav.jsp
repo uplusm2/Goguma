@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 
 <!-- nav -->
-<nav class="leftside">
+<nav class="leftside" style="margin-right: 50px;">
 
 	<div class="menu">
 
