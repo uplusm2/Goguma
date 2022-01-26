@@ -104,7 +104,7 @@ public int userinforegisterok(UserDTO dto) {
 		pstat = conn.prepareStatement(sql);
 		
 		pstat.setString(1, dto.getId());
-		pstat.setString(2, dto.getEmd());
+		pstat.setString(2, dto.getAddress_seq());
 		pstat.setString(3, dto.getName());
 		pstat.setString(4, dto.getAddress());
 		pstat.setString(5, dto.getTel());
