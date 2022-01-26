@@ -263,11 +263,11 @@ header {
    margin-bottom: -10px;
 }
 .inner-header .popular-keyword li:nth-child(odd) {
-   transform: translateX(170px) translateY(-16.4px);
+   transform: translateX(165px) translateY(-16.4px);
    /* color: #757575; */
 }
 .inner-header .popular-keyword li:last-child {
-   transform: translateX(159.6px) translateY(-16.4px);
+   transform: translateX(154.6px) translateY(-16.4px);
 }
 
 
@@ -477,3 +477,9 @@ li:nth-child(3).slick-active img {
 
 
 /* 검색어 */
+.popular-keyword {
+	opacity: 0;
+}
+.real-main .popular-keyword {
+	opacity: 1;
+}

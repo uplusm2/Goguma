@@ -58,6 +58,14 @@
 	</div>
 </header>
 
+<script>
+	$(function() {
+		$(".popular-keyword").hide();
+		$(".search").click(function() {
+			$(".popular-keyword").slideToggle(200);
+		});
+	});
+</script>
 
 
 
