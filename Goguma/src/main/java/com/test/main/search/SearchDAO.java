@@ -19,7 +19,7 @@ public class SearchDAO {
 	
 	public SearchDAO() {
 		try {
-			conn = DBUtil.open("goguma", "java1234");
+			conn = DBUtil.open();
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
