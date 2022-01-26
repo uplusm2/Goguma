@@ -31,9 +31,9 @@
 		
 		<div id="container" align="center">
 
-			<h1 align="center" id="welcome">환영합니다!</h1>
+			<h1 align="center" id="welcome">비밀번호 변경이 완료되었습니다!</h1>
 			
-			<div align="center">비밀번호 변경이 완료되었습니다!</div>
+			${pw}
 			
 			<div align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">

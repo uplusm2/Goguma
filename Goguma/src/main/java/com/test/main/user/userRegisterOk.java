@@ -66,7 +66,7 @@ public class userRegisterOk extends HttpServlet {
 			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
-			script.println("alert('pre-existing ID, plaese try agian')");
+			script.println("alert('pre-existing ID, please try agian')");
 			script.println("history.back();");
 			script.println("</script>");
 			

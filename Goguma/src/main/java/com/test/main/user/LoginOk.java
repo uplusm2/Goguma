@@ -67,6 +67,10 @@ public class LoginOk extends HttpServlet {
 			script.println("history.back();");
 			script.println("</script>");
 			
+			HttpSession session = req.getSession();
+			
+			session.invalidate(); //주의!!
+			
 		}
 
 	}
