@@ -50,16 +50,6 @@
     color: orange;
 }
 
-/* 보라색 라인 */
-/* TODO 선이 자꾸 내려간다.. */
-/* 
-.sidebar-line { 
-	background-color: #9B59B6;
-	height: 100%;
-	width: 3px;
-	float: left;	
-}
-*/
 
 /* 본문 */
 .article {
@@ -69,7 +59,7 @@
 	padding: 3%;
 }
 
-/* dashboard */
+/* 대시보드 */
 .dashboard .subtitle {
 	font-size: 1.8em;
 	margin-bottom: 20px;
@@ -81,6 +71,7 @@
 	width:900px;
 	margin: auto;
 } */
+
 .dashboard .card .item {
 	width: 255px;
 	height: 130px;
@@ -137,8 +128,149 @@
 	width: 850px;
 	margin-top: 50px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
-	
 }
+
+
+/* userlist 목록 */
+.userlist .table {
+    width: 1100px;
+    border: 3px solid #dadada;
+}
+.userlist .table,
+.userlist .table th,
+.userlist .table td{
+    border-left: 0px;
+    border-right: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 400;
+}
+.userlist .table tr {
+    height: 40px;
+}
+.userlist .table th {
+    font-weight: 500;
+}
+.userlist .table td:nth-child(1){
+    color: #757575;
+    padding-left: 30px;
+    font-size: 16px;
+    width: 150px;
+}
+.userlist .table td:nth-child(2){
+    padding-left: 40px;
+    text-align: left;
+    width: 150px;
+}
+.userlist .table td:nth-child(2):hover{
+	font-weight: 500;
+/* 	color: orange;
+	text-decoration: underline; */
+}
+.userlist .table th:nth-child(3){
+	width: 180px;
+}
+.userlist .table th:nth-child(4),
+.userlist .table td:nth-child(5){
+    padding-right: 20px;
+}
+
+/* 페이지바 */
+.userlist .pagebar {
+	transform: translateY(20px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
+}
+.userlist .pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.userlist .pagebar .pagination a:hover{
+	background: #fff;
+	color: #F4BF35;
+}
+.userlist .pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+.userlist .pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.userlist .pagebar .pagination .next a:hover span,
+.userlist .pagebar .pagination .previous a:hover span {
+	color: #F4BF35;
+}
+
+
+/* 버튼 */
+.userlist .button .btn {
+	font-weight: 700;
+	font-size: 16px;
+	padding: 3px;
+	width: 60px;
+}
+.userlist .button .btn.write {
+    transform: translateX(1050px) translateY(20px);
+    width: 80px;
+    text-align: center;
+    padding-left: 5px;
+}
+.userlist .button .btn.write span{
+    color: #fff;
+}
+
+
+/* 검색 */
+.userlist .search {
+    width: 400px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    font-size: 18px;
+}
+.userlist .search .text:first-child{
+    width: 90px;
+    outline: 0;
+}
+.userlist .search .text {
+	border: 0px solid #757575;
+	/* border-bottom: 1px solid #757575; */
+	border-radius: 5px;
+    outline: 0;
+    float: left;
+    width: 270px;
+    height: 35px;
+    margin-left: 10px;
+    background: #E8F0FE;
+    text-align: center;
+    padding-right: 5px;
+}
+.userlist .search input.text {
+    padding-left: 15px;
+    text-align: left;
+}
+.userlist .search .search-img {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 2px;
+}
+
+
+/* 검색 결과 */
+.userlist .search-result {
+	text-align: center;
+	color: #757575;
+	margin: 30px auto;
+	margin-top: 40px;
+}
+
+
+
+
 
 
 
