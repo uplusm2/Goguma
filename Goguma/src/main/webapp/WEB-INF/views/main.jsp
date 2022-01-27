@@ -43,9 +43,9 @@
 		</section>
 		<section class="today-notice">
 			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">
-				<h2>공지사항</h2>
-				<br><br>
-			</div>
+      				<h3>공지사항<i class="bi bi-chevron-right"></i></h3>
+  			</div>
+   			<p onclick="location.href='/goguma/center/noticeview.do?seq=${noticeDto.seq}';">${noticeDto.title}<small>${noticeDto.regdate}</small></p>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
