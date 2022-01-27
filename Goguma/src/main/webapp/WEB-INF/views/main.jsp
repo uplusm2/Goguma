@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>Goguma</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
