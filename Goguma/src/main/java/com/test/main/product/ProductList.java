@@ -90,7 +90,7 @@ public class ProductList extends HttpServlet {
 		} else {
 			is_auction_ck = "y";
 		}
-		if ((address_seq == null) 
+		if ((address_seq == null)
 				|| (address_seq.equals(""))) {
 			address_seq_ck = "n";
 		} else {
