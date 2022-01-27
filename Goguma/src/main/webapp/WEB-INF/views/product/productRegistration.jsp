@@ -171,36 +171,12 @@ select{
 		</section>
 		
 	</main>
-<script>
-	var imgArr = new Array();
 
-	function setDetailImage(event){
-		for(var image of event.target.files){
-			var reader = new FileReader();
-			
-			reader.onload = function(event){
-				var img = document.createElement("img");
-				
-				img.setAttribute("src", event.target.result);
-				img.setAttribute("class", "col-lg-6");
-				img.setAttribute("position", "absolute");
-				img.setAttribute("left", "0px");
-				img.setAttribute("top", "0px");
-				img.setAttribute("width", "400px");
-				img.setAttribute("hight", "300px");
-				img.setAttribute("object-fit","scale-down");
-				img.setAttribute("vertical-align","middle");
-				img.setAttribute("display","black");
-				img.setAttribute("opacity", "1");
-				
-				document.querySelector("div#img-box").appendChild(img);
-			};
-			
-			imgArr.
-			console.log(image);
-			reader.readAsDataURL(image);
-		}
-	}
-</script>	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+	<script>
+  
+        
+    </script>
+
 </body>
 </html>

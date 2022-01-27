@@ -47,6 +47,17 @@
 	color: white;
 	padding: 1px 5px;
 	margin: 30px 0px 0px 0px;
+	border-radius: 5px;
+}
+
+.gray-btn{
+	font-size: 15px;
+	background-color: gray;
+	border-color: gray;
+	color: black;
+	padding: 1px 5px;
+	margin: 30px 0px 0px 0px;
+	border-radius: 5px;
 }
 #price-tab{
 	overflow:hidden;
@@ -76,7 +87,7 @@
 }
 .mid-btn2{
 	font-size: 30px;
-	margin: 15px 5px;
+	margin: 15px 310px 15px 5px;
 	padding: 10px 3px;
 	background-color: orange;
 	border-color:orange;
@@ -84,7 +95,7 @@
 }
 .mid-btn3{
 	font-size: 30px;
-	margin: 15px 310px 15px 5px;
+	margin: 15px 5px;
 	padding: 10px 3px;
 	background-color: gray;
 	border-color: gray;
@@ -214,18 +225,35 @@ body {
 				<div class="main-product-name">${dto.name}</div>
 				<div id="price-tab">
 				<div class="main-product-price">${dto.price}</div>
-				<c:if test="${dto.is_auction == 'y'}">
-					<button type="button" class="red-btn">
-						경매
+				 
+				<c:if test="${dto.is_completion == 'n'}">
+					<button type="button" class="gray-btn">
+						판매완료
 					</button>
 				</c:if>
+				<c:if test="${dto.is_completion == 'y'}">
+					<c:choose>
+					<c:when test="${dto.is_auction == 'y'}">
+						   <button type="button" class="red-btn">
+									경매중
+						</button>
+					</c:when>
+					<c:when test="${dto.is_auction == 'n'}">
+						        <button type="button" class="red-btn">
+									판매중
+								</button>
+				 	</c:when>
+					</c:choose>
+				</c:if>
+			
 				
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
+				
 				</div>
 				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
 
 				<div style="overflow:auto; width:500px; height:300px; padding-top: 15px">
-
+				
 				<p class="main-text">
 				${dto.content}</p>
 				</div>
@@ -237,17 +265,49 @@ body {
 				</button>
 			</div>
 			<div id="bottom-box">
-				<button type="button" class="mid-btn1">
+			
+				<c:if test="${dto.is_completion eq 'n'}">
+					<button type="button" class="mid-btn1" style="visibility: hidden;">
 						연락하기
-				</button>
-				<button type="button" class="mid-btn2">
-						입찰하기
-				</button>
-				<button type="button" class="mid-btn3">
+					</button>
+					<button type="button" class="mid-btn3" style="visibility: hidden;">
 						판매자정보
-				</button>
+					</button>
+					<button type="button" class="mid-btn2" style="visibility: hidden;">
+						입찰하기
+					</button>
+				</c:if>
+				<c:if test="${dto.is_completion eq 'y'}">
+					
+					
+					<c:if test="${dto.is_auction eq 'y'}">
+						<button type="button" class="mid-btn1" >
+							연락하기
+						</button>
+						<button type="button" class="mid-btn3" >
+							판매자정보
+						</button>
+						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/bidadd.do?seq=${dto.seq}';">
+							입찰하기
+						</button>
+					</c:if>
+					<c:if test="${dto.is_auction eq 'n'}">
+						<button type="button" class="mid-btn1" >
+							연락하기
+						</button>
+						<button type="button" class="mid-btn3" >
+							판매자정보
+						</button>
+						<button type="button" class="mid-btn2" style="visibility: hidden;">
+							입찰하기
+						</button>
+					</c:if>
+				</c:if>
+			
+			
+				
 				<input type="button" class="mid-btn4" value="댓글">
-				<input type="button" class="mid-btn5" value="입찰내역">
+				<input type="button" class="mid-btn5" value="입찰내역"  onclick="location.href='/goguma/product/bidList.do?seq=${dto.seq}';">
 
 			</div>
 			

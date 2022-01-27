@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.test.jdbc.DBUtil;
 import com.test.main.product.ProductComDTO;
 import com.test.main.product.ProductDTO;
 
@@ -28,7 +29,8 @@ public class ProductDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url, id, pw);
+//			conn = DriverManager.getConnection(url, id, pw);
+			conn = DBUtil.open("goguma","java1234");
 			return conn;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,6 +77,7 @@ public class ProductDAO {
 		return null;
 	}
 	  
+	
 	 
 	//게시물리스트
 	  public ArrayList<ProductDTO> productlist(HashMap<String, String> map) {
@@ -162,6 +165,50 @@ public class ProductDAO {
 			return null;
 		}
 	  
+	  
+	  public ArrayList<BidDTO> bidlist(String product_seq) {
+			
+			try {
+
+				String sql = "select * from tblbid where product_seq = ?";
+				System.out.println(sql);
+						
+
+				pstat = conn.prepareStatement(sql);
+	            pstat.setString(1, product_seq);
+
+	            rs = pstat.executeQuery();
+	            
+				System.out.println("1");
+				ArrayList<BidDTO> list = new ArrayList<BidDTO>();
+				
+				while (rs.next()) {
+					System.out.println("2");
+					//레코드 1줄 -> BoardDTO 1개
+					BidDTO dto = new BidDTO();
+					
+					dto.setBid_seq(rs.getString("bid_seq"));
+					dto.setId(rs.getString("id"));
+					dto.setProduct_seq(rs.getString("product_seq"));
+					dto.setPrice(rs.getString("price"));
+					dto.setTime(rs.getString("Time"));
+					
+					list.add(dto);
+					System.out.println("");
+				}
+				
+				return list;
+
+			} catch (Exception e) {
+				System.out.println("ProductDAO.bidlist()");
+				e.printStackTrace();
+			}
+			
+			return null;
+		}
+		
+	  
+	  
 	  public ArrayList<ProductTypeDTO> categorylist() {
 			
 			try {
@@ -221,7 +268,8 @@ public class ProductDAO {
 		  } catch (Exception e) { System.out.println("ProductDAO.imglist()");
 		  e.printStackTrace(); }
 		  
-		  return null; }
+		  return null; 
+		  }
 		 
 	  
 	  public ProductTypeDTO getProductType(ProductDTO dto) {
@@ -371,6 +419,31 @@ public class ProductDAO {
 		return null;
 	}
 
+	public String bidadd(BidDTO dto) {
+		try {
+			String sql = "insert into tblbid values (bid_seq.nextVal, ?, ?, ?, sysdate + 0.375)";
+			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, dto.getId());
+			pstat.setString(2, dto.getProduct_seq());
+			pstat.setString(3, dto.getPrice());
+			
+			pstat.executeUpdate();
+
+			sql = "select bid_seq from tblbid where rownum = 1 order by bid_seq desc";
+			pstat = conn.prepareStatement(sql);
+
+			rs = pstat.executeQuery();
+
+			if (rs.next()) {
+				return rs.getString("bid_seq");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public void addReadCount(String seq) {
 		try {
 			String sql = "update tblProduct set readcount = readcount + 1 where product_seq = ?";
