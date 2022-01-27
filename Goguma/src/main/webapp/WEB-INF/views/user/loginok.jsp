@@ -25,6 +25,8 @@
 	
 	<script>
 	
+		
+	
 		<c:if test="${not empty id}">
 			location.href = '/goguma/main.do';
 		</c:if>

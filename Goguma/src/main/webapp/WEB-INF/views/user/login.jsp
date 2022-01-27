@@ -7,56 +7,135 @@
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
-	.panel {
-		width: 400px;
-		margin: 0 auto; 
-		margin-top: 150px;
-		text-align: center;
+	*{
+		  margin: 0px;
+		  padding: 0px;
+		  text-decoration: none;
+		  font-family:sans-serif;
+	
 	}
 	
-	.panel input {
-		margin-bottom: 5px;
+	body {
+	  back	ground-image: #34495e;
 	}
 	
-	.panel input[type=submit] {
-		margin-top: 10px;
+	.loginForm {
+		  position:absolute;
+		  width:300px;
+		  height:400px;
+		  padding: 30px, 20px;
+		  background-color:#e6e3e8;
+		  text-align:center;
+		  top:50%;
+		  left:50%;
+		  transform: translate(-50%,-50%);
+		  border-radius: 15px;
+		  border: solid 1px #dacce8;
 	}
 	
-	.bottomline {
-		font-size: 15px;
+	.loginForm h2{
+		  text-align: center;
+		  margin: 30px;
 	}
+	
+	.idForm{
+		  border-bottom: 2px solid #adadad;
+		  margin: 30px;
+		  padding: 10px 10px;
+	}
+	
+	.passForm{
+		  border-bottom: 2px solid #adadad;
+		  margin: 30px;
+		  padding: 10px 10px;
+	}
+	
+	.id {
+		  width: 100%;
+		  border:none;
+		  outline:none;
+		  color: #636e72;
+		  font-size:16px;
+		  height:25px;
+		  background: none;
+	}
+	
+	.pw {
+		  width: 100%;
+		  border:none;
+		  outline:none;
+		  color: #636e72;
+		  font-size:16px;
+		  height:25px;
+		  background: none;
+	}
+	
+	.btn {
+		  position:relative;
+		  left:40%;
+		  transform: translateX(-50%);
+		  margin-bottom: 40px;
+		  width:80%;
+		  height:40px;
+		  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+		  background-position: left;
+		  background-size: 200%;
+		  color:white;
+		  font-weight: bold;
+		  border:none;
+		  cursor:pointer;
+		  transition: 0.4s;
+		  display:inline;
+	}
+	
+	.btn:hover {
+	  back	ground-position: right;
+	}
+	
+	.bottomText li {
+		  float: left;
+		  font-size: 15px;
+		 margin-left: 8px;
+	}
+	
+
+	
 	
 </style>
 </head>
-<body>
+<body width="100%" height="100%">
 
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
 		<section class="content">
 			
-			<div class="panel panel-default">
-				<div class="panel-heading">로그인</div>
-				<div class="panel-body">
-					
-					<form method="POST" action="/goguma/user/loginok.do">
-						<input type="text" name="id" class="form-control" placeholder="아이디" required autofocus>
-						<input type="password" name="pw" class="form-control" placeholder="비밀번호" required>
-						<div align="right"><input type="submit" value="로그인" class="btn btn-default" >
-						</div>
-					</form>
-					
-					<div class = "bottom line">
-					<li><a href="/goguma/user/findid.do">아이디 찾기</a></li>
-					<li><a href="/goguma/user/findpw.do">비밀번호 찾기</a></li>
-					<li><a href="/goguma/user/userregister.do">회원가입</a></li>
-					</div>
-				</div>
-			</div>
+	<form action="/goguma/user/loginok.do" method="post" class="loginForm">
+      <h2>Log in</h2>
+      <div class="idForm">
+        <input type="text" class="id" placeholder="아이디" name="id">
+      </div>
+      <div class="passForm">
+        <input type="password" class="pw" placeholder="비밀번호" name="pw">
+      </div>
+      <button type="submit" class="btn" onclick="button()">
+        로그인
+      </button>
+     
+      <script>
+
+      </script>
+      <div class="bottomText">
+			<li><a href="/goguma/user/findid.do">아이디 찾기</a></li>
+			<li><a>|</a></li>
+			<li><a href="/goguma/user/findpw.do">비밀번호 찾기</a></li>
+			<li><a>|</a></li>
+			<li><a href="/goguma/user/userregister.do">회원가입</a></li>
+      </div>
+    </form>
 			
 		</section>
-		
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+
 	</main>
 	
 	<script>

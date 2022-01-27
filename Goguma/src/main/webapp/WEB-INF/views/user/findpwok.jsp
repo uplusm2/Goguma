@@ -12,7 +12,7 @@
 	.panel {
 		width: 400px;
 		margin: 0 auto; 
-		margin-top: 150px;
+		margin-top: 50px;
 		text-align: center;
 	}
     .card {
@@ -40,10 +40,17 @@
     	color : blue;
     }
     
-    #blank {
-    	font-size: 0px;
-    
+    #ttitle {
+    	align: center;
+    	margin-top: 100px;
+    	font-size: 35px;
     }
+    
+    #subject {
+    	text-align: left;
+    	margin-left: 7px;
+    }
+    
     </style>
   </head>
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
@@ -56,26 +63,31 @@
 		%>
   <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
 
+
+
+		<div id=ttitle>***  비밀번호 재설정  ***</div>
 				<div class="panel panel-default">
+
 
 	<div class="card align-middle" style="width:25rem;">
 		<div class="card-title" style="margin-top:30px;">
-            	새 비밀번호 입력 
+            	
 			<h2 class="card-title" style="color:#f58b34;"> </h2>
 		</div>
         
 		<div class="card-body">
       <form action="/goguma/user/repw.do" class="form-signin" method="POST">
         <input type="password" name="pw" id="pw" class="form-control" placeholder="새 비밀번호" required autofocus><BR>
-        <input type="password" name="pw2" id="pw2" class="form-control" placeholder="새 비밀번호 확인" required><br>
+        <input type="password" name="pw2" id="pw2" onkeyup="passwordCheckFunction();" class="form-control" placeholder="새 비밀번호 확인" required><br>
+        	<font id="checkPw" size = "2"></font>
         	<p class="check" id="check">${check}</p><br/>
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">찾기</button>
 		
-		<div id = "blank">
-			<div id = "id" name = "id">${id}</div>
-			<div id = "name" name = "name">${name}</div>
-			<div id = "email" name = "email">${email}</div>
-      	</div>
+
+			<input id="id" name="id" type="hidden" value="<%=id%>">
+			<input id="email" name="email" type="hidden" value="<%=email%>">
+			<input id="name" name="name" type="hidden" value="<%=name%>">
+
       
       </form>
         
@@ -85,12 +97,26 @@
 
 	</div>
    
-   		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+
    
   </body>
-  <script type="text/javascript">
-		
-  		
   
+  <script>
+		
+	function passwordCheckFunction() {
+		
+		var password = document.getElementById('pw');
+		var passwordConfirm = document.getElementById('pw2');
+
+		if(password.value == passwordConfirm.value){
+			$('#checkPw').text('비밀번호 일치');
+			$('#checkPw').attr('color', 'cornflowerblue')
+		}else{
+			$('#checkPw').text('비밀번호 불일치');
+			$('#checkPw').attr('color', 'red')
+		}
+	
+}
+
   </script>
 </html>

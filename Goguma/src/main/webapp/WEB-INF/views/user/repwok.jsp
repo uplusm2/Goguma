@@ -33,8 +33,6 @@
 
 			<h1 align="center" id="welcome">비밀번호 변경이 완료되었습니다!</h1>
 			
-			${pw}
-			
 			<div align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
 			</div>
