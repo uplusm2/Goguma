@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -45,6 +46,10 @@ public class ProfileEditOk extends HttpServlet {
 	         
 	         String path = multi.getFilesystemName("pathDir");
 	         
+	         if(nickName==null) nickName = (String)req.getSession().getAttribute("nickname");
+	         if(nickName==null) intro = " ";
+	         if(nickName==null) path = "default image.jpg";
+	         
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
 	         
@@ -60,6 +65,9 @@ public class ProfileEditOk extends HttpServlet {
 	 		 System.out.println(id);
 	 		 
 	 		 req.setAttribute("check", check);
+	 		 req.setAttribute("nickName", nickName);
+	 		 
+	 		 req.getSession().setAttribute("nickname", nickName);
 	 		 
 	      } catch (Exception e) {
 	         System.out.println("ProfileEditOk.doPost()");

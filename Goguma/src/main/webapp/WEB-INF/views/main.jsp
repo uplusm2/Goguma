@@ -16,21 +16,30 @@
 		<section class="main-img">
 			<ul class="slide">
 				<li><img src="/goguma/asset/img/main1.png">
-					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+					<img src="/goguma/asset/img/main-txt.png" class="txt">
 				</li>
 				<li><img src="/goguma/asset/img/main3.png">
-					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+					<img src="/goguma/asset/img/main-txt3.png" class="txt">
 				</li>
 				<li><img src="/goguma/asset/img/main2.png">
-					<img src="/goguma/asset/img/main-txt2.png" class="txt">
+					<img src="/goguma/asset/img/main-txt4.png" class="txt">
 				</li>
 			</ul>
 		</section>
 		<section class="today-product">
 			<div class="title" onclick="location.href='/goguma/main.do';">
 				<h2>오늘의 상품 추천</h2>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
+			<ul class="recommendation">
+				<c:forEach items="${productList}" var="pdto">
+				<li><a href=""><p class="img"><img src="/goguma/asset/img/${pdto.imgPath}"></p>
+					<div class="content">
+						<p class="price">${pdto.price}<small>원</small> <i class="bi bi-stopwatch">${pdto.interval} 전</i></p>
+						<p class="intro">${pdto.name}</p>
+					</div></a>
+				</li>
+				</c:forEach>
+			</ul>
 		</section>
 		<section class="today-notice">
 			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">

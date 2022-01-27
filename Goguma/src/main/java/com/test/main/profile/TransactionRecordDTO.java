@@ -9,9 +9,14 @@ public class TransactionRecordDTO {
 	private String regdate;
 	private int deal_seq;
 	private String type;
+	private String review;
 	
 	private String selid;
 	private String buyid;
+	
+	public String getReview() {
+		return review;
+	}
 	
 	public String getSelid() {
 		return selid;
@@ -80,6 +85,10 @@ public class TransactionRecordDTO {
 		return "TransactionRecordDTO [product_seq=" + product_seq + ", contetnt=" + contetnt + ", nickname=" + nickname
 				+ ", id=" + id + ", regdate=" + regdate + ", deal_seq=" + deal_seq + ", type=" + type + ", selid="
 				+ selid + ", buyid=" + buyid + ", rnum=" + rnum + "]";
+	}
+
+	public void setReview(String review) {
+		this.review = review;
 	}
 	
 }

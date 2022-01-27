@@ -40,9 +40,9 @@
 				<textarea name="content" placeholder="내용을 입력하세요." class="form-text" required>${dto.content}</textarea>
 				
 				<div class="button">
-					<input type="button" value="취소" class="btn cancel"
+					<input type="button" value="취소" class="btn cancel edit"
 						onclick="location.href='/goguma/community/communityList.do';">
-					<input type="submit" value="수정" class="btn important add">
+					<input type="submit" value="수정" class="btn important edit">
 					<input type="hidden" name="seq" value="${dto.seq}">
 				</div>
 			</form>

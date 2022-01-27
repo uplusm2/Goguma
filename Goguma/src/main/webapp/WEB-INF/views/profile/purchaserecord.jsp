@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
@@ -35,10 +35,9 @@
 </style>
 </head>
 <body>
-<div class="container"
-		style="width: 1200px; position: absolute; top: 0px; left: 18vw;">
-		<main class="main">
 			<%@include file="/WEB-INF/views/inc/header.jsp"%>
+<div class="container">
+		<main class="main">
 			<%@ include file="/WEB-INF/views/inc/user/mynav.jsp"%>
 			<section class="community">
 				<div class="grid-container">
@@ -60,7 +59,7 @@
 								${dto.rnum} 
 														
 							</td>
-							<td>
+							<td style="cursor: pointer;" onclick="location.href='/goguma/product/productDetail.do?seq=${dto.product_seq}';">
 								${dto.contetnt}
 								
 							</td>
@@ -73,11 +72,11 @@
 								
 							</td>
 							<td>
-								<c:if test="${dto.type==null}">
+								<c:if test="${dto.review eq 'null'}">
 									<input type="button" value="리뷰 작성" class="btn important" 
 										onclick="location.href='/goguma/profile/purchasereview.do?selid=${dto.selid}&deal_seq=${dto.deal_seq}'">
 								</c:if>
-								<c:if test="${dto.type!=null}">
+								<c:if test="${dto.review ne 'null'}">
 									<input type="button" value="작성 완료" class="btn" disabled>
 								</c:if>		
 							</td>
@@ -90,5 +89,6 @@
 			</section>
 		</main>
 	</div>
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 </body>
 </html>

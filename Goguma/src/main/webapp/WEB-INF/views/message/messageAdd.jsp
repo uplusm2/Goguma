@@ -37,7 +37,7 @@
 					<input type="button" value="확인하기" class="btn check"
 						onclick="location.href='/goguma/message/outBoxDetail.do?message_seq=${seq}';"> 
 					<input type="button" value="목록으로" class="btn list"
-						onclick="location.href='/goguma/community/communityList.do';"> 
+						onclick="location.href='/goguma/message/inBox.do';"> 
 				</div>
 			</div>
 			</c:if>

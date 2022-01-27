@@ -28,7 +28,7 @@
         <td style="height: 70px">* 회원님의 아이디를 찾았습니다! *</td>
        </tr>
        <tr align=center>
-        <td style="font-size: 20px">${userid}</td>
+        <td style="font-size: 20px">${result}</td>
        </tr>
       </table>
 

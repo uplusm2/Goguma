@@ -44,12 +44,14 @@
 				</c:forEach>
 			</table>
 			
+			<c:if test="${not empty id}">
 			<div class="button">
 				<button type="button" class="btn important write"
 					onclick="location.href='/goguma/community/communityForm.do';">
 					글쓰기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 				</button>
 			</div>
+			</c:if>
 			
 			<c:if test="${totalPage > 1}">
 			<div class="pagebar">${pagebar}</div>
