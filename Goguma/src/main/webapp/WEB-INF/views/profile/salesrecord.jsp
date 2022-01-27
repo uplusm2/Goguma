@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
+<% String n = "null"; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,10 +73,10 @@
 								
 							</td>
 							<td>
-								<c:if test="${dto.type==null}">
+								<c:if test="${dto.review eq 'null'}">
 									<input type="button" value="리뷰 작성" class="btn important" onclick="location.href='/goguma/profile/salesreview.do?selid=${dto.selid}&deal_seq=${dto.deal_seq}'">
 								</c:if>
-								<c:if test="${dto.type!=null}">
+								<c:if test="${dto.review ne 'null'}">
 									<input type="button" value="작성 완료" class="btn" disabled>	
 								</c:if>		
 							</td>

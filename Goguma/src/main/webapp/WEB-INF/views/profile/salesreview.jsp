@@ -98,7 +98,7 @@
 				<div class="title">
 					<h2>구매 후기 등록</h2>
 				</div>
-				<form action="/goguma//profile/purchasereviewok.do" method="post">
+				<form action="/goguma/profile/salesreviewok.do" method="post">
 				<div class="grid-container">
 						<div>
 							<div>

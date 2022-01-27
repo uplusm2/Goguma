@@ -193,15 +193,19 @@ public class ProfileDAO {
 
 	public ArrayList<TransactionRecordDTO> getPurchaseRecord(HashMap<String, String> map) {
 		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
-		String sql = "select * from(select a.* , rownum as rnum from( select * from (VWPURCHASEDPRODUCT p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
-				+ "where id = ? order by p.regdate) a) where rnum between ? and ? and type = 'B' or type is null";// --
+		String sql = "select \r\n"
+				+ "     *\r\n"
+				+ "from(select a.* , rownum as rnum from( select \r\n"
+				+ "p.Product_seq,p.content,p.nickname,p.id,p.selid,p.regdate,re.deal_seq,re.type,re.CONTENT as review\r\n"
+				+ "from (VWPURCHASEDPRODUCT p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "		 where type = 'B' and id = ? order by p.regdate) a) where rnum between ? and ?";// --
 																													// 구매한것
 		try {
 
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, map.get("id"));
-			pstat.setString(2, map.get("begin"));
-			pstat.setString(3, map.get("end"));
+			pstat.setInt(2, Integer.parseInt(map.get("begin")));
+			pstat.setInt(3, Integer.parseInt(map.get("end")));
 			rs = pstat.executeQuery();
 
 			while (rs.next()) {
@@ -216,6 +220,7 @@ public class ProfileDAO {
 				dto.setDeal_seq(rs.getInt("DEAL_SEQ"));
 				dto.setType(rs.getString("type"));
 
+				dto.setReview(rs.getString("review"));
 				dto.setRnum(rs.getInt("rnum"));
 
 				list.add(dto);
@@ -229,9 +234,12 @@ public class ProfileDAO {
 	}
 
 	public int getPurchaseRecordTotalPage(HashMap<String, String> map) {
-		String sql = "select -- 구매한것\r\n" + "    count(*) as cnt\r\n"
-				+ " from(select a.*,rownum as rnum from(select * from VWPURCHASEDPRODUCT where id = ? order by regdate) a) a\r\n"
-				+ "             left outer join tblreview re on a.DEAL_SEQ = re.deal_seq where type = 'B' or type is null";
+		String sql = "select \r\n"
+				+ "     count(*) as cnt\r\n"
+				+ "from(select a.* , rownum as rnum from( select \r\n"
+				+ "p.Product_seq,p.content,p.nickname,p.id,p.selid,p.regdate,re.type,re.deal_seq,re.CONTENT as review\r\n"
+				+ "from (VWPURCHASEDPRODUCT p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "		 where type = 'B' and id = ? order by p.regdate) a)";
 		try {
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, map.get("id"));
@@ -247,14 +255,18 @@ public class ProfileDAO {
 
 	public ArrayList<TransactionRecordDTO> getSalesRecord(HashMap<String, String> map) {
 		ArrayList<TransactionRecordDTO> list = new ArrayList<TransactionRecordDTO>();
-		String sql = "select * from(select a.* , rownum as rnum from( select * from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
-				+ "where id = ? order by p.regdate) a) where rnum between ? and ?  and type = 'S' or type is null";// 판매한것
+		String sql = "select \r\n"
+				+ "     *\r\n"
+				+ "from(select a.* , rownum as rnum from( select \r\n"
+				+ "p.Product_seq,p.content,p.nickname,p.id,p.BUYID,p.regdate,re.type,re.deal_seq,re.CONTENT as review\r\n"
+				+ "from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "		 where type = 'S' and id = ? order by p.regdate) a) where rnum between ? and ?";// 판매한것
 		try {
 
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, map.get("id"));
-			pstat.setString(2, map.get("begin"));
-			pstat.setString(3, map.get("end"));
+			pstat.setInt(2, Integer.parseInt(map.get("begin")));
+			pstat.setInt(3, Integer.parseInt(map.get("end")));
 			rs = pstat.executeQuery();
 
 			while (rs.next()) {
@@ -264,11 +276,14 @@ public class ProfileDAO {
 				dto.setContetnt(rs.getString("CONTENT"));
 				dto.setNickname(rs.getString("NICKNAME"));
 				dto.setId(rs.getString("id"));
+				dto.setSelid(rs.getString("buyid"));
 				dto.setRegdate(rs.getString("REGDATE"));
 				dto.setDeal_seq(rs.getInt("DEAL_SEQ"));
 				dto.setType(rs.getString("type"));
 
+				dto.setReview(rs.getString("review"));
 				dto.setRnum(rs.getInt("rnum"));
+
 
 				list.add(dto);
 			}
@@ -281,9 +296,12 @@ public class ProfileDAO {
 	}
 
 	public int getSalesRecordTotalPage(HashMap<String, String> map) {
-		String sql = "select -- 판매한것\r\n" + "    count(*) as cnt\r\n"
-				+ " from(select a.*,rownum as rnum from(select * from vwproductsold where id = ? order by regdate) a) a\r\n"
-				+ "             left outer join tblreview re on a.DEAL_SEQ = re.deal_seq  where type = 'S' or type is null";
+		String sql = "select \r\n"
+				+ "     count(*) as cnt\r\n"
+				+ "from(select a.* , rownum as rnum from( select \r\n"
+				+ "p.Product_seq,p.content,p.nickname,p.id,p.BUYID,p.regdate,re.type,re.deal_seq,re.CONTENT as review\r\n"
+				+ "from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)\r\n"
+				+ "		 where type = 'S' and id = ? order by p.regdate) a)";
 		try {
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, map.get("id"));
@@ -368,7 +386,7 @@ public class ProfileDAO {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 
 		String sql1 = "select avg(SCORE) as avg , count(score) as cnt from vwReceived_seller_reviews where selid = ?";
-		String sql2 = "select avg(SCORE) as avg , count(score) as cnt from vwReceived_buyer_reviews where selid = ?";
+		String sql2 = "select avg(SCORE) as avg , count(score) as cnt from vwReceived_buyer_reviews where BUYID = ?";
 		try {
 			pstat = conn.prepareStatement(sql1);
 			pstat.setString(1, id);
@@ -392,13 +410,13 @@ public class ProfileDAO {
 	}
 
 	public int setPurchaseReview(HashMap<String, String> map) {
-		String sql = "insert into tblReview values (?,?,?,?)";
+		String sql = "update tblReview set score= ?,content=? where type=? and deal_seq=?";
 		try {
 			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, map.get("type"));
-			pstat.setString(2, map.get("deal_seq"));
-			pstat.setString(3, map.get("score"));
-			pstat.setString(4, map.get("content"));
+			pstat.setString(1, map.get("score"));
+			pstat.setString(2, map.get("content"));
+			pstat.setString(3, map.get("type"));
+			pstat.setString(4, map.get("deal_seq"));
 
 			return pstat.executeUpdate();
 
@@ -409,13 +427,13 @@ public class ProfileDAO {
 	}
 
 	public int setSalesReview(HashMap<String, String> map) {
-		String sql = "insert into tblReview values (?,?,?,?)";
+		String sql = "update tblReview set score= ?,content=? where type=? and deal_seq=?";
 		try {
 			pstat = conn.prepareStatement(sql);
-			pstat.setString(1, map.get("type"));
-			pstat.setString(2, map.get("deal_seq"));
-			pstat.setString(3, map.get("score"));
-			pstat.setString(4, map.get("content"));
+			pstat.setString(1, map.get("score"));
+			pstat.setString(2, map.get("content"));
+			pstat.setString(3, map.get("type"));
+			pstat.setString(4, map.get("deal_seq"));
 
 			return pstat.executeUpdate();
 

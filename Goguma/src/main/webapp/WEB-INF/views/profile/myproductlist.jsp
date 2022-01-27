@@ -66,8 +66,6 @@
 					</table>
 					
 					<div class="pagebar">${pagebar}</div>
-		
-					
 				</div>
 			</section>
 		</main>
