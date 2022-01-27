@@ -1,5 +1,4 @@
-package com.test.main.profile;
-
+package com.test.main.product;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -9,18 +8,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
-import com.test.main.user.UserDAO;
+import com.test.main.profile.ProfileDAO;
 
-@WebServlet("/profile/profileeditok.do")
-public class ProfileEditOk extends HttpServlet {
+@WebServlet("/product/productRegistrationok.do")
+public class ProductRegistrationok extends HttpServlet {
+	
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
 		ProfileDAO dao  = new ProfileDAO();
 		 try {
 	         
@@ -70,11 +68,12 @@ public class ProfileEditOk extends HttpServlet {
 	 		 req.getSession().setAttribute("nickname", nickName);
 	 		 
 	      } catch (Exception e) {
-	         System.out.println("ProfileEditOk.doPost()");
+	         System.out.println("productRegistrationok.doPost()");
 	         e.printStackTrace();
 	      }
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/profileeditok.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/product/productRegistrationok.jsp");
 		dispatcher.forward(req, resp);
 	}
-
 }
+
+	

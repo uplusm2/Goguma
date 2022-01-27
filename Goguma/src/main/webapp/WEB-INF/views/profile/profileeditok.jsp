@@ -17,8 +17,7 @@
 			alert("프로필 정보 변경을 실패하였습니다. 닉네임을 확인해 주세요.");
 			window.history.back();
 		}else{
-			<%session.setAttribute("nickName", request.getParameter("nickName"));
-			%>
+			
 			location.href = "/goguma/profile/mypage.do";
 		}
 	</script>
