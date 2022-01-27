@@ -6,6 +6,15 @@
 <meta charset="UTF-8">
 <title>ProductRegistration</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
+<script>
+  		(function(){
+  			if(${empty id}){
+  				alert("please login");
+  				location.href="/goguma/user/login.do";
+  			}
+  		})();
+        
+</script>
 <style>
 #main-hr{
 	margin-left: 50px;
@@ -91,6 +100,8 @@ select{
 			<div class="title">
 				<h2>상품등록</h2>
 			</div>
+			<form method="POST" action="/goguma/profile/profileeditok.do"
+						 enctype="multipart/form-data">
 			<hr id="main-hr" width="1100px">
 			<input type="text" class="text product-name" placeholder="상품명">
 			<input type="text" class="text product-price" placeholder="희망가격">
@@ -101,22 +112,47 @@ select{
 					    <option value="일반거래">일반거래</option>
 					    <option value="경매">갱매</option>
 					</select>
-					<select name="address">
-					    <option value="">거래지역</option>
-					    <option value="서울">서울</option>
-					    <option value="경기">경기</option>
-					</select>
 					<select name="category">
 					    <option value="">카테고리</option>
 					    <option value="카테고리1">카테고리1</option>
 					    <option value="카테고리2">카테고리2</option>
 					</select>
+					
+					<span style="color: black; background-color:#7777; text-align: center ; margin-right:10px;"> 거래 지역 </span>
+					<select id="sido" name="sido">
+		                <option value="서울" selected="selected">서울</option>
+		                <option value="부산">부산</option>
+		                <option value="대구">대구</option>
+		                <option value="대전">대전</option>
+		              </select>  
+		              <select id="sgg" name="sgg">
+		                <option value="송파구" selected="selected">송파구</option>
+		                <option value="강서구">강서구</option>
+		                <option value="강북구">강북구</option>
+		                <option value="서대문구">서대문구</option>
+		                <option value="광진구">광진구</option>
+		                <option value="마포구">마포구</option>
+		                <option value="동작구">동작구</option>
+		                <option value="종로구">종로구</option>
+		              </select>
+		              <select id="emd" name="emd">
+		                <option value="1" selected="selected">풍납동</option>
+		                <option value="2">석촌동</option>
+		                <option value="3">성내동</option>
+		                <option value="4">삼전동</option>
+		                <option value="5">화곡동</option>
+		                <option value="6">오쇠동</option>
+		                <option value="7">등촌동</option>
+		                <option value="8">마곡동</option>
+		                <option value="9">우장산동</option>
+		                <option value="10">개화동</option>
+		                <option value="11">방화동</option>
+		              </select>
 				</div>
 	    	</div>
 	    	<div class="box1">
-		    	<div id="img-box">
-
-			    	<img src="http://placehold.it/400x300" id="product-img">
+		    	<div id="img-box" style="position: relative; width:400px; height: 300px; text-align: center; ">
+		    		<!--  초기 업로드시 해당 객체 제거 -->
 			 
 
 		    		
@@ -127,17 +163,44 @@ select{
 		    	
 	    	</div>
 	    	<input type="button" class="btn btn-primary" id="prev-btn" value="Prev">
-	    	<input type="button" class="btn btn-primary" id="registration-btn" value="상품이미지첨부">
+	    	<input type="file" class="btn btn-primary" id="registration-btn" value="상품이미지첨부" name="pathDirs" onchange="setDetailImage(event);" multiple>
 			<input type="button" class="btn btn-primary" id="next-btn" value="Next">
 			<input type="button" class="btn btn-primary" id="commit-btn" value="작성완료">
 	
+		</form>
 		</section>
 		
 	</main>
-	
-	<script>
-  
-        
-    </script>
+<script>
+	var imgArr = new Array();
+
+	function setDetailImage(event){
+		for(var image of event.target.files){
+			var reader = new FileReader();
+			
+			reader.onload = function(event){
+				var img = document.createElement("img");
+				
+				img.setAttribute("src", event.target.result);
+				img.setAttribute("class", "col-lg-6");
+				img.setAttribute("position", "absolute");
+				img.setAttribute("left", "0px");
+				img.setAttribute("top", "0px");
+				img.setAttribute("width", "400px");
+				img.setAttribute("hight", "300px");
+				img.setAttribute("object-fit","scale-down");
+				img.setAttribute("vertical-align","middle");
+				img.setAttribute("display","black");
+				img.setAttribute("opacity", "1");
+				
+				document.querySelector("div#img-box").appendChild(img);
+			};
+			
+			imgArr.
+			console.log(image);
+			reader.readAsDataURL(image);
+		}
+	}
+</script>	
 </body>
 </html>
