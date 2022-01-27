@@ -29,8 +29,8 @@ public class ProductDAO {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			conn = DriverManager.getConnection(url, id, pw);
-			conn = DBUtil.open("goguma","java1234");
+			conn = DriverManager.getConnection(url, id, pw);
+//			conn = DBUtil.open("goguma","java1234");
 			return conn;
 		} catch (Exception e) {
 			e.printStackTrace();
