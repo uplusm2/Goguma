@@ -6,7 +6,7 @@
   <head>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <title>아이디 찾기</title>
+    <title>고구마켓!</title>
     <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
     <style>
 	.panel {
