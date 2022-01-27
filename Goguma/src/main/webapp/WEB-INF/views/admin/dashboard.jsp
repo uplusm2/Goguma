@@ -21,48 +21,67 @@
 	<!-- dashboard.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
-		<div class="container">
-			
-			<!-- 왼쪽 네비게이션바 -->
-			<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
-			
-			<!-- 본문 -->
-			<div class="article dashboard">
+		<section class="content">
+			<div class="container">
 
-				<!-- 제목 -->
-				<div class="subtitle"><h2>대시보드</h2></div>
+				<!-- 왼쪽 네비게이션바 -->
+				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 
-				<!-- 박스들 -->
-				<div class="card">
+				<!-- 본문 -->
+				<div class="article dashboard">
 
-					<div class="item" id="moneyBtn">
-						<div class="item-icon" ><i class="fas fa-money-bill-wave"></i></div>
-						<div class="item-text"><span class="item-num">5,495,000</span><br><span class="item-info">오늘 거래금액</span></div>
+					<!-- 제목 -->
+					<div class="subtitle">
+						<h2>대시보드</h2>
 					</div>
-					
-					<div class="item" id="productBtn">
-						<div class="item-icon"><i class="fas fa-shopping-cart"></i></i></div>
-						<div class="item-text"><span class="item-num">126</span><br><span class="item-info">업데이트된 상품</span></div>
-					</div>
-					
-					<div class="item" id="visitBtn">
-						<div class="item-icon"><i class="fas fa-user"></i></div>
-						<div class="item-text"><span class="item-num">1,270</span><br><span class="item-info">오늘 방문자수</span></div>
-					</div>
-					
-				</div>
 
-<!-- 				<input type="button" id="visitBtn" style="width: 100px;">
- -->				<div class="chart-container">
-					<div id="visitChart"></div>
+					<!-- 박스들 -->
+					<div class="card">
+
+						<div class="item" id="moneyBtn">
+							<div class="item-icon">
+								<i class="fas fa-money-bill-wave"></i>
+							</div>
+							<div class="item-text">
+								<span class="item-num">5,495,000</span><br>
+								<span class="item-info">오늘 거래금액</span>
+							</div>
+						</div>
+
+						<div class="item" id="productBtn">
+							<div class="item-icon">
+								<i class="fas fa-shopping-cart"></i></i>
+							</div>
+							<div class="item-text">
+								<span class="item-num">126</span><br>
+								<span class="item-info">업데이트된 상품</span>
+							</div>
+						</div>
+
+						<div class="item" id="visitBtn">
+							<div class="item-icon">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="item-text">
+								<span class="item-num">1,270</span><br>
+								<span class="item-info">오늘 방문자수</span>
+							</div>
+						</div>
+
+					</div>
+
+					<!--<input type="button" id="visitBtn" style="width: 100px;">-->
+					<div class="chart-container">
+						<div id="visitChart"></div>
+					</div>
+
+					<div class="chart-container">
+						<div id="daliyVisitChart"></div>
+					</div>
+
 				</div>
-				
-				<div class="chart-container">
-					<div id="daliyVisitChart"></div>
-				</div>
-				
 			</div>
-		</div>
+		</section>
 
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 

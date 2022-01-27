@@ -10,6 +10,15 @@
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
 
+	.article {
+		padding-top: 0;
+	}
+	
+	.article .title {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	
 	.table .user-img {
 		text-align: center;
 		vertical-align: middle;
@@ -38,6 +47,7 @@
 	<!-- viewuser.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
+		<section class="content">
 		<div class="container">
 			
 			<!-- 왼쪽 네비게이션바 -->
@@ -47,8 +57,8 @@
 			<div class="article">
 			
 				<!-- 제목 -->
-				<div class="subtitle">
-					<p>${dto.name}(${dto.id})님의회원정보</p>
+				<div class="title">
+					<h2>${dto.name}(${dto.id})님의회원정보</h2>
 				</div>
 	
 				<!-- 회원 정보 -->
@@ -183,13 +193,17 @@
 						<!-- 문의내역 -->
 						<div role="tabpanel" class="tab-pane" id="questionRecord">
 							<table class="table table-bordered" id="questionTable">
-								<tr>
-									<th>번호</th>
-									<th>문의유형</th>
-									<th>제목</th>
-									<th>작성날짜</th>
-									<th>상태</th>
-								</tr>
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>문의유형</th>
+										<th>제목</th>
+										<th>작성날짜</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
 							</table>
 						</div>
 					</div><!-- 회원 활동 내역 테이블 끝 -->
@@ -201,7 +215,7 @@
 		</div><!-- container 끝 -->
 
 		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
-
+		</section>
 	</main>
 
 	<script>
@@ -305,7 +319,7 @@
 				data: 'id=${dto.id}',
 				dataType: "json",
 				success: function(list){
-					$('#comcommentTable tbody').empty();
+					$('#questionTable tbody').empty();
 					list.forEach((item) => {
 						$('#questionTable tbody').append('<tr>');
 						$('#questionTable tbody').append(`<td>\${item.seq}</td>`);

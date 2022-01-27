@@ -35,12 +35,12 @@ public class DashBoard extends HttpServlet {
 		
 		ConnDAO dao = new ConnDAO();
 		
-		ArrayList<ConnDTO> list = dao.MonthList();
-		ArrayList<ConnDTO> avgList = dao.avgMonthList();
+		//ArrayList<ConnDTO> list = dao.monthList();
+		//ArrayList<ConnDTO> avgList = dao.avgMonthList();
 		ArrayList<ConnDTO> daliyList = dao.daliyList();
 		
-		req.setAttribute("list", list);
-		req.setAttribute("avglist", avgList);
+		//req.setAttribute("list", list);
+		//req.setAttribute("avglist", avgList);
 		req.setAttribute("daliyList", daliyList);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/dashboard.jsp");
