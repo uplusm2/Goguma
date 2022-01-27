@@ -137,4 +137,69 @@ alter system set processes=300 scope=spfile;
 
 
 select count(*) from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);
-select * from(select a.*,rownum as num from( select * from tblproduct where id = 'user100' order by regdate desc) a);
+select * from(select a.*,rownum as rnum from( select * from tblproduct where id = 'user100' order by regdate desc) a) where rnum between 1 and 3;
+select * from(select a.*,rownum as rnum from( select * from tblproduct where id = ? order by regdate desc) a) where rnum between ? and ?;
+
+
+
+
+create or replace Trigger Trgreview
+after insert on tbldeal
+for each row
+begin
+insert into tblReview values ('S',:NEW.deal_seq, 10,'null');
+insert into tblReview values ('B',:NEW.deal_seq, 10,'null');
+commit;
+end;
+update tblReview set score= ?,content=? where type=? and deal_seq=?
+insert into tblDeal (deal_seq, id, product_seq, price, regdate) values (deal_seq.nextVal, 'user53', 162, 197000, '2020-01-14');
+
+select * from tblreview;
+
+
+
+select * from VWPURCHASEDPRODUCT;
+
+
+select 
+    * 
+from(select a.* , rownum as rnum from( select * from (VWPURCHASEDPRODUCT p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+		 where type = 'B' order by p.regdate) a);
+         
+         
+select 
+     *
+from(select a.* , rownum as rnum from( select 
+p.Product_seq,p.content,p.nickname,p.id,p.selid,p.regdate,re.deal_seq,re.type,re.CONTENT as review
+from (VWPURCHASEDPRODUCT p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+		 where type = 'B' order by p.regdate) a) where rnum between 1 and 100;
+
+select * from VWPURCHASEDPRODUCT;
+
+select * from vwproductsold;
+
+
+
+select 
+     *
+from(select a.* , rownum as rnum from( select 
+p.Product_seq,p.content,p.nickname,p.id,p.BUYID,p.regdate,re.type,re.deal_seq,re.CONTENT as review
+from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
+		 where type = 'S' order by p.regdate) a) where rnum between 1 and 100;
+
+
+
+
+
+select * from vwReceived_seller_reviews where selid;
+
+
+
+
+
+
+
+
+
+
+

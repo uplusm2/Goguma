@@ -46,6 +46,10 @@ public class ProfileEditOk extends HttpServlet {
 	         
 	         String path = multi.getFilesystemName("pathDir");
 	         
+	         if(nickName==null) nickName = (String)req.getSession().getAttribute("nickname");
+	         if(nickName==null) intro = " ";
+	         if(nickName==null) path = "default image.jpg";
+	         
 	         
 	         HashMap<String,String> map = new HashMap<String,String>();
 	         
