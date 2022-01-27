@@ -10,7 +10,7 @@
 		</h1>
 		<form method="GET" action="">
 			<input class="search" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
-			<input class="search-img" type="image" src="/goguma/asset/img/search.png" alt="">
+			<input type="submit" class="submit"><i class="bi bi-search submit"></i>
 			<ul class="popular-keyword">
 	            <p>TOP 10</p>
 	            <c:if test="${searchList.size() != 0}">
@@ -34,8 +34,11 @@
 			</c:if>
 			
 			<c:if test="${not empty id}">
-			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img"><span class="glyphicon glyphicon-envelope"></span></li>
+			<c:if test="${newMessage == 0}">
+			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img open"><span class="bi bi-envelope-open"></span></li>
+			</c:if>
 			<c:if test="${newMessage > 0}">
+			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img"><span class="bi bi-envelope"></span></li>
 			<li class="message-count"><span>${newMessage}</span></li>
 			</c:if>
 			<c:if test="${not empty nickname && lv==1}">
@@ -51,9 +54,9 @@
 			</c:if>
 		</ul>
 		<ul class="menu">
-			<li onclick="location.href='/goguma/product/productList.do';"><p><img src="/goguma/asset/img/menu1.png">중고거래</p></li>
-			<li onclick="location.href='/goguma/community/communityList.do';"><p><img src="/goguma/asset/img/menu2.png">커뮤니티</p></li>
-			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><p><img src="/goguma/asset/img/menu3.png">고객센터</p></li>
+			<li onclick="location.href='/goguma/product/productList.do';"><p><i class="bi bi-cart-plus"></i>중고거래</p></li>
+			<li onclick="location.href='/goguma/community/communityList.do';"><p><i class="bi bi-chat-dots"></i>커뮤니티</p></li>
+			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><p><i class="bi bi-headset"></i>고객센터</p></li>
 		</ul>
 	</div>
 </header>
