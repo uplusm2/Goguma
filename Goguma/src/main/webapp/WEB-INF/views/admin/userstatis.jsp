@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <script src="/goguma/asset/js/highcharts.js"></script>
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
@@ -20,7 +20,9 @@
 				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 				
 				<div class="article">
-					<h3>회원 통계</h3>
+					<div class="title">
+						<h2>회원 통계</h2>
+					</div>
 					<div id="chart" style="width:800px;"></div>
 				</div>
 			</div>

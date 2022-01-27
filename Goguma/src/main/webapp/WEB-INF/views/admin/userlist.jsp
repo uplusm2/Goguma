@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>고구마장터 전체 회원 관리</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <link rel="stylesheet" type="text/css"
 	href="/goguma/asset/css/admin.css">
@@ -22,6 +22,29 @@
 .content .btn {
 	width: 80px;
 }
+
+#modalTable {
+	width: 350px;
+	margin: auto;
+}
+
+#modalTable th,
+#modalTable td {
+	text-align: left;
+	width: 150px;
+}
+
+#modalTable td,
+#modalTable input{
+	text-align: center;
+	width: 150px;
+}
+
+#modalTable select {
+	margin-left:10px;
+}
+
+
 </style>
 </head>
 <body>
@@ -35,8 +58,7 @@
 				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 
 				<div class="article">
-					<div class="title"
-						onclick="location.href='/goguma/admin/userlist.do';">
+					<div class="title" onclick="location.href='/goguma/admin/userlist.do';">
 						<h2>전체 회원 관리</h2>
 					</div>
 					<div class="userlist">
@@ -49,92 +71,93 @@
 								<th>상태</th>
 								<th>처리</th>
 							</tr>
-							<tr>
-								<c:forEach items="${list}" var="dto">
-									<tr>
-										<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
-										<td>${dto.name}</td>
-										<td>${dto.since}</td>
-										<td>${dto.score}</td>
-										<td>${dto.state}</td>
+							<c:forEach items="${list}" var="dto">
+								<tr>
+									<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a></td>
+									<td>${dto.name}</td>
+									<td>${dto.since}</td>
+									<td>${dto.score}</td>
+									<td>${dto.state}</td>
 
-										<c:if test="${dto.state != '차단'}">
-											<td>
-												<input type="button" class="btn btn-default block" value="차단" 
-													data-toggle="modal" data-target="#${dto.id}"
-													data-id="${dto.id}">
-
-												<div class="modal fade" id="${dto.id}" tabindex="-1"
-													role="dialog" aria-labelledby="blockModalLabel"
-													aria-hidden="true">
-													<div class="modal-dialog">
-														<div class="modal-content">
-															<div class="modal-header">
-																<button type="button" class="close" data-dismiss="modal"
-																	aria-label="Close">
-																	<span aria-hidden="true">&times;</span>
-																</button>
-																<h4 class="modal-title" id="blockModalLabel">차단하기</h4>
-															</div>
-															<div class="modal-body">
-																<form>
-																	<table>
-																		<tr>
-																			<th>차단할 회원</th>
-																			<td>${dto.name}</td>
-																		</tr>
-																		<tr>
-																			<th>차단할 아이디</th>
-																			<td><input type="text" name="id" value="${dto.id}" readonly style="border: 0px"></td>
-																		</tr>
-																		<tr>
-																			<th>차단 사유</th>
-																			<td><select name="blockTypeSeq"
-																				class="form-control">
-																					<option value="1">사기</option>
-																					<option value="2">잠수</option>
-																					<option value="3">욕설</option>
-																					<option value="4">타 사이트 광고</option>
-																					<option value="5">불법</option>
-																			</select></td>
-																		</tr>
-																	</table>
-																</form>
-															</div>
-															<div class="modal-footer">
-																<button type="button" id="blockBtn"
-																	class="btn btn-default">차단</button>
-																<button type="button" class="btn btn-default"
-																	data-dismiss="modal">취소</button>
-															</div>
-														</div>
+									<c:if test="${dto.state != '차단'}">
+									<td>
+										<input type="button" class="btn btn-default block" value="차단" 
+											data-toggle="modal" data-target="#${dto.id}"
+											data-id="${dto.id}">
+											
+										<div class="modal fade" id="${dto.id}" tabindex="-1"
+											role="dialog" aria-labelledby="blockModalLabel"
+											aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal"
+															aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+														<h4 class="modal-title" id="blockModalLabel">차단하기</h4>
+													</div>
+													<div class="modal-body">
+														<form>
+															<table id="modalTable">
+																<tr>
+																	<th>차단할 회원</th>
+																	<td>${dto.name}</td>
+																</tr>
+																<tr>
+																	<th>차단할 아이디</th>
+																	<td><input type="text" name="id" value="${dto.id}" readonly style="border: 0px"></td>
+																</tr>
+																<tr>
+																	<th>차단 사유</th>
+																	<td><select name="blockTypeSeq"
+																		class="form-control">
+																			<option value="1">사기</option>
+																			<option value="2">잠수</option>
+																			<option value="3">욕설</option>
+																			<option value="4">타 사이트 광고</option>
+																			<option value="5">불법</option>
+																	</select></td>
+																</tr>
+															</table>
+														</form>
+													</div>
+													<div class="modal-footer">
+														<button type="button" id="blockBtn"
+															class="btn btn-default">차단</button>
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">취소</button>
 													</div>
 												</div>
-											</td>
-										</c:if>
-
-										<%-- <c:if test="${dto.state == '탈퇴'}">
-											<td><input type="button" value="차단" disabled="disabled"
-												class="btn btn-default"></td>
-										</c:if> --%>
-										
-										<c:if test="${dto.state == '차단'}">
-											<td><input type="button" value="차단해제"
-												class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
-										</c:if>
-									</tr>
-								</c:forEach>
-								
-								<c:if test="${list.size() == 0 }">
-									<tr>
-										<td colspan="6">일치하는 회원이 없습니다.</td>
-									</tr>
+											</div>
+										</div>
+									</td>
 								</c:if>
-							</tr>
+
+									<%-- <c:if test="${dto.state == '탈퇴'}">
+										<td><input type="button" value="차단" disabled="disabled"
+											class="btn btn-default"></td>
+									</c:if> --%>
+									
+									<c:if test="${dto.state == '차단'}">
+										<td><input type="button" value="차단해제"
+											class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
+									</c:if>
+								</tr>
+							</c:forEach>
+							
+							<c:if test="${list.size() == 0 }">
+								<tr>
+									<td colspan="6">일치하는 회원이 없습니다.</td>
+								</tr>
+							</c:if>
+								
 						</table>
-
+						
+						<!-- 페이지바 -->
 						<div class="pagebar">${pagebar}</div>
-
+						
+						<!-- 검색 -->
 						<div class="search">
 							<form method="GET" action="/goguma/admin/userlist.do">
 								<select name="column" class="text">
@@ -152,7 +175,7 @@
 			</div>
 		</section>
 
-		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 
 	</main>
 
@@ -167,14 +190,14 @@
 		/* $('.block').on('click', function() {
 			$('#${dto.id}').modal('show');
 		}); */
-		/*
+		
 		$('#blockBtn').click(function() {
 
-			var id = $('input[name=id]').val();
-			alert(id);
+			//var id = $('input[name=id]').val();
+			alert();
 			//var blockTypeSeq = $(this).find('select[name=blockType]').val();
 
-			/* $.ajax({
+			$.ajax({
 				url : '/goguma/admin/block.do',
 				type : "POST",
 				async : true,
@@ -183,7 +206,7 @@
 				success : function(result) {
 					//console.log(data);
 					if (result.result != 0) {
-						$('#blockModal').modal('hide');
+						//$('#blockModal').modal('hide');
 						window.alert("차단되었습니다.");
 						document.location.reload(true);
 					} else {
@@ -192,12 +215,12 @@
 				},
 			});
 		})
-		*/
 		
+		/*
 		$('div[name=bbb]').on('show.bs.modal', function(event) {
 
 			console.log('바보');
-			/*event.find('#blockBtn').click(function() {
+			event.find('#blockBtn').click(function() {
 
 				var id = $(this).find('input[name=id]').val();
 				var blockTypeSeq = $(this).find('select[name=blockType]').val();
@@ -218,9 +241,10 @@
 						}
 					},
 				});
-			})*/
+			})
 		});
-		 
+		*/
+		
 		//차단해제
 		$(document).on("click", ".btn-unblock", function() {
 

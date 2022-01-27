@@ -137,6 +137,7 @@ public class UserDAO {
 				dto.setSince(rs.getString("since"));
 				dto.setScore(rs.getString("score"));
 				dto.setState(rs.getString("state"));
+				dto.setPath(rs.getString("path"));
 				
 				return dto;
 			}

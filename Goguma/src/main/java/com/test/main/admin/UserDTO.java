@@ -13,6 +13,8 @@ public class UserDTO {
 	private String score;
 	private String state;
 	
+	private String path;
+	
 	public String getId() {
 		return id;
 	}
@@ -72,6 +74,12 @@ public class UserDTO {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	
