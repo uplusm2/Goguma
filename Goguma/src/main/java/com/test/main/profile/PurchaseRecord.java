@@ -106,6 +106,8 @@ public class PurchaseRecord extends HttpServlet {
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 		
+		list.forEach(e->System.out.println(e.toString()));
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/profile/purchaserecord.jsp");
 		dispatcher.forward(req, resp);
 	}

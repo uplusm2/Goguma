@@ -67,7 +67,7 @@ form {
 						<tr>
 							<td style="width: 110px;"><h5>새 비밀번호</h5></td>
 							<td><input class="form-control" placeholder="비밀번호"
-								type="password" onkeyup="passwordCheckFunction();" id="pw"
+								type="password" id="pw"
 								name="pw" maxLength="16"></td>
 						</tr>
 						<tr>
@@ -161,20 +161,20 @@ form {
 	<div></div>
 <%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script type="text/javascript">
-		function passwordCheckFunction() {
+	function passwordCheckFunction() {
+		
+		var password = document.getElementById('pw');
+		var passwordConfirm = document.getElementById('pw2');
 
-			var password = document.getElementById('pw');
-			var passwordConfirm = document.getElementById('pw2');
-
-			if (password.value == passwordConfirm.value) {
-				$('#checkPw').text('비밀번호 일치');
-				$('#checkPw').attr('color', 'cornflowerblue')
-			} else {
-				$('#checkPw').text('비밀번호 불일치');
-				$('#checkPw').attr('color', 'red')
-			}
-
+		if(password.value == passwordConfirm.value){
+			$('#checkPw').text('비밀번호 일치');
+			$('#checkPw').attr('color', 'cornflowerblue')
+		}else{
+			$('#checkPw').text('비밀번호 불일치');
+			$('#checkPw').attr('color', 'red')
 		}
+	
+}
 	</script>
 
 </body>
