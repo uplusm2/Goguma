@@ -126,14 +126,13 @@ body {
 	    	<ul class="row">
 		
 				<c:forEach items="${list}" var="dto">
-			
-				<li class="cell">
-				
-					<div class="img-box"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
-					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
-            		<div class="product-name"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}">${dto.name}</a></div>
-            		<div class="product-price">${dto.price}</div>
-        		</li>
+					
+					<li class="cell">
+						<div class="img-box"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+						onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
+		           		<div class="product-name"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}">${dto.name}</a></div>
+		           		<div class="product-price">${dto.price}</div>
+		        	</li>
 				</c:forEach>
 			</ul>
 			</div>
@@ -142,29 +141,26 @@ body {
 				</c:if>
 			
 					
-    		
-	    <div class="wrap_paging" align="center">
-		<a href="#none" class="first">맨처음</a>
-		<a href="#none" class="prev">이전</a>
-		<a href="#none" class="on view">1</a>
-		<a href="#none" class="view">2</a>
-		<a href="#none" class="view">3</a>
-		<a href="#none">4</a>
-		<a href="#none">5</a>
-		<a href="#none">6</a>
-		<a href="#none">7</a>
-		<a href="#none">8</a>
-		<a href="#none" class="next">다음</a>
-		<a href="#none" class="last">마지막</a>
-		</div>
-		<input type="button" class="btn btn-primary" id="product-regi-btn" value="상품등록"
-		onclick="location.href='/goguma/product/productRegistration.do'">
-		</section>
-		
+    	
+		<c:if test="${not empty id}">
+			<div class="button">
+				<button type="button" class="btn btn-primary" id="product-regi-btn"
+					onclick="location.href='/goguma/product/productRegistration.do';">
+					상품등록
+				</button>
+			</div>
+		</c:if>
+
+			<div class="pagebar" style="margin-left: 400px;">${pagebar}</div>
+
+
 	</main>
 	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
-        
+		<c:if test="${map.searchmode == 'y'}">
+		$('select[name=column]').val('${map.column}');
+		$('input[name=word]').val('${map.word}');
+		</c:if>
         
     </script>
 </body>
