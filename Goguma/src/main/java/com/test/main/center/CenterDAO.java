@@ -20,7 +20,7 @@ public class CenterDAO {
 	public CenterDAO(){
 		
 		try {
-
+			//conn = DBUtil.open();
 			conn = DBUtil.open("goguma","java1234");
 			stat = conn.createStatement();
 
