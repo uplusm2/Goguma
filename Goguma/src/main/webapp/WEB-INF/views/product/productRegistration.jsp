@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<% int fileSeq = 34; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,7 +97,7 @@ select {
 	transform:translate(700px, -10px);
 }
 .fileList{
-	transform:translate(200px, 20px);
+	transform:translate(120px, 20px);
 }
 .slick-next.slick-arrow{
 	color: black;
@@ -190,7 +191,20 @@ select {
 				<div id="text-box">
 					<textarea class="text product-text" placeholder="상세내용을 입력해주세요" name = "content"></textarea>
 				</div>		
-				<input class="fileList" type="file" class="btn btn-primary" id="registration-btn" value="상품이미지첨부" name="pathDirs[]" onchange="setDetailImage(event);" multiple> 
+<!--  multiple  -->	
+		
+				<input type="file" id="file1" name="file1"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : ''">
+				<input type="file" id="file2" name="file2"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file3" name="file3"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file4" name="file4"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file5" name="file5"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+			
+				<input type="file" id="file6" name="file6"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file7" name="file7"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file8" name="file8"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file9" name="file9"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file10" name="file10"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				
 				
 				<input class="write" type="submit" class="btn btn-primary" id="commit-btn" value="작성완료">
 
@@ -201,6 +215,8 @@ select {
 
 	<%@include file="/WEB-INF/views/inc/footer.jsp"%>
 <script>
+	
+	
 	
 	$( document ).ready( function() {
 	    $( '.slider' ).slick( {
@@ -214,6 +230,7 @@ select {
 			var reader = new FileReader();
 			
 			reader.onload = function(event){
+				
 				var img = document.createElement("img");
 				var div = document.createElement("div");
 				img.setAttribute("src", event.target.result);
@@ -224,14 +241,14 @@ select {
 				$('.slider').slick("slickAdd", div);
 				$(".slider").slick('unslick');
 				$('.slider').slick('refresh');
+				
+				$(".buttonSpace").append(input);
 			};
 			
 			console.log(image);
 			reader.readAsDataURL(image);
 		}
 	}
-	
-	
         
 </script>
 
