@@ -32,19 +32,24 @@
 	<script>
 	var categories = [
 	    '10-19', '20-29', '30-39', '40-49', '50-59', '60-69',
-	    '70-79', '80-89', '90-99', '100 + '
+	    '70-79', '80+'
 	];
 
+	Highcharts.setOptions({
+		colors: ['#F4BF35', '#a562d4']
+	});
+	
+	
 	Highcharts.chart('chart', {
+		
+		
 	    chart: {
 	        type: 'bar'
 	    },
 	    title: {
-	        text: 'Population pyramid for Germany, 2018'
+	        text: '연령별 회원 분포'
 	    },
-	    subtitle: {
-	        text: 'Source: <a href="http://populationpyramid.net/germany/2018/">Population Pyramids of the World from 1950 to 2100</a>'
-	    },
+
 	    accessibility: {
 	        point: {
 	            valueDescriptionFormat: '{index}. Age {xDescription}, {value}%.'
@@ -82,7 +87,7 @@
 	        },
 	        accessibility: {
 	            description: 'Percentage population',
-	            rangeDescription: 'Range: 0 to 5%'
+	            rangeDescription: 'Range: 0 to 50%'
 	        }
 	    },
 
@@ -102,14 +107,14 @@
 	    series: [{
 	        name: 'Male',
 	        data: [
-	            -2.2, -2.4, -3.0, -3.3, -3.2,
-	            -2.9, -3.5, -4.4, -4.1, -2.7
+	            -22, -24, -30, -33, -32,
+	            -29, -19, -11
 	        ]
 	    }, {
 	        name: 'Female',
 	        data: [
-	            2.1, 2.6, 2.9, 3.2, 3.1,
-	            2.9, 3.4, 2.5, 2.7, 2.2
+	            21, 26, 29, 32, 31,
+	            29, 21, 17
 	        ]
 	    }]
 	});

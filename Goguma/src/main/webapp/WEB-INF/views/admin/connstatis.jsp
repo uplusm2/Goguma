@@ -9,7 +9,6 @@
 <script src="/goguma/asset/js/highcharts.js"></script>
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
-
 </style>
 </head>
 <body>
@@ -29,16 +28,13 @@
 					<div class="subtitle"><h2>접속 통계</h2></div>
 					
 					<div class="chart-container">
-						<div id="connchart"></div>
+						<div id="daliyChart"></div>
 					</div>
 
 					<div class="chart-container">
-						<div id="visitChart"></div>
+						<div id="monthlyChart"></div>
 					</div>
 
-					<div class="chart-container">
-						<div id="daliyVisitChart"></div>
-					</div>
 
 				</div>
 			</div>
@@ -49,27 +45,27 @@
 	</main>
 
 	<script >
-	Highcharts.chart('connchart', {
+	
+	Highcharts.chart('daliyChart', {
 
 	    title: {
-	        text: 'Solar Employment Growth by Sector, 2010-2016'
-	    },
-
-	    subtitle: {
-	        text: 'Source: thesolarfoundation.com'
+	        text: '일별 홈페이지 방문자 수'
 	    },
 
 	    yAxis: {
 	        title: {
-	            text: 'Number of Employees'
+	            text: '방문자 수(명)'
 	        }
 	    },
 
-	    xAxis: {
-	        accessibility: {
-	            rangeDescription: 'Range: 2010 to 2017'
-	        }
+	    xAxis:{
+
+	    	   labels:{rotaton:-45}   //라벨 기울이기
+
+	    	   ,categories:['20','21','22', '23', '24', '25', '26', '27']   //x축 표시값 직접지정
+
 	    },
+		
 
 	    legend: {
 	        layout: 'vertical',
@@ -81,26 +77,13 @@
 	        series: {
 	            label: {
 	                connectorAllowed: false
-	            },
-	            pointStart: 2010
+	            }
 	        }
 	    },
 
 	    series: [{
-	        name: 'Installation',
-	        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-	    }, {
-	        name: 'Manufacturing',
-	        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-	    }, {
-	        name: 'Sales & Distribution',
-	        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-	    }, {
-	        name: 'Project Development',
-	        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-	    }, {
-	        name: 'Other',
-	        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+	        name: '최근 일주일 방문자 수',
+	        data: [ <c:forEach items="${daliyList}" var="dto">${dto.count}, </c:forEach> ]
 	    }],
 
 	    responsive: {
@@ -119,6 +102,67 @@
 	    }
 
 	});
+	
+	Highcharts.chart('monthlyChart', {
+
+	    title: {
+	        text: '월별 홈페이지 방문자 수'
+	    },
+
+	    yAxis: {
+	        title: {
+	            text: '방문자 수(명)'
+	        }
+	    },
+
+	    xAxis:{
+
+	    	   labels:{rotaton:-45}   //라벨 기울이기
+
+	    	   ,categories: ['202102','202103','202104', '202105', '202106', '202107', '202108', '202109', '202110', '202111', '202112', '202201']   //x축 표시값 직접지정
+
+	    },
+
+	    legend: {
+	        layout: 'vertical',
+	        align: 'right',
+	        verticalAlign: 'middle'
+	    },
+
+	    plotOptions: {
+	        series: {
+	            label: {
+	                connectorAllowed: false
+	            }
+	        }
+	    },
+
+	    series: [{
+	        name: '최근 12개월 방문자 수',
+	        data: [ <c:forEach items="${monthList}" var="dto">${dto.count}, </c:forEach> ]
+	    }, {
+	        name: '연간 평균 방문자 수',
+	        data: [ <c:forEach items="${avgMonthList}" var="dto">${dto.count}, </c:forEach>]
+	    }],
+
+	    responsive: {
+	        rules: [{
+	            condition: {
+	                maxWidth: 500
+	            },
+	            chartOptions: {
+	                legend: {
+	                    layout: 'horizontal',
+	                    align: 'center',
+	                    verticalAlign: 'bottom'
+	                }
+	            }
+	        }]
+	    }
+
+	});
+	
+	
 	</script>
 </body>
 </html>

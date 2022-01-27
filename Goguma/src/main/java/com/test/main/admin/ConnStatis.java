@@ -17,12 +17,14 @@ public class ConnStatis extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		ConnDAO dao = new ConnDAO();
-		ConnDTO dto = new ConnDTO();
 		
 		ArrayList<ConnDTO> dailyList = dao.daliyList();
 		ArrayList<ConnDTO> monthList = dao.monthList();
 		ArrayList<ConnDTO> avgMonthList = dao.avgMonthList();
 		
+		req.setAttribute("daliyList", dailyList);
+		req.setAttribute("monthList", monthList);
+		req.setAttribute("avgMonthList", avgMonthList);
 
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admin/connstatis.jsp");
 		dispatcher.forward(req, resp);
