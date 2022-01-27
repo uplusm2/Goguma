@@ -17,15 +17,15 @@ public class NoticeList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		String column = req.getParameter("column");
 		String word = req.getParameter("word");
 		String searchmode = "n";
 		
-		if (word == null|| word.equals("")) {
+		if ((column == null && word == null) || (column.equals("") && word.equals(""))) {
 			searchmode = "n";
 		} else {
 			searchmode = "y";
 		}
-		
 		
 		CenterDAO dao = new CenterDAO();
 		HashMap<String,String> map = new HashMap<String,String>();
@@ -51,6 +51,7 @@ public class NoticeList extends HttpServlet {
 		
 		map.put("begin", begin + "");
 		map.put("end", end + "");
+		map.put("column", column);
 		map.put("word", word);
 		map.put("searchmode", searchmode);
 		
@@ -114,12 +115,7 @@ public class NoticeList extends HttpServlet {
 			if (dto.getTitle().length() > 20) {
 				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
 			}
-			if (searchmode.equals("y")) {
-				
-				//안녕하세요. 홍길동입니다.
-				//안녕하세요. <span style="">홍길동</span>입니다.
-				dto.setTitle(dto.getTitle().replace(word, "<span style='background-color:yellow;color:tomato;'>" + word + "</span>"));
-			}
+			
 		}
 		
 		

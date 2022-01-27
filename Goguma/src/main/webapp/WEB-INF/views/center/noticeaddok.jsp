@@ -19,7 +19,7 @@
 					<p>공지사항이 등록되었습니다.</p>
 					<div class="button">
 						<input type="button" value="확인하기" class="btn btn-default"
-							onclick="location.href='/goguma/center/faq.do?search=1&page=1';"> 
+							onclick="location.href='/goguma/center/noticelist.do?page=1';"> 
 					</div>
 				</div>
 			</div>

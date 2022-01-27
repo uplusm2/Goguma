@@ -126,6 +126,8 @@ public class QuestionList extends HttpServlet {
 			if (dto.getTitle().length() > 20) {
 				dto.setTitle(dto.getTitle().substring(0, 20) + "..");
 			}
+			
+			
 		}
 		
 		req.setAttribute("list", list);

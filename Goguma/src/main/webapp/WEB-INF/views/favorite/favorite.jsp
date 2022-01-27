@@ -16,6 +16,7 @@
 		border-top : 1px solid #9B59B6;
 		border-bottom : 1px solid #9B59B6;
 		width : 800px;
+		padding-top : 100px;
 	}
 	table, th, td{
 		margin : 0 auto;
@@ -60,7 +61,7 @@
 		text-align : left;
 		padding-left : 10px;
 	}
-	1200
+	
 </style>
 </head>
 <body>
