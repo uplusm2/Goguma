@@ -23,7 +23,6 @@
 	
 		<c:if test="${result == 1}">
 		//성공
-		
 		location.href = '/goguma/center/questionview.do?seq=${seq}';
 		</c:if>
 		
