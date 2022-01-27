@@ -9,8 +9,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.test.main.community.CommunityDTO;
+import com.test.main.main.FavoriteDAO;
 import com.test.main.main.NoticeDAO;
 import com.test.main.main.NoticeDTO;
 import com.test.main.main.ProductDAO;
@@ -20,10 +22,13 @@ import com.test.main.main.SearchDTO;
 
 @WebServlet("/main.do")
 public class Main extends HttpServlet {
+	private HttpSession session;
 	private SearchDAO dao;
 	private ProductDAO productDao;
 	private NoticeDAO noticeDao;
 	private NoticeDTO noticeDto;
+	private FavoriteDAO favoriteDao;
+	private String id;
 	
 	private ArrayList<ProductDTO> productList;
 	private ArrayList<SearchDTO> searchList;
@@ -32,14 +37,22 @@ public class Main extends HttpServlet {
 		dao = new SearchDAO();
 		productDao = new ProductDAO();
 		noticeDao = new NoticeDAO();
+		favoriteDao = new FavoriteDAO();
 	}
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		session = req.getSession();
+		
+		if(session.getAttribute("id") != null) {
+			id = session.getAttribute("id").toString();
+		}
 		
 		searchList = dao.list();
 		productList = productDao.newList();
 		noticeDto = noticeDao.newNotice();
+		int favoriteCount = favoriteDao.getCount(id); 
 		
 		setProductPrice();
 		setProductName();
@@ -49,6 +62,7 @@ public class Main extends HttpServlet {
 		req.setAttribute("searchList", searchList);
 		req.setAttribute("productList", productList);
 		req.setAttribute("noticeDto", noticeDto);
+		req.setAttribute("favoriteCount", favoriteCount);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
