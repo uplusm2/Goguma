@@ -55,13 +55,18 @@
     	text-align: left;
     	margin-left: 7px;
     }
+    
+    #guma {
+    	width: 30px;
+    	height: 30px;
+    }
     </style>
   </head>
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 
   <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
 
-		<div id=ttitle>***  아이디 찾기  ***</div>
+		<div id=ttitle><img id="guma" src="/goguma/asset/img/default image.jpg">  아이디 찾기  <img id="guma" src="/goguma/asset/img/default image.jpg"></div>
 
 				<div class="panel panel-default">
 

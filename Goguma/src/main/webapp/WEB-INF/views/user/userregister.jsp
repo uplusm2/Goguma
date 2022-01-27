@@ -22,6 +22,34 @@
 		margin-top: 50px;
 	}
 	
+	h5 {
+		margin-top: 10px;
+		font-size: 15px;
+	}
+	
+	#sido {
+		font-size: 15px;
+	}
+	
+	#sgg {
+		font-size: 15px;
+	}
+	
+	#emd {
+		font-size: 15px;
+	}
+	
+	h4 {
+		text-align: center;
+		font-size: 30px;
+	}
+	
+	#guma {
+    	width: 30px;
+    	height: 30px;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    }
 	
 </style>
 	
@@ -42,7 +70,7 @@
 			<table class="table" style="text-align: center; border:1px solid #ddd">
 				<thead>
 					<tr>
-						<th colspan="3" ><h4>회원 가입</h4></th>
+						<th id="tttitle" colspan="3" ><h4><img id="guma" src="/goguma/asset/img/default image.jpg">회원 가입<img id="guma" src="/goguma/asset/img/default image.jpg"></h4></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -113,8 +141,8 @@
 		                <option value="울산">울산</option>
 		              </select>  
 		              <select id="sgg" name="sgg">
-		                <option selected="selected">시군구구</option>
-		                <option value="강서구">강서구</option>
+		                <option selected="selected">시군구</option>
+		                <option value="송파구">송파구</option>
 		                <option value="강서구">강서구</option>
 		                <option value="강북구">강북구</option>
 		                <option value="서대문구">서대문구</option>

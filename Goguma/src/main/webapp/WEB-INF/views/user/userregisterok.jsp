@@ -14,19 +14,39 @@
 	<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 	.container {
-		width:500px;
+		
 		margin: auto;
 		margin-top: 60px;
 	}
 	
 	#ment {
 		margin-top: 50px;
-		font-size: 50px;
+		font-size: 60px;
 	}
 	
-	#ment {
-		margin-top: 50px;
+	
+	.welcome {
+		margin-top: 20px;
+	
 	}
+	
+	#welcome {
+		font-size: 30px;
+	}
+	
+	#welcome1 {
+		font-size: 30px;
+	}
+	
+	#cam {
+		margin-top: 70px;
+	}
+	
+	#back{
+		margin-top: 100px;
+	}
+	
+
 </style>
 </head>
 <body>
@@ -39,8 +59,8 @@
 			<h1 align="center" id="ment">* 환영합니다! *</h1>
 			
 			<div class="welcome">
-				<div align="center">국내 최고의 중고거래 사이트 고구마 장터에 회원으로 가입되신것을 축하드립니다!</div>
-				<div align="center">고구마켓에서 따듯하고 달콤한 중고거래 하세요!</div>
+				<div id="welcome" align="center">국내 최고의 중고거래 사이트 고구마켓에 회원으로 가입되신것을 축하드립니다!</div>
+				<div id="welcome1" align="center">고구마켓에서 따듯하고 달콤한 중고거래 하세요!</div>
 			</div>
 			<div id="cam" align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
@@ -53,7 +73,9 @@
 
 		</div>
 		
-		
+		<% 
+		 	session.invalidate();
+		%>
 		
 
 	</main>

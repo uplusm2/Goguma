@@ -51,6 +51,11 @@
     	margin-left: 7px;
     }
     
+    #guma {
+    	width: 30px;
+    	height: 30px;
+    }
+    
     </style>
   </head>
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
@@ -65,7 +70,7 @@
 
 
 
-		<div id=ttitle>***  비밀번호 재설정  ***</div>
+		<div id=ttitle><img id="guma" src="/goguma/asset/img/default image.jpg">  비밀번호 재설정  <img id="guma" src="/goguma/asset/img/default image.jpg"></div>
 				<div class="panel panel-default">
 
 
