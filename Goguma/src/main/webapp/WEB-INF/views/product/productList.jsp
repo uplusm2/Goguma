@@ -128,9 +128,10 @@ body {
 				<c:forEach items="${list}" var="dto">
 			
 				<li class="cell">
-					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+				
+					<div class="img-box"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
 					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
-            		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
+            		<div class="product-name"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}">${dto.name}</a></div>
             		<div class="product-price">${dto.price}</div>
         		</li>
 				</c:forEach>

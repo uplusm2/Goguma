@@ -11,7 +11,14 @@ public class ProductDTO {
 	private String content;
 	private String regdate;
 	private String main_img;
+	private String my;
 	
+	public String getMy() {
+		return my;
+	}
+	public void setMy(String my) {
+		this.my = my;
+	}
 	public String getMain_img() {
 		return main_img;
 	}

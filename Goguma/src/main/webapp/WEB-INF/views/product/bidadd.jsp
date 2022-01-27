@@ -89,47 +89,16 @@ select{
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section>
 			<div class="title">
-				<h2>상품등록</h2>
+				<h2>입찰하기</h2>
 			</div>
 			<hr id="main-hr" width="1100px">
-			<input type="text" class="text product-name" placeholder="상품명">
-			<input type="text" class="text product-price" placeholder="희망가격">
-			<div class="dropdown">
-				<div class="container">
-					<select name="trade">
-					    <option value="">거래유형</option>
-					    <option value="일반거래">일반거래</option>
-					    <option value="경매">갱매</option>
-					</select>
-					<select name="address">
-					    <option value="">거래지역</option>
-					    <option value="서울">서울</option>
-					    <option value="경기">경기</option>
-					</select>
-					<select name="category">
-					    <option value="">카테고리</option>
-					    <option value="카테고리1">카테고리1</option>
-					    <option value="카테고리2">카테고리2</option>
-					</select>
+			<form method="POST" action="/goguma/product/bidaddok.do?seq=${dto.seq}">
+				<input type="text" name="price" placeholder="입찰가격을 입력하세요." class="form-text" required>
+				
+				<div class="button">
+					<input type="submit" value="등록" class = "btn primary-btn">
 				</div>
-	    	</div>
-	    	<div class="box1">
-		    	<div id="img-box">
-
-			    	<img src="http://placehold.it/400x300" id="product-img">
-			 
-
-		    		
-		    	</div>
-		    	<div id="text-box">
-		    		<textarea class="text product-text" placeholder="상세내용을 입력해주세요"></textarea>
-		    	</div>
-		    	
-	    	</div>
-	    	<input type="button" class="btn btn-primary" id="prev-btn" value="Prev">
-	    	<input type="button" class="btn btn-primary" id="registration-btn" value="상품이미지첨부">
-			<input type="button" class="btn btn-primary" id="next-btn" value="Next">
-			<input type="button" class="btn btn-primary" id="commit-btn" value="작성완료">
+			</form>
 	
 		</section>
 		

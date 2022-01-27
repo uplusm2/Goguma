@@ -43,6 +43,17 @@
 	color: white;
 	padding: 1px 5px;
 	margin: 30px 0px 0px 0px;
+	border-radius: 5px;
+}
+
+.gray-btn{
+	font-size: 15px;
+	background-color: gray;
+	border-color: gray;
+	color: black;
+	padding: 1px 5px;
+	margin: 30px 0px 0px 0px;
+	border-radius: 5px;
 }
 #price-tab{
 	overflow:hidden;
@@ -53,8 +64,6 @@
 }
 .main-text{
 	font-size: 16px;
-	padding: 0px 50px 0px 0px;
-	height:295px;
 	text-overflow: ellipsis;
 }
 .view-more{
@@ -128,12 +137,73 @@
     clear: both;
 }
 .img-box > img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-left:20px;
 }
 
+.main-product-price::after {
+    content: "원";
+    font-size: 3rem;
+    font-weight:normal;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.img-box  img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+/*커스텀*/
+html,
+body {
+    overflow-x: hidden;
+}
+.con {
+    max-width: 1000px;
+}
+
+
+.list > ul > li {
+    padding: 0 10px;
+}
+.list > ul {
+    margin: 0 -10px;
+}
+
+.list > ul > li .product-name {
+    text-align: Center;
+    font-weight: bold;
+}
+.list > ul > li:hover .product-name {
+    text-decoration: underline;
+}
+.list > ul > li .product-price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.list > ul > li .product-price::after {
+    content: "원";
+    font-size: 1rem;
+    font-weight:normal;
+}
 
 </style>
 </head>
@@ -142,25 +212,48 @@
 	<main class="main">
 	
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
+		
 		<section>
 		<div id="main-box">
-			<div class="main-img-box"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
+			<div class="main-img-box"><img src="/goguma/files/product/${dto.main_img}" 
+					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></div>
 			<div id="main-right">
-				<div class="main-product-name">코코 베이직핏 미니멀 셔츠</div>
+				<div class="main-product-name">${dto.name}</div>
 				<div id="price-tab">
-				<div class="main-product-price">17,800원</div>
-				<button type="button" class="red-btn">
-					경매마감 2일전
-				</button>
+				<div class="main-product-price">${dto.price}</div>
+				<c:if test="${dto.is_completion == 'n'}">
+					<button type="button" class="gray-btn">
+						판매완료
+					</button>
+				</c:if>
+				<c:if test="${dto.is_completion == 'y'}">
+					<c:choose> 
+					    <c:when test="${dto.is_auction == 'y'}">
+					        <button type="button" class="red-btn">
+								경매중
+							</button>
+					    </c:when>
+					    <c:when test="${dto.is_auction == 'n'}">
+					        <button type="button" class="red-btn">
+								판매중
+							</button>
+					    </c:when>
+					</c:choose>
+				</c:if>
+				
+				
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
 				</div>
-				<div class="product-address">서울 송파구 천호동 / 여성의류</div>
+				<div class="product-address">${adto.sido} ${adto.sgg} ${adto.emd} / ${tdto.name}</div>
+
+				<div style="overflow:auto; width:500px; height:300px; padding-top: 15px">
+
 				<p class="main-text">
-				여행가서 딱 한번입었습니다. <br>하자없이 깨끗해요. <br>산뜻한 바이올렛 컬러입니다. <br>봄, 가을에 입기 좋아요.<br> 
-				사이즈는 44-66 추천합니당 <br>기장감 넉넉하게 나와서 바지에 넣어입었을때 <br>핏감이 예쁘게 잘떨어지구요 <br>단품으로도 루즈한 느낌살려서 입기좋아요.
-				<br><br><br>*사이즈(단면, cm) - 어깨44 가슴57 암홀24 
-				<br>소매단면20 소매길이53 총장71 <br>직거래 세곡동, 천호동 택배별도
-				</p>
+				${dto.content}</p>
+				</div>
+				
+				
+				
 				<button type="button" class="view-more">
 					더보기
 				</button>
@@ -184,37 +277,28 @@
 		<hr width="1100px">
  		<h2>비슷한 상품</h2>
  		<br>
- 		<ul class="row">
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_01_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_02_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_03_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_04_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        <li class="cell">
-            <div class="img-box" onclick = "location.href='/goguma/product/productDetail.do'"><img src="http://bnx.oa.gg/img/bnx_16fw_visual_05_list.jpg" alt=""></div>
-            <div class="product-name" onclick = "location.href='/goguma/product/productDetail.do'">상품명</a>
-            <div class="product-price">19800</div>
-        </li>
-        </ul>
+ 		<div class="list con" style="margin-left: 30px;">
+	    	<ul class="row">
+		
+				<c:forEach items="${list}" var="dto"> 
+			
+				<li class="cell">
+					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
+            		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
+            		<div class="product-price">${dto.price}</div>
+        		</li>
+				</c:forEach>
+			</ul>
+			</div>
+				<c:if test="${list.size() == 0}">
+					<h2>게시물이 없습니다.</h2>
+				</c:if>
+ 		
 		</section>
 		
 	</main>
-	
+	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
   
         
