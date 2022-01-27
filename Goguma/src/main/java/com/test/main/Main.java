@@ -22,6 +22,7 @@ import com.test.main.main.SearchDTO;
 
 @WebServlet("/main.do")
 public class Main extends HttpServlet {
+	
 	private HttpSession session;
 	private SearchDAO dao;
 	private ProductDAO productDao;
