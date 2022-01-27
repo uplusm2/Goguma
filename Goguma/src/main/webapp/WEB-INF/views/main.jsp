@@ -27,7 +27,12 @@
 			</ul>
 			<nav class="right-side">
 				<div class="favorite">
-					<i class="bi bi-heart-fill"></i><span>2</span>
+					<c:if test="${empty id}">
+					<i class="bi bi-heart-fill"></i>
+					</c:if>
+					<c:if test="${not empty id}">
+					<i class="bi bi-heart-fill"></i><span>${favoriteCount}</span>
+					</c:if>
 				</div>
 				<div class="top">
 					<i class="bi bi-arrow-up"></i>
