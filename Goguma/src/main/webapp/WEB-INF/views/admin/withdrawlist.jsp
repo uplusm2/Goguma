@@ -55,7 +55,7 @@
 										<td>${dto.name}</td>
 										<td>${dto.regDate}</td>
 										<td>${dto.type}</td>
-										<td><input type="button" value="영구탈퇴"
+										<td><input type="button" value="차단"
 											class="btn btn-default btn-withdraw" data-id="${dto.id}"></td>
 									</tr>
 								</c:forEach>
