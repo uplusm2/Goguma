@@ -294,7 +294,7 @@
  						$('#communityTable tbody tr:last-child').append(`<td>\${item.title}</td>`);
 						$('#communityTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
 						$('#communityTable tbody').append('</tr>');
-					});
+					})
 				}
 			});
 		});
