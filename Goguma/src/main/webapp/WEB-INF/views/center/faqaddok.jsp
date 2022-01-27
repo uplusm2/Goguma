@@ -7,21 +7,26 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
+	center .add{
 	
+		padding-bottom : 100px;
+	}
 </style>
 </head>
 <body>
 	<!-- center/faqaddok.jsp -->
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
-		<div class="add">
-			<p>자주묻는 질문이 등록되었습니다.</p>
-			<div class="button">
-				<input type="button" value="확인하기" class="btn btn-default"
-					onclick="location.href='/goguma/center/faq.do?search=1&page=1';"> 
+		<div class="center">
+			<div class="add">
+				<p>자주묻는 질문이 등록되었습니다.</p>
+				<div class="button">
+					<input type="button" value="확인하기" class="btn btn-default"
+						onclick="location.href='/goguma/center/faq.do?search=1&page=1';"> 
+				</div>
 			</div>
 		</div>
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
 	
 	<script>

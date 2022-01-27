@@ -12,6 +12,7 @@
 	.btns{
 		float : right;
 		margin-top : 20px;
+		padding-right : 50px;
 	}
 </style>
 </head>

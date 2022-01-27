@@ -8,12 +8,12 @@
 <style>
 	.btns{
 		float : right;
-		margin-right : 100px;
+		padding-right : 50px;
+		margin-top : 20px;
 	}
 	.btns .btn{
 		margin : 10px;
 		margin-bottom : 30px;
-		
 	}
 </style>
 </head>
@@ -42,7 +42,7 @@
 					</c:if>
 				</tr>
 				<tr>
-					<td id="date" colspan = "3">작성일 : ${dto.regdate}   작성자 : ${dto.user}</td>
+					<td id="date" colspan = "3">작성일 : ${dto.regdate}  /  작성자 : ${dto.user}</td>
 				</tr> 
 				<tr>
 					<td colspan = "3" id="image"><img src="/goguma/files/question/${dto.path}" ></td>
@@ -85,7 +85,7 @@
 			
 			
 		
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
 	
 	<script>

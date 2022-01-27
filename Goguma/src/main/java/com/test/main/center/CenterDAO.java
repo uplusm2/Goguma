@@ -198,13 +198,16 @@ public class CenterDAO {
 			String where = "";
 			
 			if(map.get("searchmode").equals("y")) {
-				
-	            where = String.format("where title like '%%%s%%'", map.get("word").replace("'", "''"));
+	            where = String.format("where %s like '%%%s%%'", map.get("column"), map.get("word").replace("'", "''"));
 	         }
+			
+			
 			
 			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblnotice %s order by notice_seq desc) a) where rnum between %s and %s", where ,map.get("begin"),map.get("end"));
 			
-
+			System.out.println(sql);
+			
+			
 			rs = stat.executeQuery(sql);
 			
 			ArrayList<CenterDTO> list = new ArrayList<CenterDTO>();
@@ -232,12 +235,11 @@ public class CenterDAO {
 		try {
 			String where = "";
 			
+			if(map.get("searchmode").equals("y")) {
+	            where = String.format("where %s like '%%%s%%'", map.get("column"), map.get("word").replace("'", "''"));
+	         }
 			
-			if (map.get("searchmode").equals("y")) {
-				where = String.format(" where title like '%%%s%%'", map.get("word").replace("'", "''"));
-			}
-			
-			String sql  = "select count(*) as cnt from tblnotice" + where;
+			String sql  = "select count(*) as cnt from tblnotice " + where;
 			
 			rs = stat.executeQuery(sql);
 			
@@ -386,11 +388,11 @@ public class CenterDAO {
 	            where = String.format("where %s like '%%%s%%'", map.get("column"), map.get("word").replace("'", "''"));
 	         }
 			
-			System.out.println(where);
+			
 			
 			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblquestion %s order by regdate desc) a where question_type_seq = %s order by regdate desc) where rnum between %s and %s",where ,map.get("search"),map.get("begin"),map.get("end"));
 			
-			System.out.println(sql);
+			
 			
 			rs = stat.executeQuery(sql);
 			
@@ -573,7 +575,6 @@ public class CenterDAO {
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, dto.getTitle());
-			System.out.println(dto.getTitle());
 			pstat.setString(2, dto.getContent());
 			pstat.setString(3, dto.getType());
 			pstat.setString(4, dto.getSeq());

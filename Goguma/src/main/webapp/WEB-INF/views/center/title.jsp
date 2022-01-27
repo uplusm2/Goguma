@@ -79,9 +79,9 @@
 	</div>
 	<div class = "center-subtitle">
 		<ul class = "center-menu">
-			<li onclick = "location.href = '/goguma/center/faq.do?page=1&search=1'">자주묻는질문</li>
-			<li onclick = "location.href = '/goguma/center/noticelist.do'">공지사항</li>
-			<li onclick = "location.href = '/goguma/center/questionlist.do?page=1&search=1'">문의사항</li>
+			<li onclick = "location.href = '/goguma/center/faq.do?page=1&search=1'" id="li1">자주묻는질문</li>
+			<li onclick = "location.href = '/goguma/center/noticelist.do'" id="li2">공지사항</li>
+			<li onclick = "location.href = '/goguma/center/questionlist.do?page=1&search=1'" id="li3">문의사항</li>
 		</ul>
 	</div>
 	
