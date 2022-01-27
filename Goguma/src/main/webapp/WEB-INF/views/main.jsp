@@ -31,7 +31,7 @@
 					<i class="bi bi-heart-fill"></i>
 					</c:if>
 					<c:if test="${not empty id}">
-					<i class="bi bi-heart-fill"></i><span>${favoriteCount}</span>
+					<i class="bi bi-heart-fill" onclick="location.href='/goguma/favorite/favorite.do';"></i><span>${favoriteCount}</span>
 					</c:if>
 				</div>
 				<div class="top">
