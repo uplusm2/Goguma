@@ -85,7 +85,7 @@
 			
 			
 		
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
 	</main>
 	
 	<script>

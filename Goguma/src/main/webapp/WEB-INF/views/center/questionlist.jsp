@@ -28,7 +28,6 @@
 		background-color: #FAF7FB;
 	}
 	
-	
 	.subcategory .menu{
 		
 		margin-left : 70px;
@@ -111,11 +110,11 @@
 			</div>			
 			
 			<div class="list-btn">
-				<%-- <c:if test="${not empty id}"> --%>
+				<c:if test="${not empty id}">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
 					onclick="location.href='/goguma/center/questionadd.do';">
-				<%-- </c:if> --%>
+				</c:if>
 				
 			</div>
 		</section>
@@ -124,11 +123,22 @@
 	</main>
 	
 	<script>
-		<c:if test="${map.searchmode == 'y'}">
-		//검색 상태를 유지
-		$('select[name=column]').val('${map.column}');
-		$('input[name=word]').val('${map.word}');
-		</c:if>
+		var title = "#menu"+${search};
+		
+		var big = document.getElementById(title);
+		
+	
+		function f(){
+			
+			
+			
+			$(title).css{
+				border-bottom : 5px solid black;
+			}
+			
+			
+		
+		}
 		
 	</script>
 </body>

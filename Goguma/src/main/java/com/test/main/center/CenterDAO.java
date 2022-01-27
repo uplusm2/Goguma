@@ -386,11 +386,11 @@ public class CenterDAO {
 	            where = String.format("where %s like '%%%s%%'", map.get("column"), map.get("word").replace("'", "''"));
 	         }
 			
-			System.out.println(where);
+			
 			
 			String sql  = String.format("select * from (select rownum as rnum, a.* from (select * from tblquestion %s order by regdate desc) a where question_type_seq = %s order by regdate desc) where rnum between %s and %s",where ,map.get("search"),map.get("begin"),map.get("end"));
 			
-			System.out.println(sql);
+			
 			
 			rs = stat.executeQuery(sql);
 			
@@ -573,7 +573,6 @@ public class CenterDAO {
 			pstat = conn.prepareStatement(sql);
 			
 			pstat.setString(1, dto.getTitle());
-			System.out.println(dto.getTitle());
 			pstat.setString(2, dto.getContent());
 			pstat.setString(3, dto.getType());
 			pstat.setString(4, dto.getSeq());
