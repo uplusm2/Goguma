@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.main.community.CommunityDTO;
+import com.test.main.main.NoticeDAO;
+import com.test.main.main.NoticeDTO;
 import com.test.main.main.ProductDAO;
 import com.test.main.main.ProductDTO;
 import com.test.main.main.SearchDAO;
@@ -20,6 +22,8 @@ import com.test.main.main.SearchDTO;
 public class Main extends HttpServlet {
 	private SearchDAO dao;
 	private ProductDAO productDao;
+	private NoticeDAO noticeDao;
+	private NoticeDTO noticeDto;
 	
 	private ArrayList<ProductDTO> productList;
 	private ArrayList<SearchDTO> searchList;
@@ -27,6 +31,7 @@ public class Main extends HttpServlet {
 	{
 		dao = new SearchDAO();
 		productDao = new ProductDAO();
+		noticeDao = new NoticeDAO();
 	}
 	
 	@Override
@@ -34,17 +39,25 @@ public class Main extends HttpServlet {
 		
 		searchList = dao.list();
 		productList = productDao.newList();
+		noticeDto = noticeDao.newNotice();
 		
 		setProductPrice();
 		setProductName();
 		setProductInterval();
+		setNoticeDate();
 		
 		req.setAttribute("searchList", searchList);
 		req.setAttribute("productList", productList);
+		req.setAttribute("noticeDto", noticeDto);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
 		
+	}
+
+	private void setNoticeDate() {
+		String tmp = noticeDto.getRegdate().substring(0, 10).replace("-", "/");
+		noticeDto.setRegdate(tmp);
 	}
 
 	private void setProductInterval() {
@@ -62,8 +75,9 @@ public class Main extends HttpServlet {
 						> * 60, + "초"
 		 */
 		for (ProductDTO dto : productList) {
-			double temp = Double.parseDouble(dto.getInterval().substring(0, 10)); 
-			int interval = (int)(Math.round(temp));
+//			double temp = Double.parseDouble(dto.getInterval()); 
+//			int interval = (int)(Math.round(temp));
+			int interval = (int)(Math.round(Double.parseDouble(dto.getInterval())));
 			
 			if (interval >= 1) {
 				dto.setInterval(interval + "일");
@@ -82,7 +96,6 @@ public class Main extends HttpServlet {
 				}
 			}
 		}
-		
 		
 	}
 
