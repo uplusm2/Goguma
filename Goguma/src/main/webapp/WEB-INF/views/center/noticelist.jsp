@@ -6,22 +6,12 @@
 <title>Code</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-.content .orange {
-	position: relative;
-	top: -2px; left: 5px;
-	color: #fff;
-	font-size: 12px;
-}
-.content .orange:before {
-	content: '';
-	position: absolute;
-	height: 15px;
-	width: 15px;
-	background: orange;
-	border-radius: 50%;
-	z-index: -1;
-	transform: translateX(-3px) translateY(8px);
-}
+	#li2{
+	    	color : orange;
+	}
+	.list-btn{
+		padding-right : 50px;
+	}
 </style>
 </head>
 <body>

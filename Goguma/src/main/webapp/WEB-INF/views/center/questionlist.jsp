@@ -25,7 +25,9 @@
 		
 	}
 	.subcategory .menu li:hover{
-		background-color: #FAF7FB;
+		border-bottom : 8px solid #9B59B6;
+		font-weight : bold;
+		color : #9B59B6;
 	}
 	
 	.subcategory .menu{
@@ -33,10 +35,9 @@
 		margin-left : 70px;
 	}
 
-	.list-btn{
-		
+	#li3{
+    	color : orange;
 	}
-	
 </style>
 </head>
 <body>
@@ -110,7 +111,7 @@
 			</div>			
 			
 			<div class="list-btn">
-				<c:if test="${not empty id}">
+				<c:if test="${not empty id && $lv.equals('1')}">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
 					onclick="location.href='/goguma/center/questionadd.do';">
@@ -119,26 +120,22 @@
 			</div>
 		</section>
 		
-		<%--<%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>
-		var title = "#menu"+${search};
+		title = "#menu"+${search};
 		
-		var big = document.getElementById(title);
+		$(title).css({
+			"border-bottom" : "8px solid #9B59B6",
+			"font-weight" : "bold",
+			"color" : "#9B59B6"
+		});
 		
-	
-		function f(){
-			
-			
-			
-			$(title).css{
-				border-bottom : 5px solid black;
-			}
-			
-			
-		
-		}
+		<c:if test="${map.searchmode == 'y'}">
+		//검색 상태를 유지
+		$('input[name=word]').val('${map.word}');
+		</c:if>
 		
 	</script>
 </body>

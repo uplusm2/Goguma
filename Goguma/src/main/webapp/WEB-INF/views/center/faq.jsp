@@ -58,7 +58,9 @@
 	}
 	
 	.subcategory .menu li:hover{
-		background-color: #FAF7FB;
+		border-bottom : 8px solid #9B59B6;
+		font-weight : bold;
+		color : #9B59B6;
 	}
 	
 	
@@ -72,7 +74,7 @@
 	
 	
 	.faqlist{
-		width : 1150px;
+		width : 1000px;
 	}
 	
 	
@@ -94,8 +96,8 @@
 		background-color: #ffffff; 
 		padding: 8px; 
 		border: none; 
-		width : 1150px;
-		text-aling : left;
+		width : 1000px;
+		text-align : left;
 		font-color : #9E7CAF;
 		border : 1px solid #aaaaaa;
 		border-radius : 10px;
@@ -104,18 +106,14 @@
     .dropdown { position: relative; }
 
     .dropdown-content {
-
+		
         display: none;
-		
         position: relative;
-
-        background-color: F9F7FC;
-        
+        background-color: #ffffff;
 		padding : 30px;
-	
-		border : 1px solid gold;
-		
+		border : 1px solid #aaaaaa;
 		border-radius : 10px;
+		min-height : 200px;
     }
 
     .dropdown-content a { color: black; padding: 8px; text-decoration: none; display: block; }
@@ -128,7 +126,16 @@
 	
     .dropdown-content a:hover { background-color: #9E7CAF; border : 1px solid #9E7CAF;}
 	
-    .dropdown:hover .dropdown-button:hover { background-color: #9E7CAF; border : 1px solid #9E7CAF; }
+    /* .dropdown .dropdown-button:hover { background-color: #9E7CAF; border : 1px solid #9E7CAF; }
+     */
+    #li1{
+    	color : orange;
+    }
+    
+    .em{
+    	height : 150px;
+    }
+    
 </style>
 </head>
 <body>
@@ -139,11 +146,11 @@
 		<div class = "subcategory">
 			<form method="GET" action="/goguma/center/faq.do">
 				<ul class = "menu">
-					<li onclick = "location.href='/goguma/center/faq.do?search=1&page=1'">계정/인증</li>
-					<li onclick = "location.href='/goguma/center/faq.do?search=2&page=1'">구매/판매</li>
-					<li onclick = "location.href='/goguma/center/faq.do?search=3&page=1'">운영정책</li>
-					<li onclick = "location.href='/goguma/center/faq.do?search=4&page=1'">서비스이용</li>
-					<li onclick = "location.href='/goguma/center/faq.do?search=5&page=1'">기타</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=1&page=1'" id="menu1">계정/인증</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=2&page=1'" id="menu2">구매/판매</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=3&page=1'" id="menu3">운영정책</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=4&page=1'" id="menu4">서비스이용</li>
+					<li onclick = "location.href='/goguma/center/faq.do?search=5&page=1'" id="menu5">기타</li>
 				</ul>
 			</form>
 		</div>
@@ -165,6 +172,8 @@
 			</c:forEach>
 			<c:if test="${list.size() == 0}">
 				<div class = "empt">게시물이 없습니다.</div>
+				<div class = "em">  </div>
+				
 			</c:if>
 			<div class="pagebar">${pagebar}</div>
 				
@@ -179,10 +188,34 @@
 	</main>
 	
 	<script>
-	
+		title = "#menu"+${map.search};
+		
+		$(title).css({
+			"border-bottom" : "8px solid #9B59B6",
+			"font-weight" : "bold",
+			"color" : "#9B59B6"
+		});
+		
+		
+		
  		function showcon(id){
+ 			id = id.replace("q","#q");
+ 			
+			$(".dropdown-button").css({
+				"backgroundColor" : "#ffffff",
+				"color" : "black"
+			});
+ 			
+			$(id).css({
+				"backgroundColor" : "#9E7CAF",
+				"color" : "white"
+			});
+ 			
+			$(".dropdown .dropdown-button:hover").css({
+				"backgroundColor" : "#9E7CAF"
+			});
 			
- 			id = id.replace("q","#a");
+ 			id = id.replace("#q","#a");
  			
 			$(".dropdown-content").css({
 				"display" : "none"
