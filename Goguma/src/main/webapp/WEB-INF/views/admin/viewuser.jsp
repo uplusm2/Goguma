@@ -240,11 +240,11 @@
 					$('#sellTable tbody').empty();
 					list.forEach((item) => {
 						$('#sellTable tbody').append('<tr>');
-						$('#sellTable tbody').append(`<td>\${item.productSeq}</td>`);
- 						$('#sellTable tbody').append(`<td>\${item.name}</td>`);
-						$('#sellTable tbody').append(`<td>\${item.regDate}</td>`);
-						$('#sellTable tbody').append(`<td>\${item.dealDate}</td>`);
-						$('#sellTable tbody').append(`<td onclick="location.href='/goguma/admin/viewuser.do?id=\${item.dealerId}'">\${item.dealerId}</td>`);
+						$('#sellTable tbody tr:last-child').append(`<td>\${item.productSeq}</td>`);
+ 						$('#sellTable tbody tr:last-child').append(`<td>\${item.name}</td>`);
+						$('#sellTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
+						$('#sellTable tbody tr:last-child').append(`<td>\${item.dealDate}</td>`);
+						$('#sellTable tbody tr:last-child').append(`<td onclick="location.href='/goguma/admin/viewuser.do?id=\${item.dealerId}'">\${item.dealerId}</td>`);
 						$('#sellTable tbody').append('</tr>');
 					});
 				}
@@ -268,11 +268,11 @@
 					$('#buyTable tbody').empty();
 					list.forEach((item) => {
 						$('#buyTable tbody').append('<tr>');
-						$('#buyTable tbody').append(`<td>\${item.productSeq}</td>`);
- 						$('#buyTable tbody').append(`<td>\${item.name}</td>`);
-						$('#buyTable tbody').append(`<td>\${item.regDate}</td>`);
-						$('#buyTable tbody').append(`<td>\${item.dealDate}</td>`);
-						$('#buyTable tbody').append(`<td>\${item.dealerId}</td>`);
+						$('#buyTable tbody tr:last-child').append(`<td>\${item.productSeq}</td>`);
+ 						$('#buyTable tbody tr:last-child').append(`<td>\${item.name}</td>`);
+						$('#buyTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
+						$('#buyTable tbody tr:last-child').append(`<td>\${item.dealDate}</td>`);
+						$('#buyTable tbody tr:last-child').append(`<td onclick="location.href='/goguma/admin/viewuser.do?id=\${item.dealerId}'">\${item.dealerId}</td>`);
 						$('#buyTable tbody').append('</tr>');
 					});
 				}
@@ -290,11 +290,11 @@
 					$('#communityTable tbody').empty();
 					list.forEach((item) => {
 						$('#communityTable tbody').append('<tr>');
-						$('#communityTable tbody').append(`<td>\${item.seq}</td>`);
- 						$('#communityTable tbody').append(`<td>\${item.title}</td>`);
-						$('#communityTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#communityTable tbody tr:last-child').append(`<td>\${item.seq}</td>`);
+ 						$('#communityTable tbody tr:last-child').append(`<td>\${item.title}</td>`);
+						$('#communityTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
 						$('#communityTable tbody').append('</tr>');
-					});
+					})
 				}
 			});
 		});
@@ -310,10 +310,10 @@
 					$('#comcommentTable tbody').empty();
 					list.forEach((item) => {
 						$('#comcommentTable tbody').append('<tr>');
-						$('#comcommentTable tbody').append(`<td>\${item.seq}</td>`);
- 						$('#comcommentTable tbody').append(`<td>\${item.cseq}</td>`);
-						$('#comcommentTable tbody').append(`<td>\${item.content}</td>`);
-						$('#comcommentTable tbody').append(`<td>\${item.regDate}</td>`);
+						$('#comcommentTable tbody tr:last-child').append(`<td>\${item.seq}</td>`);
+ 						$('#comcommentTable tbody tr:last-child').append(`<td>\${item.cseq}</td>`);
+						$('#comcommentTable tbody tr:last-child').append(`<td>\${item.content}</td>`);
+						$('#comcommentTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
 						$('#comcommentTable tbody').append('</tr>');
 					});
 				}
@@ -331,11 +331,11 @@
 					$('#questionTable tbody').empty();
 					list.forEach((item) => {
 						$('#questionTable tbody').append('<tr>');
-						$('#questionTable tbody').append(`<td>\${item.seq}</td>`);
-						$('#questionTable tbody').append(`<td>\${item.type}</td>`);
- 						$('#questionTable tbody').append(`<td>\${item.title}</td>`);
-						$('#questionTable tbody').append(`<td>\${item.regDate}</td>`);
-						$('#questionTable tbody').append(`<td>\${item.state}</td>`);
+						$('#questionTable tbody tr:last-child').append(`<td>\${item.seq}</td>`);
+						$('#questionTable tbody tr:last-child').append(`<td>\${item.type}</td>`);
+						$('#questionTable tbody tr:last-child').append(`<td>\${item.title}</td>`);
+						$('#questionTable tbody tr:last-child').append(`<td>\${item.regDate}</td>`);
+						$('#questionTable tbody tr:last-child').append(`<td>\${item.state}</td>`);
 						$('#questionTable tbody').append('</tr>');
 					});
 				}

@@ -43,7 +43,7 @@
 								<i class="fas fa-money-bill-wave" style="color: #A8E3B3;"></i>
 							</div>
 							<div class="item-text">
-								<span class="item-num">5,495,000</span><br>
+								<span class="item-num">5,495,000원</span><br>
 								<span class="item-info">오늘 거래금액</span>
 							</div>
 						</div>
@@ -53,7 +53,7 @@
 								<i class="fas fa-shopping-cart" style="color: #E0BBE4;"></i></i>
 							</div>
 							<div class="item-text">
-								<span class="item-num">126</span><br>
+								<span class="item-num">126개</span><br>
 								<span class="item-info">업데이트된 상품</span>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 								<i class="fas fa-user" style="color: #FFF0BA;"></i>
 							</div>
 							<div class="item-text">
-								<span class="item-num">2,264</span><br>
+								<span class="item-num">2,264명</span><br>
 								<span class="item-info">오늘 방문자수</span>
 							</div>
 						</div>

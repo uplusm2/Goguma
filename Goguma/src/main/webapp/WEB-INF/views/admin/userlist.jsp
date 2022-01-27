@@ -98,7 +98,7 @@
 														<h4 class="modal-title" id="blockModalLabel">차단하기</h4>
 													</div>
 													<div class="modal-body">
-														<form>
+														<form id="blockForm">
 															<table id="modalTable">
 																<tr>
 																	<th>차단할 회원</th>
@@ -180,70 +180,34 @@
 	</main>
 
 	<script>
-			
+		
+		//검색 유지
 		<c:if test="${map.searchmode == 'y'}">
 			$('select[name=column]').val('${map.column}');
 			$('input[name=word]').val('${map.word}');
 		</c:if>
 		
-		//차단하기
-		/* $('.block').on('click', function() {
-			$('#${dto.id}').modal('show');
-		}); */
-		
-		$('#blockBtn').click(function() {
-
-			//var id = $('input[name=id]').val();
-			alert();
-			//var blockTypeSeq = $(this).find('select[name=blockType]').val();
-
+		//차단
+		$(document).on("click", "#blockBtn", function() {
+			
+			var n = $(this).parent().prev().find("#blockForm");
+			var m = n.parent().parent().parent().parent().attr('id');
+			
 			$.ajax({
 				url : '/goguma/admin/block.do',
 				type : "POST",
 				async : true,
-				data : $('#blockModal').find('form')
-						.serialize(),
+				data : n.serialize(),
 				success : function(result) {
-					//console.log(data);
 					if (result.result != 0) {
-						//$('#blockModal').modal('hide');
 						window.alert("차단되었습니다.");
 						document.location.reload(true);
 					} else {
 						window.alert("차단 실패했습니다.");
 					}
-				},
+				}
 			});
 		})
-		
-		/*
-		$('div[name=bbb]').on('show.bs.modal', function(event) {
-
-			console.log('바보');
-			event.find('#blockBtn').click(function() {
-
-				var id = $(this).find('input[name=id]').val();
-				var blockTypeSeq = $(this).find('select[name=blockType]').val();
-
-				$.ajax({
-					url : '/goguma/admin/block.do',
-					type : "POST",
-					async : true,
-					data : $('#blockModal').find('form').serialize(),
-					success : function(result) {
-						//console.log(data);
-						if (result.result != 0) {
-							$('#blockModal').modal("hide");
-							window.alert("차단되었습니다.");
-							document.location.reload(true);
-						} else {
-							window.alert("차단 실패했습니다.");
-						}
-					},
-				});
-			})
-		});
-		*/
 		
 		//차단해제
 		$(document).on("click", ".btn-unblock", function() {
@@ -261,7 +225,6 @@
 					},
 					dataType : "text",
 					success : function(result) {
-						//console.log(data);
 						if (result != 0) {
 							window.alert("차단 해제되었습니다.");
 							document.location.reload(true);
@@ -272,6 +235,7 @@
 				})
 			}
 		});
+		
 	</script>
 </body>
 </html>
