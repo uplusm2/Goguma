@@ -226,12 +226,12 @@ body {
 				<div id="price-tab">
 				<div class="main-product-price">${dto.price}</div>
 				 
-				<c:if test="${dto.is_completion == 'n'}">
+				<c:if test="${dto.is_completion == 'y'}">
 					<button type="button" class="gray-btn">
 						판매완료
 					</button>
 				</c:if>
-				<c:if test="${dto.is_completion == 'y'}">
+				<c:if test="${dto.is_completion == 'n'}">
 					<c:choose>
 					<c:when test="${dto.is_auction == 'y'}">
 						   <button type="button" class="red-btn">
@@ -266,7 +266,7 @@ body {
 			</div>
 			<div id="bottom-box">
 			
-				<c:if test="${dto.is_completion eq 'n'}">
+				<c:if test="${dto.is_completion eq 'y'}">
 					<button type="button" class="mid-btn1" style="visibility: hidden;">
 						연락하기
 					</button>
@@ -277,7 +277,7 @@ body {
 						입찰하기
 					</button>
 				</c:if>
-				<c:if test="${dto.is_completion eq 'y'}">
+				<c:if test="${dto.is_completion eq 'n'}">
 					
 					
 					<c:if test="${dto.is_auction eq 'y'}">

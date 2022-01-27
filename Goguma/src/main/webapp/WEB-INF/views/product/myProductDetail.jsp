@@ -226,12 +226,12 @@ body {
 				<div id="price-tab">
 				<div class="main-product-price">${dto.price}</div>
 				 
-				<c:if test="${dto.is_completion == 'n'}">
+				<c:if test="${dto.is_completion == 'y'}">
 					<button type="button" class="gray-btn">
 						판매완료
 					</button>
 				</c:if>
-				<c:if test="${dto.is_completion == 'y'}">
+				<c:if test="${dto.is_completion == 'n'}">
 					<c:choose>
 					<c:when test="${dto.is_auction == 'y'}">
 						   <button type="button" class="red-btn">
@@ -266,9 +266,9 @@ body {
 			</div>
 			<div id="bottom-box">
 			
-				<c:if test="${dto.is_completion eq 'n'}">
-					<button type="button" class="mid-btn1" style="visibility: hidden;">
-						연락하기
+				<c:if test="${dto.is_completion eq 'y'}">
+					<button type="button" class="mid-btn1" onclick="location.href='/goguma/product/productdel.do?seq=${dto.seq}';">
+						삭제하기
 					</button>
 					<button type="button" class="mid-btn3" style="visibility: hidden;">
 						판매자정보
@@ -277,17 +277,17 @@ body {
 						입찰하기
 					</button>
 				</c:if>
-				<c:if test="${dto.is_completion eq 'y'}">
+				<c:if test="${dto.is_completion eq 'n'}">
 					
 					
 					<c:if test="${dto.is_auction eq 'y'}">
 						<button type="button" class="mid-btn1" >
 							수정하기
 						</button>
-						<button type="button" class="mid-btn3" >
+						<button type="button" class="mid-btn3" onclick="location.href='/goguma/product/productdel.do?seq=${dto.seq}';">
 							삭제하기
 						</button>
-						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/bidadd.do?seq=${dto.seq}';">
+						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/productSell.do?seq=${dto.seq}';">
 							판매완료
 						</button>
 					</c:if>
@@ -295,10 +295,10 @@ body {
 						<button type="button" class="mid-btn1" >
 							수정하기
 						</button>
-						<button type="button" class="mid-btn3" >
+						<button type="button" class="mid-btn3" onclick="location.href='/goguma/product/productdel.do?seq=${dto.seq}';">
 							삭제하기
 						</button>
-						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/bidadd.do?seq=${dto.seq}';">
+						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/productSell.do?seq=${dto.seq}';">
 							판매완료
 						</button>
 					</c:if>

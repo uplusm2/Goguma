@@ -76,8 +76,7 @@ public class ProductDAO {
 		
 		return null;
 	}
-	  
-	
+	 
 	 
 	//게시물리스트
 	  public ArrayList<ProductDTO> productlist(HashMap<String, String> map) {
@@ -92,7 +91,7 @@ public class ProductDAO {
 									, map.get("word").replace("'", "''"));
 				}
 				
-				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct order by product_seq desc) a) where rnum between %s and %s %s order by product_seq desc", map.get("begin"), map.get("end"), where);
+				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct where is_deletion = 'n' order by product_seq desc) a) where rnum between %s and %s %s order by product_seq desc", map.get("begin"), map.get("end"), where);
 				
 				stat = conn.createStatement();
 						
@@ -117,7 +116,7 @@ public class ProductDAO {
 					dto.setReadcount(rs.getInt("readcount"));
 					dto.setIs_deletion(rs.getString("is_deletion"));			
 					dto.setMain_img(rs.getString("main_img"));			
-					
+
 					list.add(dto);
 				}
 				
@@ -367,6 +366,20 @@ public class ProductDAO {
 		}
 		return null;
 	}
+	
+	public int delete(String seq) {
+		try {
+			String sql = "update tblProduct set is_deletion = 'y'  where product_seq = ?";
+			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, seq);
+
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 	// 수정하기
 	public int edit(ProductDTO dto) {
@@ -381,6 +394,21 @@ public class ProductDAO {
 			pstat.setString(5, dto.getProduct_type_seq());
 			pstat.setString(6, dto.getContent());
 			pstat.setString(7, dto.getSeq());
+
+			return pstat.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
+	public int editIs_completion(String product_seq) {
+		try {
+			String sql = "update tblProduct set is_completion = 'y'  where product_seq = ?";
+			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, product_seq);
+			
 
 			return pstat.executeUpdate();
 		} catch (Exception e) {
@@ -442,6 +470,61 @@ public class ProductDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public String dealadd(ProductDealDTO dto) {
+		try {
+			String sql = "insert into tbldeal values (deal_seq.nextVal, ?, ?, ?, sysdate + 0.375)";
+			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, dto.getId());
+			pstat.setString(2, dto.getProduct_seq());
+			pstat.setString(3, dto.getPrice());
+			
+			pstat.executeUpdate();
+
+			sql = "select deal_seq from tblbid where rownum = 1 order by bid_seq desc";
+			pstat = conn.prepareStatement(sql);
+
+			rs = pstat.executeQuery();
+
+			if (rs.next()) {
+				return rs.getString("deal_seq");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public BidDTO getbid(String seq) {
+		try {
+			String sql = "select * from tblbid where bid_seq = ?";
+
+
+			
+			pstat = conn.prepareStatement(sql);
+
+			pstat.setString(1, seq);
+
+			rs = pstat.executeQuery();
+
+			if (rs.next()) {
+				BidDTO dto = new BidDTO();
+				dto.setBid_seq(rs.getString("bid_seq"));
+				dto.setId(rs.getString("id"));
+				dto.setProduct_seq(rs.getString("product_seq"));
+				dto.setPrice(rs.getString("price"));
+				dto.setTime(rs.getString("time"));
+
+				return dto;
+			}
+		} catch (Exception e) {
+			System.out.println("ProductDAO.get()");
+			e.printStackTrace();
+		}
+		return null;
+		
 	}
 	
 	public void addReadCount(String seq) {

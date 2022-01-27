@@ -126,14 +126,13 @@ body {
 	    	<ul class="row">
 		
 				<c:forEach items="${list}" var="dto">
-					<c:if test="dto.is_deletion" == "n">
-						<li class="cell">
-							<div class="img-box"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
-							onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
-		            		<div class="product-name"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}">${dto.name}</a></div>
-		            		<div class="product-price">${dto.price}</div>
-		        		</li>
-	        		</c:if>
+					
+					<li class="cell">
+						<div class="img-box"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
+						onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
+		           		<div class="product-name"><a href="/goguma/product/Ismyproduct.do?seq=${dto.seq}">${dto.name}</a></div>
+		           		<div class="product-price">${dto.price}</div>
+		        	</li>
 				</c:forEach>
 			</ul>
 			</div>
@@ -145,8 +144,9 @@ body {
     	
 		<c:if test="${not empty id}">
 			<div class="button">
-				<button type="button" class="btn btn-primary" id="product-regi-btn" value="상품등록"
+				<button type="button" class="btn btn-primary" id="product-regi-btn"
 					onclick="location.href='/goguma/product/productRegistration.do';">
+					상품등록
 				</button>
 			</div>
 		</c:if>
