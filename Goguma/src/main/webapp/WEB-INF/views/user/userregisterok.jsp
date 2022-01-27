@@ -13,14 +13,19 @@
 	<script src="js/bootstrap.js"></script>
 	<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-	.table {
+	.container {
 		width:500px;
 		margin: auto;
+		margin-top: 60px;
 	}
 	
-	#welcome {
-		margin-top: 
+	#ment {
+		margin-top: 50px;
 		font-size: 50px;
+	}
+	
+	#ment {
+		margin-top: 50px;
 	}
 </style>
 </head>
@@ -29,18 +34,19 @@
 	<main class="main">
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		
-		<div id="container" align="center">
+		<div class="container" align="center">
 
-			<h1 align="center" id="welcome">환영합니다!</h1>
+			<h1 align="center" id="ment">* 환영합니다! *</h1>
 			
-			<div align="center">국내 최고의 중고거래 사이트 고구마 장터에 회원으로 가입되신것을 축하드립니다!</div>
-			<div align="center">고구마켓에서 따듯하고 달콤한 중고거래 하세요!</div>
-			
-			<div align="center">
+			<div class="welcome">
+				<div align="center">국내 최고의 중고거래 사이트 고구마 장터에 회원으로 가입되신것을 축하드립니다!</div>
+				<div align="center">고구마켓에서 따듯하고 달콤한 중고거래 하세요!</div>
+			</div>
+			<div id="cam" align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
 			</div>
 			
-			<div align="center">
+			<div id="back" align="center">
 				<button class="margin-auto" type ="button" onclick="location.href='/goguma/main.do'">메인으로 돌아가기</button>
 			</div>
 		
@@ -49,7 +55,7 @@
 		
 		
 		
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+
 	</main>
 </body>
 </html>

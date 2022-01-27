@@ -12,13 +12,18 @@
 	.panel {
 		width: 400px;
 		margin: 0 auto; 
-		margin-top: 150px;
+		margin-top: 50px;
 		text-align: center;
 	}
     .card {
         margin: 0 auto; /* Added */
         float: none; /* Added */
         margin-bottom: 10px; /* Added */
+	}
+	
+	.card-title {
+        margin: 20px;
+        font-size: 25px;
 	}
 
     #btn-Yes{
@@ -39,24 +44,37 @@
     .text2{
     	color : blue;
     }
+    
+    #ttitle {
+    	align: center;
+    	margin-top: 100px;
+    	font-size: 35px;
+    }
+    
+    #subject {
+    	text-align: left;
+    	margin-left: 7px;
+    }
     </style>
   </head>
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 
   <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
 
+		<div id=ttitle>***  아이디 찾기  ***</div>
+
 				<div class="panel panel-default">
 
 	<div class="card align-middle" style="width:25rem;">
 		<div class="card-title" style="margin-top:30px;">
-            	아이디찾기
-			<h2 class="card-title" style="color:#f58b34;"> </h2>
-		</div>
+
+		<h2 class="card-title" style="color:#f58b34;"> </h2>
+	</div>
         
 		<div class="card-body">
       <form action="/goguma/user/findidok.do" class="form-signin" method="POST">
-        <input type="text" name="name" id="name" class="form-control" placeholder="이름" required autofocus><BR>
-        <input type="email" name="email" id="email" class="form-control" placeholder="이메일" required><br>
+        <div id="subject">이름<input type="text" name="name" id="name" class="form-control" placeholder="이름을 입력해주세요" required autofocus><BR></div>
+        <div id="subject">이메일<input type="email" name="email" id="email" class="form-control" placeholder="예) xxx@naver.com" required><br></div>
         	<p class="check" id="check">${check}</p><br/>
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">찾기</button>
       
@@ -68,7 +86,7 @@
 
 	</div>
    
-   		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+
    
   </body>
   <script type="text/javascript">
