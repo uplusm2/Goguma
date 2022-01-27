@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.test.main.favorite.FavoriteDAO;
+import com.test.main.favorite.FavoriteDTO;
 import com.test.main.message.MessageDAO;
 import com.test.main.message.MessageDTO;
 
@@ -168,9 +170,21 @@ public class ProductDetail extends HttpServlet {
 		}
 				
 		pagebar += "</ul></nav>";
-				
-				
-				
+		
+		FavoriteDAO fdao = new FavoriteDAO();
+		FavoriteDTO fdto = new FavoriteDTO();
+		
+	
+		String id = (String)session.getAttribute("id");
+		
+		fdto.setProduct_seq(seq);
+		fdto.setFavid(id);
+		
+		int check = fdao.favoritecheck(fdto);
+		System.out.println(check);
+		
+		req.setAttribute("check", check);
+		
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 
