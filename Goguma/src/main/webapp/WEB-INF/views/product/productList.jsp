@@ -8,6 +8,36 @@
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
+.pagebar {
+	transform: translateY(20px); 
+	width: 510px;
+	text-align: center;
+	margin: 0 auto;
+}
+.pagebar .pagination a{
+	border: 0px;
+	margin: 0px 3px;
+	color: #181818;
+}
+.pagebar .pagination a:hover{
+	background: #fff;
+	color: #F4BF35;
+}
+.pagebar .pagination .active a{
+	background: #fff;
+	font-weight: 700;
+	color: #9B59B6;
+}
+.pagebar .pagination span {
+	transform: translateY(2px);
+	color: #757575;
+}
+.pagebar .pagination .next a:hover span,
+.pagebar .pagination .previous a:hover span {
+	color: #F4BF35;
+}
+
+
 .dropdown{
 	height: 50px;
 	
@@ -15,13 +45,14 @@
 
 select{
 	margin-right: 10px;
-	border: 2px solid;
-	border-radius: 5px;
-	border-color: gray;
+	border: 1px solid;
+	border-radius: 10px;
+	border-color: DB37D6;
 }
 
 div.container{
     overflow: hidden;
+    padding-right: 100px;
 }
 
 .con {
@@ -41,9 +72,10 @@ div.container{
 }
 .img-box  img {
     display: block;
-    width: 180px;
+    width: 175px;
     height: 180px;
     object-fit: cover;
+    border-radius: 15px;
 }
 /*커스텀*/
 html,
@@ -67,20 +99,22 @@ body {
 }
 
 .list > ul > li .product-name {
-    text-align: Center;
+    text-align: right;
     font-weight: bold;
+    padding-right: 10px;
 }
 .list > ul > li:hover .product-name {
     text-decoration: underline;
 }
 .list > ul > li .product-price {
-    text-align: center;
+    text-align: right;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding-right: 10px;
 }
 .list > ul > li .product-price::after {
     content: "원";
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight:normal;
 }
 
@@ -96,30 +130,34 @@ body {
 	
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section>
-			<div class="title">
-				<h2>판매중인 상품</h2>
+			<div class="title" onclick="location.href='/goguma/product/productList.do';">
+				<h2 style="margin-left: 35px; ">판매중인 상품</h2>
 			</div>
 			
 			<nav class="dropdown" align="right">
 				<div class="container">
-					<select name="trade">
+				<form method="GET" action="/goguma/product/productList.do">
+					<select name="is_auction">
 					    <option value="">거래유형</option>
-					    <option value="일반거래">일반거래</option>
-					    <option value="경매">갱매</option>
+					    <option value="n">일반거래</option>
+					    <option value="y">경매</option>
 					</select>
-					<select name="address">
+					<select name="address_seq">
 					    <option value="">거래지역</option>
 					    <c:forEach items="${addresslist}" var="add">
-					    <option value="${add.sido} ${add.sgg} ${add.emd}">${add.sido} ${add.sgg} ${add.emd}</option>
+					    <option value="${add.address_seq}">${add.sido} ${add.sgg} ${add.emd}</option>
 					    </c:forEach>
 					</select>
-					<select name="category">
+					<select name="product_type_seq">
 					    <option value="">카테고리</option>
 					    <c:forEach items="${categorylist}" var="cate">
-					    <option value="${cate.name}">${cate.name}</option>
+					    <option value="${cate.product_type_seq}">${cate.name}</option>
 					    </c:forEach>
 					   
 					</select>
+					 <input type="submit" value="검색" class="btn">
+				</form>
+					
 				</div>
 	    	</nav>
 	    	<div class="list con">
@@ -150,10 +188,14 @@ body {
 				</button>
 			</div>
 		</c:if>
+		<c:if test="${totalPage > 1}">
+			<div class="pagebar">${pagebar}</div>
+		</c:if>
+		
+		
 
-			<div class="pagebar" style="margin-left: 400px;">${pagebar}</div>
-
-
+			
+	</section>
 	</main>
 	<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	<script>
