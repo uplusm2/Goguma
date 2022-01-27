@@ -345,6 +345,7 @@ footer {
 }
 .main-img .slide {
 	margin-top: 20px;
+	margin-bottom: 150px;
 }
 .main-img .slide li {
    width: 1200px;
@@ -498,4 +499,58 @@ li:nth-child(3).slick-active img {
 }
 .real-main .popular-keyword {
 	opacity: 1;
+}
+.real-main .title {
+	transform: translateX(-35px);
+}
+
+
+/* 오늘의 상품 */
+.today-product .recommendation {
+   position: relative;
+}
+.today-product .recommendation {
+   width: 1200px;
+   margin: 5% auto;
+   overflow: hidden;
+}
+.today-product .recommendation li {
+   float: left;
+   width: 200px;
+   margin: 10px 20px;
+   margin-bottom: 20px;
+}
+.today-product .recommendation li a {
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+.today-product .recommendation li a p.img {
+   width: 100%;
+   height: 170px;
+   margin-bottom: 5px;
+   overflow: hidden;
+   transition: all 0.5s;
+}
+.today-product .recommendation li a p.img img {
+   width: 100%;
+   height: 100%;
+   background: #eee;
+}
+.today-product .recommendation li a p.img:hover img {
+   transition: all 0.5s;
+   transform: scale(1.1);
+}
+.today-product .recommendation li a .price {
+   font-weight: 700;
+   font-size: 23px;
+   margin-bottom: 3px;
+}
+.today-product .recommendation li a .price i {
+   font-size: 16px;
+   font-style: normal;
+   color: #9B59B6;
+   font-weight: 400;
+   margin-left: 20px;
+   transform: translateY(-4px);
 }

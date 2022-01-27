@@ -20,7 +20,7 @@ public class ProductDAO {
 
 	public ProductDAO() {
 		try {
-			conn = DBUtil.open();
+			conn = DBUtil.open("goguma","java1234");
 			stat = conn.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -30,12 +30,15 @@ public class ProductDAO {
 	public ArrayList<ProductDTO> newList() {
 		try {
 			String sql = "select * from vwNewProduct order by interval";
+			System.out.println("rs 전");
 			
 			rs = stat.executeQuery(sql);
-
+			System.out.println("rs 후");
 			ArrayList<ProductDTO> list = new ArrayList<ProductDTO>();
+			System.out.println("list 후");
 			
-			while(rs.next()){
+			for(int i=0; i<10; i++) {
+				rs.next();
 				ProductDTO dto = new ProductDTO();
 				dto.setSeq(rs.getString("product_seq"));
 				dto.setName(rs.getString("name"));
@@ -48,7 +51,7 @@ public class ProductDAO {
 			return list;
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("CommunityDAO.list()");
+			System.out.println("ProductDAO.list()");
 		}
 		return null;
 	}
