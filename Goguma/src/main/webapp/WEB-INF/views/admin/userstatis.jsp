@@ -23,7 +23,6 @@
 					<h3>회원 통계</h3>
 					<div id="chart" style="width:800px;"></div>
 				</div>
-			
 			</div>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp"%>
