@@ -7,13 +7,6 @@
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
-	*{
-		  margin: 0px;
-		  padding: 0px;
-		  text-decoration: none;
-		  font-family:sans-serif;
-	
-	}
 	
 	body {
 	  back	ground-image: #34495e;
@@ -31,6 +24,8 @@
 		  transform: translate(-50%,-50%);
 		  border-radius: 15px;
 		  border: solid 1px #dacce8;
+		  text-decoration: none;
+		  font-family:sans-serif;
 	}
 	
 	.loginForm h2{
