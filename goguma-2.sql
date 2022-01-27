@@ -151,6 +151,8 @@ insert into tblReview values ('S',:NEW.deal_seq, 10,'null');
 insert into tblReview values ('B',:NEW.deal_seq, 10,'null');
 commit;
 end;
+
+
 update tblReview set score= ?,content=? where type=? and deal_seq=?
 insert into tblDeal (deal_seq, id, product_seq, price, regdate) values (deal_seq.nextVal, 'user53', 162, 197000, '2020-01-14');
 
@@ -192,14 +194,4 @@ from (vwproductsold p left outer join tblreview re on p.DEAL_SEQ = re.deal_seq)
 
 
 select * from vwReceived_seller_reviews where selid;
-
-
-
-
-
-
-
-
-
-
 

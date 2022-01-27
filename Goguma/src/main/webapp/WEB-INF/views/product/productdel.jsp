@@ -18,6 +18,7 @@
 			
 			<div class="add">
 				<p>선택상품이 삭제되었습니다.</p>
+				<br><br>
 				<div class="button">
 					<input type="button" value="목록으로" class="btn list"
 						onclick="location.href='/goguma/product/productList.do';"> 

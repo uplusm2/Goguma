@@ -32,7 +32,7 @@
 	
 	<script>
 	<c:if test="${result == 1}">
-		location.href = '/goguma/favorite/test.do';
+		location.href = '/goguma/product/productDetail.do?seq=${seq}';
 	</c:if>
 	<c:if test="${result == 0}">
 		//실패

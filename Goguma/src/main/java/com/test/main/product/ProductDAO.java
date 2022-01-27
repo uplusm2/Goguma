@@ -84,14 +84,32 @@ public class ProductDAO {
 			try {
 
 				String where = "";
+				String where1 = "";
+				String where2 = "";
+				String where3 = "";
+	
 				
 				if (map.get("searchmode").equals("y")) {
 					where = String.format("and %s like '%%%s%%'"
 									, map.get("column")
 									, map.get("word").replace("'", "''"));
 				}
+				if (map.get("is_auction_ck").equals("y")) {
+					where1 = String.format("and is_auction = '%s'"
+							, map.get("is_auction"));
+				}
+				if (map.get("product_type_seq_ck").equals("y")) {
+					where2 = String.format("and product_type_seq = '%s'"
+							, map.get("product_type_seq"));
+				}
+				if (map.get("address_seq_ck").equals("y")) {
+					where3 = String.format("and address_seq = '%s'"
+							, map.get("address_seq"));
+				}
+
+			
 				
-				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct where is_deletion = 'n' order by product_seq desc) a) where rnum between %s and %s %s order by product_seq desc", map.get("begin"), map.get("end"), where);
+				String sql = String.format("select * from (select rownum as rnum, a.* from (select * from tblProduct where is_deletion = 'n' and 1 = 1 %s %s %s %s  order by product_seq desc) a) where rnum between %s and %s order by product_seq desc", where, where1, where2, where3, map.get("begin"), map.get("end"));
 				
 				stat = conn.createStatement();
 						

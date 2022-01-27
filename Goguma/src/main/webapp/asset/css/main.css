@@ -129,29 +129,40 @@ header {
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid #9B59B6;
     padding-left: 5px;
-    color: #fff;
 }
-.inner-header .search-img {
-    position: absolute;
-    left: 707px;
-    top: 54px;
-    width: 27px;
+.inner-header .submit {
+   position: absolute;
+   left: 710px;
+   top: 52px;
+   width: 25px;
+   font-size: 24px;
+   height: 25px;
+   color: #fff;
+   background: #fff;
+   border: 0;
+   cursor: pointer;
+}
+.inner-header .submit.bi {
+   background: none;
+   color: #9B59B6;
+   font-weight: 700;
 }
 .inner-header .search:focus {
     outline: 0;
 }
 .inner-header .menu-option {
     position: absolute;
-    top: 10px;
-    right: 40px;
+    top: 13px;
+    right: 10px;
 }
 .inner-header .menu-option li{
     float: left;
-    margin-left: 30px;
+    margin-right: 30px;
     font-size: 16px;
 }
 .inner-header .menu-option .message-count {
-	transform: translateX(8px) translateY(-9px);
+	margin-right: 0px;
+	transform: translateX(-22px) translateY(-10px);
 }
 .inner-header .menu-option .message-count span {
 	color: #fff;
@@ -167,18 +178,21 @@ header {
 	z-index: -1;
 	transform: translateX(-6px) translateY(2px);
 }
+.inner-header .menu-option .message-img {
+	position: relative;
+	right: -9px;
+	margin-right: 3px;
+	transform: translateY(-7px) translateX(0px);
+}
+.inner-header .menu-option .message-img.open {
+	transform: translateY(-10px) translateX(-9px);
+}
 .inner-header .menu-option .message-img span{
-	position: absolute;
-	right: 183px;
-	top: 3px;
     text-align: center;
-    color: #fff;
-    background: #9B59B6;
-    width: 22px;
-    height: 18px;
-    line-height: 18px;
-    font-size: 18px;
+    color: #9b59b6;
+    font-size: 24px;
 	cursor: pointer;
+	z-index: 0;
 }
 .inner-header .menu {
     position: absolute;
@@ -215,8 +229,8 @@ header {
 .inner-header .menu li:before{
     content: '';
     position: absolute;
-    top: 6px;
-    left: 133px;
+    top: 10px;
+    left: 132px;
     border-left: 1px solid #757575;
     width: 4px;
     height: 15px;
@@ -224,20 +238,19 @@ header {
 .inner-header .menu li:after{
     content: '';
     position: absolute;
-    top: 6px;
-    left: 256px;
+    top: 10px;
+    left: 251px;
     border-left: 1px solid #757575;
     width: 4px;
     height: 15px;
 }
-.inner-header .menu li img{
-    transform: translateY(-2px);
-    margin-left: 25px;
-    margin-right: 5px;
-    width: 25px;
-}
-.inner-header .menu li:nth-child(3) img{
-    margin-right: 1px;
+.inner-header .menu li i{
+   transform: translateY(-2px);
+   margin-left: 25px;
+   margin-right: 5px;
+   width: 25px;
+   color: #9B59B6;
+   font-size: 22px;
 }
 .inner-header .popular-keyword {
    position: absolute;

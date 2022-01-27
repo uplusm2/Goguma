@@ -1,6 +1,6 @@
 package com.test.main.product;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Enumeration;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -40,8 +40,36 @@ public class ProductRegistrationok extends HttpServlet {
 	                                 new DefaultFileRenamePolicy()
 	                            );
 			 
-			 System.out.println(multi.getFilesystemName("pathDirs[]"));
+			 System.out.println(multi.getParameter("pathDirs[]"));
+			 Enumeration files = multi.getFileNames();
+			
+			 System.out.println(multi.getFilesystemName("files1"));
+			 System.out.println(multi.getFilesystemName("files1"));
+			 System.out.println(multi.getFilesystemName("files1"));
+
 			 
+
+			// 업로드한 파일들의 이름을 얻어옴
+
+			  while(files.hasMoreElements()) {
+				  String file = (String)files.nextElement();
+				  System.out.println(file);
+			  }
+			 
+
+//			  filename = multi.getFilesystemName(file);
+//
+//			 
+//
+//			  String file2 = (String)files.nextElement();
+//
+//			  filename2 = multi.getFilesystemName(file2);
+//
+//			 
+//
+//			  String file3 = (String)files.nextElement();
+//
+//			  filename3 = multi.getFilesystemName(file2);
 //	         String id = (String)req.getSession().getAttribute("id");
 //	         String nickName = multi.getParameter("nickName");
 //	         String intro = multi.getParameter("intro");

@@ -29,7 +29,9 @@ public class UserDAO {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection(url, id, pw);
+            //conn = DriverManager.getConnection(url, id, pw);
+			//conn = DBUtil.open();
+			conn = DBUtil.open("goguma", "java1234");
             return conn;
         } catch (Exception e) {
             e.printStackTrace();

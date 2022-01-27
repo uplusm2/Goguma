@@ -13,13 +13,14 @@
 	<script src="js/bootstrap.js"></script>
 	<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
+
 	.table {
 		width:500px;
 		margin: auto;
 	}
 	
 	.container {
-		margin-top: 50px;
+		margin-top: 150px;
 	}
 	
 	h5 {
