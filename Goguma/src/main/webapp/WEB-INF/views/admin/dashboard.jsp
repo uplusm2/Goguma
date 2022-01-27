@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>고구마장터 대시보드</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <script src="/goguma/asset/js/highcharts.js"></script>
 <script src="/goguma/asset/js/series-label.js"></script>
@@ -40,7 +40,7 @@
 
 						<div class="item" id="moneyBtn">
 							<div class="item-icon">
-								<i class="fas fa-money-bill-wave"></i>
+								<i class="fas fa-money-bill-wave" style="color: #A8E3B3;"></i>
 							</div>
 							<div class="item-text">
 								<span class="item-num">5,495,000</span><br>
@@ -50,7 +50,7 @@
 
 						<div class="item" id="productBtn">
 							<div class="item-icon">
-								<i class="fas fa-shopping-cart"></i></i>
+								<i class="fas fa-shopping-cart" style="color: #E0BBE4;"></i></i>
 							</div>
 							<div class="item-text">
 								<span class="item-num">126</span><br>
@@ -60,10 +60,10 @@
 
 						<div class="item" id="visitBtn">
 							<div class="item-icon">
-								<i class="fas fa-user"></i>
+								<i class="fas fa-user" style="color: #FFF0BA;"></i>
 							</div>
 							<div class="item-text">
-								<span class="item-num">1,270</span><br>
+								<span class="item-num">2,264</span><br>
 								<span class="item-info">오늘 방문자수</span>
 							</div>
 						</div>
@@ -83,7 +83,7 @@
 			</div>
 		</section>
 
-		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 
 	</main>
 
@@ -156,7 +156,7 @@
 	Highcharts.chart('visitChart', {
 
 	    title: {
-	        text: '일별 홈페이지 방문자 수'
+	        text: '최근 일주일 홈페이지 방문자 수'
 	    },
 
 	    yAxis: {
@@ -169,7 +169,7 @@
 
 	    	   labels:{rotaton:-45}   //라벨 기울이기
 
-	    	   ,categories:['19','20','21','22', '23', '24', '25']   //x축 표시값 직접지정
+	    	   ,categories:['21','22', '23', '24', '25', '26', '27']   //x축 표시값 직접지정
 
 	    },
 		
@@ -189,7 +189,7 @@
 	    },
 
 	    series: [{
-	        name: '최근 일주일 방문자 수',
+	        name: '방문자 수',
 	        data: [ <c:forEach items="${daliyList}" var="dto">${dto.count}, </c:forEach> ]
 	    }],
 

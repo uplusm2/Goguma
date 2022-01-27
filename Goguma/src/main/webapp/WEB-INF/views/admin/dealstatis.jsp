@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <script src="/goguma/asset/js/highcharts.js"></script>
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
@@ -19,8 +19,8 @@
 			<div class="container">
 				<%@ include file="/WEB-INF/views/inc/admin/nav.jsp"%>
 				
-				<div class="article">
-					<h3>거래 통계</h3>
+				<div class="article dashboard">
+					<div class="subtitle"><h2>거래 통계</h2></div>
 					<div id="chart" style="width:800px;"></div>
 				</div>
 			
@@ -30,84 +30,45 @@
 	</main>
 
 	<script>
-	var categories = [
-	    '10-19', '20-29', '30-39', '40-49', '50-59', '60-69',
-	    '70-79', '80+'
-	];
-
 	Highcharts.chart('chart', {
 	    chart: {
-	        type: 'bar'
+	        plotBackgroundColor: null,
+	        plotBorderWidth: null,
+	        plotShadow: false,
+	        type: 'pie'
 	    },
 	    title: {
-	        text: '연령별 회원 분포'
+	        text: '카테고리별 판매량'
 	    },
-
+	    tooltip: {
+	        pointFormat: '{point.name}: <b>{point.y}만원</b>'
+	    },
 	    accessibility: {
 	        point: {
-	            valueDescriptionFormat: '{index}. Age {xDescription}, {value}%.'
+	            valueSuffix: '%'
 	        }
 	    },
-	    xAxis: [{
-	        categories: categories,
-	        reversed: false,
-	        labels: {
-	            step: 1
-	        },
-	        accessibility: {
-	            description: 'Age (male)'
-	        }
-	    }, { // mirror axis on right side
-	        opposite: true,
-	        reversed: false,
-	        categories: categories,
-	        linkedTo: 0,
-	        labels: {
-	            step: 1
-	        },
-	        accessibility: {
-	            description: 'Age (female)'
-	        }
-	    }],
-	    yAxis: {
-	        title: {
-	            text: null
-	        },
-	        labels: {
-	            formatter: function () {
-	                return Math.abs(this.value) + '%';
-	            }
-	        },
-	        accessibility: {
-	            description: 'Percentage population',
-	            rangeDescription: 'Range: 0 to 50%'
-	        }
-	    },
-
 	    plotOptions: {
-	        series: {
-	            stacking: 'normal'
+	        pie: {
+	            allowPointSelect: true,
+	            cursor: 'pointer',
+	            dataLabels: {
+	                enabled: true,
+	                format: '<b>{point.name}</b>: {point.y}만원'
+	            }
 	        }
 	    },
-
-	    tooltip: {
-	        formatter: function () {
-	            return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' +
-	                'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 1) + '%';
-	        }
-	    },
-
 	    series: [{
-	        name: 'Male',
+	        name: 'Brands',
+	        colorByPoint: true,
 	        data: [
-	            -22, -24, -30, -33, -32,
-	            -29, -19, -11
-	        ]
-	    }, {
-	        name: 'Female',
-	        data: [
-	            21, 26, 29, 32, 31,
-	            29, 21, 17
+	        <c:forEach items="${totalList}" var="dto">
+	        {
+	            name: '${dto.type}',
+	            y: ${dto.amount}
+	        }
+	        ,
+	        </c:forEach>
 	        ]
 	    }]
 	});

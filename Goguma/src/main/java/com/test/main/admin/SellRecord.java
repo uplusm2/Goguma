@@ -21,6 +21,21 @@ public class SellRecord extends HttpServlet {
 		RecordDAO dao = new RecordDAO();
 		ArrayList<DealRecordDTO> list = dao.sellRecordList(id);
 		
+		for(DealRecordDTO dto : list) {
+			
+			dto.setRegDate(dto.getRegDate().substring(0, 10));
+			
+			if(dto.getDealDate() == null) {
+				dto.setDealDate("판매중");
+			} else {
+				dto.setDealDate(dto.getDealDate().substring(0, 10));				
+			}
+			
+			if(dto.getDealerId() == null) {
+				dto.setDealerId("-");
+			}
+		}
+		
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");
 		PrintWriter writer = resp.getWriter();

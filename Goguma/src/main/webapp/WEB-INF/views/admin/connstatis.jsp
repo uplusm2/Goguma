@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <script src="/goguma/asset/js/highcharts.js"></script>
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
+	.leftside {
+		min-height: 1000px;
+	}
 </style>
 </head>
 <body>
@@ -40,7 +43,7 @@
 			</div>
 		</section>
 
-		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 
 	</main>
 
@@ -117,9 +120,8 @@
 
 	    xAxis:{
 
-	    	   labels:{rotaton:-45}   //라벨 기울이기
-
-	    	   ,categories: ['202102','202103','202104', '202105', '202106', '202107', '202108', '202109', '202110', '202111', '202112', '202201']   //x축 표시값 직접지정
+	    	   labels:{rotaton:-45},   //라벨 기울이기
+	    	   categories: ['202102','202103','202104', '202105', '202106', '202107', '202108', '202109', '202110', '202111', '202112', '202201']   //x축 표시값 직접지정
 
 	    },
 

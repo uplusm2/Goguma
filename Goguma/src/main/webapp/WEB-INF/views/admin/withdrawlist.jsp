@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>고구마장터</title>
+<title>고구마</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp"%>
 <link rel="stylesheet" type="text/css" href="/goguma/asset/css/admin.css">
 <style>
@@ -47,25 +47,23 @@
 								<th>탈퇴유형</th>
 								<th>처리</th>
 							</tr>
-							<tr>
-								<c:forEach items="${list}" var="dto">
-									<tr>
-										<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
-										</td>
-										<td>${dto.name}</td>
-										<td>${dto.regDate}</td>
-										<td>${dto.type}</td>
-										<td><input type="button" value="차단"
-											class="btn btn-default btn-withdraw" data-id="${dto.id}"></td>
-									</tr>
-								</c:forEach>
+							<c:forEach items="${list}" var="dto">
+								<tr>
+									<td><a href="/goguma/admin/viewuser.do?id=${dto.id}">${dto.id}</a>
+									</td>
+									<td>${dto.name}</td>
+									<td>${dto.regDate}</td>
+									<td>${dto.type}</td>
+									<td><input type="button" value="차단"
+										class="btn btn-default btn-withdraw" data-id="${dto.id}"></td>
+								</tr>
+							</c:forEach>
 
-								<c:if test="${list.size() == 0 }">
-									<tr>
-										<td colspan="6">일치하는 회원이 없습니다.</td>
-									</tr>
-								</c:if>
-							</tr>
+							<c:if test="${list.size() == 0 }">
+								<tr>
+									<td colspan="6">일치하는 회원이 없습니다.</td>
+								</tr>
+							</c:if>
 						</table>
 						
 						<!-- 페이지바 -->
@@ -74,7 +72,7 @@
 						<!-- 검색 -->
 						<div class="search">
 							<form method="GET" action="/goguma/admin/blocklist.do">
-								<select name="column" class="form-control">
+								<select name="column" class="text">
 									<option value="id">아이디</option>
 									<option value="name">이름</option>
 								</select> 
@@ -88,7 +86,7 @@
 			</div>
 		</section>
 
-		<%-- <%@include file="/WEB-INF/views/inc/footer.jsp" %> --%>
+		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 
 	</main>
 
