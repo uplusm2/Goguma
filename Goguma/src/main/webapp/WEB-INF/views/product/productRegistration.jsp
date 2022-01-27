@@ -97,7 +97,7 @@ select {
 	transform:translate(700px, -10px);
 }
 .fileList{
-	transform:translate(120px, 20px);
+	transform:translate(80px, 20px);
 }
 .slick-next.slick-arrow{
 	color: black;
@@ -134,16 +134,30 @@ select {
 				<div class="dropdown">
 					<div class="container">
 					
-						<select name="trade" name="type">
+						<select id="trade" name="type">
 							<option value="">거래유형</option>
-							<option value="일반거래">일반거래</option>
-							<option value="경매">갱매</option>
+							<option value="n">일반거래</option>
+							<option value="y">경매</option>
 						</select> 
 						
-						<select name="category" name = "category">
+						<select id="category" name = "category">
 							<option value="">카테고리</option>
-							<option value="카테고리1">카테고리1</option>
-							<option value="카테고리2">카테고리2</option>
+							<option value="1">디지털기기</option>
+							<option value="2">생활가전</option>
+							<option value="3">가구/인테리어</option>
+							<option value="4">유아동</option>
+							<option value="5">생활/가공식품</option>
+							<option value="6">유아도서</option>
+							<option value="7">스포츠/레저</option>
+							<option value="8">여성잡화</option>
+							<option value="9">여성의류</option>
+							<option value="10">남성패션/잡화</option>
+							<option value="11">게임/취미</option>
+							<option value="12">뷰티/미용</option>
+							<option value="13">반려동물용품</option>
+							<option value="14">도서/티켓/음반</option>
+							<option value="15">식물</option>
+							<option value="16">기타 중고물품</option>
 						</select> 
 						
 						<span style="color: black; background-color: #7777; text-align: center; margin-right: 10px;">
@@ -193,17 +207,17 @@ select {
 				</div>		
 <!--  multiple  -->	
 		
-				<input type="file" id="file1" name="file1"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : ''">
-				<input type="file" id="file2" name="file2"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file3" name="file3"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file4" name="file4"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file5" name="file5"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file1" name="file1"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file2" name="file2"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file3" name="file3"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file4" name="file4"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file5" name="file5"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
 			
-				<input type="file" id="file6" name="file6"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file7" name="file7"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file8" name="file8"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file9" name="file9"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
-				<input type="file" id="file10" name="file10"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="file6" name="file6"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file7" name="file7"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file8" name="file8"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file9" name="file9"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
+				<input type="file" id="file10" name="file10"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : block">
 				
 				
 				<input class="write" type="submit" class="btn btn-primary" id="commit-btn" value="작성완료">
@@ -215,8 +229,7 @@ select {
 
 	<%@include file="/WEB-INF/views/inc/footer.jsp"%>
 <script>
-	
-	
+	let fileCount = 0;
 	
 	$( document ).ready( function() {
 	    $( '.slider' ).slick( {
@@ -231,18 +244,25 @@ select {
 			
 			reader.onload = function(event){
 				
-				var img = document.createElement("img");
-				var div = document.createElement("div");
-				img.setAttribute("src", event.target.result);
-				img.setAttribute("class", "col-lg-6");
-				img.setAttribute("object-fit", "scale-down");
-				
-				div.appendChild(img);
-				$('.slider').slick("slickAdd", div);
-				$(".slider").slick('unslick');
-				$('.slider').slick('refresh');
-				
-				$(".buttonSpace").append(input);
+				if(fileCount==10){
+					alert("사진은 10개 까지만 추가 가능 합니다.");
+				}else{
+					/* $(".fileCount").get(0).css('display', 'none'); */
+					
+					var img = document.createElement("img");
+					var div = document.createElement("div");
+					img.setAttribute("src", event.target.result);
+					img.setAttribute("class", "col-lg-6");
+					img.setAttribute("object-fit", "scale-down");
+					
+					div.appendChild(img);
+					$('.slider').slick("slickAdd", div);
+					$(".slider").slick('unslick');
+					$('.slider').slick('refresh');
+					
+					/* fileCount++;
+					$(".fileCount").get(1).css('display', 'block'); */
+				}
 			};
 			
 			console.log(image);

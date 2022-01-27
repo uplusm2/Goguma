@@ -646,6 +646,61 @@ public class ProfileDAO {
 		}
 		return null;
 	}
+
+	public String setProductData(HashMap<String, String> map) {
+		String sql1 = "insert into tblProduct \r\n"
+				+ "(product_seq, id, address_seq, product_type_seq, name, price, is_auction, content, regdate, is_completion, readcount, is_deletion) \r\n"
+				+ "values (product_seq.nextVal+100, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT, DEFAULT)";
+		String sql2 = "select max(product_seq) as max from tblProduct";
+		try {
+			
+			pstat = conn.prepareStatement(sql1);
+			System.out.println(map.toString());
+//			pstat.setString(1, map.get("product_seq+100"));
+			pstat.setString(1, map.get("id"));
+			pstat.setString(2, map.get("address_seq"));
+			pstat.setString(3, map.get("product_type_seq"));
+			pstat.setString(4, map.get("name"));
+			pstat.setString(5, map.get("price"));
+			pstat.setString(6, map.get("is_auction"));
+			pstat.setString(7, map.get("content"));
+//			pstat.setString(9, map.get("regdate"));
+//			pstat.setString(10, map.get("is_completion"));
+//			pstat.setString(11, map.get("readcount"));
+//			pstat.setString(12, map.get("is_deletion"));
+			
+			int i = pstat.executeUpdate();
+			
+			if(i==0) System.out.println("ProfileDAO.setProductData");
+			
+			pstat = conn.prepareStatement(sql2);
+			rs=pstat.executeQuery();
+			
+			rs.next();
+			
+			return rs.getString("max");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public int setProductImage(HashMap<String, String> map2) {
+		String sql = "INSERT INTO TBLPRODUCTIMAGE (PRODUCT_IMG_SEQ, PRODUCT_SEQ, PATH) \r\n"
+				+ "VALUES (product_img_seq.nextval+200, ?, ?)";
+		try {
+			System.out.println(map2.toString());
+			pstat = conn.prepareStatement(sql);
+//			pstat.setString(1, map2.get("PRODUCT_IMG_SEQ"));
+			pstat.setString(1, map2.get("PRODUCT_SEQ"));
+			pstat.setString(2, map2.get("PATH"));
+			
+			return pstat.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }
 
 
