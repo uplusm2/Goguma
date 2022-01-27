@@ -15,7 +15,7 @@ $(function() {
         arrows: true,   
         dots: false,    
         fade: true,    
-        autoplay: false,  
+        autoplay: true,  
         autoplaySpeed: 5000, 
         pauseOnHover: false,
         pauseOnFocus: false

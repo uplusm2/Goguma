@@ -603,6 +603,7 @@ li:nth-child(3).slick-active img {
    height: 60.5px;
    border-radius: 50%;
    background-color: #F4BF35;
+   cursor: pointer;
 }
 .right-side .favorite i {
    position: absolute;
@@ -627,6 +628,7 @@ li:nth-child(3).slick-active img {
    height: 60.5px;
    border-radius: 50%;
    background-color: #F4BF35;
+   cursor: pointer;
 }
 .right-side .top i {
    position: absolute;
@@ -635,4 +637,24 @@ li:nth-child(3).slick-active img {
    color: #fff;
    margin-left: 2px;
    font-size: 44px;
+}
+
+
+/* 메인 버튼 애니메이션 */
+.right-side .favorite i:hover {
+   animation: heart 0.5s infinite;
+}
+@keyframes heart {
+   0% {transform: rotate(0deg);}
+   25% {transform: rotate(10deg);}
+   75% {transform: rotate(-10deg);}
+   100% {transform: rotate(0deg);}
+}
+.right-side .top i:hover {
+   animation: top 0.6s infinite;
+}
+@keyframes top {
+   0% {transform: translateY(0px);}
+   50% {transform: translateY(-5px);}
+   100% {transform: translateY(0px);}
 }
