@@ -24,7 +24,7 @@
 		  width:300px;
 		  height:400px;
 		  padding: 30px, 20px;
-		  background-color:#e6e3e8;
+		  background-color:#f0f0f0;
 		  text-align:center;
 		  top:50%;
 		  left:50%;

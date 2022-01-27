@@ -51,7 +51,10 @@
 			</div>
 
 		</section>
-
+		
+		<% 
+		 session.invalidate();
+		%>
 	</main>
 	
 	

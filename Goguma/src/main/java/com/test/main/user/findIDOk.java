@@ -50,9 +50,12 @@ public class findIDOk extends HttpServlet {
 			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
-			script.println("alert('ID or PW be wrong')");
+			script.println("alert('ID or Email be wrong')");
 			script.println("history.back();");
 			script.println("</script>");
+			HttpSession session = req.getSession();
+			
+			session.invalidate();
 			
 		}
 	}

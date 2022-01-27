@@ -19,9 +19,22 @@
 	}
 	
 	#welcome {
-		margin-top: 
-		font-size: 50px;
+		margin-top: 60px;
+		font-size: 40px
 	}
+	
+	#container {
+		margin-top: 70px;
+	}
+	
+	#picture {
+		margin-top: 70px;
+	}
+	
+	#back{
+		margin-top: 100px;
+	}
+	
 </style>
 </head>
 <body>
@@ -33,20 +46,22 @@
 
 			<h1 align="center" id="welcome">비밀번호 변경이 완료되었습니다!</h1>
 			
-			<div align="center">
+			<div id="picture" align="center">
 				<img src="/goguma/asset/img/userregister.png" style="width: 130px">
 			</div>
 			
-			<div align="center">
+			<div id="back" align="center">
 				<button class="margin-auto" type ="button" onclick="location.href='/goguma/main.do'">메인으로 돌아가기</button>
 			</div>
 		
 
 		</div>
 		
+		<% 
+		 session.invalidate();
+		%>
 		
-		
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
+
 	</main>
 </body>
 </html>

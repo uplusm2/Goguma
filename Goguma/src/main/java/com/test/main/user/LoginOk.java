@@ -61,15 +61,18 @@ public class LoginOk extends HttpServlet {
 			dispatcher.forward(req, resp);
 		
 		} else {
+			
+			HttpSession session = req.getSession();
+			
+			session.invalidate(); //주의!!
+			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
 			script.println("alert('ID or PW be wrong')");
 			script.println("history.back();");
 			script.println("</script>");
 			
-			HttpSession session = req.getSession();
-			
-			session.invalidate(); //주의!!
+
 			
 		}
 
