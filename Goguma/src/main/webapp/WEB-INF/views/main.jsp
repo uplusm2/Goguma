@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Code</title>
+<title>Goguma</title>
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
 
@@ -25,6 +25,14 @@
 					<img src="/goguma/asset/img/main-txt4.png" class="txt">
 				</li>
 			</ul>
+			<nav class="right-side">
+				<div class="favorite">
+					<i class="bi bi-heart-fill"></i><span>2</span>
+				</div>
+				<div class="top">
+					<i class="bi bi-arrow-up"></i>
+				</div>
+			</nav>
 		</section>
 		<section class="today-product">
 			<div class="title" onclick="location.href='/goguma/main.do';">
@@ -43,9 +51,9 @@
 		</section>
 		<section class="today-notice">
 			<div class="title" onclick="location.href='/goguma/center/noticelist.do';">
-				<h2>공지사항</h2>
-				<br><br>
-			</div>
+      				<h3>공지사항<span class="glyphicon glyphicon-menu-right"></span></h3>
+  			</div>
+   			<p onclick="location.href='/goguma/center/noticeview.do?seq=${noticeDto.seq}';">${noticeDto.title}<small>${noticeDto.regdate}</small></p>
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
