@@ -25,6 +25,14 @@
 					<img src="/goguma/asset/img/main-txt4.png" class="txt">
 				</li>
 			</ul>
+			<nav class="right-side">
+				<div class="favorite">
+					<i class="bi bi-heart-fill"></i><span>2</span>
+				</div>
+				<div class="top">
+					<i class="bi bi-arrow-up"></i>
+				</div>
+			</nav>
 		</section>
 		<section class="today-product">
 			<div class="title" onclick="location.href='/goguma/main.do';">

@@ -572,7 +572,7 @@ li:nth-child(3).slick-active img {
 }
 .today-notice span {
    font-weight: 500;
-   color: #9B59B6;
+   color: #F4BF35;
    transform: translateY(3px);
 }
 .today-notice p {
@@ -584,4 +584,55 @@ li:nth-child(3).slick-active img {
    color: #757575;
    margin-left: 7px;
    font-weight: 400;
+}
+
+
+/* right side */
+.right-side {
+   position: relative;
+   left: 130px;
+   top: -620px;
+   float: right;
+   width: 100px;
+   text-align: center;
+   font-size: 16px;
+}
+.right-side .favorite{
+   position: fixed;
+   width: 60.5px;
+   height: 60.5px;
+   border-radius: 50%;
+   background-color: #F4BF35;
+}
+.right-side .favorite i {
+   position: absolute;
+   left: 8px;
+   top: 1px;
+   color: #E74C3C;
+   font-weight: 200;
+   font-size: 44px;
+}
+.right-side .favorite span {
+   position: absolute;
+   font-size: 20px;
+   left: 35px;
+   top: 15px;
+   color: #fff;
+   transform: translateX(-10px);
+}
+.right-side .top {
+   position: fixed;
+   transform: translateY(80px);
+   width: 60.5px;
+   height: 60.5px;
+   border-radius: 50%;
+   background-color: #F4BF35;
+}
+.right-side .top i {
+   position: absolute;
+   left: 7px;
+   top: -2px;
+   color: #fff;
+   margin-left: 2px;
+   font-size: 44px;
 }
