@@ -34,7 +34,7 @@
 					
 					<!-- 게시판 제목 -->
 					<div class="title" onclick="location.href='/goguma/admin/userlist.do';">
-						<h2>차단 회원 관리</h2>
+						<h2>탈퇴 회원 관리</h2>
 					</div>
 					
 					<!-- 게시판 -->

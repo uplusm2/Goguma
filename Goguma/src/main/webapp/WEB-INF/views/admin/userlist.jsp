@@ -40,7 +40,7 @@
 						<h2>전체 회원 관리</h2>
 					</div>
 					<div class="userlist">
-						<table class="table">
+						<table class="table table-hover">
 							<tr>
 								<th>아이디</th>
 								<th>이름</th>
@@ -58,14 +58,14 @@
 										<td>${dto.score}</td>
 										<td>${dto.state}</td>
 
-										<c:if test="${dto.state == '정상'}">
+										<c:if test="${dto.state != '차단'}">
 											<td>
-												<input type="button" class="btn btn-default" value="차단"
-													data-toggle="modal" data-target="#myModal"
+												<input type="button" class="btn btn-default block" value="차단" 
+													data-toggle="modal" data-target="#${dto.id}"
 													data-id="${dto.id}">
 
-												<div class="modal fade" id="myModal" tabindex="-1"
-													role="dialog" aria-labelledby="myModalLabel"
+												<div class="modal fade" id="${dto.id}" tabindex="-1"
+													role="dialog" aria-labelledby="blockModalLabel"
 													aria-hidden="true">
 													<div class="modal-dialog">
 														<div class="modal-content">
@@ -74,19 +74,18 @@
 																	aria-label="Close">
 																	<span aria-hidden="true">&times;</span>
 																</button>
-																<h4 class="modal-title" id="myModalLabel">차단하기</h4>
+																<h4 class="modal-title" id="blockModalLabel">차단하기</h4>
 															</div>
 															<div class="modal-body">
 																<form>
-																	<table class="table">
+																	<table>
 																		<tr>
 																			<th>차단할 회원</th>
 																			<td>${dto.name}</td>
 																		</tr>
 																		<tr>
 																			<th>차단할 아이디</th>
-																			<td><input type="text" name="id"
-																				value="${dto.id}" readonly style="border: 0px"></td>
+																			<td><input type="text" name="id" value="${dto.id}" readonly style="border: 0px"></td>
 																		</tr>
 																		<tr>
 																			<th>차단 사유</th>
@@ -104,7 +103,7 @@
 															</div>
 															<div class="modal-footer">
 																<button type="button" id="blockBtn"
-																	class="btn btn-primary">차단</button>
+																	class="btn btn-default">차단</button>
 																<button type="button" class="btn btn-default"
 																	data-dismiss="modal">취소</button>
 															</div>
@@ -114,17 +113,18 @@
 											</td>
 										</c:if>
 
-										<c:if test="${dto.state == '탈퇴'}">
+										<%-- <c:if test="${dto.state == '탈퇴'}">
 											<td><input type="button" value="차단" disabled="disabled"
 												class="btn btn-default"></td>
-										</c:if>
-
+										</c:if> --%>
+										
 										<c:if test="${dto.state == '차단'}">
 											<td><input type="button" value="차단해제"
 												class="btn btn-default btn-unblock" data-id="${dto.id}"></td>
 										</c:if>
 									</tr>
 								</c:forEach>
+								
 								<c:if test="${list.size() == 0 }">
 									<tr>
 										<td colspan="6">일치하는 회원이 없습니다.</td>
@@ -157,29 +157,60 @@
 	</main>
 
 	<script>
+			
+		<c:if test="${map.searchmode == 'y'}">
+			$('select[name=column]').val('${map.column}');
+			$('input[name=word]').val('${map.word}');
+		</c:if>
 		
-	<c:if test="${map.searchmode == 'y'}">
-	$('select[name=column]').val('${map.column}');
-	$('input[name=word]').val('${map.word}');
-	
-	</c:if>
 		//차단하기
-		$('#myModal').on('show.bs.modal', function(event) {
-						
-			$(this).find("#blockBtn").click(() => {
-				
+		/* $('.block').on('click', function() {
+			$('#${dto.id}').modal('show');
+		}); */
+		/*
+		$('#blockBtn').click(function() {
+
+			var id = $('input[name=id]').val();
+			alert(id);
+			//var blockTypeSeq = $(this).find('select[name=blockType]').val();
+
+			/* $.ajax({
+				url : '/goguma/admin/block.do',
+				type : "POST",
+				async : true,
+				data : $('#blockModal').find('form')
+						.serialize(),
+				success : function(result) {
+					//console.log(data);
+					if (result.result != 0) {
+						$('#blockModal').modal('hide');
+						window.alert("차단되었습니다.");
+						document.location.reload(true);
+					} else {
+						window.alert("차단 실패했습니다.");
+					}
+				},
+			});
+		})
+		*/
+		
+		$('div[name=bbb]').on('show.bs.modal', function(event) {
+
+			console.log('바보');
+			/*event.find('#blockBtn').click(function() {
+
 				var id = $(this).find('input[name=id]').val();
 				var blockTypeSeq = $(this).find('select[name=blockType]').val();
-				
+
 				$.ajax({
 					url : '/goguma/admin/block.do',
 					type : "POST",
 					async : true,
-					data : $('#myModal').find('form').serialize(),
+					data : $('#blockModal').find('form').serialize(),
 					success : function(result) {
 						//console.log(data);
 						if (result.result != 0) {
-							$('#myModal').modal("hide");
+							$('#blockModal').modal("hide");
 							window.alert("차단되었습니다.");
 							document.location.reload(true);
 						} else {
@@ -187,11 +218,9 @@
 						}
 					},
 				});
-				
-			})
-		
+			})*/
 		});
-
+		 
 		//차단해제
 		$(document).on("click", ".btn-unblock", function() {
 
@@ -219,8 +248,6 @@
 				})
 			}
 		});
-		
-		
 	</script>
 </body>
 </html>
