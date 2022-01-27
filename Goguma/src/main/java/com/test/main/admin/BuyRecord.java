@@ -21,6 +21,13 @@ public class BuyRecord extends HttpServlet {
 		RecordDAO dao = new RecordDAO();
 		ArrayList<DealRecordDTO> list = dao.buyRecordList(id);
 		
+		for(DealRecordDTO dto : list) {
+			
+			dto.setRegDate(dto.getRegDate().substring(0, 10));
+			dto.setDealDate(dto.getDealDate().substring(0, 10));
+
+		}
+		
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");
 		PrintWriter writer = resp.getWriter();

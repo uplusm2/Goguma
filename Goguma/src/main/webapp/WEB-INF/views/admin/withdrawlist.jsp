@@ -91,27 +91,26 @@
 	</main>
 
 	<script>
+		
 		<c:if test="${map.searchmode == 'y'}">
-		$('select[name=column]').val('${map.column}');
-		$('input[name=word]').val('${map.word}');
+			$('select[name=column]').val('${map.column}');
+			$('input[name=word]').val('${map.word}');
 		</c:if>
-		//영구 탈퇴 버튼 추가
-		/* 
+
 		$(document).on("click", ".btn-withdraw", function () {
 		    
 			var id = $(this).attr("data-id");
 			
-			if (confirm("선택한 회원을 영구 탈퇴시키겠습니까?")) {
+			if (confirm("선택한 회원을 차단시키겠습니까?")) {
 		    	
 				$.ajax({
-		            url: '/goguma/admin/withdraw.do',
+		            url: '/goguma/admin/block.do',
 		            type: "POST",
 		            data: {id: id},
 		            dataType: "text",
 		            success: function (result) { 
-		                //console.log(data);
 		                if (result != 0){
-		                	window.alert("차단 해제되었습니다."); 
+		                	window.alert("차단되었습니다."); 
 		                    document.location.reload(true);                     	
 		                } else {
 		                	window.alert("차단 실패했습니다."); 
@@ -120,7 +119,7 @@
 		        })
 		    }
 		})
-		 */
+		
 	</script>
 </body>
 </html>

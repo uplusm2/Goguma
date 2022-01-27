@@ -85,8 +85,8 @@
 					<tbody>
 					<c:forEach items="${favorite}" var="dto">
 						<tr>
-							<td id = "td-name">${dto.name}</td>
-							<td>${dto.id}</td>
+							<td id = "td-name" onclick="location.href='/goguma/product/productDetail.do?seq=${dto.product_seq}'">${dto.name}</td>
+							<td >${dto.id}</td>
 							<td>${dto.price}</td>
 							<td>
 								<c:if test="${dto.is_auction eq 'y'}">
@@ -102,7 +102,6 @@
 					</tbody>
 				</table>
 			</form>
-			<input type="button" value = "돌아가기" onclick = "location.href = '/goguma/favorite/test.do'">
 		</section>
 		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>

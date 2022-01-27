@@ -19,162 +19,169 @@ import com.test.main.product.ProductDAO;
 public class ProductList extends HttpServlet {
 
 
+	private ProductDAO dao;
+	private ArrayList<ProductDTO> list;
+	private HashMap<String, String> map;
+	private Calendar now;
+
+	private String column;
+	private String word;
+	private String searchmode;
+	private int pageSize;
+	private int nowPage;
+	private int totalPage;
+	private String is_auction;
+	private String is_auction_ck;	
+	private String address_seq;
+	private String address_seq_ck;
+	private String product_type_seq;
+	private String product_type_seq_ck;
+
+	
+	{
+		dao = new ProductDAO();
+		map = new HashMap<String,String>();
+		now = Calendar.getInstance();
+		
+		searchmode = "n";
+		pageSize = 20;
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		
-		String column = req.getParameter("column");
-		String word = req.getParameter("word");
 
-		String searchmode = "n";
+		setSearchmode(req);
+		setPage(req);
+		list = dao.productlist(map);
+		ellipsis(list);
+		ArrayList<ProductAddressDTO> addresslist = dao.addresslist();
+		ArrayList<ProductTypeDTO> categorylist = dao.categorylist();
+
+		req.setAttribute("addresslist", addresslist);
+		req.setAttribute("categorylist", categorylist);
+		req.setAttribute("list", list);
+		req.setAttribute("map", map);
+		req.setAttribute("nowPage", nowPage);
+		req.setAttribute("pagebar", getPagebar());
+		req.setAttribute("totalPage", totalPage);
 		
-		if((column == null && word == null) || (column.equals("") && word.equals(""))) {
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/product/productList.jsp");
+		dispatcher.forward(req, resp);
+	}
+
+	private void setSearchmode(HttpServletRequest req) {
+		column = req.getParameter("column");
+		word = req.getParameter("word");
+		is_auction = req.getParameter("is_auction");
+		address_seq = req.getParameter("address_seq");
+		product_type_seq = req.getParameter("product_type_seq");
+		
+		if ((column == null && word == null) 
+				|| (column.equals("") && word.equals(""))) {
 			searchmode = "n";
 		} else {
 			searchmode = "y";
 		}
-		HashMap<String, String> map = new HashMap<String,String>();
+		
+		if ((is_auction == null) 
+				|| (is_auction.equals(""))) {
+			is_auction_ck = "n";
+		} else {
+			is_auction_ck = "y";
+		}
+		if ((address_seq == null) 
+				|| (address_seq.equals(""))) {
+			address_seq_ck = "n";
+		} else {
+			address_seq_ck = "y";
+		}
+		if ((product_type_seq == null) 
+				|| (product_type_seq.equals(""))) {
+			product_type_seq_ck = "n";
+		} else {
+			product_type_seq_ck = "y";
+		}
+
 		map.put("column", column);
 		map.put("word", word);
 		map.put("searchmode", searchmode);
+		map.put("is_auction", is_auction);
+		map.put("is_auction_ck", is_auction_ck);
+		map.put("address_seq", address_seq);
+		map.put("address_seq_ck", address_seq_ck);
+		map.put("product_type_seq", product_type_seq);
+		map.put("product_type_seq_ck", product_type_seq_ck);
 		
-		int nowPage = 0;		//현재 페이지 번호
-		int totalCount = 0;
-		int pageSize = 20;		//한페이지당 출력할 게시물 수
-		int totalPage = 0;
-		int begin = 0;			//where 시작 위치
-		int end = 0;			//where 끝 위치
-		int n = 0;
-		int loop = 0;
-		int blockSize = 10;
-		
+	}
+
+	private void ellipsis(ArrayList<ProductDTO> list) {
+		for (ProductDTO dto : list) {
+			if (dto.getName().length() > 11) {
+				dto.setName(dto.getName().substring(0, 11) + "..");
+			}
+
+		}
+	}
+
+	private void setPage(HttpServletRequest req) {
+		int begin = 0;		
+		int end = 0;		
+
 		String page = req.getParameter("page");
-		
-		if (page == null || page == "") nowPage = 1;
-		else nowPage = Integer.parseInt(page);
-		
+
+		if(page == null || page.equals("")) {
+			nowPage = 1;
+		} else {
+			nowPage = Integer.parseInt(page);
+		}
+
 		begin = ((nowPage - 1) * pageSize) + 1;
 		end = begin + pageSize - 1;
-		
+
 		map.put("begin", begin + "");
 		map.put("end", end + "");
-		
-		ProductDAO dao = new ProductDAO();
-		ArrayList<ProductDTO> list = dao.productlist(map);
-		
-		
-		ArrayList<ProductAddressDTO> addresslist = dao.addresslist();
-		ArrayList<ProductTypeDTO> categorylist = dao.categorylist();
-		
-	
-		
-		//1.5
-		Calendar now = Calendar.getInstance();
-		String strNow = String.format("%tF", now);
-		
-		
-		
-		for (ProductDTO dto : list) {
-			
-			//날짜 자르기
-			if (dto.getRegdate().startsWith(strNow)) {
-				dto.setRegdate(dto.getRegdate().substring(11));
-			} else {
-				dto.setRegdate(dto.getRegdate().substring(0, 10));
-			}
-			
-			
-			//제목이 길면 자르기
-			if (dto.getName().length() > 10) {
-				dto.setName(dto.getName().substring(0, 10) + "..");
-			}
-			
-			
-			
-			if (searchmode.equals("y") && column.equals("subject")) {
-				
-				
-				dto.setName(dto.getName().replace(word, "<span style='background-color:yellow;color:tomato;'>" + word + "</span>"));
-			}
-			
-		}
-	
-		HttpSession session = req.getSession();
-				
-		session.setAttribute("readcount", "n");
-				
-				
-				
-				
+	}
+
+	private String getPagebar() {
+		int totalCount = 0;
+		int blockSize = 20;
+		int n;
+		int loop;
+
 		totalCount = dao.getTotalCount(map);
 		totalPage = (int)Math.ceil((double)totalCount / pageSize);
 
 		String pagebar = "";
-
-				
-
-				
-		loop = 1; //루프변수(while)
-		n = ((nowPage - 1) / blockSize) * blockSize + 1; //페이지 번호
-				
-				
-				
+		
+		loop = 1; 
+		n = ((nowPage - 1) / blockSize) * blockSize + 1; 
+		
 		pagebar += "<nav><ul class=\"pagination\">";
-				
-				
 
-				
 		if (n == 1) {
-			pagebar += String.format("<li class='disabled'><a href='#!' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>");
+			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>");
 		} else {
-			pagebar += String.format("<li><a href='/goguma/product/productList.do?page=%d' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>", n-1);
+			pagebar += String.format("<li class='previous'><a href='/goguma/product/productList.do?page=%d' aria-label='Previous'><span class='glyphicon glyphicon-menu-left'></span></a></li>", n-1);
 		}
-				
-				
-				
-				
 
-				
 		while (!(loop > blockSize || n > totalPage)) {
-					
 			if (n == nowPage) {
 				pagebar += String.format("<li class='active'><a href='#!'>%d</a></li>", n);
 			} else {
 				pagebar += String.format("<li><a href='/goguma/product/productList.do?page=%d'>%d</a></li>", n, n);
 			}			
-					
 			loop++;
 			n++;
 		}
-				
-				
-	
-				
+
 		if (n > totalPage) {
 			pagebar += String.format("<li class='nothing'><a href='#!' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>");
 		} else {
 			pagebar += String.format("<li class='next'><a href='/goguma/product/productList.do?page=%d' aria-label='Next'><span class='glyphicon glyphicon-menu-right'></span></a></li>", n);
 		}
-				
-		pagebar += "</ul></nav>";
-				
-				
-				
-		req.setAttribute("pagebar", pagebar);
-		req.setAttribute("nowPage", nowPage);
 
-				
-		
-		
-		req.setAttribute("list", list);
-		req.setAttribute("addresslist", addresslist);
-		req.setAttribute("categorylist", categorylist);
-		req.setAttribute("map", map);
-		
-		
-		
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/product/productList.jsp");
-		dispatcher.forward(req, resp);
+		pagebar += "</ul></nav>";
+		return pagebar;
 	}
 }

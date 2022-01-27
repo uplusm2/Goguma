@@ -92,8 +92,8 @@
 }
 
 .dashboard .card .item:hover {
-	/* transform: scale(1.02, 1.02);
-	cursor: pointer; */
+	transform: scale(1.02, 1.02);
+	cursor: pointer;
 }
 
 .dashboard .card .item:nth-child(4){
