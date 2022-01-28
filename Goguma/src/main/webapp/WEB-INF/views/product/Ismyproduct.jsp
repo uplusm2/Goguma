@@ -19,11 +19,11 @@
 	
 	<script>
 		<c:if test="${dto.my == 'y'}">
-			location.href = 'myproductDetail.do?seq=${dto.seq}';
+			location.href = 'goguma/product/myproductDetail.do?seq=${dto.seq}';
 		</c:if>
 
 		<c:if test="${dto.my == 'n'}">
-			location.href = 'productDetail.do?seq=${dto.seq}';
+			location.href = 'goguma/product/productDetail.do?seq=${dto.seq}';
 		</c:if>
 		
 	</script>

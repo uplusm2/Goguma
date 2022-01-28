@@ -1,6 +1,7 @@
 package com.test.main.product;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,6 +30,11 @@ public class ProductRegistrationok extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ProfileDAO dao  = new ProfileDAO();
+		HashMap<String, String > map = new HashMap<String,String>();
+		HashMap<String, String > map2 = new HashMap<String,String>();
+		
+		String id = (String)req.getSession().getAttribute("id");
+		
 		 try {
 	         
 			 
@@ -40,64 +46,50 @@ public class ProductRegistrationok extends HttpServlet {
 	                                 new DefaultFileRenamePolicy()
 	                            );
 			 
-			 System.out.println(multi.getParameter("pathDirs[]"));
-			 Enumeration files = multi.getFileNames();
-			
-			 System.out.println(multi.getFilesystemName("files1"));
-			 System.out.println(multi.getFilesystemName("files1"));
-			 System.out.println(multi.getFilesystemName("files1"));
-
 			 
+			 String category = multi.getParameter("category");
+			 String productName = multi.getParameter("productName");
+			 String price = multi.getParameter("price");
+			 String type = multi.getParameter("type");
+			 String content = multi.getParameter("content");
+			 System.out.println(type);
+			 
+			 
+			 
+			 map.put("product_seq", "product_seq.nextVal");
+			 map.put("id", id);
+			 map.put("address_seq", 5+"");
+			 map.put("product_type_seq", category);
+			 map.put("name", productName);
+			 map.put("price", price);
+			 map.put("is_auction", type);
+			 map.put("content", content);
+			 map.put("regdate", "DEFAULT");
+			 map.put("is_completion", "DEFAULT");
+			 map.put("readcount", "DEFAULT");
+			 map.put("is_deletion", "DEFAULT");
+			 
+			 String productSeq = dao.setProductData(map);
+			 
+			 //상품지역 픽스 5	서울	강서구	화곡동
+			 Enumeration files = multi.getFileNames();
 
 			// 업로드한 파일들의 이름을 얻어옴
-
+			 
+			 //상품 시퀀수 가져오기...
+			 int check=0;
 			  while(files.hasMoreElements()) {
 				  String file = (String)files.nextElement();
-				  System.out.println(file);
+				  if(multi.getFilesystemName(file)!=null) {
+					  map2.put("PRODUCT_IMG_SEQ", "product_img_seq.nextval");
+					  map2.put("PRODUCT_SEQ", productSeq);
+					  map2.put("PATH", multi.getFilesystemName(file));
+					  
+					  check = dao.setProductImage(map2);
+				  }
 			  }
 			 
-
-//			  filename = multi.getFilesystemName(file);
-//
-//			 
-//
-//			  String file2 = (String)files.nextElement();
-//
-//			  filename2 = multi.getFilesystemName(file2);
-//
-//			 
-//
-//			  String file3 = (String)files.nextElement();
-//
-//			  filename3 = multi.getFilesystemName(file2);
-//	         String id = (String)req.getSession().getAttribute("id");
-//	         String nickName = multi.getParameter("nickName");
-//	         String intro = multi.getParameter("intro");
-//	         
-//	         String path = multi.getFilesystemName("pathDir");
-//	         
-//	         if(nickName==null) nickName = (String)req.getSession().getAttribute("nickname");
-//	         if(nickName==null) intro = " ";
-//	         if(nickName==null) path = "default image.jpg";
-//	         
-//	         
-//	         HashMap<String,String> map = new HashMap<String,String>();
-//	         
-//	         map.put("id", id);
-//	         map.put("intro", intro);
-//	         map.put("nickName", nickName);
-//	         map.put("path", path);
-//	         
-//	         int check = dao.setProfile(map);
-//	         
-//	         System.out.println(check); // 나중에 처리
-//	 		 System.out.println(path);
-//	 		 System.out.println(id);
-//	 		 
-//	 		 req.setAttribute("check", check);
-//	 		 req.setAttribute("nickName", nickName);
-//	 		 
-//	 		 req.getSession().setAttribute("nickname", nickName);
+			  req.setAttribute("check", check);
 	 		 
 	      } catch (Exception e) {
 	         System.out.println("productRegistrationok.doPost()");

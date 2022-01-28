@@ -9,9 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< Updated upstream
-
-=======
 <script>
 		if(${check}==0){
 			alert("프로필 정보 변경을 실패하였습니다. 닉네임을 확인해 주세요.");
@@ -21,6 +18,5 @@
 			location.href = "/goguma/product/productList.do";
 		}
 	</script>
->>>>>>> Stashed changes
 </body>
 </html>

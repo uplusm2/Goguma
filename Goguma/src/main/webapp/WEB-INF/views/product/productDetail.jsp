@@ -284,7 +284,7 @@ body {
 					<button type="button" class="mid-btn1" style="visibility: hidden;">
 						연락하기
 					</button>
-					<button type="button" class="mid-btn3" style="visibility: hidden;">
+					<button type="button" class="mid-btn3" style="visibility: hidden;" >
 						판매자정보
 					</button>
 					<button type="button" class="mid-btn2" style="visibility: hidden;">
@@ -295,8 +295,8 @@ body {
 					
 					
 					<c:if test="${dto.is_auction eq 'y'}">
-						<input type="button" class="mid-btn1" value="연락하기">
-						<button type="button" class="mid-btn3" >
+						<input type="button" class="mid-btn1" value="연락하기" >
+						<button type="button" class="mid-btn3" onclick = "location.href='/goguma/profile/mypage.do?userId=${dto.id}';">
 							판매자정보
 						</button>
 						<button type="button" class="mid-btn2" onclick="location.href='/goguma/product/bidadd.do?seq=${dto.seq}';">
@@ -306,7 +306,7 @@ body {
 					<c:if test="${dto.is_auction eq 'n'}">
 						<input type="button" class="mid-btn1" value="연락하기">
 
-						<button type="button" class="mid-btn3" >
+						<button type="button" class="mid-btn3" onclick = "location.href='/goguma/profile/mypage.do?userId=${dto.id}';" >
 							판매자정보
 						</button>
 						<button type="button" class="mid-btn2" style="visibility: hidden;">
