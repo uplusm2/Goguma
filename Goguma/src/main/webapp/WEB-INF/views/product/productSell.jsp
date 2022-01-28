@@ -79,6 +79,12 @@ select{
 #commit-btn{
 	margin-left: 545px;
 }
+#text1{
+	font-size: 22px;
+	margin-left: 100px;
+	margin-bottom: 30px;
+	
+}
 
 </style>
 </head>
@@ -88,15 +94,20 @@ select{
 	
 		<%@include file="/WEB-INF/views/inc/header.jsp" %>
 		<section>
+		
 			<div class="title">
 				<h2>판매확정</h2>
 			</div>
 			<hr id="main-hr" width="1100px">
-			<form method="POST" action="/goguma/product/productSellok.do?seq=${dto.seq}">
-				<h5>구매자를 선택해주세요</h5>
-				<table class="table">
+			
+			<form method="POST" action="/goguma/product/productSellok.do?seq=${dto.seq}"
+			style="padding: 0px 120px;">
+			
+				<div id="text1">구매자를 선택해주세요</div>
+				<table class="table" style="margin-bottom: 60px;">
 					<tr>
-						<th colspan="2">유저id</th>
+						<th></th>
+						<th>유저id</th>
 						<th>입찰가격</th>
 						<th>입찰일</th>
 					</tr>
@@ -113,12 +124,13 @@ select{
 						</c:forEach>
 					
 				</table>
-				
-				<div class="button">
-					<input type="submit" value="등록" class = "btn primary-btn">
 				</div>
+				<div class="button">
+					<input type="submit" value="등록" class = "btn primary-btn" 
+					style="width: 100px; margin: auto; display: block;">
+				
 			</form>
-	
+
 		</section>
 		
 	</main>

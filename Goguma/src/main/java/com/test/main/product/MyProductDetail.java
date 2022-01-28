@@ -177,8 +177,6 @@ public class MyProductDetail extends HttpServlet {
 		req.setAttribute("nowPage", nowPage);
 
 				
-		
-		
 		req.setAttribute("list", list);
 		req.setAttribute("addresslist", addresslist);
 		req.setAttribute("categorylist", categorylist);

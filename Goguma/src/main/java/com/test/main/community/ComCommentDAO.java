@@ -91,7 +91,7 @@ public class ComCommentDAO {
 
 	public int add(ComCommentDTO dto) {
 		try {
-			String sql = "insert into tblComComment values (comComment_seq.nextVal+100, ?, ?, ?, sysdate+0.375)";
+			String sql = "insert into tblComComment values (comComment_seq.nextVal+100, ?, ?, ?, sysdate)";
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, dto.getCseq());
 			pstat.setString(2, dto.getId());

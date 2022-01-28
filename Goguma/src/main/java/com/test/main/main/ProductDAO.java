@@ -39,6 +39,7 @@ public class ProductDAO {
 			
 			for(int i=0; i<10; i++) {
 				rs.next();
+				
 				ProductDTO dto = new ProductDTO();
 				dto.setSeq(rs.getString("product_seq"));
 				dto.setName(rs.getString("name"));
@@ -47,6 +48,8 @@ public class ProductDAO {
 				dto.setInterval(rs.getString("interval"));
 				
 				list.add(dto);
+				System.out.println(dto.getSeq());
+				System.out.println(dto.getImgPath());
 			}
 			return list;
 		} catch (Exception e) {

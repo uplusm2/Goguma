@@ -15,7 +15,7 @@
 		
 		<section class="community">
 			<div class="title">
-				<h2>${dto.name}의 입찰내역</h2>
+				<h2>${dto.name} 의 입찰내역</h2>
 			</div>
 			
 			<table class="table">
@@ -42,7 +42,7 @@
 			<div class="button">
 				<button type="button" class="btn important write"
 					onclick="history.back();">
-					돌아가기 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+					돌아가기
 				</button>
 			</div>
 			

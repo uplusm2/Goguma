@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.util.Calendar" %>
 
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
       
 <!DOCTYPE html>
 <html>
@@ -238,7 +238,7 @@ body {
 			<div id="main-right">
 				<div class="main-product-name">${dto.name}</div>
 				<div id="price-tab">
-				<div class="main-product-price">${dto.price}</div>
+				<div class="main-product-price"><fmt:formatNumber value="${dto.price}" pattern="#,###,###"/></div>
 				 
 				<c:if test="${dto.is_completion == 'y'}">
 					<button type="button" class="gray-btn">
@@ -338,7 +338,7 @@ body {
 					<div class="img-box"><a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img src="/goguma/files/product/${dto.main_img}" 
 					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></a></div>
             		<div class="product-name"><a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a></div>
-            		<div class="product-price">${dto.price}</div>
+            		<div class="product-price"><fmt:formatNumber value="${dto.price}" pattern="#,###,###"/></div>
         		</li>
 				</c:forEach>
 			</ul>

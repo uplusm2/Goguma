@@ -11,12 +11,18 @@
 		caption-side: center;
 		text-align : center;
 	}
+	
+	
+	
+	
 	table{
 		border : none;
 		border-top : 1px solid #9B59B6;
 		border-bottom : 1px solid #9B59B6;
 		width : 800px;
-		padding-top : 100px;
+		padding-top : 300px;
+		transform: translateY(200px);
+ 
 	}
 	table, th, td{
 		margin : 0 auto;
@@ -103,7 +109,6 @@
 				</table>
 			</form>
 		</section>
-		<%@include file="/WEB-INF/views/inc/footer.jsp" %>
 	</main>
 	
 	<script>

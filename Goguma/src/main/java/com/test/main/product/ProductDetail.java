@@ -190,13 +190,13 @@ public class ProductDetail extends HttpServlet {
 		System.out.println(check);
 		
 		req.setAttribute("check", check);
+		req.setAttribute("seq", seq);
 		
 		req.setAttribute("pagebar", pagebar);
 		req.setAttribute("nowPage", nowPage);
 
-				
-		
-		
+	
+
 		req.setAttribute("list", list);
 		req.setAttribute("addresslist", addresslist);
 		req.setAttribute("categorylist", categorylist);

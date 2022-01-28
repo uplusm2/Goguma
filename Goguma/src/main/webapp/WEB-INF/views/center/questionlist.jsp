@@ -111,7 +111,7 @@
 			</div>			
 			
 			<div class="list-btn">
-				<c:if test="${not empty id && $lv.equals('1')}">
+				<c:if test="${not empty id}">
 				<input type="button" value="글쓰기"
 					class="btn btn-primary"
 					onclick="location.href='/goguma/center/questionadd.do';">

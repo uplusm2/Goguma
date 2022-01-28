@@ -23,7 +23,7 @@
 				<br><br>
 				<div class="button">
 					<input type="button" value="확인하기" class="btn check ok"
-						onclick="location.href='/goguma/product/productDetail.do?seq=${seq}';"> 
+						onclick="location.href='/goguma/product/productDetail.do?seq=${dto.seq}';"> 
 					<input type="button" value="목록으로" class="btn list ok"
 						onclick="location.href='/goguma/product/productList.do';"> 
 				</div>
