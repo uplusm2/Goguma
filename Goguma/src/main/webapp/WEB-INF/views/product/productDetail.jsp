@@ -297,7 +297,7 @@ body {
 					
 					
 					<c:if test="${dto.is_auction eq 'y'}">
-						<input type="button" class="mid-btn1" value="연락하기">
+						<input type="button" class="mid-btn1" value="연락하기" onclick="location.href='/goguma/message/messageForm.do?receiver=${dto.id}';">
 						<button type="button" class="mid-btn3" >
 							판매자정보
 						</button>
@@ -306,8 +306,9 @@ body {
 						</button>
 					</c:if>
 					<c:if test="${dto.is_auction eq 'n'}">
-						<input type="button" class="mid-btn1" value="연락하기">
-
+						<input type="button" class="mid-btn1" value="연락하기"
+						onclick="location.href='/goguma/message/messageForm.do?receiver=${dto.id}';">
+						
 						<button type="button" class="mid-btn3" >
 							판매자정보
 						</button>
