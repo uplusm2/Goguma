@@ -40,34 +40,35 @@ public class Main extends HttpServlet {
 		noticeDao = new NoticeDAO();
 		favoriteDao = new FavoriteDAO();
 	}
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		session = req.getSession();
 		
-		System.out.println("1");
+
 		
 		if(session.getAttribute("id") != null) {
 			id = session.getAttribute("id").toString();
 		}
-		System.out.println("2");
+
 		
 		searchList = dao.list();
 		productList = productDao.newList();
-		System.out.println("3");
+
+		
 		
 		noticeDto = noticeDao.newNotice();
 		int favoriteCount = favoriteDao.getCount(id); 
-		System.out.println("4");
+
 		setProductPrice();
-		System.out.println("5");
+		
 		setProductName();
-		System.out.println("6");
+
 		setProductInterval();
-		System.out.println("7");
+
 		setNoticeDate();
-		System.out.println("8");
+
 		req.setAttribute("searchList", searchList);
 		req.setAttribute("productList", productList);
 		req.setAttribute("noticeDto", noticeDto);
@@ -145,3 +146,6 @@ public class Main extends HttpServlet {
 		}System.out.println("e");
 	}
 }
+
+
+

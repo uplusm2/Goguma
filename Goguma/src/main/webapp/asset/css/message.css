@@ -235,6 +235,7 @@
     height: 300px;
     outline: 0;
     transform: translateX(30px);
+    margin-left: 1px;
 }
 .message .form .button .btn {
     transform: translateX(790px) translateY(0px);

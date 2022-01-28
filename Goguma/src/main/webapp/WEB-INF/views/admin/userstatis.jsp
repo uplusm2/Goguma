@@ -63,7 +63,7 @@
 	            step: 1
 	        },
 	        accessibility: {
-	            description: 'Age (male)'
+	            description: 'Age (남성 회원)'
 	        }
 	    }, { // mirror axis on right side
 	        opposite: true,
@@ -74,7 +74,7 @@
 	            step: 1
 	        },
 	        accessibility: {
-	            description: 'Age (female)'
+	            description: 'Age (여성 회원)'
 	        }
 	    }],
 	    yAxis: {
@@ -106,13 +106,13 @@
 	    },
 
 	    series: [{
-	        name: 'Male',
+	        name: '남성 회원',
 	        data: [
 	            -22, -24, -30, -33, -32,
 	            -29, -19, -11
 	        ]
 	    }, {
-	        name: 'Female',
+	        name: '여성 회원',
 	        data: [
 	            21, 26, 29, 32, 31,
 	            29, 21, 17
