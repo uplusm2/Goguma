@@ -59,6 +59,10 @@ public class findPWOk extends HttpServlet {
 			script.println("history.back();");
 			script.println("</script>");
 			
+			HttpSession session = req.getSession();
+			
+			session.invalidate();
+			
 		}
 	}
 	

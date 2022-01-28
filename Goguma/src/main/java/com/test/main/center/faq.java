@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/center/faq.do")
 public class faq extends HttpServlet {
@@ -89,8 +90,9 @@ public class faq extends HttpServlet {
 		
 		pagebar += "</ul></nav>";
 		
-		
-		
+		String v = "user1";
+		HttpSession session = req.getSession();
+		session.setAttribute("value", v);
 		
 		String check = "1";
 		

@@ -21,11 +21,13 @@ public class rePW extends HttpServlet {
 		
 		req.setCharacterEncoding("utf-8");
 
+		
 		String id = req.getParameter("id");
 		String email = req.getParameter("email");
 		String name = req.getParameter("name");
 		String pw = req.getParameter("pw");
 
+		System.out.println(id);
 		
 		UserDTO dto = new UserDTO();
 		UserDAO dao = new UserDAO();
@@ -33,20 +35,26 @@ public class rePW extends HttpServlet {
 		dto.setName(name);
 		dto.setEmail(email);
 		dto.setId(id);
-		dto.setName(pw);
+		dto.setPw(pw);
+		
+		System.out.println(dto.getId());
+		System.out.println(dto.getPw());
+		System.out.println(dto.getName());
+		System.out.println(dto.getEmail());
 		
 		int result = dao.repw(dto);
 
 		
-		System.out.println(result);
-		
-		if (result == -1) {
+		if (result != 1) {
 			
 			PrintWriter script = resp.getWriter();
 			script.println("<script>");
 			script.println("alert('ID or name or email be wrong')");
 			script.println("history.back();");
 			script.println("</script>");
+			HttpSession session = req.getSession();
+			
+			session.invalidate();
 
 		
 		} else {

@@ -43,28 +43,36 @@ public class Main extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
 		session = req.getSession();
+		
+		System.out.println("1");
 		
 		if(session.getAttribute("id") != null) {
 			id = session.getAttribute("id").toString();
 		}
+		System.out.println("2");
 		
 		searchList = dao.list();
 		productList = productDao.newList();
+		System.out.println("3");
+		
 		noticeDto = noticeDao.newNotice();
 		int favoriteCount = favoriteDao.getCount(id); 
-		
+		System.out.println("4");
 		setProductPrice();
+		System.out.println("5");
 		setProductName();
+		System.out.println("6");
 		setProductInterval();
+		System.out.println("7");
 		setNoticeDate();
-		
+		System.out.println("8");
 		req.setAttribute("searchList", searchList);
 		req.setAttribute("productList", productList);
 		req.setAttribute("noticeDto", noticeDto);
 		req.setAttribute("favoriteCount", favoriteCount);
-		
+		System.out.println("9");
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
 		
@@ -74,7 +82,7 @@ public class Main extends HttpServlet {
 		String tmp = noticeDto.getRegdate().substring(0, 10).replace("-", "/");
 		noticeDto.setRegdate(tmp);
 	}
-
+		
 	private void setProductInterval() {
 		/*
 			일, 시간, 분, 초로 구분하기
@@ -126,9 +134,14 @@ public class Main extends HttpServlet {
 	}
 
 	private void setProductPrice() {
+		System.out.println("a");
 		for (ProductDTO dto : productList) {
+			System.out.println("b");
+			System.out.println(dto.getPrice());
 			String temp = String.format("%,d", Integer.parseInt(dto.getPrice()));
+			System.out.println("c");
 			dto.setPrice(temp);
-		}
+			System.out.println("d");
+		}System.out.println("e");
 	}
 }
