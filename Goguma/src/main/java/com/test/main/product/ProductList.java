@@ -90,7 +90,7 @@ public class ProductList extends HttpServlet {
 		} else {
 			is_auction_ck = "y";
 		}
-		if ((address_seq == null) 
+		if ((address_seq == null)
 				|| (address_seq.equals(""))) {
 			address_seq_ck = "n";
 		} else {
@@ -118,7 +118,7 @@ public class ProductList extends HttpServlet {
 	private void ellipsis(ArrayList<ProductDTO> list) {
 		for (ProductDTO dto : list) {
 			if (dto.getName().length() > 11) {
-				dto.setName(dto.getName().substring(0, 12) + "..");
+				dto.setName(dto.getName().substring(0, 11) + "..");
 			}
 
 		}

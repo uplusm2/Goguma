@@ -51,6 +51,12 @@ public class ProductDetail extends HttpServlet {
 		map.put("column", column);
 		map.put("word", word);
 		map.put("searchmode", searchmode);
+		map.put("is_auction","");
+		map.put("is_auction_ck","n");
+		map.put("product_type_seq",dto.getProduct_type_seq());
+		map.put("product_type_seq_ck","y");
+		map.put("address_seq","");
+		map.put("address_seq_ck","n");
 		
 		int nowPage = 0;		//현재 페이지 번호
 		int totalCount = 0;

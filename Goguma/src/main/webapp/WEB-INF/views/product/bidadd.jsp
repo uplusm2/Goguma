@@ -92,13 +92,17 @@ select{
 				<h2>입찰하기</h2>
 			</div>
 			<hr id="main-hr" width="1100px">
-			<form method="POST" action="/goguma/product/bidaddok.do?seq=${dto.seq}">
-				<input type="text" name="price" placeholder="입찰가격을 입력하세요." class="form-text" required>
+
+			<form method="POST" action="/goguma/product/bidaddok.do?seq=${dto.seq}" style="width:fit-content;
+        margin:auto; overflow: hidden;">
+        <div><input type="text" name="price" placeholder="입찰가격을 입력하세요." class="form-text" required></div>
 				
-				<div class="button">
+				
+				<div class="button" style="float: right; margin-top: 15px">
 					<input type="submit" value="등록" class = "btn primary-btn">
 				</div>
 			</form>
+			
 	
 		</section>
 		

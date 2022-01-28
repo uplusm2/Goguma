@@ -24,21 +24,25 @@
 	width: 300px;
 }
 .product-name{
-	font-size: 20px;
-	margin-left:20px;
+	font-size: 19px;
+	 text-align: right;
 }
 .product-price{
-	font-size: 16px;
+	font-size: 17px;
+	 text-align: right;
 }
 .main-img-box>img{
   width: 500px;
   height: 500px;
   object-fit: cover;
+  border-radius: 20px;
+  
 }
 .main-img-box{
   width: 530px;
   height: 500px;
   float: left;
+  border-radius: 20px;
 }
 .red-btn{
 	font-size: 15px;
@@ -80,26 +84,29 @@
 .mid-btn1{
 	font-size: 30px;
 	margin: 15px 5px 0px 0px;
-	padding: 10px 3px;
+	padding: 10px 6px;
 	background-color: #9B59B6; 
 	border-color: #9B59B6;
 	border-radius: 10px;
+	color: white;
 }
 .mid-btn2{
 	font-size: 30px;
 	margin: 15px 310px 15px 5px;
-	padding: 10px 3px;
+	padding: 10px 6px;
 	background-color: orange;
 	border-color:orange;
 	border-radius: 10px;
+	color: white;
 }
 .mid-btn3{
 	font-size: 30px;
 	margin: 15px 5px;
-	padding: 10px 3px;
+	padding: 10px 6px;
 	background-color: gray;
 	border-color: gray;
 	border-radius: 10px;
+	color: white;
 }
 .mid-btn4{
 	font-size: 18px;
@@ -173,6 +180,7 @@
     width: 180px;
     height: 180px;
     object-fit: cover;
+    border-radius: 8px;
 }
 /*커스텀*/
 html,
@@ -205,8 +213,14 @@ body {
 }
 .list > ul > li .product-price::after {
     content: "원";
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight:normal;
+}
+
+.product-h2{
+	font-size: 2rem;
+	font-weight: bold;
+	margin-left: 30px;
 }
 
 </style>
@@ -306,14 +320,14 @@ body {
 			
 			
 				
-				<input type="button" class="mid-btn4" value="댓글">
-				<input type="button" class="mid-btn5" value="입찰내역"  onclick="location.href='/goguma/product/bidList.do?seq=${dto.seq}';">
+				<input type="button" class="mid-btn4" value="댓글" style="visibility: hidden;">
+				<input type="button" class="mid-btn5 btn primary-btn" value="입찰내역"  onclick="location.href='/goguma/product/bidList.do?seq=${dto.seq}';">
 
 			</div>
 			
 		</div>
 		<hr width="1100px">
- 		<h2>비슷한 상품</h2>
+ 		<div class="product-h2">비슷한 상품</div>
  		<br>
  		<div class="list con" style="margin-left: 30px;">
 	    	<ul class="row">

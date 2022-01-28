@@ -13,14 +13,13 @@
 	<script src="js/bootstrap.js"></script>
 	<%@ include file="/WEB-INF/views/inc/asset.jsp" %>
 <style>
-
 	.table {
 		width:500px;
 		margin: auto;
 	}
 	
 	.container {
-		margin-top: 150px;
+		margin-top: 50px;
 	}
 	
 	h5 {
@@ -155,7 +154,7 @@
 		              <select id="emd" name="emd">
 		                <option selected="selected">읍면동</option>
 		                <option value="1">석촌동</option>
-		                <option value="2">석촌동</option>
+		                <option value="2">상도동</option>
 		                <option value="3">성내동</option>
 		                <option value="4">삼전동</option>
 		                <option value="5">화곡동</option>

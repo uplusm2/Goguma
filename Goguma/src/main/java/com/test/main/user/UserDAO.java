@@ -29,6 +29,7 @@ public class UserDAO {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
+            
             //conn = DriverManager.getConnection(url, id, pw);
 			//conn = DBUtil.open();
 			conn = DBUtil.open("goguma", "java1234");
@@ -111,11 +112,11 @@ public int userinforegisterok(UserDTO dto) {
 		pstat.setString(4, dto.getAddress());
 		pstat.setString(5, dto.getTel());
 		pstat.setString(6, dto.getEmail());
-		pstat.setString(7, dto.getBirth().substring(0, 1)
+		pstat.setString(7, dto.getBirth().substring(1, 2)
 							+ "/"
-							+ dto.getBirth().substring(2, 3)
+							+ dto.getBirth().substring(3, 4)
 							+ "/"
-							+ dto.getBirth().substring(4, 5));
+							+ dto.getBirth().substring(5, 6));
 		pstat.setString(8, dto.getGender());
 
 			
