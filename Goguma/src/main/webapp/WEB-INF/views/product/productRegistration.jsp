@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<% int fileSeq = 34; %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -192,6 +191,7 @@ select {
 					<textarea class="text product-text" placeholder="상세내용을 입력해주세요" name = "content"></textarea>
 				</div>		
 <!--  multiple  -->	
+<<<<<<< Updated upstream
 		
 				<input type="file" id="file1" name="file1"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : ''">
 				<input type="file" id="file2" name="file2"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
@@ -204,7 +204,22 @@ select {
 				<input type="file" id="file8" name="file8"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
 				<input type="file" id="file9" name="file9"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
 				<input type="file" id="file10" name="file10"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+=======
+>>>>>>> Stashed changes
 				
+				<div class = "button_file">
+				<input type="file" id="f_1" name="file1"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" >
+				<input type="file" id="f_2" name="file2"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_3" name="file3"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_4" name="file4"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_5" name="file5"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+			                           
+				<input type="file" id="f_6" name="file6"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_7" name="file7"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_8" name="file8"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_9" name="file9"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				<input type="file" id="f_10" name="file10"  onchange="setDetailImage(event);" class="fileList btn btn-primary" value="상품이미지첨부" style="display : none">
+				</div>
 				
 				<input class="write" type="submit" class="btn btn-primary" id="commit-btn" value="작성완료">
 
@@ -215,8 +230,14 @@ select {
 
 	<%@include file="/WEB-INF/views/inc/footer.jsp"%>
 <script>
+<<<<<<< Updated upstream
 	
 	
+=======
+
+	let seq = 1;
+	let id = "f_"+seq;
+>>>>>>> Stashed changes
 	
 	$( document ).ready( function() {
 	    $( '.slider' ).slick( {
@@ -225,11 +246,12 @@ select {
 	    } );
 	  } );
 	
+	
 	function setDetailImage(event){
 		for(var image of event.target.files){
 			var reader = new FileReader();
-			
 			reader.onload = function(event){
+<<<<<<< Updated upstream
 				
 				var img = document.createElement("img");
 				var div = document.createElement("div");
@@ -243,13 +265,35 @@ select {
 				$('.slider').slick('refresh');
 				
 				$(".buttonSpace").append(input);
+=======
+					
+					var img = document.createElement("img");
+					var div = document.createElement("div");
+					img.setAttribute("src", event.target.result);
+					img.setAttribute("class", "col-lg-6");
+					img.setAttribute("object-fit", "scale-down");
+					
+					div.appendChild(img);
+					$('.slider').slick("slickAdd", div);
+					$(".slider").slick('unslick');
+					$('.slider').slick('refresh');
+					
+>>>>>>> Stashed changes
 			};
-			
-			console.log(image);
-			reader.readAsDataURL(image);
 		}
 	}
-        
+	
+	let change  = function(){
+		if(id>9){
+			alert("사진은 10개만 업로드 가능합니다.");
+		}else{
+			document.getElementById(id).style.display = "none";
+			seq++;
+			id = "f_"+seq;
+			document.getElementById(id).style.display = "";
+		}
+	}
+	
 </script>
 
 </body>
