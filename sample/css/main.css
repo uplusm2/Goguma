@@ -138,10 +138,15 @@ header {
    font-size: 24px;
    height: 25px;
    color: #fff;
-   background: #fff;
+   background: #000;
    border: 0;
+   opacity: 0;
 }
-.inner-header .submit.bi {
+.inner-header .magnifier {
+   position: absolute;
+   left: 720px;
+   top: 52px;
+   font-size: 24px;
    background: none;
    color: #9B59B6;
    font-weight: 700;
