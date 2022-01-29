@@ -1,16 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
-	pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.Calendar"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-=======
-    pageEncoding="UTF-8"%>
-<%@ page import = "java.util.Calendar" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
->>>>>>> branch 'master' of https://github.com/uplusm2/Goguma
-
-
 
 
 <!DOCTYPE html>
@@ -269,12 +260,6 @@ html, body {
 		<%@include file="/WEB-INF/views/inc/header.jsp"%>
 
 		<section>
-<<<<<<< HEAD
-			<div id="main-box">
-				<div class="main-img-box">
-					<img src="/goguma/files/product/${dto.main_img}"
-						onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt="">
-=======
 		<div id="main-box">
 			<div class="main-img-box"><img src="/goguma/files/product/${dto.main_img}" 
 					onerror="this.src='/goguma/files/product/defaultimg.jpg';" alt=""></div>
@@ -305,8 +290,7 @@ html, body {
 			
 				
 				<input type="image" src="/goguma/asset/img/heart_black.png" class="heart-img">
-				
->>>>>>> branch 'master' of https://github.com/uplusm2/Goguma
+
 				</div>
 				<div id="main-right">
 					<div class="main-product-name">${dto.name}</div>
@@ -354,16 +338,6 @@ html, body {
 
 					<button type="button" class="view-more">더보기</button>
 				</div>
-<<<<<<< HEAD
-				<div id="bottom-box">
-
-					<c:if test="${dto.is_completion eq 'y'}">
-						<button type="button" class="mid-btn1" style="visibility: hidden;">
-							연락하기</button>
-						<button type="button" class="mid-btn3" style="visibility: hidden;">
-							판매자정보</button>
-=======
-				
 				
 				
 				<button type="button" class="view-more">
@@ -402,7 +376,6 @@ html, body {
 						<button type="button" class="mid-btn3" >
 							판매자정보
 						</button>
->>>>>>> branch 'master' of https://github.com/uplusm2/Goguma
 						<button type="button" class="mid-btn2" style="visibility: hidden;">
 							입찰하기</button>
 					</c:if>
@@ -426,9 +399,7 @@ html, body {
 								style="visibility: hidden;">입찰하기</button>
 						</c:if>
 					</c:if>
-
-
-
+				</c:if>
 					<input type="button" class="mid-btn4" value="댓글"
 						style="visibility: hidden;"> <input type="button"
 						class="mid-btn5 btn primary-btn" value="입찰내역"
@@ -437,32 +408,6 @@ html, body {
 				</div>
 
 			</div>
-<<<<<<< HEAD
-			<hr width="1100px">
-			<div class="product-h2">비슷한 상품</div>
-			<br>
-			<div class="list con" style="margin-left: 30px;">
-				<ul class="row">
-
-					<c:forEach items="${list}" var="dto">
-
-						<li class="cell">
-							<div class="img-box">
-								<a href="/goguma/product/productDetail.do?seq=${dto.seq}"><img
-									src="/goguma/files/product/${dto.main_img}"
-									onerror="this.src='/goguma/files/product/defaultimg.jpg';"
-									alt=""></a>
-							</div>
-							<div class="product-name">
-								<a href="/goguma/product/productDetail.do?seq=${dto.seq}">${dto.name}</a>
-							</div>
-							<div class="product-price">
-								<fmt:formatNumber value="${dto.price}" pattern="#,###,###" />
-							</div>
-						</li>
-					</c:forEach>
-				</ul>
-=======
 			
 		</div>
 		<hr width="1100px">
@@ -481,7 +426,6 @@ html, body {
         		</li>
 				</c:forEach>
 			</ul>
->>>>>>> branch 'master' of https://github.com/uplusm2/Goguma
 			</div>
 			<c:if test="${list.size() == 0}">
 				<h2>게시물이 없습니다.</h2>
