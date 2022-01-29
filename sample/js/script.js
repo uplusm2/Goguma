@@ -16,22 +16,11 @@ $(function() {
         arrows: true,   
         dots: false,    
         fade: true,    
-        autoplay: false,  
+        autoplay: true,  
         autoplaySpeed: 7000, 
         pauseOnHover: false,
         pauseOnFocus: false
     })
     $('.slick-prev').text('prev');
-    // $('.projectSlide').slick({
-    //     arrows:true,  //화살표
-    //     dots:true,  //인디케이터
-    //     autoplay:true,    //자동 재생
-    //     infinite: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplaySpeed:6000,  //재생 시간
-    //     pauseOnHover:true,  //호버시 멈추도록 설정
-    //     pauseOnFocus:true
-    // });
 })
 
