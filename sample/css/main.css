@@ -594,6 +594,21 @@ li:nth-child(3).slick-active img {
    margin-left: 2px;
    font-size: 44px;
 }
+.right-side .github {
+   position: fixed;
+   transform: translateX(-1300px);
+   width: 60.5px;
+   height: 60.5px;
+   border-radius: 50%;
+}
+.right-side .github i {
+   position: absolute;
+   left: 0px;
+   top: -16px;
+   color: #F4BF35;
+   font-size: 60.5px;
+   cursor: pointer;
+}
 
 
 /* footer */
