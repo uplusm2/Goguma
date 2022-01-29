@@ -1,7 +1,8 @@
 ![main_goguma](https://user-images.githubusercontent.com/87955005/151654019-dde31184-07a4-453f-938d-449338246e51.png)
 
 >  **고구마켓**은 Sevlet과 JSP로 구현한 중고거래 웹사이트입니다. <br />
->  **25일** 동안( 22.01.03 - 22.01.27 ) **6명**의 팀원이 개발에 참여한 프로젝트입니다.
+>  **25일** 동안( 22.01.03 - 22.01.27 ) **6명**의 팀원이 개발에 참여한 프로젝트입니다. <br />
+>  미리보기👉https://umingming.github.io/Goguma/sample
 
 <br />
 
