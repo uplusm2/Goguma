@@ -46,34 +46,25 @@ public class Main extends HttpServlet {
 		
 		session = req.getSession();
 		
-
-		
 		if(session.getAttribute("id") != null) {
 			id = session.getAttribute("id").toString();
 		}
-
 		
 		searchList = dao.list();
 		productList = productDao.newList();
 
-		
-		
 		noticeDto = noticeDao.newNotice();
 		int favoriteCount = favoriteDao.getCount(id); 
 
 		setProductPrice();
-		
 		setProductName();
-
 		setProductInterval();
-
 		setNoticeDate();
 
 		req.setAttribute("searchList", searchList);
 		req.setAttribute("productList", productList);
 		req.setAttribute("noticeDto", noticeDto);
 		req.setAttribute("favoriteCount", favoriteCount);
-		System.out.println("9");
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
 		
@@ -99,28 +90,25 @@ public class Main extends HttpServlet {
 						> * 60, + "초"
 		 */
 		for (ProductDTO dto : productList) {
-//			double temp = Double.parseDouble(dto.getInterval()); 
-//			int interval = (int)(Math.round(temp));
-			int interval = (int)(Math.round(Double.parseDouble(dto.getInterval())));
+			double interval = Double.parseDouble(dto.getInterval());
 			
 			if (interval >= 1) {
-				dto.setInterval(interval + "일");
+				dto.setInterval(Math.round(interval) + "일");
 			} else {
 				interval *= 24;
 				if(interval >= 1) {
-					dto.setInterval(interval + "시간");
+					dto.setInterval(Math.round(interval) + "시간");
 				} else {
 					interval *= 60;
 					if(interval >= 1) {
-						dto.setInterval(interval + "분");
+						dto.setInterval(Math.round(interval) + "분");
 					} else {
 						interval *= 60;
-						dto.setInterval(interval + "초");
+						dto.setInterval(Math.round(interval) + "초");
 					}
 				}
 			}
 		}
-		
 	}
 
 	private void setProductName() {

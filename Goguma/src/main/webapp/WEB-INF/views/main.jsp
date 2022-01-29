@@ -45,7 +45,7 @@
 			</div>
 			<ul class="recommendation">
 				<c:forEach items="${productList}" var="pdto">
-				<li><a href=""><p class="img"><img src="/goguma/files/product/${pdto.imgPath}.jpg"></p>
+				<li><a href=""><p class="img"><img src="/goguma/files/product/${pdto.imgPath}"></p>
 					<div class="content">
 						<p class="price">${pdto.price}<small>원</small> <i class="bi bi-stopwatch">${pdto.interval} 전</i></p>
 						<p class="intro">${pdto.name}</p>
