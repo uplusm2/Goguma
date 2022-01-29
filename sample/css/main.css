@@ -677,3 +677,14 @@ footer {
 .inner-footer .policy li{
    font-size: 13px;
 }
+
+
+/* hits */
+.hit {
+   position: relative;
+}
+.hit img {
+   position: absolute;
+   left: 1110px;
+   top: -130px;
+}
