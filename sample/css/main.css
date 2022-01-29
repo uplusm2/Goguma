@@ -609,6 +609,18 @@ li:nth-child(3).slick-active img {
    font-size: 60.5px;
    cursor: pointer;
 }
+.right-side .github a {
+   position: absolute;
+   left: -205px;
+   top: 20px;
+   width: 200px;
+   height: 50px;
+   /* background: #000; */
+}
+.right-side .github a img {
+   position: absolute;
+   right: 0px;
+}
 
 
 /* footer */
