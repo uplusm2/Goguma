@@ -172,17 +172,11 @@
 </footer>
 <script>
 	$(function() {
-	    $('.main-img .slide').slick({
-		arrows: true,   
-		dots: false,    
-		fade: true,    
-		autoplay: false,  
-		autoplaySpeed: 7000, 
-		pauseOnHover: false,
-		pauseOnFocus: false
-	    })
-	    $('.slick-prev').text('prev');
-	})
+	    $(".popular-keyword").hide();
+	    $(".search").click(function() {
+		$(".popular-keyword").slideToggle(200);
+	    });
+	});
 	
 	$('.keyword').click(function() {
 	$('.search').val(this.innerHTML);
