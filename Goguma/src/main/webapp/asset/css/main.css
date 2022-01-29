@@ -409,7 +409,7 @@ footer {
 }
 .main-img .slide li:nth-child(3) .txt {
    bottom: 20%;
-   transform: translateX(55px) translateY(-100px);
+   transform: translateX(40px) translateY(-100px);
 }
 
 
@@ -478,7 +478,7 @@ li:nth-child(3).slick-active .txt{
 @keyframes txt3 {
    0% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
    20% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
-   100% {opacity: 1; transform: rotateY(0deg) translateX(55px) translateY(-100px);}
+   100% {opacity: 1; transform: rotateY(0deg) translateX(40px) translateY(-100px);}
 }
 li:nth-child(1).slick-active img {
    animation-name: img1;

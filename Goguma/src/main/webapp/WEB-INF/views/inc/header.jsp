@@ -71,7 +71,8 @@
 	
 
    $('.keyword').click(function() {
-      $('.search').val(this.innerHTML);
+	   $('.search').val(this.innerHTML);
+	   $(".popular-keyword").slideToggle(200);
 	});
 </script>
 

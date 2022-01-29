@@ -141,7 +141,7 @@ public class CommunityDAO {
 	
 	public String add(CommunityDTO dto) {
 		try {
-			String sql = "insert into tblCommunity values (community_seq.nextVal+100, ?, ?, ?, sysdate, default)";
+			String sql = "insert into tblCommunity values (195, ?, ?, ?, sysdate, default)";
 			pstat = conn.prepareStatement(sql);
 			pstat.setString(1, dto.getId());
 			pstat.setString(2, dto.getTitle());

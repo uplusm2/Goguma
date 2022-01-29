@@ -49,10 +49,10 @@
 			<c:forEach items="${commentList}" var="cdto">
 			<table class="comment">
 				<tr>
-					<td rowspan="2"><img src="/goguma/files/profile/${dto.path}" alt=""></td>
+					<td rowspan="2"><img src="/goguma/files/profile/${cdto.path}" alt=""></td>
 					<td>${cdto.nickname}
 						<small>&nbsp;&nbsp;${cdto.regDate}</small>
-						<c:if test="${dto.isNew <= 1}">
+						<c:if test="${cdto.isNew <= 1}">
 						<span class="orange">N</span>
 						</c:if>
 					</td>

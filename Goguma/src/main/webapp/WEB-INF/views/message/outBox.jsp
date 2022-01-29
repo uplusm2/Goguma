@@ -16,10 +16,10 @@
 			<nav class="left-side">
 				<div class="menu">
 					<ul>
-						<li onclick="location.href='/goguma/message/inBox.do';"><span class="glyphicon glyphicon-envelope message"></span>
+						<li onclick="location.href='/goguma/message/inBox.do';"><span class="bi bi-envelope message"></span>
 							<span class="glyphicon glyphicon-arrow-left arrow"></span> 받은 메시지
 						</li>
-						<li onclick="location.href='/goguma/message/outBox.do';"><span class="glyphicon glyphicon-envelope message"></span>
+						<li onclick="location.href='/goguma/message/outBox.do';"><span class="bi bi-envelope message"></span>
 							<span class="glyphicon glyphicon-arrow-right arrow"></span> 보낸 메시지
 						</li>
 					</ul>
