@@ -171,10 +171,23 @@
 	</div>
 </footer>
 <script>
-   $('.keyword').click(function() {
-   $('.search').val(this.innerHTML);
-      $(".popular-keyword").slideToggle(200);
-   });
+	$(function() {
+	    $('.main-img .slide').slick({
+		arrows: true,   
+		dots: false,    
+		fade: true,    
+		autoplay: false,  
+		autoplaySpeed: 7000, 
+		pauseOnHover: false,
+		pauseOnFocus: false
+	    })
+	    $('.slick-prev').text('prev');
+	})
+	
+	$('.keyword').click(function() {
+	$('.search').val(this.innerHTML);
+	   $(".popular-keyword").slideToggle(200);
+	});
 </script>
 </body>
 </html>
