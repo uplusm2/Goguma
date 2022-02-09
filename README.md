@@ -1,8 +1,7 @@
 ![main_goguma](https://user-images.githubusercontent.com/87955005/151654019-dde31184-07a4-453f-938d-449338246e51.png)
 
->  **고구마켓**은 **Servlet**과 **JSP**로 구현한 중고거래 웹사이트입니다. <br />
->  **25일** 동안( 22.01.03 - 22.01.27 ) **6명**의 팀원이 개발에 참여했습니다. <br />
->  👉[미리보기](https://umingming.github.io/Goguma/sample)
+>  **고구마켓**은 **Servlet**과 **JSP**로 구현한 중고거래 웹사이트입니다. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👉[미리보기](https://umingming.github.io/Goguma/sample)<br />
+>  **25일** 동안( 22.01.03 - 22.01.27 ) **6명**의 팀원이 개발에 참여했습니다. &nbsp;&nbsp;&nbsp;📝[프로젝트 일지](https://www.notion.so/yumding/10800488ce4345e38dd9cb80348a9713 )<br />
 
 <br />
 
