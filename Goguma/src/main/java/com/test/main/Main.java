@@ -52,8 +52,8 @@ public class Main extends HttpServlet {
 		
 		searchList = dao.list();
 		productList = productDao.newList();
-
 		noticeDto = noticeDao.newNotice();
+		
 		int favoriteCount = favoriteDao.getCount(id); 
 
 		setProductPrice();
@@ -79,7 +79,7 @@ public class Main extends HttpServlet {
 		/*
 			일, 시간, 분, 초로 구분하기
 			 
-			1. String -> int 형변환할 때 반올림 되게
+			1. String -> double 형변환할 때 반올림 되게
 				> Math.round() 사용
 			2. if interval이 1보다 큰지?
 			 	> 크거나 같으면 + "일"
@@ -125,13 +125,10 @@ public class Main extends HttpServlet {
 	private void setProductPrice() {
 		System.out.println("a");
 		for (ProductDTO dto : productList) {
-			System.out.println("b");
 			System.out.println(dto.getPrice());
 			String temp = String.format("%,d", Integer.parseInt(dto.getPrice()));
-			System.out.println("c");
 			dto.setPrice(temp);
-			System.out.println("d");
-		}System.out.println("e");
+		}
 	}
 }
 
