@@ -25,12 +25,8 @@
 }
 .message .left-side .menu ul > li span.message {
     text-align: center;
-    color: #fff;
-    background: #757575;
-    width: 21px;
-    height: 17px;
-    line-height: 17px;
-    font-size: 17px;
+    color: #757575;
+    font-size: 25px;
     transform: translateX(-33px);
     /* font-weight: 600; */
 }

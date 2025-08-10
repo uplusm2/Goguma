@@ -42,7 +42,7 @@
 				<div class="button">
 					<input type="button" value="취소" class="btn cancel edit"
 						onclick="location.href='/goguma/community/communityList.do';">
-					<input type="submit" value="수정" class="btn important edit">
+					<input type="submit" value="수정" class="btn important edit ok">
 					<input type="hidden" name="seq" value="${dto.seq}">
 				</div>
 			</form>

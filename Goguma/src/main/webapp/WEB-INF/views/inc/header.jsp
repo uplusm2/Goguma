@@ -14,16 +14,16 @@
 			<ul class="popular-keyword">
 	            <p>TOP 10</p>
 	            <c:if test="${searchList.size() != 0}">
-				<li><span>1</span> ${searchList[1].keyword}</li>
-				<li><span>2</span> ${searchList[2].keyword}</li>
-				<li><span>3</span> ${searchList[3].keyword}</li>
-				<li><span>4</span> ${searchList[4].keyword}</li>
-				<li><span>5</span> ${searchList[5].keyword}</li>
-				<li><span>6</span> ${searchList[6].keyword}</li>
-				<li><span>7</span> ${searchList[7].keyword}</li>
-				<li><span>8</span> ${searchList[8].keyword}</li>
-				<li><span>9</span> ${searchList[9].keyword}</li>
-				<li><span>10</span> ${searchList[10].keyword}</li>
+				<li><span>1</span> <em class="keyword">${searchList[1].keyword}</em></li>
+				<li><span>2</span> <em class="keyword">${searchList[2].keyword}</em></li>
+				<li><span>3</span> <em class="keyword">${searchList[3].keyword}</em></li>
+				<li><span>4</span> <em class="keyword">${searchList[4].keyword}</em></li>
+				<li><span>5</span> <em class="keyword">${searchList[5].keyword}</em></li>
+				<li><span>6</span> <em class="keyword">${searchList[6].keyword}</em></li>
+				<li><span>7</span> <em class="keyword">${searchList[7].keyword}</em></li>
+				<li><span>8</span> <em class="keyword">${searchList[8].keyword}</em></li>
+				<li><span>9</span> <em class="keyword">${searchList[9].keyword}</em></li>
+				<li><span>10</span> <em class="keyword">${searchList[10].keyword}</em></li>
 				</c:if>
          	</ul>
 		</form>
@@ -67,6 +67,12 @@
 		$(".search").click(function() {
 			$(".popular-keyword").slideToggle(200);
 		});
+	});
+	
+
+   $('.keyword').click(function() {
+	   $('.search').val(this.innerHTML);
+	   $(".popular-keyword").slideToggle(200);
 	});
 </script>
 

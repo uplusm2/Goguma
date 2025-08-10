@@ -291,6 +291,9 @@ header {
 .inner-header .popular-keyword li:last-child {
    transform: translateX(154.6px) translateY(-16.4px);
 }
+.inner-header .popular-keyword li .keyword {
+	font-style: normal;
+}
 
 
 /* footer */
@@ -358,7 +361,7 @@ footer {
 }
 .main-img .slide {
 	margin-top: 20px;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 }
 .main-img .slide li {
    width: 1200px;
@@ -406,7 +409,7 @@ footer {
 }
 .main-img .slide li:nth-child(3) .txt {
    bottom: 20%;
-   transform: translateX(55px) translateY(-100px);
+   transform: translateX(40px) translateY(-100px);
 }
 
 
@@ -475,7 +478,7 @@ li:nth-child(3).slick-active .txt{
 @keyframes txt3 {
    0% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
    20% {opacity: 0; transform: rotateY(-80deg) translateX(-155px) translateY(-100px);}
-   100% {opacity: 1; transform: rotateY(0deg) translateX(55px) translateY(-100px);}
+   100% {opacity: 1; transform: rotateY(0deg) translateX(40px) translateY(-100px);}
 }
 li:nth-child(1).slick-active img {
    animation-name: img1;
@@ -549,6 +552,7 @@ li:nth-child(3).slick-active img {
    width: 100%;
    height: 100%;
    background: #eee;
+   transition: all 0.5s;
 }
 .today-product .recommendation li a p.img:hover img {
    transition: all 0.5s;

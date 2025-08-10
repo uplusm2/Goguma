@@ -46,6 +46,7 @@ public class ComCommentDAO {
 				dto.setCseq(rs.getString("community_seq"));
 				dto.setNickname(rs.getString("nickname"));
 				dto.setIsNew(rs.getDouble("isnew"));
+				dto.setPath(rs.getString("path"));
 				
 				String tmp = refineDate(rs.getString("regDate"));
 				dto.setRegDate(tmp);

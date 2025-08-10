@@ -65,7 +65,6 @@ public class Main extends HttpServlet {
 		req.setAttribute("productList", productList);
 		req.setAttribute("noticeDto", noticeDto);
 		req.setAttribute("favoriteCount", favoriteCount);
-		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/main.jsp");
 		dispatcher.forward(req, resp);
 		
@@ -110,7 +109,6 @@ public class Main extends HttpServlet {
 				}
 			}
 		}
-		
 	}
 
 	private void setProductName() {

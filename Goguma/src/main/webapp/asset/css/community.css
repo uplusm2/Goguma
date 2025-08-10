@@ -241,6 +241,9 @@
 .community .button .btn.cancel:hover {
 	color: #9B59B6;
 }
+.community .button .btn.edit.ok:hover {
+	color: #fff;
+}
 
 
 /* 글 작성 폼 */
@@ -278,10 +281,12 @@
 	font-weight: 500;
 	border-radius: 5px;
 	cursor: pointer;
+	background: #fff;
 }
 .community.form .button label span{
 	font-weight: 400;
 	color: #fff;
+	background: #fff;
 }
 .community.form .button .file {
 	transform: translateY(-25px) translateX(10px);
